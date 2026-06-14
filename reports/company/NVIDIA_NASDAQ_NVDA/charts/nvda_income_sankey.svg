@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">NVIDIA FY26 利润表桑基图 (Income Statement Sankey, US$M)</text>
+<path d="M 204.00,63.56 C 258.00,63.56 258.00,92.00 312.00,92.00 L 312.00,445.49 C 258.00,445.49 258.00,417.06 204.00,417.06 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,85.00 C 506.00,85.00 506.00,142.00 560.00,142.00 L 560.00,379.90 C 506.00,379.90 506.00,322.90 452.00,322.90 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,322.90 C 506.00,322.90 506.00,393.90 560.00,393.90 L 560.00,436.00 C 506.00,436.00 506.00,365.01 452.00,365.01 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,92.00 C 382.00,92.00 382.00,85.00 436.00,85.00 L 436.00,365.01 C 382.00,365.01 382.00,372.01 328.00,372.01 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,372.01 C 382.00,372.01 382.00,379.01 436.00,379.01 L 436.00,493.00 C 382.00,493.00 382.00,486.00 328.00,486.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,124.90 C 754.00,124.90 754.00,152.96 808.00,152.96 L 808.00,372.03 C 754.00,372.03 754.00,343.98 700.00,343.98 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,343.98 C 754.00,343.98 754.00,386.03 808.00,386.03 L 808.00,425.04 C 754.00,425.04 754.00,382.99 700.00,382.99 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,142.00 C 630.00,142.00 630.00,124.90 684.00,124.90 L 684.00,362.81 C 630.00,362.81 630.00,379.90 576.00,379.90 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,393.90 C 630.00,393.90 630.00,396.99 684.00,396.99 L 684.00,405.35 C 630.00,405.35 630.00,402.25 576.00,402.25 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,402.25 C 630.00,402.25 630.00,419.35 684.00,419.35 L 684.00,453.10 C 630.00,453.10 630.00,436.00 576.00,436.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,431.06 C 258.00,431.06 258.00,445.49 312.00,445.49 L 312.00,474.76 C 258.00,474.76 258.00,460.33 204.00,460.33 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,474.33 C 258.00,474.33 258.00,474.76 312.00,474.76 L 312.00,480.58 C 258.00,480.58 258.00,480.15 204.00,480.15 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,494.15 C 258.00,494.15 258.00,480.58 312.00,480.58 L 312.00,484.87 C 258.00,484.87 258.00,498.44 204.00,498.44 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,512.44 C 258.00,512.44 258.00,484.87 312.00,484.87 L 312.00,486.87 C 258.00,486.87 258.00,514.44 204.00,514.44 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="63.56" width="16" height="353.49" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="431.06" width="16" height="29.27" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="474.33" width="16" height="5.82" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="494.15" width="16" height="4.29" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="512.44" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="92.00" width="16" height="394.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="85.00" width="16" height="280.01" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="379.01" width="16" height="113.99" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="142.00" width="16" height="237.90" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="393.90" width="16" height="42.10" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="124.90" width="16" height="258.09" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="396.99" width="16" height="8.35" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="419.35" width="16" height="33.75" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="152.96" width="16" height="219.07" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="386.03" width="16" height="39.02" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="240.31" x2="182.00" y2="200.07" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="203.07" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Data Center 数据中心</text>
+<text x="179.00" y="216.07" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$193.7B  (89.7%)</text>
+<line x1="188.00" y1="445.69" x2="182.00" y2="405.45" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="408.45" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gaming 游戏</text>
+<text x="179.00" y="421.45" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$16.0B  (7.4%)</text>
+<line x1="188.00" y1="477.24" x2="182.00" y2="437.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="440.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pro Viz 专业可视化</text>
+<text x="179.00" y="453.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.2B  (1.5%)</text>
+<line x1="188.00" y1="496.29" x2="182.00" y2="462.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="465.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Automotive 汽车</text>
+<text x="179.00" y="478.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.3B  (1.1%)</text>
+<line x1="188.00" y1="513.44" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">OEM/Other</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$619.0M  (0.29%)</text>
+<rect x="331.00" y="74.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$215.9B  (100.0%)</text>
+<rect x="455.00" y="67.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$153.5B  (71.1%)</text>
+<rect x="455.00" y="361.01" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="373.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="386.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$62.5B  (28.9%)</text>
+<rect x="579.00" y="124.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="136.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="149.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$130.4B  (60.4%)</text>
+<rect x="579.00" y="375.90" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="387.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="400.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$23.1B  (10.7%)</text>
+<rect x="703.00" y="106.90" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="118.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="131.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$141.4B  (65.5%)</text>
+<rect x="703.00" y="378.99" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="390.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="403.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.6B  (2.1%)</text>
+<rect x="703.00" y="403.99" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="415.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="428.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$18.5B  (8.6%)</text>
+<text x="833.00" y="259.49" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="272.49" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$120.1B  (55.6%)</text>
+<text x="833.00" y="402.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="415.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$21.4B  (9.9%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: NVIDIA FY2026 10-K (year ended 2026-01-25) · SEC EDGAR · FY26 Q4 press release (8-K, 2026-02-25)</text>
+</svg>

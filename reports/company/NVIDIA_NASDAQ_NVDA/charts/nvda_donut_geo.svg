@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY26 营业收入 — 按客户开票地 (Revenue by Customer Location, US$M)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 164.40,285.54 L 214.96,266.58 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 164.40,285.54 A 132 132 0 0 1 203.12,138.11 L 237.84,179.46 A 78 78 0 0 0 214.96,266.58 Z" fill="#15803d"/>
+<path d="M 203.12,138.11 A 132 132 0 0 1 271.52,108.23 L 278.26,161.81 A 78 78 0 0 0 237.84,179.46 Z" fill="#d97706"/>
+<path d="M 271.52,108.23 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 278.26,161.81 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">NVDA FY26</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$215.9B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="401.42" y1="317.81" x2="417.42" y2="317.81" stroke="#2563eb" stroke-width="1.4"/>
+<text x="421.42" y="315.81" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States 美国</text>
+<text x="421.42" y="329.81" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$149.6B  (69.3%)</text>
+<line x1="154.53" y1="204.15" x2="138.53" y2="204.15" stroke="#15803d" stroke-width="1.4"/>
+<text x="134.53" y="202.15" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Taiwan 台湾</text>
+<text x="134.53" y="216.15" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$42.3B  (19.6%)</text>
+<line x1="232.76" y1="112.74" x2="216.76" y2="112.74" stroke="#d97706" stroke-width="1.4"/>
+<text x="212.76" y="110.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">China incl. HK 中国(含港)</text>
+<text x="212.76" y="124.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$19.7B  (9.1%)</text>
+<line x1="279.37" y1="101.47" x2="263.37" y2="101.47" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="259.37" y="99.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other 其他</text>
+<text x="259.37" y="113.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.3B  (2.0%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: NVIDIA FY2026 10-K (year ended 2026-01-25), Note 16 — Segment &amp; Geographic Information · SEC EDGAR — Revenue by geographic region</text>
+</svg>

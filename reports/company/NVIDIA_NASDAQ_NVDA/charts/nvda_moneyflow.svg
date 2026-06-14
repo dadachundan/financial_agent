@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1132" width="1180" height="1132" role="img" aria-label="钱往哪里走：NVIDIA 如何为一台 AI 工厂付费 (How NVIDIA pays for an AI factory)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1132" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">NVIDIA AI 工厂供应链 · 资金流向 · FY26 (YEAR ENDED 2026-01-25)</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱往哪里走：NVIDIA 如何为一台 AI 工厂付费 (How NVIDIA pays for an AI factory)</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">超大规模云 (hyperscaler) 与新云 (neocloud) 的 AI 资本开支流入 NVIDIA，NVIDIA 再把营收成本 (COGS) 与资本开支 (capex) 付给上游——晶圆、先进封装、HBM 与光网络——而这些钱最终高度集中地汇入</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">TSMC、SK Hynix 与少数封装/光模块厂商，构成本轮周期的瓶颈 (chokepoint)。</text>
+<ellipse cx="1031.00" cy="459.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="704.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="704.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁在付钱 (demand)</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">NVIDIA 买什么 (inputs)</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终汇向谁 (chokepoints)</text>
+<path d="M 256.00 396.00 C 369.50 396.00, 369.50 453.50, 483.00 453.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 527.00 C 369.50 527.00, 369.50 471.00, 483.00 471.00" fill="none" stroke="url(#mfgold)" stroke-width="11.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 479.50 C 810.50 479.50, 810.50 650.50, 924.00 650.50" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 444.00 C 810.50 444.00, 810.50 285.00, 924.00 285.00" fill="none" stroke="url(#mfgold)" stroke-width="20.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 461.00 C 810.50 461.00, 810.50 421.00, 924.00 421.00" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 471.50 C 810.50 471.50, 810.50 539.50, 924.00 539.50" fill="none" stroke="url(#mfgold)" stroke-width="7.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="418.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">~$525B capex 的大部分流向加速器</text>
+<text x="369.50" y="493.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">新云 + 主权订单</text>
+<text x="810.50" y="358.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">晶圆 + CoWoS 封装</text>
+<text x="810.50" y="435.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">HBM3e/HBM4</text>
+<text x="810.50" y="559.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">机柜组装外包</text>
+<rect x="42.00" y="336.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="336.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="369.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">HYPERSCALERS</text>
+<text x="60.00" y="390.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">AWS · Azure · Google · Meta · Oracle</text>
+<text x="60.00" y="407.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">CY26 capex ~$525B (BI 估算)</text>
+<rect x="42.00" y="472.00" width="214" height="110.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="472.00" width="3" height="110.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="505.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">NEOCLOUDS / 主权 AI</text>
+<text x="60.00" y="526.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">CoreWeave · OpenAI · Anthropic · xAI</text>
+<text x="60.00" y="543.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">+ 国家级 AI 工厂订单</text>
+<rect x="483.00" y="384.00" width="214" height="150.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="384.00" width="3" height="150.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="417.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">NVIDIA</text>
+<text x="501.00" y="438.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY26 营收 $215.9B</text>
+<text x="501.00" y="455.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">COGS $62.5B · capex $6.0B</text>
+<text x="501.00" y="472.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">GB200/GB300 NVL72 机柜</text>
+<rect x="924.00" y="220.00" width="214" height="130.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="220.00" width="3" height="130.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">TSMC</text>
+<text x="942.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">唯一领先制程晶圆厂</text>
+<text x="942.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">+ CoWoS 先进封装</text>
+<text x="942.00" y="308.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">本轮最硬瓶颈</text>
+<rect x="924.00" y="366.00" width="214" height="110.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="366.00" width="3" height="110.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="399.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">HBM 内存</text>
+<text x="942.00" y="420.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">SK Hynix (主) · Micron · Samsung</text>
+<text x="942.00" y="437.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">HBM3e/HBM4 供给约束</text>
+<rect x="924.00" y="492.00" width="214" height="95.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="492.00" width="3" height="95.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="525.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">光网络 / 光模块</text>
+<text x="942.00" y="546.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Coherent · Corning · Lumentum</text>
+<text x="942.00" y="563.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">(FY27 Q1 多年期协议)</text>
+<rect x="924.00" y="603.00" width="214" height="95.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="603.00" width="3" height="95.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="636.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ODM / 系统组装</text>
+<text x="942.00" y="657.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">鸿海(富士康) · 纬创 · 广达</text>
+<text x="942.00" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Fabrinet · 机柜集成</text>
+<rect x="42.00" y="724.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="728.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="726.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="726.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="726.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="726.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="728.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="728.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="719.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="728.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="719.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="840.40" y="728.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="914.80" y="719.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="933.80" y="728.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="1001.00" y="719.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="1020.00" y="728.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="42.00" y="739.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="61.00" y="748.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="764.00" x2="1138" y2="764.00" stroke="#222a3a"/>
+<text x="42.00" y="780.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">顺着钱看 (FOLLOW THE MONEY)</text>
+<rect x="42.00" y="800.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="800.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="824.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求端 · AI CAPEX</text>
+<text x="58.00" y="842.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">超大规模云是水龙头</text>
+<text x="58.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Bloomberg</tspan><tspan fill="#9aa3b8" font-weight="400"> Intelligence</tspan><tspan fill="#9aa3b8" font-weight="400"> 估算</tspan><tspan fill="#9aa3b8" font-weight="400"> AWS/Azure/Google/Meta</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan></text>
+<text x="58.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">CY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 合计资本开支约</tspan><tspan fill="#f4d58a" font-weight="700"> $525B</tspan><tspan fill="#9aa3b8" font-weight="400"> ，其中大部分用于</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 基础设施——NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> FY27</tspan><tspan fill="#9aa3b8" font-weight="400"> Q1</tspan></text>
+<text x="58.00" y="898.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">单季营收即</tspan><tspan fill="#f4d58a" font-weight="700"> $81.6B</tspan><tspan fill="#9aa3b8" font-weight="400"> 、数据中心</tspan><tspan fill="#f4d58a" font-weight="700"> $75.2B</tspan><tspan fill="#9aa3b8" font-weight="400"> 。前两大直接客户合计占</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收</tspan><tspan fill="#f4d58a" font-weight="700"> 36%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="412.00" y="800.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="800.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="824.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">买成品 · 晶圆+封装</text>
+<text x="428.00" y="842.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">TSMC 是最硬的瓶颈</text>
+<text x="428.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> 是无晶圆厂</tspan><tspan fill="#9aa3b8" font-weight="400"> (fabless)：领先制程晶圆与</tspan><tspan fill="#f4d58a" font-weight="700"> CoWoS</tspan><tspan fill="#9aa3b8" font-weight="400"> 先进封装都依赖</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan></text>
+<text x="428.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">单一来源，CoWoS</tspan><tspan fill="#9aa3b8" font-weight="400"> 产能是整条链的速度上限。这笔钱嵌在</tspan><tspan fill="#9aa3b8" font-weight="400"> NVIDIA</tspan><tspan fill="#f4d58a" font-weight="700"> $62.5B</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan></text>
+<text x="428.00" y="898.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">COGS</tspan><tspan fill="#9aa3b8" font-weight="400"> 里。</tspan></text>
+<rect x="782.00" y="800.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="782.00" y="800.00" width="3" height="132.00" rx="2" fill="#a78bfa"/>
+<text x="798.00" y="824.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">买成品 · HBM</text>
+<text x="798.00" y="842.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">HBM 由 SK Hynix 主导</text>
+<text x="798.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">每颗</tspan><tspan fill="#9aa3b8" font-weight="400"> Blackwell/Rubin</tspan><tspan fill="#9aa3b8" font-weight="400"> GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 叠</tspan><tspan fill="#9aa3b8" font-weight="400"> 8–12</tspan><tspan fill="#9aa3b8" font-weight="400"> 颗</tspan><tspan fill="#9aa3b8" font-weight="400"> HBM；</tspan><tspan fill="#f4d58a" font-weight="700"> SK</tspan><tspan fill="#f4d58a" font-weight="700"> Hynix</tspan><tspan fill="#9aa3b8" font-weight="400"> 是主供，</tspan></text>
+<text x="798.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Micron</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> Samsung</tspan><tspan fill="#9aa3b8" font-weight="400"> 次之。HBM3e/HBM4</tspan><tspan fill="#9aa3b8" font-weight="400"> 供给是本轮周期的第二大约束，价格随之上行。</tspan></text>
+<rect x="42.00" y="946.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="946.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="970.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">买成品 · 光互联</text>
+<text x="58.00" y="988.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">光网络被点名锁产能</text>
+<text x="58.00" y="1012.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY27</tspan><tspan fill="#9aa3b8" font-weight="400"> Q1</tspan><tspan fill="#9aa3b8" font-weight="400"> (2026-05-20)</tspan><tspan fill="#9aa3b8" font-weight="400"> NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> 宣布与</tspan><tspan fill="#f4d58a" font-weight="700"> Coherent</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> Corning</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan></text>
+<text x="58.00" y="1028.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Lumentum</tspan><tspan fill="#9aa3b8" font-weight="400"> 签多年期先进光学协议，并与</tspan><tspan fill="#f4d58a" font-weight="700"> Marvell</tspan><tspan fill="#9aa3b8" font-weight="400"> 经</tspan><tspan fill="#9aa3b8" font-weight="400"> NVLink</tspan><tspan fill="#9aa3b8" font-weight="400"> Fusion</tspan></text>
+<text x="58.00" y="1044.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">合作硅光子——CPO/光互联是下一段瓶颈。</tspan></text>
+<rect x="412.00" y="946.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="946.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="970.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">直接付 · 组装</text>
+<text x="428.00" y="988.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">ODM 把机柜拼起来</text>
+<text x="428.00" y="1012.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">鸿海(富士康)、纬创、广达、Fabrinet</tspan><tspan fill="#9aa3b8" font-weight="400"> 把</tspan><tspan fill="#9aa3b8" font-weight="400"> HGX</tspan><tspan fill="#9aa3b8" font-weight="400"> 板卡与</tspan><tspan fill="#9aa3b8" font-weight="400"> GB200/GB300</tspan><tspan fill="#f4d58a" font-weight="700"> NVL72</tspan></text>
+<text x="428.00" y="1028.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">机柜组装成可交付系统——这是</tspan><tspan fill="#9aa3b8" font-weight="400"> NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> 直接付费、毛利率较薄的一层。</tspan></text>
+<rect x="782.00" y="946.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="782.00" y="946.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="798.00" y="970.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">汇聚点</text>
+<text x="798.00" y="988.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱高度集中</text>
+<text x="798.00" y="1012.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">需求从数十家超大规模云/新云分散流入，却在上游收敛到</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> SK</tspan><tspan fill="#f4d58a" font-weight="700"> Hynix</tspan></text>
+<text x="798.00" y="1028.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">等极少数名字——这种集中既是</tspan><tspan fill="#9aa3b8" font-weight="400"> NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> 的护城河</tspan><tspan fill="#9aa3b8" font-weight="400"> (别人也拿不到产能)，也是其最大的供给侧风险。</tspan></text>
+<text x="590.00" y="1114.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: NVIDIA FY2026 10-K (制造与供应链) · FY27 Q1 8-K (2026-05-20) · Bloomberg Intelligence 超大规模云 capex 追踪 (2026-02)</text>
+</svg>

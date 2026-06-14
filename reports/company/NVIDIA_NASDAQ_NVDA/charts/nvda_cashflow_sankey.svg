@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">NVIDIA FY26 现金流桑基图 (Cash-Flow Sankey, US$M)</text>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,153.96 C 526.00,153.96 526.00,167.96 424.00,167.96 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,78.00 C 306.00,78.00 306.00,78.00 408.00,78.00 L 408.00,540.00 C 306.00,540.00 306.00,540.00 204.00,540.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,167.96 C 526.00,167.96 526.00,167.96 628.00,167.96 L 628.00,388.38 C 526.00,388.38 526.00,388.38 424.00,388.38 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,388.38 C 526.00,388.38 526.00,402.38 628.00,402.38 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,167.96 C 746.00,167.96 746.00,184.79 848.00,184.79 L 848.00,365.08 C 746.00,365.08 746.00,348.25 644.00,348.25 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,348.25 C 746.00,348.25 746.00,379.08 848.00,379.08 L 848.00,383.46 C 746.00,383.46 746.00,352.63 644.00,352.63 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,352.63 C 746.00,352.63 746.00,397.46 848.00,397.46 L 848.00,433.21 C 746.00,433.21 746.00,388.38 644.00,388.38 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="89.96" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="167.96" width="16" height="220.43" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="402.38" width="16" height="151.62" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="184.79" width="16" height="180.30" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="379.08" width="16" height="4.38" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="397.46" width="16" height="35.75" rx="1.5" fill="#dc2626"/>
+<rect x="207.00" y="60.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$102.7B  (100.0%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$102.7B  (100.0%)</text>
+<rect x="647.00" y="46.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$20.0B  (19.5%)</text>
+<rect x="647.00" y="149.96" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="161.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="174.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$49.0B  (47.7%)</text>
+<text x="653.00" y="475.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="488.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$33.7B  (32.8%)</text>
+<text x="873.00" y="271.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Buybacks 回购</text>
+<text x="873.00" y="284.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$40.1B  (39.0%)</text>
+<text x="873.00" y="378.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Dividends 股息</text>
+<text x="873.00" y="391.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$974.0M  (0.95%)</text>
+<text x="873.00" y="412.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Stock-plan taxes 股权税</text>
+<text x="873.00" y="425.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$7.9B  (7.7%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$96.7B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: NVIDIA FY2026 10-K (year ended 2026-01-25) · SEC EDGAR — Condensed Consolidated Statement of Cash Flows</text>
+</svg>
