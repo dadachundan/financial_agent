@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1178" width="1180" height="1178" role="img" aria-label="钱往哪里流：谁付钱给 ST，ST 又把钱付给谁" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1178" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">STMICROELECTRONICS MONEY FLOW · 2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱往哪里流：谁付钱给 ST，ST 又把钱付给谁</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">ST 是一家 IDM（垂直整合制造商）——大部分客户的钱付进来后停在它自己的晶圆厂里。但 SiC 衬底、18nm FD-SOI 关键设备、以及与 GlobalFoundries / Sanan 的合资产能，是 ST</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">现金真正外流的几个出口。金色代表钱，跟着它看它最终汇向哪几个节点。</text>
+<ellipse cx="1031.00" cy="474.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="734.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="734.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱给 ST（终端需求）</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">ST 与其产品线</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">ST 的钱流向（自有产能 + 上游供应商）</text>
+<path d="M 256.00 280.00 C 369.50 280.00, 369.50 304.43, 483.00 304.43" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 408.00 C 369.50 408.00, 369.50 419.00, 483.00 419.00" fill="none" stroke="url(#mfgold)" stroke-width="18.29" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 425.14 C 369.50 425.14, 369.50 522.14, 483.00 522.14" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 547.00 C 369.50 547.00, 369.50 636.14, 483.00 636.14" fill="none" stroke="url(#mfgold)" stroke-width="11.43" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 674.71 C 369.50 674.71, 369.50 537.00, 483.00 537.00" fill="none" stroke="url(#mfgold)" stroke-width="13.71" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 663.29 C 369.50 663.29, 369.50 321.00, 483.00 321.00" fill="none" stroke="url(#mfgold)" stroke-width="9.14" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 684.43 C 369.50 684.43, 369.50 644.71, 483.00 644.71" fill="none" stroke="url(#mfgold)" stroke-width="5.71" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 309.00 C 810.50 309.00, 810.50 298.71, 924.00 298.71" fill="none" stroke="url(#mfgold)" stroke-width="18.29" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 524.43 C 810.50 524.43, 810.50 314.71, 924.00 314.71" fill="none" stroke="url(#mfgold)" stroke-width="13.71" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 415.57 C 810.50 415.57, 810.50 427.50, 924.00 427.50" fill="none" stroke="url(#mfgold)" stroke-width="13.71" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 639.00 C 810.50 639.00, 810.50 325.00, 924.00 325.00" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 535.86 C 810.50 535.86, 810.50 540.93, 924.00 540.93" fill="none" stroke="url(#mfgold)" stroke-width="9.14" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 425.86 C 810.50 425.86, 810.50 532.93, 924.00 532.93" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 1138.00 309.00 C 1031.00 309.00, 1031.00 644.64, 924.00 644.64" fill="none" stroke="url(#mfgold)" stroke-width="10.29" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 1138.00 537.50 C 1031.00 537.50, 1031.00 652.64, 924.00 652.64" fill="none" stroke="url(#mfgold)" stroke-width="5.71" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="286.21" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">ToF · MEMS · PMIC</text>
+<text x="369.50" y="407.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">SiC 牵引逆变器</text>
+<text x="369.50" y="467.64" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Stellar · ADAS</text>
+<text x="369.50" y="585.57" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">SiPho 光互连</text>
+<text x="369.50" y="599.86" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">STM32</text>
+<text x="369.50" y="658.57" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">LEO RF · GNSS</text>
+<text x="810.50" y="532.39" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Crolles 300mm</text>
+<text x="810.50" y="415.54" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">衬底自供</text>
+<text x="810.50" y="473.39" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">重庆 SiC</text>
+<text x="1031.00" y="470.82" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">净资本开支 $18.4 亿</text>
+<rect x="42.00" y="220.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="220.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">APPLE</text>
+<text x="60.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">占 2025 营收 17.7%</text>
+<text x="60.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">iPhone ToF · MEMS · PMIC</text>
+<rect x="42.00" y="356.00" width="214" height="120.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="356.00" width="3" height="120.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="389.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">汽车 OEM / TIER-1</text>
+<text x="60.00" y="410.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Tesla · Bosch · Continental</text>
+<text x="60.00" y="427.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Denso · Geely · BYD · Vitesco</text>
+<rect x="42.00" y="492.00" width="214" height="110.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="492.00" width="3" height="110.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="525.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AWS / 数据中心</text>
+<text x="60.00" y="546.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">2026-06-02 上调指引</text>
+<text x="60.00" y="563.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">DC 营收 2026≈$1B</text>
+<rect x="42.00" y="618.00" width="214" height="110.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="618.00" width="3" height="110.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="651.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">工业 / 个人电子</text>
+<text x="60.00" y="672.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">STM32 装机量 · MEMS</text>
+<text x="60.00" y="689.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">SpaceX LEO RF</text>
+<rect x="483.00" y="262.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="262.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="295.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AM&amp;S 模拟/MEMS/传感器</text>
+<text x="501.00" y="316.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$50.85 亿 · 12.3% OPM</text>
+<text x="501.00" y="333.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FlightSense ToF · IMU · 智能功率</text>
+<rect x="483.00" y="372.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="372.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="405.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">P&amp;D 功率与分立</text>
+<text x="501.00" y="426.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">$16.85 亿 · 亏损 $2.75 亿</text>
+<text x="501.00" y="443.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">SiC MOSFET · IGBT · GaN</text>
+<rect x="483.00" y="482.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="482.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="515.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">EMP 嵌入式处理</text>
+<text x="501.00" y="536.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">$35.80 亿 · 15.0% OPM</text>
+<text x="501.00" y="553.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">STM32 MCU · Stellar 汽车 MCU</text>
+<rect x="483.00" y="592.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="592.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="625.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">RFOC RF与光通信</text>
+<text x="501.00" y="646.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">$14.36 亿 · 18.5% OPM</text>
+<text x="501.00" y="663.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">硅光子 SiPho · BiCMOS · 航天</text>
+<rect x="924.00" y="253.50" width="214" height="111.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="253.50" width="3" height="111.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="286.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ST 自有晶圆厂</text>
+<text x="942.00" y="307.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">~14 万片/周 200mm 当量</text>
+<text x="942.00" y="324.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Crolles · Catania · Agrate · Rousset</text>
+<text x="942.00" y="341.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">钱大部分停在这里（IDM）</text>
+<rect x="924.00" y="380.50" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="380.50" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="413.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">SiC 衬底 / 200mm 转换</text>
+<text x="942.00" y="434.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">Norstel（瑞典，自有）</text>
+<text x="942.00" y="451.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">Catania 超级晶圆厂 €50亿</text>
+<rect x="924.00" y="490.50" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="490.50" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="523.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">合资产能</text>
+<text x="942.00" y="544.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">GlobalFoundries Crolles 300mm €75亿</text>
+<text x="942.00" y="561.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Sanan-ST 重庆 200mm SiC $32亿</text>
+<rect x="924.00" y="600.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="924.00" y="600.50" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="942.00" y="633.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">WFE 设备 / 代工外包</text>
+<text x="942.00" y="654.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">ASML · AMAT · LAM · TEL</text>
+<text x="942.00" y="671.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Mobileye EyeQ 共同设计代工</text>
+<rect x="42.00" y="754.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="758.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="756.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="756.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="756.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="756.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="758.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="758.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="749.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="758.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="749.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="840.40" y="758.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="965.20" y="749.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="984.20" y="758.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="42.00" y="769.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="61.00" y="778.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="178.60" y="769.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="197.60" y="778.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="272.00" y="769.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="291.00" y="778.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<line x1="42" y1="794.00" x2="1138" y2="794.00" stroke="#222a3a"/>
+<text x="42.00" y="810.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">跟着钱走 — ST 的现金流向</text>
+<rect x="42.00" y="830.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="830.00" width="3" height="148.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="854.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">谁付钱 · 苹果</text>
+<text x="58.00" y="872.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Apple 占营收 17.7%</text>
+<text x="58.00" y="896.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">ST</tspan><tspan fill="#9aa3b8" font-weight="400"> 最大单一客户，2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 财年贡献</tspan><tspan fill="#f4d58a" font-weight="700"> 17.7%</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收（2024</tspan><tspan fill="#f4d58a" font-weight="700"> 14.5%</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> 2023</tspan><tspan fill="#f4d58a" font-weight="700"> 12.3%</tspan></text>
+<text x="58.00" y="912.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">连升三年）。钱主要流向</tspan><tspan fill="#f4d58a" font-weight="700"> AM&amp;S</tspan><tspan fill="#9aa3b8" font-weight="400"> ——FlightSense</tspan><tspan fill="#9aa3b8" font-weight="400"> ToF、运动</tspan><tspan fill="#9aa3b8" font-weight="400"> MEMS、部分</tspan></text>
+<text x="58.00" y="928.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">PMIC。集中度既是护城河也是风险：失去一半苹果业务≈</tspan><tspan fill="#f4d58a" font-weight="700"> $10</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收。</tspan></text>
+<rect x="412.00" y="830.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="412.00" y="830.00" width="3" height="148.00" rx="2" fill="#d9a05b"/>
+<text x="428.00" y="854.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">汽车 · SIC</text>
+<text x="428.00" y="872.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Tesla 等付钱买 SiC，钱流向衬底</text>
+<text x="428.00" y="896.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">汽车</tspan><tspan fill="#9aa3b8" font-weight="400"> OEM/Tier-1（Tesla、Bosch、Geely、BYD）的钱流入</tspan><tspan fill="#f4d58a" font-weight="700"> P&amp;D</tspan><tspan fill="#9aa3b8" font-weight="400"> 。P&amp;D</tspan></text>
+<text x="428.00" y="912.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 录得</tspan><tspan fill="#f4d58a" font-weight="700"> $2.75</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> 营业亏损——ASP</tspan><tspan fill="#9aa3b8" font-weight="400"> 下滑</tspan><tspan fill="#f4d58a" font-weight="700"> 29%</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> Catania</tspan><tspan fill="#9aa3b8" font-weight="400"> 未消化产能费用。ST</tspan></text>
+<text x="428.00" y="928.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">的</tspan><tspan fill="#9aa3b8" font-weight="400"> SiC</tspan><tspan fill="#9aa3b8" font-weight="400"> 钱大部分留在自有衬底厂（Norstel）与</tspan><tspan fill="#9aa3b8" font-weight="400"> Catania</tspan><tspan fill="#f4d58a" font-weight="700"> €50</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> 超级晶圆厂。</tspan></text>
+<rect x="782.00" y="830.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="782.00" y="830.00" width="3" height="148.00" rx="2" fill="#7fa8f5"/>
+<text x="798.00" y="854.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">数据中心 · 新增长极</text>
+<text x="798.00" y="872.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AWS 把钱投向 RFOC 硅光子</text>
+<text x="798.00" y="896.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2026-06-02</tspan><tspan fill="#9aa3b8" font-weight="400"> ST</tspan><tspan fill="#f4d58a" font-weight="700"> 上调</tspan><tspan fill="#9aa3b8" font-weight="400"> 数据中心营收目标至</tspan><tspan fill="#f4d58a" font-weight="700"> 2026≈$1B</tspan><tspan fill="#9aa3b8" font-weight="400"> （原“nicely</tspan><tspan fill="#9aa3b8" font-weight="400"> above</tspan></text>
+<text x="798.00" y="912.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">$500M”）、</tspan><tspan fill="#f4d58a" font-weight="700"> 2027</tspan><tspan fill="#f4d58a" font-weight="700"> 或翻倍至≈$2B</tspan><tspan fill="#9aa3b8" font-weight="400"> （原“well</tspan><tspan fill="#9aa3b8" font-weight="400"> above</tspan><tspan fill="#9aa3b8" font-weight="400"> $1B”）。AWS</tspan></text>
+<text x="798.00" y="928.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">多年期数十亿美元合作锚定</tspan><tspan fill="#f4d58a" font-weight="700"> RFOC</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> SiPho/BiCMOS</tspan><tspan fill="#9aa3b8" font-weight="400"> 光互连——RFOC</tspan><tspan fill="#9aa3b8" font-weight="400"> 是利润率最高（</tspan></text>
+<text x="798.00" y="944.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">18.5%</tspan><tspan fill="#9aa3b8" font-weight="400"> ）的分部。</tspan></text>
+<rect x="42.00" y="992.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="992.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="1016.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">钱汇向哪里 · IDM</text>
+<text x="58.00" y="1034.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">大部分钱停在 ST 自有晶圆厂</text>
+<text x="58.00" y="1058.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">作为</tspan><tspan fill="#9aa3b8" font-weight="400"> IDM，ST</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS</tspan><tspan fill="#9aa3b8" font-weight="400"> 主要是自有</tspan><tspan fill="#f4d58a" font-weight="700"> ~14</tspan><tspan fill="#f4d58a" font-weight="700"> 万片/周</tspan></text>
+<text x="58.00" y="1074.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">的折旧与运营，钱不外流给代工厂——这是它结构性毛利率（</tspan><tspan fill="#f4d58a" font-weight="700"> 33.9%</tspan></text>
+<text x="58.00" y="1090.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">）低于无晶圆厂同业但现金留存自主的代价与好处。</tspan></text>
+<rect x="412.00" y="992.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="412.00" y="992.00" width="3" height="132.00" rx="2" fill="#a78bfa"/>
+<text x="428.00" y="1016.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">钱外流出口 · 合资与设备</text>
+<text x="428.00" y="1034.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Crolles 300mm + 重庆 SiC + WFE</text>
+<text x="428.00" y="1058.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">真正的外流出口：与</tspan><tspan fill="#f4d58a" font-weight="700"> GlobalFoundries</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> Crolles</tspan><tspan fill="#9aa3b8" font-weight="400"> 300mm</tspan><tspan fill="#9aa3b8" font-weight="400"> 合资（</tspan><tspan fill="#f4d58a" font-weight="700"> €75</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan></text>
+<text x="428.00" y="1074.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">）、</tspan><tspan fill="#f4d58a" font-weight="700"> Sanan-ST</tspan><tspan fill="#9aa3b8" font-weight="400"> 重庆</tspan><tspan fill="#9aa3b8" font-weight="400"> 200mm</tspan><tspan fill="#9aa3b8" font-weight="400"> SiC（</tspan><tspan fill="#f4d58a" font-weight="700"> $32</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> ），以及给</tspan></text>
+<text x="428.00" y="1090.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">ASML/AMAT/LAM/TEL</tspan><tspan fill="#9aa3b8" font-weight="400"> 的设备款（2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 净资本开支</tspan><tspan fill="#f4d58a" font-weight="700"> $18.4</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> ，占营收</tspan><tspan fill="#f4d58a" font-weight="700"> 16%</tspan><tspan fill="#9aa3b8" font-weight="400"> ）。</tspan></text>
+<rect x="782.00" y="992.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="992.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="1016.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">共同设计 · 长尾客户</text>
+<text x="798.00" y="1034.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">STM32 + Mobileye 锁定</text>
+<text x="798.00" y="1058.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">工业/个人电子客户的钱流入</tspan><tspan fill="#f4d58a" font-weight="700"> EMP</tspan><tspan fill="#9aa3b8" font-weight="400"> （</tspan><tspan fill="#f4d58a" font-weight="700"> 15.0%</tspan><tspan fill="#9aa3b8" font-weight="400"> OPM）——STM32</tspan><tspan fill="#9aa3b8" font-weight="400"> 生态锁定数十年。</tspan></text>
+<text x="798.00" y="1074.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Mobileye</tspan><tspan fill="#9aa3b8" font-weight="400"> EyeQ</tspan><tspan fill="#9aa3b8" font-weight="400"> 是</tspan><tspan fill="#9aa3b8" font-weight="400"> 20</tspan><tspan fill="#9aa3b8" font-weight="400"> 年以上的定制</tspan><tspan fill="#9aa3b8" font-weight="400"> ASIC</tspan><tspan fill="#9aa3b8" font-weight="400"> 共同设计关系，钱通过</tspan><tspan fill="#9aa3b8" font-weight="400"> ST</tspan></text>
+<text x="798.00" y="1090.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">工艺节点的代工集成回流。</tspan></text>
+<text x="590.00" y="1160.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: STM 2025 Form 20-F（分部营收/营业利润、客户集中度、制造布局、资本开支）+ STM 6-K 2026-06-02（数据中心营收上调）+ STM 6-K 2026-02-09（AWS 合作）。比例为粗略相对量，非流量守恒。</text>
+</svg>

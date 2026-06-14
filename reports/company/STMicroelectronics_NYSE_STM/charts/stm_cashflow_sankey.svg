@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">STMicroelectronics FY2025 现金流 Sankey（百万美元）</text>
+<path d="M 204.00,64.00 C 306.00,64.00 306.00,78.00 408.00,78.00 L 408.00,247.09 C 306.00,247.09 306.00,233.09 204.00,233.09 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,71.00 C 746.00,71.00 746.00,237.20 848.00,237.20 L 848.00,261.06 C 746.00,261.06 746.00,94.86 644.00,94.86 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,94.86 C 746.00,94.86 746.00,275.06 848.00,275.06 L 848.00,302.26 C 746.00,302.26 746.00,122.05 644.00,122.05 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,122.05 C 746.00,122.05 746.00,316.26 848.00,316.26 L 848.00,380.80 C 746.00,380.80 746.00,186.59 644.00,186.59 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,71.00 628.00,71.00 L 628.00,186.59 C 526.00,186.59 526.00,193.59 424.00,193.59 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,193.59 C 526.00,193.59 526.00,200.59 628.00,200.59 L 628.00,547.00 C 526.00,547.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,247.09 C 306.00,247.09 306.00,247.09 408.00,247.09 L 408.00,406.55 C 306.00,406.55 306.00,406.55 204.00,406.55 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,420.55 C 306.00,420.55 306.00,406.55 408.00,406.55 L 408.00,540.00 C 306.00,540.00 306.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="169.09" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="247.09" width="16" height="159.46" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="420.55" width="16" height="133.45" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="71.00" width="16" height="115.59" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="200.59" width="16" height="346.41" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="237.20" width="16" height="23.86" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="275.06" width="16" height="27.19" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="316.26" width="16" height="64.54" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="145.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="158.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">USD2.3B  (36.6%)</text>
+<rect x="207.00" y="229.09" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="241.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="254.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">USD2.2B  (34.5%)</text>
+<rect x="207.00" y="402.55" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="414.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="210.00" y="427.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">USD1.8B  (28.9%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">USD6.2B  (100.0%)</text>
+<rect x="647.00" y="53.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">USD1.6B  (25.0%)</text>
+<text x="653.00" y="370.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="383.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">USD4.7B  (75.0%)</text>
+<text x="873.00" y="246.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股息支付</text>
+<text x="873.00" y="259.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">USD322.0M  (5.2%)</text>
+<text x="873.00" y="285.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股票回购</text>
+<text x="873.00" y="298.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">USD367.0M  (5.9%)</text>
+<text x="873.00" y="345.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">债务/其他净额</text>
+<text x="873.00" y="358.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">USD871.0M  (14.0%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = USD308.0M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: STM 2025 Form 20-F (FY2025, ended 2025-12-31), consolidated statements</text>
+</svg>

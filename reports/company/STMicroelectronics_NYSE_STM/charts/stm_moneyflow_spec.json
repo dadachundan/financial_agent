@@ -1,0 +1,56 @@
+{
+  "eyebrow": "STMicroelectronics money flow · 2026",
+  "title": "钱往哪里流：谁付钱给 ST，ST 又把钱付给谁",
+  "thesis": "ST 是一家 IDM（垂直整合制造商）——大部分客户的钱付进来后停在它自己的晶圆厂里。但 SiC 衬底、18nm FD-SOI 关键设备、以及与 GlobalFoundries / Sanan 的合资产能，是 ST 现金真正外流的几个出口。金色代表钱，跟着它看它最终汇向哪几个节点。",
+  "stages": ["谁付钱给 ST（终端需求）", "ST 与其产品线", "ST 的钱流向（自有产能 + 上游供应商）"],
+  "nodes": [
+    {"id": "apple",  "stage": 0, "label": "APPLE", "kind": "buyer",  "sub": ["占 2025 营收 17.7%", "iPhone ToF · MEMS · PMIC"], "h": 120},
+    {"id": "auto",   "stage": 0, "label": "汽车 OEM / TIER-1", "kind": "buyer2", "sub": ["Tesla · Bosch · Continental", "Denso · Geely · BYD · Vitesco"], "h": 120},
+    {"id": "hyper",  "stage": 0, "label": "AWS / 数据中心", "kind": "buyer", "sub": ["2026-06-02 上调指引", "DC 营收 2026≈$1B"], "h": 110},
+    {"id": "ind",    "stage": 0, "label": "工业 / 个人电子", "kind": "buyer2", "sub": ["STM32 装机量 · MEMS", "SpaceX LEO RF"], "h": 110},
+
+    {"id": "ams",    "stage": 1, "label": "AM&S 模拟/MEMS/传感器", "kind": "compute", "sub": ["$50.85 亿 · 12.3% OPM", "FlightSense ToF · IMU · 智能功率"]},
+    {"id": "pd",     "stage": 1, "label": "P&D 功率与分立", "kind": "power", "sub": ["$16.85 亿 · 亏损 $2.75 亿", "SiC MOSFET · IGBT · GaN"]},
+    {"id": "emp",    "stage": 1, "label": "EMP 嵌入式处理", "kind": "silicon", "sub": ["$35.80 亿 · 15.0% OPM", "STM32 MCU · Stellar 汽车 MCU"]},
+    {"id": "rfoc",   "stage": 1, "label": "RFOC RF与光通信", "kind": "rf", "sub": ["$14.36 亿 · 18.5% OPM", "硅光子 SiPho · BiCMOS · 航天"]},
+
+    {"id": "fabs",   "stage": 2, "label": "ST 自有晶圆厂", "kind": "foundry", "sub": ["~14 万片/周 200mm 当量", "Crolles · Catania · Agrate · Rousset", "钱大部分停在这里（IDM）"]},
+    {"id": "sic",    "stage": 2, "label": "SiC 衬底 / 200mm 转换", "kind": "memory", "sub": ["Norstel（瑞典，自有）", "Catania 超级晶圆厂 €50亿"]},
+    {"id": "jv",     "stage": 2, "label": "合资产能", "kind": "foundry", "sub": ["GlobalFoundries Crolles 300mm €75亿", "Sanan-ST 重庆 200mm SiC $32亿"]},
+    {"id": "equip",  "stage": 2, "label": "WFE 设备 / 代工外包", "kind": "compute", "sub": ["ASML · AMAT · LAM · TEL", "Mobileye EyeQ 共同设计代工"]}
+  ],
+  "flows": [
+    {"from": "apple", "to": "ams",  "weight": 21, "style": "direct", "label": "ToF · MEMS · PMIC"},
+    {"from": "auto",  "to": "pd",   "weight": 16, "style": "direct", "label": "SiC 牵引逆变器"},
+    {"from": "auto",  "to": "emp",  "weight": 14, "style": "direct", "label": "Stellar · ADAS"},
+    {"from": "hyper", "to": "rfoc", "weight": 10, "style": "direct", "label": "SiPho 光互连"},
+    {"from": "ind",   "to": "emp",  "weight": 12, "style": "direct", "label": "STM32"},
+    {"from": "ind",   "to": "ams",  "weight": 8,  "style": "direct"},
+    {"from": "ind",   "to": "rfoc", "weight": 5,  "style": "direct", "label": "LEO RF · GNSS"},
+
+    {"from": "ams",  "to": "fabs", "weight": 16, "style": "direct"},
+    {"from": "emp",  "to": "fabs", "weight": 12, "style": "direct"},
+    {"from": "emp",  "to": "jv",   "weight": 8,  "style": "embedded", "label": "Crolles 300mm"},
+    {"from": "pd",   "to": "sic",  "weight": 12, "style": "direct", "label": "衬底自供"},
+    {"from": "pd",   "to": "jv",   "weight": 6,  "style": "embedded", "label": "重庆 SiC"},
+    {"from": "rfoc", "to": "fabs", "weight": 6,  "style": "direct"},
+    {"from": "fabs", "to": "equip","weight": 9,  "style": "embedded", "label": "净资本开支 $18.4 亿"},
+    {"from": "jv",   "to": "equip","weight": 5,  "style": "embedded"}
+  ],
+  "cards_title": "跟着钱走 — ST 的现金流向",
+  "cards": [
+    {"kind": "buyer", "tag": "谁付钱 · 苹果", "title": "Apple 占营收 17.7%",
+     "body": "ST 最大单一客户，2025 财年贡献 *17.7%* 营收（2024 *14.5%* / 2023 *12.3%* 连升三年）。钱主要流向 *AM&S*——FlightSense ToF、运动 MEMS、部分 PMIC。集中度既是护城河也是风险：失去一半苹果业务≈ *$10 亿* 营收。"},
+    {"kind": "power", "tag": "汽车 · SiC", "title": "Tesla 等付钱买 SiC，钱流向衬底",
+     "body": "汽车 OEM/Tier-1（Tesla、Bosch、Geely、BYD）的钱流入 *P&D*。P&D 2025 录得 *$2.75 亿* 营业亏损——ASP 下滑 *29%* + Catania 未消化产能费用。ST 的 SiC 钱大部分留在自有衬底厂（Norstel）与 Catania *€50 亿* 超级晶圆厂。"},
+    {"kind": "rf", "tag": "数据中心 · 新增长极", "title": "AWS 把钱投向 RFOC 硅光子",
+     "body": "2026-06-02 ST *上调* 数据中心营收目标至 *2026≈$1B*（原“nicely above $500M”）、*2027 或翻倍至≈$2B*（原“well above $1B”）。AWS 多年期数十亿美元合作锚定 *RFOC* 的 SiPho/BiCMOS 光互连——RFOC 是利润率最高（*18.5%*）的分部。"},
+    {"kind": "foundry", "tag": "钱汇向哪里 · IDM", "title": "大部分钱停在 ST 自有晶圆厂",
+     "body": "作为 IDM，ST 的 COGS 主要是自有 *~14 万片/周* 的折旧与运营，钱不外流给代工厂——这是它结构性毛利率（*33.9%*）低于无晶圆厂同业但现金留存自主的代价与好处。"},
+    {"kind": "memory", "tag": "钱外流出口 · 合资与设备", "title": "Crolles 300mm + 重庆 SiC + WFE",
+     "body": "真正的外流出口：与 *GlobalFoundries* 的 Crolles 300mm 合资（*€75 亿*）、*Sanan-ST* 重庆 200mm SiC（*$32 亿*），以及给 *ASML/AMAT/LAM/TEL* 的设备款（2025 净资本开支 *$18.4 亿*，占营收 *16%*）。"},
+    {"kind": "silicon", "tag": "共同设计 · 长尾客户", "title": "STM32 + Mobileye 锁定",
+     "body": "工业/个人电子客户的钱流入 *EMP*（*15.0%* OPM）——STM32 生态锁定数十年。*Mobileye* EyeQ 是 20 年以上的定制 ASIC 共同设计关系，钱通过 ST 工艺节点的代工集成回流。"}
+  ],
+  "source": "STM 2025 Form 20-F（分部营收/营业利润、客户集中度、制造布局、资本开支）+ STM 6-K 2026-06-02（数据中心营收上调）+ STM 6-K 2026-02-09（AWS 合作）。比例为粗略相对量，非流量守恒。"
+}
