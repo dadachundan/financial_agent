@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">艾伯维 (ABBV) 资产负债表 — FY2025 (含股东权益赤字 equity deficit)</text>
+<path d="M 204.00,64.00 C 262.00,64.00 262.00,106.00 320.00,106.00 L 320.00,121.36 C 262.00,121.36 262.00,79.36 204.00,79.36 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,93.36 C 262.00,93.36 262.00,121.36 320.00,121.36 L 320.00,158.14 C 262.00,158.14 262.00,130.14 204.00,130.14 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,93.58 C 790.00,93.58 790.00,79.58 848.00,79.58 L 848.00,188.37 C 790.00,188.37 790.00,202.37 732.00,202.37 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,202.37 C 790.00,202.37 790.00,202.37 848.00,202.37 L 848.00,220.06 C 790.00,220.06 790.00,220.06 732.00,220.06 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,100.58 C 658.00,100.58 658.00,93.58 716.00,93.58 L 716.00,220.06 C 658.00,220.06 658.00,227.06 600.00,227.06 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,227.06 C 658.00,227.06 658.00,234.06 716.00,234.06 L 716.00,508.42 C 658.00,508.42 658.00,501.42 600.00,501.42 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,106.00 C 394.00,106.00 394.00,113.00 452.00,113.00 L 452.00,197.92 C 394.00,197.92 394.00,190.92 336.00,190.92 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 468.00,113.00 C 526.00,113.00 526.00,100.58 584.00,100.58 L 584.00,501.42 C 526.00,501.42 526.00,513.85 468.00,513.85 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,513.85 C 526.00,513.85 526.00,515.42 584.00,515.42 L 584.00,517.42 C 526.00,517.42 526.00,515.85 468.00,515.85 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,144.14 C 262.00,144.14 262.00,158.14 320.00,158.14 L 320.00,172.61 C 262.00,172.61 262.00,158.61 204.00,158.61 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,172.61 C 262.00,172.61 262.00,172.61 320.00,172.61 L 320.00,190.92 C 262.00,190.92 262.00,190.92 204.00,190.92 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,204.92 C 262.00,204.92 262.00,204.92 320.00,204.92 L 320.00,309.05 C 262.00,309.05 262.00,309.05 204.00,309.05 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,204.92 C 394.00,204.92 394.00,197.92 452.00,197.92 L 452.00,505.00 C 394.00,505.00 394.00,512.00 336.00,512.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,234.06 C 790.00,234.06 790.00,234.06 848.00,234.06 L 848.00,406.28 C 790.00,406.28 790.00,406.28 732.00,406.28 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,406.28 C 790.00,406.28 790.00,420.28 848.00,420.28 L 848.00,522.42 C 790.00,522.42 790.00,508.42 732.00,508.42 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,323.05 C 262.00,323.05 262.00,309.05 320.00,309.05 L 320.00,462.86 C 262.00,462.86 262.00,476.86 204.00,476.86 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,490.86 C 262.00,490.86 262.00,462.86 320.00,462.86 L 320.00,479.31 C 262.00,479.31 262.00,507.31 204.00,507.31 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 600.00,515.42 C 658.00,515.42 658.00,522.42 716.00,522.42 L 716.00,524.42 C 658.00,524.42 658.00,517.42 600.00,517.42 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,521.31 C 262.00,521.31 262.00,479.31 320.00,479.31 L 320.00,512.00 C 262.00,512.00 262.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,522.42 C 790.00,522.42 790.00,536.42 848.00,536.42 L 848.00,538.42 C 790.00,538.42 790.00,524.42 732.00,524.42 Z" fill="#86efac" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="15.36" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="93.36" width="16" height="36.78" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="144.14" width="16" height="14.47" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="172.61" width="16" height="18.31" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="204.92" width="16" height="104.14" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="323.05" width="16" height="153.81" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="490.86" width="16" height="16.44" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="521.31" width="16" height="32.69" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="106.00" width="16" height="84.92" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="204.92" width="16" height="307.08" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="113.00" width="16" height="392.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="100.58" width="16" height="400.85" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="515.42" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="93.58" width="16" height="126.49" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="234.06" width="16" height="274.36" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="522.42" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="79.58" width="16" height="108.79" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="202.37" width="16" height="17.69" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="234.06" width="16" height="172.22" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="420.28" width="16" height="102.14" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="536.42" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="68.68" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash &amp; ST Inv</text>
+<text x="179.00" y="81.68" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.3B  (3.9%)</text>
+<text x="179.00" y="108.75" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Receivables</text>
+<text x="179.00" y="121.75" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$12.6B  (9.4%)</text>
+<text x="179.00" y="148.38" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Inventories</text>
+<text x="179.00" y="161.38" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.0B  (3.7%)</text>
+<text x="179.00" y="178.76" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other Current</text>
+<text x="179.00" y="191.76" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$6.3B  (4.7%)</text>
+<text x="179.00" y="253.98" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Goodwill</text>
+<text x="179.00" y="266.98" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$35.6B  (26.6%)</text>
+<text x="179.00" y="396.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Intangibles, net</text>
+<text x="179.00" y="409.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$52.6B  (39.2%)</text>
+<text x="179.00" y="496.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net PP&amp;E</text>
+<text x="179.00" y="509.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.6B  (4.2%)</text>
+<text x="179.00" y="534.65" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other LT</text>
+<text x="179.00" y="547.65" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$11.2B  (8.3%)</text>
+<rect x="339.00" y="88.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="100.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="113.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$29.1B  (21.7%)</text>
+<rect x="339.00" y="186.92" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="198.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="211.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$105.1B  (78.3%)</text>
+<rect x="471.00" y="95.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="107.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="120.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$134.2B  (100.0%)</text>
+<rect x="603.00" y="82.58" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="94.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="107.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$137.2B  (102.3%)</text>
+<rect x="603.00" y="497.42" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="509.42" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="522.42" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$3.2B  (-2.4%)</text>
+<rect x="735.00" y="75.58" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="87.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="100.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$43.3B  (32.3%)</text>
+<rect x="735.00" y="216.06" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="228.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="241.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$93.9B  (70.0%)</text>
+<rect x="735.00" y="504.42" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="516.42" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="529.42" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$3.2B  (-2.4%)</text>
+<line x1="864.00" y1="133.97" x2="870.00" y2="123.55" stroke="#cbd5e1" stroke-width="1"/>
+<text x="873.00" y="126.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Accounts Payable &amp; Accrued</text>
+<text x="873.00" y="139.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$37.2B  (27.8%)</text>
+<line x1="864.00" y1="211.21" x2="870.00" y2="200.79" stroke="#cbd5e1" stroke-width="1"/>
+<text x="873.00" y="203.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">ST Borrowings + Curr LTD</text>
+<text x="873.00" y="216.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$6.1B  (4.5%)</text>
+<line x1="864.00" y1="320.17" x2="870.00" y2="309.75" stroke="#cbd5e1" stroke-width="1"/>
+<text x="873.00" y="312.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Long-Term Debt</text>
+<text x="873.00" y="325.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$58.9B  (43.9%)</text>
+<line x1="864.00" y1="471.35" x2="870.00" y2="460.93" stroke="#cbd5e1" stroke-width="1"/>
+<text x="873.00" y="463.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other LT Liab</text>
+<text x="873.00" y="476.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$35.0B  (26.1%)</text>
+<line x1="864.00" y1="537.42" x2="870.00" y2="527.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="873.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity (Deficit)</text>
+<text x="873.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$3.2B  (-2.4%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ABBV FY2025 10-K, Consolidated Balance Sheets</text>
+</svg>

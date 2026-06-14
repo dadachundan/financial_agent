@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">艾伯维 (ABBV) 现金流 — FY2025</text>
+<path d="M 204.00,63.43 C 361.00,63.43 361.00,78.00 518.00,78.00 L 518.00,190.94 C 361.00,190.94 361.00,176.37 204.00,176.37 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,78.00 C 691.00,78.00 691.00,64.00 848.00,64.00 L 848.00,199.82 C 691.00,199.82 691.00,213.82 534.00,213.82 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,213.82 C 691.00,213.82 691.00,213.82 848.00,213.82 L 848.00,473.98 C 691.00,473.98 691.00,473.98 534.00,473.98 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,473.98 C 691.00,473.98 691.00,487.98 848.00,487.98 L 848.00,554.00 C 691.00,554.00 691.00,540.00 534.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,190.37 C 361.00,190.37 361.00,190.94 518.00,190.94 L 518.00,539.14 C 361.00,539.14 361.00,538.57 204.00,538.57 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,552.57 C 361.00,552.57 361.00,539.14 518.00,539.14 L 518.00,541.14 C 361.00,541.14 361.00,554.57 204.00,554.57 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="63.43" width="16" height="112.94" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="190.37" width="16" height="348.20" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="552.57" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="135.82" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="213.82" width="16" height="260.16" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="487.98" width="16" height="66.02" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="116.90" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="129.90" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.5B  (24.4%)</text>
+<rect x="207.00" y="155.80" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="167.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="180.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$17.0B  (75.4%)</text>
+<rect x="207.00" y="518.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$42.0M  (0.19%)</text>
+<rect x="537.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$22.6B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$6.6B  (29.4%)</text>
+<rect x="867.00" y="195.82" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="207.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="220.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$12.7B  (56.3%)</text>
+<text x="873.00" y="517.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="530.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.2B  (14.3%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = $15.8B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ABBV FY2025 10-K, Consolidated Statements of Cash Flows</text>
+</svg>
