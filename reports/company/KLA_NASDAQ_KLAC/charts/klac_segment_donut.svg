@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">KLA FY2025 分部营业收入构成</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 210.78,132.15 L 242.37,175.94 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 210.78,132.15 A 132 132 0 0 1 248.56,113.23 L 264.70,164.76 A 78 78 0 0 0 242.37,175.94 Z" fill="#15803d"/>
+<path d="M 248.56,113.23 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 264.70,164.76 Z" fill="#d97706"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">KLA</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$12.2B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="330.42" y1="370.52" x2="346.42" y2="370.52" stroke="#2563eb" stroke-width="1.4"/>
+<text x="350.42" y="368.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Semiconductor Process Control</text>
+<text x="350.42" y="382.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$10.9B  (90.1%)</text>
+<line x1="226.22" y1="115.80" x2="210.22" y2="115.80" stroke="#15803d" stroke-width="1.4"/>
+<text x="206.22" y="113.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">PCB &amp; Component Inspection</text>
+<text x="206.22" y="127.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$622.0M  (5.1%)</text>
+<line x1="267.15" y1="102.78" x2="251.15" y2="102.78" stroke="#d97706" stroke-width="1.4"/>
+<text x="247.15" y="100.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Specialty Semiconductor Process</text>
+<text x="247.15" y="114.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$587.0M  (4.8%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: KLA FY2025 10-K (财年截止 2025-06-30), SEC EDGAR · Note 18 分部报告</text>
+</svg>

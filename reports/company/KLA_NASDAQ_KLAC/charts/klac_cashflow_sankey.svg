@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">KLA 现金流量 Sankey — FY2025 (US$ 百万)</text>
+<path d="M 204.00,64.00 C 306.00,64.00 306.00,78.00 408.00,78.00 L 408.00,225.51 C 306.00,225.51 306.00,211.51 204.00,211.51 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,71.00 C 746.00,71.00 746.00,146.60 848.00,146.60 L 848.00,308.65 C 746.00,308.65 746.00,233.06 644.00,233.06 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,233.06 C 746.00,233.06 746.00,322.65 848.00,322.65 L 848.00,374.58 C 746.00,374.58 746.00,284.99 644.00,284.99 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,284.99 C 746.00,284.99 746.00,388.58 848.00,388.58 L 848.00,471.40 C 746.00,471.40 746.00,367.81 644.00,367.81 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,71.00 628.00,71.00 L 628.00,367.81 C 526.00,367.81 526.00,374.81 424.00,374.81 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,374.81 C 526.00,374.81 526.00,381.81 628.00,381.81 L 628.00,547.00 C 526.00,547.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,225.51 C 306.00,225.51 306.00,225.51 408.00,225.51 L 408.00,530.08 C 306.00,530.08 306.00,530.08 204.00,530.08 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,544.08 C 306.00,544.08 306.00,530.08 408.00,530.08 L 408.00,540.00 C 306.00,540.00 306.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="147.51" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="225.51" width="16" height="304.57" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="544.08" width="16" height="9.92" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="71.00" width="16" height="296.81" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="381.81" width="16" height="165.19" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="146.60" width="16" height="162.06" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="322.65" width="16" height="51.93" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="388.58" width="16" height="82.82" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="134.75" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="147.75" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.0B  (31.9%)</text>
+<rect x="207.00" y="199.43" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="211.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="224.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.1B  (65.9%)</text>
+<rect x="207.00" y="518.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$133.0M  (2.1%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.2B  (100.0%)</text>
+<rect x="647.00" y="53.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.0B  (64.2%)</text>
+<text x="653.00" y="461.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="474.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.2B  (35.8%)</text>
+<text x="873.00" y="224.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股票回购 Buybacks</text>
+<text x="873.00" y="237.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.2B  (35.1%)</text>
+<text x="873.00" y="345.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股息 Dividends</text>
+<text x="873.00" y="358.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$696.0M  (11.2%)</text>
+<text x="873.00" y="426.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">债务及其他 Debt/other</text>
+<text x="873.00" y="439.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.1B  (17.9%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$3.7B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: KLA FY2025 10-K (财年截止 2025-06-30), SEC EDGAR · 合并现金流量表</text>
+</svg>

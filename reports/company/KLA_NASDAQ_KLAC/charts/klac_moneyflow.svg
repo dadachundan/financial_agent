@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1012" width="1180" height="1012" role="img" aria-label="KLA — 工艺控制美元流向 (谁付钱 → 买什么 → 钱流向何处)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1012" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="84.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">KLA — 工艺控制美元流向 (谁付钱 → 买什么 → 钱流向何处)</text>
+<ellipse cx="1031.00" cy="369.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="150.00" x2="369.50" y2="584.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="150.00" x2="810.50" y2="584.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁向 KLA 付钱 (晶圆厂资本开支)</text>
+<text x="483.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">KLA 卖什么 (工艺控制产品线)</text>
+<text x="924.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">KLA 的钱流向何处</text>
+<path d="M 256.00 244.27 C 369.50 244.27, 369.50 205.82, 483.00 205.82" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 260.64 C 369.50 260.64, 369.50 333.27, 483.00 333.27" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 269.36 C 369.50 269.36, 369.50 429.91, 483.00 429.91" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 366.27 C 369.50 366.27, 369.50 223.27, 483.00 223.27" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 374.45 C 369.50 374.45, 369.50 437.00, 483.00 437.00" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 472.45 C 369.50 472.45, 369.50 237.45, 483.00 237.45" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 491.00 C 369.50 491.00, 369.50 444.09, 483.00 444.09" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 500.82 C 369.50 500.82, 369.50 538.00, 483.00 538.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 483.91 C 369.50 483.91, 369.50 340.36, 483.00 340.36" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 205.27 C 810.50 205.27, 810.50 201.82, 924.00 201.82" fill="none" stroke="url(#mfgold)" stroke-width="21.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 221.09 C 810.50 221.09, 810.50 321.00, 924.00 321.00" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 235.82 C 810.50 235.82, 810.50 530.36, 924.00 530.36" fill="none" stroke="url(#mfgold)" stroke-width="19.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 437.00 C 810.50 437.00, 810.50 547.82, 924.00 547.82" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 336.00 C 810.50 336.00, 810.50 217.09, 924.00 217.09" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 538.00 C 810.50 538.00, 810.50 225.27, 924.00 225.27" fill="none" stroke="url(#mfgold)" stroke-width="7.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 1138.00 538.00 C 1031.00 538.00, 1031.00 432.00, 924.00 432.00" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="219.05" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AI 代工资本开支</text>
+<text x="369.50" y="288.77" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">HBM/存储/代工</text>
+<text x="369.50" y="513.41" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">专用/封装/PCB</text>
+<text x="810.50" y="486.41" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">高毛利年金</text>
+<text x="1031.00" y="479.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">FCF 回报</text>
+<rect x="42.00" y="198.00" width="214" height="110.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="110.00" rx="2" fill="#34d399"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">TSMC 台积电</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">头号客户 ~19%</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">AI 代工/CoWoS 建设</text>
+<rect x="42.00" y="324.00" width="214" height="90.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="42.00" y="324.00" width="3" height="90.00" rx="2" fill="#a78bfa"/>
+<text x="60.00" y="357.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">三星电子</text>
+<text x="60.00" y="378.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">&gt;10% 客户</text>
+<text x="60.00" y="395.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">代工 + HBM/存储</text>
+<rect x="42.00" y="430.00" width="214" height="110.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="430.00" width="3" height="110.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="463.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Intel / SK Hynix / Micron / 中国代工厂</text>
+<text x="60.00" y="484.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">前五大合计 ~55-65% (估)</text>
+<text x="60.00" y="501.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">逻辑 + 存储 WFE</text>
+<rect x="483.00" y="160.00" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="160.00" width="3" height="120.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="193.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">晶圆检测 Wafer Inspection</text>
+<text x="501.00" y="214.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">62.0 亿美元 / 占 51%</text>
+<text x="501.00" y="231.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">明场/暗场/电子束/量测</text>
+<rect x="483.00" y="296.00" width="214" height="80.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="296.00" width="3" height="80.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="329.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">图案化/光罩检测</text>
+<text x="501.00" y="350.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">22.0 亿美元 / 占 18%</text>
+<text x="501.00" y="367.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Teron EUV 光罩</text>
+<rect x="483.00" y="392.00" width="214" height="90.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="392.00" width="3" height="90.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="425.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">服务 + 软件</text>
+<text x="501.00" y="446.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">26.8 亿美元 / 占 22%</text>
+<text x="501.00" y="463.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">装机量年金, +15% YoY</text>
+<rect x="483.00" y="498.00" width="214" height="80.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="498.00" width="3" height="80.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="531.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SSP + PCB 检测</text>
+<text x="501.00" y="552.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">12.1 亿美元 / 占 10%</text>
+<text x="501.00" y="569.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">SPTS + Orbotech</text>
+<rect x="924.00" y="160.00" width="214" height="100.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="160.00" width="3" height="100.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="193.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">供应商/COGS</text>
+<text x="942.00" y="214.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">47.5 亿美元 COGS</text>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">光学/精密机械/电子束柱</text>
+<rect x="924.00" y="276.00" width="214" height="90.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="276.00" width="3" height="90.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="309.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">研发 R&amp;D</text>
+<text x="942.00" y="330.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">13.6 亿美元 / 占 11%</text>
+<text x="942.00" y="347.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">8,500+ 活跃专利</text>
+<rect x="924.00" y="382.00" width="214" height="100.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="382.00" width="3" height="100.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="415.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">股东回报</text>
+<text x="942.00" y="436.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">回购 21.7 亿 + 股息 7.0 亿</text>
+<text x="942.00" y="453.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">目标 &gt;90% FCF</text>
+<rect x="924.00" y="498.00" width="214" height="80.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="498.00" width="3" height="80.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="531.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">净利润留存</text>
+<text x="942.00" y="552.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">净利 40.6 亿美元</text>
+<text x="942.00" y="569.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">毛利率 60.9%</text>
+<rect x="42.00" y="604.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="608.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="606.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="606.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="606.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="606.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="608.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="608.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="599.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="608.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="599.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="847.60" y="608.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="922.00" y="599.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="941.00" y="608.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="42.00" y="619.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="61.00" y="628.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="185.80" y="619.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="204.80" y="628.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<rect x="264.80" y="619.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="283.80" y="628.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<line x1="42" y1="644.00" x2="1138" y2="644.00" stroke="#222a3a"/>
+<text x="42.00" y="660.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 工艺控制美元链</text>
+<rect x="42.00" y="680.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="680.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="704.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">谁付钱 · AI 代工</text>
+<text x="58.00" y="722.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">TSMC 是支点</text>
+<text x="58.00" y="746.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">TSMC</tspan><tspan fill="#9aa3b8" font-weight="400"> 单一客户占</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 营业收入约</tspan><tspan fill="#f4d58a" font-weight="700"> 19%</tspan><tspan fill="#9aa3b8" font-weight="400"> ;</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> 三星</tspan><tspan fill="#9aa3b8" font-weight="400"> 同为披露的</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;10%</tspan></text>
+<text x="58.00" y="762.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">客户。前五大账户</tspan><tspan fill="#9aa3b8" font-weight="400"> (台积电/三星/英特尔/SK</tspan><tspan fill="#9aa3b8" font-weight="400"> 海力士/美光)</tspan><tspan fill="#9aa3b8" font-weight="400"> 很可能合计</tspan><tspan fill="#f4d58a" font-weight="700"> 55-65%</tspan><tspan fill="#9aa3b8" font-weight="400"> 营业收入</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan></text>
+<text x="58.00" y="778.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">集中度是</tspan><tspan fill="#9aa3b8" font-weight="400"> KLA</tspan><tspan fill="#9aa3b8" font-weight="400"> 最大的结构性风险也是最深的护城河。</tspan></text>
+<rect x="412.00" y="680.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="680.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="704.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">买什么 · 检测</text>
+<text x="428.00" y="722.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">晶圆检测占一半</text>
+<text x="428.00" y="746.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">晶圆检测</tspan><tspan fill="#9aa3b8" font-weight="400"> (明场/暗场/电子束/光学量测)</tspan><tspan fill="#9aa3b8" font-weight="400"> 贡献</tspan><tspan fill="#f4d58a" font-weight="700"> 62.0</tspan><tspan fill="#f4d58a" font-weight="700"> 亿美元</tspan><tspan fill="#9aa3b8" font-weight="400"> 、占总营业收入</tspan><tspan fill="#f4d58a" font-weight="700"> 51%</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan></text>
+<text x="428.00" y="762.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">节点每缩进一代,</tspan><tspan fill="#9aa3b8" font-weight="400"> 所需检测/量测步骤大致翻倍,</tspan><tspan fill="#9aa3b8" font-weight="400"> 推升</tspan><tspan fill="#9aa3b8" font-weight="400"> KLA</tspan><tspan fill="#9aa3b8" font-weight="400"> 每片晶圆美元含量。</tspan></text>
+<rect x="782.00" y="680.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="782.00" y="680.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="798.00" y="704.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">买什么 · 年金</text>
+<text x="798.00" y="722.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">服务是高毛利尾巴</text>
+<text x="798.00" y="746.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">服务收入</tspan><tspan fill="#f4d58a" font-weight="700"> 26.8</tspan><tspan fill="#f4d58a" font-weight="700"> 亿美元</tspan><tspan fill="#9aa3b8" font-weight="400"> (占</tspan><tspan fill="#f4d58a" font-weight="700"> 22%</tspan><tspan fill="#9aa3b8" font-weight="400"> ,</tspan><tspan fill="#f4d58a" font-weight="700"> +15%</tspan><tspan fill="#f4d58a" font-weight="700"> YoY</tspan><tspan fill="#9aa3b8" font-weight="400"> )</tspan><tspan fill="#9aa3b8" font-weight="400"> 来自</tspan><tspan fill="#9aa3b8" font-weight="400"> 10-20</tspan><tspan fill="#9aa3b8" font-weight="400"> 年寿命的装机工具;</tspan></text>
+<text x="798.00" y="762.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">管理层</tspan><tspan fill="#9aa3b8" font-weight="400"> 2030</tspan><tspan fill="#9aa3b8" font-weight="400"> 模型把服务</tspan><tspan fill="#9aa3b8" font-weight="400"> CAGR</tspan><tspan fill="#9aa3b8" font-weight="400"> 上调至</tspan><tspan fill="#f4d58a" font-weight="700"> 13-15%</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> 这是平滑</tspan><tspan fill="#9aa3b8" font-weight="400"> WFE</tspan><tspan fill="#9aa3b8" font-weight="400"> 周期的经常性基础。</tspan></text>
+<rect x="42.00" y="826.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="826.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="850.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">钱流向 · 回报</text>
+<text x="58.00" y="868.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">几乎全部 FCF 返还</text>
+<text x="58.00" y="892.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 自由现金流</tspan><tspan fill="#f4d58a" font-weight="700"> 37.5</tspan><tspan fill="#f4d58a" font-weight="700"> 亿美元</tspan><tspan fill="#9aa3b8" font-weight="400"> ;</tspan><tspan fill="#9aa3b8" font-weight="400"> 回购</tspan><tspan fill="#f4d58a" font-weight="700"> 21.7</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 股息</tspan><tspan fill="#f4d58a" font-weight="700"> 7.0</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan></text>
+<text x="58.00" y="908.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">。董事会目标把资本回报提至</tspan><tspan fill="#9aa3b8" font-weight="400"> FCF</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;90%</tspan><tspan fill="#9aa3b8" font-weight="400"> ,</tspan><tspan fill="#9aa3b8" font-weight="400"> 连续</tspan><tspan fill="#f4d58a" font-weight="700"> 17</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 上调股息,</tspan><tspan fill="#9aa3b8" font-weight="400"> 并完成</tspan><tspan fill="#f4d58a" font-weight="700"> 10</tspan><tspan fill="#f4d58a" font-weight="700"> 比</tspan><tspan fill="#f4d58a" font-weight="700"> 1</tspan></text>
+<text x="58.00" y="924.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">拆分。</tspan></text>
+<text x="590.00" y="994.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: KLA FY2025 10-K (营业收入/分部/地区/现金流) · 2026-03 投资者日 · SEMI 2025 WFE 预测</text>
+</svg>

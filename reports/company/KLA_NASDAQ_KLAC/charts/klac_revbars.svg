@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">KLA 分部营业收入历史 — FY2021–FY2025 (US$ 百万)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Semiconductor Process Control</text>
+<rect x="241.40" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="257.40" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Specialty Semiconductor Process</text>
+<rect x="476.00" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="492.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">PCB &amp; Component Inspection</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$2.6B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$5.3B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$7.9B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$10.5B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$13.1B</text>
+<rect x="102.09" y="260.93" width="88.62" height="151.07" fill="#2563eb"/>
+<rect x="102.09" y="249.84" width="88.62" height="11.09" fill="#15803d"/>
+<rect x="102.09" y="235.97" width="88.62" height="13.87" fill="#d97706"/>
+<text x="146.40" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2021</text>
+<rect x="254.89" y="214.66" width="88.62" height="197.34" fill="#2563eb"/>
+<rect x="254.89" y="201.43" width="88.62" height="13.23" fill="#15803d"/>
+<rect x="254.89" y="184.74" width="88.62" height="16.69" fill="#d97706"/>
+<text x="299.20" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2022</text>
+<rect x="407.69" y="176.01" width="88.62" height="235.99" fill="#2563eb"/>
+<rect x="407.69" y="160.31" width="88.62" height="15.70" fill="#15803d"/>
+<rect x="407.69" y="144.97" width="88.62" height="15.34" fill="#d97706"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2023</text>
+<rect x="560.49" y="191.30" width="88.62" height="220.70" fill="#2563eb"/>
+<rect x="560.49" y="177.23" width="88.62" height="14.07" fill="#15803d"/>
+<rect x="560.49" y="162.37" width="88.62" height="14.86" fill="#d97706"/>
+<text x="604.80" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2024</text>
+<rect x="713.29" y="133.50" width="88.62" height="278.50" fill="#2563eb"/>
+<rect x="713.29" y="118.56" width="88.62" height="14.93" fill="#15803d"/>
+<rect x="713.29" y="102.74" width="88.62" height="15.82" fill="#d97706"/>
+<text x="757.60" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2025</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: KLA FY2023 &amp; FY2025 10-K, SEC EDGAR · Note 分部报告</text>
+</svg>
