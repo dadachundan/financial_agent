@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">ExxonMobil 损益表 Sankey (FY2025, 百万美元)</text>
+<path d="M 204.00,64.00 C 258.00,64.00 258.00,85.00 312.00,85.00 L 312.00,393.00 C 258.00,393.00 258.00,372.00 204.00,372.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,187.15 560.00,187.15 L 560.00,239.14 C 506.00,239.14 506.00,130.00 452.00,130.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,130.00 C 506.00,130.00 506.00,253.14 560.00,253.14 L 560.00,390.85 C 506.00,390.85 506.00,267.70 452.00,267.70 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,253.86 C 382.00,253.86 382.00,260.86 328.00,260.86 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,260.86 C 382.00,260.86 382.00,267.86 436.00,267.86 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,172.92 C 754.00,172.92 754.00,256.58 808.00,256.58 L 808.00,292.92 C 754.00,292.92 754.00,209.26 700.00,209.26 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,209.26 C 754.00,209.26 754.00,306.92 808.00,306.92 L 808.00,321.42 C 754.00,321.42 754.00,223.76 700.00,223.76 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,187.15 C 630.00,187.15 630.00,172.92 684.00,172.92 L 684.00,224.92 C 630.00,224.92 630.00,239.14 576.00,239.14 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,253.14 C 630.00,253.14 630.00,238.92 684.00,238.92 L 684.00,253.34 C 630.00,253.34 630.00,267.56 576.00,267.56 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,267.56 C 630.00,267.56 630.00,267.34 684.00,267.34 L 684.00,269.34 C 630.00,269.34 630.00,269.56 576.00,269.56 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,269.56 C 630.00,269.56 630.00,283.34 684.00,283.34 L 684.00,405.08 C 630.00,405.08 630.00,391.31 576.00,391.31 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,386.00 C 258.00,386.00 258.00,393.00 312.00,393.00 L 312.00,442.63 C 258.00,442.63 258.00,435.63 204.00,435.63 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,449.63 C 258.00,449.63 258.00,442.63 312.00,442.63 L 312.00,470.61 C 258.00,470.61 258.00,477.61 204.00,477.61 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,491.61 C 258.00,491.61 258.00,470.61 312.00,470.61 L 312.00,493.00 C 258.00,493.00 258.00,514.00 204.00,514.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="308.00" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="386.00" width="16" height="49.63" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="449.63" width="16" height="27.98" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="491.61" width="16" height="22.39" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="175.86" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="267.86" width="16" height="232.14" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="187.15" width="16" height="52.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="253.14" width="16" height="137.71" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="172.92" width="16" height="52.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="238.92" width="16" height="14.42" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="267.34" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="283.34" width="16" height="121.74" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="256.58" width="16" height="36.34" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="306.92" width="16" height="14.49" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="218.00" x2="182.00" y2="202.19" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="205.19" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Energy Products 能源产品</text>
+<text x="179.00" y="218.19" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$244.5B  (75.5%)</text>
+<line x1="188.00" y1="410.81" x2="182.00" y2="395.01" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="398.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Upstream 上游</text>
+<text x="179.00" y="411.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$39.4B  (12.2%)</text>
+<line x1="188.00" y1="463.62" x2="182.00" y2="447.81" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="450.81" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Chemical 化工</text>
+<text x="179.00" y="463.81" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$22.2B  (6.9%)</text>
+<line x1="188.00" y1="502.80" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Specialty 特种</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$17.8B  (5.5%)</text>
+<rect x="331.00" y="67.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$323.8B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$139.6B  (43.1%)</text>
+<rect x="455.00" y="249.86" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="261.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="274.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$184.2B  (56.9%)</text>
+<rect x="579.00" y="169.15" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="181.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="194.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$41.3B  (12.7%)</text>
+<rect x="579.00" y="235.14" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="247.14" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="260.14" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$109.3B  (33.8%)</text>
+<rect x="703.00" y="154.92" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="166.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="179.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$41.3B  (12.7%)</text>
+<rect x="703.00" y="220.92" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="232.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="245.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.4B  (3.5%)</text>
+<rect x="703.00" y="249.34" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="261.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="274.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (0.38%)</text>
+<rect x="703.00" y="274.34" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="286.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="299.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$96.6B  (29.8%)</text>
+<text x="833.00" y="271.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="284.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$28.8B  (8.9%)</text>
+<text x="833.00" y="311.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="324.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.5B  (3.6%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ExxonMobil 2025 Form 10-K (FY2025), filed 2026-02-18 — 综合损益表 + 分部销售附注</text>
+</svg>

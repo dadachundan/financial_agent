@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 销售收入 — 按地区 (百万美元)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 228.03,356.79 L 252.56,308.68 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 228.03,356.79 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 252.56,308.68 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">XOM</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$323.9B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="422.18" y1="271.44" x2="438.18" y2="271.44" stroke="#2563eb" stroke-width="1.4"/>
+<text x="442.18" y="269.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Non-U.S. 美国以外</text>
+<text x="442.18" y="283.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$186.3B  (57.5%)</text>
+<line x1="153.82" y1="206.96" x2="137.82" y2="206.96" stroke="#15803d" stroke-width="1.4"/>
+<text x="133.82" y="204.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States 美国</text>
+<text x="133.82" y="218.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$137.6B  (42.5%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ExxonMobil 2025 Form 10-K (FY2025), filed 2026-02-18 — Geographic Sales 地区销售附注</text>
+</svg>

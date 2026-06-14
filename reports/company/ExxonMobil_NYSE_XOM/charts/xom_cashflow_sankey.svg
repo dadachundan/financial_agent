@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">ExxonMobil 现金流 Sankey (FY2025, 百万美元)</text>
+<path d="M 204.00,71.00 C 306.00,71.00 306.00,78.00 408.00,78.00 L 408.00,495.43 C 306.00,495.43 306.00,488.43 204.00,488.43 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,71.00 C 746.00,71.00 746.00,138.05 848.00,138.05 L 848.00,276.45 C 746.00,276.45 746.00,209.40 644.00,209.40 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,209.40 C 746.00,209.40 746.00,290.45 848.00,290.45 L 848.00,453.29 C 746.00,453.29 746.00,372.24 644.00,372.24 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,372.24 C 746.00,372.24 746.00,467.29 848.00,467.29 L 848.00,479.95 C 746.00,479.95 746.00,384.90 644.00,384.90 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,71.00 628.00,71.00 L 628.00,384.90 C 526.00,384.90 526.00,391.90 424.00,391.90 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,391.90 C 526.00,391.90 526.00,398.90 628.00,398.90 L 628.00,547.00 C 526.00,547.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,502.43 C 306.00,502.43 306.00,495.43 408.00,495.43 L 408.00,540.00 C 306.00,540.00 306.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="417.43" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="502.43" width="16" height="44.57" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="71.00" width="16" height="313.90" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="398.90" width="16" height="148.10" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="138.05" width="16" height="138.40" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="290.45" width="16" height="162.84" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="467.29" width="16" height="12.67" rx="1.5" fill="#dc2626"/>
+<rect x="207.00" y="53.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$52.0B  (90.4%)</text>
+<rect x="207.00" y="484.43" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="496.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="210.00" y="509.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.5B  (9.6%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$57.5B  (100.0%)</text>
+<rect x="647.00" y="53.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$39.1B  (67.9%)</text>
+<text x="653.00" y="469.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="482.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$18.4B  (32.1%)</text>
+<text x="873.00" y="204.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Dividends 股息</text>
+<text x="873.00" y="217.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$17.2B  (30.0%)</text>
+<text x="873.00" y="368.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Buybacks 股份回购</text>
+<text x="873.00" y="381.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$20.3B  (35.2%)</text>
+<text x="873.00" y="470.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net debt/other 净债务及其他</text>
+<text x="873.00" y="483.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.6B  (2.7%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$20.5B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ExxonMobil 2025 Form 10-K (FY2025), filed 2026-02-18 — 综合现金流量表</text>
+</svg>

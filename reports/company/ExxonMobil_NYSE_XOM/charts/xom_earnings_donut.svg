@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 分部税后盈利 (百万美元)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 177.27,311.06 L 222.57,281.66 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 177.27,311.06 A 132 132 0 0 1 202.11,138.96 L 237.25,179.97 A 78 78 0 0 0 222.57,281.66 Z" fill="#15803d"/>
+<path d="M 202.11,138.96 A 132 132 0 0 1 267.62,108.78 L 275.96,162.13 A 78 78 0 0 0 237.25,179.97 Z" fill="#d97706"/>
+<path d="M 267.62,108.78 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 275.96,162.13 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">盈利</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$32.4B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="409.27" y1="305.07" x2="425.27" y2="305.07" stroke="#2563eb" stroke-width="1.4"/>
+<text x="429.27" y="303.07" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Upstream 上游</text>
+<text x="429.27" y="317.07" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$21.4B  (65.8%)</text>
+<line x1="151.42" y1="219.48" x2="135.42" y2="219.48" stroke="#15803d" stroke-width="1.4"/>
+<text x="131.42" y="217.48" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Energy Products 能源产品</text>
+<text x="131.42" y="231.48" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$7.4B  (22.9%)</text>
+<line x1="230.26" y1="113.86" x2="214.26" y2="113.86" stroke="#d97706" stroke-width="1.4"/>
+<text x="210.26" y="111.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Specialty 特种产品</text>
+<text x="210.26" y="125.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.9B  (8.8%)</text>
+<line x1="277.32" y1="101.61" x2="261.32" y2="101.61" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="257.32" y="99.61" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Chemical 化工</text>
+<text x="257.32" y="113.61" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$800.0M  (2.5%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ExxonMobil 2025 Form 10-K (FY2025), filed 2026-02-18 — Business Profile 分部税后盈利 (不含公司及融资 -3,590)</text>
+</svg>
