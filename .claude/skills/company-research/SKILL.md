@@ -776,6 +776,7 @@ Skip this step if the user said `no lens scorecards` / `skip Section 10` / simil
 - Inventing competitor product names not present in any cited filing
 - Inventing specific market-share percentages and segment-revenue splits
 - Inventing executive names and management-transition details
+- Shipping charts that render broken even when every number is correct — nodes drawn off-canvas, a bar taller than the viewBox, labels clipped past the edge, a degenerate single-ribbon Sankey, or a Mermaid block that throws a syntax error at view time (see 10.7)
 
 Step 10 catches these before the report ships. **Run verification on every report file produced** (default: the Chinese report; bilingual mode: both Chinese and English). **Skip Step 10 only if the user has explicitly waived it.**
 
@@ -806,12 +807,41 @@ Before declaring done, confirm each line:
 - [ ] Link-title ↔ URL consistency: every link whose title names a source (indicators.db, FRED, Yahoo, a broker, a filing, McKinsey/Yole/Gartner) resolves to that source's domain — scan `grep -oE '\[[^]]+\]\(http[^)]+\)' <report>.md` for titles paired with the wrong domain. A 200-OK URL that doesn't contain the claimed source/number (e.g. `[indicators.db 快照](https://www.sec.gov/...)`) is a FAIL even though the reachability check passes
 - [ ] **Financial-statement charts (`financial_charts.py`):** every figure in each Sankey / donut / DuPont string-matches the cited statement; the chart is pasted **un-fenced** so it renders; the `--source` footer cites the exact statement; the surrounding paragraph carries the page-level citation; no chart contains a number not traceable to a cited filing
 - [ ] **Money-flow diagram (`financial_charts.py moneyflow`):** present (one per report) and pasted **un-fenced**; every node is a real, sourced counterpart (no invented suppliers); each `$` in a ribbon label string-matches a source cited in the surrounding paragraph; the `--source` footer is present; the "follow the money" caption names the chokepoint(s) and cites each link — or, if dropped, the chain-not-sourceable reason is in the log
+- [ ] **Charts RENDER, not just compute (10.7 — MANDATORY):** `lint_report_charts.py` exits 0 (no SVG node / bar / label off-canvas or overflowing its viewBox) **AND** a port-5002 browser screenshot was eyeballed — every Sankey node connected (no floating bar, no node fed by a single hair-thin ribbon), every Mermaid block rendered (no red "Syntax error" box), no clipped or overlapping labels
 
 #### 10.6 — Append a verification log to each report
 
-After the References section in **every report produced** (the Chinese report by default; both Chinese and English in bilingual mode), append a `<details>` block listing what was checked. This makes verification visible to the reader and forces honesty about residual unknowns. **The `<summary>` line MUST be the exact English string `Verification log (Step 10) — YYYY-MM-DD` even in Chinese reports** — project tooling greps for it; a translated summary (`验证日志…`) breaks the contract. Chinese annotation may follow inside the block body. The logs may differ slightly between languages (e.g., different filings checked) but follow the same structure.
+After the References section in **every report produced** (the Chinese report by default; both Chinese and English in bilingual mode), append a `<details>` block listing what was checked. This makes verification visible to the reader and forces honesty about residual unknowns. **The `<summary>` line MUST be the exact English string `Verification log (Step 10) — YYYY-MM-DD` even in Chinese reports** — project tooling greps for it; a translated summary (`验证日志…`) breaks the contract. Chinese annotation may follow inside the block body. The logs may differ slightly between languages (e.g., different filings checked) but follow the same structure. **The log must include the 10.7 chart render-check line** (`lint exit 0 + :5002 screenshot eyeballed`).
 
-**The full log template** (URL check · Step 0.5 status · further-viewing URLs · SEC filenames · 10-K spot-checks · financial-chart figure string-matches · money-flow node/label string-matches · analyst-view sentences · institute-research file_ids · residual unknowns) **lives in [`references/verification.md`](references/verification.md) § 10.6 — copy it from there.** If the log shows residual unknowns the user cares about, fix them before declaring done. Every report produced (Chinese always; English when bilingual) must be verified and signed off before final submission.
+**The full log template** (URL check · Step 0.5 status · further-viewing URLs · SEC filenames · 10-K spot-checks · financial-chart figure string-matches · money-flow node/label string-matches · chart render-check (10.7) · analyst-view sentences · institute-research file_ids · residual unknowns) **lives in [`references/verification.md`](references/verification.md) § 10.6 — copy it from there.** If the log shows residual unknowns the user cares about, fix them before declaring done. Every report produced (Chinese always; English when bilingual) must be verified and signed off before final submission.
+
+#### 10.7 — Render-check every chart (visual, not just numeric — MANDATORY)
+
+Step 10.5's chart lines confirm the *numbers* are right; they do NOT confirm the chart *renders*. A chart can carry perfectly sourced numbers and still ship broken. This substep exists because the Black Sesame (HKEX:2533) FY2025 income Sankey shipped exactly that way: operating loss was 1.76× revenue, the `income` generator placed nodes at **negative Y** and drew a **900px bar inside a 560px viewBox**, every number string-matched the filing, and "verification" passed because **nothing rendered it**. Two gates, both required, before sign-off:
+
+**(a) Deterministic SVG-bounds lint — run first, must exit 0.**
+
+```bash
+/opt/anaconda3/bin/python3 .claude/skills/company-research/scripts/lint_report_charts.py \
+  reports/company/<Slug>/<file>.md
+```
+
+It parses every inline `<svg>` (transform-aware) and FAILS on any rect / path / line / text that renders outside its own viewBox, or any bar taller than the canvas. A non-zero exit means a chart is clipped or off-canvas — fix the generator inputs / geometry and regenerate before continuing. Run it on **every** report file produced (ZH always; EN too in bilingual mode). Mermaid blocks are reported as a count only — they render in-browser, so gate (b) covers them.
+
+- **Known failure mode — loss-making issuers.** When operating loss / total opex exceeds revenue, `financial_charts.py income` can place nodes off-canvas. For any issuer with an operating loss, inspect the income Sankey specifically. The fix that stays on-canvas and balances: draw the **operating-loss deficit as a left-side source** that — together with gross profit and other income — funds the operating-expense pool (every node then conserves flow and the loss bar flows into R&D/SG&A instead of dangling). See the Black Sesame ZH report's income Sankey for the worked 5-column layout.
+
+**(b) Browser screenshot — launch the local viewer on port 5002 and eyeball every chart.**
+
+Never port 5001 (the user's live instance). Start the viewer on **5002**, open the report, screenshot it, and READ the screenshot yourself:
+
+```
+preview_start (port 5002)  →  http://localhost:5002/claude-reports/view/company/<Slug>/<file>.md
+preview_screenshot         →  Read the PNG  (scroll / multiple shots for a long report)
+```
+
+Confirm, chart by chart: every Sankey node is connected (no floating bars, no node fed by a single hair-thin ribbon), ribbons land somewhere, donut/radar slices look sane, labels aren't clipped or overlapping, and **every Mermaid block rendered (no red "Syntax error" box)**. Fix the source and re-screenshot anything wrong. **Stop the server when done:** `preview_stop` + `lsof -ti :5002 | xargs kill -9`.
+
+Record the outcome in the 10.6 log as `**Chart render-check (10.7)** — lint exit 0 (N svg / M mermaid); :5002 screenshot eyeballed, all charts render, Mermaid OK`.
 
 ---
 

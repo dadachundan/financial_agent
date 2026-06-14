@@ -110,6 +110,8 @@ After the References section in **every report produced** (the Chinese report by
 
 **Money-flow diagram (`financial_charts.py moneyflow`)** — every node is a real, sourced counterpart (no invented suppliers); each number in a ribbon label OR a "Follow the money" card body string-matched to a source cited in the surrounding paragraph (e.g. "AI6 fab · $16.5B" ✓ matches the cited deal announcement; card "capex topped $11B" ✓ matches the cited 10-K); `--source` footer present; the "follow the money" caption names the chokepoint(s) and cites each link. If dropped, the reason (chain not sourceable) is logged here.
 
+**Chart render-check (10.7)** — `lint_report_charts.py` exit 0 (<N> svg within viewBox / <M> mermaid blocks); local viewer launched on :5002, report screenshot eyeballed — all Sankey nodes connected, donut/radar sane, no clipped/overlapping labels, every Mermaid block rendered (no syntax-error box). Server stopped after.
+
 **Analyst-view sentences** (intentionally not cited to a primary source):
 - Section 1: "<paragraph fragment>" — uncited; supported by industry observation.
 - Section 4.1 / 4.2 / 4.3: share-leadership claims labeled `*Analyst view:*` / `*分析师观点：*` per skill rule.
