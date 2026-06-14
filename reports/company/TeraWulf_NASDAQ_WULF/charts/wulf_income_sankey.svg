@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">TeraWulf 收入表 Sankey — FY2025 (US$M)</text>
+<path d="M 700.00,-66.61 C 754.00,-66.61 754.00,288.00 808.00,288.00 L 808.00,290.00 C 754.00,290.00 754.00,-64.61 700.00,-64.61 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,-59.61 C 630.00,-59.61 630.00,-66.61 684.00,-66.61 L 684.00,-64.61 C 630.00,-64.61 630.00,-57.61 576.00,-57.61 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,-43.61 C 630.00,-43.61 630.00,-50.61 684.00,-50.61 L 684.00,319.55 C 630.00,319.55 630.00,326.55 576.00,326.55 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,326.55 C 630.00,326.55 630.00,333.55 684.00,333.55 L 684.00,644.61 C 630.00,644.61 630.00,637.61 576.00,637.61 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 452.00,71.00 C 506.00,71.00 506.00,-59.61 560.00,-59.61 L 560.00,-57.61 C 506.00,-57.61 506.00,73.00 452.00,73.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,73.00 C 506.00,73.00 506.00,-43.61 560.00,-43.61 L 560.00,637.61 C 506.00,637.61 506.00,754.21 452.00,754.21 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,71.00 C 258.00,71.00 258.00,78.00 312.00,78.00 L 312.00,457.67 C 258.00,457.67 258.00,450.67 204.00,450.67 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 328.00,78.00 C 382.00,78.00 382.00,71.00 436.00,71.00 L 436.00,285.88 C 382.00,285.88 382.00,292.88 328.00,292.88 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,292.88 C 382.00,292.88 382.00,299.88 436.00,299.88 L 436.00,507.00 C 382.00,507.00 382.00,500.00 328.00,500.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,464.67 C 258.00,464.67 258.00,457.67 312.00,457.67 L 312.00,500.00 C 258.00,500.00 258.00,507.00 204.00,507.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="379.67" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="464.67" width="16" height="42.33" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="71.00" width="16" height="214.88" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="299.88" width="16" height="207.12" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="-59.61" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="-43.61" width="16" height="681.21" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="-66.61" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="-50.61" width="16" height="370.16" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="333.55" width="16" height="311.05" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="288.00" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="257.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Digital Asset Mining 比特币挖矿</text>
+<text x="179.00" y="270.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$151.6M  (90.0%)</text>
+<text x="179.00" y="482.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">HPC Leasing AI租赁</text>
+<text x="179.00" y="495.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$16.9M  (10.0%)</text>
+<rect x="331.00" y="60.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$168.5M  (100.0%)</text>
+<rect x="455.00" y="53.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$85.8M  (50.9%)</text>
+<rect x="455.00" y="281.88" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="293.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="306.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$82.7M  (49.1%)</text>
+<rect x="579.00" y="-77.61" width="138.30" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="-65.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="-52.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$186.2M  (-110.5%)</text>
+<rect x="579.00" y="-52.61" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="-40.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="-27.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$272.0M  (161.4%)</text>
+<rect x="703.00" y="-84.61" width="138.30" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="-72.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="-59.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$661.3M  (-392.5%)</text>
+<rect x="703.00" y="-59.61" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="-47.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="-34.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$147.8M  (87.7%)</text>
+<rect x="703.00" y="315.55" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="327.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="340.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$124.2M  (73.7%)</text>
+<text x="833.00" y="286.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="299.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$661.4M  (-392.5%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">经营亏损 $186M；净亏损 $661M 中 $429.8M 为 Google 认股权证非现金重估、$41M 为净利息</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: TeraWulf FY2025 10-K (filed 2026-02-27), Items 7 &amp; 8</text>
+</svg>

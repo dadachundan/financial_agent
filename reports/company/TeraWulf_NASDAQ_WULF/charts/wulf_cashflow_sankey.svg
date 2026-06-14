@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">TeraWulf 现金流 Sankey — FY2025 (US$M)</text>
+<path d="M 204.00,78.00 C 306.00,78.00 306.00,85.00 408.00,85.00 L 408.00,104.01 C 306.00,104.01 306.00,97.01 204.00,97.01 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,85.00 C 526.00,85.00 526.00,71.00 628.00,71.00 L 628.00,81.68 C 526.00,81.68 526.00,95.68 424.00,95.68 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,95.68 C 526.00,95.68 526.00,95.68 628.00,95.68 L 628.00,214.54 C 526.00,214.54 526.00,214.54 424.00,214.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,214.54 C 526.00,214.54 526.00,228.54 628.00,228.54 L 628.00,547.00 C 526.00,547.00 526.00,533.00 424.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,95.68 C 746.00,95.68 746.00,228.53 848.00,228.53 L 848.00,297.29 C 746.00,297.29 746.00,164.44 644.00,164.44 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,164.44 C 746.00,164.44 746.00,311.29 848.00,311.29 L 848.00,350.36 C 746.00,350.36 746.00,203.51 644.00,203.51 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,203.51 C 746.00,203.51 746.00,364.36 848.00,364.36 L 848.00,366.36 C 746.00,366.36 746.00,205.51 644.00,205.51 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,205.51 C 746.00,205.51 746.00,380.36 848.00,380.36 L 848.00,389.47 C 746.00,389.47 746.00,214.63 644.00,214.63 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,111.01 C 306.00,111.01 306.00,104.01 408.00,104.01 L 408.00,533.00 C 306.00,533.00 306.00,540.00 204.00,540.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="19.01" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="111.01" width="16" height="428.99" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="71.00" width="16" height="10.68" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="95.68" width="16" height="118.86" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="228.54" width="16" height="318.46" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="228.53" width="16" height="68.76" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="311.29" width="16" height="39.07" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="364.36" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="380.36" width="16" height="9.12" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="84.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="97.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$219.0M  (4.2%)</text>
+<rect x="207.00" y="93.01" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="105.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="210.00" y="118.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.9B  (95.8%)</text>
+<rect x="427.00" y="67.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.2B  (100.0%)</text>
+<rect x="647.00" y="53.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="650.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$123.0M  (2.4%)</text>
+<rect x="647.00" y="78.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="90.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="103.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.4B  (26.5%)</text>
+<text x="653.00" y="384.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="397.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.7B  (71.1%)</text>
+<text x="873.00" y="259.91" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">PP&amp;E capex 基建资本开支</text>
+<text x="873.00" y="272.91" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$792.0M  (15.3%)</text>
+<text x="873.00" y="327.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">JV investment 合资投资</text>
+<text x="873.00" y="340.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$450.0M  (8.7%)</text>
+<text x="873.00" y="362.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beowulf 收购</text>
+<text x="873.00" y="375.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$22.0M  (0.43%)</text>
+<text x="873.00" y="387.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">BTC sales+other 比特币出售等</text>
+<text x="873.00" y="400.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$105.0M  (2.0%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: TeraWulf FY2025 10-K, Consolidated Statements of Cash Flows</text>
+</svg>
