@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 净销售额按报告分部 / Net Sales by Segment</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 214.06,348.55 L 244.31,303.81 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 214.06,348.55 A 132 132 0 0 1 168.72,182.66 L 217.52,205.79 A 78 78 0 0 0 244.31,303.81 Z" fill="#15803d"/>
+<path d="M 168.72,182.66 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 217.52,205.79 Z" fill="#d97706"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">AMZN</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$716.9B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="419.95" y1="279.62" x2="435.95" y2="279.62" stroke="#2563eb" stroke-width="1.4"/>
+<text x="439.95" y="277.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">North America</text>
+<text x="439.95" y="291.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$426.3B  (59.5%)</text>
+<line x1="154.88" y1="275.58" x2="138.88" y2="275.58" stroke="#15803d" stroke-width="1.4"/>
+<text x="134.88" y="273.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">International</text>
+<text x="134.88" y="287.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$161.9B  (22.6%)</text>
+<line x1="214.22" y1="122.58" x2="198.22" y2="122.58" stroke="#d97706" stroke-width="1.4"/>
+<text x="194.22" y="120.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">AWS</text>
+<text x="194.22" y="134.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$128.7B  (18.0%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: AMZN FY2025 10-K, Note 10 — Segment Information (p.68)</text>
+</svg>

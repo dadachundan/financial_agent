@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">云收入按季拆分 / Quarterly Cloud Revenue: IaaS vs SaaS (FY2025 Q1 → FY2026 Q4)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Cloud Infrastructure (IaaS)</text>
+<rect x="228.20" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="244.20" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Cloud Applications (SaaS)</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$2.1B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$4.3B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$6.4B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$8.6B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$10.7B</text>
+<rect x="90.06" y="344.80" width="55.39" height="67.20" fill="#2563eb"/>
+<rect x="90.06" y="236.58" width="55.39" height="108.22" fill="#15803d"/>
+<text x="117.75" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">F25Q1</text>
+<rect x="185.56" y="336.07" width="55.39" height="75.93" fill="#2563eb"/>
+<rect x="185.56" y="226.78" width="55.39" height="109.28" fill="#15803d"/>
+<text x="213.25" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">F25Q2</text>
+<rect x="281.06" y="329.26" width="55.39" height="82.74" fill="#2563eb"/>
+<rect x="281.06" y="218.26" width="55.39" height="111.00" fill="#15803d"/>
+<text x="308.75" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">F25Q3</text>
+<rect x="376.56" y="318.56" width="55.39" height="93.44" fill="#2563eb"/>
+<rect x="376.56" y="201.82" width="55.39" height="116.74" fill="#15803d"/>
+<text x="404.25" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">F25Q4</text>
+<rect x="472.06" y="307.58" width="55.39" height="104.42" fill="#2563eb"/>
+<rect x="472.06" y="187.82" width="55.39" height="119.77" fill="#15803d"/>
+<text x="499.75" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">F26Q1</text>
+<rect x="567.55" y="284.75" width="55.39" height="127.25" fill="#2563eb"/>
+<rect x="567.55" y="163.14" width="55.39" height="121.61" fill="#15803d"/>
+<text x="595.25" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">F26Q2</text>
+<rect x="663.05" y="259.51" width="55.39" height="152.49" fill="#2563eb"/>
+<rect x="663.05" y="133.91" width="55.39" height="125.60" fill="#15803d"/>
+<text x="690.75" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">F26Q3</text>
+<rect x="758.55" y="231.46" width="55.39" height="180.54" fill="#2563eb"/>
+<rect x="758.55" y="102.74" width="55.39" height="128.72" fill="#15803d"/>
+<text x="786.25" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">F26Q4</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ORCL Q4/FY2026 业绩公告 (8-K, 2026-06-10), Cloud Revenues by Offerings</text>
+</svg>

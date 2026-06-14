@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2026 营业收入按产品线 / Revenue by Offering</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 284.18,371.14 L 285.74,317.17 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 284.18,371.14 A 132 132 0 0 1 191.18,149.48 L 230.79,186.18 A 78 78 0 0 0 285.74,317.17 Z" fill="#15803d"/>
+<path d="M 191.18,149.48 A 132 132 0 0 1 250.55,112.62 L 265.87,164.41 A 78 78 0 0 0 230.79,186.18 Z" fill="#d97706"/>
+<path d="M 250.55,112.62 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 265.87,164.41 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">ORCL FY26</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$67.4B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="425.99" y1="241.20" x2="441.99" y2="241.20" stroke="#2563eb" stroke-width="1.4"/>
+<text x="445.99" y="239.20" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Cloud (IaaS+SaaS)</text>
+<text x="445.99" y="253.20" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$34.0B  (50.5%)</text>
+<line x1="160.74" y1="292.59" x2="144.74" y2="292.59" stroke="#15803d" stroke-width="1.4"/>
+<text x="140.74" y="290.59" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Software (license+support)</text>
+<text x="140.74" y="304.59" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$24.5B  (36.4%)</text>
+<line x1="215.22" y1="121.95" x2="199.22" y2="121.95" stroke="#d97706" stroke-width="1.4"/>
+<text x="195.22" y="119.95" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Services</text>
+<text x="195.22" y="133.95" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.7B  (8.5%)</text>
+<line x1="268.22" y1="102.63" x2="252.22" y2="102.63" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="248.22" y="100.63" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Hardware</text>
+<text x="248.22" y="114.63" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.1B  (4.6%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ORCL Q4/FY2026 业绩公告 (8-K, 2026-06-10), Supplemental Analysis of GAAP Revenues</text>
+</svg>

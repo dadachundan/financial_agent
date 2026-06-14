@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Oracle 收入构成 / How Oracle Makes Its Money — FY2026 (截至 2026-05-31)</text>
+<path d="M 204.00,64.00 C 258.00,64.00 258.00,85.00 312.00,85.00 L 312.00,290.88 C 258.00,290.88 258.00,269.88 204.00,269.88 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,147.72 560.00,147.72 L 560.00,272.54 C 506.00,272.54 506.00,202.82 452.00,202.82 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,202.82 C 506.00,202.82 506.00,286.54 560.00,286.54 L 560.00,430.28 C 506.00,430.28 506.00,346.56 452.00,346.56 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,346.56 C 382.00,346.56 382.00,353.56 328.00,353.56 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,353.56 C 382.00,353.56 382.00,360.56 436.00,360.56 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,136.91 C 754.00,136.91 754.00,222.78 808.00,222.78 L 808.00,326.28 C 754.00,326.28 754.00,240.41 700.00,240.41 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,240.41 C 754.00,240.41 754.00,340.28 808.00,340.28 L 808.00,355.22 C 754.00,355.22 754.00,255.35 700.00,255.35 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,147.72 C 630.00,147.72 630.00,136.91 684.00,136.91 L 684.00,261.72 C 630.00,261.72 630.00,272.54 576.00,272.54 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,283.88 C 258.00,283.88 258.00,290.88 312.00,290.88 L 312.00,439.53 C 258.00,439.53 258.00,432.53 204.00,432.53 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,286.54 C 630.00,286.54 630.00,269.35 684.00,269.35 L 684.00,319.82 C 630.00,319.82 630.00,337.00 576.00,337.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,337.00 C 630.00,337.00 630.00,333.82 684.00,333.82 L 684.00,396.04 C 630.00,396.04 630.00,399.22 576.00,399.22 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,399.22 C 630.00,399.22 630.00,410.04 684.00,410.04 L 684.00,441.09 C 630.00,441.09 630.00,430.28 576.00,430.28 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,446.53 C 258.00,446.53 258.00,439.53 312.00,439.53 L 312.00,474.32 C 258.00,474.32 258.00,481.32 204.00,481.32 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,495.32 C 258.00,495.32 258.00,474.32 312.00,474.32 L 312.00,493.00 C 258.00,493.00 258.00,514.00 204.00,514.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="205.88" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="283.88" width="16" height="148.65" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="446.53" width="16" height="34.79" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="495.32" width="16" height="18.68" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="268.56" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="360.56" width="16" height="139.44" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="147.72" width="16" height="124.82" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="286.54" width="16" height="143.74" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="136.91" width="16" height="118.44" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="269.35" width="16" height="50.46" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="333.82" width="16" height="62.22" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="410.04" width="16" height="31.06" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="222.78" width="16" height="103.50" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="340.28" width="16" height="14.94" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="166.94" x2="182.00" y2="149.28" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="152.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cloud (IaaS+SaaS)</text>
+<text x="179.00" y="165.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$34.0B  (50.5%)</text>
+<line x1="188.00" y1="358.21" x2="182.00" y2="340.55" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="343.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Software (license+support)</text>
+<text x="179.00" y="356.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$24.5B  (36.4%)</text>
+<line x1="188.00" y1="463.93" x2="182.00" y2="446.27" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="449.27" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Services</text>
+<text x="179.00" y="462.27" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.7B  (8.5%)</text>
+<line x1="188.00" y1="504.66" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Hardware</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.1B  (4.6%)</text>
+<rect x="331.00" y="67.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$67.4B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$44.3B  (65.8%)</text>
+<rect x="455.00" y="342.56" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="354.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="367.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$23.0B  (34.2%)</text>
+<rect x="579.00" y="129.72" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="141.72" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="154.72" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$20.6B  (30.6%)</text>
+<rect x="579.00" y="268.54" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="280.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="293.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$23.7B  (35.2%)</text>
+<rect x="703.00" y="118.91" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="130.91" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="143.91" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$19.6B  (29.0%)</text>
+<rect x="703.00" y="251.35" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="263.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="276.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$8.3B  (12.4%)</text>
+<rect x="703.00" y="315.82" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="327.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="340.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$10.3B  (15.3%)</text>
+<rect x="703.00" y="392.04" width="87.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="404.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="417.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.1B  (7.6%)</text>
+<text x="833.00" y="271.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="284.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$17.1B  (25.4%)</text>
+<text x="833.00" y="344.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="357.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.5B  (3.7%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ORCL Q4/FY2026 业绩公告 (8-K, 2026-06-10), Condensed Consolidated Statements of Operations</text>
+</svg>
