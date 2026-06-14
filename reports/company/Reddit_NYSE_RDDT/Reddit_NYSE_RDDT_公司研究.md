@@ -694,8 +694,8 @@ quadrantChart
 
 ```mermaid
 xychart-beta
-    title 互联网同业 forward P/E 对照（2026E，*分析师观点*）
-    x-axis [GOOGL, AMZN, META, RDDT-当前, RDDT-目标]
+    title "互联网同业 forward P/E 对照（2026E，*分析师观点*）"
+    x-axis ["GOOGL", "AMZN", "META", "RDDT-当前", "RDDT-目标"]
     y-axis "forward P/E (x)" 0 --> 30
     bar [25, 26, 18, 26, 18]
 ```
@@ -716,8 +716,8 @@ Reddit 在 S-1 中给出其广告 TAM："*By 2027, we estimate our total address
 
 ```mermaid
 xychart-beta
-    title TAM vs Reddit 实际收入（US$bn，对数感知）
-    x-axis [广告TAM-2027, AI市场-2027, RDDT-FY25收入]
+    title "TAM vs Reddit 实际收入（US$bn，对数感知）"
+    x-axis ["广告TAM-2027", "AI市场-2027", "RDDT-FY25收入"]
     y-axis "US$bn" 0 --> 1500
     bar [1400, 1000, 2.2]
 ```

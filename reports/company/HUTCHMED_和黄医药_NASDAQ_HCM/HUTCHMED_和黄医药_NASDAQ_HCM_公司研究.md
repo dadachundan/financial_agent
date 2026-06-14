@@ -332,7 +332,7 @@ HCM 相对 (a)/(b) 组的**竞争劣势**：
 
 ```mermaid
 xychart-beta
-    title HUTCHMED 主要资产 in-market sales 2024 vs 2025 (US$m)
+    title "HUTCHMED 主要资产 in-market sales 2024 vs 2025 (US$m)"
     x-axis ["Fruzaqla 海外 in-market", "Elunate 中国 in-market", "Sulanda 索凡替尼", "Orpathys 赛沃替尼", "Tazverik 中国"]
     y-axis "US$ 百万 / Sales (US$m)" 0 --> 400
     bar [290.6, 80.0, 49.0, 45.5, 0.9]

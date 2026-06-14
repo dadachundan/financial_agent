@@ -412,7 +412,7 @@ quadrantChart
 ```mermaid
 xychart-beta
     title "集团 FY24/25 至 FY29/30 营收前瞻 (USD m)"
-    x-axis [FY22/23, FY23/24, FY24/25, FY25/26, FY29/30_Base, FY29/30_Upside]
+    x-axis ["FY22/23", "FY23/24", "FY24/25", "FY25/26", "FY29/30_Base", "FY29/30_Upside"]
     y-axis "USD million" 3000 --> 6000
     bar [3646, 3814, 3648, 3650, 4200, 5600]
 ```

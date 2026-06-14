@@ -62,8 +62,8 @@
 ```mermaid
 xychart-beta
     title "Firefly 营收与净亏损（FY2023–FY2025，$M）"
-    x-axis [FY2023, FY2024, FY2025]
-    y-axis "$ 百万" -320 200
+    x-axis ["FY2023", "FY2024", "FY2025"]
+    y-axis "$ 百万" -320 --> 200
     bar [55, 60.8, 159.9]
     line [-119, -231, -298.3]
 ```
@@ -123,8 +123,8 @@ xychart-beta
 ```mermaid
 xychart-beta
     title "FLY 估值情景目标价（$/股）"
-    x-axis [Bear, 现价, Base, Bull]
-    y-axis "$" 0 65
+    x-axis ["Bear", "现价", "Base", "Bull"]
+    y-axis "$" 0 --> 65
     bar [20, 36.18, 38, 58]
 ```
 *Source: 分析师情景分析（*Analyst view*），基于 [FY2025 10-K](https://www.sec.gov/Archives/edgar/data/1860160/000119312526116309/fly-20251231.htm) backlog + [FY2026 指引](https://www.fool.com/earnings/call-transcripts/2026/05/04/fly-q1-2026-earnings-transcript/)。*
@@ -288,8 +288,8 @@ Firefly 处在**太空经济（space economy）+ 国防技术（defense technolo
 ```mermaid
 xychart-beta
     title "全球发射服务市场规模（$M，Fortune Business Insights）"
-    x-axis [2025, 2034E]
-    y-axis "$ 百万" 0 14000
+    x-axis ["2025", "2034E"]
+    y-axis "$ 百万" 0 --> 14000
     bar [5732, 12798.6]
 ```
 *Source: [Fortune Business Insights — Space Launch Services Market（2025 ≈ $5,732.0M → 2034E ≈ $12,798.6M，CAGR 8.70%）](https://www.fortunebusinessinsights.com/industry-reports/space-launch-services-market-101931)。注：不同口径差异大——Grand View Research 以更广义口径估 2023 ≈ $14.94bn → 2030E ≈ $41.31bn（CAGR 14.6%），可作上限参考。*
@@ -346,7 +346,7 @@ Firefly 的可寻址市场是一个**自上而下的层层收窄**结构：
 xychart-beta
     title "Firefly TAM/SAM/SOM 漏斗（$bn，量级示意）"
     x-axis ["TAM 空间经济2035", "SAM 发射服务2030E", "SOM backlog"]
-    y-axis "$ 十亿" 0 1900
+    y-axis "$ 十亿" 0 --> 1900
     bar [1800, 41.31, 1.4]
 ```
 *Source: TAM=[McKinsey 2024（10-K 源链）](https://www.sec.gov/Archives/edgar/data/1860160/000119312526116309/fly-20251231.htm)；SAM=[Fortune Business Insights 发射服务市场](https://www.fortunebusinessinsights.com/industry-reports/space-launch-services-market-101931)；SOM=[FY2025 10-K backlog](https://www.sec.gov/Archives/edgar/data/1860160/000119312526116309/fly-20251231.htm)。*

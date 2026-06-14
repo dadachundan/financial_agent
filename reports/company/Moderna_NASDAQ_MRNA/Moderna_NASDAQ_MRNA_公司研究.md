@@ -293,7 +293,7 @@ xychart-beta
 ```mermaid
 xychart-beta
     title "TAM 按产品线构建（峰值收入 US$B, 分析师估算）"
-    x-axis [呼吸道2030, intismeran黑色素瘤, intismeran其他瘤型, CMV疫苗, 联合流感COVID, 罕见病]
+    x-axis ["呼吸道2030", "intismeran黑色素瘤", "intismeran其他瘤型", "CMV疫苗", "联合流感COVID", "罕见病"]
     y-axis "峰值收入 ($B)" 0 --> 10
     bar [7, 1.5, 5, 2, 4, 0.5]
 ```

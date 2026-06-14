@@ -437,7 +437,7 @@ Rf 取 10Y Treasury 4.54%（[indicators.db, 2026-06-07](https://fred.stlouisfed.
 ```mermaid
 xychart-beta
     title "SYK 三情景目标价 vs 现价（US$）"
-    x-axis [Bear-16x, 现价, Base-21.5x, Bull-24x]
+    x-axis ["Bear-16x", "现价", "Base-21.5x", "Bull-24x"]
     y-axis "每股 (US$)" 0 --> 450
     bar [248, 301, 365, 420]
 ```

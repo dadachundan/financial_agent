@@ -183,7 +183,7 @@ xychart-beta
 ```mermaid
 xychart-beta
     title "PRC Top10 开发商 FY25 总合同销售（RMB 亿）"
-    x-axis [保利, 绿城, COLI, CRLand, 招商蛇口, 万科, 厦门建发, 金茂, 越秀, 滨江]
+    x-axis ["保利", "绿城", "COLI", "CRLand", "招商蛇口", "万科", "厦门建发", "金茂", "越秀", "滨江"]
     y-axis "RMB 亿" 0 --> 3500
     bar [3100, 2519, 2450, 2350, 2000, 1950, 1800, 1450, 1300, 1150]
 ```

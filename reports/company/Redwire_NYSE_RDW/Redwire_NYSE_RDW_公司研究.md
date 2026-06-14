@@ -350,7 +350,7 @@ Redwire 同时身处两个高增长、政策驱动的赛道：**space economy（
 ```mermaid
 xychart-beta
     title "全球空间经济规模（万亿美元，WEF/McKinsey 2024）"
-    x-axis [2023, 2035E_下行, 2035E_基准, 2035E_上行]
+    x-axis ["2023", "2035E_下行", "2035E_基准", "2035E_上行"]
     y-axis "规模（万亿美元）" 0 --> 2.5
     bar [0.63, 1.4, 1.8, 2.3]
 ```

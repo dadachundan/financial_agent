@@ -570,7 +570,7 @@ pie title FY2025 营业收入按客户地域 (合并口径)
 ```mermaid
 xychart-beta
     title "Robotaxi 市场规模预测 (US$ 十亿)"
-    x-axis [2025, 2030全球, 2035高盛中国]
+    x-axis ["2025", "2030全球", "2035高盛中国"]
     y-axis "US$ 十亿" 0 --> 600
     bar [15, 545, 107]
 ```

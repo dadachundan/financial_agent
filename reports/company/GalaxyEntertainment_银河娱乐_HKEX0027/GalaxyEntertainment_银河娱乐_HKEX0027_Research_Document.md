@@ -264,7 +264,7 @@ The most directly cited TAM is the **Macau GGR figure**: HK$240.2 bn in 2025, wi
 ```mermaid
 xychart-beta
     title "Macau GGR Recovery Trajectory (HK$ bn) vs. 2019 Peak"
-    x-axis [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026Q1×4]
+    x-axis ["2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026Q1×4"]
     y-axis "HK$ bn" 0 --> 320
     bar [283, 60, 87, 42, 184, 220, 240, 256]
     line [283, 283, 283, 283, 283, 283, 283, 283]
