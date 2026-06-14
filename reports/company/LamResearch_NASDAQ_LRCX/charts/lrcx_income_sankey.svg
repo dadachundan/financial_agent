@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Lam Research FY2025 损益表 Sankey (US$M)</text>
+<path d="M 452.00,71.00 C 506.00,71.00 506.00,179.24 560.00,179.24 L 560.00,314.31 C 506.00,314.31 506.00,206.07 452.00,206.07 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,206.07 C 506.00,206.07 506.00,328.31 560.00,328.31 L 560.00,398.76 C 506.00,398.76 506.00,276.53 452.00,276.53 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,71.01 C 258.00,71.01 258.00,78.00 312.00,78.00 L 312.00,341.01 C 258.00,341.01 258.00,334.02 204.00,334.02 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 328.00,78.00 C 382.00,78.00 382.00,71.00 436.00,71.00 L 436.00,276.53 C 382.00,276.53 382.00,283.53 328.00,283.53 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,283.53 C 382.00,283.53 382.00,290.53 436.00,290.53 L 436.00,507.00 C 382.00,507.00 382.00,500.00 328.00,500.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,171.58 C 754.00,171.58 754.00,213.81 808.00,213.81 L 808.00,336.46 C 754.00,336.46 754.00,294.23 700.00,294.23 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,294.23 C 754.00,294.23 754.00,350.46 808.00,350.46 L 808.00,364.19 C 754.00,364.19 754.00,307.96 700.00,307.96 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,179.24 C 630.00,179.24 630.00,171.58 684.00,171.58 L 684.00,306.66 C 630.00,306.66 630.00,314.31 576.00,314.31 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,328.31 C 630.00,328.31 630.00,321.96 684.00,321.96 L 684.00,344.44 C 630.00,344.44 630.00,350.79 576.00,350.79 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,350.79 C 630.00,350.79 630.00,358.44 684.00,358.44 L 684.00,406.42 C 630.00,406.42 630.00,398.76 576.00,398.76 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,348.02 C 258.00,348.02 258.00,341.01 312.00,341.01 L 312.00,499.98 C 258.00,499.98 258.00,506.99 204.00,506.99 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.01" width="16" height="263.01" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="348.02" width="16" height="158.97" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="71.00" width="16" height="205.53" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="290.53" width="16" height="216.47" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="179.24" width="16" height="135.07" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="328.31" width="16" height="70.46" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="171.58" width="16" height="136.38" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="321.96" width="16" height="22.48" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="358.44" width="16" height="47.98" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="213.81" width="16" height="122.64" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="350.46" width="16" height="13.73" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="199.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Systems 系统</text>
+<text x="179.00" y="212.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.5B  (62.3%)</text>
+<text x="179.00" y="424.50" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">CSBG 客户支持</text>
+<text x="179.00" y="437.50" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.9B  (37.7%)</text>
+<rect x="331.00" y="60.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$18.4B  (100.0%)</text>
+<rect x="455.00" y="53.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$9.0B  (48.7%)</text>
+<rect x="455.00" y="272.53" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="284.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="297.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$9.5B  (51.3%)</text>
+<rect x="579.00" y="161.24" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="173.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="186.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.9B  (32.0%)</text>
+<rect x="579.00" y="310.31" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="322.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="335.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.1B  (16.7%)</text>
+<rect x="703.00" y="153.58" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="165.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="178.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.0B  (32.3%)</text>
+<rect x="703.00" y="303.96" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="315.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="328.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$982.0M  (5.3%)</text>
+<rect x="703.00" y="340.44" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="352.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="365.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.1B  (11.4%)</text>
+<text x="833.00" y="272.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="285.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.4B  (29.1%)</text>
+<text x="833.00" y="354.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="367.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$600.0M  (3.3%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: LRCX FY2025 Form 10-K (截至 2025-06-29) — 损益表/资产负债表/现金流量表</text>
+</svg>

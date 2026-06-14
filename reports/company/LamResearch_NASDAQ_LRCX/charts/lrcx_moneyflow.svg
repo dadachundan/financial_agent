@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1188" width="1180" height="1188" role="img" aria-label="钱怎么流进 Lam Research，又流向谁 (demand / revenue view)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1188" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">半导体设备资金流向 · FY2025–FY2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱怎么流进 Lam Research，又流向谁 (demand / revenue view)</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">先进节点晶圆厂的 WFE 资本开支流进 Lam 的刻蚀/沉积/清洗工具与 CSBG 年金，再以 COGS/capex 形式流向 Lam 自己的上游——精密零部件、芯片与材料供应商。两端各自高度集中：上游需求集中在 TSMC/Samsung/SK</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">海力士/Micron 等少数客户，下游支出集中在精密机械与气体/材料链。</text>
+<ellipse cx="1031.00" cy="495.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="776.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="776.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁在付钱 (客户的 WFE 资本开支)</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买的是什么 (Lam 产品线)</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱流向哪里 (Lam 的上游 / 成本去处)</text>
+<path d="M 256.00 257.00 C 369.50 257.00, 369.50 292.25, 483.00 292.25" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 278.00 C 369.50 278.00, 369.50 436.50, 483.00 436.50" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 291.50 C 369.50 291.50, 369.50 576.00, 483.00 576.00" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 382.50 C 369.50 382.50, 369.50 313.25, 483.00 313.25" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 398.25 C 369.50 398.25, 369.50 452.25, 483.00 452.25" fill="none" stroke="url(#mfgold)" stroke-width="13.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 498.50 C 369.50 498.50, 369.50 329.75, 483.00 329.75" fill="none" stroke="url(#mfgold)" stroke-width="15.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 510.50 C 369.50 510.50, 369.50 463.50, 483.00 463.50" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 616.75 C 369.50 616.75, 369.50 473.25, 483.00 473.25" fill="none" stroke="url(#mfgold)" stroke-width="10.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 607.75 C 369.50 607.75, 369.50 341.00, 483.00 341.00" fill="none" stroke="url(#mfgold)" stroke-width="7.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 727.50 C 369.50 727.50, 369.50 694.25, 483.00 694.25" fill="none" stroke="url(#mfgold)" stroke-width="13.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 716.25 C 369.50 716.25, 369.50 349.25, 483.00 349.25" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 300.50 C 369.50 300.50, 369.50 675.50, 483.00 675.50" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 408.75 C 369.50 408.75, 369.50 683.75, 483.00 683.75" fill="none" stroke="url(#mfgold)" stroke-width="7.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 305.75 C 810.50 305.75, 810.50 318.00, 924.00 318.00" fill="none" stroke="url(#mfgold)" stroke-width="21.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 443.25 C 810.50 443.25, 810.50 336.75, 924.00 336.75" fill="none" stroke="url(#mfgold)" stroke-width="16.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 576.00 C 810.50 576.00, 810.50 348.75, 924.00 348.75" fill="none" stroke="url(#mfgold)" stroke-width="7.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 321.50 C 810.50 321.50, 810.50 553.50, 924.00 553.50" fill="none" stroke="url(#mfgold)" stroke-width="10.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 456.00 C 810.50 456.00, 810.50 563.25, 924.00 563.25" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 332.75 C 810.50 332.75, 810.50 659.75, 924.00 659.75" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 465.75 C 810.50 465.75, 810.50 671.00, 924.00 671.00" fill="none" stroke="url(#mfgold)" stroke-width="10.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 686.00 C 810.50 686.00, 810.50 679.25, 924.00 679.25" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 1138.00 330.00 C 1031.00 330.00, 1031.00 448.00, 924.00 448.00" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="268.62" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">代工 WFE</text>
+<text x="369.50" y="408.12" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">HBM TSV</text>
+<text x="369.50" y="539.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Mo ALD</text>
+<text x="369.50" y="704.88" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Reliant</text>
+<text x="810.50" y="305.88" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">COGS</text>
+<text x="1031.00" y="383.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">内嵌芯片</text>
+<rect x="42.00" y="220.00" width="214" height="110.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="42.00" y="220.00" width="3" height="110.00" rx="2" fill="#34d399"/>
+<text x="60.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">TSMC 台积电</text>
+<text x="60.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">FY25 前两大客户之一 (17%/15% 中的一个)</text>
+<text x="60.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">N2 GAA 产能爬坡</text>
+<rect x="42.00" y="346.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="42.00" y="346.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="60.00" y="379.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SAMSUNG 三星</text>
+<text x="60.00" y="400.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">FY25 前两大客户之一</text>
+<text x="60.00" y="417.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">DRAM/NAND + SF2 代工</text>
+<rect x="42.00" y="456.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="42.00" y="456.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="60.00" y="489.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SK HYNIX 海力士</text>
+<text x="60.00" y="510.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">HBM4 产能建设</text>
+<text x="60.00" y="527.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">TSV + 先进 DRAM</text>
+<rect x="42.00" y="566.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="42.00" y="566.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="60.00" y="599.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MICRON 美光</text>
+<text x="60.00" y="620.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">ALTUS Halo 钼 ALD 早期客户</text>
+<text x="60.00" y="637.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">HBM/DRAM</text>
+<rect x="42.00" y="676.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="676.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="709.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">中国成熟节点 fab</text>
+<text x="60.00" y="730.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">SMIC/Hua Hong/Nexchip 等</text>
+<text x="60.00" y="747.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">FY25 中国占营收 34%</text>
+<rect x="483.00" y="257.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="257.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="290.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">ETCH 刻蚀</text>
+<text x="501.00" y="311.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Kiyo/Akara 导体刻蚀</text>
+<text x="501.00" y="328.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Flex/Vantex+Cryo 介质刻蚀</text>
+<text x="501.00" y="345.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Syndion TSV</text>
+<rect x="483.00" y="393.00" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="393.00" width="3" height="120.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="426.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">DEPOSITION 沉积</text>
+<text x="501.00" y="447.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">SABRE ECD 铜电镀</text>
+<text x="501.00" y="464.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">ALTUS W/Mo CVD-ALD</text>
+<text x="501.00" y="481.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">VECTOR/Striker/SPEED</text>
+<rect x="483.00" y="529.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="529.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="562.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">CLEAN 清洗</text>
+<text x="501.00" y="583.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">EOS/DV-Prime 湿法</text>
+<text x="501.00" y="600.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Coronus 干法 bevel</text>
+<rect x="483.00" y="639.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="639.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="672.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">CSBG 客户支持</text>
+<text x="501.00" y="693.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY25 ~$69 亿 (占营收 38%)</text>
+<text x="501.00" y="710.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">备件/升级/Reliant 翻新</text>
+<rect x="924.00" y="275.00" width="214" height="110.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="275.00" width="3" height="110.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="308.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">精密机械/零部件</text>
+<text x="942.00" y="329.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">腔体、RF 电源、阀门、机械臂</text>
+<text x="942.00" y="346.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">MKS/Advanced Energy/Ichor 等</text>
+<rect x="924.00" y="401.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="401.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="434.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">芯片/控制器 (TSMC 等)</text>
+<text x="942.00" y="455.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">工具内嵌入式控制芯片</text>
+<text x="942.00" y="472.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">embedded in COGS</text>
+<rect x="924.00" y="511.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="511.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="544.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">特气/材料</text>
+<text x="942.00" y="565.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">前驱体、刻蚀气体、靶材</text>
+<text x="942.00" y="582.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Entegris/Linde/空气化工等</text>
+<rect x="924.00" y="621.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="621.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="654.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">R&amp;D + 制造基地</text>
+<text x="942.00" y="675.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">FY25 R&amp;D $21 亿 (占营收 11%)</text>
+<text x="942.00" y="692.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Fremont/Tualatin/Yongin/槟城</text>
+<rect x="42.00" y="796.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="800.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="798.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="798.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="798.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="798.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="800.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="800.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="791.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="747.00" y="800.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="886.20" y="791.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="905.20" y="800.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="979.60" y="791.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="998.60" y="800.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="42.00" y="811.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="61.00" y="820.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="142.60" y="811.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="161.60" y="820.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="236.00" y="811.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="255.00" y="820.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="379.80" y="811.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="398.80" y="820.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<line x1="42" y1="836.00" x2="1138" y2="836.00" stroke="#222a3a"/>
+<text x="42.00" y="852.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — LRCX 资金流向要点</text>
+<rect x="42.00" y="872.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="42.00" y="872.00" width="3" height="132.00" rx="2" fill="#a78bfa"/>
+<text x="58.00" y="896.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">需求端 · 客户集中</text>
+<text x="58.00" y="914.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">前两大客户 = FY25 营收 32%</text>
+<text x="58.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 两家客户分别约占总营收</tspan><tspan fill="#f4d58a" font-weight="700"> 17%</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> 15%</tspan><tspan fill="#9aa3b8" font-weight="400"> (10-K</tspan><tspan fill="#9aa3b8" font-weight="400"> Note</tspan><tspan fill="#9aa3b8" font-weight="400"> 19</tspan><tspan fill="#9aa3b8" font-weight="400"> 未点名，但</tspan><tspan fill="#9aa3b8" font-weight="400"> 10-K</tspan></text>
+<text x="58.00" y="954.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">将</tspan><tspan fill="#f4d58a" font-weight="700"> Samsung</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#9aa3b8" font-weight="400"> 列为当期最重要客户)；非美国销售约</tspan><tspan fill="#f4d58a" font-weight="700"> 93%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。需求高度集中于先进节点</tspan></text>
+<text x="58.00" y="970.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">foundry</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> memory。</tspan></text>
+<rect x="412.00" y="872.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="872.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="896.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">产品端 · 增量驱动</text>
+<text x="428.00" y="914.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">刻蚀 + 沉积超配 AI 拐点</text>
+<text x="428.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Lam</tspan><tspan fill="#9aa3b8" font-weight="400"> 在</tspan><tspan fill="#f4d58a" font-weight="700"> HBM</tspan><tspan fill="#f4d58a" font-weight="700"> TSV</tspan><tspan fill="#f4d58a" font-weight="700"> 刻蚀</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> GAA</tspan><tspan fill="#f4d58a" font-weight="700"> 选择性刻蚀</tspan><tspan fill="#9aa3b8" font-weight="400"> (Akara)、</tspan><tspan fill="#f4d58a" font-weight="700"> ≥400</tspan><tspan fill="#f4d58a" font-weight="700"> 层</tspan><tspan fill="#f4d58a" font-weight="700"> NAND</tspan></text>
+<text x="428.00" y="954.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">沟道刻蚀</tspan><tspan fill="#9aa3b8" font-weight="400"> (Cryo</tspan><tspan fill="#9aa3b8" font-weight="400"> 3.0)、</tspan><tspan fill="#f4d58a" font-weight="700"> 钼</tspan><tspan fill="#f4d58a" font-weight="700"> ALD</tspan><tspan fill="#9aa3b8" font-weight="400"> (ALTUS</tspan><tspan fill="#9aa3b8" font-weight="400"> Halo)</tspan><tspan fill="#9aa3b8" font-weight="400"> 上的超高敞口，是</tspan><tspan fill="#f4d58a" font-weight="700"> 分析师观点</tspan></text>
+<text x="428.00" y="970.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">认为其跑赢</tspan><tspan fill="#9aa3b8" font-weight="400"> AMAT</tspan><tspan fill="#9aa3b8" font-weight="400"> 的核心逻辑</tspan><tspan fill="#9aa3b8" font-weight="400"> (GS/UBS)。</tspan></text>
+<rect x="782.00" y="872.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="872.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="896.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">年金 · 抗周期</text>
+<text x="798.00" y="914.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">CSBG 缓冲周期</text>
+<text x="798.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> CSBG</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收</tspan><tspan fill="#f4d58a" font-weight="700"> $69</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> (占营收</tspan><tspan fill="#f4d58a" font-weight="700"> 38%</tspan><tspan fill="#9aa3b8" font-weight="400"> )，随安装基数增长的高毛利年金；下行年份占比升至</tspan></text>
+<text x="798.00" y="954.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">~40%，上行回落至</tspan><tspan fill="#9aa3b8" font-weight="400"> 30</tspan><tspan fill="#9aa3b8" font-weight="400"> 多个百分点，平滑系统设备的周期波动。</tspan></text>
+<rect x="42.00" y="1018.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="42.00" y="1018.00" width="3" height="116.00" rx="2" fill="#d9a05b"/>
+<text x="58.00" y="1042.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">成本端 · 上游去处</text>
+<text x="58.00" y="1060.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">COGS 流向精密机械 + 特气</text>
+<text x="58.00" y="1084.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Lam</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> $94.6</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS</tspan><tspan fill="#9aa3b8" font-weight="400"> 主要流向精密机械/零部件</tspan><tspan fill="#9aa3b8" font-weight="400"> (腔体、RF</tspan><tspan fill="#9aa3b8" font-weight="400"> 电源、阀门)</tspan></text>
+<text x="58.00" y="1100.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">与刻蚀/沉积所需特气/前驱体/靶材；FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> R&amp;D</tspan><tspan fill="#f4d58a" font-weight="700"> $21</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> (占营收</tspan><tspan fill="#f4d58a" font-weight="700"> 11%</tspan><tspan fill="#9aa3b8" font-weight="400"> )</tspan><tspan fill="#9aa3b8" font-weight="400"> 是另一大现金去处。</tspan></text>
+<text x="590.00" y="1170.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: LRCX FY2025 10-K (营收/分部/客户集中/COGS/R&amp;D) + F3Q26 8-K；客户/上游名称为公开披露与行业供应链公知事实。</text>
+</svg>

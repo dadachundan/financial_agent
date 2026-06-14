@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 营业收入按业务分部 (US$M)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 195.68,333.55 L 233.45,294.95 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 195.68,333.55 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 233.45,294.95 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">LRCX</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$18.4B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="415.78" y1="291.32" x2="431.78" y2="291.32" stroke="#2563eb" stroke-width="1.4"/>
+<text x="435.78" y="289.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Systems 系统</text>
+<text x="435.78" y="303.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.5B  (62.3%)</text>
+<line x1="160.22" y1="187.08" x2="144.22" y2="187.08" stroke="#15803d" stroke-width="1.4"/>
+<text x="140.22" y="185.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">CSBG 客户支持</text>
+<text x="140.22" y="199.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.9B  (37.7%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: LRCX FY2025 Form 10-K (截至 2025-06-29) — 损益表/资产负债表/现金流量表 — 分部营收附注</text>
+</svg>
