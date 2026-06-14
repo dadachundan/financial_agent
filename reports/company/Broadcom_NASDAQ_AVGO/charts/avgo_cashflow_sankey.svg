@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Broadcom 现金流 Sankey — FY2025 (US$mn)</text>
+<path d="M 204.00,71.00 C 306.00,71.00 306.00,78.00 408.00,78.00 L 408.00,195.09 C 306.00,195.09 306.00,188.09 204.00,188.09 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,71.26 C 526.00,71.26 526.00,85.26 424.00,85.26 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,85.26 C 526.00,85.26 526.00,85.26 628.00,85.26 L 628.00,337.36 C 526.00,337.36 526.00,337.36 424.00,337.36 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,337.36 C 526.00,337.36 526.00,351.36 628.00,351.36 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,85.26 C 746.00,85.26 746.00,168.95 848.00,168.95 L 848.00,308.51 C 746.00,308.51 746.00,224.82 644.00,224.82 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,224.82 C 746.00,224.82 746.00,322.51 848.00,322.51 L 848.00,401.54 C 746.00,401.54 746.00,303.86 644.00,303.86 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,303.86 C 746.00,303.86 746.00,415.54 848.00,415.54 L 848.00,449.05 C 746.00,449.05 746.00,337.36 644.00,337.36 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,202.09 C 306.00,202.09 306.00,195.09 408.00,195.09 L 408.00,540.00 C 306.00,540.00 306.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="117.09" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="202.09" width="16" height="344.91" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="7.26" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="85.26" width="16" height="252.10" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="351.36" width="16" height="202.64" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="168.95" width="16" height="139.56" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="322.51" width="16" height="79.04" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="415.54" width="16" height="33.51" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="126.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="139.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$9.3B  (25.3%)</text>
+<rect x="207.00" y="184.09" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="196.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="209.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$27.5B  (74.7%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$36.9B  (100.0%)</text>
+<rect x="647.00" y="46.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$580.0M  (1.6%)</text>
+<rect x="647.00" y="71.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="83.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="96.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$20.1B  (54.6%)</text>
+<text x="653.00" y="449.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="462.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$16.2B  (43.9%)</text>
+<text x="873.00" y="235.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股息 Dividends</text>
+<text x="873.00" y="248.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.1B  (30.2%)</text>
+<text x="873.00" y="359.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">回购+税务代扣 Buybacks</text>
+<text x="873.00" y="372.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.3B  (17.1%)</text>
+<text x="873.00" y="429.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">净偿债+其他 Debt/other</text>
+<text x="873.00" y="442.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.7B  (7.3%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$26.9B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Broadcom FY2025 10-K (FY ended 2025-11-02), MD&amp;A p.39 + consolidated statements p.43/p.47</text>
+</svg>

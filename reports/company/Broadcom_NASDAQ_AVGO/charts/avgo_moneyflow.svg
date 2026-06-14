@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 994" width="1180" height="994" role="img" aria-label="钱往哪走:超大规模客户付给 Broadcom,Broadcom 再付给晶圆/封装/内存链" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="994" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">BROADCOM 供应链资金流 · FY2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱往哪走:超大规模客户付给 Broadcom,Broadcom 再付给晶圆/封装/内存链</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">AI XPU 与以太网芯片的需求由少数超大规模客户买单(左);Broadcom 设计 IP 与系统集成,但绝大部分制造成本最终汇入台积电(晶圆+CoWoS 先进封装)这一单点瓶颈,以及 HBM 内存与 ABF 载板供应商(右)。</text>
+<ellipse cx="1031.00" cy="387.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="582.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="582.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 (需求)</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买什么 (Broadcom 产品线)</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱汇向哪 (上游瓶颈)</text>
+<path d="M 256.00 238.64 C 369.50 238.64, 369.50 265.00, 483.00 265.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 344.00 C 369.50 344.00, 369.50 283.55, 483.00 283.55" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 439.55 C 369.50 439.55, 369.50 295.55, 483.00 295.55" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 255.00 C 369.50 255.00, 369.50 381.55, 483.00 381.55" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 450.45 C 369.50 450.45, 369.50 391.36, 483.00 391.36" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 541.00 C 369.50 541.00, 369.50 497.00, 483.00 497.00" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 266.09 C 810.50 266.09, 810.50 267.73, 924.00 267.73" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 387.00 C 810.50 387.00, 810.50 286.27, 924.00 286.27" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 284.64 C 810.50 284.64, 810.50 400.00, 924.00 400.00" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 295.55 C 810.50 295.55, 810.50 510.00, 924.00 510.00" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 497.00 C 810.50 497.00, 810.50 295.55, 924.00 295.55" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="245.82" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">多年设计赢得</text>
+<text x="810.50" y="260.91" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">晶圆+CoWoS 成本</text>
+<text x="810.50" y="336.32" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">HBM 内含于系统</text>
+<rect x="42.00" y="198.00" width="214" height="90.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="90.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">GOOGLE</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">TPU v6/v7 定制 XPU</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">头号 AI 客户</text>
+<rect x="42.00" y="304.00" width="214" height="80.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="304.00" width="3" height="80.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="337.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">META</text>
+<text x="60.00" y="358.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">MTIA 训练/推理</text>
+<text x="60.00" y="375.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">2H27 起放量</text>
+<rect x="42.00" y="400.00" width="214" height="90.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="400.00" width="3" height="90.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="433.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">其他超大规模 + OpenAI/Anthropic</text>
+<text x="60.00" y="454.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">新增 XPU/ASIC 客户</text>
+<text x="60.00" y="471.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">FY27 接力</text>
+<rect x="42.00" y="506.00" width="214" height="70.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="506.00" width="3" height="70.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="539.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">APPLE</text>
+<text x="60.00" y="560.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">FBAR/RF + Wi-Fi</text>
+<text x="60.00" y="577.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">无线特许权</text>
+<rect x="483.00" y="230.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="230.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="263.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">定制 XPU / ASIC</text>
+<text x="501.00" y="284.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">SerDes IP + 先进封装集成</text>
+<text x="501.00" y="301.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Q2FY26 AI 半导体 \$10.8B</text>
+<rect x="483.00" y="340.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="340.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="373.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">以太网交换芯片</text>
+<text x="501.00" y="394.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Tomahawk 6 / Jericho 3-AI</text>
+<text x="501.00" y="411.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">~70% AI 网络份额</text>
+<rect x="483.00" y="450.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="450.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="483.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">无线 + 宽带 + 存储</text>
+<text x="501.00" y="504.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">FBAR / Wi-Fi / SAS-RAID</text>
+<text x="501.00" y="521.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">周期性特许权</text>
+<rect x="924.00" y="217.00" width="214" height="120.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="217.00" width="3" height="120.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="250.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">TSMC</text>
+<text x="942.00" y="271.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">N3/N2 晶圆 + CoWoS</text>
+<text x="942.00" y="288.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">单点瓶颈:产能优先级</text>
+<rect x="924.00" y="353.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="353.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="386.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">HBM 内存</text>
+<text x="942.00" y="407.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">SK海力士 / 三星 / 美光</text>
+<text x="942.00" y="424.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">XPU 旁路高带宽内存</text>
+<rect x="924.00" y="463.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="463.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="496.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">ABF 载板 + CoWoS 物料</text>
+<text x="942.00" y="517.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Ibiden / 欣兴 / AT&amp;S</text>
+<text x="942.00" y="534.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">新加坡自建封装厂 8月投产</text>
+<rect x="42.00" y="602.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="606.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="604.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="604.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="604.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="604.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="606.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="606.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="597.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="747.00" y="606.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="871.80" y="597.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="890.80" y="606.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="965.20" y="597.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="984.20" y="606.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="42.00" y="617.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="61.00" y="626.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="135.40" y="617.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="154.40" y="626.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="221.60" y="617.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="240.60" y="626.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="642.00" x2="1138" y2="642.00" stroke="#222a3a"/>
+<text x="42.00" y="658.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — BROADCOM 供应链要点</text>
+<rect x="42.00" y="678.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="678.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="702.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">需求侧 · 定制 AI 芯片</text>
+<text x="58.00" y="720.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">超大规模客户买单</text>
+<text x="58.00" y="744.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Google</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> Meta</tspan><tspan fill="#9aa3b8" font-weight="400"> 与新增的</tspan><tspan fill="#f4d58a" font-weight="700"> OpenAI/Anthropic</tspan><tspan fill="#9aa3b8" font-weight="400"> ASIC</tspan><tspan fill="#9aa3b8" font-weight="400"> 客户为定制</tspan><tspan fill="#9aa3b8" font-weight="400"> XPU</tspan></text>
+<text x="58.00" y="760.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">付费;Q2</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 单季</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 半导体收入</tspan><tspan fill="#f4d58a" font-weight="700"> \$10.8B</tspan><tspan fill="#9aa3b8" font-weight="400"> (+143%</tspan><tspan fill="#9aa3b8" font-weight="400"> YoY),管理层指引</tspan></text>
+<text x="58.00" y="776.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 全年</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> ≈</tspan><tspan fill="#f4d58a" font-weight="700"> \$56B</tspan><tspan fill="#9aa3b8" font-weight="400"> 、FY2027</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;\$100B</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="412.00" y="678.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="678.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="702.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">需求侧 · AI 网络</text>
+<text x="428.00" y="720.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">以太网交换的 ~70% 份额</text>
+<text x="428.00" y="744.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Tomahawk</tspan><tspan fill="#f4d58a" font-weight="700"> 6</tspan><tspan fill="#9aa3b8" font-weight="400"> (102T)</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> Jericho</tspan><tspan fill="#f4d58a" font-weight="700"> 3-AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 占据</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 集群以太网</tspan><tspan fill="#f4d58a" font-weight="700"> ~70%</tspan></text>
+<text x="428.00" y="760.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">份额;J.P.</tspan><tspan fill="#9aa3b8" font-weight="400"> Morgan</tspan><tspan fill="#9aa3b8" font-weight="400"> 估</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2027</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 网络收入达</tspan><tspan fill="#f4d58a" font-weight="700"> \$45B+</tspan><tspan fill="#9aa3b8" font-weight="400"> ,约占</tspan><tspan fill="#9aa3b8" font-weight="400"> AVGO</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan></text>
+<text x="428.00" y="776.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">总收入</tspan><tspan fill="#9aa3b8" font-weight="400"> 28%。</tspan></text>
+<rect x="782.00" y="678.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="678.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="702.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">上游瓶颈 · 单点</text>
+<text x="798.00" y="720.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱最终汇入 TSMC</text>
+<text x="798.00" y="744.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">XPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 与交换芯片的绝大部分制造成本以</tspan><tspan fill="#f4d58a" font-weight="700"> N3/N2</tspan><tspan fill="#f4d58a" font-weight="700"> 晶圆</tspan><tspan fill="#f4d58a" font-weight="700"> +</tspan><tspan fill="#f4d58a" font-weight="700"> CoWoS</tspan><tspan fill="#f4d58a" font-weight="700"> 先进封装</tspan><tspan fill="#9aa3b8" font-weight="400"> 形式汇入</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan></text>
+<text x="798.00" y="760.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">;CoWoS</tspan><tspan fill="#9aa3b8" font-weight="400"> 产能优先级是</tspan><tspan fill="#9aa3b8" font-weight="400"> Broadcom</tspan><tspan fill="#9aa3b8" font-weight="400"> 护城河,也是其最大单点依赖。</tspan></text>
+<rect x="42.00" y="824.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="42.00" y="824.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="58.00" y="848.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">上游 · 高带宽内存</text>
+<text x="58.00" y="866.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">HBM 内含于 XPU 系统</text>
+<text x="58.00" y="890.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">每颗</tspan><tspan fill="#9aa3b8" font-weight="400"> XPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 旁路堆叠</tspan><tspan fill="#f4d58a" font-weight="700"> HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> (SK海力士</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> 三星</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> 美光);内存以嵌入方式计入系统成本,是</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan></text>
+<text x="58.00" y="906.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">加速器</tspan><tspan fill="#9aa3b8" font-weight="400"> BOM</tspan><tspan fill="#9aa3b8" font-weight="400"> 的第二大块。</tspan></text>
+<rect x="412.00" y="824.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="824.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="848.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">上游 · 封装物料</text>
+<text x="428.00" y="866.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">自建封装产能</text>
+<text x="428.00" y="890.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Broadcom</tspan><tspan fill="#9aa3b8" font-weight="400"> 在</tspan><tspan fill="#f4d58a" font-weight="700"> 新加坡自建衬底/先进封装厂</tspan><tspan fill="#9aa3b8" font-weight="400"> ,2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#f4d58a" font-weight="700"> 8月</tspan><tspan fill="#9aa3b8" font-weight="400"> 投产(早于原定</tspan><tspan fill="#9aa3b8" font-weight="400"> 12</tspan><tspan fill="#9aa3b8" font-weight="400"> 月),以缓解</tspan></text>
+<text x="428.00" y="906.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">CoWoS</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> ABF</tspan><tspan fill="#f4d58a" font-weight="700"> 载板</tspan><tspan fill="#9aa3b8" font-weight="400"> (Ibiden/欣兴)</tspan><tspan fill="#9aa3b8" font-weight="400"> 的瓶颈。</tspan></text>
+<rect x="782.00" y="824.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="782.00" y="824.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="798.00" y="848.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">需求侧 · 无线特许权</text>
+<text x="798.00" y="866.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Apple 的 RF/Wi-Fi</text>
+<text x="798.00" y="890.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Apple</tspan><tspan fill="#9aa3b8" font-weight="400"> 为</tspan><tspan fill="#9aa3b8" font-weight="400"> FBAR/RF</tspan><tspan fill="#9aa3b8" font-weight="400"> 前端与</tspan><tspan fill="#9aa3b8" font-weight="400"> Wi-Fi</tspan><tspan fill="#9aa3b8" font-weight="400"> 芯片付费(多年主协议),但已自研</tspan><tspan fill="#f4d58a" font-weight="700"> Wi-Fi</tspan></text>
+<text x="798.00" y="906.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">(Proxima)</tspan><tspan fill="#9aa3b8" font-weight="400"> 与调制解调器</tspan><tspan fill="#9aa3b8" font-weight="400"> (C1),构成长期内化风险。</tspan></text>
+<text x="590.00" y="976.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Broadcom Q2 FY2026 8-K (2026-06-03); FY2025 10-K Item 1 Business; Citi 高管交流纪要 (2026-06-04); J.P. Morgan AI Networking 报告 (2026-06-02)</text>
+</svg>

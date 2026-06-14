@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Broadcom 收入分配 Sankey — FY2025 (US$mn)</text>
+<path d="M 204.00,78.00 C 258.00,78.00 258.00,85.00 312.00,85.00 L 312.00,320.39 C 258.00,320.39 258.00,313.39 204.00,313.39 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,127.22 560.00,127.22 L 560.00,289.97 C 506.00,289.97 506.00,240.75 452.00,240.75 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,240.75 C 506.00,240.75 506.00,303.97 560.00,303.97 L 560.00,417.58 C 506.00,417.58 506.00,354.36 452.00,354.36 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,354.49 C 382.00,354.49 382.00,361.49 328.00,361.49 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,361.49 C 382.00,361.49 382.00,368.49 436.00,368.49 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,120.22 C 754.00,120.22 754.00,207.16 808.00,207.16 L 808.00,354.84 C 754.00,354.84 754.00,267.91 700.00,267.91 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,267.91 C 754.00,267.91 754.00,368.84 808.00,368.84 L 808.00,370.84 C 754.00,370.84 754.00,269.91 700.00,269.91 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,127.22 C 630.00,127.22 630.00,120.22 684.00,120.22 L 684.00,282.97 C 630.00,282.97 630.00,289.97 576.00,289.97 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,303.97 C 630.00,303.97 630.00,316.17 684.00,316.17 L 684.00,343.06 C 630.00,343.06 630.00,330.86 576.00,330.86 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,330.86 C 630.00,330.86 630.00,357.06 684.00,357.06 L 684.00,427.16 C 630.00,427.16 630.00,400.96 576.00,400.96 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,400.96 C 630.00,400.96 630.00,441.16 684.00,441.16 L 684.00,457.78 C 630.00,457.78 630.00,417.58 576.00,417.58 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,327.39 C 258.00,327.39 258.00,320.39 312.00,320.39 L 312.00,493.00 C 258.00,493.00 258.00,500.00 204.00,500.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,431.58 C 630.00,431.58 630.00,282.97 684.00,282.97 L 684.00,302.17 C 630.00,302.17 630.00,450.78 576.00,450.78 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="235.39" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="327.39" width="16" height="172.61" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="276.49" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="368.49" width="16" height="131.51" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="127.22" width="16" height="162.75" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="303.97" width="16" height="113.61" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="431.58" width="16" height="19.20" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="120.22" width="16" height="181.95" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="316.17" width="16" height="26.89" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="357.06" width="16" height="70.10" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="441.16" width="16" height="16.62" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="207.16" width="16" height="147.69" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="368.84" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="192.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Semiconductor Solutions</text>
+<text x="179.00" y="205.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$36.9B  (57.7%)</text>
+<text x="179.00" y="410.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Infrastructure Software</text>
+<text x="179.00" y="423.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$27.0B  (42.3%)</text>
+<rect x="331.00" y="67.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$63.9B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$43.3B  (67.8%)</text>
+<rect x="455.00" y="350.49" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="362.49" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="375.49" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$20.6B  (32.2%)</text>
+<rect x="579.00" y="109.22" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="121.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="134.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$25.5B  (39.9%)</text>
+<rect x="579.00" y="285.97" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="297.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="310.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$17.8B  (27.8%)</text>
+<text x="551.00" y="438.18" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="451.18" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.0B  (4.7%)</text>
+<rect x="703.00" y="102.22" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="114.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="127.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$28.5B  (44.6%)</text>
+<rect x="703.00" y="298.17" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="310.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="323.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.2B  (6.6%)</text>
+<rect x="703.00" y="339.06" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="351.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="364.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.0B  (17.2%)</text>
+<rect x="703.00" y="423.16" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="435.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="448.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.6B  (4.1%)</text>
+<text x="833.00" y="278.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="291.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$23.1B  (36.2%)</text>
+<text x="833.00" y="366.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="379.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$664.0M  (-1.0%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Broadcom FY2025 10-K (FY ended 2025-11-02), MD&amp;A p.39 + consolidated statements p.43/p.47</text>
+</svg>
