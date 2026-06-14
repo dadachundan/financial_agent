@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Advantest 2025财年营收按分部 (¥bn)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 212.60,130.85 L 243.45,175.18 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 212.60,130.85 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 243.45,175.18 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">6857</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">¥1.1T</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="329.31" y1="370.87" x2="345.31" y2="370.87" stroke="#2563eb" stroke-width="1.4"/>
+<text x="349.31" y="368.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">测试系统业务</text>
+<text x="349.31" y="382.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥1.0T  (90.3%)</text>
+<line x1="246.69" y1="107.53" x2="230.69" y2="107.53" stroke="#15803d" stroke-width="1.4"/>
+<text x="226.69" y="105.53" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">服务与其他</text>
+<text x="226.69" y="119.53" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥109.2B  (9.7%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Advantest FY2025 决算短信 (2026-04-27) 分部信息, 第6页</text>
+</svg>

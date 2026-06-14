@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Advantest 2025财年损益表 Sankey (合并, IFRS, ¥mn)</text>
+<path d="M 452.00,71.00 C 506.00,71.00 506.00,135.47 560.00,135.47 L 560.00,322.09 C 506.00,322.09 506.00,257.63 452.00,257.63 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,257.63 C 506.00,257.63 506.00,336.09 560.00,336.09 L 560.00,421.95 C 506.00,421.95 506.00,343.49 452.00,343.49 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,71.00 C 258.00,71.00 258.00,78.00 312.00,78.00 L 312.00,459.17 C 258.00,459.17 258.00,452.17 204.00,452.17 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 328.00,78.00 C 382.00,78.00 382.00,71.00 436.00,71.00 L 436.00,342.50 C 382.00,342.50 382.00,349.50 328.00,349.50 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,349.50 C 382.00,349.50 382.00,356.50 436.00,356.50 L 436.00,507.00 C 382.00,507.00 382.00,500.00 328.00,500.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,135.47 C 630.00,135.47 630.00,142.47 684.00,142.47 L 684.00,329.09 C 630.00,329.09 630.00,322.09 576.00,322.09 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,142.47 C 754.00,142.47 754.00,185.40 808.00,185.40 L 808.00,325.75 C 754.00,325.75 754.00,282.81 700.00,282.81 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,282.81 C 754.00,282.81 754.00,339.75 808.00,339.75 L 808.00,392.60 C 754.00,392.60 754.00,335.67 700.00,335.67 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,336.09 C 630.00,336.09 630.00,349.67 684.00,349.67 L 684.00,435.53 C 630.00,435.53 630.00,421.95 576.00,421.95 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,435.95 C 630.00,435.95 630.00,329.09 684.00,329.09 L 684.00,335.67 C 630.00,335.67 630.00,442.53 576.00,442.53 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,466.17 C 258.00,466.17 258.00,459.17 312.00,459.17 L 312.00,500.00 C 258.00,500.00 258.00,507.00 204.00,507.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="381.17" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="466.17" width="16" height="40.83" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="71.00" width="16" height="271.50" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="356.50" width="16" height="150.50" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="135.47" width="16" height="186.63" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="336.09" width="16" height="85.86" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="435.95" width="16" height="6.58" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="142.47" width="16" height="193.21" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="349.67" width="16" height="85.86" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="185.40" width="16" height="140.35" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="339.75" width="16" height="52.86" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="258.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">测试系统业务</text>
+<text x="179.00" y="271.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥1.0T  (90.3%)</text>
+<text x="179.00" y="483.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">服务与其他</text>
+<text x="179.00" y="496.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥109.2B  (9.7%)</text>
+<rect x="331.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥1.1T  (100.0%)</text>
+<rect x="455.00" y="53.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥726.1B  (64.3%)</text>
+<rect x="455.00" y="338.50" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="350.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="363.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥402.5B  (35.7%)</text>
+<rect x="579.00" y="117.47" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="129.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="142.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥499.1B  (44.2%)</text>
+<rect x="579.00" y="318.09" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="330.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="343.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥229.6B  (20.3%)</text>
+<text x="551.00" y="436.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="449.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥17.6B  (1.6%)</text>
+<rect x="703.00" y="124.47" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="136.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="149.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥516.7B  (45.8%)</text>
+<rect x="703.00" y="331.67" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="343.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="356.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥229.6B  (20.3%)</text>
+<text x="833.00" y="252.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="265.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥375.4B  (33.3%)</text>
+<text x="833.00" y="363.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="376.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥141.4B  (12.5%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Advantest FY2025 决算短信 (2026-04-27) 损益表/资产负债表/现金流量表, 第8页</text>
+</svg>

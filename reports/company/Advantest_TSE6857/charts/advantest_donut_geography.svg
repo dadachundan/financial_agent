@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Advantest 2025财年营收按客户地区 (¥bn)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 222.82,124.41 L 249.49,171.37 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 222.82,124.41 A 132 132 0 0 1 252.94,111.94 L 267.28,164.00 A 78 78 0 0 0 249.49,171.37 Z" fill="#15803d"/>
+<path d="M 252.94,111.94 A 132 132 0 0 1 269.59,108.49 L 277.12,161.96 A 78 78 0 0 0 267.28,164.00 Z" fill="#d97706"/>
+<path d="M 269.59,108.49 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 277.12,161.96 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">6857</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">¥1.1T</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="323.24" y1="372.63" x2="339.24" y2="372.63" stroke="#2563eb" stroke-width="1.4"/>
+<text x="343.24" y="370.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">亚洲(除日本)</text>
+<text x="343.24" y="384.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥1.0T  (91.8%)</text>
+<line x1="235.20" y1="111.70" x2="219.20" y2="111.70" stroke="#15803d" stroke-width="1.4"/>
+<text x="215.20" y="109.70" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">美洲</text>
+<text x="215.20" y="123.70" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥44.5B  (3.9%)</text>
+<line x1="259.99" y1="104.07" x2="243.99" y2="104.07" stroke="#d97706" stroke-width="1.4"/>
+<text x="239.99" y="102.07" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">欧洲</text>
+<text x="239.99" y="116.07" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥23.1B  (2.1%)</text>
+<line x1="278.35" y1="101.54" x2="262.35" y2="101.54" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="258.35" y="99.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">日本</text>
+<text x="258.35" y="113.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥25.1B  (2.2%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Advantest FY2025 决算短信 (2026-04-27), 第15页 (按客户所在地)</text>
+</svg>

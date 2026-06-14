@@ -1,12 +1,45 @@
 # 株式会社爱德万测试 Advantest Corporation (TSE:6857) — 公司研究报告
 
-**截至日期:** 2026-05-20
+**截至日期:** 2026-06-14
 **股票代码:** TSE:6857 (东京证券交易所 Prime 市场)
 **ADR:** ATEYY (OTC) / ADTTF
 **行业:** 半导体——自动测试设备 (Automatic Test Equipment, ATE, 自动测试设备)
 **总部:** 日本东京都千代田区丸之内 1-6-2 新丸之内中心大厦, 邮编 100-0005
 **财年:** 4 月 1 日 — 次年 3 月 31 日 (2025 财年 = 截至 2026 年 3 月 31 日的财年)
 **报告语言: 简体中文 (英文版同时存在于本目录)**
+
+---
+
+## 投资摘要 (Investment Summary) — *Analyst view:*
+
+> 以下评级、12 个月目标价 (price target, PT) 与情景目标价均为本报告分析师的前瞻判断 (*Analyst view:*), 并非来自任何公司文件——决算短信不含目标价, 切勿与 filing 引用混淆。
+
+| 项目 | 数值 |
+|---|---|
+| **评级 Rating** | **Overweight (增持)** |
+| **12 个月目标价 PT** | **¥30,500** |
+| **当前股价 (2026-06-13 收盘)** | 约 ¥27,325 ([Yahoo Finance 6857.T](https://finance.yahoo.com/quote/6857.T/)) |
+| **隐含上行空间** | **约 +12%** |
+| **估值方法** | 48× FY2026E EPS (¥636, 公司指引推算) — 处于半导体设备组高端但低于 Bernstein 的 45× 远期口径与 Teradyne |
+| **市值** | 约 ¥19.8 万亿 (约 1,320 亿美元, 按 150 日元/美元) ([companiesmarketcap.com](https://companiesmarketcap.com/advantest/marketcap/)) |
+| **52 周区间** | ¥8,228 – ¥32,400 ([Yahoo Finance 6857.T](https://finance.yahoo.com/quote/6857.T/)) |
+| **代码 / 交易所** | TSE:6857 (东京 Prime) |
+
+**前瞻估值矩阵 (*Analyst view:*, 以 2026-06-13 ¥27,325 为基):**
+
+| 倍数 | FY2025 实际 | FY2026E (指引) | FY2027E |
+|---|---|---|---|
+| P/E | 53× (EPS ¥513.30) | 43× (EPS ¥636) | 约 35–38× (Bernstein OP +12% 隐含) |
+| P/S | 17.7× | 14.0× (¥1,420bn) | 约 11–12× |
+| EV/营业利润 | 约 39× | 约 31× | 约 25× |
+
+*相对表现 (relative performance):* 6857.T 过去 12 个月从约 ¥8,228 涨至约 ¥27,325 (区间高点 ¥32,400), 1 年回报逾 +200%, 大幅跑赢日经 225 与费城半导体指数 (SOX), 是 AI 测试主题的核心 beta ([Yahoo Finance 6857.T](https://finance.yahoo.com/quote/6857.T/))。
+
+**论点支柱 (thesis pillars, *Analyst view:*):**
+1. **AI 测试强度的结构性阶跃。** NVIDIA Blackwell 占用测试机时间约为 Hopper 的 2–3 倍; HBM3E/HBM4 需独立 KGD 测试流程——这把 ATE 从成熟周期性市场推升为半导体设备增长最快的子板块, Advantest 是最直接受益者。
+2. **SoC 测试机准垄断 + HBM 锁定。** Advantest 整体 ATE 份额约 58%, SoC 测试机份额预计从 56% 升至 66% (2026E); 转换成本 (测试程序绑定 V93000 指令集) 与研发规模构成 5 年护城河。
+3. **非凡经营杠杆。** FY2025 毛利率 64.3%、营业利润率 44.2%, 自由现金流 ¥302bn, 现金 ¥340bn、长期债务近零——增量营收以 2 倍以上比率转化为盈利。
+4. **估值是主要约束, 非催化剂。** 当前约 43× 前瞻 P/E 已计入持续兑现; 一个季度的指引失望或 AI 资本开支放缓即可压缩倍数 25–40%——这是 Overweight 而非更高评级的原因, 也是与 UBS「估值过高」中性立场的分歧点。
 
 ---
 
@@ -18,16 +51,18 @@
 
 ## 目录
 
-1. 公司概览
-2. 公司历史
-3. 管理团队
-4. 产品与服务
-5. 客户与上市策略
-6. 行业概览
-7. 竞争格局
-8. 市场机会 (TAM)
-9. 风险评估
-10. 参考资料
+1. 公司概览 (含 1A 估值快照、1B GF Score)
+2. 估值与目标价 (前瞻模型 + PT 推导 + 牛/基/熊情景 + 卖方观点演变)
+3. 公司历史
+4. 管理团队
+5. 产品与服务
+6. 客户与上市策略
+7. 行业概览
+8. 竞争格局
+9. 市场机会 (TAM)
+10. 风险评估 (含 9.5 核心分歧与催化剂)
+11. 投资视角评分 (Section 10 lenses)
+12. 参考资料
 
 ======================================
 
@@ -41,9 +76,92 @@
 
 **规模指标。** 2025 财年销售额 11,286 亿日元 (按 150 日元/美元计约 75 亿美元), 使爱德万测试成为全球最大的纯测试设备公司, 营业收入约为泰瑞达 (Teradyne) 最新年化运转率的 2.3 倍。2025 财年营业利润率高达 **44.2%**——这一水平接近半导体设备 (semicap) 行业顶端, 与科磊 (KLA) 相当, 并高于应用材料、泛林 (Lam Research) 及东京电子 ([stockanalysis.com 上的 Advantest TYO:6857 财务数据](https://stockanalysis.com/quote/tyo/6857/financials/))。2025 财年毛利率达到 **64.3%**, 较 2023 财年的 50.6% 大幅提升——这一波动反映了高端 SoC 测试机绑定 HPC/AI 应用所带来的非凡正向产品结构变迁 ([2025 财年 FN](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf), 第 8 页; stockanalysis 数据)。2025 财年自由现金流为 3,022 亿日元, 期末现金余额 3,400 亿日元 (股东权益 7,957 亿日元, 股东权益率 67.9%), 当年通过股票回购返还股东 1,143 亿日元加 358 亿日元股息 ([2025 财年 FN, 第 7 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。
 
-![五年营业收入与利润率](charts/advantest_revenue_margins.png)
+下面的损益表 Sankey 直观展示 FY2025 这套经济模型: ¥1,128.6bn 营收中, 仅 ¥402.5bn (35.7%) 是采购成本 (COGS), 留下 ¥726.1bn (64.3%) 毛利; 扣除 ¥229.6bn (20.3%) 的 SG&A 后, 营业利润 ¥499.1bn (44.2%), 最终净利润 ¥375.4bn (33.3%)——一套半导体设备行业顶端的利润率结构 ([Advantest 2025 财年决算短信, 2026-04-27, 第 8 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。
 
-*来源: 销售额及利润率综合自 [Advantest 2024 财年业绩, 2025-04-25](https://www.advantest.com/en/news/2025/ildr5p0000000il7-att/E_FR_FY2024_FN.pdf)、[2025 财年业绩, 2026-04-27](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf), 2021–2022 财年历史数据来自 [stockanalysis.com 财务数据摘录](https://stockanalysis.com/quote/tyo/6857/financials/) (基于 S&P Global Market Intelligence 模板)。营业利润率使用公司新闻稿口径营业利润 (因此 2023 财年包含 Essai 商誉减值 90 亿日元)。*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Advantest 2025财年损益表 Sankey (合并, IFRS, ¥mn)</text>
+<path d="M 452.00,71.00 C 506.00,71.00 506.00,135.47 560.00,135.47 L 560.00,322.09 C 506.00,322.09 506.00,257.63 452.00,257.63 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,257.63 C 506.00,257.63 506.00,336.09 560.00,336.09 L 560.00,421.95 C 506.00,421.95 506.00,343.49 452.00,343.49 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,71.00 C 258.00,71.00 258.00,78.00 312.00,78.00 L 312.00,459.17 C 258.00,459.17 258.00,452.17 204.00,452.17 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 328.00,78.00 C 382.00,78.00 382.00,71.00 436.00,71.00 L 436.00,342.50 C 382.00,342.50 382.00,349.50 328.00,349.50 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,349.50 C 382.00,349.50 382.00,356.50 436.00,356.50 L 436.00,507.00 C 382.00,507.00 382.00,500.00 328.00,500.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,135.47 C 630.00,135.47 630.00,142.47 684.00,142.47 L 684.00,329.09 C 630.00,329.09 630.00,322.09 576.00,322.09 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,142.47 C 754.00,142.47 754.00,185.40 808.00,185.40 L 808.00,325.75 C 754.00,325.75 754.00,282.81 700.00,282.81 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,282.81 C 754.00,282.81 754.00,339.75 808.00,339.75 L 808.00,392.60 C 754.00,392.60 754.00,335.67 700.00,335.67 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,336.09 C 630.00,336.09 630.00,349.67 684.00,349.67 L 684.00,435.53 C 630.00,435.53 630.00,421.95 576.00,421.95 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,435.95 C 630.00,435.95 630.00,329.09 684.00,329.09 L 684.00,335.67 C 630.00,335.67 630.00,442.53 576.00,442.53 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,466.17 C 258.00,466.17 258.00,459.17 312.00,459.17 L 312.00,500.00 C 258.00,500.00 258.00,507.00 204.00,507.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="381.17" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="466.17" width="16" height="40.83" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="71.00" width="16" height="271.50" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="356.50" width="16" height="150.50" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="135.47" width="16" height="186.63" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="336.09" width="16" height="85.86" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="435.95" width="16" height="6.58" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="142.47" width="16" height="193.21" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="349.67" width="16" height="85.86" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="185.40" width="16" height="140.35" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="339.75" width="16" height="52.86" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="258.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">测试系统业务</text>
+<text x="179.00" y="271.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥1.0T  (90.3%)</text>
+<text x="179.00" y="483.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">服务与其他</text>
+<text x="179.00" y="496.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥109.2B  (9.7%)</text>
+<rect x="331.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥1.1T  (100.0%)</text>
+<rect x="455.00" y="53.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥726.1B  (64.3%)</text>
+<rect x="455.00" y="338.50" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="350.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="363.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥402.5B  (35.7%)</text>
+<rect x="579.00" y="117.47" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="129.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="142.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥499.1B  (44.2%)</text>
+<rect x="579.00" y="318.09" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="330.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="343.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥229.6B  (20.3%)</text>
+<text x="551.00" y="436.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="449.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥17.6B  (1.6%)</text>
+<rect x="703.00" y="124.47" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="136.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="149.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥516.7B  (45.8%)</text>
+<rect x="703.00" y="331.67" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="343.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="356.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥229.6B  (20.3%)</text>
+<text x="833.00" y="252.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="265.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥375.4B  (33.3%)</text>
+<text x="833.00" y="363.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="376.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥141.4B  (12.5%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Advantest FY2025 决算短信 (2026-04-27) 损益表/资产负债表/现金流量表, 第8页</text>
+</svg>
+
+*来源: [Advantest 2025 财年决算短信, 2026-04-27, 第 8 页 (合并损益表)](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf)。*
+
+营收的分部结构与三年历史轨迹如下——测试系统业务占 90.3%, 三年间从约 ¥486bn 升至 ¥1,128.6bn ([Advantest 2025 财年决算短信, 2026-04-27, 第 6 页 (分部信息)](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。
+
+![FY2025 营收按分部](charts/advantest_donut_segment.svg)
+
+![营收历史按分部](charts/advantest_revbars.svg)
+
+*来源: [Advantest 2025 财年决算短信, 2026-04-27, 第 6 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf) + [2024 财年决算短信, 2025-04-25](https://www.advantest.com/en/news/2025/ildr5p0000000il7-att/E_FR_FY2024_FN.pdf) 分部信息。FY2023 分部拆分为按两分部口径的近似还原。*
+
+### 1B. GF Score (GuruFocus 式基本面评分卡) — *Analyst view:*
+
+下面的五维评分卡 (GF Score, 模仿 GuruFocus 的 GF Score™) 是本报告分析师基于前述已引用指标的**自有评分**——并非来自 GuruFocus, 也不附 filing 引用; 五个子分与综合分均标注 *Analyst view:*。
+
+![Advantest GF Score 雷达图](charts/advantest_gf_score.svg)
+
+*评分基础 (来源见各维度引用): 财务实力 · 盈利能力 · 成长性 · 估值 · 动量, 综合 **88/100 (Good — 较高跑赢潜力)**。来源框架: [GuruFocus GF Score™](https://www.gurufocus.com/term/gf-score)。*
+
+- **财务实力 9/10。** 现金 ¥340bn、长期借款仅 ¥300 万 (近零)、股东权益率 67.9%, 净现金资产负债表; 2025 财年偿还短期借款 ¥75bn ([2025 财年决算短信, 第 7 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。仅因周期性现金流波动而非满分。
+- **盈利能力 10/10。** 营业利润率 44.2%、毛利率 64.3%、净利率 33.3%——处半导体设备顶端, 与 KLA 相当且高于 AMAT/Lam/TEL ([2025 财年决算短信, 第 8 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf); [stockanalysis.com TYO:6857](https://stockanalysis.com/quote/tyo/6857/financials/))。
+- **成长性 10/10。** 营收三年从约 ¥486bn 至 ¥1,128.6bn (年化逾 30%); FY2025 营收 +44.7%、营业利润 +118.8%; FY2026 指引营收 +25.8% ([2025 财年决算短信, 第 2 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。
+- **估值 3/10 (越高越便宜, 故低分=贵)。** TTM P/E 约 53×、前瞻约 43×、P/S 17.7×, 明显高于半导体设备中位 30–40× ([Yahoo Finance 6857.T](https://finance.yahoo.com/quote/6857.T/))。这是评级仅为 Overweight 的核心约束。
+- **动量 10/10。** 过去 12 个月回报逾 +200%, 大幅跑赢日经与 SOX, 接近 52 周高点 ([Yahoo Finance 6857.T](https://finance.yahoo.com/quote/6857.T/))。
+
+> GF Score 与本报告其余数字一致: 成长性 ↔ 第 2 章前瞻模型; 估值 ↔ 1A 倍数与 PT 上行; 动量 ↔ 摘要的相对表现行。综合 88/100 表明: 这是一家基本面接近满分、但估值已为完美定价的公司。
 
 ### 估值快照 (必备)
 
@@ -62,11 +180,94 @@
 
 "半导体设备" (semicap) 行业中位数 P/E 按前道工艺工具加权约为 **30–40 倍**。爱德万测试 TTM 约 50 倍**处于该组高端, 但低于泰瑞达**——按前瞻约 42 倍则趋近行业中位数。
 
-**估值倍数拆解 (为何支付逾 50 倍 TTM):** 溢价绝大部分源于**AI 周期溢价**叠加**经营杠杆**。(a) AI 芯片的测试强度结构性高于传统逻辑芯片: NVIDIA Blackwell 一代 B200/B300 和 AMD MI300/MI355 占用测试机时间约为上一代 Hopper/H100 裸片的 2–3 倍; 而 HBM3E/HBM4 堆栈需要单独的、同样高测试强度的流程, 这在非 HBM DRAM 时代并不存在 ([Test challenges grow for DRAMs and HBM, semiecosystem.com](https://marklapedus.substack.com/p/test-challenges-grow-for-drams-and))。(b) 爱德万测试已三次上调 2025 财年指引, 实际业绩仍超出指引约 5% 的销售额与约 10% 的营业利润——分析师模型持续追赶实际业绩, 在估值更新中压缩了滚动 P/E。(c) 2024 财年→2025 财年毛利率从 50.6% 跳升至 64.3% 显示出高端 SoC 测试机产品结构带来的真实经营杠杆, 支持盈利继续超预期。若 AI 资本开支周期暂停, 下行风险较大——见第 9 章风险评估。
+**估值倍数拆解 (为何支付逾 50 倍 TTM):** 溢价绝大部分源于**AI 周期溢价**叠加**经营杠杆**。(a) AI 芯片的测试强度结构性高于传统逻辑芯片: NVIDIA Blackwell 一代 B200/B300 和 AMD MI300/MI355 占用测试机时间约为上一代 Hopper/H100 裸片的 2–3 倍; 而 HBM3E/HBM4 堆栈需要单独的、同样高测试强度的流程, 这在非 HBM DRAM 时代并不存在 ([Test challenges grow for DRAMs and HBM, semiecosystem.com](https://marklapedus.substack.com/p/test-challenges-grow-for-drams-and))。(b) 爱德万测试已三次上调 2025 财年指引, 实际业绩仍超出指引约 5% 的销售额与约 10% 的营业利润——分析师模型持续追赶实际业绩, 在估值更新中压缩了滚动 P/E。(c) 2024 财年→2025 财年毛利率从 50.6% 跳升至 64.3% 显示出高端 SoC 测试机产品结构带来的真实经营杠杆, 支持盈利继续超预期。若 AI 资本开支周期暂停, 下行风险较大——见第 10 章风险评估。
 
 ---
 
-## 2. 公司历史
+## 2. 估值与目标价 (Valuation & Price Target)
+
+> 本章的前瞻估计、目标价与情景目标价均为本报告分析师的判断 (*Analyst view:*), 构建于 filing 分部数据 + 管理层指引 + 行业预测之上; 决算短信不含目标价, 切勿与 filing 引用混淆。绝不写「来源:本模型」。
+
+### 前瞻财务估计 (forward estimates, *Analyst view:*)
+
+下表把 FY2025 实际与 FY2026–FY2027E 前瞻并列。FY2026E 直接采用公司指引; FY2027E 为本报告基于 Bernstein 营业利润预测 (FY27/3 OP ¥726bn, 较共识高 12%) 与公司产能扩张路线 (SoC 测试机年产能目标从 7,500 台升至 10,000 台, 2028 年底前达成) 推算的中枢 ([Bernstein — Advantest 4Q26 3 note, 2026-04-29, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212212581121221/Bernstein-Advantest%20Corp%EF%BC%886857.JP%EF%BC%89Advantest%204Q26%203%EF%BC%9A%20Already%20leading%20in%20silicon%20photonics%20testing%EF%BC%9B%20Raising%20PT%20to%20%EF%BF%A539%EF%BC%8C200-260427.pdf))。
+
+| 指标 (¥bn 除非注明) | FY2025 实际 | FY2026E (公司指引) | FY2027E (*Analyst view:*) |
+|---|---|---|---|
+| 销售额 (Revenue) | 1,128.6 | 1,420.0 (+25.8%) | 约 1,620 (+14%) |
+| 毛利率 (gross margin) | 64.3% | 约 62–63% | 约 62% |
+| 营业利润 (operating income) | 499.1 | 627.5 (+25.7%) | 约 726 (Bernstein 口径) |
+| 营业利润率 (operating margin) | 44.2% | 44.2% (指引) | 约 45% |
+| 净利润 (net income) | 375.4 | 465.5 (+24.0%) | 约 540 |
+| 稀释 EPS (¥) | 513.30 | 约 636 (指引推算) | 约 738 |
+
+FY2025 实际数据: [2025 财年决算短信, 2026-04-27, 第 2 页及第 8 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf); FY2026E 指引 (销售额 ¥1,420bn / 营业利润 ¥627.5bn / 净利润 ¥465.5bn): [同上, 第 5 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf), 基于美元/日元 150、欧元/日元 170 假设; FY2027E 营业利润中枢: [Bernstein — From GPU to CPO/CPU/LPU, 2026-04-15, p.1 (FY27/3 OP ¥726bn, 较共识+12%)](http://xs-macbook-air.local:5001/zsxq/pdf/184418854484582/Bernstein-Advantest%20Corp%EF%BC%886857.JP%EF%BC%89Advantest%EF%BC%9A%20From%20GPU%20to%20CPO%EF%BC%8C%20CPU%EF%BC%8C%20LPU...%20Upgrading%20to%20Outperform%20and%20Top%20Pick-260415.pdf)。
+
+**关键增长驱动 (mix shift):** 增长几乎全部来自**测试系统业务内的 SoC 测试机**——FY2025 Q4 该业务环比 +44%, 是单一最大引擎; 而存储测试机 Q4 环比 -36%, 波动更大 ([Bernstein 4Q26 note, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212212581121221/Bernstein-Advantest%20Corp%EF%BC%886857.JP%EF%BC%89Advantest%204Q26%203%EF%BC%9A%20Already%20leading%20in%20silicon%20photonics%20testing%EF%BC%9B%20Raising%20PT%20to%20%EF%BF%A539%EF%BC%8C200-260427.pdf))。利润率维持高位的驱动是高端 SoC 测试机的产品结构 (mix) 与经营杠杆, 而非提价。
+
+### ROE 拆解 (5 步 DuPont)
+
+FY2025 ROE 高达 **57.65%**——拆解为净利率 33.26% × 资产周转率 1.11 × 权益乘数 1.56。注意权益乘数仅 1.56 (近零负债), 即这一惊人的 ROE 几乎完全由盈利能力驱动, 而非财务杠杆——这是高质量回报 ([2025 财年决算短信, 损益表第 8 页 + 资产负债表第 6 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。
+
+![Advantest 5步 DuPont ROE 拆解](charts/advantest_dupont.svg)
+
+*来源: [2025 财年决算短信, 2026-04-27, 损益表第 8 页 + 资产负债表第 6 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf)。平均权益按期初 ¥506.5bn 与期末 ¥795.7bn 的均值 ¥651.1bn 计。*
+
+### 目标价推导 (PT derivation, *Analyst view:*)
+
+**方法: 前瞻 P/E × 目标倍数。** 以 FY2026E 公司指引 EPS ¥636 为锚, 给予 **48× 目标倍数**, 得 **12 个月目标价 ¥30,500** (较 2026-06-13 收盘 ¥27,325 上行约 +12%)。
+
+**为什么用 48×:** (i) Advantest 当前前瞻 P/E 约 43×, 历史 (AI 周期以来) 前瞻 P/E 中枢约 40–50×; (ii) 最直接对位 Teradyne 前瞻约 40×、KLA TTM 约 41×、TEL 约 38×——48× 处于该组高端, 反映 Advantest 更高的增长与更纯的 AI 测试敞口, 但**刻意低于 Bernstein 的 45× 远期口径所隐含的 ¥39,200**, 以纳入 UBS「估值过高」的审慎立场; (iii) 这是 Overweight 而非 Buy 的体现——上行存在, 但倍数已计入大量完美执行。
+
+### 牛 / 基 / 熊情景 (*Analyst view:*)
+
+| 情景 | 假设 | 倍数 | 目标价 | 较 ¥27,325 |
+|---|---|---|---|---|
+| **牛市 Bull** | AI 资本开支延续 + CPO/CPU/晶圆级插入测试新增需求兑现 + SoC 份额冲 66%; Bernstein FY28 OP ¥856bn 路径 | 58× FY2026E EPS | **¥36,900** | **+35%** |
+| **基准 Base** | 指引兑现, AI 周期不间断, 倍数温和压缩至历史中枢 | 48× FY2026E EPS | **¥30,500** | **+12%** |
+| **熊市 Bear** | AI 资本开支 2026 日历年见顶 / 结构从训练转推理 / 一个季度指引失望, 倍数压向半导体设备中位 | 40× FY2026E EPS | **¥25,400** | **−7%** |
+
+牛市路径的额外上行 (Bernstein 列举但未定价): 晶粒级测试若被 AI 加速器厂商采用, 总测试需求可增 30–40%; 中国 EXA Scale 装机当前仅约 100 台 (全球 2025 年底约 1,600 台), 若中国最终占全球 30%, 到 2027 年底还有约 1,000 台增量空间 ([Bernstein — From GPU to CPO/CPU/LPU, 2026-04-15, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184418854484582/Bernstein-Advantest%20Corp%EF%BC%886857.JP%EF%BC%89Advantest%EF%BC%9A%20From%20GPU%20to%20CPO%EF%BC%8C%20CPU%EF%BC%8C%20LPU...%20Upgrading%20to%20Outperform%20and%20Top%20Pick-260415.pdf))。
+
+### 与市场一致预期的对比 (vs consensus)
+
+本报告 FY2026E 基本贴合公司指引 (因此贴近市场一致); 但 Bernstein 的 FY27/3 与 FY28/3 营业利润预测分别**较市场共识高 12% 与 8%** ([Bernstein — From GPU to CPO/CPU/LPU, 2026-04-15, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184418854484582/Bernstein-Advantest%20Corp%EF%BC%886857.JP%EF%BC%89Advantest%EF%BC%9A%20From%20GPU%20to%20CPO%EF%BC%8C%20CPU%EF%BC%8C%20LPU...%20Upgrading%20to%20Outperform%20and%20Top%20Pick-260415.pdf)); Morgan Stanley 亦预期 2027 财年二季度起共识 EPS 持续上修是核心驱动 ([Morgan Stanley — Taiwan Visit Takeaways, 2026-06-08, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/814528415518542/Morgan%20Stanley-Taiwan%20Visit%20Takeaways-260608.pdf))。本报告 PT ¥30,500 因此明确低于卖方最乐观一端 (Bernstein ¥39,200), 高于中性派 (UBS) 的隐含水平。
+
+### 最该盯紧的变量 (swing variables, *Analyst view:*)
+
+1. **NVIDIA/ASIC 加速器单位出货与每单位测试时间。** 这是营收的最大单一杠杆——Blackwell→Rubin 的测试强度递增 + ASIC (Google/AWS) 出货量决定 SoC 测试机需求。一个季度的 GPU 测试机订单暂停即可让增速失速。
+2. **估值倍数 (前瞻 P/E)。** 在约 43× 前瞻起点, 倍数本身的波动比盈利波动对股价影响更大——这是为何本报告把「估值压缩」列为第 10 章的核心财务风险。
+
+### 卖方观点演变 (Sell-side view evolution)
+
+本报告引用 ≥2 份 `db/zsxq.db` 经纪商报告, 故必须呈现卖方观点演变。机械预读 `db/stock_price_target.db` (只读) 先行, 再核对 PDF。**PT 离散度: 最低 ¥26,000 (Bernstein, 3 月中性) → 最高 ¥39,200 (Bernstein, 5 月)**, 区间跨度约 +51%——但这并非机构间分歧, 而是**同一机构 Bernstein 在两个月内的快速自我上修**, 反映 AI 测试能见度的剧烈改善。
+
+**按机构的观点时间线 (*Analyst view:*):**
+
+- **Bernstein — 三连跳上修 (机构内自我修正)。**
+  - **2026-03-17:** Market-Perform, PT ¥26,000 (报告日股价约 ¥23,513, 上行 +10.6%)——彼时为中性 (来自 `db/stock_price_target.db` 只读预读)。
+  - **2026-04-15:** **上调至 Outperform 并列为日本半导体首选股** (取代 Kokusai), PT ¥26,000→¥34,300 (报告日约 ¥27,585, 上行 +24.3%)。触发: 新增长动力——NVIDIA 产品复杂度提升 (硅光/LPU)、CPO (与 FormFactor 合作 PIC 晶圆测试)、Vera CPU 独家测试、ASIC 出货激增; 把 2026 年 EXA Scale 出货预测从 1,770 台上调至 2,000 台 (+61% YoY) ([Bernstein — From GPU to CPO/CPU/LPU, 2026-04-15, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184418854484582/Bernstein-Advantest%20Corp%EF%BC%886857.JP%EF%BC%89Advantest%EF%BC%9A%20From%20GPU%20to%20CPO%EF%BC%8C%20CPU%EF%BC%8C%20LPU...%20Upgrading%20to%20Outperform%20and%20Top%20Pick-260415.pdf))。
+  - **2026-04-29 (FY2025 财报后):** 维持 Outperform, PT ¥34,300→**¥39,200** (报告日约 ¥31,500, 上行 +24.4%)。触发: 4Q 营收 ¥3,281bn 超共识 14%、净利润超共识 38%; 硅光子测试斩获首个量产 ATE 订单; 估值倍数从 40× 提升至 **45× 远期 P/E**; SoC 测试机份额预计 56%→66% (2026E) ([Bernstein — Advantest 4Q26 3, 2026-04-29, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212212581121221/Bernstein-Advantest%20Corp%EF%BC%886857.JP%EF%BC%89Advantest%204Q26%203%EF%BC%9A%20Already%20leading%20in%20silicon%20photonics%20testing%EF%BC%9B%20Raising%20PT%20to%20%EF%BF%A539%EF%BC%8C200-260427.pdf))。
+  - **2026-06-11 (最新跟踪):** 维持 Outperform / PT ¥39,200; 台湾测试机进口 5 月同比 +34%, 回归模型预示 6 月季度总营收 ¥3,460bn 高于共识 ¥3,370bn, 隐含再超预期 ([Bernstein — Japan/EU Semi Taiwan Import Tracker, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412458152484588/Bernstein-Japan%20and%20EU%20Semiconductors%20Japan%20EU%20Semi%20Taiwan%20Import%20Tracker%20%EF%BC%88May%2026%EF%BC%89%EF%BC%9A%20SPE%20import%20%2B23%25%20YoY-260610.pdf))。
+
+- **Morgan Stanley — 板块首选, 但估值口径保守。** 2026-06-08 台湾参访纪要: 维持日本半导体设备「吸引 (Attractive)」、Advantest 为板块首选; 但目标价基于 **2028 财年 EPS 的 20× P/E** (参考 2023 年 AI 需求加速以来的平均 forward PE)——口径远低于 Bernstein 的 45×。看点: 共识 EPS 上修是核心驱动; CPO 测试短期非主要催化, 但晶圆级插入测试需求旺盛, AI GPU 测试竞争格局稳定无明显份额流失 ([Morgan Stanley — Taiwan Visit Takeaways, 2026-06-08, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/814528415518542/Morgan%20Stanley-Taiwan%20Visit%20Takeaways-260608.pdf))。
+
+- **UBS — 中性/谨慎 (估值约束派)。** 2026-05-14 日本科技综合企业报告: 明确将 Advantest (与 Disco) 列为「虽受益 AI, 但估值过高、性价比不足」, 偏好东京电子与瑞萨——这是与 Bernstein 最直接的分歧 ([UBS — Japan Tech Conglomerates, 2026-05-14, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212452151442141/UBS-Japan%20Tech%20Conglomerates%EF%BC%9AHardware%20above%20software%20still-260514.pdf))。
+
+**机构间分歧 (机构间分歧表):**
+
+| 机构 | 日期 | 评级 / 目标价 | 核心论点 | 什么证据能证明其正确 |
+|---|---|---|---|---|
+| **Bernstein** | 2026-06-11 | Outperform / ¥39,200 (45× 远期) | AI 测试需求多元化 (GPU+ASIC+CPO+CPU+LPU), 能见度改善支撑倍数扩张 | 6 月季度营收再超共识; SoC 份额向 66% 推进; 硅光子量产订单放量 |
+| **Morgan Stanley** | 2026-06-08 | 板块首选 / 20× FY28 EPS | 看好但估值口径保守; 共识 EPS 上修才是驱动 | 2027 财年 Q2 起共识 EPS 持续上修; 晶圆级插入测试需求兑现 |
+| **UBS** | 2026-05-14 | Neutral (隐含) | 受益 AI 但估值过高、性价比不足 | 倍数压缩 / 一个季度指引失望 / AI 资本开支放缓 |
+| **本报告** | 2026-06-14 | Overweight / ¥30,500 (48× FY26E) | 基本面接近满分但估值已为完美定价; 上行存在但 risk-reward 趋平 | 指引兑现 + AI 周期不间断 → 基准; 反之压向 40× = 熊市 −7% |
+
+每个观点均已标注日期、报告日股价 (来自 `db/stock_price_target.db` 只读预读) 与 `/zsxq/pdf/` 直链。注: PT DB 中一行 Goldman Sachs ¥3,500 (2026-03-13) 系明显错标 (与拆股前口径或 EPS 混淆, 隐含 −85% 上行不合理), 故不纳入时间线——这是已知的 PT DB 错标问题, 已按项目记忆排除。
+
+---
+
+## 3. 公司历史
 
 爱德万测试的起源可追溯至**1954 年**, 当时武田理研工业株式会社 (Takeda Riken Industry Co., Ltd.) 在东京成立, 主营精密电子测量仪器业务。1970 年代后期, 公司已成为日本测试设备行业的国家级冠军, 并于**1985 年**更名为爱德万测试株式会社 (Advantest Corporation), 明确转向当时正与日本 DRAM 繁荣期同步崛起的半导体测试市场 ([沿革 | 关于 Advantest](https://www.advantest.com/en/about/history/))。公司当年在东京证券交易所上市。1990 年代至 2000 年代初, 爱德万测试在 DRAM 时代主导了存储测试设备市场 (彼时日本约占全球 DRAM 产量的 50% 以上), 并通过 T 系列及历代 V 系列平台的内部研发, 逐步建立起 SoC 测试机业务。
 
@@ -99,7 +300,7 @@ timeline
 
 ---
 
-## 3. 管理团队
+## 4. 管理团队
 
 ### Douglas (Doug) Lefever — 代表董事兼集团 CEO
 
@@ -132,7 +333,7 @@ Doug Lefever (1970 年 12 月出生) 于**2024 年 4 月 1 日**就任爱德万�
 
 ---
 
-## 4. 产品与服务
+## 5. 产品与服务
 
 爱德万测试的产品组合目前组织为两个报告分部: **测试系统业务**与**服务与其他**。测试系统内部分为三大产品系列 (SoC、存储、机电一体化与外围设备); 服务与其他内部包括装机基础支持、系统级测试、插座/接触件 (Essai)、二手设备及云端解决方案业务。
 
@@ -205,6 +406,14 @@ HBM 测试在结构上比传统 DRAM 测试要求更高, 有两点原因: (i) HB
 
 **推动业务的 1–3 个产品**为: (1) **V93000 EXA Scale 及更早代际 V93000 模块**——主导性的 SoC 测试机系列, 2025 财年测试系统分部 49.3% 增长的最大单一推动者; (2) **T5835 / T5503HS2**——驱动 SK 海力士、三星、美光 HBM KGD 测试的存储测试机系列; (3) **Advantest Cloud Solutions + SLT (Advantest Test Solutions)**——战略邻近增长跑道。其他产品 (T2000 传统 SoC、CD-SEM、二手设备、Essai 插座) 要么衰减、要么子规模。
 
+### 供应链资金流 (follow the money)
+
+下图是「谁付钱 → 买什么 → 钱流向何处」的三段式资金流图: 左侧需求端 (NVIDIA/AMD、超大规模云 ASIC、HBM 存储 IDM、代工厂/OSAT) 付费购买 Advantest 的 SoC 测试机、存储测试机与服务; 中段汇入 Advantest FY2025 ¥1,128.6bn 营收; 右侧展示这笔钱流向何处——约 36% 营收 (¥402.5bn) 是采购成本流向关键零部件供应商 (定制 ASIC、高速针电路卡、半导体级电源), 研发流向群马工厂/研发中心 (日本 IP 与系统集成), 自由现金流 ¥302bn 回流股东 ([2025 财年决算短信, 第 8 页 (损益表) 及第 15 页 (地区)](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。
+
+![Advantest 供应链资金流图](charts/advantest_moneyflow.svg)
+
+**关键看点 (follow the money, 已标注来源):** (i) **测试强度阶跃是需求端的引擎**——NVIDIA Blackwell 占用测试机时间约为 Hopper 的 2–3 倍, HBM3E/HBM4 需独立 KGD 测试流程 ([Test challenges grow for DRAMs and HBM, semiecosystem.com](https://marklapedus.substack.com/p/test-challenges-grow-for-drams-and))。(ii) **成本端的瓶颈在日本与少数零部件供应商**——COGS 仅占 35.7% 营收, 但关键零部件 (定制 ASIC、高速针卡) 是单一来源, 管理层明确以「与现有供应商签订长期协议并就核心零部件进行供应链多元化」应对 ([2025 财年决算短信, 第 2 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。(iii) **钱最终回流股东**——FY2025 回购 ¥114.3bn + 股息 ¥35.8bn, 股息上调至每股 ¥59 ([2025 财年决算短信, 第 1–2 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。注: 图中 ribbon 粗细仅为粗略相对量级 (图例已注明), 并非流量守恒的 Sankey。
+
 ### 过去 12 个月发布与变化
 
 - **分部报告重述**, 自 2025 财年 Q1 (2025 年 6 月季度) 起改为两分部口径——将机电一体化并入测试系统业务。
@@ -214,7 +423,7 @@ HBM 测试在结构上比传统 DRAM 测试要求更高, 有两点原因: (i) HB
 
 ---
 
-## 5. 客户与上市策略
+## 6. 客户与上市策略
 
 爱德万测试服务于分解后半导体供应链的四类经典客户: **IDM** (集成器件制造商)、**无晶圆**设计公司、**代工厂**与 **OSAT**。20 余年来供应链已从 IDM 主导模式演化为无晶圆-代工-OSAT 模式, 其中**无晶圆客户的测试机选择沿供应链下传至执行晶圆分选的代工厂以及执行封装与系统级测试的 OSAT**——这一动态使得在分解模式下捕获无晶圆决策对 ATE 厂商极为关键。用爱德万测试自己的话说: "无晶圆公司在器件设计阶段为验证所选测试机, 通常也被代工厂用于样品评估与晶圆测试, 并被 OSAT 用于装配后封装测试。因此, 无晶圆客户的决策是分解模式下测试机选型的重要节点" ([Investors Guide 2025, 第 9 页](https://www.advantest.com/document/en/investors/ir-library/investors-guide/Investors_Guide_2504E.pdf))。
 
@@ -228,9 +437,15 @@ pie title 2025 财年按客户地区销售额 (合计 11,286 亿日元)
 
 *来源: [2025 财年合并业绩公告, 2026-04-27, 第 15 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf)。基于客户所在地。*
 
+下面的甜甜圈图以相同口径展示按客户地区的营收占比——亚洲 (除日本) 占绝对主导 (91.8%):
+
+![FY2025 营收按客户地区](charts/advantest_donut_geography.svg)
+
+*来源: [2025 财年决算短信, 2026-04-27, 第 15 页 (按客户所在地)](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf)。*
+
 ### 客户集中度
 
-爱德万测试**未在其合并 IFRS 财务报告中按 10% 营业收入阈值披露具体客户名称** (2024 财年与 2025 财年的决算短信均不包含"主要な販売先"/"主要客户"披露)。详细的客户结构披露通常会出现在 6 月下旬通过 EDINET 提交的**有価証券報告書** (Yuho/年度证券报告)——2025 财年 Yuho 预定于 **2026 年 6 月 26 日**提交 ([2025 财年 FN 第 1 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf)), 截至本报告日期 (2026-05-20) 尚未公开。2024 财年 Yuho (2025 年 6 月) 同样未列示任何单一客户跨越 10% 阈值。
+爱德万测试**未在其合并 IFRS 财务报告中按 10% 营业收入阈值披露具体客户名称** (2024 财年与 2025 财年的决算短信均不包含"主要な販売先"/"主要客户"披露)。详细的客户结构披露通常会出现在 6 月下旬通过 EDINET 提交的**有価証券報告書** (Yuho/年度证券报告)——2025 财年 Yuho 预定于 **2026 年 6 月 26 日**通过 [EDINET](https://disclosure2.edinet-fsa.go.jp/) 提交 ([2025 财年 FN 第 1 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf)), 截至本报告日期 (2026-06-14) 尚未公开 (距预定提交仅约两周)。2024 财年 Yuho (2025 年 6 月) 同样未列示任何单一客户跨越 10% 阈值。
 
 爱德万测试在 Investors Guide 中的官方叙述强调"客户基础以前几大客户的**低销售集中度**为特征。换言之, 客户基础高度多元化, 尤其在最近几年新客户数量明显增多" ([Investors Guide 2025, 第 13 页](https://www.advantest.com/document/en/investors/ir-library/investors-guide/Investors_Guide_2504E.pdf))。这一表述在定性上可信: 相关客户域涵盖 6 家以上 HBM 客户 (3 家 IDM × 晶圆厂 + 封装测试场所)、20 多个领先 SoC 项目 (NVIDIA、AMD、Apple、Qualcomm、Broadcom、MediaTek、Marvell、Google、AWS、Microsoft、Meta、Tesla Dojo 等)、5 家以上具有内部测试能力的领先代工厂, 以及全球 OSAT 基础。
 
@@ -263,7 +478,7 @@ pie title 2025 财年按客户地区销售额 (合计 11,286 亿日元)
 
 ---
 
-## 6. 行业概览
+## 7. 行业概览
 
 半导体测试设备行业——**ATE (Automatic Test Equipment, 自动测试设备)**——是广义半导体设备价值链中一个利基但高杠杆的角落。它位于半导体制造流程的**后段**, 在晶圆离开前道晶圆厂之后、封装装配前后。在制造一颗领先 IC 所需的 400–600 道工序中, "**测试是唯一处理电的工序**, 因为需要分析高精度的电信号以判断半导体的质量" ([Investors Guide 2025, 第 10 页](https://www.advantest.com/document/en/investors/ir-library/investors-guide/Investors_Guide_2504E.pdf))。这使 ATE 在结构上区别于前道工艺设备 (光刻、薄膜沉积、刻蚀、CMP) ——后者属于 ASML、应用材料、泛林、东京电子、科磊领域——也区别于后段装配设备 (ASMPT、BE Semiconductor)。
 
@@ -299,7 +514,7 @@ ATE 在产品层面并非高强度监管 (无 FDA 等同机构), 但面临**出�
 
 ---
 
-## 7. 竞争格局
+## 8. 竞争格局
 
 ### 直接竞争对手
 
@@ -338,9 +553,17 @@ quadrantChart
 
 ### 同业估值快照
 
-![同业估值](charts/advantest_peer_valuation.png)
+下面的 TTM P/E 对比 (单一 y 轴, 倍, 截至 2026 年 6 月中旬) 把 Advantest 放入半导体设备同业组——TER 因 2023 财年盈利下滑更深而 TTM 倍数最高, Advantest 处该组中段偏高, AMAT 最低:
 
-*来源: TTM P/E 与 P/S 截至 2026 年 5 月中旬, 综合自 [Yahoo Finance 6857.T](https://finance.yahoo.com/quote/6857.T/)、[companiesmarketcap.com — Advantest P/E](https://companiesmarketcap.com/advantest/pe-ratio/)、[gurufocus TER TTM P/E](https://www.gurufocus.com/term/pettm/TER)、[Yahoo Finance KLAC 关键统计](https://finance.yahoo.com/quote/KLAC/key-statistics/)、[Alpha Spread KLAC vs AMAT](https://www.alphaspread.com/comparison/nasdaq/klac/vs/nasdaq/amat)、[Simply Wall St 8035 估值](https://simplywall.st/stocks/jp/semiconductors/tse-8035/tokyo-electron-shares/valuation)。爱德万测试 TTM P/E 显示约 50 倍, 基于 2025 财年报告 EPS 513.30 日元, 而非某些数据商仍以早期估值打印的失真约 125 倍数字。*
+```mermaid
+xychart-beta
+    title "半导体设备同业 TTM P/E 对比 (倍, 2026-06)"
+    x-axis ["ADTEST 6857", "TER", "KLAC", "TEL 8035", "AMAT"]
+    y-axis "TTM P/E (x)" 0 --> 95
+    bar [50, 88, 41, 38, 22]
+```
+
+*来源: TTM P/E 截至 2026 年 6 月中旬, 综合自 [Yahoo Finance 6857.T](https://finance.yahoo.com/quote/6857.T/)、[companiesmarketcap.com — Advantest P/E](https://companiesmarketcap.com/advantest/pe-ratio/)、[gurufocus TER TTM P/E](https://www.gurufocus.com/term/pettm/TER)、[Yahoo Finance KLAC 关键统计](https://finance.yahoo.com/quote/KLAC/key-statistics/)、[Alpha Spread KLAC vs AMAT](https://www.alphaspread.com/comparison/nasdaq/klac/vs/nasdaq/amat)、[Simply Wall St 8035 估值](https://simplywall.st/stocks/jp/semiconductors/tse-8035/tokyo-electron-shares/valuation)。爱德万测试 TTM P/E 约 50 倍, 基于 2025 财年报告 EPS 513.30 日元, 而非某些数据商仍以早期估值打印的失真约 125 倍数字。*
 
 ### 爱德万测试的竞争优势
 
@@ -358,7 +581,7 @@ quadrantChart
 
 ---
 
-## 8. 市场机会 (TAM)
+## 9. 市场机会 (TAM)
 
 ### 测试机 TAM 规模测算
 
@@ -389,9 +612,45 @@ quadrantChart
 
 管理层已确认将发布覆盖 2027 财年及以后的下一份 MTP (MTP4) ——尚未公开。
 
+### 资产负债表与现金流结构
+
+把 TAM 兑现为现金的能力, 最终落到资产负债表与现金流上。下面两张 Sankey 展示: (i) 截至 2026-03-31, 总资产 ¥1,171.8bn 中现金 ¥340.0bn + 应收 ¥228.7bn + 存货 ¥231.7bn 构成流动资产主体, 负债仅 ¥376.1bn, 股东权益 ¥795.7bn (权益率 67.9%)——近零负债的堡垒型资产负债表; (ii) FY2025 经营现金流 ¥335.2bn, 扣除资本开支 ¥33.0bn 后自由现金流约 ¥302bn, 主要用于股票回购、股息与偿还短期借款 ([2025 财年决算短信, 第 6–7 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。
+
+![Advantest 资产负债表 Sankey](charts/advantest_balance_sankey.svg)
+
+*来源: [2025 财年决算短信, 2026-04-27, 第 6 页 (合并财务状况表)](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf)。负债侧明细 (应付/应交税/其他) 为按文字披露的近似拆分, 合计 ¥376.1bn 与披露一致。*
+
+![Advantest 现金流量 Sankey](charts/advantest_cashflow_sankey.svg)
+
+*来源: [2025 财年决算短信, 2026-04-27, 第 7 页 (现金流量概览)](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf)。融资活动明细 (回购/股息/偿还短借) 为按文字披露的近似拆分。*
+
 ---
 
-## 9. 风险评估
+## 9.5 核心分歧与催化剂 (Key debates & catalysts)
+
+本节区别于第 10 章的风险清单: 这里聚焦市场对 Advantest 的 2–4 个核心分歧, 逐一回应, 再列出未来 12 个月的具名催化剂。
+
+### 核心分歧 (bear arguments + 回应)
+
+**分歧 1: 估值是否已过高?** *看空方 (UBS):* Advantest 受益 AI 但「估值过高、性价比不足」, 偏好东京电子与瑞萨 ([UBS — Japan Tech Conglomerates, 2026-05-14, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212452151442141/UBS-Japan%20Tech%20Conglomerates%EF%BC%9AHardware%20above%20software%20still-260514.pdf))。*回应:* 前瞻 P/E 约 43× 确实偏高, 但 (a) FY2025 实际超越三次上调后的指引, 模型持续追赶, 滚动 P/E 被压缩; (b) Bernstein FY27/FY28 营业利润较共识高 12%/8%, 若兑现则估值进一步消化。本报告把估值列为评级仅 Overweight (非 Buy) 的核心约束——既不否认 UBS 的担忧, 也不接受其中性结论。
+
+**分歧 2: Teradyne 会否在 NVIDIA 份额上反扑?** *看空方:* 泰瑞达正重建高端 SoC 测试机路线图, UltraFLEXplus 刷新加激进定价可能在 2026–2027 重夺份额。*回应:* Bernstein 承认泰瑞达可能在 NVIDIA 份额上有所提升, 但认为来自 ASIC、CPO、CPU、LPU 的新需求足以支撑 Advantest 继续增长; Morgan Stanley 亦判断 AI GPU 测试竞争格局稳定、无明显份额流失风险 ([Bernstein — From GPU to CPO/CPU/LPU, 2026-04-15, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184418854484582/Bernstein-Advantest%20Corp%EF%BC%886857.JP%EF%BC%89Advantest%EF%BC%9A%20From%20GPU%20to%20CPO%EF%BC%8C%20CPU%EF%BC%8C%20LPU...%20Upgrading%20to%20Outperform%20and%20Top%20Pick-260415.pdf); [Morgan Stanley — Taiwan Visit Takeaways, 2026-06-08, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/814528415518542/Morgan%20Stanley-Taiwan%20Visit%20Takeaways-260608.pdf))。
+
+**分歧 3: AI 资本开支会否在 2026 日历年见顶?** *看空方:* 若超大规模云训练资本开支见顶, 或结构从训练 (高测试强度) 转向推理 (低测试强度), 增速可能失速。*回应:* 这是真实的高严重性风险 (见第 10 章风险 2); 但 Morgan Stanley 供应链核实显示存储短缺或持续 2–3 年、先进逻辑投资维持强劲, 2027 年前不必悲观 ([Morgan Stanley — Taiwan Visit Takeaways, 2026-06-08, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/814528415518542/Morgan%20Stanley-Taiwan%20Visit%20Takeaways-260608.pdf))。本报告把它作为熊市情景 (−7%) 的核心假设, 而非基准。
+
+### 未来 12 个月催化剂 (dated)
+
+- **2026-06-26 (预定):** FY2025 有価証券報告書 (Yuho) 通过 EDINET 提交——可能首次披露客户集中度与订单簿 (受注残高) 细节 ([2025 财年 FN 第 1 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。
+- **2026 年 7 月底 (预计):** FY2026 Q1 (6 月季度) 决算短信——Bernstein 回归模型预示总营收 ¥3,460bn 高于共识 ¥3,370bn, 存在再超预期可能 ([Bernstein — Taiwan Import Tracker, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412458152484588/Bernstein-Japan%20and%20EU%20Semiconductors%20Japan%20EU%20Semi%20Taiwan%20Import%20Tracker%20%EF%BC%88May%2026%EF%BC%89%EF%BC%9A%20SPE%20import%20%2B23%25%20YoY-260610.pdf))。
+- **2026-07-31:** 第 84 届定期股东大会 ([2025 财年 FN 第 15 页](https://www.advantest.com/en/news/2026/a81o6o0000000hgw-att/E_FR_FY2025_FN.pdf))。
+- **2026 下半年:** MTP4 (覆盖 2027 财年及以后的新中期经营计划) 发布——多年期营收/利润率/资本开支目标。
+- **2027–2028:** CPO (共封装光学) 大规模量产启动 (2028 年), 测试市场规模预计 2026 年 $1 亿 → 2028 年 $3–7 亿; 晶圆级插入测试需求是更近期的增量 ([Morgan Stanley — Taiwan Visit Takeaways, 2026-06-08, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/814528415518542/Morgan%20Stanley-Taiwan%20Visit%20Takeaways-260608.pdf))。
+
+持续跟踪可借助 catalyst-calendar 技能。
+
+---
+
+## 10. 风险评估
 
 ### 公司特定风险
 
@@ -431,7 +690,46 @@ quadrantChart
 
 ---
 
-## 10. 参考资料
+## 11. 投资视角评分 (Section 10 lenses)
+
+> 以下评分卡把第 1–10 章已引用的事实, 套入四个知名投资框架作为评分**视角 (rubric)**——不是角色扮演, 也不是背书。每个结论标注 *视角观点:*。周期快照来源: indicators.db 本地快照 (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-05。
+
+**周期快照 (cycle snapshot):** VIX 21.5、10Y Treasury (^TNX) 4.54%、HY OAS (BAMLH0A0HYM2) 2.74%、IG OAS 0.74%、MOVE 75.2——信用利差处于周期低位、波动率温和, 整体属**风险偏好 (risk-on) / 偏晚周期**环境 (来源: indicators.db 本地快照 (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-05)。
+
+### 11.4 Howard Marks 周期视角 (先算, 用以校准其余) — *视角观点:* 偏防御 (offense↔defense 约 35/100)
+
+| 维度 | 读数 | 评分 |
+|---|---|---|
+| 信用利差 | HY OAS 2.74% (近周期低位) | 偏贵 |
+| 波动率 | VIX 21.5 / MOVE 75.2 (温和) | 中性 |
+| 估值情绪 | 半导体设备/AI 测试主题接近极致乐观 | 偏贵 |
+
+*视角观点:* 当前是「钟摆偏向贪婪」的晚周期环境——信用便宜、AI 主题拥挤。对 Advantest 这类高 beta、高估值的 AI 受益股, Marks 框架要求**以防御姿态参与**: 上行真实但需要安全边际, 这正是本报告给 Overweight 而非 Buy、PT 刻意低于卖方最乐观端的原因。下方各视角的「看多」结论须按此防御基调打折。
+
+### 11.1 Buffett 视角 (质量 + 合理价格, 0–100) — *视角观点:* 质量满分, 价格不合理 (约 55/100)
+
+| 维度 | 读数 | 评分 |
+|---|---|---|
+| 护城河 | SoC/HBM 测试机准垄断, 转换成本 + 研发规模 | 强 |
+| 盈利质量 | ROE 57.65% 几乎全由盈利驱动 (权益乘数仅 1.56) | 强 |
+| 资产负债表 | 现金 ¥340bn, 长期债务近零 | 强 |
+| 价格 | 前瞻 P/E 约 43× | 弱 |
+
+*视角观点:* 这是 Buffett 会欣赏的生意 (宽护城河、高 ROIC、净现金), 但**不是他会买的价格**。Buffett 框架在此是「优质公司, 等更好价格」, 而非「以任何价格买入」。
+
+### 11.2 Munger 视角 (质量加权 + 反向思考, 0–10) — *视角观点:* 7.5/10
+
+*反向思考 (inversion):* 什么会让这笔投资亏钱? 最可能的不是基本面崩坏, 而是**为完美执行付了过高的价**——若 AI 资本开支放缓且倍数压向 40×, 即使盈利仍增长, 股价也可能下跌 (熊市情景 −7%)。Munger 会说: 生意是 A+, 但买入价决定回报, 当前价把容错空间压得很薄。
+
+### 11.3 Damodaran 视角 (故事 + 数字, 安全边际 ±%) — *视角观点:* 安全边际约 +5–10% (薄)
+
+*必备假设:* 无风险利率采 10Y ^TNX 4.54% (来源: indicators.db 本地快照 (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-05); 故事 = AI 测试强度阶跃驱动 ATE 市场翻倍, Advantest 守住 ~58% 份额并向 66% 推进; 数字 = FY2026E 营收 ¥1,420bn、营业利润率 44%。在此故事下, 本报告 PT ¥30,500 较现价仅 +12%——安全边际薄, 与 Howard Marks 的防御基调一致。若给 Bernstein 的更激进份额/CPO 故事, 安全边际扩大 (牛市 +35%), 但那要求 AI 周期不间断。
+
+*视角观点:* 故事可信、数字扎实, 但当前价已计入大部分故事——margin of safety 薄, 这是「持有/小幅增持」而非「重仓买入」的级别, 与本报告 Overweight 评级一致。
+
+---
+
+## 12. 参考资料
 
 ### 主要公告——爱德万测试公司披露
 
@@ -494,6 +792,62 @@ quadrantChart
 - [Investing.com — 爱德万测试 2025 财年 Q3 演示, 2026-01-28](https://za.investing.com/news/company-news/advantest-q3-fy25-slides-record-sales-drive-guidance-upgrade-on-ai-demand-93CH-4082930)
 - [Investing.com UK — 爱德万测试 2025 财年演示, 2026-04-27](https://uk.investing.com/news/company-news/advantest-fy25-slides-record-margins-as-ai-testing-demand-surges-93CH-4631849)
 
+### 机构研究 (`db/zsxq.db` — *Analyst view:*, 用户本机可点击)
+
+- [Bernstein — Advantest 4Q26 3: Already leading in silicon photonics testing; Raising PT to ¥39,200, 2026-04-29, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212212581121221/Bernstein-Advantest%20Corp%EF%BC%886857.JP%EF%BC%89Advantest%204Q26%203%EF%BC%9A%20Already%20leading%20in%20silicon%20photonics%20testing%EF%BC%9B%20Raising%20PT%20to%20%EF%BF%A539%EF%BC%8C200-260427.pdf)
+- [Bernstein — Advantest: From GPU to CPO, CPU, LPU... Upgrading to Outperform and Top Pick, 2026-04-15, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184418854484582/Bernstein-Advantest%20Corp%EF%BC%886857.JP%EF%BC%89Advantest%EF%BC%9A%20From%20GPU%20to%20CPO%EF%BC%8C%20CPU%EF%BC%8C%20LPU...%20Upgrading%20to%20Outperform%20and%20Top%20Pick-260415.pdf)
+- [Bernstein — Japan/EU Semi Taiwan Import Tracker (May 26): SPE import +23% YoY, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412458152484588/Bernstein-Japan%20and%20EU%20Semiconductors%20Japan%20EU%20Semi%20Taiwan%20Import%20Tracker%20%EF%BC%88May%2026%EF%BC%89%EF%BC%9A%20SPE%20import%20%2B23%25%20YoY-260610.pdf)
+- [Bernstein — Global Semicap Tracker (Apr 26): Japan SPE +25% YoY, 2026-06-03, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212485115525141/Bernstein-Global%20Semicap%20Tracker%20%EF%BC%88Apr%2026%EF%BC%89%EF%BC%9A%20Japan%20SPE%20%2B25%25%20YoY-260603.pdf)
+- [Morgan Stanley — Taiwan Visit Takeaways, 2026-06-08, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/814528415518542/Morgan%20Stanley-Taiwan%20Visit%20Takeaways-260608.pdf)
+- [UBS — Japan Tech Conglomerates: Hardware above software still, 2026-05-14, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212452151442141/UBS-Japan%20Tech%20Conglomerates%EF%BC%9AHardware%20above%20software%20still-260514.pdf)
+
+### 数据来源清单 (Data Used)
+
+| 类别 | 来源 |
+|---|---|
+| **一手 — 公司文件** | Advantest FY2025 决算短信 (2026-04-27)、FY2024 决算短信 (2025-04-25)、FY2025 Q3 决算短信 (2026-01-28)、Investors Guide 2025、CEO 任命新闻稿; 产品页 (V93000 EXA Scale / T5835 / T5503HS2 / T5833); 沿革页、管理团队页 |
+| **一手 — 监管/交易** | Advantest 6-K (Verigy 收购, 2011, SEC EDGAR)、Astronics 8-K (2019, SEC EDGAR)、EDINET (FY2025 Yuho 预定 2026-06-26) |
+| **市场数据** | Yahoo Finance 6857.T (现价 ¥27,325, 2026-06-13)、companiesmarketcap、stockanalysis.com TYO:6857、Google Finance、gurufocus/Simply Wall St/Alpha Spread (同业倍数) |
+| **机构研究 (sell-side, *Analyst view:*)** | `db/zsxq.db`: Bernstein 4 份 (单名 + 追踪)、Morgan Stanley 1 份、UBS 1 份 (file_id 见上); `db/stock_price_target.db` (只读) PT 预读 |
+| **周期快照** | indicators.db 本地快照 (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-05 |
+| **图表** | 全部经 `scripts/financial_charts.py` 与 `scripts/gf_score.py` (stdlib SVG) 生成; 数字均取自 Advantest 自有报表 |
+
 ---
 
-*报告编制日期 2026-05-20。注: 2025 财年 Yuho (有価証券報告書) 预定于 2026 年 6 月 26 日在 EDINET 提交, 可能包含本报告日期尚未公开的额外分部级别与客户集中度披露。*
+*报告编制日期 2026-06-14 (本次刷新; 原始版本 2026-05-20)。注: 2025 财年 Yuho (有価証券報告書) 预定于 2026 年 6 月 26 日在 EDINET 提交, 可能包含本报告日期尚未公开的额外分部级别与客户集中度披露。评级、目标价与情景目标价均为本报告分析师的前瞻判断 (*Analyst view:*), 不构成投资建议。*
+
+<details><summary>Verification log (Step 10) — 2026-06-14</summary>
+
+**刷新范围:** 本次为既有简体中文报告的刷新 (refresh), 在保留高质量正文 (公司概览/历史/管理/产品/客户/行业/竞争/TAM/风险) 的基础上, 更新「截至日期」至 2026-06-14, 新增决策层 (投资摘要 header + 1B GF Score + 第 2 章前瞻模型/PT 推导/牛基熊 + 卖方观点演变 + 9.5 核心分歧与催化剂 + 第 11 章投资视角), 用 stdlib-SVG 图表套件 (income/balance/cashflow Sankey + segment/geography donut + revbars + 5 步 DuPont + 必备 moneyflow + GF radar) 替换两张旧 matplotlib PNG, 并接入 6 份 fresh zsxq 经纪商报告。英文版未触碰 (按 Chinese-only 默认)。
+
+**Step 0.5 sec-report-summary** — skipped (non-US issuer; Advantest files via EDINET/TDnet, not SEC)。
+
+**Step 0.7 机构研究库** — `find_pdf.py` 跨别名检索 (Advantest / 爱德万 / 6857 / 测试机 / V93000 / SoC test 等) 命中 6 份 12 个月内相关报告 (Bernstein ×4、Morgan Stanley ×1、UBS ×1), 全部本地存在 (local_exists=true)。无需补抓。`db/stock_price_target.db` 只读预读得 8 行 6857 PT 记录。
+
+**URL HTTP 检查 (200 only):** Advantest IR/产品/沿革/管理 8 个核心 URL + EDINET 首页均返回 200 (实测)。zsxq 本地 URL 经 `find_pdf.py --file-id` 确认 local_exists=true, 路由为 `/zsxq/pdf/<id>/<filename>` 直链。
+
+**EDINET/TDnet/IR 真实性:** 全部 Advantest 文件 URL 指向 advantest.com 实际 PDF (非捏造), FY2025 决算短信已下载并逐页核读 (损益表/资产负债表/现金流量表/分部/地区)。
+
+**Filing 数字 string-match (抽查 ≥5, 均来自已读 FY2025 决算短信):**
+- 营收 ¥1,128,610mn ✓ (损益表第 8 页, "Net sales 1,128,610")
+- 毛利 ¥726,107mn / GM 64.3% ✓ (726,107/1,128,610=64.3%)
+- 营业利润 ¥499,120mn / OPM 44.2% ✓
+- 净利润 ¥375,353mn / 稀释 EPS ¥513.30 ✓
+- 总资产 ¥1,171,816mn、总负债 ¥376,100mn、股东权益 ¥795,716mn (权益率 67.9%) ✓ (财务状况表第 6 页)
+- 经营现金流 ¥335.2bn、资本开支 ¥33.0bn → FCF ≈ ¥302bn ✓ (现金流量第 7 页)
+- FY2026 指引: 营收 ¥1,420bn / 营业利润 ¥627.5bn / 净利润 ¥465.5bn ✓ (第 5 页)
+- 现价 ¥27,325 (2026-06-13)、市值 ¥19.8T、52 周 ¥8,228–¥32,400 ✓ (Yahoo Finance 实测)
+
+**Analyst-view 句子核对:** 所有份额 (58% ATE / 56%→66% SoC)、PT (Bernstein ¥39,200 / MS 20× FY28 / UBS Neutral)、估计 (EXA Scale 2,000 台 +61% / FY27 OP ¥726bn 较共识 +12%) 均标注 *Analyst view:* / *分析师观点：* 并引至 `/zsxq/pdf/` 直链或第三方, 未附 filing 引用。每个 zsxq 数字 string-match 其 summary/OCR 文本。
+
+**卖方观点演变:** ≥2 zsxq 报告 → 已建机构内时间线 (Bernstein 三连跳 ¥26,000→¥34,300→¥39,200) + 机构间分歧表 (Bernstein 45× vs MS 20× vs UBS Neutral, 不混为假共识); `db/stock_price_target.db` 只读预读先行; PT DB 中 Goldman ¥3,500 错标行已识别并排除 (隐含 −85% 不合理, 已知 PT-DB mistagging)。
+
+**财务图表 string-match:** 9 张 SVG 全部 well-formed (xml.dom.minidom 解析通过); income/balance/cashflow/dupont/donut 每个数字 string-match FY2025 决算短信; `--source` footer 已烤入; moneyflow 每个节点为实名对手方 (NVIDIA/AMD/HBM IDM/代工厂/群马/供应商), ribbon 标签 ¥ 数 string-match 报表; 均以 markdown 图片引用嵌入 (viewer 渲染 SVG)。两张旧 matplotlib PNG 已删除。
+
+**Mermaid 陷阱核对:** timeline / graph TD / pie / quadrantChart / xychart-beta 均检查——quadrantChart 点名/轴线均加引号 (含斜杠的 "Yoseni / 中国新兴" 已引号, 安全); xychart-beta 标题加引号、x 轴标签用引号+ASCII 代码 (避开 CJK/斜杠陷阱)、y 轴用 `0 --> 95` 形式; 单一 y 轴未混 % 与币种。
+
+**Spec gaps (vintage 2026-05-20 → 已于本次刷新补齐):** 投资摘要 header (含前瞻估值矩阵 + 相对表现行)、第 1B GF Score、第 2 章前瞻模型 + PT 推导 + 牛基熊、9.5 核心分歧与催化剂、第 11 章投资视角、Data Used 清单、本验证日志、卖方观点演变——均已补齐。
+
+**残留未知:** (1) FY2025 Yuho (客户集中度/受注残高细节) 预定 2026-06-26 提交, 本报告日尚未公开; (2) Advantest 不按 10% 阈值具名客户, 故 NVIDIA/HBM IDM 的具体营收占比为推断 (已标注「推断」); (3) 年度研发绝对额按区间引用 (¥60–80bn), 决算短信未单列。
+
+</details>
