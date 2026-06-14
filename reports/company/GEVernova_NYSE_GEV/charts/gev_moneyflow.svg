@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1056" width="1180" height="1056" role="img" aria-label="钱从哪来、流向 GE Vernova、再汇向哪些上游瓶颈" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1056" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">电力设备资金流 · POWER-EQUIPMENT MONEY FLOW · 2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱从哪来、流向 GE Vernova、再汇向哪些上游瓶颈</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求侧（超大规模数据中心、公用事业、中东国家电力、电网运营商）的现金流入 GEV 三大产品线，再以约 200 亿美元/年的采购汇向少数几个上游瓶颈：取向硅钢 (GOES)、特种合金铸件、大型变压器与稀土磁体。</text>
+<ellipse cx="1031.00" cy="418.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="644.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="644.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 (demand)</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">GEV 产品线</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱汇向哪些上游瓶颈</text>
+<path d="M 256.00 244.00 C 369.50 244.00, 369.50 287.00, 483.00 287.00" fill="none" stroke="url(#mfgold)" stroke-width="21.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 263.50 C 369.50 263.50, 369.50 417.50, 483.00 417.50" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 359.00 C 369.50 359.00, 369.50 309.50, 483.00 309.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 377.00 C 369.50 377.00, 369.50 432.50, 483.00 432.50" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 389.00 C 369.50 389.00, 369.50 541.00, 483.00 541.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 481.00 C 369.50 481.00, 369.50 330.50, 483.00 330.50" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 591.00 C 369.50 591.00, 369.50 446.00, 483.00 446.00" fill="none" stroke="url(#mfgold)" stroke-width="15.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 311.00 C 810.50 311.00, 810.50 363.00, 924.00 363.00" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 421.25 C 810.50 421.25, 810.50 256.00, 924.00 256.00" fill="none" stroke="url(#mfgold)" stroke-width="16.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 439.25 C 810.50 439.25, 810.50 473.00, 924.00 473.00" fill="none" stroke="url(#mfgold)" stroke-width="19.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 541.00 C 810.50 541.00, 810.50 583.00, 924.00 583.00" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 299.00 C 810.50 299.00, 810.50 244.75, 924.00 244.75" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="259.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">燃气轮机+服务</text>
+<text x="369.50" y="334.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">HVDC/变压器/开关</text>
+<text x="369.50" y="399.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">MEA 燃气轮机</text>
+<text x="369.50" y="512.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">HVDC 互联</text>
+<text x="810.50" y="331.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">热端部件采购</text>
+<text x="810.50" y="332.62" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">变压器钢</text>
+<text x="810.50" y="450.12" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">并表变压器产能</text>
+<text x="810.50" y="556.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">磁体(嵌入)</text>
+<rect x="42.00" y="198.00" width="214" height="110.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="110.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">超大规模数据中心
+Hyperscalers</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">经 EPC/IPP 下单</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Q1'26 数据中心电气化订单 $2.4B</text>
+<rect x="42.00" y="324.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="324.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="357.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">美国/欧洲公用事业
+&amp; IPPs</text>
+<text x="60.00" y="378.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Vistra/Constellation/Duke 等</text>
+<text x="60.00" y="395.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">燃气轮机 + 电网设备</text>
+<rect x="42.00" y="434.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="42.00" y="434.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="60.00" y="467.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">中东国家电力
+National utilities</text>
+<text x="60.00" y="488.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">沙特 PIF / 伊拉克 / 阿联酋</text>
+<text x="60.00" y="505.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">MEA 营收 $5.4B FY25</text>
+<rect x="42.00" y="544.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="544.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="577.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">电网运营商 TSOs</text>
+<text x="60.00" y="598.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">National Grid / TenneT / RTE</text>
+<text x="60.00" y="615.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">HVDC + 变电站</text>
+<rect x="483.00" y="248.00" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="248.00" width="3" height="120.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="281.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Power 电力</text>
+<text x="501.00" y="302.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">营收 $19.8B</text>
+<text x="501.00" y="319.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">7HA/9HA 燃气轮机 + LTSA 服务</text>
+<rect x="483.00" y="384.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="384.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="417.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Electrification 电气化</text>
+<text x="501.00" y="438.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">营收 $9.6B</text>
+<text x="501.00" y="455.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">HVDC / 变压器 / 开关装备</text>
+<rect x="483.00" y="494.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="494.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="527.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">Wind 风电</text>
+<text x="501.00" y="548.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">营收 $9.1B</text>
+<text x="501.00" y="565.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">陆上 + 海上(收缩)</text>
+<rect x="924.00" y="206.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="206.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="239.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">取向硅钢 GOES</text>
+<text x="942.00" y="260.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">变压器铁芯钢</text>
+<text x="942.00" y="277.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">美国供给极度紧张的瓶颈</text>
+<rect x="924.00" y="316.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="316.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="349.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">特种合金 &amp; 铸件
+Super-alloys</text>
+<text x="942.00" y="370.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">燃气轮机热端部件</text>
+<text x="942.00" y="387.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">应流股份等少数供应商</text>
+<rect x="924.00" y="426.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="426.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="459.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Prolec GE 变压器</text>
+<text x="942.00" y="480.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">2026 全资并表 $5.3B</text>
+<text x="942.00" y="497.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">7 座工厂内部化变压器供给</text>
+<rect x="924.00" y="536.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="536.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="569.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">稀土磁体 REE</text>
+<text x="942.00" y="590.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">风电直驱发电机</text>
+<text x="942.00" y="607.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">中国供应链集中</text>
+<rect x="42.00" y="664.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="668.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="666.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="666.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="666.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="666.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="668.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="668.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="659.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="668.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="659.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="847.60" y="668.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="986.80" y="659.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="1005.80" y="668.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="42.00" y="679.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="61.00" y="688.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="135.40" y="679.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="154.40" y="688.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<line x1="42" y1="704.00" x2="1138" y2="704.00" stroke="#222a3a"/>
+<text x="42.00" y="720.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 资金流要点</text>
+<rect x="42.00" y="740.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="740.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="764.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求 · 数据中心</text>
+<text x="58.00" y="782.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AI 电力是新增量</text>
+<text x="58.00" y="806.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GEV</tspan><tspan fill="#9aa3b8" font-weight="400"> 电气化分部</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026</tspan><tspan fill="#9aa3b8" font-weight="400"> Q1</tspan><tspan fill="#9aa3b8" font-weight="400"> 录得</tspan><tspan fill="#f4d58a" font-weight="700"> $2.4B</tspan><tspan fill="#9aa3b8" font-weight="400"> 数据中心设备订单——超过</tspan><tspan fill="#f4d58a" font-weight="700"> 2025</tspan><tspan fill="#f4d58a" font-weight="700"> 全年总和</tspan></text>
+<text x="58.00" y="822.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">；订单多经</tspan><tspan fill="#f4d58a" font-weight="700"> Bechtel</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> Black</tspan><tspan fill="#f4d58a" font-weight="700"> &amp;</tspan><tspan fill="#f4d58a" font-weight="700"> Veatch</tspan><tspan fill="#9aa3b8" font-weight="400"> 等</tspan><tspan fill="#9aa3b8" font-weight="400"> EPC</tspan><tspan fill="#9aa3b8" font-weight="400"> 集成商与</tspan><tspan fill="#9aa3b8" font-weight="400"> IPP</tspan></text>
+<text x="58.00" y="838.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">转手，而非超大规模数据中心直接下单。</tspan></text>
+<rect x="412.00" y="740.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="740.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="764.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">产品 · POWER</text>
+<text x="428.00" y="782.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">燃气轮机 + 服务是利润中枢</text>
+<text x="428.00" y="806.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Power</tspan><tspan fill="#9aa3b8" font-weight="400"> 分部</tspan><tspan fill="#9aa3b8" font-weight="400"> FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收</tspan><tspan fill="#f4d58a" font-weight="700"> $19.8B</tspan><tspan fill="#9aa3b8" font-weight="400"> 、EBITDA</tspan><tspan fill="#f4d58a" font-weight="700"> $2.9B</tspan><tspan fill="#9aa3b8" font-weight="400"> （margin</tspan><tspan fill="#f4d58a" font-weight="700"> 14.7%</tspan></text>
+<text x="428.00" y="822.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">）；约</tspan><tspan fill="#f4d58a" font-weight="700"> 7,000</tspan><tspan fill="#9aa3b8" font-weight="400"> 台装机基础上的</tspan><tspan fill="#f4d58a" font-weight="700"> 1,800</tspan><tspan fill="#9aa3b8" font-weight="400"> 份</tspan><tspan fill="#9aa3b8" font-weight="400"> LTSA</tspan><tspan fill="#9aa3b8" font-weight="400"> 服务合同是最高质量的现金流。</tspan></text>
+<rect x="782.00" y="740.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="740.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="764.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">瓶颈 · GOES 钢</text>
+<text x="798.00" y="782.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">取向硅钢是变压器卡点</text>
+<text x="798.00" y="806.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">大型电力变压器的铁芯依赖</tspan><tspan fill="#f4d58a" font-weight="700"> GOES</tspan><tspan fill="#9aa3b8" font-weight="400"> 取向硅钢，美国供给极度紧张、交付周期一度超</tspan><tspan fill="#f4d58a" font-weight="700"> 100</tspan><tspan fill="#f4d58a" font-weight="700"> 周</tspan></text>
+<text x="798.00" y="822.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">；这是电气化产能扩张的真实约束。</tspan></text>
+<rect x="42.00" y="886.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="886.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="910.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">纵向整合 · PROLEC</text>
+<text x="58.00" y="928.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">用 $5.3B 收购把变压器内部化</text>
+<text x="58.00" y="952.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 2</tspan><tspan fill="#9aa3b8" font-weight="400"> 月以约</tspan><tspan fill="#f4d58a" font-weight="700"> $5.3B</tspan><tspan fill="#9aa3b8" font-weight="400"> 收购</tspan><tspan fill="#9aa3b8" font-weight="400"> Prolec</tspan><tspan fill="#9aa3b8" font-weight="400"> GE</tspan><tspan fill="#9aa3b8" font-weight="400"> 剩余</tspan><tspan fill="#f4d58a" font-weight="700"> 50%</tspan><tspan fill="#9aa3b8" font-weight="400"> 股权，把</tspan><tspan fill="#f4d58a" font-weight="700"> 7</tspan><tspan fill="#f4d58a" font-weight="700"> 座</tspan></text>
+<text x="58.00" y="968.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">变压器工厂与约</tspan><tspan fill="#f4d58a" font-weight="700"> 10,000</tspan><tspan fill="#9aa3b8" font-weight="400"> 名员工并入电气化分部——直接锁定最紧缺的变压器供给。</tspan></text>
+<rect x="412.00" y="886.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="412.00" y="886.00" width="3" height="116.00" rx="2" fill="#d9a05b"/>
+<text x="428.00" y="910.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">瓶颈 · 合金铸件</text>
+<text x="428.00" y="928.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">热端部件供给狭窄</text>
+<text x="428.00" y="952.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">H</tspan><tspan fill="#9aa3b8" font-weight="400"> 级燃气轮机热端的特种合金大型铸件供应商极少（如</tspan><tspan fill="#f4d58a" font-weight="700"> 应流股份</tspan><tspan fill="#9aa3b8" font-weight="400"> ），是产能爬坡的上游瓶颈之一，也是</tspan></text>
+<text x="428.00" y="968.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2017–18</tspan><tspan fill="#9aa3b8" font-weight="400"> GE</tspan><tspan fill="#9aa3b8" font-weight="400"> Power</tspan><tspan fill="#9aa3b8" font-weight="400"> 质量危机的同类风险点。</tspan></text>
+<rect x="782.00" y="886.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="782.00" y="886.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="798.00" y="910.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">瓶颈 · 稀土</text>
+<text x="798.00" y="928.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">风电磁体依赖中国供应链</text>
+<text x="798.00" y="952.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">直驱风电发电机的稀土永磁体供应链高度集中于中国，构成风电分部的地缘与成本尾部风险（嵌入式，非直接采购）。</tspan></text>
+<text x="590.00" y="1038.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: GE Vernova 2025 Form 10-K (Segment Note 24, Global Supply Chain) · Q1 2026 8-K (data-center orders, Prolec) · Prolec GE acquisition press release 2026-02-02</text>
+</svg>

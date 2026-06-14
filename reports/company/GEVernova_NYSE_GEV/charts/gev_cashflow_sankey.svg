@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">GE Vernova FY2025 现金流 Sankey (cash flow, US$m)</text>
+<path d="M 204.00,64.00 C 306.00,64.00 306.00,78.00 408.00,78.00 L 408.00,360.55 C 306.00,360.55 306.00,346.55 204.00,346.55 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,90.00 C 526.00,90.00 526.00,104.00 424.00,104.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,104.00 C 526.00,104.00 526.00,104.00 628.00,104.00 L 628.00,235.27 C 526.00,235.27 526.00,235.27 424.00,235.27 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,235.27 C 526.00,235.27 526.00,249.27 628.00,249.27 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,104.00 C 746.00,104.00 746.00,229.36 848.00,229.36 L 848.00,343.56 C 746.00,343.56 746.00,218.19 644.00,218.19 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,218.19 C 746.00,218.19 746.00,357.56 848.00,357.56 L 848.00,367.03 C 746.00,367.03 746.00,227.66 644.00,227.66 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,227.66 C 746.00,227.66 746.00,381.03 848.00,381.03 L 848.00,388.64 C 746.00,388.64 746.00,235.27 644.00,235.27 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,360.55 C 306.00,360.55 306.00,360.55 408.00,360.55 L 408.00,532.29 C 306.00,532.29 306.00,532.29 204.00,532.29 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,546.29 C 306.00,546.29 306.00,532.29 408.00,532.29 L 408.00,540.00 C 306.00,540.00 306.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="282.55" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="360.55" width="16" height="171.73" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="546.29" width="16" height="7.71" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="26.00" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="104.00" width="16" height="131.27" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="249.27" width="16" height="304.73" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="229.36" width="16" height="114.19" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="357.56" width="16" height="9.47" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="381.03" width="16" height="7.61" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="202.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="215.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.2B  (61.2%)</text>
+<rect x="207.00" y="332.27" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="344.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="357.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.0B  (37.2%)</text>
+<rect x="207.00" y="518.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$224.0M  (1.7%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$13.4B  (100.0%)</text>
+<rect x="647.00" y="46.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$755.0M  (5.6%)</text>
+<rect x="647.00" y="86.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="98.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="111.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.8B  (28.4%)</text>
+<text x="653.00" y="398.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="411.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.8B  (66.0%)</text>
+<text x="873.00" y="283.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">回购 Buybacks</text>
+<text x="873.00" y="296.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.3B  (24.7%)</text>
+<text x="873.00" y="359.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股息 Dividends</text>
+<text x="873.00" y="372.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$275.0M  (2.0%)</text>
+<text x="873.00" y="384.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他融资 Other financing</text>
+<text x="873.00" y="397.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$221.0M  (1.6%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$3.7B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: GE Vernova 2025 Form 10-K, Consolidated Statement of Cash Flows p.40</text>
+</svg>
