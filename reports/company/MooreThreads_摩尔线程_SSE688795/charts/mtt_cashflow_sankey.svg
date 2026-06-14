@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">摩尔线程现金流量 — FY2025（单位：百万元，IPO 募资为最大来源）</text>
+<path d="M 204.00,78.00 C 306.00,78.00 306.00,85.00 408.00,85.00 L 408.00,240.37 C 306.00,240.37 306.00,233.37 204.00,233.37 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,85.00 C 526.00,85.00 526.00,63.00 628.00,63.00 L 628.00,158.98 C 526.00,158.98 526.00,180.97 424.00,180.97 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,180.97 C 526.00,180.97 526.00,172.98 628.00,172.98 L 628.00,230.91 C 526.00,230.91 526.00,238.91 424.00,238.91 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,238.91 C 526.00,238.91 526.00,244.91 628.00,244.91 L 628.00,246.91 C 526.00,246.91 526.00,240.91 424.00,240.91 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,240.91 C 526.00,240.91 526.00,260.91 628.00,260.91 L 628.00,555.00 C 526.00,555.00 526.00,534.99 424.00,534.99 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,172.98 C 746.00,172.98 746.00,273.03 848.00,273.03 L 848.00,310.28 C 746.00,310.28 746.00,210.22 644.00,210.22 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,210.22 C 746.00,210.22 746.00,324.28 848.00,324.28 L 848.00,344.97 C 746.00,344.97 746.00,230.91 644.00,230.91 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,247.37 C 306.00,247.37 306.00,240.37 408.00,240.37 L 408.00,533.00 C 306.00,533.00 306.00,540.00 204.00,540.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="155.37" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="247.37" width="16" height="292.63" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="63.00" width="16" height="95.97" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="172.98" width="16" height="57.93" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="244.91" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="260.91" width="16" height="294.09" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="273.03" width="16" height="37.25" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="324.28" width="16" height="20.69" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="152.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="165.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥4.8B  (34.7%)</text>
+<rect x="207.00" y="229.37" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="241.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="210.00" y="254.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥9.0B  (65.3%)</text>
+<rect x="427.00" y="67.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥13.8B  (100.0%)</text>
+<rect x="647.00" y="45.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="57.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="650.00" y="70.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥3.0B  (21.4%)</text>
+<rect x="647.00" y="154.98" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="166.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="179.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥1.8B  (12.9%)</text>
+<rect x="647.00" y="226.91" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="238.91" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="650.00" y="251.91" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥220.0K  (0.00%)</text>
+<text x="653.00" y="404.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="417.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥9.1B  (65.6%)</text>
+<text x="873.00" y="288.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">现金管理净额 Net Investments</text>
+<text x="873.00" y="301.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥1.1B  (8.3%)</text>
+<text x="873.00" y="331.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">资本开支 CapEx</text>
+<text x="873.00" y="344.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥637.2M  (4.6%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = -¥3.6B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 摩尔线程 2025 年年度报告 合并现金流量表 第 127–129 页</text>
+</svg>

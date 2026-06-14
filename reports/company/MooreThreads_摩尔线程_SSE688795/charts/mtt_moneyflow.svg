@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1156" width="1180" height="1156" role="img" aria-label="摩尔线程的钱花在哪里 — Fabless GPU 设计商的成本如何流向上游" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1156" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">国产 GPU 供应链资金流 · 2026 · 实体清单约束下</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">摩尔线程的钱花在哪里 — Fabless GPU 设计商的成本如何流向上游</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">作为 fabless 设计商，摩尔线程把营业成本与资本开支付给晶圆代工、先进封装、HBM 显存与 IP/EDA 工具；2023 年 10 月被列入美国 BIS 实体清单后，这些环节的境外供应（台积电流片、美系 EDA、海外</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">HBM）受限，资金被迫向境内/非受限供应链重定向 —— 这正是公司最大的供给侧瓶颈。</text>
+<ellipse cx="1031.00" cy="487.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="760.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="760.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 (摩尔线程的成本/资本开支)</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买什么 (GPU 物料与工具)</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终汇向哪里 (上游卡脖子环节)</text>
+<path d="M 256.00 470.00 C 369.50 470.00, 369.50 322.00, 483.00 322.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 488.00 C 369.50 488.00, 369.50 432.00, 483.00 432.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 501.00 C 369.50 501.00, 369.50 542.00, 483.00 542.00" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 512.00 C 369.50 512.00, 369.50 652.00, 483.00 652.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 329.00 C 810.50 329.00, 810.50 377.00, 924.00 377.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 432.00 C 810.50 432.00, 810.50 487.00, 924.00 487.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 316.00 C 810.50 316.00, 810.50 267.00, 924.00 267.00" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 542.00 C 810.50 542.00, 810.50 597.00, 924.00 597.00" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 652.00 C 810.50 652.00, 810.50 707.00, 924.00 707.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="390.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">营业成本主体</text>
+<rect x="42.00" y="412.00" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="412.00" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="445.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">摩尔线程 MTT</text>
+<text x="60.00" y="466.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY2025 营业成本 ¥5.18 亿</text>
+<text x="60.00" y="483.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">资本开支 ¥6.37 亿</text>
+<text x="60.00" y="500.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">前五供应商占采购 63.83%</text>
+<rect x="483.00" y="275.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="483.00" y="275.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="501.00" y="308.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">晶圆代工 Foundry</text>
+<text x="501.00" y="329.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">7nm/先进制程流片</text>
+<text x="501.00" y="346.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">GPU 裸片制造</text>
+<rect x="483.00" y="385.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="385.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="418.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">先进封装 Advanced Packaging</text>
+<text x="501.00" y="439.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">2.5D/3D 封装</text>
+<text x="501.00" y="456.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">GPU+显存集成</text>
+<rect x="483.00" y="495.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="495.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="528.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">高带宽显存 HBM</text>
+<text x="501.00" y="549.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">S5000 配 80GB</text>
+<text x="501.00" y="566.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">1.6TB/s 带宽</text>
+<rect x="483.00" y="605.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="605.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="638.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">IP / EDA 工具</text>
+<text x="501.00" y="659.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">芯片设计软件</text>
+<text x="501.00" y="676.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">第三方 IP 核</text>
+<rect x="924.00" y="220.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="220.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">台积电 TSMC</text>
+<text x="942.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">全球第一代工</text>
+<text x="942.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">实体清单后境外流片受限</text>
+<rect x="924.00" y="330.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="330.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="363.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">中芯国际 SMIC</text>
+<text x="942.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">境内代工替代</text>
+<text x="942.00" y="401.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">受 EUV 出口管制制约</text>
+<rect x="924.00" y="440.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="440.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="473.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">CoWoS / 国产封装</text>
+<text x="942.00" y="494.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">先进封装产能瓶颈</text>
+<text x="942.00" y="511.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">向国产长电/通富迁移</text>
+<rect x="924.00" y="550.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="550.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="583.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SK 海力士 / 三星 / 长鑫</text>
+<text x="942.00" y="604.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">HBM 三巨头主导</text>
+<text x="942.00" y="621.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">国产长鑫 CXMT 追赶</text>
+<rect x="924.00" y="660.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="660.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="693.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">美系 EDA (Synopsys/Cadence)</text>
+<text x="942.00" y="714.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">实体清单后使用受限</text>
+<text x="942.00" y="731.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">向华大九天等国产迁移</text>
+<rect x="42.00" y="780.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="782.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="775.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="747.00" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="821.40" y="775.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="840.40" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="965.20" y="775.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="984.20" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="42.00" y="795.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="61.00" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="178.60" y="795.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="197.60" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<line x1="42" y1="820.00" x2="1138" y2="820.00" stroke="#222a3a"/>
+<text x="42.00" y="836.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 钱流向哪里、卡在哪里</text>
+<rect x="42.00" y="856.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="856.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">买成品 · 晶圆代工</text>
+<text x="58.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">流片是最大单笔成本</text>
+<text x="58.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 裸片制造是</tspan><tspan fill="#9aa3b8" font-weight="400"> fabless</tspan><tspan fill="#9aa3b8" font-weight="400"> 商最大的外部支出；实体清单后台积电等境外流片受限，公司被迫把订单向</tspan></text>
+<text x="58.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">中芯国际</tspan><tspan fill="#9aa3b8" font-weight="400"> 等境内代工重定向，但境内先进制程受</tspan><tspan fill="#f4d58a" font-weight="700"> EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 光刻机出口管制制约。</tspan></text>
+<rect x="412.00" y="856.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="412.00" y="856.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="428.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">隐含成本 · HBM</text>
+<text x="428.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">HBM 显存的三巨头依赖</text>
+<text x="428.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">MTT</tspan><tspan fill="#9aa3b8" font-weight="400"> S5000</tspan><tspan fill="#9aa3b8" font-weight="400"> 配</tspan><tspan fill="#f4d58a" font-weight="700"> 80GB</tspan><tspan fill="#9aa3b8" font-weight="400"> 显存、</tspan><tspan fill="#f4d58a" font-weight="700"> 1.6TB/s</tspan><tspan fill="#9aa3b8" font-weight="400"> 带宽，HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 由</tspan><tspan fill="#f4d58a" font-weight="700"> SK</tspan><tspan fill="#f4d58a" font-weight="700"> 海力士/三星/美光</tspan></text>
+<text x="428.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">三巨头主导；国产</tspan><tspan fill="#f4d58a" font-weight="700"> 长鑫</tspan><tspan fill="#f4d58a" font-weight="700"> CXMT</tspan><tspan fill="#9aa3b8" font-weight="400"> 仍在追赶，HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 获取是国产高端算力卡的隐性卡脖子点。</tspan></text>
+<rect x="782.00" y="856.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="782.00" y="856.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="798.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">买成品 · 先进封装</text>
+<text x="798.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">CoWoS 级封装产能受限</text>
+<text x="798.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2.5D/3D</tspan><tspan fill="#9aa3b8" font-weight="400"> 先进封装将</tspan><tspan fill="#9aa3b8" font-weight="400"> GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 与显存集成；台积电</tspan><tspan fill="#f4d58a" font-weight="700"> CoWoS</tspan><tspan fill="#9aa3b8" font-weight="400"> 产能紧张且受限，公司向</tspan><tspan fill="#f4d58a" font-weight="700"> 长电/通富</tspan></text>
+<text x="798.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">等国产封装迁移，产能爬坡是出货节奏关键变量。</tspan></text>
+<rect x="42.00" y="986.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="986.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="1010.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">隐含成本 · 设计工具</text>
+<text x="58.00" y="1028.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">EDA / IP 工具的合规迁移</text>
+<text x="58.00" y="1052.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">芯片设计高度依赖</tspan><tspan fill="#f4d58a" font-weight="700"> Synopsys/Cadence</tspan><tspan fill="#9aa3b8" font-weight="400"> 美系</tspan><tspan fill="#9aa3b8" font-weight="400"> EDA；实体清单后使用受限，公司加速向</tspan><tspan fill="#f4d58a" font-weight="700"> 华大九天</tspan></text>
+<text x="58.00" y="1068.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">等国产</tspan><tspan fill="#9aa3b8" font-weight="400"> EDA</tspan><tspan fill="#9aa3b8" font-weight="400"> 与第三方</tspan><tspan fill="#9aa3b8" font-weight="400"> IP</tspan><tspan fill="#9aa3b8" font-weight="400"> 迁移，但工具链成熟度仍是研发效率制约。</tspan></text>
+<rect x="412.00" y="986.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="986.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="1010.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">供应商集中度</text>
+<text x="428.00" y="1028.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">前五供应商占采购 63.83%</text>
+<text x="428.00" y="1052.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 前五名供应商采购额</tspan><tspan fill="#f4d58a" font-weight="700"> ¥14.11</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> ，占采购总额</tspan><tspan fill="#f4d58a" font-weight="700"> 63.83%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，其中关联方</tspan><tspan fill="#f4d58a" font-weight="700"> ¥4.78</tspan></text>
+<text x="428.00" y="1068.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">亿</tspan><tspan fill="#9aa3b8" font-weight="400"> (21.63%)；供应商高度集中叠加实体清单，使供应链稳定性成为核心经营风险。</tspan></text>
+<text x="590.00" y="1138.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: 摩尔线程 2025 年年度报告 第 36、38 页（成本/供应商集中度）+ 第 34 页（实体清单风险披露）+ 华创证券深度报告 2026-05-27</text>
+</svg>
