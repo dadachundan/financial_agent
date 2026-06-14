@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">台积电 TSMC 现金流 — FY2025 (NT$mn)</text>
+<path d="M 534.00,87.47 C 608.50,87.47 608.50,96.74 683.00,96.74 L 683.00,295.84 C 608.50,295.84 608.50,286.58 534.00,286.58 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 699.00,96.74 C 773.50,96.74 773.50,75.57 848.00,75.57 L 848.00,186.93 C 773.50,186.93 773.50,208.10 699.00,208.10 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,208.10 C 773.50,208.10 773.50,200.93 848.00,200.93 L 848.00,241.79 C 773.50,241.79 773.50,248.95 699.00,248.95 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,248.95 C 773.50,248.95 773.50,255.79 848.00,255.79 L 848.00,257.79 C 773.50,257.79 773.50,250.95 699.00,250.95 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,250.95 C 773.50,250.95 773.50,271.79 848.00,271.79 L 848.00,542.43 C 773.50,542.43 773.50,521.59 699.00,521.59 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,197.71 C 278.50,197.71 278.50,204.71 353.00,204.71 L 353.00,353.07 C 278.50,353.07 278.50,346.07 204.00,346.07 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 369.00,204.71 C 443.50,204.71 443.50,64.00 518.00,64.00 L 518.00,73.47 C 443.50,73.47 443.50,214.19 369.00,214.19 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 369.00,214.19 C 443.50,214.19 443.50,87.47 518.00,87.47 L 518.00,286.58 C 443.50,286.58 443.50,413.29 369.00,413.29 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,300.58 C 608.50,300.58 608.50,295.84 683.00,295.84 L 683.00,482.05 C 608.50,482.05 608.50,486.78 534.00,486.78 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,360.07 C 278.50,360.07 278.50,353.07 353.00,353.07 L 353.00,413.29 C 278.50,413.29 278.50,420.29 204.00,420.29 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,500.78 C 608.50,500.78 608.50,482.05 683.00,482.05 L 683.00,517.72 C 608.50,517.72 608.50,536.45 534.00,536.45 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,550.45 C 608.50,550.45 608.50,517.72 683.00,517.72 L 683.00,521.26 C 608.50,521.26 608.50,554.00 534.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="197.71" width="16" height="148.35" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="360.07" width="16" height="60.22" rx="1.5" fill="#2563eb"/>
+<rect x="353.00" y="204.71" width="16" height="208.58" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="64.00" width="16" height="9.47" rx="1.5" fill="#dc2626"/>
+<rect x="518.00" y="87.47" width="16" height="199.10" rx="1.5" fill="#1e3a8a"/>
+<rect x="518.00" y="300.58" width="16" height="186.21" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="500.78" width="16" height="35.67" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="550.45" width="16" height="3.55" rx="1.5" fill="#2563eb"/>
+<rect x="683.00" y="96.74" width="16" height="424.53" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="75.57" width="16" height="111.36" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="200.93" width="16" height="40.85" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="255.79" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="271.79" width="16" height="270.64" rx="1.5" fill="#1e3a8a"/>
+<text x="179.00" y="268.89" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="179.00" y="281.89" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$1.7T  (74.5%)</text>
+<text x="179.00" y="387.18" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">D&amp;A</text>
+<text x="179.00" y="400.18" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$688.1B  (30.2%)</text>
+<rect x="372.00" y="186.71" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="375.00" y="198.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Inflow</text>
+<text x="375.00" y="211.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$2.4T  (104.8%)</text>
+<rect x="537.00" y="46.00" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Working Capital &amp; Other</text>
+<text x="540.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$108.2B  (4.8%)</text>
+<rect x="537.00" y="71.00" width="163.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="83.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash Flow from Operations</text>
+<text x="540.00" y="96.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$2.3T  (100.0%)</text>
+<rect x="537.00" y="282.58" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="294.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="540.00" y="307.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$2.1T  (93.5%)</text>
+<rect x="537.00" y="482.78" width="138.30" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="494.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financial Assets, net</text>
+<text x="540.00" y="507.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$407.6B  (17.9%)</text>
+<rect x="537.00" y="532.45" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="544.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Debt Issuance</text>
+<text x="540.00" y="557.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$40.5B  (1.8%)</text>
+<rect x="702.00" y="78.74" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="705.00" y="90.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash Available</text>
+<text x="705.00" y="103.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$4.9T  (213.2%)</text>
+<rect x="867.00" y="57.57" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="69.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Capex (PP&amp;E)</text>
+<text x="870.00" y="82.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$1.3T  (55.9%)</text>
+<rect x="867.00" y="182.93" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="194.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash Dividends</text>
+<text x="870.00" y="207.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$466.8B  (20.5%)</text>
+<rect x="867.00" y="237.79" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="249.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Interest Paid</text>
+<text x="870.00" y="262.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$19.1B  (0.84%)</text>
+<text x="873.00" y="404.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="417.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$3.1T  (135.9%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = NT$1.0T</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 台积电 2025 Form 20-F · 合并现金流量表 (F-11/F-12)</text>
+</svg>
