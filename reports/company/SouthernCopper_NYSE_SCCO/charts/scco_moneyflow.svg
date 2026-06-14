@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1104" width="1180" height="1104" role="img" aria-label="How Southern Copper earns — and where its cost dollars land / 南方铜业的钱从哪来、成本流向谁" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1104" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">COPPER MONEY FLOW · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">How Southern Copper earns — and where its cost dollars land /</text>
+<text x="42.00" y="138.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">南方铜业的钱从哪来、成本流向谁</text>
+<text x="42.00" y="180.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求侧的电气化/AI/电网买家付钱买铜与副产品，钱汇入 SCCO 的一体化产品线；SCCO 的成本则大量回流到母集团 Grupo México 的内部电力与铁路，以及亚洲冶炼厂的 TC/RC——护城河的核心是副产品信贷把铜净现金成本压到接近零。</text>
+<ellipse cx="1031.00" cy="461.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="226.00" x2="369.50" y2="692.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="226.00" x2="810.50" y2="692.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱（终端需求）</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">SCCO 产品线</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">成本/收入流向谁（上游与内部）</text>
+<path d="M 256.00 293.27 C 369.50 293.27, 369.50 311.18, 483.00 311.18" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 406.00 C 369.50 406.00, 369.50 324.27, 483.00 324.27" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 512.18 C 369.50 512.18, 369.50 339.55, 483.00 339.55" fill="none" stroke="url(#mfgold)" stroke-width="21.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 626.00 C 369.50 626.00, 369.50 357.00, 483.00 357.00" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 333.00 C 590.00 333.00, 590.00 574.09, 483.00 574.09" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 451.00 C 590.00 451.00, 590.00 591.00, 483.00 591.00" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 566.45 C 810.50 566.45, 810.50 296.00, 924.00 296.00" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 585.55 C 810.50 585.55, 810.50 529.00, 924.00 529.00" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 593.73 C 810.50 593.73, 810.50 639.00, 924.00 639.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 304.73 C 369.50 304.73, 369.50 447.18, 483.00 447.18" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 256.00 526.91 C 369.50 526.91, 369.50 453.73, 483.00 453.73" fill="none" stroke="url(#mfgold)" stroke-width="7.64" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 578.45 C 810.50 578.45, 810.50 419.00, 924.00 419.00" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="590.00" y="447.55" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">铜 ~75% 销售</text>
+<text x="590.00" y="515.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">副产品 ~25%</text>
+<text x="810.50" y="425.23" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">电力+铁路+股息</text>
+<text x="810.50" y="492.73" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">TC/RC 让渡</text>
+<text x="810.50" y="610.36" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">capex $1.33bn</text>
+<rect x="42.00" y="249.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="249.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="282.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">EV &amp; 电网</text>
+<text x="60.00" y="303.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">EV 用铜 ~83kg/辆</text>
+<text x="60.00" y="320.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">电网升级</text>
+<rect x="42.00" y="359.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="42.00" y="359.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="60.00" y="392.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">AI 数据中心</text>
+<text x="60.00" y="413.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">~35–45 万吨/年铜</text>
+<text x="60.00" y="430.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">电力分配/UPS</text>
+<rect x="42.00" y="469.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="469.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="502.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">建筑/工业</text>
+<text x="60.00" y="523.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">传统铜需求</text>
+<text x="60.00" y="540.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">占比最大基数</text>
+<rect x="42.00" y="579.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="579.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="612.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">大宗贸易商</text>
+<text x="60.00" y="633.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Trafigura/Glencore</text>
+<text x="60.00" y="650.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">瑞士 13.8% 销售</text>
+<rect x="483.00" y="278.00" width="214" height="110.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="278.00" width="3" height="110.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="311.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">COPPER 铜</text>
+<text x="501.00" y="332.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">阴极/铜杆/精矿</text>
+<text x="501.00" y="349.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY25 销售 74.8%</text>
+<rect x="483.00" y="404.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="404.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="437.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">副产品</text>
+<text x="501.00" y="458.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Mo 10.5% / Ag 7.3%</text>
+<text x="501.00" y="475.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Zn 3.9%</text>
+<rect x="483.00" y="514.00" width="214" height="130.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="514.00" width="3" height="130.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="547.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SOUTHERN COPPER</text>
+<text x="501.00" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">净销售 $13.42bn</text>
+<text x="501.00" y="585.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">一体化矿-冶-炼</text>
+<rect x="924.00" y="236.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="236.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">GRUPO MÉXICO</text>
+<text x="942.00" y="290.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">88.9% 控股</text>
+<text x="942.00" y="307.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">内部电力 MGE + 铁路 GFM</text>
+<text x="942.00" y="324.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">关联交易链路</text>
+<rect x="924.00" y="372.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="372.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="405.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">亚洲冶炼厂</text>
+<text x="942.00" y="426.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">江西铜业/三菱/LS-Nikko</text>
+<text x="942.00" y="443.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">精矿 TC/RC</text>
+<rect x="924.00" y="482.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="482.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="515.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">MOLYMET</text>
+<text x="942.00" y="536.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">钼精矿长约</text>
+<text x="942.00" y="553.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">~70% Mo 产量 2026–28</text>
+<rect x="924.00" y="592.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="592.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="625.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">CAPEX/项目</text>
+<text x="942.00" y="646.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Tia María $1.8bn</text>
+<text x="942.00" y="663.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY25 capex $1.33bn</text>
+<rect x="42.00" y="712.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="716.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="714.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="714.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="714.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="714.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="716.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="716.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="707.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="716.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="707.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="847.60" y="716.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="972.40" y="707.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="991.40" y="716.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<rect x="42.00" y="727.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="61.00" y="736.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="200.20" y="727.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="219.20" y="736.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="293.60" y="727.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="312.60" y="736.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<line x1="42" y1="752.00" x2="1138" y2="752.00" stroke="#222a3a"/>
+<text x="42.00" y="768.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY / 钱往哪走</text>
+<rect x="42.00" y="788.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="788.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="812.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求 · 电气化</text>
+<text x="58.00" y="830.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">终端需求是结构性顺风</text>
+<text x="58.00" y="854.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">EV（每辆</tspan><tspan fill="#f4d58a" font-weight="700"> ~83kg</tspan><tspan fill="#9aa3b8" font-weight="400"> 铜</tspan><tspan fill="#9aa3b8" font-weight="400"> vs</tspan><tspan fill="#9aa3b8" font-weight="400"> ICE</tspan><tspan fill="#f4d58a" font-weight="700"> ~23kg</tspan><tspan fill="#9aa3b8" font-weight="400"> ）、AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 数据中心（</tspan><tspan fill="#f4d58a" font-weight="700"> ~35–45</tspan><tspan fill="#f4d58a" font-weight="700"> 万吨</tspan></text>
+<text x="58.00" y="870.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">/年铜）、电网升级共同把铜需求推向结构性短缺，SCCO</tspan><tspan fill="#9aa3b8" font-weight="400"> 作为</tspan><tspan fill="#f4d58a" font-weight="700"> price-taker</tspan><tspan fill="#9aa3b8" font-weight="400"> 充分受益于价格上行。</tspan></text>
+<rect x="412.00" y="788.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="788.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="812.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">产品 · 一体化</text>
+<text x="428.00" y="830.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">铜占 75%，但副产品决定护城河</text>
+<text x="428.00" y="854.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 铜占销售</tspan><tspan fill="#f4d58a" font-weight="700"> 74.8%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、Mo</tspan><tspan fill="#f4d58a" font-weight="700"> 10.5%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、Ag</tspan><tspan fill="#f4d58a" font-weight="700"> 7.3%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、Zn</tspan><tspan fill="#f4d58a" font-weight="700"> 3.9%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。副产品信贷把</tspan></text>
+<text x="428.00" y="870.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Q1-2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 单位现金成本压到</tspan><tspan fill="#f4d58a" font-weight="700"> −$0.11/lb</tspan><tspan fill="#9aa3b8" font-weight="400"> ——成本低于零。</tspan></text>
+<rect x="782.00" y="788.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="788.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="812.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">成本 · 内部链路</text>
+<text x="798.00" y="830.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Grupo México 是最大的钱袋</text>
+<text x="798.00" y="854.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">88.9%</tspan><tspan fill="#9aa3b8" font-weight="400"> 控股股东</tspan><tspan fill="#f4d58a" font-weight="700"> Grupo</tspan><tspan fill="#f4d58a" font-weight="700"> México</tspan><tspan fill="#9aa3b8" font-weight="400"> 通过</tspan><tspan fill="#9aa3b8" font-weight="400"> MGE（电力）+</tspan></text>
+<text x="798.00" y="870.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GFM（铁路）提供内部供应链，并通过</tspan><tspan fill="#f4d58a" font-weight="700"> $2.49bn</tspan><tspan fill="#9aa3b8" font-weight="400"> 现金股息收回大部分自由现金流——少数股东话语权微弱。</tspan></text>
+<rect x="42.00" y="918.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="918.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="942.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">成本 · 冶炼</text>
+<text x="58.00" y="960.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">亚洲冶炼过剩反成利好</text>
+<text x="58.00" y="984.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">全球</tspan><tspan fill="#9aa3b8" font-weight="400"> TC/RC</tspan><tspan fill="#9aa3b8" font-weight="400"> 因中国新增冶炼产能暴跌，精矿端</tspan><tspan fill="#f4d58a" font-weight="700"> TC</tspan><tspan fill="#f4d58a" font-weight="700"> 越低矿企收到越多</tspan><tspan fill="#9aa3b8" font-weight="400"> ——这是</tspan><tspan fill="#9aa3b8" font-weight="400"> SCCO</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan></text>
+<text x="58.00" y="1000.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">精矿利润率扩张的隐含因素。</tspan></text>
+<rect x="412.00" y="918.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="918.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="942.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">增长 · CAPEX</text>
+<text x="428.00" y="960.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Capex 流向新项目管道</text>
+<text x="428.00" y="984.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 现金</tspan><tspan fill="#9aa3b8" font-weight="400"> capex</tspan><tspan fill="#f4d58a" font-weight="700"> $1.33bn</tspan><tspan fill="#9aa3b8" font-weight="400"> ，</tspan><tspan fill="#f4d58a" font-weight="700"> Tia</tspan><tspan fill="#f4d58a" font-weight="700"> María</tspan><tspan fill="#9aa3b8" font-weight="400"> （</tspan><tspan fill="#f4d58a" font-weight="700"> $1.8bn</tspan></text>
+<text x="428.00" y="1000.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">预算，120kt/年</tspan><tspan fill="#9aa3b8" font-weight="400"> SX-EW）FY2027</tspan><tspan fill="#9aa3b8" font-weight="400"> 投产——是未来增产的核心，但也是</tspan><tspan fill="#9aa3b8" font-weight="400"> Peru</tspan></text>
+<text x="428.00" y="1016.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">监管反复的焦点。</tspan></text>
+<text x="590.00" y="1086.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: SCCO FY2025 10-K (MD&amp;A Sales Structure, Note 17 Sales Contracts, Cash Flows) · SEC EDGAR · Bernstein Copper Long View 2026-06-10</text>
+</svg>
