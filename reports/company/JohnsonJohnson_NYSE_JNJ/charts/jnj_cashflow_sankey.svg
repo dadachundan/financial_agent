@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">强生 (JNJ) 现金流 / Cash Flow — FY2025</text>
+<path d="M 644.00,64.00 C 746.00,64.00 746.00,181.61 848.00,181.61 L 848.00,348.24 C 746.00,348.24 746.00,230.63 644.00,230.63 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,230.63 C 746.00,230.63 746.00,362.24 848.00,362.24 L 848.00,408.14 C 746.00,408.14 746.00,276.53 644.00,276.53 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,276.53 C 746.00,276.53 746.00,422.14 848.00,422.14 L 848.00,436.39 C 746.00,436.39 746.00,290.78 644.00,290.78 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,71.00 C 306.00,71.00 306.00,78.00 408.00,78.00 L 408.00,306.98 C 306.00,306.98 306.00,299.98 204.00,299.98 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,290.78 C 526.00,290.78 526.00,304.78 424.00,304.78 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,304.78 C 526.00,304.78 526.00,304.78 628.00,304.78 L 628.00,357.39 C 526.00,357.39 526.00,357.39 424.00,357.39 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,357.39 C 526.00,357.39 526.00,371.39 628.00,371.39 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,313.98 C 306.00,313.98 306.00,306.98 408.00,306.98 L 408.00,540.00 C 306.00,540.00 306.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="228.98" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="313.98" width="16" height="233.02" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="226.78" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="304.78" width="16" height="52.62" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="371.39" width="16" height="182.61" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="181.61" width="16" height="166.63" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="362.24" width="16" height="45.90" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="422.14" width="16" height="14.25" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="182.49" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="195.49" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$24.1B  (49.6%)</text>
+<rect x="207.00" y="295.98" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="307.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="320.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$24.5B  (50.4%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$48.6B  (100.0%)</text>
+<rect x="647.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$23.9B  (49.1%)</text>
+<rect x="647.00" y="286.78" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="298.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="311.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.5B  (11.4%)</text>
+<text x="653.00" y="459.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="472.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$19.2B  (39.5%)</text>
+<text x="873.00" y="261.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Acquisitions</text>
+<text x="873.00" y="274.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$17.5B  (36.1%)</text>
+<text x="873.00" y="382.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Capex</text>
+<text x="873.00" y="395.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.8B  (9.9%)</text>
+<text x="873.00" y="426.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Investments/Other</text>
+<text x="873.00" y="439.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.5B  (3.1%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = $19.7B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: JNJ FY2025 10-K, Consolidated Statements of Cash Flows</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 营收按分部 / Revenue by Segment</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 185.64,322.54 L 227.51,288.45 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 185.64,322.54 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 227.51,288.45 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">JNJ</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$94.2B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="412.63" y1="298.45" x2="428.63" y2="298.45" stroke="#2563eb" stroke-width="1.4"/>
+<text x="432.63" y="296.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Innovative Medicine</text>
+<text x="432.63" y="310.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$60.4B  (64.1%)</text>
+<line x1="163.37" y1="179.95" x2="147.37" y2="179.95" stroke="#15803d" stroke-width="1.4"/>
+<text x="143.37" y="177.95" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">MedTech</text>
+<text x="143.37" y="191.95" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$33.8B  (35.9%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: JNJ FY2025 10-K, Note 17 — Segments</text>
+</svg>
