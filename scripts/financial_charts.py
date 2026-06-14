@@ -458,16 +458,23 @@ def build_balance(a):
 
 
 def build_cashflow(a):
-    """Flow-CONSERVING cash-flow Sankey. Every node's value equals the sum of its
-    inbound ribbons (and, for hubs, its outbound ribbons too) — so nothing overflows
-    the node rectangle. Structure:
-        operating(+) items → Operating Inflow → working-capital uses + CFO
-        CFO + Beginning Cash + non-operating inflows → Cash Available
-        Cash Available → investing/financing uses + Ending Cash
-    The cash identity holds by construction: Begin + CFO + ΣInflows = ΣUses + End.
-    CapEx is just one investing use — pass it inside --investing as a negative item;
-    --capex is used ONLY to print the Free-Cash-Flow figure in the footer note, never
-    as a flow node (that double-counted capex and broke the balance in the old model)."""
+    """Sign-aware **sources → total → uses** cash-flow Sankey. Works for cash
+    GENERATORS (CFO > 0) and cash BURNERS (CFO < 0) alike — the failure mode of the
+    old CFO-anchored model, which inverted a negative CFO into a fake inflow and blew
+    every percentage past 100% when financing/cash dwarfed CFO.
+
+    Each of CFO / CFI / CFF / FX is a SOURCE when its net is positive and a USE when
+    negative; Beginning Cash is always a source, Ending Cash always a use. By the cash
+    identity (End = Begin + CFO + CFI + CFF + FX), the mobilized total
+    `Begin + Σ(positive nets) = End + Σ|negative nets|` — that total is the reference
+    denominator, so every node is a sensible ≤100% share and both sides sum to 100%.
+
+    A category whose components are ALL the same sign as its net is decomposed into
+    those components on its own side (e.g. investing for a burner → CapEx + ST-investment
+    purchases + acquisitions, all uses); a mixed-sign category (operating: net loss −
+    vs add-backs +) is shown as a single net node — the reconciliation belongs in the
+    prose, not a tangled fan. --capex is footer-note-only (Free Cash Flow); pass capex
+    inside --investing as a negative item so it's a real use node."""
     u = _unit_mult(a.unit)
     op  = _parse_pairs(a.operating, n_min=2, n_max=2) if a.operating else []
     inv = _parse_pairs(a.investing, n_min=2, n_max=2) if a.investing else []
@@ -475,66 +482,55 @@ def build_cashflow(a):
     begin = (a.begin_cash or 0) * u
     fx = (a.fx or 0) * u
 
-    cfo = sum(v for _, v, _ in op) * u
-    cfi = sum(v for _, v, _ in inv) * u
-    cff = sum(v for _, v, _ in fin) * u
-    net = cfo + cfi + cff + fx
-    end = begin + net
-    ref = abs(cfo) if cfo else max(abs(net), 1.0)
+    cats = []  # (key, label, net, components[(label, val)])
+    for key, label, items in (("op", "Operating (CFO)", op),
+                              ("inv", "Investing (CFI)", inv),
+                              ("fin", "Financing (CFF)", fin)):
+        comps = [(lbl, v * u) for lbl, v, _ in items]
+        cats.append((key, label, sum(v for _, v in comps), comps))
+    if fx:
+        cats.append(("fx", "FX effect", fx, [("FX effect", fx)]))
 
+    end = begin + sum(c[2] for c in cats)
+    sources_total = begin + sum(c[2] for c in cats if c[2] > 0)
+    ref = sources_total or 1.0
+
+    # columns: 0 source-components · 1 source-cats + Beginning · 2 hub · 3 use-cats +
+    # Ending · 4 use-components
     cols = [[] for _ in range(5)]
     flows = []
+    HUB = "total"
 
-    # ── Stage A — operating(+) items → Operating Inflow → working-capital uses + CFO
-    op_pos = [(lbl, v * u) for lbl, v, _ in op if v > 0]
-    op_neg = [(lbl, -v * u) for lbl, v, _ in op if v < 0]
-    opin = sum(v for _, v in op_pos)
-    for i, (lbl, v) in enumerate(op_pos):
-        cols[0].append(Node(f"op{i}", lbl, v, "in", 0))
-        flows.append((f"op{i}", "opin", v, "in"))
-    if op_pos:
-        cols[1].append(Node("opin", "Operating Inflow", opin, "in", 1, side="top"))
-        for j, (lbl, v) in enumerate(op_neg):     # working-capital / non-cash uses
-            cols[2].append(Node(f"opu{j}", lbl, v, "cost", 2, side="top"))
-            flows.append(("opin", f"opu{j}", v, "cost"))
-        cols[2].append(Node("cfo", "Cash Flow from Operations", abs(cfo), "hub", 2, side="top"))
-        flows.append(("opin", "cfo", abs(cfo), "in"))
-    else:
-        cols[2].append(Node("cfo", "Cash Flow from Operations", abs(cfo), "hub", 2, side="top"))
-
-    # ── Stage B — CFO + Beginning Cash + non-operating inflows → Cash Available
-    avail = abs(cfo)
-    flows.append(("cfo", "avail", abs(cfo), "in"))
     if begin > 0:
-        cols[2].append(Node("begin", "Beginning Cash", begin, "in", 2, side="top"))
-        flows.append(("begin", "avail", begin, "in")); avail += begin
-    inv_in  = [(lbl, v * u) for lbl, v, _ in inv if v > 0]
-    inv_use = [(lbl, -v * u) for lbl, v, _ in inv if v < 0]
-    fin_in  = [(lbl, v * u) for lbl, v, _ in fin if v > 0]
-    fin_use = [(lbl, -v * u) for lbl, v, _ in fin if v < 0]
-    for i, (lbl, v) in enumerate(inv_in):
-        cols[2].append(Node(f"ivin{i}", lbl, v, "in", 2, side="top"))
-        flows.append((f"ivin{i}", "avail", v, "in")); avail += v
-    for i, (lbl, v) in enumerate(fin_in):
-        cols[2].append(Node(f"fnin{i}", lbl, v, "in", 2, side="top"))
-        flows.append((f"fnin{i}", "avail", v, "in")); avail += v
-    if fx > 0:
-        cols[2].append(Node("fxin", "FX effect", fx, "in", 2, side="top"))
-        flows.append(("fxin", "avail", fx, "in")); avail += fx
-    cols[3].append(Node("avail", "Cash Available", avail, "hub", 3, side="top"))
+        cols[1].append(Node("begin", "Beginning Cash", begin, "in", 1))
+        flows.append(("begin", HUB, begin, "in"))
 
-    # ── Stage C — Cash Available → investing/financing uses + Ending Cash
-    for i, (lbl, v) in enumerate(inv_use):
-        cols[4].append(Node(f"ivu{i}", lbl, v, "cost", 4, side="top"))
-        flows.append(("avail", f"ivu{i}", v, "cost"))
-    for i, (lbl, v) in enumerate(fin_use):
-        cols[4].append(Node(f"fnu{i}", lbl, v, "cost", 4, side="top"))
-        flows.append(("avail", f"fnu{i}", v, "cost"))
-    if fx < 0:
-        cols[4].append(Node("fxu", "FX effect", -fx, "cost", 4, side="top"))
-        flows.append(("avail", "fxu", -fx, "cost"))
-    cols[4].append(Node("end", "Ending Cash", abs(end), "hub", 4, side="right"))
-    flows.append(("avail", "end", abs(end), "profit"))
+    for key, label, net, comps in cats:
+        if net == 0:
+            continue
+        nid = "cat_" + key
+        val = abs(net)
+        same_sign = len(comps) > 1 and all((v > 0) == (net > 0) for _, v in comps)
+        if net > 0:  # SOURCE
+            cols[1].append(Node(nid, label, val, "in", 1, side="top"))
+            flows.append((nid, HUB, val, "in"))
+            if same_sign:
+                for i, (lbl, v) in enumerate(comps):
+                    cid = f"{nid}_{i}"
+                    cols[0].append(Node(cid, lbl, abs(v), "in", 0))
+                    flows.append((cid, nid, abs(v), "in"))
+        else:        # USE
+            cols[3].append(Node(nid, label, val, "cost", 3, side="top"))
+            flows.append((HUB, nid, val, "cost"))
+            if same_sign:
+                for i, (lbl, v) in enumerate(comps):
+                    cid = f"{nid}_{i}"
+                    cols[4].append(Node(cid, lbl, abs(v), "cost", 4, side="right"))
+                    flows.append((nid, cid, abs(v), "cost"))
+
+    cols[2].append(Node(HUB, "Total Cash Mobilized", ref, "hub", 2, side="top"))
+    cols[3].append(Node("end", "Ending Cash", abs(end), "profit", 3, side="right"))
+    flows.append((HUB, "end", abs(end), "profit"))
 
     cols = [c for c in cols if c]
     return cols, flows, ref

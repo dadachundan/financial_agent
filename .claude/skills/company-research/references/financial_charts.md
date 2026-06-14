@@ -122,8 +122,22 @@ liabilities, equity) are derived; percentages are of total assets.
 ### `cashflow` — cash-flow Sankey
 Flags (all repeatable, **signed** values — positive = inflow, negative = use):
 `--operating "Label:value"`, `--investing "Label:value"`, `--financing "Label:value"`;
-plus `--capex <positive>` (splits CFO into Free Cash Flow + CapEx), `--begin-cash`,
-`--fx` (effect of FX on cash). CFO/CFI/CFF, net change, ending cash, and FCF are derived.
+plus `--capex <positive>` (footer Free-Cash-Flow note only — also pass capex inside
+`--investing` as a negative item so it's a real use node), `--begin-cash`, `--fx`.
+
+The chart is a **sign-aware "sources → total → uses" Sankey** that works for cash
+**generators** (CFO > 0) *and* cash **burners** (CFO < 0): each of CFO / CFI / CFF is a
+**source** (blue) when its net is positive and a **use** (red) when negative; Beginning
+Cash is always a source, Ending Cash always the green retained node. Percentages are of
+the **mobilized total** (Beginning + Σ positive nets = Ending + Σ |negative nets|), so
+every node is a sensible ≤100% share and both sides sum to 100% — never the old
+CFO-anchored model that blew past 100% and inverted a negative CFO into a fake inflow.
+A category whose components are all the same sign as its net (e.g. a burner's
+investing → ST-investment purchases + acquisitions + capex, all uses) is decomposed on
+its own side; a mixed-sign category (operating: net loss − vs add-backs +) shows as a
+single net node — put the reconciliation in prose, not a tangled fan. **For a
+pre-revenue / cash-burning company this is the most important financial chart** (the
+income Sankey / donut / DuPont are usually N/A — no revenue).
 
 ```bash
 /opt/anaconda3/bin/python3 scripts/financial_charts.py cashflow \
