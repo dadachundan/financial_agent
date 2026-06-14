@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Alphabet FY2025 利润表 Sankey (US$M)</text>
+<path d="M 204.00,63.71 C 258.00,63.71 258.00,85.00 312.00,85.00 L 312.00,383.47 C 258.00,383.47 258.00,362.18 204.00,362.18 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,160.31 560.00,160.31 L 560.00,291.00 C 506.00,291.00 506.00,208.69 452.00,208.69 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,208.69 C 506.00,208.69 506.00,305.00 560.00,305.00 L 560.00,417.69 C 506.00,417.69 506.00,321.38 452.00,321.38 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,321.38 C 382.00,321.38 382.00,328.38 328.00,328.38 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,328.38 C 382.00,328.38 382.00,335.38 436.00,335.38 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,138.22 C 754.00,138.22 754.00,201.57 808.00,201.57 L 808.00,335.43 C 754.00,335.43 754.00,272.09 700.00,272.09 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,272.09 C 754.00,272.09 754.00,349.43 808.00,349.43 L 808.00,376.43 C 754.00,376.43 754.00,299.09 700.00,299.09 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,160.31 C 630.00,160.31 630.00,138.22 684.00,138.22 L 684.00,268.92 C 630.00,268.92 630.00,291.00 576.00,291.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,305.00 C 630.00,305.00 630.00,313.09 684.00,313.09 L 684.00,363.91 C 630.00,363.91 630.00,355.82 576.00,355.82 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,355.82 C 630.00,355.82 630.00,377.91 684.00,377.91 L 684.00,439.78 C 630.00,439.78 630.00,417.69 576.00,417.69 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,376.18 C 258.00,376.18 258.00,383.47 312.00,383.47 L 312.00,432.11 C 258.00,432.11 258.00,424.83 204.00,424.83 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,438.83 C 258.00,438.83 258.00,432.11 312.00,432.11 L 312.00,491.57 C 258.00,491.57 258.00,498.29 204.00,498.29 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,512.29 C 258.00,512.29 258.00,491.57 312.00,491.57 L 312.00,493.57 C 258.00,493.57 258.00,514.29 204.00,514.29 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="63.71" width="16" height="298.47" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="376.18" width="16" height="48.65" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="438.83" width="16" height="59.46" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="512.29" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="243.38" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="335.38" width="16" height="164.62" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="160.31" width="16" height="130.69" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="305.00" width="16" height="112.69" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="138.22" width="16" height="160.86" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="313.09" width="16" height="50.82" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="377.91" width="16" height="61.87" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="201.57" width="16" height="133.86" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="349.43" width="16" height="27.00" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="212.95" x2="182.00" y2="186.66" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="189.66" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Google advertising 广告</text>
+<text x="179.00" y="202.66" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$294.7B  (73.2%)</text>
+<line x1="188.00" y1="400.51" x2="182.00" y2="374.22" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="377.22" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Subscriptions/platforms/devices 订阅与设备</text>
+<text x="179.00" y="390.22" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$48.0B  (11.9%)</text>
+<line x1="188.00" y1="468.56" x2="182.00" y2="442.27" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="445.27" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Google Cloud 云</text>
+<text x="179.00" y="458.27" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$58.7B  (14.6%)</text>
+<line x1="188.00" y1="513.29" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other Bets &amp; hedging 其他</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (0.32%)</text>
+<rect x="331.00" y="67.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$402.8B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$240.3B  (59.7%)</text>
+<rect x="455.00" y="317.38" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="329.38" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="342.38" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$162.5B  (40.3%)</text>
+<rect x="579.00" y="142.31" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="154.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="167.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$129.0B  (32.0%)</text>
+<rect x="579.00" y="287.00" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="299.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="312.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$111.3B  (27.6%)</text>
+<rect x="703.00" y="120.22" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="132.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="145.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$158.8B  (39.4%)</text>
+<rect x="703.00" y="295.09" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="307.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="320.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$50.2B  (12.5%)</text>
+<rect x="703.00" y="359.91" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="371.91" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="384.91" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$61.1B  (15.2%)</text>
+<text x="833.00" y="265.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="278.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$132.2B  (32.8%)</text>
+<text x="833.00" y="359.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="372.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$26.7B  (6.6%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Alphabet FY2025 10-K — Consolidated Statements of Income &amp; Segment note (filed 2026-02-05)</text>
+</svg>

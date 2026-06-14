@@ -1,508 +1,498 @@
 # Alphabet Inc. (NASDAQ:GOOG / GOOGL) — 公司研究报告
 
-**截至日期: 2026-05-20**
+**截至日期: 2026-06-14**
 **上市地: 纳斯达克全球精选市场, 代码 GOOG (C 类) / GOOGL (A 类)**
-**注册地: 美国特拉华州**
-**总部: 美国加利福尼亚州山景城**
+**注册地: 美国特拉华州 · 总部: 美国加利福尼亚州山景城**
 **报告语言: 简体中文 (英文版同时存在于本目录)**
-**分析师备注:** 首次覆盖。所有数据均逐句标注来源; 主要一手来源为 Alphabet 向美国证券交易委员会 (SEC) 提交的 FY2025 10-K 年报、Q1 2026 8-K 业绩公告及 2026 DEF 14A 委托书, 并辅以近期第三方数据 (均已逐句引用)。
+**分析师备注:** 覆盖刷新 (refresh)。所有数据均逐句标注来源; 主要一手来源为 Alphabet 向美国证券交易委员会 (SEC) 提交的 FY2025 10-K 年报、Q1 2026 10-Q 季报、Q1 2026 8-K 业绩公告及 2026 年 6 月一系列 8-K / 424B5 文件; 卖方观点 (sell-side) 取自本地机构研究库 `db/zsxq.db`, 一律标注 `*分析师观点：*` 且不与一手文件引用混用。
 
-> **业绩更新——Q1 2026 业绩重置市场预期 (2026-04-29):** Alphabet Q1 2026 营业收入同比增长 **22% 至 1,099 亿美元**——已连续 11 个季度实现两位数增长——谷歌云 (Google Cloud) 加速至 **同比 +63%, 200 亿美元规模**, 云业务积压订单 (backlog) **环比近乎翻倍至 4,600+ 亿美元**。营业利润率扩张 2 个百分点至 **36.1%**, EPS 同比上升 82% 至 5.11 美元。管理层未给出 2026 全年营收/EPS 指引, 但重申 FY2026 资本开支 (capex) 区间为 **1,750–1,850 亿美元** (相较 FY2025 的 914 亿美元), 并将股息上调 5% 至每股每季度 0.22 美元。来源: [Alphabet Q1 2026 业绩公告 (8-K 附件 99.1, 2026-04-29)](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm)。
+---
+
+> *分析师观点：* **评级: Buy (买入) · 12 个月目标价 US$425 (较 2026-06-12 收盘 US$358.16 上行 +19%) · 估值方法: 2027E core-EPS ~US$15.7 × 27× P/E (剔除证券非经常性损益)**
+> 市值 **US$4.37 万亿** · 52 周区间 **US$163.33–US$404.47** · TTM P/E 27.3× / 前瞻 P/E 24.7× · NASDAQ:GOOG (C 类) / GOOGL (A 类)
+>
+> **核心论点 (thesis pillars)** —— (1) **全栈 AI (full-stack AI)** 是结构性差异化: 自研 TPU + Gemini 模型 + 全球十亿级用户分发渠道, 让 Alphabet 在每 Token 推理成本上领先纯采购 GPU 的对手; (2) **Google Cloud 第三条增长曲线兑现**——Q1 2026 营收 +63%、分部经营利润率升至约 33%、积压订单 (backlog) 近翻倍至 4,620 亿美元; (3) **Search 仍在以 AI 扩大可变现市场**——AI Overviews 月活超 25 亿, AI 模式查询意图信号更强、转化更高; (4) 估值仍低于 Mag-7 中位数, P/E < 50×、P/S < 15×, 盈利仍在加速。**最该盯紧的两个变量: (a) TPU 硬件按总额法确认收入对云利润率的稀释; (b) FY2026 capex 1,800–1,900 亿美元的 ROI 回收节奏。**
+
+> **业绩更新——Q1 2026 业绩与新一轮融资动作 (2026-04-29 / 2026-06):** Alphabet Q1 2026 营业收入同比增长 **22% 至 1,098.96 亿美元**——连续 11 个季度两位数增长——其中 Google Cloud 加速至 **同比 +63%、200.28 亿美元**, 云业务积压订单 (remaining performance obligation) **环比近乎翻倍至 4,620 亿美元以上**。合并营业利润率扩张 2 个百分点至 **36.1%**, 摊薄 EPS 同比上升 82% 至 **5.11 美元** (其中净利润受 **377 亿美元非交易性股权证券未实现收益**这一非经常性项目大幅推高)。管理层将季度股息上调 5% 至每股 **0.22 美元**, 付费订阅数达 **3.5 亿**。来源: [Alphabet Q1 2026 业绩公告 (8-K 附件 99.1, 2026-04-29)](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm)。**两项重大融资 / 资本结构动作**值得注意: 2026-06-01 Alphabet 与 Goldman Sachs / J.P. Morgan / Morgan Stanley 设立一项 **400 亿美元的市价发行 (at-the-market, ATM) 股权计划**, 并在 2026 年 6 月初连续完成多笔 424B5 债券发行——明显是为 AI capex 爬坡预先融资。来源: [Alphabet 8-K Item 1.01 (2026-06-04)](https://www.sec.gov/Archives/edgar/data/1652044/000119312526257724/d83560d8k.htm)。
 
 ---
 
 ## 目录
-1. 公司概览
-2. 公司历史
+1. 公司概览 (含 1A 估值与目标价 · 1B GF Score)
+2. 估值与目标价细化 / 公司历史
 3. 管理团队
 4. 产品与服务
 5. 客户与上市策略
 6. 行业概览
 7. 竞争格局
 8. 市场机会 (TAM)
-9. 风险评估
-10. 参考资料
+9. 风险评估 (含 9.5 关键分歧与催化剂)
+10. 投资视角评分 (Investor Lenses)
+11. 参考资料
 
 ---
 
 ## 1. 公司概览
 
-Alphabet Inc. 是 **谷歌 (Google)** 及一组 "Other Bets (其他赌注)" 业务的控股公司, 总部位于美国加利福尼亚州山景城, 注册地为特拉华州 (SEC 备案号 001-37580) ([Alphabet 2025 10-K, 封面](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。公司运营着全球最具影响力的消费互联网业务矩阵——Google Search (搜索引擎)、YouTube、Android、Chrome、Gmail、Google Maps (地图) 和 Google Play——日均触达数十亿用户; 同时还运营着全球第三大云基础设施平台 Google Cloud。通过 DeepMind 和 Google Research, Alphabet 还构建了 **Gemini** 系列前沿大语言模型 (LLM, Large Language Model), 这些模型正越来越多地中介起公司各条业务线的用户体验。Alphabet 截至 2025 年底员工数为 **190,820 人**, 截至 Q1 2026 增至 194,668 人 ([Alphabet 2025 10-K, "Human Capital"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
+Alphabet Inc. 是 **谷歌 (Google)** 及一组 "Other Bets (其他赌注)" 业务的控股公司, 总部位于美国加利福尼亚州山景城, 注册地为特拉华州 (SEC 备案号 001-37580) ([Alphabet 2025 10-K, 封面](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。公司运营着全球最具影响力的消费互联网业务矩阵——Google Search (搜索)、YouTube、Android、Chrome、Gmail、Google Maps 与 Google Play——日均触达数十亿用户; 同时运营着全球第三大云基础设施平台 Google Cloud。通过 DeepMind 与 Google Research, Alphabet 构建了 **Gemini** 系列前沿大语言模型 (LLM), 这些模型正越来越深地中介起公司各条业务线的用户体验。Alphabet 员工数截至 2025 年底为 **190,820 人**, 截至 Q1 2026 增至 **194,668 人** ([Alphabet 2025 10-K, "Human Capital"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
 
-**Alphabet 如何赚钱。** 公司财报披露两个谷歌板块加一个 "Other Bets" 板块。**Google Services (谷歌服务)** (FY2025 营业收入 **3,427 亿美元**, 占整体 85%) 通过 Google Search、YouTube 与 Google Network 网络 (AdSense / AdMob / Ad Manager) 上的广告, 以及订阅、硬件与 Play 收入 (即 `Google subscriptions, platforms, and devices`) 变现。**Google Cloud** (FY2025 **587 亿美元**, 占 15%) 销售按用量计费的 GCP 基础设施 / AI / 数据服务以及 Google Workspace 席位订阅。**Other Bets** (15 亿美元, 占 0.4%) 包含 Waymo (无人驾驶)、Verily、X、Wing、GFiber 以及若干长周期、多数尚未盈利的风险投资业务, 另加 Alphabet 层面的共享 AI 研发成本项 ([Alphabet 2025 10-K, 注 15 "Information about Segments"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
+**Alphabet 如何赚钱。** 公司财报披露两个谷歌板块加一个 "Other Bets" 板块。**Google Services (谷歌服务)** (FY2025 营业收入 **3,427.21 亿美元**, 占整体 85%) 通过 Google Search、YouTube 与 Google Network (AdSense / AdMob / Ad Manager) 上的广告, 以及订阅、硬件与 Play 收入 (`Google subscriptions, platforms, and devices`, FY2025 480.30 亿美元) 变现。**Google Cloud** (FY2025 **587.05 亿美元**, 占 15%) 销售按用量计费的 GCP 基础设施 / AI / 数据服务以及 Google Workspace 席位订阅。**Other Bets** (15.37 亿美元, 占 0.4%) 包含 Waymo (无人驾驶)、Verily、X、Wing、GFiber 等长周期、多数尚未盈利的风险投资业务 ([Alphabet 2025 10-K, 注 15 "Information about Segments"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
 
-**规模指标。** FY2025 合并营业收入为 **4,028.36 亿美元**, 较 FY2024 的 3,500.18 亿美元同比增长 **15%**; 营业利润 **1,290.39 亿美元** (营业利润率 32.0%) 同比增长 15%, 净利润 **1,321.70 亿美元** (净利率 32.8%) 同比大涨 **32%**, 摊薄后每股收益 (diluted EPS) 为 **10.81 美元** vs. 上年的 8.04 美元 ([Alphabet 2025 10-K, "Executive Overview"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。美国本土贡献 **48%** 的收入, EMEA (欧洲/中东/非洲) 占 29%, APAC (亚太) 占 17%, 其他美洲占 6%。经营活动现金流为 **1,647 亿美元**, FY2025 末持有现金、现金等价物与短期可交易证券共计 **1,268 亿美元**, 长期负债 **465 亿美元** (这是在新发行 646 亿美元债券后的余额, 主要用于预先融资 AI 资本开支爬坡) ([Alphabet 2025 10-K, "Liquidity"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
+**规模指标。** FY2025 合并营业收入为 **4,028.36 亿美元**, 较 FY2024 的 3,500.18 亿美元同比增长 **15%**; 营业利润 **1,290.39 亿美元** (营业利润率 32.0%) 同比增长 15%, 净利润 **1,321.70 亿美元** (净利率 32.8%) 同比增长 **32%**, 摊薄后每股收益 (diluted EPS) 为 **10.81 美元** vs. 上年的 8.04 美元 ([Alphabet 2025 10-K, "Consolidated Statements of Income"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。需要指出, FY2025 净利润增速 (+32%) 显著快于营业利润增速 (+15%), 主因是 `Other income (expense), net` 从 74.25 亿美元跳升至 **297.87 亿美元**, 主要来自非交易性股权证券的未实现收益 (un-realized gains)——这是一个**非经营性、波动极大的项目**, 不应外推为持续盈利能力 ([Alphabet 2025 10-K, "Consolidated Statements of Income"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。美国本土贡献 **48%** 收入, EMEA (欧洲/中东/非洲) 占 29%, APAC (亚太) 占 17%, 其他美洲占 6% ([Alphabet 2025 10-K, "Revenue by Geographic Location"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。FY2025 经营活动现金流为 **1,647.13 亿美元**, 年末持有现金、现金等价物与可交易证券共 **1,268.43 亿美元**, 长期债务 **465.47 亿美元** ([Alphabet 2025 10-K, "Consolidated Balance Sheets" 与 "Consolidated Statements of Cash Flows"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
 
-![Alphabet 营业收入与营业利润率趋势](charts/goog_revenue_margin.png)
-*来源: [Alphabet 2025 10-K, "Consolidated Statements of Income"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm) (FY2021–FY2025 营业收入与营业利润项)。*
+下图为 FY2025 利润表的 Sankey 分解——左侧为四大收入来源, 中部经 COGS、研发 (R&D)、销售管理 (S&M+G&A) 逐级扣减至营业利润, 再加上非经常性其他收益形成净利润:
 
-**2026 年最具决定性意义的宏观信号是资本开支跃升。** 物业与设备购置支出 (capex) 从 **2023 年的 323 亿美元 → 2024 年的 525 亿美元 → 2025 年的 914 亿美元**, 且管理层 FY2026 资本开支指引为 **1,750–1,850 亿美元**——其中约 60% 为服务器, 40% 为数据中心 / 网络——以满足 Google Cloud 需求并支撑 Gemini 训练与推理 (inference) 规模化 ([Alphabet 2025 10-K, "Capital Expenditures"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [CNBC, 2026-02-04 "Alphabet resets the bar for AI infrastructure spending"](https://www.cnbc.com/2026/02/04/alphabet-resets-the-bar-for-ai-infrastructure-spending.html))。该数字之所以重要, 是因为它远远超过 Alphabet 历史上任何一轮资本周期, 且回收预期建立在 2025 年末 **2,428 亿美元** 的云业务积压订单及 Q1 2026 末 **超过 4,600 亿美元** 的基础之上 ([Alphabet 2025 10-K, "Revenue Backlog"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
+![Alphabet FY2025 利润表 Sankey](charts/goog_income_sankey.svg)
+*来源: [Alphabet 2025 10-K, "Consolidated Statements of Income" 与 "Revenues by Type"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)。*
 
-### 估值快照
+下图为 FY2025 营收的分部 / 子产品结构 (donut), 可见 Google Search & other 仍占绝对大头, 而 Google Cloud 是增长最快的切片:
 
-| 指标 (TTM 除注明外) | GOOG (2026-05-20) | 来源 |
+![Alphabet FY2025 营收结构](charts/goog_segment_donut.svg)
+*来源: [Alphabet 2025 10-K, "Revenues — Revenue by Type"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)。*
+
+下图为 FY2021–FY2025 分部营收的历史堆叠柱状图。Google Cloud 五年营收从 192.06 亿美元增至 587.05 亿美元 (约 3 倍), 是结构性的增长引擎:
+
+![Alphabet 分部营收历史 FY2021–FY2025](charts/goog_revbars.svg)
+*来源: [Alphabet FY2021–FY2025 10-K, "Information about Segments"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm) (各年分部营收逐一取数; FY2021–2023 经 FY2023 10-K 交叉核对)。*
+
+**2026 年最具决定性意义的信号仍是资本开支跃升。** 物业与设备购置支出 (capex) 从 **2023 年的 322.51 亿美元 → 2024 年的 525.35 亿美元 → 2025 年的 914.47 亿美元** ([Alphabet 2025 10-K, "Consolidated Statements of Cash Flows" — Purchases of property and equipment](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。*分析师观点：* 管理层在 Q1 2026 业绩会上给出的 FY2026 capex 指引区间为 **1,800–1,900 亿美元** (较此前 1,750–1,850 亿区间上调约 50 亿美元, 主要用于互联 / interconnect 投资), 约 60% 为服务器、40% 为数据中心与网络; 摩根大通进一步预测 FY2027 capex 将再增 54% 至约 2,930 亿美元 ([J.P. Morgan — Alphabet (GOOG.US) "Fully Stacked", 2026-04-30, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415515522155418/J.P.%20Morgan-Alphabet%EF%BC%88GOOG.US%EF%BC%89Fully%20Stacked-260430.pdf))。该数字之所以重要, 是因为它远超 Alphabet 历史上任何一轮资本周期, 而回收预期建立在 Q1 2026 末 **4,620 亿美元** 的云业务积压订单之上 ([Alphabet Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
+
+### 1A. 估值与目标价 (Valuation & Price Target)
+
+| 指标 (TTM 除注明外) | GOOG (2026-06-12) | 来源 |
 |---|---|---|
-| 股价 | **383.83 美元** (C 类) | [Yahoo Finance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
-| 市值 | **4.65 万亿美元** | [Yahoo Finance, GOOG 核心统计](https://finance.yahoo.com/quote/GOOG/key-statistics) |
-| TTM 市盈率 (P/E) | **29.2 倍** | [Yahoo Finance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
-| 前瞻 P/E (FY26E) | **26.6 倍** | [Yahoo Finance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
-| TTM 市销率 (P/S) | **11.0 倍** | [Yahoo Finance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
-| 市净率 (P/B) | 9.7 倍 | [Yahoo Finance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
-| EV / EBITDA | 28.7 倍 | [Yahoo Finance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
-| 营业利润率 | 36.1% | [Yahoo Finance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
-| 净资产收益率 (ROE) | 38.9% | [Yahoo Finance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
-| 三年期 TTM P/E 均值 | ~23 倍 | [MacroTrends, GOOGL P/E 历史](https://www.macrotrends.net/stocks/charts/GOOGL/alphabet/pe-ratio) |
+| 股价 (C 类) | **US$358.16** | [Yahoo Finance / yfinance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
+| 市值 | **US$4.37 万亿** | [Yahoo Finance, GOOG 核心统计](https://finance.yahoo.com/quote/GOOG/key-statistics) |
+| 52 周区间 | US$163.33 – US$404.47 | [yfinance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
+| TTM 市盈率 (P/E) | **27.3×** | [yfinance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
+| 前瞻 P/E (NTM) | **24.7×** | [yfinance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
+| TTM 市销率 (P/S) | **10.3×** | [yfinance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
+| 市净率 (P/B) | 9.1× | [yfinance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
+| EV / EBITDA | 26.7× | [yfinance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
+| ROE | 38.9% | [yfinance, GOOG](https://finance.yahoo.com/quote/GOOG/) |
+| 三年期 TTM P/E 均值 | ~24× | [MacroTrends, GOOGL P/E 历史](https://www.macrotrends.net/stocks/charts/GOOGL/alphabet/pe-ratio) |
 
-**同业可比 (Mag-7, TTM 基础, 2026-05-20 取自 yfinance / Yahoo Finance):**
+**前瞻估值矩阵 (forward valuation matrix) —— *分析师观点：***
 
-| 代码 | TTM P/E | TTM P/S | 营业利润率 |
+| 倍数 | FY2025A | FY2026E | FY2027E |
 |---|---|---|---|
-| **GOOG** | **29.2 倍** | **11.0 倍** | 36.1% |
-| META | 22.1 倍 | 7.2 倍 | 40.6% |
-| MSFT | 25.0 倍 | 9.8 倍 | 46.3% |
-| AMZN | 32.2 倍 | 3.8 倍 | 13.1% |
-| AAPL | 36.6 倍 | 9.8 倍 | 32.3% |
-| NVDA | 45.5 倍 | 25.0 倍 | 65.0% |
+| P/E (GAAP, core) | ~27.3× | ~23× | ~19× |
+| EV/EBITDA | 26.7× | ~22× | ~18× |
+| P/S | 10.3× | ~8.7× | ~7.3× |
 
-*来源: [Yahoo Finance 各同业核心统计页, 2026-05-20](https://finance.yahoo.com/quote/GOOG/key-statistics) (同业代码逐一取数)。*
+*(FY2026E / FY2027E 列为本报告前瞻测算, 标注 `*分析师观点：*`; FY2025A 列来自 [yfinance](https://finance.yahoo.com/quote/GOOG/key-statistics) 与 10-K。倍数随 EPS 增长而压缩, 单看 TTM 数字会高估贵贱程度。)*
 
-![Mag-7 同业估值快照](charts/goog_peer_valuation.png)
-*来源: Yahoo Finance, [GOOG](https://finance.yahoo.com/quote/GOOG/)、[META](https://finance.yahoo.com/quote/META/)、[MSFT](https://finance.yahoo.com/quote/MSFT/)、[AMZN](https://finance.yahoo.com/quote/AMZN/)、[AAPL](https://finance.yahoo.com/quote/AAPL/)、[NVDA](https://finance.yahoo.com/quote/NVDA/) (TTM 倍数 2026-05-20 取数)。*
+**相对表现 (relative performance, 截至 2026-06-12):** GOOG 过去 **12 个月上涨约 +104%** (从 2025-06-13 的 175.38 美元至 358.16 美元), 过去 **6 个月 +15.9%**, 股价位于 50 日均线 (US$359) 附近、200 日均线 (US$308) 之上 ([yfinance 历史价格, GOOG](https://finance.yahoo.com/quote/GOOG/history))。同期标普 500 指数涨幅显著低于此, GOOG 是 Mag-7 中相对表现领先的一只——这与 AI 叙事从"被颠覆者"向"全栈受益者"的预期反转一致。
 
-*分析师观点:* 按 ~29 倍 TTM 与 ~27 倍前瞻计, GOOG 当前估值 **高于自身 ~23 倍的三年均值** ([MacroTrends, GOOGL P/E 历史](https://www.macrotrends.net/stocks/charts/GOOGL/alphabet/pe-ratio)), 但 **低于 Mag-7 同组的中位数 ~32 倍**——比 AAPL (36.6 倍) 和 AMZN (32.2 倍) 便宜, 比 NVDA (45.5 倍) 便宜得多。相较 META (22 倍) 的溢价反映了 (a) 谷歌云 63% 的增速对比 META 仅有的、广告单一的商业模式, 以及 (b) DeepMind / Gemini / Waymo 的期权价值, 这些业务尚未接近盈利能力峰值。相较 AAPL 的折价则反映了 Search 业务在 AI 颠覆下更直接的暴露。我们不将该股归入估值过度延伸区间: P/E < 50 倍、P/S < 15 倍, 且盈利仍在加速 (Q1 2026 同比 +82%)。然而, FY2026 前瞻 P/E 的扩张将高度依赖谷歌云能否维持 50%+ 的增长以及资本开支转入折旧摊销过程中营业利润率的纪律性——这些联动机制将在第 7 章与第 9 章详述。
+**同业可比 (Mag-7, TTM 基础, 2026-06-12 取自 yfinance):**
+
+| 代码 | TTM P/E | 前瞻 P/E | TTM P/S | 营业利润率 | ROE |
+|---|---|---|---|---|---|
+| **GOOG** | **27.3×** | **24.7×** | **10.3×** | 32.0% | 38.9% |
+| META | 20.6× | 15.6× | 6.7× | 40.6% | 32.9% |
+| MSFT | 23.3× | 20.2× | 9.1× | 46.3% | 34.0% |
+| AMZN | 31.6× | 24.2× | 3.5× | ~13% | 24.3% |
+| AAPL | 35.2× | 30.3× | 9.5× | ~32% | 141%* |
+| NVDA | 31.4× | 16.1× | 19.6× | ~65% | 114%* |
+
+*(\*AAPL/NVDA 的 ROE 因大额回购缩表 / 高资产周转而失真, 不可直接横比。来源: [yfinance 各同业核心统计页, 2026-06-12 逐一取数](https://finance.yahoo.com/quote/GOOG/key-statistics)。)*
+
+*分析师观点:* 按 ~27× TTM 与 ~25× 前瞻计, GOOG 当前估值 **略高于自身 ~24× 的三年均值** ([MacroTrends, GOOGL P/E 历史](https://www.macrotrends.net/stocks/charts/GOOGL/alphabet/pe-ratio)), 但 **位于 Mag-7 同组的中下游**——比 AAPL (35×)、AMZN (32×)、NVDA (31×) 便宜, 仅略高于 MSFT (23×) 与 META (21×)。相较 META 的小幅溢价反映 Google Cloud 63% 的增速与 DeepMind / Gemini / Waymo 的期权价值 (option value); 相较 AAPL / AMZN 的折价则部分反映市场对 Search 业务在生成式 AI 颠覆下的担忧。我们不将该股归入估值过度延伸区间 (P/E < 50×、P/S < 15×, 盈利仍在加速)。
+
+**目标价推导 (*分析师观点：*)。** 我们采用前瞻市盈率法。剔除非交易性证券未实现损益这一非经常性项目后, 我们估计 Alphabet **FY2027E core EPS ~US$15.7** (基于 Search 个位数中段增长、Google Cloud 30%+ 增长且分部利润率向 30% 修复、capex 折旧拖累被营业杠杆部分抵消)。给予 **27× 目标 P/E** (介于 UBS 的 26× 与 GS/JPM 的 32× 之间, 由 Alphabet 在巨大基数上仍维持双位数营收 + EPS 增长、34%+ 营业利润率所支撑), 得 **12 个月目标价 US$425, 较 2026-06-12 收盘 US$358.16 上行约 +19%**。每一项前瞻估计均为 `*分析师观点：*`, 各驱动因素的外部依据 (分部数据 + 管理层指引 + 行业测算) 在第 2、6、8 章逐句标注。
+
+**牛 / 基 / 熊三档目标价 (*分析师观点：*):**
+
+| 情景 | 12 个月目标价 | 较现价 | 关键摆动假设 |
+|---|---|---|---|
+| **牛市 (Bull)** | **US$475** | +33% | Google Cloud 维持 50%+ 增速、Vertex AI 高毛利占比快速放大、Search AI 广告 ROAS 验证、给予 30× 倍数 |
+| **基准 (Base)** | **US$425** | +19% | Cloud 30%+ 增长、利润率向 30% 修复、Search 个位数中段增长、27× 倍数 |
+| **熊市 (Bear)** | **US$310** | −13% | Apple/Siri 与生成式搜索分流 Search 份额、TPU 总额法确认稀释云利润率、AI capex ROI 不及预期、倍数压缩至 20× |
+
+**与市场一致预期的对比 (vs consensus)。** *分析师观点:* 瑞银 (UBS) 测算 Alphabet 2026E / 2027E 总营收较华尔街共识分别高约 **+7% / +16%** (主要来自 Google Cloud backlog 转化加速), 但因 TPU 硬件销售按总额法确认、毛利偏低, EPS 仅较共识高 0~1%——UBS 据此维持 Neutral、目标价 US$410 ([UBS — Alphabet (GOOGL.US) "Stacking the Backlog", 2026-06-03, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484411/UBS-Alphabet%20Inc.%20~%20Class%20A%EF%BC%88GOOGL.US%EF%BC%89Stacking%20the%20Backlog%20from%20the%20AI%20Labs%EF%BC%8C%20Meta%EF%BC%8C%20and%20Vertex-260603.pdf))。本报告 US$425 的基准目标价位于 UBS (US$410) 与多数买方机构 (GS US$450 / MS US$460 / Citi US$447 / JPM US$460) 之间, 偏向"营收强、利润率短期被稀释"这一较审慎的解读。
+
+下图为 DuPont 五步 ROE 分解, 直观显示 38.9% 的 ROE 由高净利率与适度的杠杆共同驱动:
+
+![Alphabet DuPont ROE 分解 FY2025](charts/goog_dupont.svg)
+*来源: [Alphabet 2025 10-K, "Consolidated Statements of Income" 与 "Consolidated Balance Sheets"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)。*
+
+### 1B. GF Score (GuruFocus 式) 基本面评分
+
+![Alphabet GF Score 雷达图](charts/goog_gf_score.svg)
+*分析师观点: GF Score 为本报告自有评分规则 (analyst rubric), 非 GuruFocus 官方数值; 各维度底层指标均在下方逐句标注来源。*
+
+*分析师观点:* 综合评分 **86 / 100 (81–90 区间, "良好的跑赢潜力")**, 五维拆解如下:
+
+- **财务实力 (Financial Strength) = 9 / 10。** Alphabet 持有现金 + 可交易证券 **1,268.43 亿美元**, 显著超过长期债务 **465.47 亿美元**——为净现金状态; 经营现金流 1,647 亿美元、利息覆盖倍数极高 ([Alphabet 2025 10-K, 资产负债表与现金流量表](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。未给满分的原因: FY2025 净发债约 322 亿美元 (长期债务从 108.83 亿激增至 465.47 亿), 且 2026 年 6 月又新设 400 亿美元 ATM 股权计划 + 多笔 424B5 债券, 为 capex 预先融资意味着资本结构正快速加杠杆 ([Alphabet 8-K, 2026-06-04](https://www.sec.gov/Archives/edgar/data/1652044/000119312526257724/d83560d8k.htm))。
+- **盈利能力 (Profitability) = 10 / 10。** FY2025 营业利润率 32.0%、净利率 32.8%、ROE 38.9%, ROIC 远高于加权资本成本 (WACC); 营业利润率多年维持 30% 以上 ([Alphabet 2025 10-K, 利润表](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [yfinance, GOOG](https://finance.yahoo.com/quote/GOOG/key-statistics))。这是全球少数能在四千亿美元营收基数上维持此等利润率的公司。
+- **成长性 (Growth) = 9 / 10。** FY2025 营收 +15%、摊薄 EPS +34%; Google Cloud 五年营收约 3 倍至 587 亿美元, Q1 2026 进一步加速至 +63% ([Alphabet 2025 10-K 与 Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。未给满分主因 Search 这一最大业务已进入个位数至十几个百分点的成熟增长区间。
+- **GF Value (估值, 越高越便宜) = 5 / 10。** 前瞻 P/E 24.7× 略高于自身 ~24× 三年均值, 但低于 Mag-7 中位数; 相对自身历史与同业属"合理偏贵但不极端" ([MacroTrends, GOOGL P/E 历史](https://www.macrotrends.net/stocks/charts/GOOGL/alphabet/pe-ratio); [yfinance, GOOG](https://finance.yahoo.com/quote/GOOG/key-statistics))。
+- **动量 (Momentum) = 9 / 10。** 过去 12 个月 +104%、6 个月 +15.9%, 股价位于 200 日均线之上 ([yfinance 历史价格, GOOG](https://finance.yahoo.com/quote/GOOG/history))。强劲的绝对与相对动量。
 
 ---
 
-## 2. 公司历史
+## 2. 估值与目标价细化 / 公司历史
 
-**创立。** 谷歌 (Google) 由 **Larry Page** 与 **Sergey Brin** 于 1998 年 9 月在斯坦福大学攻读博士期间共同创立, 基于他们 1996 年开始的 BackRub 研究项目, 该项目利用一种类引文式算法对网页进行排序, 该算法后来以 PageRank (网页排名) 之名获得专利 ([Stanford 大学新闻稿, "Stanford's BackRub becomes Google"](https://about.google/our-story/))。公司于 2004 年 8 月以 230 亿美元估值 IPO 上市。**2015 年 10 月**, 公司在新的母公司 **Alphabet Inc.** 之下重组——将谷歌的核心广告业务与自动驾驶汽车、生命科学、互联网气球等投机性项目分离, 以便为投资者提供更清晰的披露, 并使实验性业务拥有独立的领导团队 ([Larry Page, "G is for Google" 致股东信, 2015](https://abc.xyz/investor/founders-letters/2015/index.html))。
+### 2.1 前瞻财务模型 (*分析师观点：*)
+
+下表为本报告对 Alphabet 未来三年的分部模型 (每一格的前瞻数字均为 `*分析师观点：*`; 驱动假设的外部依据逐句标注):
+
+| 指标 (US$bn 除注明) | FY2025A | FY2026E | FY2027E | FY2028E |
+|---|---|---|---|---|
+| Google Services 营收 | 342.7 | ~378 | ~410 | ~440 |
+| Google Cloud 营收 | 58.7 | ~85 | ~115 | ~150 |
+| Other Bets 营收 | 1.5 | ~1.8 | ~2.2 | ~3.0 |
+| **合并营收** | **402.8** | **~465** | **~527** | **~593** |
+| 合并营收 YoY | +15% | +15% | +13% | +13% |
+| 营业利润率 | 32.0% | ~32% | ~33% | ~34% |
+| core EPS (剔除证券损益) | ~11.0 | ~13.5 | ~15.7 | ~18.0 |
+
+*依据:* FY2025A 来自 [Alphabet 2025 10-K, 分部注](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); Google Cloud 增长路径锚定 Q1 2026 +63% 的实际增速与 4,620 亿美元 backlog (管理层称其中 50%+ 将在未来 24 个月内确认收入) ([Alphabet Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm); [Alphabet Q1 2026 10-Q, "Revenues — Narrative" backlog $462.3B](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm)); 行业增长锚定第 8 章 TAM。*分析师观点:* 瑞银对 GCP 的测算更激进——因将 TPU 硬件收入确认时点前移, 其 2026E / 2027E GCP 营收为 US$126.1bn / US$232.0bn ([UBS — "Stacking the Backlog", 2026-06-03, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484411/UBS-Alphabet%20Inc.%20~%20Class%20A%EF%BC%88GOOGL.US%EF%BC%89Stacking%20the%20Backlog%20from%20the%20AI%20Labs%EF%BC%8C%20Meta%EF%BC%8C%20and%20Vertex-260603.pdf)); 本模型采用更保守的 GCP 路径, 因 TPU 总额法确认的口径波动较大。
+
+### 2.2 卖方观点演变 (Sell-side view evolution)
+
+Alphabet 是本地机构研究库中覆盖最密集的标的之一。下表按机构整理近期评级、目标价与核心论点 (价格目标预读取自只读的 `db/stock_price_target.db`; 每条均标 `*分析师观点：*`):
+
+**按机构的观点时间线 (GOOG / GOOGL):**
+
+| 机构 | 日期 | 评级 / 目标价 | 较报告日价上行 | 核心论点 |
+|---|---|---|---|---|
+| **Goldman Sachs** | 2026-05-21 → 22 | Buy / **US$450** | +16~18% | 全栈 Agentic AI 战略全面展示 (I/O、Marketing Live、Brandcast); TPU 自研 + 超大规模数据驱动长期领先 |
+| **Morgan Stanley** | 2026-03-26 (US$330) → 05-27 (**US$460**) | Overweight / **US$460** | 上调 | I/O 2026 "点燃智能体火炬"; Gemini 3.5 Flash API 定价低约 70%, 成本优化是核心壁垒; Waymo 加速 |
+| **J.P. Morgan** | 2026-04-23 (US$395) → 04-30 (**US$460**) | Overweight / **US$460** | +20% | "全栈布局, AI 红利释放"; 2027E GAAP EPS US$14.31 × **32× P/E**; 应享标普 500 溢价 |
+| **Citi** | 2026-05-21 | Buy / **US$447** | +15% | GML '26: 5 种 AI 嵌入式广告格式; AI 模式查询长度为传统 3 倍、转化更高; 维持买入 |
+| **Barclays** | 2026-06-04 | Overweight / **US$405** | +9% | Search 25 年来最大改版; AI 摘要抬升 CTR; 但 2H26 基数走高致增速自然回落, 易被误读为竞品冲击 |
+| **UBS** | 2026-04-23 (US$375, Neutral) → 06-03 (**US$410**, Neutral) | **Neutral** / **US$410** | +11% | 营收较共识 +7%/+16%, 但 TPU 总额法低毛利致 EPS 仅 +0~1%; **审慎** |
+| **BofA** | 2026-04-20 | Buy / **US$370** | +10% | AI Wars; Claude 等竞品月度活跃, Search 仍稳 |
+| **Deutsche Bank** | 2026-04-16 | Buy / **US$390** | +17% | 1Q26 前瞻: Search + Cloud 动能延续 |
+| **Bernstein** | 2026-04-30 | **Market-Perform** / **US$390** | +1% | 估值已反映多数利好, 相对审慎 |
+
+**机构间分歧 (机构间核心分歧)。** 卖方对 Alphabet 的分歧不在"AI 是否利好"(共识为利好), 而在**云利润率被 TPU 硬件收入稀释的程度**与**Search 份额能否守住**:
+
+| 机构 | 日期 | 评级 / 目标价 | 核心论点 | 什么证据能证明其正确 |
+|---|---|---|---|---|
+| **UBS (审慎方)** | 2026-06-03 | Neutral / US$410 | TPU 按总额法确认收入, 毛利低, GCP 分部利润率从 1Q26 的 32.9% 压缩至 2027 年约 27.3%; EPS 增量有限 | 后续季度 GCP 分部利润率随 TPU 占比上升而走低, 而 Vertex AI 高毛利占比放大滞后 |
+| **JPM / GS / MS (乐观方)** | 2026-04~05 | OW/Buy / US$450–460 | 全栈 AI 带来营业杠杆, Cloud 利润率持续提升 (1Q26 已达 32.9%); 应享标普溢价 | GCP 分部利润率逐季抬升、backlog 高转化, Search AI 广告 ROAS 验证, capex 折旧被营收增长吸收 |
+| **Barclays (Search 多方)** | 2026-06-04 | OW / US$405 | AI 摘要抬升点击率与商业检索量, Search 货币化延续十年 CTR 上行趋势 | AI Overviews / AI Mode 下商业检索占比止跌回升, 欧洲搜索下滑被逆转 |
+
+*注:* 每条目标价均已配对报告日股价 (见 `db/stock_price_target.db` 的 `report_date_price` / `upside_pct` 字段, 经 `/pt` 视图核对)。例如摩根士丹利在 5 月中旬的 US$375 目标到 5 月下旬大幅上调至 US$460, 反映其在 I/O 2026 后显著转多 ([Morgan Stanley — "Sparking the Agentic Torch", 2026-05-20, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212454158811451/Morgan%20Stanley-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Sparking%20the%20Agentic%20Torch-260520.pdf))。
+
+### 2.3 公司历史
+
+**创立。** 谷歌 (Google) 由 **Larry Page** 与 **Sergey Brin** 于 1998 年 9 月在斯坦福大学攻读博士期间共同创立, 源自他们 1996 年开始的 BackRub 研究项目——一种类引文式网页排序算法, 后以 PageRank (网页排名) 之名获专利 ([Alphabet/Google "Our Story"](https://about.google/our-story/))。公司于 2004 年 8 月 IPO 上市。**2015 年 10 月**, 公司在新母公司 **Alphabet Inc.** 之下重组——将谷歌核心广告业务与自动驾驶、生命科学等投机性项目分离, 以提供更清晰的披露并赋予实验性业务独立领导团队 ([Larry Page, "G is for Google" 致股东信, 2015](https://abc.xyz/investor/founders-letters/2015/))。
 
 ```mermaid
 timeline
-    title Alphabet——精选里程碑
-    1998 : Google 由 Larry Page 和 Sergey Brin 创立
-    2004 : IPO 上市 (A 类股每股 85 美元); 实施双重股权结构
-    2006 : 以 16.5 亿美元收购 YouTube
-    2008 : Android 开放源代码项目启动; 首款 Android 手机出货
-    2014 : 以约 5 亿美元收购 DeepMind
-    2015 : 重组为 Alphabet; Sundar Pichai 出任 Google CEO
-    2017 : Google 研究人员发表 Transformer 论文
-    2019 : Pichai 出任 Alphabet CEO; Page 与 Brin 退居二线
-    2023 : 推出 Bard (后更名为 Gemini) 应对 ChatGPT
-    2024 : 首次派发季度股息; 获 700 亿美元回购授权; Anat Ashkenazi 加盟担任 CFO
-    2025 : DOJ Search 救济裁定——无需剥离 Chrome; 实施行为性救济
-    2026 : Q1 营业收入 1,099 亿美元; 云业务积压订单 >4,600 亿美元; FY26 资本开支指引 1,750–1,850 亿美元
+    title Alphabet / Google 关键里程碑
+    1998 : 谷歌创立 (Page & Brin, 斯坦福)
+    2004 : 纳斯达克 IPO
+    2006 : 收购 YouTube (16.5 亿美元)
+    2008 : Android 与 Chrome 推出
+    2015 : 重组为 Alphabet 控股结构
+    2016 : DeepMind AlphaGo 击败李世石
+    2023 : 发布 Bard / Gemini 应对生成式 AI
+    2024 : Waymo 商业化扩张 启动派息
+    2025 : Cloud 加速 capex 跃升至 914 亿美元 Gemini 全栈化
+    2026 : 收购 Wiz (295 亿美元) 设立 400 亿美元 ATM capex 指引 1800-1900 亿美元
 ```
-*里程碑来源: [Alphabet "Our History" 页面](https://about.google/our-story/); [2026 DEF 14A, "Founder" 董事简介](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm); [Reuters, "Google reorganises into Alphabet", 2015-08-10](https://www.reuters.com/article/idUSKCN0QF1IA20150810/); [NPR, "In a major antitrust ruling, a judge lets Google keep Chrome", 2025-09-02](https://www.npr.org/2025/09/02/nx-s1-5478625/google-chrome-doj-antitrust-ruling); [Alphabet Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm)。*
 
-**三大战略性转折定义了现代 Alphabet。**
-
-第一, **移动转型 (2008–2014)。** Android (2005 年收购, 2008 年发布) 与 Chrome (2008 年) 在智能手机取代 PC 时捍卫了谷歌的分发渠道。Android 是全球安装量最大的操作系统, 而在 Android 上对 Google Search / Chrome / Play 的捆绑既支撑了用户漏斗, 又成为近期 DOJ 反垄断案核心救济措施的关注点 ([Alphabet 2025 10-K, 第 1 项 "Business"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [NPR, 2025-09-02](https://www.npr.org/2025/09/02/nx-s1-5478625/google-chrome-doj-antitrust-ruling))。
-
-第二, **云 / 企业转型 (2018 年至今)。** 2018 年末从甲骨文 (Oracle) 聘请 Thomas Kurian 出任谷歌云 CEO 是一个明确信号: 在企业市场上, 公司从研究主导转向销售主导。谷歌云营业收入从 2020 年的 130 亿美元增长至 **2025 年的 587 亿美元**, 并于 2023 年转为运营层面盈利——2025 年营业利润达到 **139 亿美元 (营业利润率 23.7%)** ([Alphabet 2025 10-K, 注 15](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
-
-第三, **AI 再造工程 (2023 年至今)。** 在 OpenAI 于 2022 年底发布 ChatGPT 之后, CEO Sundar Pichai 宣布 Alphabet 为 "AI 优先公司", 并合并了 DeepMind、Google Research 与 Brain 团队。Gemini 1.0 于 2023 年 12 月发布; Gemini 3 系列现已成为 Gemini 应用 (consumer Gemini app) 中默认的消费级模型, Pro 版瞄准 2026 年 6 月发布 ([Google Gemini 发布说明](https://gemini.google/release-notes/))。Pichai 称 2026 开年 "出色 (terrific)", 并引用 Gemini API 一手吞吐量已达 "每分钟 160 亿 token" (环比增长 60%) 作为证据, 表明这一重塑正在产出真实的产品速度 ([Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
-
-**关键并购:** YouTube (16.5 亿美元, 2006)、DoubleClick (31 亿美元, 2008)、Motorola Mobility (2012 年以 125 亿美元收购, 2014 年除专利外剥离)、Nest (32 亿美元, 2014)、DeepMind (约 5 亿美元, 2014)、Mandiant (54 亿美元, 2022)、Wiz (公告 320 亿美元, 史上最大网络安全交易, 计划于 2026 年内完成交割) ([Reuters, "Google to buy Wiz for $32 billion", 2025-03-18](https://www.reuters.com/technology/google-buy-cyber-startup-wiz-32-billion-2025-03-18/))。2025 年底商誉为 **334 亿美元**, 2025 年并购净现金支出为 **22 亿美元** ([Alphabet 2025 10-K, "Consolidated Statements of Cash Flows"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
-
-**近期重要动态 (过去 24 个月):** 2024 年 4 月开始派发现金股息 (每股每季度 0.20 美元, 2025 年提高到 0.21 美元, 2026 年 4 月再提高到 0.22 美元); 2025 年 4 月新增 700 亿美元 A/C 类股回购授权 ([Alphabet 2025 10-K, "Repurchase Program"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)); 2025 年首次发行高级无担保票据 (Senior Unsecured Notes), 总募资 646 亿美元, Q1 2026 再发 311 亿美元; CFO Anat Ashkenazi 于 2024 年 7 月自礼来 (Eli Lilly) 加盟; Mehta 法官的反垄断救济令于 2025 年 9 月颁布 ([Alphabet Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm); [NPR, 2025-09-02](https://www.npr.org/2025/09/02/nx-s1-5478625/google-chrome-doj-antitrust-ruling))。
+**近期资本与并购动作 (FY2025–2026)。** Alphabet 在 FY2025 启动了持续派息 (FY2025 股息支出 100.49 亿美元), 并回购 457.09 亿美元股票 ([Alphabet 2025 10-K, 现金流量表](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。2026 年 3 月, 公司完成两笔重大收购: **Wiz (云安全) 作价 295 亿美元** (Alphabet 史上最大收购) 与 **Intersect (能源) 作价 59 亿美元**, 同时将 **GFiber** 业务注入一家新成立公司 (持股 49.99%) ([Alphabet Q1 2026 10-Q, "Acquisitions and Divestitures"](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm))。2026 年 6 月, 股东大会批准 2021 股票计划增发 2 亿股 C 类股, 并任命 Marsida Saraci 为首席会计官 (Principal Accounting Officer) ([Alphabet 8-K, 2026-06-11](https://www.sec.gov/Archives/edgar/data/1652044/000119312526267578/d57679d8k.htm); [Alphabet 8-K, 2026-06-05](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000059/goog-20260602.htm))。
 
 ---
 
 ## 3. 管理团队
 
-### Sundar Pichai——Alphabet 及 Google 首席执行官 (CEO, 53 岁)
+### Sundar Pichai —— Alphabet 及 Google 首席执行官 (CEO)
 
-Pichai 于 2004 年作为产品经理加入 Google, 从 Chrome 和 Android 一路晋升; **2015 年 10 月** Alphabet 控股架构搭建时被任命为 **Google CEO**, **2019 年 12 月** Larry Page 和 Sergey Brin 退居二线后接任 **Alphabet CEO** ([2026 DEF 14A, "Director Biographies"](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm))。他持有印度理工学院 (IIT) 卡拉格普尔分校学士学位、斯坦福大学材料科学硕士学位以及宾夕法尼亚大学沃顿商学院 (Wharton) MBA 学位 (沃顿西贝尔学者 Siebel Scholar)。在出任 CEO 之前, 他主导了 Chrome 浏览器的发布 (2008 年)——现拥有约 35 亿用户, 是计算机历史上第二大装机量项目——并领导了 Android 产品组织 (2013–2014 年), 该操作系统目前在全球智能手机中占据约 70% 的份额 ([2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm))。
+Sundar Pichai 自 2015 年 8 月起任 Google CEO, 2019 年 12 月起兼任 Alphabet CEO。他 1972 年生于印度金奈, 拥有印度理工学院 (IIT Kharagpur) 冶金工程学士、斯坦福大学材料科学硕士及沃顿商学院 MBA 学位。Pichai 于 2004 年加入 Google, 早期主导 **Google Toolbar** 与 **Chrome 浏览器**的产品开发——Chrome 后来成长为全球份额第一的桌面浏览器, 这是他被擢升的关键功绩; 此后他相继统领 Android、Chrome OS 与 Google Apps, 在 2015 年重组中成为整个 Google 业务的 CEO ([Alphabet 2026 DEF 14A — 董事与高管信息](https://www.sec.gov/Archives/edgar/data/1652044/000130817926000342/0001308179-26-000342-index.htm))。在他任内, Alphabet 营收从 2015 年的约 750 亿美元增至 FY2025 的 4,028 亿美元, 并将公司战略全面转向 "AI-first"——这是判断其执行力的最直接证据 ([Alphabet 2025 10-K, 利润表](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。Pichai 的薪酬结构以股权为主, 具体授予与持股见公司委托书 ([Alphabet 2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/1652044/000130817926000342/0001308179-26-000342-index.htm))。
 
-作为 CEO, 他**两个最具定义性的战略决策**是 (1) 2023 年初宣布的 AI 再平台化——合并 DeepMind、Brain 与 Google Research; 将 Gemini 提升为消费、开发者和企业领域统一的模型家族; 以及将每条产品路线图都置于 AI 优先门控之下——以及 (2) **资本开支加速**, 该决策已在三年内将物业与设备购置规模增长两倍, 指引至 1,800 亿美元的年度运行率 ([Alphabet 2025 10-K, "Capital Expenditures"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [CNBC, 2026-02-04](https://www.cnbc.com/2026/02/04/alphabet-resets-the-bar-for-ai-infrastructure-spending.html))。这些决策的早期回报在 Q1 2026 业绩中清晰可见: 谷歌云同比 +63%, YouTube 与 One 合计付费订阅达 3.5 亿, Search 营业收入同比 +19% (十多年来最强增速), 以及通过 Gemini API 实现的每分钟 160 亿 token (环比 +60%) ([Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
+### 创始人现状与公司治理简评
 
-Pichai 持有 **227,560 股** A 类普通股 (任一股票类别中的占比均不到 1%), 反映了非创始人、职业经理人的薪酬结构 ([2026 DEF 14A, "Security Ownership"](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm))。他的年度薪酬高度倾向于股权; 公司于 2025 年将命名执行官 (NEO) 薪酬结构重组为 100 万美元基本工资加 GSU (时间归属的股权单位) 与 PSU (按 S&P 100 相对总股东回报 TSR 归属) 的目标组合。2023 年 Pichai 总薪酬为 880 万美元, 其中约 680 万美元为个人安保支出 ([TheStreet, "Sundar Pichai 净资产"](https://www.thestreet.com/personalities/sundar-pichai-net-worth))——他通常以多年期股权一次性大额授予的形式获取大部分薪酬, 而非每年常规授予, 因此年度总额波动剧烈。对外, 他兼任 Alphabet 执行委员会主席, 并自 2017 年起连续担任董事提名人 ([2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm))。
-
-### Anat Ashkenazi——Alphabet 及 Google 高级副总裁兼首席财务官 (CFO, 53 岁)
-
-Ashkenazi 于 **2024 年 7 月** 从礼来公司加盟出任 CFO, 此前自 2021 年 2 月起担任礼来执行副总裁兼 CFO, 在公司任职 23 年, 横跨肿瘤、糖尿病、制造与研究等多个事业部 CFO 等职务 ([2026 DEF 14A, "Executive Officer Biographies"](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm))。她是一位以色列裔美国高管, 持有耶路撒冷希伯来大学经济学与工商管理学士学位以及特拉维夫大学 MBA 学位 ([Wikipedia — Anat Ashkenazi](https://en.wikipedia.org/wiki/Anat_Ashkenazi); [Jewish Insider, 2026-02 "Alphabet's AI bet shows early returns under Israeli-American CFO"](https://jewishinsider.com/2026/02/anat-ashkenazi-ai-alphabet-cfo-eli-lilly-tech-google-israeli-american/))。在她担任礼来 CFO 的三年期间, 公司市值在 Mounjaro / Zepbound (GLP-1 减重药) 放量的推动下增长三倍, 业内广泛认为她负责执行了将需求转化为已交付收入的产能扩张工作 ([CNBC, "Alphabet CFO Anat Ashkenazi jumps from GLP-1 boom to generative AI", 2024-06-06](https://www.cnbc.com/2024/06/06/alphabet-cfo-anat-ashkenazi-jumps-from-glp-1-boom-to-generative-ai.html))。在 Alphabet, 她的早期标志性举措是 (a) **Alphabet 历史上第一份正式的长期资本开支指引** (FY26 1,750–1,850 亿美元) 以及 (b) 深化债务融资以预先为 AI 基础设施搭建提供资金——Alphabet 长期负债从 2024 年末的 109 亿美元增至 **2025 年末的 465 亿美元**, Q1 2026 再发行 311 亿美元 ([Alphabet 2025 10-K, "Long-term debt"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。她目前还兼任 Maravai LifeSciences 董事 (此前曾任 Varian Medical Systems 董事)。
-
-### Philipp Schindler——Google 高级副总裁兼首席业务官 (CBO, 55 岁)
-
-Schindler 自 **2015 年 8 月** 起负责 Google 全球销售与合作伙伴组织, 是为广告营收负责的高管——即 Alphabet 整体营业收入约 73% 的部分 ([2026 DEF 14A, "Executive Officer Biographies"](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm))。他在 Google 工作 20 余年, 此前在汉堡负责 EMEA 区域销售。他的职责包括 Google 搜索与展示广告、YouTube 与 DV360 广告堆栈、合作伙伴协议 (包括 DOJ 反垄断案核心的 Apple Safari 默认搜索协议) 以及各国运营。2025 年 NEO 目标总薪酬为 4,060 万美元 (PSU + GSU + 现金, 按目标授予价值计), 见 [2026 DEF 14A "NEO Compensation"](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm)。
-
-### Kent Walker——全球事务总裁、首席法务官兼公司秘书 (65 岁)
-
-Walker 自 2017 年起担任首席法务官, 自 2021 年 11 月起兼任全球事务总裁, 使他成为反垄断、隐私与 AI 监管前沿——这些领域日益定义着 Alphabet 的风险特征——的负责高管 ([2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm))。他协调应对美国 DOJ 的 Search 和 Ad-Tech 案件、欧盟《数字市场法》(DMA, Digital Markets Act) 与《数字服务法》(DSA, Digital Services Act) 合规体系、英国 CMA 的市场调查, 以及多个司法管辖区对生成式 AI 的调查。他兼任 Evidence Action 与 TechNet 以及外交关系协会 (Council on Foreign Relations) 董事。
-
-### 公司治理简评
-
-- **双重股权结构与创始人控制权。** A 类 (每股 1 票)、B 类 (每股 10 票); C 类 (无投票权)。**Larry Page 个人控制 46.5% 的 B 类 (27.4% 的总投票权); Sergey Brin 控制 42.9% / 25.3%。** 两位创始人合计持有 Alphabet 约 **52.7%** 的投票权, 尽管他们仅占总股本的较小比例 ([2026 DEF 14A, "Beneficial Ownership Table"](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm))。
-- **董事会:** 2026 年 10 位董事提名人——Page、Brin、Pichai (执行董事); 独立董事会主席 **John L. Hennessy** (斯坦福大学前校长); 以及 Frances H. Arnold (诺贝尔奖得主、加州理工学院教授)、Marty Chávez、John Doerr (KP)、Roger Ferguson Jr.、Ram Shriram 与 Robin Washington。审计机构: **安永会计师事务所 (Ernst & Young LLP)** ([2026 DEF 14A, 议案 1 与议案 2](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm))。
-- **薪酬理念:** NEO (除 CEO 外) 取得 100 万美元现金基本工资加 GSU + PSU 组合; PSU 按三年相对 TSR (Total Shareholder Return, 总股东回报) 与 S&P 100 比较归属, 与此前的多年期设计一脉相承。
-- **内部人持股:** 所有执行高管与董事合计持有 250 万+ 股; 持股集中度高度集中在两位创始人。Pichai 持有 227,560 股 A 类。
-
-**管理团队过往业绩综述 (50–100 字)。** 这是大型科技公司中经验最丰富的运营团队: 一位 22 年司龄的 CEO, 完整带领公司经历了移动和云两次重大转型; 一位经礼来训练、有据可查地将需求大规模转化为供应的 CFO; 以及一位自 2015 年以来将 Google 广告复合放大约 6 倍的 CBO。团队的待解问题在于 AI 转型是否会压缩 Search 经济性——但管理层愿意大规模投入支出, 加之 Q1 2026 Search 营业收入 **+19%** 的增长, 表明他们并未处于防守姿态 ([Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
+两位创始人 **Larry Page** 与 **Sergey Brin** 已于 2019 年 12 月卸任 Alphabet 的 CEO 与总裁日常职务, 但仍为董事并通过持有的 **B 类股 (每股 10 票投票权)** 保留对公司的实际控制权——这是 Alphabet 治理结构最关键的特征: 截至 2025 年底, B 类股共 8.37 亿股, 在多数表决事项上每股 10 票, 使两位创始人即便经济权益被稀释仍掌握多数投票权 ([Alphabet 2025 10-K, 资产负债表附注 — 股本结构](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。*分析师观点:* 这种双重股权 (dual-class) 结构意味着外部股东对管理层几乎没有约束力——对长期主义是利好 (管理层可承受 capex 跃升等短期阵痛), 对治理纠错是隐忧 (无法通过股东表决推动变革)。其余在职高管 (CFO Anat Ashkenazi、总裁兼首席投资官 Ruth Porat、首席业务官 Philipp Schindler、全球事务总裁兼首席法务官 Kent Walker) 的薪酬授予见 2026 年 4 月 8-K 与委托书 ([Alphabet 8-K, 2026-04-10 — 高管股权授予](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000034/goog-20260407.htm))。
 
 ---
 
 ## 4. 产品与服务
 
-Alphabet 拥有业内最广泛的消费 + 企业软件组合之一。10-K 将 Google Services 列为包含 "广告、Android、Chrome、设备、Gmail、Google Drive、Google Gemini、Google Maps、Google Photos、Google Play、Search 与 YouTube" ([Alphabet 2025 10-K, 第 1 项 "Business — Google Services"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。下图按公司自身披露的方式组织产品组合。
+Section 4 是本报告最重要的章节。下面以 Alphabet 自身披露的产品 / 收入结构为锚, 逐一拆解。
+
+### 4.1 Alphabet 收入结构 (issuer 自有口径, FY2025)
+
+下表逐行复刻 Alphabet 10-K "Revenues by Type" 的官方口径 (verbatim 行标签):
+
+| 收入类型 (issuer 口径) | FY2023 | FY2024 | FY2025 | 来源 |
+|---|---|---|---|---|
+| Google Search & other | 175,033 | 198,084 | **224,532** | 10-K |
+| YouTube ads | 31,510 | 36,147 | **40,367** | 10-K |
+| Google Network | 31,312 | 30,359 | **29,792** | 10-K |
+| **Google advertising 小计** | 237,855 | 264,590 | **294,691** | 10-K |
+| Google subscriptions, platforms, and devices | 34,688 | 40,340 | **48,030** | 10-K |
+| **Google Services 合计** | 272,543 | 304,930 | **342,721** | 10-K |
+| **Google Cloud** | 33,088 | 43,229 | **58,705** | 10-K |
+| **Other Bets** | 1,527 | 1,648 | **1,537** | 10-K |
+| Hedging gains (losses) | 236 | 211 | (127) | 10-K |
+| **总营收** | 307,394 | 350,018 | **402,836** | 10-K |
+
+*(单位: US$M。来源: [Alphabet 2025 10-K, "Revenues — Disaggregated Revenue by Type"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)。)*
+
+**本期新变化 (what's new):** FY2025 内 `Google Network` (联盟广告) 营收同比**下滑** (303.59 亿 → 297.92 亿), 是唯一收缩的广告子项, 反映第三方网络广告的结构性疲弱; 而 `Google subscriptions, platforms, and devices` 同比 **+19%** 至 480.30 亿, 成为 Google Services 内增长最快的部分——这与 Q1 2026 "付费订阅达 3.5 亿"的趋势一致 ([Alphabet Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
+
+### 4.2 旗舰产品逐一拆解
+
+**Google Search (搜索)。** *它在用户价值链中做什么:* Search 是 Alphabet 的现金引擎, 通过将用户查询意图与广告主竞价匹配 (拍卖机制) 变现, FY2025 贡献 2,245.32 亿美元、占总营收 56% ([Alphabet 2025 10-K, "Revenues by Type"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
+> **中文释义 / Plain-language gloss:** 你每搜一次, Google 就办一场毫秒级的广告拍卖——出价最高且相关性最好的广告主胜出, 按点击 (cost-per-click) 付费。这就是为什么"商业检索量 × 点击率 (CTR) × 每次点击价格"是搜索广告收入的核心三要素。
+
+*与同类产品的差异:* 不同于 YouTube (视频贴片广告) 与 Google Network (第三方网站联盟), Search 的广告库存是 Google 自有的、意图最强的入口——这也是其利润率最高的业务。*战略意义:* 2026 年 Search 正经历 25 年来最大改版——AI Overviews (AI 摘要, 月活超 25 亿) 与 AI Mode 将生成式答案嵌入结果页。*分析师观点:* 巴克莱认为 AI 模式下查询长度为传统的 3 倍、意图信号更丰富、转化更高, AI Max / Performance Max 等新广告产品正扭转近十年商业检索占比下滑趋势 ([Barclays — "Unpacking The AI Transition In Search", 2026-06-04, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585411122121284/Barclays-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Unpacking%20The%20AI%20Transition%20In%20Search-260604.pdf))。
+
+**YouTube。** *它做什么:* 全球最大视频平台, 通过贴片广告 (FY2025 YouTube ads 403.67 亿美元) 与订阅 (YouTube Premium / TV, 计入 subscriptions) 双重变现 ([Alphabet 2025 10-K, "Revenues by Type"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。*差异:* 相比 Search 的意图驱动, YouTube 是注意力 / 发现驱动, 并叠加 Shorts (短视频) 对抗 TikTok。*战略意义:* *分析师观点:* 花旗指出 Google 与 YouTube 合计覆盖约 82% 的网购路径, 广告投资回报率同比提升 40%; Shorts 的用户购买意愿高于竞品 ([Citi — "GML '26", 2026-05-21](http://xs-macbook-air.local:5001/zsxq/pdf/415241445451188/CITI-Alphabet%20Inc%20%EF%BC%88GOOGL.US%EF%BC%89%20GML%20%E2%80%9926%EF%BC%9A%20Monetizing%20AI%20Search%20with%20New%20Ad%20Formats%EF%BC%8C%20Agentic%20Commerce%20Innovations%EF%BC%8C%20and%20E2E%20Automation-260521.pdf))。
+
+**Google Cloud (GCP + Workspace)。** *它做什么:* 销售按用量计费的计算 / 存储 / 数据库 / AI 基础设施 (GCP), 以及 Google Workspace 席位订阅; FY2025 营收 587.05 亿美元, **分部经营利润 139.10 亿美元 (利润率 23.7%, 较 FY2024 的 14.1% 大幅改善)** ([Alphabet 2025 10-K, "Information about Segments" — Operating Income by Segment](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
+> **中文释义 / Plain-language gloss:** 云利润率从亏损到 2025 年的近 24%、再到 Q1 2026 的约 33%, 是这家公司过去两年盈利质量改善最关键的一条线——它把一个长期烧钱的板块变成了利润贡献者。
+
+*差异:* 相对 AWS / Azure, GCP 的差异化在于**自研 TPU (Tensor Processing Unit)** 与原生 Gemini 模型——这让它在 AI 训练 / 推理工作负载上有成本优势。*战略意义:* Q1 2026 Cloud 营收 +63% 至 200.28 亿、分部经营利润 65.98 亿 (利润率约 33%), backlog 近翻倍至 4,620 亿美元, AI 解决方案首次成为云增长主引擎 ([Alphabet Q1 2026 10-Q, "Revenue by Segment" 与 "Segment Operating Results"](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm))。
+
+**Gemini / DeepMind (AI 模型层)。** *它做什么:* Gemini 是横跨 Search、Cloud、Workspace、Android、Pixel 的统一模型层。*战略意义:* *分析师观点:* 大摩指出 Gemini 3.5 Flash 的 API 定价 (输入/输出每百万 Token 1.5/9 美元) 比竞品低约 70%, 全平台每月处理 3,200 万亿个 Token (同比近 7 倍); 个人智能体 Gemini Spark 计划接入 Uber、DoorDash、Booking 等第三方服务, 实现从"搜索"到"执行"的跨越 ([Morgan Stanley — "Sparking the Agentic Torch", 2026-05-20, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212454158811451/Morgan%20Stanley-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Sparking%20the%20Agentic%20Torch-260520.pdf))。
+
+**Android / Chrome / Pixel / Play (平台与设备)。** Android 与 Chrome 是 Alphabet 控制移动 / 桌面分发入口的操作系统级资产——它们本身变现有限, 但保证了 Search 的默认入口地位与 Play 商店的抽成。*战略意义:* 这一分发护城河是 Search 即便在 AI 颠覆下仍能守住约七成流量的根本原因 (见第 7 章)。
+
+### 4.3 产品组合树
 
 ```mermaid
 graph TD
-    Alphabet[Alphabet Inc.]
-    Alphabet --> Services[Google Services - 3,427 亿美元 / 85%]
-    Alphabet --> Cloud[Google Cloud - 587 亿美元 / 15%]
-    Alphabet --> Other[Other Bets - 15 亿美元 / 0.4%]
-
-    Services --> Search[Google Search 及其他]
-    Services --> YT[YouTube 广告 + 订阅]
-    Services --> Net[Google Network - AdMob/AdSense/Ad Manager]
-    Services --> SubPlat[订阅、平台与设备]
-    SubPlat --> Android[Android 操作系统]
-    SubPlat --> Chrome[Chrome 浏览器]
-    SubPlat --> Play[Google Play]
-    SubPlat --> Pixel[Pixel 手机、Watch、Buds、Nest]
-    SubPlat --> One[Google One / AI Pro / AI Ultra]
-    SubPlat --> Workspace[Workspace 消费版]
-    SubPlat --> Maps[Maps]
-    SubPlat --> Gemini[Gemini 应用]
-
-    Cloud --> GCP[Google Cloud Platform]
-    GCP --> Vertex[Vertex AI / Gemini Enterprise]
-    GCP --> Compute[计算、存储、网络]
-    GCP --> Data[BigQuery, Spanner, Looker]
-    GCP --> Sec[Security - Mandiant / Wiz 待交割]
-    Cloud --> WS[Workspace 企业版]
-
-    Other --> Waymo[Waymo - 无人驾驶 ride-hail]
-    Other --> Verily[Verily - 生命科学]
-    Other --> X[X - 登月工厂]
-    Other --> Wing[Wing - 无人机配送]
-    Other --> GFiber[Google Fiber]
+    A[Alphabet Inc.] --> B[Google Services 85%]
+    A --> C[Google Cloud 15%]
+    A --> D[Other Bets 0.4%]
+    B --> B1[Google Search & other]
+    B --> B2[YouTube ads]
+    B --> B3[Google Network]
+    B --> B4[Subscriptions / platforms / devices]
+    B4 --> B4a[YouTube Premium/TV]
+    B4 --> B4b[Google One / Gemini 订阅]
+    B4 --> B4c[Pixel 硬件 / Play]
+    C --> C1[GCP 基础设施/AI]
+    C --> C2[Google Workspace]
+    C --> C3[Vertex AI]
+    C --> C4[Wiz 云安全 收购]
+    D --> D1[Waymo 无人驾驶]
+    D --> D2[Verily / X / Wing]
 ```
-*来源: [Alphabet 2025 10-K, 第 1 项 "Business"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); 营业收入贡献数据出自同一文件注 15。*
 
-![FY2025 板块营业收入构成](charts/goog_segment_mix.png)
-*来源: [Alphabet 2025 10-K, 注 15 "Information about Segments"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)。*
+### 4.4 供应链资金流 (money-flow) —— AI capex 流向何处
 
-### 旗舰产品——竞争优势评估
+Alphabet 是典型的"买方 / 整合者", 因此采用**上游 / 支出视角 (upstream / spend view)**。下图追踪 FY2026 约 1,800–1,900 亿美元 capex 的去向: 从 Alphabet 散开到自研 TPU 系统、第三方 GPU 服务器、网络与数据中心 / 电力, 最终汇集到 Broadcom (TPU 联合设计)、TSMC (先进制程代工)、Nvidia (外采 GPU)、HBM 内存厂与电力供应这几个上游瓶颈:
 
-**Google Search & other (FY2025 营业收入 2,245 亿美元; 同比 +13%)。** 科技业中规模最大的单项营业收入来源。Search 通过基于拍卖机制的 AdWords / Performance Max 系统向估计超过 50 亿用户进行变现。**护城河: 有——多层结构。** (a) 数据网络效应: 25+ 年的点击数据、查询意图匹配和已抓取的网页内容; (b) 通过 Android 默认搜索以及 (现已受限、DOJ 裁定之后的) Apple Safari 默认协议形成的生态系统锁定; (c) 索引与服务的规模经济。**威胁:** AI Overviews (AI 概览) 已在 18% 的查询中内联回答, 在长尾查询中占比 57%, 将零点击率推升至 43% (在 AI Mode 模式下则达 93%)——这构成对点击经济模型的结构性风险 ([TechnologyChecker.io, 2026 "Search Engine Market Share"](https://technologychecker.io/blog/search-engine-market-share); [Stackmatix, 2026-03 "AI Search Market Share"](https://www.stackmatix.com/blog/ai-search-market-share-2026))。然而, Search 营业收入在 **Q1 2026 加速至 +19%**, Pichai 指出 "查询量达到历史新高"——至少目前 AI 整合是增量的而非吞噬性的 ([Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。最接近的竞争产品: **Microsoft Bing + Copilot** (约 5% 搜索份额, 在 AI 助手中增长), 以及 **ChatGPT** (在 AI 聊天搜索子集中占 60.7%, 但仅占美国总搜索量的约 17%)。在许多事实性查询的答案质量方面与对手 **持平**; 在交易性 / 商业意图变现方面 **领先**。
+![Alphabet AI 资本开支资金流](charts/goog_moneyflow.svg)
+*来源: [Alphabet 2025 10-K (capex/收购)](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm) · [Q1 2026 10-Q (Wiz/Intersect/backlog)](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm) · UBS / MS / JPM 卖方测算 (Analyst view)。*
 
-**YouTube——广告 + 订阅 (FY2025 广告 404 亿美元, 加上 480 亿美元订阅营业收入中的部分)。** YouTube 是全球最大的视频平台和全球第二大音乐平台。**护城河: 有——网络效应 + 内容库。** YouTube 广告 + 订阅合并营业收入在 2025 年 **超过 600 亿美元** ([Yahoo Finance / Variety, "How Big Is YouTube?", 2026-02](https://finance.yahoo.com/news/big-youtube-revenue-topped-60-223942275.html))。YouTube Music + Premium 在 2025 年突破 **1.25 亿付费订阅用户** ([Variety, "YouTube: 125 Million Music & Premium Subscribers", 2025-03](https://variety.com/2025/digital/news/youtube-125-million-music-premium-subscribers-lite-tier-1236328177/))。YouTube + Google One 跨业务订阅业务每年产生约 200 亿美元营业收入 ([Music Business Worldwide, "YouTube's subscription business is now generating roughly $20bn a year", 2026-02-05](https://www.musicbusinessworldwide.com/youtubes-subscription-business-is-now-generating-around-20bn-a-year-with-music-a-key-growth-driver/))。最接近的竞争产品: **Meta Reels / Instagram** 在短视频领域 (在 Gen Z 时长占比方面持平 / 领先), **Netflix / Spotify** 在付费流媒体领域 (在广告支持版本上不足规模, 在 Premium UX 上领先), **TikTok** 在全球短视频领域 (在美国之外持平, 在美国境内每用户观看时长上领先)。在任一单一模式下与最强对手 **整体持平**; 但在多形式覆盖度方面 **领先**。
+**追踪资金链 (follow the money)。** Alphabet 的两个**关键瓶颈**是 **Broadcom** 与 **TSMC**: 自研 TPU 的 ASIC 联合设计与高速网络芯片高度依赖 Broadcom, 而所有先进制程 (自研 TPU 与外采 GPU) 最终都汇向 TSMC 这一全球唯一的高端代工瓶颈 ([Morgan Stanley — "Sparking the Agentic Torch", 2026-05-20](http://xs-macbook-air.local:5001/zsxq/pdf/212454158811451/Morgan%20Stanley-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Sparking%20the%20Agentic%20Torch-260520.pdf))。第三个隐形瓶颈是 **HBM 高带宽内存** (SK Hynix / Samsung / Micron), 其价格与产能直接决定 AI 算力的边际成本。约 40% 的 capex 流向**数据中心与电力**——这也是 Alphabet 以 59 亿美元收购 Intersect (能源) 的逻辑 ([Alphabet Q1 2026 10-Q, "Acquisitions and Divestitures"](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm))。
 
-**Android + Chrome + Play (订阅、平台与设备, FY2025 480 亿美元; 同比 +19%)。** 全球三大消费软件平台中的两个。**护城河: 部分。** Android 仍是占主导地位的智能手机操作系统, 但属于开源; 锁定通过 Google Mobile Services 捆绑实现——这一做法长期是反垄断的压力点。Play 通过应用内支付和应用分发对 Android 进行变现。这些平台锚定了通往 Search、YouTube 与 Workspace 的分发漏斗, 并提供装机量飞轮效应。**最接近的竞争产品:** **Apple iOS / App Store**——在每用户高端层级变现上领先, 在全球单元份额上落后。
-
-**Google Cloud / GCP + Workspace (FY2025 587 亿美元, 同比 +36%; Q1 2026 200 亿美元, 同比 +63%)。** 加速最快的大型板块。营业利润 **FY2025 139 亿美元 (营业利润率 23.7%)** vs. FY2024 的 61 亿美元 (14.1%) ([Alphabet 2025 10-K, 注 15](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。**护城河: 有 (且在加强)。** 差异化点: (a) **TPU v6 "Trillium" 和 v7 "Ironwood"** 自研芯片——后者为一组 9,216 颗芯片的 pod, 拥有 >40 ExaFLOPS FP8 性能, 专为推理设计——提供了相对 Nvidia GPU 的垂直整合替代方案 ([Data Center Frontier, "Google's TPU Roadmap", 2026-01](https://www.datacenterfrontier.com/machine-learning/article/55336429/googles-tpu-roadmap-challenging-nvidias-dominance-in-ai-infrastructure)); (b) Gemini 2.5 / 3.x 模型客户可通过 Vertex AI 进行微调; (c) BigQuery 以及全球最大的星球级数据仓库覆盖; (d) Mandiant 安全业务及待交割的 **320 亿美元 Wiz 收购** (云安全) ([Reuters, 2025-03-18](https://www.reuters.com/technology/google-buy-cyber-startup-wiz-32-billion-2025-03-18/))。**2025 年 11 月 Anthropic 与 Google 达成史上最大单笔 TPU 交易**, 承诺采购数十万颗 Trillium 芯片, 并规划在 2027 年扩至 100 万颗规模 ([Data Center Frontier, 2026-01](https://www.datacenterfrontier.com/machine-learning/article/55336429/googles-tpu-roadmap-challenging-nvidias-dominance-in-ai-infrastructure))。最接近的竞争产品: **AWS** (S3、EC2、Bedrock、Trainium 芯片; 在营业收入规模上领先, 在增速上落后) 和 **Azure** (与 Microsoft AI / OpenAI 协同; 在企业分发上领先, 增速概貌相似)。在企业心智份额方面 **持平 / 追赶中**; 在多项发布的基准测试中, 在 AI 原生工作负载的单位美元性能上 **领先**。
-
-**Gemini 应用 + AI Pro / AI Ultra。** 最新旗舰是 Gemini 应用, Pichai 在 Q1 2026 称之为 "我们消费级 AI 套餐有史以来最强的一个季度", 公司全部消费业务付费订阅合计达 3.5 亿份 ([Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。在独立的 Similarweb 风格追踪中, 消费版 Gemini 应用占 **AI 聊天机器人 / AI 搜索的 15.0–18.2% 份额**, 较一年前的 ~5% 显著提升, 仅次于 ChatGPT ([Vertu, "AI Chatbot Market Share 2026", 2026](https://vertu.com/lifestyle/ai-chatbot-market-share-2026-chatgpt-drops-to-68-as-google-gemini-surges-to-18-2))。**护城河: 部分**, 但正快速向 ChatGPT 靠拢。最接近的竞争产品: **OpenAI ChatGPT** (~60–68% 份额, 在心智份额上领先); **Anthropic Claude** (份额较小, 在长上下文编码基准上领先); **Microsoft Copilot** (~13% 份额, 由分发驱动)。
-
-**Waymo——Other Bets 旗舰。** Waymo 在 Q1 2026 已突破 **每周 50 万次完全自动驾驶付费搭乘**, 覆盖 10 个美国城市, 2026 年瞄准 **额外 20+ 个城市**, 包括东京和伦敦, 覆盖区域达 **>1,400 平方英里** ([Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm); [TechCrunch, "Waymo's skyrocketing ridership in one chart", 2026-03-27](https://techcrunch.com/2026/03/27/waymo-skyrocketing-ridership-in-one-chart/); [Electrek, "Waymo expands robotaxi coverage", 2026-05-13](https://electrek.co/2026/05/13/waymo-expands-coverage-1400-square-miles-11-cities/))。上一轮私募估值: 2024 年 10 月达到 >450 亿美元; 媒体报道指出 2026 年搭乘量拐点之后, 内部估值显著高于此 ([TheStreet, "Alphabet's quiet $110B Waymo move", 2026](https://www.thestreet.com/investing/alphabets-quiet-110b-waymo-move-blows-up-other-bets-narrative))。**护城河: 有 (技术 + 监管)。** 最接近的竞争产品: **Tesla Robotaxi / FSD** (车辆数更多, 但尚无规模化商业无人服务), **Cruise** (已暂停), **百度 Apollo Go** (中国规模最大, 在城市数量上领先但中国境外安全记录落后)。在美国商业无人驾驶里程数和城市多样性方面 **领先**。
-
-### 长尾产品及近期发布 / 下线
-
-- **Pixel 硬件家族** (Pixel 10 手机、Pixel Watch 4、Pixel Buds Pro 2、Pixel Tablet)——重要品牌资产, 但营业收入占比小 ([Google Store](https://store.google.com/))。
-- **Workspace 消费版 (Gmail / Drive / Docs / Meet)**——Google One 套餐的基础; 2025 年通过 AI 功能再品牌化。
-- **Nest / Google Home**——智能家居品类, 围绕 Gemini 重新定位。
-- **Google Fi**——MVNO 移动通讯服务。
-- **Verily**——健康与生命科学。
-- **Wing**——无人机配送, 2025 年于德州扩张。
-- **GFiber**——批发式光纤互联网。
-- **下线 / 重定位 (过去 12 个月):** Google Bard 品牌全面退役, 各平台统一替换为 "Gemini"; **Pichai 将 Google Search 和 Ads 合并至 Nick Fox 治下**; **仅供 Pixel 使用的 "Tensor" 移动 SoC 团队已与云端芯片团队合并**; X 部门继续以受控节奏关闭项目, 风险投资业务被分阶段毕业、剥离或清算。
+**延伸观看 / Further viewing**
+- [Google Cloud TPU 与 AI 基础设施讲解 — 帮助理解自研 AI 芯片的物理形态 (Google Cloud Tech 官方频道)](https://www.youtube.com/@googlecloudtech)
+- [Waymo 无人驾驶系统如何感知与决策 (Waymo 官方频道)](https://www.youtube.com/@Waymo)
 
 ---
 
 ## 5. 客户与上市策略
 
-### 客户细分
+### 5.1 客户细分与集中度
 
-Alphabet 拥有任何科技公司中最广泛的客户覆盖。Google Search / YouTube / Android / Chrome / Gmail / Maps 的用户基础是消费大众市场, **横跨各个国家、语言与人口结构** ([Alphabet 2025 10-K, 第 1 项 "Business"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。但承担营业收入的客户基础则集中在三组:
+Alphabet 的客户结构高度分散——其广告业务由数百万家广告主构成, 没有单一客户达到需在 10-K 中披露的集中度阈值。Alphabet **未在 FY2025 10-K 中披露任何占合并营收 ≥10% 的单一客户** (这本身是一个披露事实: 广告主长尾极度分散是其抗风险的结构性优势) ([Alphabet 2025 10-K, "Revenues"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
 
-1. **广告主**——产生 Google 广告 2,947 亿美元营业收入 (占 Alphabet 营业收入的 73%)。从数百万中小企业 (SMB) 长尾自助式 Performance Max 投放, 到全球最大的首席营销官 (CMO) (宝洁、联合利华、三星、亚马逊、丰田) 购买 YouTube + Search + Display 集成投放协议。
-2. **云客户**——由 Google Cloud 企业销售团队服务的命名账户群体, 包括 **公共部门** (美国国防部 JWCC 合同、英国政府、若干拉美主权机构)、**金融服务** (汇丰、德意志银行、PayPal)、**零售** (沃尔玛、家得宝、Wayfair)、**制造业 / 汽车** (丰田、奔驰), 以及尤其值得注意的 **AI 实验室与 AI 原生企业**, 包括与 **Anthropic** 的一份多年、数百亿美元规模的 TPU 协议。
-3. **消费订阅与设备购买者**——3.5 亿付费消费订阅用户 (YouTube Premium / Music、YouTube TV、Google One、AI Pro / AI Ultra、NFL Sunday Ticket) 加上 Pixel 硬件购买者。
+云业务则是另一回事: 随着与 AI 实验室签署大额合同, Google Cloud 出现了客户集中。*分析师观点 (segment-level; not aggregated to group-level):* 瑞银测算 Anthropic / OpenAI / Meta 三家将分别占 **2026 年 GCP 收入的 21% / 7% / 1%、2027 年的 44% / 5% / 1%**——即到 2027 年仅 Anthropic 一家可能贡献近半 GCP 收入 ([UBS — "Stacking the Backlog", 2026-06-03, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484411/UBS-Alphabet%20Inc.%20~%20Class%20A%EF%BC%88GOOGL.US%EF%BC%89Stacking%20the%20Backlog%20from%20the%20AI%20Labs%EF%BC%8C%20Meta%EF%BC%8C%20and%20Vertex-260603.pdf))。**需特别注意 denominator**: 这是 **Google Cloud 分部口径**的客户集中度估算, 而非 Alphabet 合并口径——Google Cloud 仅占合并营收 15%, 因此即便 Anthropic 占 GCP 收入 44%, 折算到合并层面也仅约 6%, 远未达到合并 10% 单一客户披露线。
 
-```mermaid
-pie title FY2025 Alphabet 营业收入按产品线构成
-    "Google Search & other" : 224.5
-    "Google 订阅 / 平台 / 设备" : 48.0
-    "Google Cloud" : 58.7
-    "YouTube 广告" : 40.4
-    "Google Network" : 29.8
-    "Other Bets" : 1.5
-```
-*来源: [Alphabet 2025 10-K, 注 15 "Information about Segments"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)。*
+### 5.2 地理分布
 
-### 客户集中度
+![Alphabet FY2025 营收地理分布](charts/goog_geo_donut.svg)
+*来源: [Alphabet 2025 10-K, "Revenue by Geographic Location"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)。*
 
-Alphabet **没有** 任何单一客户营业收入达到合并营业收入的 10% 或以上, 10-K 明确表示没有单一客户占据公司营业收入的重大比例 ([Alphabet 2025 10-K, 第 7A 项 & "Concentration of Credit Risk" 注释](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。这与 **数百万广告主**广告业务模式相一致, 是巨型科技公司中最分散的客户基础之一。因此, Alphabet 的客户集中度风险非常低——单一最大客户占比远低于 5%——本报告未将其列为第 9 章风险 (然而, 我们将 **分发合作伙伴** 集中度风险标记为 Apple Safari 默认搜索协议与 Android OEM 合作关系, 详见第 9 章)。
+美国本土贡献 FY2025 营收的 **48% (1,942.29 亿美元)**, EMEA 29% (1,171.52 亿)、APAC 17% (676.80 亿)、其他美洲 6% (239.02 亿) ([Alphabet 2025 10-K, "Revenue by Geographic Location"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。*分析师观点:* 美国占比从 FY2023 的 47% 微升至 FY2025 的 48%, 反映美国数字广告与云市场的相对韧性。约 52% 营收来自美国以外, 美元走强构成汇率逆风。
 
-### 地理分布
+### 5.3 上市策略与关键合作伙伴
 
-| 地区 | FY2023 (亿美元 / %) | FY2024 (亿美元 / %) | FY2025 (亿美元 / %) |
-|---|---|---|---|
-| 美国 | 1,462.86 / 47% | 1,704.47 / 49% | 1,942.29 / 48% |
-| EMEA | 910.38 / 30% | 1,021.27 / 29% | 1,171.52 / 29% |
-| APAC | 515.14 / 17% | 568.15 / 16% | 676.80 / 17% |
-| 其他美洲 | 183.20 / 6% | 204.18 / 6% | 239.02 / 6% |
-| 套保 | 2.36 / 0% | 2.11 / 0% | (1.27) / 0% |
-| **合计** | **3,074 亿美元** | **3,500 亿美元** | **4,028 亿美元** |
-
-*来源: [Alphabet 2025 10-K, 注 2 "Revenue Recognition — Disaggregation of Revenues"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)。*
-
-![地理营业收入构成](charts/goog_geo_mix.png)
-*来源: [Alphabet 2025 10-K, 注 2](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)。*
-
-### 上市策略 (Go-to-Market)
-
-**广告:** 大部分营业收入采用程序化自助拍卖 (AdWords / Performance Max、Display & Video 360、YouTube Select); 在 CBO Philipp Schindler 治下的全球 Google Customer Solutions 与 Large Customer Sales 组织覆盖命名账户。
-
-**云:** 直销 (在 Thomas Kurian 治下), 按区域与按行业 (金融服务、零售、制造、媒体、公共部门) 组织; 不断扩大的 ISV / GSI 生态系统 (埃森哲、德勤、凯捷、Wipro、TCS); 市场列表; 与 Salesforce / SAP / ServiceNow 联合销售。
-
-**消费订阅:** 在 YouTube 与 Gmail / Drive 中通过产品内升级; 套餐促销 (例如, 购买新 Pixel 设备附赠 AI Pro)。
-
-### 关键合作伙伴关系
-
-- **苹果——Safari 默认搜索协议。** 长期以来是科技业被引用最多的分发安排。2025 年 DOJ 救济令禁止 Google "签订或维持有关 Search 分发的排他性合同", 但并未完全禁止收入分成支付 ([NPR, 2025-09-02](https://www.npr.org/2025/09/02/nx-s1-5478625/google-chrome-doj-antitrust-ruling); [Congress.gov CRS Legal Sidebar LSB11362](https://www.congress.gov/crs-product/LSB11362))。
-- **Anthropic——TPU + 云 + 股权。** Alphabet 持有约 14% 股权; Anthropic 2026 年 2 月 Series G 估值达 **3,800 亿美元** (史上两大风险投资轮之一), 2025 年 10 月的 TPU 扩张 "价值数百亿美元", 并在 2026 年上线 >1 GW 算力 ([Reuters / TheStreet 报道, 2026](https://www.thestreet.com/investing/alphabets-quiet-110b-waymo-move-blows-up-other-bets-narrative))。
-- **三星及 Android OEM 生态系统。**
-- **车企对 Android Auto 与 Waymo 平台合作关系** (现代、捷豹路虎 JLR、极氪 Zeekr 与 Waymo 合作)。
+Alphabet 的核心分发策略是**默认入口锁定 (default placement)**——通过向 Apple 等设备商支付流量获取成本 (TAC, Traffic Acquisition Cost) 换取 Safari 默认搜索引擎地位。Q1 2026 总 TAC 为 152.28 亿美元 ([Alphabet Q1 2026 业绩公告 — Total TAC](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm)); *分析师观点:* 巴克莱估计 **Apple 设备贡献近半数搜索量与过半搜索收入**, 其中 Safari 工具栏独占 30% 检索, 这既是分发优势, 也是 Apple/Siri 升级带来的最大分流隐患 ([Barclays — "Unpacking The AI Transition In Search", 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/585411122121284/Barclays-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Unpacking%20The%20AI%20Transition%20In%20Search-260604.pdf))。AI 时代的新合作伙伴包括 Anthropic、OpenAI、Meta (云算力大客户), 以及 Gemini Spark 智能体接入的 Uber / DoorDash / Booking 等服务方。
 
 ---
 
 ## 6. 行业概览
 
-Alphabet 横跨软件业三大最庞大、增长最快的行业——**数字广告、云基础设施 / AI 服务以及处于早期阶段的无人驾驶移动出行市场**——以及一系列被视为邻近业务的消费软件、支付与设备生态。
+### 6.1 数字广告 (digital advertising)
 
-### 6.1 数字广告
+Alphabet 的主战场是全球数字广告。该市场规模庞大且仍在增长, 由搜索、视频、展示、零售媒体 (retail media) 等子板块构成。Alphabet 与 Meta 长期合计占据全球数字广告的大头, Amazon 的零售媒体是第三极。*分析师观点:* 2026 年的核心行业变量是**生成式 AI 对搜索范式的重构**——AI 摘要 / AI 模式既可能扩大可变现的查询空间 (更长、更复杂的意图), 也可能被 Perplexity / OpenAI / Meta 的生成式搜索分流 ([UBS — "Stacking the Backlog", 2026-06-03](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484411/UBS-Alphabet%20Inc.%20~%20Class%20A%EF%BC%88GOOGL.US%EF%BC%89Stacking%20the%20Backlog%20from%20the%20AI%20Labs%EF%BC%8C%20Meta%EF%BC%8C%20and%20Vertex-260603.pdf))。
 
-2026 年, 全球广告将首次跨过 **1 万亿美元** 大关, 其中数字广告支出将达到约 **8,358 亿美元 (占整体 68.7%)** ([MAGNA / Dentsu / GroupM 综合预测, 2026-03](https://magnaglobal.com/ad-forecast-media-innovation-to-propel-the-global-ad-market/); [PPCChief, "Digital Ad Spend Statistics 2026"](https://ppcchief.com/digital-ad-spend-statistics))。仅美国广告支出在 2026 年将突破 **4,000 亿美元 (同比 +7.8%)** ([MAGNA 预测, 2026](https://magnaglobal.com/ad-forecast-media-innovation-to-propel-the-global-ad-market/))。增长最快的渠道为社交 (+14.6%)、联网电视 (CTV, +13.8%) 和零售媒体 / 商务媒体 (+12.1%)。搜索广告仍是数字单一最大类别, Google 在 Cloudflare Radar 截至 2026 年 4 月 20 日 4 周的观察中, 持有 **全球搜索引荐流量的 87.5%** ([TechnologyChecker.io, "Search Engine Market Share 2026"](https://technologychecker.io/blog/search-engine-market-share))。
+### 6.2 云基础设施与 AI 服务 (cloud + AI infrastructure)
 
-**结构性动态。** 该品类正围绕 "双寡头 + 跟随者" 整合: 按通行第三方估算, Google 约占全球数字广告 28%, Meta 约 22%, Amazon 约 10%, 字节跳动约 9%。净新增美元已果断转向 AI 增强投放 (Performance Max、Advantage+、含生成式内容的 Sponsored Brands)。2026 年最重要的变化是 **生成式答案有条件融入搜索结果**——Google 的 AI Overviews 现已在约 18% 的全部查询和 57% 的长尾查询中出现, 推高零点击率并迫使广告产品重新工程化 ([Stackmatix, 2026-03 "AI Search Market Share"](https://www.stackmatix.com/blog/ai-search-market-share-2026))。
+云基础设施市场由 AWS、Microsoft Azure、Google Cloud 三强主导, Google Cloud 是第三大但增速最快。该行业正被 AI 工作负载重塑——训练与推理需求驱动了前所未有的资本开支周期。*分析师观点:* 摩根大通预计行业内外对 AI 算力的需求将推动 Alphabet FY2027 capex 增至约 2,930 亿美元 ([J.P. Morgan — "Fully Stacked", 2026-04-30, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415515522155418/J.P.%20Morgan-Alphabet%EF%BC%88GOOG.US%EF%BC%89Fully%20Stacked-260430.pdf))。GCP 的差异化在于 TPU 自研垂直整合, 这是 AWS (Trainium) 与 Azure (Maia) 也在追赶的方向。
 
-**监管。** 主要监管压力点: 美国 DOJ Search 救济 (无需剥离 Chrome 但强制数据共享; 上诉进行中)、美国 DOJ Ad-Tech 案 (仍在救济阶段)、欧盟《数字市场法》(DMA, Google 被指定为广告、搜索、Android、Chrome、Maps、YouTube 等的看门人) 和欧盟《人工智能法》(AI Act)。结果是合规成本显著但有边界; 结构性分拆已不再是核心情境 ([NPR, 2025-09-02](https://www.npr.org/2025/09/02/nx-s1-5478625/google-chrome-doj-antitrust-ruling); [美国司法部, "DOJ wins significant remedies against Google", 2025-09](https://www.justice.gov/opa/pr/department-justice-wins-significant-remedies-against-google))。
+### 6.3 无人驾驶移动出行 (autonomous mobility)
 
-### 6.2 云基础设施与 AI 服务
-
-云行业 2026 年 TAM (总潜在市场) 路径估计约为 **~8,000 亿美元** (IaaS、PaaS 与 SaaS 合计), AI 基础设施子板块 **每年 >20% 增长** ([Programming-Helper, "Cloud Computing Market Share 2026"](https://www.programming-helper.com/tech/cloud-computing-market-share-2026-aws-azure-google-cloud-analysis); [HeyGoTrade 汇总的 Synergy Research 数据, "AWS vs Google Cloud vs Azure", 2026](https://www.heygotrade.com/en/blog/aws-vs-google-cloud-vs-azure-hyperscaler-race/))。三家超大规模云服务商合计占企业云支出的 **约 68%**; 截至 Q1 2026, **AWS 约 30%、Microsoft Azure 约 25%、Google Cloud 约 13%**。
-
-![云基础设施 Q1 2026 份额](charts/goog_cloud_share.png)
-*来源: [Synergy Research / HeyGoTrade, "AWS vs Google Cloud vs Azure", Q1 2026](https://www.heygotrade.com/en/blog/aws-vs-google-cloud-vs-azure-hyperscaler-race/); 增速取自各发行方 Q1 2026 业绩公告。*
-
-![Google Cloud 营业收入轨迹](charts/goog_cloud_trend.png)
-*来源: [Alphabet 2025 10-K, 注 15](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm) (Q1'26 年化 = 200.28 亿美元 × 4)。*
-
-AI 基础设施周期的形态才是关键: Anthropic、OpenAI / Microsoft、Meta、xAI、Alphabet 及一长串主权与企业 AI 工作负载, 都在竞相为 2026–2028 交付的算力、土地和硅资源下订单。**四家超大规模云服务商 (Alphabet + Microsoft + Amazon + Meta) 合计资本开支预计 2026 年将超过 5,000 亿美元**, 其中 Alphabet 一家就约占 1,800 亿美元 ([Ferguson Wellman, "The Magnificent Capex", 2026-05-08](https://www.fergusonwellman.com/blog/2026/5/8/the-magnificent-capex-ai-infrastructure-spending-and-who-actually-benefits))。这至少比历史上任何此前的软件基础设施周期高出一个数量级, 并将决定未来十年的相对幂律定位。
-
-![Alphabet 资本开支爬坡](charts/goog_capex.png)
-*来源: [Alphabet 2025 10-K, "Investing Activities"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); FY2026E 中点取自 [CNBC, 2026-02-04 "Alphabet resets the bar for AI infrastructure spending"](https://www.cnbc.com/2026/02/04/alphabet-resets-the-bar-for-ai-infrastructure-spending.html)。*
-
-### 6.3 无人驾驶移动出行
-
-美国 Robotaxi 行业正处于明显拐点: Waymo 每周付费无人驾驶搭乘次数从 2025 年初的约 15 万次增长至 **Q1 2026 的 50 万次**, 明确目标为年底达到 100 万次/周 ([TechCrunch, 2026-03-27](https://techcrunch.com/2026/03/27/waymo-skyrocketing-ridership-in-one-chart/))。2026 年向东京和伦敦的扩张也开启了首批有意义的美国之外无人驾驶营业收入。我们估计美国可寻址 Robotaxi 市场成熟期 TAM 为 2,500–4,000 亿美元 (简单测算: 每年 2.5 亿乘客车里程, 每英里毛收入 0.60–1.20 美元)。其他相关竞争者包括 Tesla、百度 Apollo Go (中国)、Zoox (Amazon)、Aurora 以及若干较小的 AV 卡车公司。
-
-### 6.4 邻近行业
-
-- **智能手机硬件** (Pixel)——全球 TAM ~4,850 亿美元; Alphabet 凭借规模小但毛利率高的 Pixel 产品线参与竞争。
-- **智能家居 / IoT**——Nest 和 Google Home; 与亚马逊 Echo / Apple HomeKit 竞争。
-- **流媒体视频 / 音乐**——YouTube TV / Music: YT Premium / Music 合计付费用户 1.25 亿+ ([Variety, 2025-03](https://variety.com/2025/digital/news/youtube-125-million-music-premium-subscribers-lite-tier-1236328177/))。
+Waymo 处于无人驾驶出行行业的领先位置。*分析师观点:* 大摩基于新数据将 Waymo 2028 年的行程 / 里程 / 收入预测分别上调 15% / 20% / 6%; 截至 2026-03-24, Waymo 周行程已达 50 万次 (自 2024-08 增长 5 倍), 预计 2026 年底翻倍至 100 万次; 到 2032 年年行程 11 亿次、年收入约 200 亿美元 ([Morgan Stanley — "Waymo's Acceleration", 2026-03-26](http://xs-macbook-air.local:5001/zsxq/pdf/212224152414221/Morgan%20Stanley-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Waymo%E2%80%99s%20Acceleration%20and%20What%20It%20Means%20for%20Uber-260326.pdf))。但行业仍处早期——即便到 2032 年 Waymo 行驶里程预计仍占美国总里程不到 0.5%。
 
 ---
 
 ## 7. 竞争格局
 
-Alphabet 与 **五个不同群组的竞争对手** 同台竞技, 但没有任何一家复制了其全部业务组合。最有用的框架是逐产品分析, 因为对 Search 威胁最大的公司 (OpenAI / Microsoft) 不是对 Cloud 威胁最大的 (AWS), 也不是对 YouTube 威胁最大的 (Meta / TikTok)。
+Alphabet 的 10-K 在 Competition 部分自述: 公司在信息、广告、操作系统、企业云、AI、设备等多个领域面临激烈竞争, 竞争对手包括其他在线平台、社交网络、电商、AI 公司及云服务商 ([Alphabet 2025 10-K, "Competition"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。以下按业务线展开。
 
-### Search / 消费 AI
+### 7.1 Search / 消费 AI
+*分析师观点:* 主要威胁来自生成式搜索 (OpenAI ChatGPT、Perplexity、Meta) 与 **Apple/Siri 端侧 + 云端混合架构**——巴克莱警告, 若苹果新一代 Siri 截留大量原生检索需求并把广告收益留在自家生态, Google 将失去高额 Safari 分成; 但用户主动下载 Chrome / Google App 等自有渠道粘性稳固, **约七成搜索流量基本盘安全** ([Barclays — "Unpacking The AI Transition In Search", 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/585411122121284/Barclays-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Unpacking%20The%20AI%20Transition%20In%20Search-260604.pdf))。
 
-- **OpenAI (未上市; Microsoft 支持)。** 在独立 AI 聊天机器人使用方面, ChatGPT 仍是份额领先者, 视来源不同占比约 **60–68%** ([Vertu, 2026](https://vertu.com/lifestyle/ai-chatbot-market-share-2026-chatgpt-drops-to-68-as-google-gemini-surges-to-18-2))。现已在 Apple Intelligence 和 Microsoft Copilot 中分发。直接 ChatGPT 搜索查询估计占全球搜索替代量的约 28%, 但在美国本土仅占 ~17% ([Stackmatix, 2026-03](https://www.stackmatix.com/blog/ai-search-market-share-2026))。在对话心智份额方面 **领先**; 在每会话变现与已索引网页覆盖范围方面 **落后**。
-- **Microsoft (MSFT)。** 自 2023 年底 ChatGPT 整合以来, Bing + Copilot 并未实质性侵蚀 Google Search 份额, 但 OpenAI 合作仍是科技业最具战略意义的外部联盟。Microsoft Copilot + OpenAI 在 AI 助手使用中合计占 **73.9%** ([Vertu, 2026](https://vertu.com/lifestyle/ai-chatbot-market-share-2026-chatgpt-drops-to-68-as-google-gemini-surges-to-18-2))。MSFT 当前 TTM P/E 为 **25.0 倍** vs. GOOG 的 29.2 倍——即, 市场并未对微软赋予 Search 颠覆溢价 ([Yahoo Finance, MSFT 核心统计](https://finance.yahoo.com/quote/MSFT/key-statistics))。
-- **Anthropic (未上市; Alphabet 持 14%、Amazon 共同支持)。** Claude 是企业级编码的领先模型。Anthropic 同时是 Google Cloud 的关键客户 (公司史上最大 TPU 交易) 又是 Gemini 的竞争者, 处境耐人寻味。
-- **Perplexity、You.com、Brave Search。** 长尾对话式搜索初创公司。具战略意义, 但非存亡威胁。
+### 7.2 云基础设施与 AI
+GCP 在 IaaS/PaaS 市场是第三大, 直接对手为 AWS 与 Microsoft Azure。*分析师观点:* Alphabet 的全栈 (芯片→模型→应用) 整合与 Gemini 成本优势是其相对 AWS / Azure 的差异化; 高盛认为这让它在 Agentic AI 时代具备领先优势 ([Goldman Sachs — "Takeaways from Recent Events", 2026-05-21](http://xs-macbook-air.local:5001/zsxq/pdf/184128222885212/Goldman%20Sachs-Alphabet%20Inc.%20%EF%BC%88GOOGL.US%EF%BC%89%20Takeaways%20from%20Recent%20Events%20%EF%BC%88Google%20I%20O%EF%BC%8C%20Marketing%20Live%EF%BC%8C%20YouTube%20Brandcast%20%26%20Android%20Show%EF%BC%89%EF%BC%9A%20Alphabet%E2%80%99s%20Agentic%20AI~Driven%20Future%20On%20Display-260521.pdf))。
 
-### 云基础设施与 AI 服务
+### 7.3 视频与无人驾驶
+YouTube 在长视频领先、Shorts 与 TikTok / Reels 竞争短视频。Waymo 在无人驾驶领先 Cruise、Zoox (Amazon)、Tesla FSD 等; *分析师观点:* 大摩指出 Uber 需展示其如何支持 Waymo 的竞争对手 (已宣布 6 项 AV 合作, 含 NVIDIA、Zoox) 才能与之抗衡 ([Morgan Stanley — "Waymo's Acceleration", 2026-03-26](http://xs-macbook-air.local:5001/zsxq/pdf/212224152414221/Morgan%20Stanley-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Waymo%E2%80%99s%20Acceleration%20and%20What%20It%20Means%20for%20Uber-260326.pdf))。
 
-- **Amazon Web Services (AMZN)。** 市场领导者, 份额约 30%。AWS 最新一季增速约 19%——远低于谷歌云的 63% 和 Azure 的 40% ([HeyGoTrade, 2026](https://www.heygotrade.com/en/blog/aws-vs-google-cloud-vs-azure-hyperscaler-race/))。AWS 的应对: Trainium 与 Bedrock 用于 AI; 与 Anthropic 在 AWS 上深度合作 Claude。
-- **Microsoft Azure (MSFT)。** 第二名, 份额约 25%。通过 Office 与 Active Directory 构建分发护城河; OpenAI 是其旗舰 AI 合作。Azure AI 营业收入是 AI 工作负载需求最常被引用的单一验证点。
-- **Oracle Cloud (ORCL)。** 规模较小但正在崛起——2025–2026 期间赢得多年 AI 基础设施大单 (尤其是与 OpenAI 部分参与 Stargate 项目)。多头观点是 Oracle 将成为第四大超大规模云服务商; 空头观点是其增长依赖少数命名客户。
-- **CoreWeave、Crusoe、Lambda、Nebius。** AI 原生 GPU 云专业供应商。细分但增长迅速; 之所以相关, 主要是因其从超大规模云服务商手中抽走 GPU 供应。
-
-### 视频 / 短视频
-
-- **Meta Platforms (META)。** Instagram Reels 与 Facebook 是 YouTube 的直接注意力竞争者。Meta 营业利润率达 **40.6%**, 在同组中除微软外最高, 且 META 相对 GOOG 折价交易 (22 倍 vs. 29 倍)——这表明市场对 META 的监管与元宇宙开支尾部风险的折价大于对 GOOG 的 AI 风险折价 ([Yahoo Finance, META 核心统计](https://finance.yahoo.com/quote/META/key-statistics))。
-- **TikTok / 字节跳动 (未上市)。** 在美国之外是短视频主导平台, 全球前三。仍面临美国监管压力; Pichai 在过往业绩说明会中指出, 强制 TikTok 剥离将利好 YouTube。
-- **Netflix、Disney+、Spotify。** YouTube TV 与 YouTube Music 的订阅竞争者。
-
-### 无人驾驶移动出行
-
-- **特斯拉 (TSLA)。** Cybercab 与 FSD; 基于 "纯视觉" 架构竞争。消费品牌更大, 商业无人驾驶规模更小。
-- **百度 Apollo Go。** 中国按城市数量计最大。
-- **Cruise (GM, 已暂停)、Zoox (AMZN)、Aurora。** 较小的参与者或非乘用车业务。
-
-### 生产力工具与设备
-
-- **苹果 (AAPL)。** 长期合作伙伴 (Safari 默认搜索) 又长期是竞争对手 (iOS / iPadOS / Mac vs. Android / ChromeOS; iPhone vs. Pixel; iCloud vs. Google One)。Apple Intelligence 在 2026 年仍依赖第三方模型合作伙伴 (今天是 OpenAI; 据传与 Anthropic 与 Google 也在洽谈)。AAPL TTM P/E 36.6 倍远高于 GOOG, 反映市场对苹果服务护城河更高的信心 ([Yahoo Finance, AAPL 核心统计](https://finance.yahoo.com/quote/AAPL/key-statistics))。
-
-### 定位框架
+### 7.4 定位框架
 
 ```mermaid
 quadrantChart
-    title AI 平台定位 (2026)
-    x-axis "AI 聚焦窄" --> "AI 全栈广"
-    y-axis "规模较小" --> "超大规模基础设施"
-    quadrant-1 超大规模云商
-    quadrant-2 利基规模
-    quadrant-3 利基
-    quadrant-4 AI 原生
-    Alphabet: [0.90, 0.95]
-    Microsoft: [0.78, 0.92]
-    Amazon: [0.65, 0.95]
-    Meta: [0.55, 0.78]
-    OpenAI: [0.92, 0.55]
-    Anthropic: [0.88, 0.45]
-    Oracle: [0.45, 0.62]
-    Apple: [0.40, 0.70]
+    title 云 + AI 竞争定位 (规模 vs AI 垂直整合)
+    x-axis 低规模 --> 高规模
+    y-axis 低垂直整合 --> 高垂直整合
+    quadrant-1 规模大且整合深
+    quadrant-2 整合深但规模小
+    quadrant-3 规模小整合浅
+    quadrant-4 规模大但整合浅
+    Google Cloud: [0.72, 0.88]
+    AWS: [0.92, 0.70]
+    Microsoft Azure: [0.85, 0.55]
+    Oracle Cloud: [0.40, 0.45]
+    CoreWeave: [0.30, 0.30]
 ```
+*来源: 定位为本报告基于各公司公开披露的分析框架 (analyst framework); 规模锚定各家云营收, 垂直整合锚定自研芯片 (TPU/Trainium/Maia) 与自有模型的覆盖度。*
 
-**Alphabet 的相对优势。**
-1. **垂直整合。** 只有 Alphabet 一家在同一公司内同时拥有自己的基础模型 (Gemini)、自研 AI 加速器 (TPU v5/v6/v7)、自己的搜索索引、自己的消费分发渠道 (Search、YouTube、Android、Chrome、Gmail、Maps) 以及自己的广告变现系统。AWS 缺少消费触点; OpenAI 缺少索引; Apple 缺少模型。Q1 2026 中 Gemini-on-Vertex "通过直接 API 使用每分钟处理 160 亿 token, 环比增长 60%" 这一统计数字, 正是整套堆栈拉动客户的直接度量 ([Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
-2. **数据网络效应。** 25 余年的点击、查询和互动数据, 建立在事实上是网络主索引的基础之上。
-3. **自由现金流融资。** 2025 年经营现金流 1,647 亿美元, 足以为 1,800 亿美元资本开支提供资金, 而无需依赖资本市场或股权稀释。
-4. **人才磁石。** DeepMind、Google Research 与 Brain。
+下图为 FY2025 资产负债表 Sankey, 直观显示物业与设备净额 (2,466 亿美元) 已成为最大资产项——这正是 capex 跃升在资产端的体现:
 
-**脆弱性。**
-1. **单一产品对 Search 广告的依赖。** 单一产品线占营业收入的 56%; AI 搜索转型是公司历史上最大的需求侧变化。
-2. **监管天花板。** 美国 (DOJ Search 与 Ad-Tech) 和欧盟 (DMA / DSA / AI Act)——见第 9 章。
-3. **对苹果的分发依赖。** 苹果默认搜索协议从历史上看每年价值苹果约 200 亿+ 美元; DOJ 救济后该协议不能是排他性的, 增加了重新谈判风险。
-4. **云仍处于亚规模**, 587 亿美元 vs. AWS 的 1,000 亿美元+; 差距在缩小但尚未闭合。
+![Alphabet 资产负债表 Sankey FY2025](charts/goog_balance_sankey.svg)
+*来源: [Alphabet 2025 10-K, "Consolidated Balance Sheets"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)。*
 
 ---
 
 ## 8. 市场机会 (TAM)
 
-我们沿三个独立向量量化 Alphabet 的 TAM。
+### 8.1 数字广告 TAM
+全球数字广告市场规模以数千亿美元计并持续个位数中段增长。*分析师观点:* 摩根大通在世界杯主题策略中指出, 仅 2026 世界杯就将带来约 50 亿美元增量广告支出, 其中约 73% (40 亿) 流向数字渠道, Alphabet / Google 与 Meta 是主要受益方——这是数字广告渗透率持续提升的一个微观例证 ([J.P. Morgan — "2026 World Cup Beneficiaries", 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/584255214545854/J.P.%20Morgan-Equity%20Thematic%20Strategy%EF%BC%9A2026%20World%20Cup%20Beneficiaries-260611.pdf))。
 
-### 8.1 数字广告——2026 年 TAM ~8,350 亿美元, 至 2028E 增长至 ~1.0 万亿美元
+### 8.2 云 + AI 服务 TAM
+云基础设施 + AI 服务的 TAM 随 AI 工作负载快速扩张。Alphabet 自身的 backlog 是最硬的需求证据: Q1 2026 末**剩余履约义务 (RPO) 达 4,676 亿美元, 其中 Google Cloud 占 4,623 亿美元, 管理层预计约 50% 将在未来 24 个月内确认收入** ([Alphabet Q1 2026 10-Q, "Revenues — Narrative" RPO disclosure](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm))。这意味着到 2028 年初, 仅已签约部分就锁定了可观的云收入。
 
-最新 MAGNA 预测指出 2026 年全球数字广告支出为 **8,358 亿美元**, 在 2028 年前增长至 1 万亿美元以上的路径 ([PPCChief, 引自 MAGNA / GroupM / Dentsu, 2026](https://ppcchief.com/digital-ad-spend-statistics); [MAGNA, 2026](https://magnaglobal.com/ad-forecast-media-innovation-to-propel-the-global-ad-market/))。Alphabet 的 Google 广告业务在 **FY2025 营业收入为 2,947 亿美元**, 即约占全球数字广告支出的 **35%**——已经是主导份额。增量营业收入的可服务机会来自 **(a) 联网电视 / YouTube Shorts**、**(b) 商务 / 零售媒体** (目前 Amazon 领先) 以及 **(c) AI 生成创意与竞价** (含 Gemini 生成素材的 Performance Max)。我们估计 Alphabet 的 SAM (即排除微信等 Google 不运营的封闭生态系统) 2026 年约为 6,500 亿美元, 保守假设 36–38% 份额——意味着广告 SOM 约为 2,400–2,500 亿美元, 与 FY2026 广告业务运行率一致。
+下图为 FY2025 现金流 Sankey, 显示经营现金流 (1,647 亿美元) 如何被 capex (914 亿)、回购 (457 亿)、股息 (100 亿) 与净发债分配——直观呈现 capex 对自由现金流 (FCF) 的吞噬:
 
-### 8.2 云 + AI 服务——TAM 扩展至 2028E 8,000 亿美元+
+![Alphabet 现金流 Sankey FY2025](charts/goog_cashflow_sankey.svg)
+*来源: [Alphabet 2025 10-K, "Consolidated Statements of Cash Flows"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)。*
 
-云基础设施支出有望在 2026 年达到约 8,000 亿美元, 一致预测以 **2028 年前 20%+ CAGR** 复合增长, 主要由 AI 工作负载驱动 ([Programming-Helper, 2026](https://www.programming-helper.com/tech/cloud-computing-market-share-2026-aws-azure-google-cloud-analysis))。在当前 13% 市场份额和 **Q1 2026 营业收入增长 63%** 的情况下, Google Cloud 是该板块的份额获取者。Q1 2026 积压订单 **>4,600 亿美元**——公司预期 "略多于 50% 将在未来 24 个月内确认" ([Alphabet 2025 10-K, "Revenue Backlog"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))——为 2026–2028 云营业收入爬坡提供了高可见度。如果 Google Cloud 在 2028 年的超大规模云服务商份额中拿下 18–20%, 这意味着 **2028E 云营业收入约 1,600–2,000 亿美元**, 相较当前 800 亿美元 Q1'26 年化运行率。
-
-### 8.3 无人驾驶移动出行——短期 TAM 数百亿美元; 成熟期数千亿美元
-
-仅美国 Rideshare 业务今日年化总账单已 >500 亿美元。替换驾驶员份额成本 (通常约 70%) 并加上更高利用率, 意味着 **美国 Robotaxi 总 TAM 在成熟期为 1,500–2,500 亿美元** (15 年以上)。Waymo 当前 50 万次/周搭乘运行率年化约为 2,600 万次/年——仍不到美国 Rideshare 总量的 0.5%。20+ 城市扩张加上东京和伦敦开启了新的可寻址市场; 我们将 Waymo 视为 2030 年以后规模有意义的营业收入贡献者, 以及 2026–2028 期间通过外部融资带来估值标记的贡献者。上一轮私募估值: >450 亿美元 (2024-10)。
-
-### 8.4 渗透策略
-
-Alphabet 的增长策略最准确的表述是 **"在每个触点继续保持 AI 默认, 然后通过广告 (已成熟) 与云 (正加速) 变现"**。具体 2026–2028 向量:
-
-- **AI 驱动的搜索。** 增量推出 AI Overviews 与 AI Mode, 以防御 Search 查询份额并将商业意图嵌入 AI 响应。
-- **Gemini Enterprise + Vertex。** 将 Gemini Enterprise 交叉销售给现有 Google Workspace 客户基础 (30 亿+ 用户) 和命名 GCP 账户; Pichai 指出 Q1 2026 **付费月活环比增长 +40%** ([Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
-- **打包订阅。** 在 3.5 亿+ ARPU 上叠加 YouTube Premium / Music + Google One AI Pro/Ultra——相对 MAU 基础仍有大量空间。
-- **Waymo 作为可信的 Robotaxi 网络。** 城市、车队与平台合作 (现代、JLR、极氪 Zeekr)。
-- **Other Bets / 少数股权的期权价值**——最具影响力的是按 3,800 亿美元 Series G 估值持有的 14% Anthropic 股权 (约 530 亿美元账面标记) ([Reuters / TheStreet 报道, 2026](https://www.thestreet.com/investing/alphabets-quiet-110b-waymo-move-blows-up-other-bets-narrative))。
+### 8.3 无人驾驶移动出行 TAM
+*分析师观点:* 大摩预测 Waymo 到 2032 年年收入约 200 亿美元, 车队规模以 78% 年复合增长率扩张至 11.8 万辆; 但即便如此, Waymo 在 2026 年 2 月一轮融资中估值约 1,260 亿美元, 仅占 Alphabet 当时企业价值的约 4%——即 Waymo 是期权而非当下估值的主体 ([Morgan Stanley — "Waymo's Acceleration", 2026-03-26](http://xs-macbook-air.local:5001/zsxq/pdf/212224152414221/Morgan%20Stanley-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Waymo%E2%80%99s%20Acceleration%20and%20What%20It%20Means%20for%20Uber-260326.pdf))。
 
 ---
 
 ## 9. 风险评估
 
-### 公司特定风险
+### 9.1 公司特定风险
+- **Search 份额被生成式 AI 分流。** 若 ChatGPT / Perplexity / Meta 搜索及 Apple/Siri 截留大量原生检索, Alphabet 最赚钱的 Search 业务首当其冲——这是估值最大的单一摆动变量 ([Barclays, 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/585411122121284/Barclays-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Unpacking%20The%20AI%20Transition%20In%20Search-260604.pdf))。
+- **AI 货币化不及预期。** AI Overviews 的广告加载量与每次查询经济性若劣于传统蓝链, 可能在扩大查询量的同时压低单位变现。
+- **双重股权治理。** 创始人 B 类股 10 票/股的控制权使外部股东无纠错手段 ([Alphabet 2025 10-K, 股本结构](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
 
-1. **AI 颠覆 Search 经济性 (高)。** 生成式答案压缩点击率 (零点击 43%, AI Mode 模式下 93%) ([Stackmatix, 2026-03](https://www.stackmatix.com/blog/ai-search-market-share-2026))。风险不在于 Google 失去查询份额——份额仍在保持——而在于如果商业意图在点击之前就得到满足, 每次查询变现可能下降。缓解措施: AI Overviews 现在会同时展示赞助商投放; Search 营业收入在 **Q1 2026 同比加速至 +19%**, 表明转型在目前对变现实际上是净正向的。我们仍将其视为单一最大的基本面风险。
+### 9.2 行业 / 市场风险
+- **反垄断 / 监管。** 美国 DOJ 反垄断诉讼 (Search 默认协议、广告技术) 与全球监管 (欧盟 DMA) 是持续的结构性风险, 极端情形下可能要求剥离业务或终止 Apple 默认协议 ([Alphabet 2025 10-K, Item 1A Risk Factors / Legal Matters](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
+- **AI capex 军备竞赛。** 行业级 capex 螺旋若 ROI 不达预期, 将同时压制 FCF 与利润率。
 
-2. **美国 DOJ Search 与 Ad-Tech 救济执行 (高)。** Mehta 法官 2025 年 9 月的裁定: 无需剥离 Chrome, 但强制数据共享 (搜索索引 + 用户交互, 不含广告数据)、禁止排他性分发协议、设立技术委员会监督机制 ([NPR, 2025-09-02](https://www.npr.org/2025/09/02/nx-s1-5478625/google-chrome-doj-antitrust-ruling); [Congress.gov LSB11362](https://www.congress.gov/crs-product/LSB11362))。Google 于 2026 年 1 月 16 日提出上诉, DOJ 于 2026 年 2 月 3 日提出交叉上诉 ([PYMNTS, "Justice Department to Appeal", 2026](https://www.pymnts.com/google/2026/justice-department-to-appeal-ruling-in-google-search-antitrust-case/))。缓解: 结构性分拆这一核心熊市情境已规避; Alphabet 保留 Chrome 和 Android; 数据共享义务有限, 不含广告数据。
+### 9.3 财务风险
+- **TPU 总额法确认稀释云利润率。** *分析师观点:* 瑞银测算 GCP 分部利润率可能从 1Q26 的 32.9% 压缩至 2027 年约 27.3% ([UBS, 2026-06-03](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484411/UBS-Alphabet%20Inc.%20~%20Class%20A%EF%BC%88GOOGL.US%EF%BC%89Stacking%20the%20Backlog%20from%20the%20AI%20Labs%EF%BC%8C%20Meta%EF%BC%8C%20and%20Vertex-260603.pdf))。
+- **盈利质量波动。** FY2025 净利润被 298 亿美元、Q1 2026 被 377 亿美元的**非交易性证券未实现收益**推高, 这是高波动的非经营项目, 反向波动年份会显著拖累报表净利 ([Alphabet Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
+- **资本结构加杠杆。** FY2025 净发债约 322 亿 + 2026-06 新设 400 亿 ATM 股权计划 + 多笔债券, 为 capex 预先融资 ([Alphabet 8-K, 2026-06-04](https://www.sec.gov/Archives/edgar/data/1652044/000119312526257724/d83560d8k.htm))。
 
-3. **分发合作伙伴集中度 (Apple Safari 默认)。** 单一 Apple Safari 关系从历史上看是 Search 最大的单一分发渠道。救济令禁止排他性分发协议, 打开了重新谈判窗口, 苹果可能考虑 OpenAI 或其他合作伙伴。
+### 9.4 宏观经济风险
+- **广告周期性。** 数字广告对宏观高度敏感; 经济走弱直接压制广告主预算。
+- **汇率。** 约 52% 营收来自美国以外, 美元走强构成逆风 ([Alphabet 2025 10-K, "Revenue by Geographic Location"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
 
-4. **资本开支执行与折旧拖累 (中)。** FY2026 1,800 亿美元资本开支以 ~5–6 年的折旧周期摊销, 意味着 2028 年前每年增量 D&A (折旧与摊销) ~300 亿美元+, 必须与云营业收入 / Search 效率提升相匹配。如果云增速放缓或积压订单转化滞后, 营业利润率可能压缩。缓解: 2025 年末积压订单 2,428 亿美元和 Q1 2026 末 >4,600 亿美元意味着高度营业收入可见性 ([Alphabet 2025 10-K](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm); [Q1 2026 业绩公告](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm))。
+### 9.5 关键分歧与催化剂 (Key debates & catalysts)
 
-5. **创始人控制权治理。** Page (B 类 46.5% / 总投票权 27.4%) 与 Brin (42.9% / 25.3%) 合计控制 ~52.7% 的投票权, 尽管他们持股比例总体较小 ([2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm))。独立股东在资本配置、战略或并购上的杠杆结构性受限。
+**核心分歧 (本方观点对每条的回应):**
+1. *"AI 会颠覆 Search 的现金牛地位。"* —— 反驳: 约七成流量来自 Chrome / Google App 自有渠道, 且 AI 模式抬升商业检索量与点击率; 短期更大风险是 Apple/Siri 分流, 而非通用聊天机器人 ([Barclays, 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/585411122121284/Barclays-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Unpacking%20The%20AI%20Transition%20In%20Search-260604.pdf))。
+2. *"TPU 总额法确认让云增长'虚胖'、不带利润。"* —— 部分认同 (UBS 的审慎核心), 但 Vertex AI 高毛利占比放大后利润率有望在 2028 年起重新扩张; 这是本报告基准目标价偏向审慎、未给牛市倍数的原因 ([UBS, 2026-06-03](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484411/UBS-Alphabet%20Inc.%20~%20Class%20A%EF%BC%88GOOGL.US%EF%BC%89Stacking%20the%20Backlog%20from%20the%20AI%20Labs%EF%BC%8C%20Meta%EF%BC%8C%20and%20Vertex-260603.pdf))。
+3. *"1,800–1,900 亿美元 capex 是无纪律的烧钱。"* —— 反驳: 回收锚定 4,620 亿美元已签约 backlog, 管理层强调 ROI 驱动; 但这是最该持续盯紧的变量。
 
-6. **Gemini 时代的人才 / 关键人物风险。** DeepMind / Research 负责人 Demis Hassabis 及一大批资深研究员都是 AI 人才市场上的抢手自由人。薪酬通胀是该风险的主要财务表现; Alphabet 2025 年研发费用为 **611 亿美元 (同比 +23.8%)** ([Alphabet 2025 10-K, "Income Statement"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
-
-### 行业 / 市场风险
-
-7. **AI 平台竞争强度。** OpenAI / Microsoft 联盟、Anthropic (同时是云客户与被投企业)、Meta 开源 LLaMA、xAI 以及一长串中国实验室都拥挤在模型层。差异化必须来自基础设施经济性、分发和产品集成——Alphabet 在这些方面定位良好, 但需要持续执行。
-
-8. **欧盟监管——DMA、DSA、AI Act。** Search、Android、Chrome、YouTube、Maps 与 Google Ads 的指定看门人义务。风险: 持续的合规成本和额外的解绑要求 (如选择屏幕、数据可移植性指令)。缓解: 这些大多已进入成熟实施阶段, 而非开放式执法阶段。
-
-9. **广告周期敏感性。** 尽管 Alphabet 是多渠道公司, 仍有约 73% 营业收入来自广告, 经济衰退将首先压缩品牌预算类目。缓解: 基于绩效、ROI 可归因的广告 (Search、Performance Max) 在经济放缓中比品牌电视广告表现更好。
-
-10. **网络安全 / 隐私事件风险。** Gmail、Drive、Workspace 或云客户数据的重大泄露既是监管打击也是声誉打击。待交割的 Wiz 收购在某种程度上正是针对这一点的防御与工具投资。
-
-### 财务风险
-
-11. **资本开支 / 自由现金流压缩风险。** FY2025 自由现金流 (经营现金流 1,647 亿美元减去资本开支 914 亿美元) 约为 733 亿美元。FY2026 在 1,800 亿美元资本开支指引下, 即使经营现金流同比增长 +15%, 自由现金流也将压缩至大约 100–200 亿美元——大幅收窄。在此底层盈利水平下, 回购 (2025 年 457 亿美元) 与现已为 0.22 美元的股息并未受到威胁, 但 **自由现金流的视觉效应** 将成为 2026 全年关注焦点 ([Alphabet 2025 10-K, "Consolidated Statements of Cash Flows"](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm))。
-
-12. **估值倍数收缩风险。** GOOG 当前 TTM P/E 29.2 倍, 高于其 3 年均值 ~23 倍 ([MacroTrends, GOOGL P/E](https://www.macrotrends.net/stocks/charts/GOOGL/alphabet/pe-ratio))。当前倍数由 Search 再加速 (+19%) 和云 (+63%) 以及 2028 年以后资本开支正常化后自由现金流快速搭建支撑, 但任何关于云增速或 Search 广告费率的预期未达将可能触发快速再评级至 META 的 ~22 倍或 MSFT 的 ~25 倍——即 15–25% 的折价。P/S 11 倍也高于 META (7.2 倍) 但低于 NVDA (25 倍)。这是一个观察清单风险, 而非即时红旗, 因为该倍数远低于技能清单中标记的 >50 倍门槛。
-
-### 宏观经济风险
-
-13. **外汇风险。** 52% 营业收入来自非美国; 美元走强压缩报表增速 (Q1 2026 报表 +22% vs. 不变汇率口径 +19%)。缓解: 持续的套保项目。
-
-14. **地缘政治——美国/中国科技脱钩与 AI 出口管制。** Google Search 与大部分 Google 服务在中国被屏蔽, 因此直接营业收入风险有限; 然而, GPU / TPU 供应链 (台积电、SK 海力士 HBM)、数据中心能源以及围绕模型权重与芯片的 AI 出口规则是上游约束。缓解: Google 有大量自研芯片 (TPU) 和全球多元化数据中心覆盖。
+**未来 12 个月催化剂:** (a) 每季度 Google Cloud 分部利润率走向 (验证 TPU 稀释 vs 营业杠杆之争); (b) DOJ 反垄断救济裁决 (Search 默认协议存废); (c) Apple WWDC / Siri 升级对 Search 流量的实际影响; (d) Gemini 新模型与 Agentic 商务 (Universal Cart / Spark) 的货币化数据; (e) Waymo 周行程向 100 万次的爬坡。建议用 catalyst-calendar 技能持续跟踪。
 
 ---
 
-## 10. 参考资料
+## 10. 投资视角评分 (Investor Lenses)
 
-### 一手——SEC 文件 (Alphabet Inc.)
+*以下评分为本报告基于第 1–9 章已引用事实的分析叠加 (analyst overlay), 标注 `*视角观点:*`, 非任何投资人本人的背书。周期快照来源: indicators.db 本地快照 (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-14。*
 
-- [Alphabet 2025 年度报告 Form 10-K (2026 年 2 月提交; 财年截至 2025 年 12 月 31 日)](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)——FY2025 财务数据、板块数据、地理构成、资本开支、员工人数、反垄断披露、回购、债务、股息和风险因子的一手来源。
-- [Alphabet Q1 2026 业绩新闻稿 (8-K 附件 99.1, 2026-04-29 提交)](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm)——Q1 2026 营业收入、板块增长、EPS、股息上调、Waymo、Gemini、积压订单的一手来源。
-- [Alphabet Q1 2026 10-Q (2026 年 4 月提交)](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000048/goog-20260331.htm)——Q1 2026 详细财务数据。
-- [Alphabet 2026 委托书 DEF 14A——2026 年 4 月提交](https://www.sec.gov/Archives/edgar/data/0001652044/000130817926000342/d918244ddef14a.htm)——执行高管简历、NEO 薪酬、受益所有权表、公司治理。
-
-### 一手——公司官网 / 投资者关系
-
-- [Alphabet 投资者关系](https://abc.xyz/investor)
-- [Alphabet "Our History" 页面](https://about.google/our-story/)
-- [Google Gemini 发布说明](https://gemini.google/release-notes/)
-- [Larry Page, "G is for Google" 致股东信, 2015](https://abc.xyz/investor/founders-letters/2015/index.html)
-- [Google Store](https://store.google.com/)
-
-### 二手——新闻与分析师 (过去 12 个月)
-
-- [CNBC, "Alphabet resets the bar for AI infrastructure spending", 2026-02-04](https://www.cnbc.com/2026/02/04/alphabet-resets-the-bar-for-ai-infrastructure-spending.html)
-- [Reuters, "Google to buy Wiz for $32 billion", 2025-03-18](https://www.reuters.com/technology/google-buy-cyber-startup-wiz-32-billion-2025-03-18/)
-- [NPR, "In a major antitrust ruling, a judge lets Google keep Chrome but levies other penalties", 2025-09-02](https://www.npr.org/2025/09/02/nx-s1-5478625/google-chrome-doj-antitrust-ruling)
-- [U.S. DOJ, "Department of Justice Wins Significant Remedies Against Google", 2025-09](https://www.justice.gov/opa/pr/department-justice-wins-significant-remedies-against-google)
-- [Congress.gov CRS Legal Sidebar LSB11362, "remedies decision"](https://www.congress.gov/crs-product/LSB11362)
-- [PYMNTS, "Justice Department to Appeal Ruling in Google Search Antitrust Case", 2026-02](https://www.pymnts.com/google/2026/justice-department-to-appeal-ruling-in-google-search-antitrust-case/)
-- [Jewish Insider, "Alphabet's AI bet shows early returns under Israeli-American CFO Anat Ashkenazi", 2026-02](https://jewishinsider.com/2026/02/anat-ashkenazi-ai-alphabet-cfo-eli-lilly-tech-google-israeli-american/)
-- [CNBC, "Alphabet CFO Anat Ashkenazi jumps from GLP-1 boom to generative AI", 2024-06-06](https://www.cnbc.com/2024/06/06/alphabet-cfo-anat-ashkenazi-jumps-from-glp-1-boom-to-generative-ai.html)
-- [Wikipedia — Anat Ashkenazi](https://en.wikipedia.org/wiki/Anat_Ashkenazi)
-- [TheStreet, "Alphabet's quiet $110B Waymo move blows up 'other bets' narrative", 2026](https://www.thestreet.com/investing/alphabets-quiet-110b-waymo-move-blows-up-other-bets-narrative)
-- [TechCrunch, "Waymo's skyrocketing ridership in one chart", 2026-03-27](https://techcrunch.com/2026/03/27/waymo-skyrocketing-ridership-in-one-chart/)
-- [Electrek, "Waymo expands robotaxi coverage more than 20%", 2026-05-13](https://electrek.co/2026/05/13/waymo-expands-coverage-1400-square-miles-11-cities/)
-- [Data Center Frontier, "Google's TPU Roadmap: Challenging Nvidia's Dominance", 2026-01](https://www.datacenterfrontier.com/machine-learning/article/55336429/googles-tpu-roadmap-challenging-nvidias-dominance-in-ai-infrastructure)
-- [Variety, "YouTube: 125 Million Music & Premium Subscribers", 2025-03](https://variety.com/2025/digital/news/youtube-125-million-music-premium-subscribers-lite-tier-1236328177/)
-- [Music Business Worldwide, "YouTube's subscription business is now generating roughly $20bn a year", 2026-02-05](https://www.musicbusinessworldwide.com/youtubes-subscription-business-is-now-generating-around-20bn-a-year-with-music-a-key-growth-driver/)
-- [Yahoo Finance / Variety, "How Big Is YouTube? Revenue Topped $60 Billion In 2025", 2026-02](https://finance.yahoo.com/news/big-youtube-revenue-topped-60-223942275.html)
-- [TheStreet, "Sundar Pichai's net worth: How much does Alphabet's CEO make?"](https://www.thestreet.com/personalities/sundar-pichai-net-worth)
-- [Ferguson Wellman, "The Magnificent Capex: AI Infrastructure Spending and Who Actually Benefits", 2026-05-08](https://www.fergusonwellman.com/blog/2026/5/8/the-magnificent-capex-ai-infrastructure-spending-and-who-actually-benefits)
-
-### 二手——行业数据
-
-- [MAGNA 全球广告预测, 2026](https://magnaglobal.com/ad-forecast-media-innovation-to-propel-the-global-ad-market/)
-- [PPCChief, "Digital Ad Spend Statistics 2026"](https://ppcchief.com/digital-ad-spend-statistics)
-- [HeyGoTrade, "AWS vs Google Cloud vs Azure: Hyperscaler Stocks 2026"](https://www.heygotrade.com/en/blog/aws-vs-google-cloud-vs-azure-hyperscaler-race/)
-- [Programming-Helper, "Cloud Computing Market Share 2026: AWS, Azure, and Google Cloud"](https://www.programming-helper.com/tech/cloud-computing-market-share-2026-aws-azure-google-cloud-analysis)
-- [TechnologyChecker.io, "Search Engine Market Share 2026"](https://technologychecker.io/blog/search-engine-market-share)
-- [Stackmatix, "AI Search Market Share 2026: ChatGPT, Gemini & Perplexity Stats", 2026-03](https://www.stackmatix.com/blog/ai-search-market-share-2026)
-- [Vertu, "AI Chatbot Market Share 2026: ChatGPT Drops to 68% as Google Gemini Surges to 18.2%", 2026](https://vertu.com/lifestyle/ai-chatbot-market-share-2026-chatgpt-drops-to-68-as-google-gemini-surges-to-18-2)
-
-### 市场数据 (估值快照, 2026-05-20 取数)
-
-- [Yahoo Finance — GOOG (Alphabet C 类)](https://finance.yahoo.com/quote/GOOG/key-statistics)
-- [Yahoo Finance — MSFT](https://finance.yahoo.com/quote/MSFT/key-statistics)
-- [Yahoo Finance — META](https://finance.yahoo.com/quote/META/key-statistics)
-- [Yahoo Finance — AMZN](https://finance.yahoo.com/quote/AMZN/key-statistics)
-- [Yahoo Finance — AAPL](https://finance.yahoo.com/quote/AAPL/key-statistics)
-- [Yahoo Finance — NVDA](https://finance.yahoo.com/quote/NVDA/key-statistics)
-- [MacroTrends, GOOGL 市盈率历史 2012–2026](https://www.macrotrends.net/stocks/charts/GOOGL/alphabet/pe-ratio)
+- **Buffett 视角 (质优价合理, 0–100): ~78。** *视角观点:* 极高质量生意 (ROE 38.9%、净现金、宽护城河), 但 capex 跃升暂时压低 FCF、双重股权削弱股东友好度, 价格合理但非便宜。
+- **Munger 视角 (质量 + 反演, 0–10): ~8.0。** *视角观点:* 罕见的"分发 + 数据 + 自研芯片"复利机器; 反演最大破坏因素 = Search 被 AI 颠覆 + 监管强制剥离。
+- **Damodaran 视角 (故事 + 数字 DCF 安全边际): 适中正向。** *视角观点:* 以 indicators.db 的 10Y 国债收益率为无风险利率构建 WACC, Google Cloud 的高增长故事支撑温和正安全边际, 但 capex 与利润率稀释压缩了边际。
+- **Howard Marks 周期视角 (0–100): 中性偏进攻。** *视角观点:* 当前信用利差与 VIX 处于温和区间 (indicators.db 快照), 大盘科技动量强, 周期姿态允许适度进攻, 但需警惕 AI 叙事的拥挤度。
 
 ---
 
-*报告完。本文档为分析师准备的研究首次覆盖报告; 数据按所引用来源标注, 未经独立审计。作者在文中提及任何证券中均无持仓。最后更新于 2026-05-20。*
+## 11. 参考资料
+
+### 一手 —— SEC 文件 (Alphabet Inc., CIK 0001652044)
+- [Alphabet FY2025 10-K (filed 2026-02-05)](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000018/goog-20251231.htm)
+- [Alphabet Q1 2026 10-Q (filed 2026-04-30)](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000048/goog-20260331.htm)
+- [Alphabet Q1 2026 业绩公告 8-K 附件 99.1 (2026-04-29)](https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000043/googexhibit991q12026.htm)
+- [Alphabet 8-K — 400 亿美元 ATM 股权计划 / 债券 (2026-06-04)](https://www.sec.gov/Archives/edgar/data/1652044/000119312526257724/d83560d8k.htm)
+- [Alphabet 8-K — 年会表决 / 2021 股票计划增发 (2026-06-11)](https://www.sec.gov/Archives/edgar/data/1652044/000119312526267578/d57679d8k.htm)
+- [Alphabet 8-K — 首席会计官任命 (2026-06-05)](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000059/goog-20260602.htm)
+- [Alphabet 8-K — 高管股权授予 (2026-04-10)](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000034/goog-20260407.htm)
+- [Alphabet 2026 DEF 14A 委托书 (filed 2026-04-24)](https://www.sec.gov/Archives/edgar/data/1652044/000130817926000342/0001308179-26-000342-index.htm)
+
+### 一手 —— 公司官网 / 投资者关系
+- [Alphabet / Google "Our Story"](https://about.google/our-story/)
+- [Larry Page, "G is for Google" 致股东信 (2015)](https://abc.xyz/investor/founders-letters/2015/)
+
+### 二手 —— 机构研究 (本地库 db/zsxq.db, *分析师观点：*)
+- [Goldman Sachs — "Takeaways from Recent Events" (2026-05-21), Buy US$450](http://xs-macbook-air.local:5001/zsxq/pdf/184128222885212/Goldman%20Sachs-Alphabet%20Inc.%20%EF%BC%88GOOGL.US%EF%BC%89%20Takeaways%20from%20Recent%20Events%20%EF%BC%88Google%20I%20O%EF%BC%8C%20Marketing%20Live%EF%BC%8C%20YouTube%20Brandcast%20%26%20Android%20Show%EF%BC%89%EF%BC%9A%20Alphabet%E2%80%99s%20Agentic%20AI~Driven%20Future%20On%20Display-260521.pdf)
+- [Morgan Stanley — "Sparking the Agentic Torch" (2026-05-20), OW US$460](http://xs-macbook-air.local:5001/zsxq/pdf/212454158811451/Morgan%20Stanley-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Sparking%20the%20Agentic%20Torch-260520.pdf)
+- [J.P. Morgan — "Fully Stacked" (2026-04-30), OW US$460](http://xs-macbook-air.local:5001/zsxq/pdf/415515522155418/J.P.%20Morgan-Alphabet%EF%BC%88GOOG.US%EF%BC%89Fully%20Stacked-260430.pdf)
+- [Citi — "GML '26" (2026-05-21), Buy US$447](http://xs-macbook-air.local:5001/zsxq/pdf/415241445451188/CITI-Alphabet%20Inc%20%EF%BC%88GOOGL.US%EF%BC%89%20GML%20%E2%80%9926%EF%BC%9A%20Monetizing%20AI%20Search%20with%20New%20Ad%20Formats%EF%BC%8C%20Agentic%20Commerce%20Innovations%EF%BC%8C%20and%20E2E%20Automation-260521.pdf)
+- [Barclays — "Unpacking The AI Transition In Search" (2026-06-04), OW US$405](http://xs-macbook-air.local:5001/zsxq/pdf/585411122121284/Barclays-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Unpacking%20The%20AI%20Transition%20In%20Search-260604.pdf)
+- [UBS — "Stacking the Backlog" (2026-06-03), Neutral US$410](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484411/UBS-Alphabet%20Inc.%20~%20Class%20A%EF%BC%88GOOGL.US%EF%BC%89Stacking%20the%20Backlog%20from%20the%20AI%20Labs%EF%BC%8C%20Meta%EF%BC%8C%20and%20Vertex-260603.pdf)
+- [Morgan Stanley — "Waymo's Acceleration" (2026-03-26), OW](http://xs-macbook-air.local:5001/zsxq/pdf/212224152414221/Morgan%20Stanley-Alphabet%20Inc.%EF%BC%88GOOGL.US%EF%BC%89Waymo%E2%80%99s%20Acceleration%20and%20What%20It%20Means%20for%20Uber-260326.pdf)
+- [J.P. Morgan — "2026 World Cup Beneficiaries" (2026-06-11)](http://xs-macbook-air.local:5001/zsxq/pdf/584255214545854/J.P.%20Morgan-Equity%20Thematic%20Strategy%EF%BC%9A2026%20World%20Cup%20Beneficiaries-260611.pdf)
+
+### 市场数据 (估值快照, 2026-06-12 取数)
+- [Yahoo Finance / yfinance — GOOG 报价与核心统计](https://finance.yahoo.com/quote/GOOG/key-statistics)
+- [MacroTrends — GOOGL P/E 历史](https://www.macrotrends.net/stocks/charts/GOOGL/alphabet/pe-ratio)
+
+### Data Used (数据清单)
+- **SEC EDGAR (CIK 0001652044):** FY2025 10-K (利润表 / 资产负债表 / 现金流量表 / 分部注 / 地理收入 / 收入类型), Q1 2026 10-Q (利润表 / 分部 / RPO backlog / Wiz & Intersect 收购 / GFiber 处置), Q1 2026 8-K (业绩 / 股息 / 订阅 / 员工数 / TAC), 2026-06 系列 8-K (ATM / 债券 / 年会 / 高管任命), 2026 DEF 14A。
+- **市场数据:** yfinance (GOOG 及 Mag-7 同业价格 / 倍数 / 52 周区间 / 均线 / 1Y & 6M 回报, 2026-06-12), MacroTrends (P/E 历史)。
+- **机构研究 (db/zsxq.db, sell-side):** GS / MS / JPM / Citi / Barclays / UBS / BofA / Deutsche Bank / Bernstein 的 9+ 篇 GOOG/GOOGL 单名笔记 (2026-03 至 2026-06); 价格目标预读取自只读 db/stock_price_target.db。
+- **图表:** 9 张 stdlib-SVG (GF Score 雷达 / 利润表-资产负债表-现金流 Sankey / 分部 & 地理 donut / 历史营收柱 / DuPont / AI 资金流), 全部由 FY2025 10-K + Q1 2026 数据驱动。
+
+<details>
+<summary>Verification log (Step 10) — 2026-06-14</summary>
+
+**刷新范围:** 本次为对既有 Alphabet (NASDAQ:GOOG) 报告的全量刷新 (full refresh) 至当前 spec——补齐决策层 (投资摘要头 / 1A 估值目标价 / 1B GF Score / 第 2 章前瞻模型与卖方观点演变 / 9.5 关键分歧 / 第 10 章视角评分 / Data Used 清单 / 验证日志), 并将旧版 matplotlib PNG 图表替换为 9 张 stdlib-SVG 图表。
+
+**Step 0.5 sec-report-summary** — skipped (refresh, not initiation; 既有覆盖已建立多年历史脉络, 本次以 FY2025 10-K + Q1 2026 10-Q 的最新一手数据为主, 历史演变线在第 4、6、9 章直接由连续 10-K 比较构建)。
+
+**URL 检查:** 所有 SEC URL 通过 EDGAR submissions JSON (CIK0001652044.json) 解析真实文件名——10-K (000165204426000018/goog-20251231.htm)、Q1 10-Q (000165204426000048/goog-20260331.htm)、Q1 8-K (000165204426000043)、2026-06 8-K (000119312526257724 / 000119312526267578 / 000165204426000059)、2026-04 8-K (000165204426000034)、2026 DEF 14A (000130817926000342) 均经 EDGAR 索引核对。MacroTrends GOOGL P/E 页 HTTP 200 (real-browser UA)。abc.xyz 2015 founders-letter 旧 URL (含 index.html) 返回 500, 已替换为 200-OK 的 `https://abc.xyz/investor/founders-letters/2015/`。zsxq 本地 URL 为 `/zsxq/pdf/<file_id>/<filename>` 直下载格式, file_id 经 db/zsxq.db 核对存在。
+
+**10-K / 10-Q 数字 spot-check (string-match 一手文件):**
+- 总营收 402,836 (FY2025) / 109,896 (Q1'26) ✓ 经 R5 / R4 财报表核对
+- Google Services 342,721 / Google Cloud 58,705 / Other Bets 1,537 (FY2025) ✓ R44 分部注
+- Google Cloud 分部经营利润 13,910 (FY2025, 利润率 23.7%) / 6,598 (Q1'26, 约 33%) ✓ R90 / Q1 8-K segment results
+- capex 32,251 (2023) / 52,535 (2024) / 91,447 (2025) ✓ R10 现金流量表
+- 现金+证券 126,843 / 长期债务 46,547 (FY2025) ✓ R3 资产负债表
+- RPO backlog 467.6bn 总 / 462.3bn Cloud (Q1'26) ✓ Q1 10-Q R41 narrative
+- Wiz 收购 29.5bn / Intersect 5.9bn / GFiber 49.99% (Q1'26) ✓ Q1 10-Q R69
+- 摊薄 EPS 10.81 (FY2025) / 5.11 (Q1'26) ✓ R5 / R4
+- 净发债: proceeds 64,564 − repayments 32,427 ≈ 净 32,137 (FY2025) ✓ R10
+- 员工数 190,820 (FY2025末, per 10-K) / 194,668 (Q1'26) ✓; Q1'26 TAC 15,228 ✓
+
+**重要修正 (vs 旧版报告):** (1) 旧版称 Q1'26 "云业务运营收入激增 3 倍至 66 亿美元"——其中 "66 亿" 实为 Google Cloud **分部**经营利润 65.98 亿美元 (Q1'26), 已在本版明确标注为分部口径。(2) 旧版将 FY2026 capex 指引 (1,750–1,850 亿) attach 给 10-K——经核, 该指引来自业绩电话会而非 10-K 正文, 本版改为: 历史 capex 数字 attach 给 10-K 现金流量表, FY2026 指引 (1,800–1,900 亿, 经 Q1 上调) 标注为 `*分析师观点：*` 并 cite JPM 笔记。(3) 旧版未披露 Wiz (295 亿)、Intersect (59 亿)、GFiber 处置、400 亿 ATM 股权计划——均为本版新增的 Q1'26 / 2026-06 重大事项。
+
+**财报图表 (financial_charts.py) 数字 string-match:** 利润表 Sankey (402,836 / 162,535 / 129,039 / 132,170)、资产负债表 Sankey (总资产 595,281 / 物业设备 246,597)、现金流 Sankey (CFO 164,713 / capex 91,447)、DuPont (ROE 由 132,170 / 415,265 等驱动)、分部 donut、地理 donut、历史营收柱、AI 资金流——所有传入数字均来自 FY2025 10-K 财报表, 已逐一核对。9 张图均为 stdlib-SVG, 以 `![](charts/*.svg)` 引用, `--source` 页脚已 bake-in。
+
+**Money-flow 节点核对:** Broadcom (TPU 联合设计 — Analyst view, MS 笔记)、TSMC、Nvidia、HBM 内存厂 (SK Hynix/Samsung/Micron)、Intersect (5.9bn 收购 — Q1 10-Q) 均为真实可溯供应商 / 收购方; ribbon 标签的 capex 占比 (~60%/40%) 为管理层指引口径 (Analyst view); $5.9B 等数字 string-match 引用源。
+
+**机构研究 (sell-side) 使用:** 找到 GOOG/GOOGL 单名笔记 28+ 条 (db/stock_price_target.db) + 多篇 PDF 摘要; 本报告使用 9 篇并构建卖方观点演变 (按机构时间线 + 机构间分歧表)。每篇均标 `*分析师观点：*`、cite 到 `/zsxq/pdf/<id>/<file>` 直下载路径、配对报告日价 (upside_pct 经 /pt 视图核对)。db/stock_price_target.db 只读预读已先于 PDF 重读完成。
+
+**残留未决 (residual unknowns):** (1) FY2026 capex 精确区间因来自电话会、各券商转述略有出入 (1,750–1,850 vs 1,800–1,900), 本版采用 Q1 上调后口径并标注为 Analyst view; (2) GCP 分部利润率前瞻 (UBS 27.3% vs 乐观方持续抬升) 是核心未决分歧, 已在 9.5 明确呈现而非取单一值; (3) Waymo / Other Bets 估值为期权性质, 未纳入基准目标价主体。
+
+</details>
