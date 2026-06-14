@@ -1,0 +1,52 @@
+{
+  "eyebrow": "Rio Tinto 资金流 · FY2025",
+  "title": "力拓的钱从哪来、到哪去 (demand/revenue view)",
+  "thesis": "中国钢厂是最大付款方 (~50%+ 销售)；钱流入四个产品组，再以 COGS + US$12.3bn capex 的形式流向 JV 伙伴、能源、Pilbara 港铁与海运等成本池。",
+  "stages": ["谁在付钱 (终端需求)", "力拓的产品组", "钱流向哪里 (成本/资本池)"],
+  "nodes": [
+    {"id": "china", "stage": 0, "label": "CHINA STEEL MILLS", "kind": "buyer", "sub": ["中国钢厂 — Baowu 等", "集团 ~50%+ 销售"], "h": 120},
+    {"id": "asia", "stage": 0, "label": "JP/KR/SEA MILLS", "kind": "buyer2", "sub": ["日韩与东南亚钢厂", "高品位块矿/球团"]},
+    {"id": "battery", "stage": 0, "label": "EV & BATTERY", "kind": "compute", "sub": ["正极/电池厂", "Tesla·LGES·Toyota (Arcadium 历史客户)"]},
+    {"id": "smelter", "stage": 0, "label": "SMELTERS & EV/GRID", "kind": "power", "sub": ["铜冶炼/电缆", "低碳铝下游"]},
+
+    {"id": "iron", "stage": 1, "label": "IRON ORE", "kind": "neutral", "sub": ["~60% 集团 EBITDA", "327.3 Mt Pilbara"], "h": 110},
+    {"id": "copper", "stage": 1, "label": "COPPER", "kind": "power", "sub": ["EBITDA 翻倍 → 7.4bn", "Oyu Tolgoi 爬坡"]},
+    {"id": "allith", "stage": 1, "label": "ALUMINIUM & LITHIUM", "kind": "compute", "sub": ["EBITDA 4.6bn", "Arcadium 并表"]},
+
+    {"id": "jv", "stage": 2, "label": "JV PARTNERS", "kind": "buyer", "sub": ["Baowu (Western Range 46% / Simandou)", "Chinalco·CIOH·蒙古政府 34%"]},
+    {"id": "energy", "stage": 2, "label": "ENERGY & HYDRO", "kind": "power", "sub": ["魁北克/冰岛水电铝", "柴油·电力 (运营成本)"]},
+    {"id": "infra", "stage": 2, "label": "PILBARA RAIL/PORT + FREIGHT", "kind": "foundry", "sub": ["~2,000km 私人重载铁路", "Capesize 海运 (运费 +30% YTD)"]},
+    {"id": "capex", "stage": 2, "label": "CAPEX & EQUIPMENT", "kind": "neutral", "sub": ["US$12.3bn FY2025 capex", "Simandou·Oyu Tolgoi·替代矿"], "h": 110}
+  ],
+  "flows": [
+    {"from": "china", "to": "iron", "weight": 24, "style": "direct", "label": "铁矿石 ~50%+ 销售"},
+    {"from": "asia", "to": "iron", "weight": 11, "style": "direct"},
+    {"from": "battery", "to": "allith", "weight": 8, "style": "direct", "label": "锂盐/铝"},
+    {"from": "smelter", "to": "copper", "weight": 10, "style": "direct", "label": "铜精矿/阴极铜"},
+    {"from": "smelter", "to": "allith", "weight": 5, "style": "direct"},
+
+    {"from": "iron", "to": "jv", "weight": 9, "style": "direct", "label": "权益分成/合资"},
+    {"from": "iron", "to": "infra", "weight": 12, "style": "direct", "label": "港铁+海运"},
+    {"from": "iron", "to": "capex", "weight": 9, "style": "direct", "label": "替代矿+Simandou"},
+    {"from": "copper", "to": "jv", "weight": 6, "style": "direct", "label": "OT 蒙古政府 34%"},
+    {"from": "copper", "to": "capex", "weight": 7, "style": "direct"},
+    {"from": "allith", "to": "energy", "weight": 8, "style": "direct", "label": "水电/电力"},
+    {"from": "allith", "to": "capex", "weight": 5, "style": "embedded"}
+  ],
+  "cards_title": "Follow the money — 力拓资金流五条主线",
+  "cards": [
+    {"kind": "buyer", "tag": "需求端 · 谁付钱", "title": "中国是单一最大付款方",
+     "body": "中国占集团销售收入 *~50%+*，几乎全部经由铁矿石部门兑现；日韩与东南亚钢厂构成第二大付款群，偏好高品位块矿与球团。"},
+    {"kind": "neutral", "tag": "压舱石 · 现金奶牛", "title": "铁矿石仍是 60% 利润来源",
+     "body": "Iron Ore 贡献 *~60%* 集团 EBITDA、FY2025 *US$15.2bn*；Pilbara 产量 *327.3 Mt*。这条主动脉把现金回流到 JV 分成、港铁/海运与替代矿 capex。"},
+    {"kind": "power", "tag": "增长极 · 第二轴", "title": "铜 EBITDA 一年翻倍",
+     "body": "Copper EBITDA 从 *US$3.4bn* 跳升至 *US$7.4bn* (+114%)，由 Oyu Tolgoi 地下矿爬坡驱动；蒙古政府持有 OT *34%*，是铜端的主要资金分流方。"},
+    {"kind": "foundry", "tag": "钱流向 · 基础设施", "title": "港铁与海运是隐形成本池",
+     "body": "Pilbara 近 *2,000km* 私人重载铁路 + 港口，以及 Capesize 海运 (运费年内 *+30%*)，吃掉铁矿石部门相当一部分 COGS，是不可短期复制的护城河也是固定成本黑洞。"},
+    {"kind": "neutral", "tag": "钱流向 · 资本开支", "title": "US$12.3bn capex 进入高峰期",
+     "body": "FY2025 capex *US$12.3bn* (vs FY2024 *US$9.6bn*)，主要流向 Simandou、Oyu Tolgoi、Hope Downs 2、Western Range、Rincon、Nemaska — 同时爬坡是当前最大执行风险，并把 FCF 压到 *US$4.0bn*。"},
+    {"kind": "compute", "tag": "需求端 · 转型材料", "title": "EV/电池是锂铝的增量买家",
+     "body": "Arcadium 历史客户含 *Tesla·LG Energy Solution·Toyota*；锂盐与低碳铝把资金引向魁北克/冰岛 *水电* 冶炼基地——欧盟 CBAM 下的议价筹码。"}
+  ],
+  "source": "Rio Tinto FY2025 Annual Results 6-K (Ex 99.1) 2026-02-19; 20-F FY2025 (geographic sales); Bernstein Simandou note 2026-05-08 (freight +30%)"
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 销售收入地理分布 (集团合并口径)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 270.77,370.07 L 277.82,316.53 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 270.77,370.07 A 132 132 0 0 1 159.78,270.57 L 212.24,257.74 A 78 78 0 0 0 277.82,316.53 Z" fill="#15803d"/>
+<path d="M 159.78,270.57 A 132 132 0 0 1 168.98,182.11 L 217.67,205.47 A 78 78 0 0 0 212.24,257.74 Z" fill="#d97706"/>
+<path d="M 168.98,182.11 A 132 132 0 0 1 232.21,119.57 L 255.04,168.51 A 78 78 0 0 0 217.67,205.47 Z" fill="#7c3aed"/>
+<path d="M 232.21,119.57 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 255.04,168.51 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">Sales 57.6bn</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$57.6B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="425.70" y1="248.23" x2="441.70" y2="248.23" stroke="#2563eb" stroke-width="1.4"/>
+<text x="445.70" y="246.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">China 中国</text>
+<text x="445.70" y="260.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$30.0B  (52.1%)</text>
+<line x1="195.88" y1="341.96" x2="179.88" y2="341.96" stroke="#15803d" stroke-width="1.4"/>
+<text x="175.88" y="339.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other Asia 其他亚洲</text>
+<text x="175.88" y="353.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.0B  (19.1%)</text>
+<line x1="150.74" y1="224.92" x2="134.74" y2="224.92" stroke="#d97706" stroke-width="1.4"/>
+<text x="130.74" y="222.92" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Europe 欧洲</text>
+<text x="130.74" y="236.92" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.3B  (10.9%)</text>
+<line x1="190.95" y1="141.09" x2="174.95" y2="141.09" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="170.95" y="139.09" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">North America 北美</text>
+<text x="170.95" y="153.09" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.3B  (10.9%)</text>
+<line x1="258.13" y1="104.47" x2="242.13" y2="104.47" stroke="#dc2626" stroke-width="1.4"/>
+<text x="238.13" y="102.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other 其他</text>
+<text x="238.13" y="116.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.0B  (6.9%)</text>
+<text x="360.00" y="430.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">方向性拆分以满足饼图归一；精确口径以 20-F Geographic sales by destination 表为准</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Rio Tinto plc Form 20-F FY2025</text>
+</svg>
