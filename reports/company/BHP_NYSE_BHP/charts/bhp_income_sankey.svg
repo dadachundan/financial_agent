@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">BHP 如何赚钱 / How BHP Makes Its Money — FY2025 (US$M)</text>
+<path d="M 204.00,64.00 C 258.00,64.00 258.00,85.00 312.00,85.00 L 312.00,262.07 C 258.00,262.07 258.00,241.07 204.00,241.07 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,182.50 560.00,182.50 L 560.00,337.41 C 506.00,337.41 506.00,232.92 452.00,232.92 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,232.92 C 506.00,232.92 506.00,351.41 560.00,351.41 L 560.00,395.50 C 506.00,395.50 506.00,277.01 452.00,277.01 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,277.01 C 382.00,277.01 382.00,284.01 328.00,284.01 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,284.01 C 382.00,284.01 382.00,291.01 436.00,291.01 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,182.50 C 630.00,182.50 630.00,186.92 684.00,186.92 L 684.00,341.83 C 630.00,341.83 630.00,337.41 576.00,337.41 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,186.92 C 754.00,186.92 754.00,201.96 808.00,201.96 L 808.00,273.75 C 754.00,273.75 754.00,258.70 700.00,258.70 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,258.70 C 754.00,258.70 754.00,287.75 808.00,287.75 L 808.00,345.13 C 754.00,345.13 754.00,316.08 700.00,316.08 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,316.08 C 754.00,316.08 754.00,359.13 808.00,359.13 L 808.00,376.04 C 754.00,376.04 754.00,332.99 700.00,332.99 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,255.07 C 258.00,255.07 258.00,262.07 312.00,262.07 L 312.00,444.26 C 258.00,444.26 258.00,437.26 204.00,437.26 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,351.41 C 630.00,351.41 630.00,346.99 684.00,346.99 L 684.00,391.08 C 630.00,391.08 630.00,395.50 576.00,395.50 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,451.26 C 258.00,451.26 258.00,444.26 312.00,444.26 L 312.00,485.61 C 258.00,485.61 258.00,492.61 204.00,492.61 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,506.61 C 258.00,506.61 258.00,485.61 312.00,485.61 L 312.00,493.00 C 258.00,493.00 258.00,514.00 204.00,514.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="177.07" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="255.07" width="16" height="182.19" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="451.26" width="16" height="41.35" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="506.61" width="16" height="7.39" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="199.01" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="291.01" width="16" height="208.99" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="182.50" width="16" height="154.92" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="351.41" width="16" height="44.09" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="186.92" width="16" height="146.07" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="346.99" width="16" height="44.09" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="201.96" width="16" height="71.78" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="287.75" width="16" height="57.39" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="359.13" width="16" height="16.91" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="152.53" x2="182.00" y2="129.23" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="132.23" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Copper 铜</text>
+<text x="179.00" y="145.23" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$22.2B  (43.4%)</text>
+<line x1="188.00" y1="346.16" x2="182.00" y2="322.86" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="325.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Iron Ore 铁矿石</text>
+<text x="179.00" y="338.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$22.9B  (44.7%)</text>
+<line x1="188.00" y1="471.93" x2="182.00" y2="448.63" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="451.63" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Coal 炼焦煤</text>
+<text x="179.00" y="464.63" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.2B  (10.1%)</text>
+<line x1="188.00" y1="510.30" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other 其他</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$929.0M  (1.8%)</text>
+<rect x="331.00" y="67.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$51.3B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$25.0B  (48.8%)</text>
+<rect x="455.00" y="273.01" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="285.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="298.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$26.3B  (51.2%)</text>
+<rect x="579.00" y="164.50" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="176.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="189.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$19.5B  (38.0%)</text>
+<rect x="579.00" y="333.41" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="345.41" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="358.41" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.5B  (10.8%)</text>
+<rect x="703.00" y="168.92" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="180.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="193.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$18.4B  (35.8%)</text>
+<rect x="703.00" y="328.99" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="340.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="353.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.5B  (10.8%)</text>
+<text x="833.00" y="234.85" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="247.85" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$9.0B  (17.6%)</text>
+<text x="833.00" y="313.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="326.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$7.2B  (14.1%)</text>
+<text x="833.00" y="364.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Minority Interest</text>
+<text x="833.00" y="377.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.1B  (4.1%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: BHP FY2025 Form 20-F, Consolidated Income Statement + Note 2 Segments</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">BHP 现金流量 / Cash Flow — FY2025 (US$M)</text>
+<path d="M 424.00,71.00 C 526.00,71.00 526.00,78.00 628.00,78.00 L 628.00,263.15 C 526.00,263.15 526.00,256.15 424.00,256.15 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,78.00 C 746.00,78.00 746.00,64.00 848.00,64.00 L 848.00,261.73 C 746.00,261.73 746.00,275.73 644.00,275.73 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,275.73 C 746.00,275.73 746.00,275.73 848.00,275.73 L 848.00,364.16 C 746.00,364.16 746.00,364.16 644.00,364.16 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,364.16 C 746.00,364.16 746.00,378.16 848.00,378.16 L 848.00,554.00 C 746.00,554.00 746.00,540.00 644.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,156.58 C 306.00,156.58 306.00,270.15 408.00,270.15 L 408.00,435.19 C 306.00,435.19 306.00,321.62 204.00,321.62 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,270.15 C 526.00,270.15 526.00,263.15 628.00,263.15 L 628.00,540.00 C 526.00,540.00 526.00,547.00 424.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,335.62 C 306.00,335.62 306.00,435.19 408.00,435.19 L 408.00,517.24 C 306.00,517.24 306.00,417.67 204.00,417.67 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,431.67 C 306.00,431.67 306.00,517.24 408.00,517.24 L 408.00,547.00 C 306.00,547.00 306.00,461.42 204.00,461.42 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="156.58" width="16" height="165.04" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="335.62" width="16" height="82.05" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="431.67" width="16" height="29.76" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="71.00" width="16" height="185.15" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="270.15" width="16" height="276.85" rx="1.5" fill="#2563eb"/>
+<rect x="628.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="197.73" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="275.73" width="16" height="88.44" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="378.16" width="16" height="175.84" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="236.10" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Profit after tax 税后利润</text>
+<text x="179.00" y="249.10" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$11.1B  (35.7%)</text>
+<text x="179.00" y="373.64" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">D&amp;A 折旧摊销</text>
+<text x="179.00" y="386.64" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.5B  (17.8%)</text>
+<text x="179.00" y="443.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other Operating 其他经营</text>
+<text x="179.00" y="456.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.0B  (6.4%)</text>
+<rect x="427.00" y="53.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="430.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$12.5B  (40.1%)</text>
+<rect x="427.00" y="252.15" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="264.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="430.00" y="277.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$18.7B  (59.9%)</text>
+<rect x="647.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="650.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$31.2B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13.3B  (42.8%)</text>
+<rect x="867.00" y="257.73" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="269.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="282.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$6.0B  (19.1%)</text>
+<text x="873.00" y="463.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="476.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$11.9B  (38.1%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = $8.9B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: BHP FY2025 Form 20-F, Consolidated Cash Flow Statement</text>
+</svg>

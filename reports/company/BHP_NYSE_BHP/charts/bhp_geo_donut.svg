@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 收入按客户所在地 / Revenue by Customer Location (US$M)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 194.16,332.03 L 232.55,294.05 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 194.16,332.03 A 132 132 0 0 1 160.71,274.15 L 212.78,259.85 A 78 78 0 0 0 232.55,294.05 Z" fill="#15803d"/>
+<path d="M 160.71,274.15 A 132 132 0 0 1 157.30,220.74 L 210.77,228.29 A 78 78 0 0 0 212.78,259.85 Z" fill="#d97706"/>
+<path d="M 157.30,220.74 A 132 132 0 0 1 170.12,179.79 L 218.35,204.10 A 78 78 0 0 0 210.77,228.29 Z" fill="#7c3aed"/>
+<path d="M 170.12,179.79 A 132 132 0 0 1 195.37,145.16 L 233.26,183.63 A 78 78 0 0 0 218.35,204.10 Z" fill="#dc2626"/>
+<path d="M 195.37,145.16 A 132 132 0 0 1 228.70,121.27 L 252.96,169.51 A 78 78 0 0 0 233.26,183.63 Z" fill="#0891b2"/>
+<path d="M 228.70,121.27 A 132 132 0 0 1 263.07,109.58 L 273.27,162.60 A 78 78 0 0 0 252.96,169.51 Z" fill="#db2777"/>
+<path d="M 263.07,109.58 A 132 132 0 0 1 281.06,107.38 L 283.90,161.31 A 78 78 0 0 0 273.27,162.60 Z" fill="#65a30d"/>
+<path d="M 281.06,107.38 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 283.90,161.31 Z" fill="#9333ea"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">BHP FY25</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$51.3B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="415.35" y1="292.36" x2="431.35" y2="292.36" stroke="#2563eb" stroke-width="1.4"/>
+<text x="435.35" y="290.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">China 中国</text>
+<text x="435.35" y="304.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$32.1B  (62.6%)</text>
+<line x1="168.52" y1="308.25" x2="152.52" y2="308.25" stroke="#15803d" stroke-width="1.4"/>
+<text x="148.52" y="306.25" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Japan 日本</text>
+<text x="148.52" y="320.25" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.2B  (8.1%)</text>
+<line x1="150.28" y1="248.01" x2="134.28" y2="248.01" stroke="#d97706" stroke-width="1.4"/>
+<text x="130.28" y="246.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Rest of Asia 其他亚洲</text>
+<text x="130.28" y="260.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.3B  (6.5%)</text>
+<line x1="156.31" y1="197.95" x2="140.31" y2="197.95" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="136.31" y="195.95" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">South Korea 韩国</text>
+<text x="136.31" y="209.95" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.7B  (5.2%)</text>
+<line x1="176.48" y1="157.91" x2="160.48" y2="157.91" stroke="#dc2626" stroke-width="1.4"/>
+<text x="156.48" y="155.91" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">India 印度</text>
+<text x="156.48" y="169.91" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.7B  (5.2%)</text>
+<line x1="207.61" y1="127.03" x2="191.61" y2="127.03" stroke="#0891b2" stroke-width="1.4"/>
+<text x="187.61" y="125.03" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Australia 澳大利亚</text>
+<text x="187.61" y="139.03" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.5B  (5.0%)</text>
+<line x1="243.55" y1="108.55" x2="227.55" y2="108.55" stroke="#db2777" stroke-width="1.4"/>
+<text x="223.55" y="106.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">North America 北美</text>
+<text x="223.55" y="120.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.3B  (4.4%)</text>
+<line x1="271.30" y1="102.21" x2="255.30" y2="102.21" stroke="#65a30d" stroke-width="1.4"/>
+<text x="251.30" y="100.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Europe 欧洲</text>
+<text x="251.30" y="114.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.1B  (2.2%)</text>
+<line x1="284.37" y1="101.25" x2="268.37" y2="101.25" stroke="#9333ea" stroke-width="1.4"/>
+<text x="264.37" y="99.25" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">South America 南美</text>
+<text x="264.37" y="113.25" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$429.0M  (0.8%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: BHP FY2025 Form 20-F, Note 2 — Revenue by location of customer</text>
+</svg>
