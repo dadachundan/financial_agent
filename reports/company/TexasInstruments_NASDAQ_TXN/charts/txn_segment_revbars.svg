@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">TXN 营业收入按分部, FY2021–2025 (US$M)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Analog 模拟</text>
+<rect x="109.40" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="125.40" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Embedded 嵌入式</text>
+<rect x="218.60" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="234.60" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Other 其他</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$4.3B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$8.7B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$13.0B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$17.3B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$21.6B</text>
+<rect x="102.09" y="195.05" width="88.62" height="216.95" fill="#2563eb"/>
+<rect x="102.09" y="147.97" width="88.62" height="47.08" fill="#15803d"/>
+<rect x="102.09" y="128.74" width="88.62" height="19.22" fill="#d97706"/>
+<text x="146.40" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2021</text>
+<rect x="254.89" y="174.84" width="88.62" height="237.16" fill="#2563eb"/>
+<rect x="254.89" y="124.48" width="88.62" height="50.35" fill="#15803d"/>
+<rect x="254.89" y="102.74" width="88.62" height="21.74" fill="#d97706"/>
+<text x="299.20" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2022</text>
+<rect x="407.69" y="210.64" width="88.62" height="201.36" fill="#2563eb"/>
+<rect x="407.69" y="158.64" width="88.62" height="52.01" fill="#15803d"/>
+<rect x="407.69" y="141.48" width="88.62" height="17.16" fill="#d97706"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2023</text>
+<rect x="560.49" y="224.22" width="88.62" height="187.78" fill="#2563eb"/>
+<rect x="560.49" y="185.10" width="88.62" height="39.11" fill="#15803d"/>
+<rect x="560.49" y="170.48" width="88.62" height="14.62" fill="#d97706"/>
+<text x="604.80" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2024</text>
+<rect x="713.29" y="195.73" width="88.62" height="216.27" fill="#2563eb"/>
+<rect x="713.29" y="154.08" width="88.62" height="41.65" fill="#15803d"/>
+<rect x="713.29" y="138.97" width="88.62" height="15.12" fill="#d97706"/>
+<text x="757.60" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2025</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: TXN 10-K 文件 FY2021–FY2025 — Segment results · SEC EDGAR</text>
+</svg>

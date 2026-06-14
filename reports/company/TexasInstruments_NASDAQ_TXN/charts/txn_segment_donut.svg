@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 营业收入按分部 (US$M)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 160.59,204.68 L 212.71,218.80 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 160.59,204.68 A 132 132 0 0 1 243.00,115.11 L 261.41,165.87 A 78 78 0 0 0 212.71,218.80 Z" fill="#15803d"/>
+<path d="M 243.00,115.11 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 261.41,165.87 Z" fill="#d97706"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">TXN</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$17.7B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="371.86" y1="348.80" x2="387.86" y2="348.80" stroke="#2563eb" stroke-width="1.4"/>
+<text x="391.86" y="346.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Analog 模拟</text>
+<text x="391.86" y="360.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$14.0B  (79.2%)</text>
+<line x1="186.44" y1="145.77" x2="170.44" y2="145.77" stroke="#15803d" stroke-width="1.4"/>
+<text x="166.44" y="143.77" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Embedded 嵌入式</text>
+<text x="166.44" y="157.77" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.7B  (15.3%)</text>
+<line x1="264.12" y1="103.28" x2="248.12" y2="103.28" stroke="#d97706" stroke-width="1.4"/>
+<text x="244.12" y="101.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other 其他</text>
+<text x="244.12" y="115.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$979.0M  (5.5%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: TXN FY2025 10-K — Segment results</text>
+</svg>
