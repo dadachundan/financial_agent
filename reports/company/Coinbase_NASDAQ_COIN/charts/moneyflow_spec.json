@@ -1,0 +1,45 @@
+{
+  "eyebrow": "Crypto-infrastructure money flow · FY2025",
+  "title": "How Coinbase earns — and where the dollars actually pool",
+  "thesis": "Two demand pools (trading fees + interest on USDC/cash) fan into Coinbase's product lines, then pool back onto the partners that catch the economics: Circle (USDC issuer), the banks holding reserves, and the L1 networks Coinbase stakes into.",
+  "stages": ["who pays Coinbase", "Coinbase product lines", "where the economics pool"],
+  "nodes": [
+    {"id": "retail",  "stage": 0, "label": "RETAIL TRADERS", "kind": "buyer",  "sub": ["9.2M MTUs", "spread + transaction fees"], "h": 120},
+    {"id": "inst",    "stage": 0, "label": "INSTITUTIONS",   "kind": "buyer2", "sub": ["prime, custody, financing"]},
+    {"id": "usdc",    "stage": 0, "label": "USDC HOLDERS",   "kind": "neutral","sub": ["reserve interest", "on & off platform"]},
+    {"id": "trade",   "stage": 1, "label": "TRADING",        "kind": "compute","sub": ["$4.06B transaction rev", "Consumer + Institutional"]},
+    {"id": "sands",   "stage": 1, "label": "SUBSCRIPTION & SERVICES", "kind": "memory", "sub": ["$2.83B", "stablecoin + staking + custody"]},
+    {"id": "deriv",   "stage": 1, "label": "DERIVATIVES",    "kind": "rf",     "sub": ["Deribit ($4.3B deal)", "intl + US futures"]},
+    {"id": "circle",  "stage": 2, "label": "CIRCLE",         "kind": "foundry","sub": ["USDC issuer", "the chokepoint"]},
+    {"id": "banks",   "stage": 2, "label": "RESERVE BANKS",  "kind": "power",  "sub": ["hold USDC reserves", "T-bills + repo"]},
+    {"id": "valid",   "stage": 2, "label": "L1 VALIDATORS",  "kind": "custom", "sub": ["ETH/SOL staking", "block rewards"]}
+  ],
+  "flows": [
+    {"from": "retail", "to": "trade",  "weight": 22, "style": "direct", "label": "$3.32B consumer"},
+    {"from": "inst",   "to": "trade",  "weight": 6,  "style": "direct", "label": "$0.48B"},
+    {"from": "inst",   "to": "deriv",  "weight": 8,  "style": "direct"},
+    {"from": "retail", "to": "deriv",  "weight": 5,  "style": "direct"},
+    {"from": "usdc",   "to": "sands",  "weight": 14, "style": "direct", "label": "$1.35B stablecoin rev"},
+    {"from": "inst",   "to": "sands",  "weight": 8,  "style": "direct"},
+    {"from": "sands",  "to": "circle", "weight": 12, "style": "embedded", "label": "reserve split"},
+    {"from": "circle", "to": "banks",  "weight": 12, "style": "direct"},
+    {"from": "sands",  "to": "valid",  "weight": 7,  "style": "direct", "label": "$0.68B rewards"},
+    {"from": "deriv",  "to": "banks",  "weight": 4,  "style": "embedded"}
+  ],
+  "cards_title": "Follow the money",
+  "cards": [
+    {"kind": "compute", "tag": "Trading · the cyclical engine", "title": "Transaction fees",
+     "body": "*$4.06B* of FY2025 transaction revenue — *$3.32B* of it from consumers paying a spread — swings with crypto prices and volume; *BTC + ETH* alone drove *~45%* of Trading Volume."},
+    {"kind": "memory", "tag": "Stablecoin · the de-cyclicaliser", "title": "USDC reserve interest",
+     "body": "Stablecoin revenue hit *$1.35B* (+48% YoY). Under the *Circle Agreement*, Coinbase keeps *100%* of interest on USDC held in its own products and shares Circle's off-platform reserve economics — one counterparty (*Circle*) was *19%* of total revenue."},
+    {"kind": "foundry", "tag": "Chokepoint · Circle", "title": "Circle issues USDC",
+     "body": "Circle is the *issuer* of USDC and holds the trademarks; Coinbase distributes it. The economics depend on the USDC market cap (part of a *~$300B+* stablecoin market) and short-term interest rates."},
+    {"kind": "custom", "tag": "Staking · onchain yield", "title": "Blockchain rewards",
+     "body": "Coinbase staked *~$7.5B* of consumer assets into ETH/SOL-type networks, earning *$0.68B* of blockchain rewards — it keeps a commission and passes the rest to customers."},
+    {"kind": "rf", "tag": "Derivatives · the new leg", "title": "Deribit + futures",
+     "body": "The *$4.3B* Deribit acquisition (closed Aug 2025) bolted on the world's largest crypto-options venue, pushing Coinbase into international and US derivatives — Q4 derivatives revenue hit an all-time high."},
+    {"kind": "power", "tag": "Where it pools", "title": "Rates do the lifting",
+     "body": "Both the *$1.35B* stablecoin line and *$0.25B* interest income ride on short-term rates; Coinbase guided Q1'26 S&S to *$550–$630M* citing *lower effective interest rates* — the single biggest swing variable below trading."}
+  ],
+  "source": "COIN FY2025 10-K (Note 4 Revenue; Circle Agreement; staking disclosure) + Q4'25 shareholder letter, 2026-02-12"
+}

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 Total Revenue by Type</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 235.82,360.45 L 257.16,310.85 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 235.82,360.45 A 132 132 0 0 1 156.02,237.09 L 210.01,237.95 A 78 78 0 0 0 257.16,310.85 Z" fill="#15803d"/>
+<path d="M 156.02,237.09 A 132 132 0 0 1 179.68,163.76 L 223.99,194.62 A 78 78 0 0 0 210.01,237.95 Z" fill="#d97706"/>
+<path d="M 179.68,163.76 A 132 132 0 0 1 198.38,142.29 L 235.04,181.93 A 78 78 0 0 0 223.99,194.62 Z" fill="#7c3aed"/>
+<path d="M 198.38,142.29 A 132 132 0 0 1 253.97,111.66 L 267.89,163.84 A 78 78 0 0 0 235.04,181.93 Z" fill="#dc2626"/>
+<path d="M 253.97,111.66 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 267.89,163.84 Z" fill="#0891b2"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">COIN</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$7.2B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="423.16" y1="267.05" x2="439.16" y2="267.05" stroke="#2563eb" stroke-width="1.4"/>
+<text x="443.16" y="265.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Transaction</text>
+<text x="443.16" y="279.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.1B  (56.5%)</text>
+<line x1="172.13" y1="314.16" x2="156.13" y2="314.16" stroke="#15803d" stroke-width="1.4"/>
+<text x="152.13" y="312.16" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Stablecoin</text>
+<text x="152.13" y="326.16" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.3B  (18.8%)</text>
+<line x1="156.67" y1="196.82" x2="140.67" y2="196.82" stroke="#d97706" stroke-width="1.4"/>
+<text x="136.67" y="194.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Blockchain rewards</text>
+<text x="136.67" y="208.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$677.0M  (9.4%)</text>
+<line x1="183.92" y1="148.58" x2="167.92" y2="148.58" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="163.92" y="146.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Interest &amp; finance</text>
+<text x="163.92" y="160.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$247.0M  (3.4%)</text>
+<line x1="221.41" y1="118.33" x2="205.41" y2="118.33" stroke="#dc2626" stroke-width="1.4"/>
+<text x="201.41" y="116.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other subscription</text>
+<text x="201.41" y="130.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$555.0M  (7.7%)</text>
+<line x1="270.06" y1="102.37" x2="254.06" y2="102.37" stroke="#0891b2" stroke-width="1.4"/>
+<text x="250.06" y="100.37" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other revenue</text>
+<text x="250.06" y="114.37" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$298.0M  (4.1%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: COIN FY2025 10-K, Note 4 — Revenue disaggregation</text>
+</svg>

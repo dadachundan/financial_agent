@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Coinbase (COIN) Cash Flow — FY2025</text>
+<path d="M 534.00,94.75 C 608.50,94.75 608.50,100.37 683.00,100.37 L 683.00,167.69 C 608.50,167.69 608.50,162.06 534.00,162.06 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 699.00,100.37 C 773.50,100.37 773.50,65.37 848.00,65.37 L 848.00,119.17 C 773.50,119.17 773.50,154.17 699.00,154.17 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,154.17 C 773.50,154.17 773.50,133.17 848.00,133.17 L 848.00,136.25 C 773.50,136.25 773.50,157.25 699.00,157.25 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,157.25 C 773.50,157.25 773.50,150.25 848.00,150.25 L 848.00,172.17 C 773.50,172.17 773.50,179.17 699.00,179.17 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,179.17 C 773.50,179.17 773.50,186.17 848.00,186.17 L 848.00,192.39 C 773.50,192.39 773.50,185.39 699.00,185.39 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,185.39 C 773.50,185.39 773.50,206.39 848.00,206.39 L 848.00,232.36 C 773.50,232.36 773.50,211.36 699.00,211.36 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,211.36 C 773.50,211.36 773.50,246.36 848.00,246.36 L 848.00,552.63 C 773.50,552.63 773.50,517.63 699.00,517.63 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 534.00,176.06 C 608.50,176.06 608.50,167.69 683.00,167.69 L 683.00,435.58 C 608.50,435.58 608.50,443.95 534.00,443.95 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,252.97 C 278.50,252.97 278.50,273.97 353.00,273.97 L 353.00,308.93 C 278.50,308.93 278.50,287.93 204.00,287.93 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 369.00,273.97 C 443.50,273.97 443.50,78.00 518.00,78.00 L 518.00,80.75 C 443.50,80.75 443.50,276.72 369.00,276.72 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 369.00,276.72 C 443.50,276.72 443.50,94.75 518.00,94.75 L 518.00,162.06 C 443.50,162.06 443.50,344.03 369.00,344.03 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,301.93 C 278.50,301.93 278.50,308.93 353.00,308.93 L 353.00,332.21 C 278.50,332.21 278.50,325.21 204.00,325.21 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,339.21 C 278.50,339.21 278.50,332.21 353.00,332.21 L 353.00,337.43 C 278.50,337.43 278.50,344.43 204.00,344.43 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,358.43 C 278.50,358.43 278.50,337.43 353.00,337.43 L 353.00,344.03 C 278.50,344.03 278.50,365.03 204.00,365.03 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,457.95 C 608.50,457.95 608.50,435.58 683.00,435.58 L 683.00,517.63 C 608.50,517.63 608.50,540.00 534.00,540.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="252.97" width="16" height="34.96" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="301.93" width="16" height="23.28" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="339.21" width="16" height="5.22" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="358.43" width="16" height="6.60" rx="1.5" fill="#2563eb"/>
+<rect x="353.00" y="273.97" width="16" height="70.06" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="2.75" rx="1.5" fill="#dc2626"/>
+<rect x="518.00" y="94.75" width="16" height="67.31" rx="1.5" fill="#1e3a8a"/>
+<rect x="518.00" y="176.06" width="16" height="267.89" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="457.95" width="16" height="82.05" rx="1.5" fill="#2563eb"/>
+<rect x="683.00" y="100.37" width="16" height="417.25" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="65.37" width="16" height="53.80" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="133.17" width="16" height="3.08" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="150.25" width="16" height="21.92" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="186.17" width="16" height="6.22" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="206.39" width="16" height="25.97" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="246.36" width="16" height="306.27" rx="1.5" fill="#1e3a8a"/>
+<text x="179.00" y="267.45" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="179.00" y="280.45" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.3B  (51.9%)</text>
+<text x="179.00" y="310.57" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Stock-Based Comp</text>
+<text x="179.00" y="323.57" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$839.0M  (34.6%)</text>
+<text x="179.00" y="338.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">D&amp;A</text>
+<text x="179.00" y="351.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$188.0M  (7.7%)</text>
+<text x="179.00" y="363.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Deferred Tax</text>
+<text x="179.00" y="376.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$238.0M  (9.8%)</text>
+<rect x="372.00" y="255.97" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="375.00" y="267.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Inflow</text>
+<text x="375.00" y="280.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.5B  (104.1%)</text>
+<rect x="537.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other Operating</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$99.0M  (4.1%)</text>
+<rect x="537.00" y="85.00" width="163.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="97.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash Flow from Operations</text>
+<text x="540.00" y="110.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.4B  (100.0%)</text>
+<rect x="537.00" y="158.06" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="170.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="540.00" y="183.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$9.7B  (398.0%)</text>
+<rect x="537.00" y="439.95" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="451.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Convertible Notes (net)</text>
+<text x="540.00" y="464.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.0B  (121.9%)</text>
+<rect x="702.00" y="82.37" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="705.00" y="94.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash Available</text>
+<text x="705.00" y="107.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$15.0B  (619.9%)</text>
+<rect x="867.00" y="47.37" width="138.30" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="59.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Loans/Investments</text>
+<text x="870.00" y="72.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.9B  (79.9%)</text>
+<rect x="867.00" y="115.17" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="127.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Acquisitions &amp; other</text>
+<text x="870.00" y="140.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$111.0M  (4.6%)</text>
+<rect x="867.00" y="140.17" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="152.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Share Repurchase</text>
+<text x="870.00" y="165.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$790.0M  (32.6%)</text>
+<rect x="867.00" y="168.17" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="180.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Capped Calls</text>
+<text x="870.00" y="193.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$224.0M  (9.2%)</text>
+<rect x="867.00" y="193.17" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="205.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Custodial fund flows</text>
+<text x="870.00" y="218.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$936.0M  (38.6%)</text>
+<text x="873.00" y="396.49" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="409.49" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$11.0B  (455.0%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: COIN FY2025 10-K, Consolidated Statements of Cash Flows</text>
+</svg>
