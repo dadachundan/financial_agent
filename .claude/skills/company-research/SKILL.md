@@ -465,7 +465,7 @@ See [`reference/citations.md`](reference/citations.md) for the full rules, per-s
 
 ## Prerequisites
 
-For **US issuers**, this skill runs [[sec-report-summary]] as a sub-step (Step 0.5 below). The multi-year SEC narrative it produces — per-filing highlights + a "Changes over the years" trajectory — becomes structured input for Section 4 (product evolution), Section 6 (industry trajectory), and Section 9 (risk-factor evolution). Run it for every initiation (first write for the ticker) when no fresh `reports/earnings/<TICKER>_*.md` exists; on a refresh of an existing report it may be skipped — but only with a stated reason recorded in the Step 10.6 verification log (see Step 0.5's run-or-log rule). Silent skipping is the failure mode.
+For **US issuers**, this skill runs [[sec-report-summary]] as a sub-step (Step 0.5 below). The multi-year SEC narrative it produces — per-filing highlights + a "Changes over the years" trajectory — becomes structured input for Section 4 (product evolution), Section 6 (industry trajectory), and Section 9 (risk-factor evolution). As a company-research sub-step it is an **intermediate, not a deliverable** — write it to an in-session scratch file (`/tmp/finagent-sec-summary/<TICKER>.md`), fold its content into the report body, and never commit it under `reports/` (see Step 0.5). Run it for every initiation (first write for the ticker); on a refresh of an existing report it may be skipped — but only with a stated reason recorded in the Step 10.6 verification log (see Step 0.5's run-or-log rule). Silent skipping is the failure mode.
 
 For **non-US issuers** (China A-share / HK / Taiwan / Japan / Korea), skip the sec-report-summary step — the `/sec/` infrastructure is US-only. Build the same historical-evolution threads directly from the domicile-portal filings synced in Step 0.
 
@@ -509,7 +509,9 @@ Read PDFs with `fitz` / Read tool. For image-only / scanned pages, follow the OC
 
 ### Step 0.5 — Multi-year SEC narrative (US issuers only)
 
-For US issuers, immediately after Step 0 invoke [[sec-report-summary]] with `--ticker <TICKER> --form 10-K --last 10 --deep` to produce the per-filing highlights and the "Changes over the years" trajectory. The output lands at `reports/earnings/<TICKER>_<YYYYMMDD>.md` (update-in-place — at most one per ticker).
+For US issuers, immediately after Step 0 invoke [[sec-report-summary]]'s logic with `--ticker <TICKER> --form 10-K --last 10 --deep` to produce the per-filing highlights and the "Changes over the years" trajectory.
+
+**This is an intermediate input, not a deliverable — do NOT persist it under `reports/`.** When sec-report-summary runs *as a company-research sub-step*, override its default `reports/earnings/<TICKER>_<YYYYMMDD>.md` output and write the narrative to an in-session scratch file under `/tmp/finagent-sec-summary/<TICKER>.md` instead. Read it back, fold its content into the report body (below), then leave it — never `git add` it. The `reports/earnings/` folder is for the `earnings-analysis` skill's quarterly notes, **not** for this multi-10-K scratch summary; a committed `reports/earnings/<TICKER>_<date>.md` from this step is exactly the bug this rule exists to prevent. (A user who invokes `/sec-report-summary` *directly* still gets the persisted `reports/earnings/` deliverable — that standalone path is unchanged; only the company-research sub-step is scratch-only.)
 
 Use that narrative as the **structured input** for:
 
@@ -517,9 +519,11 @@ Use that narrative as the **structured input** for:
 - **Section 6 (Industry)** — segment-reporting changes, geographic mix shifts (e.g. China revenue going from highlight to risk).
 - **Section 9 (Risk Assessment)** — risk-factor evolution: new categories appearing (cyber, AI, climate, tariffs), persisting categories, resolved litigation.
 
-**Do not re-run sec-report-summary if a fresh report already exists** under `reports/earnings/<TICKER>_*.md` (mtime within the current session, or the filings on disk haven't changed since the existing report was written). Read the existing report instead.
+**Cite the underlying filings inline, never the scratch file.** Each number/claim the narrative feeds into Sections 4/6/9 carries its own deep SEC EDGAR 10-K URL as the citation (per the project citation standard — a local `.md` path is not a valid source). The Data Used manifest must NOT list a `reports/earnings/...` path for this step.
 
-**Run-or-log rule (MANDATORY — silent skipping is the documented failure mode).** Run this step when no fresh `reports/earnings/<TICKER>_*.md` exists AND the report is an initiation (first write for the ticker). For a refresh of an existing research doc it may be skipped — it is a heavy multi-10-K pass on a 16 GB machine — but only with a stated reason. Either way, the Step 10.6 verification log MUST carry the line `**Step 0.5 sec-report-summary** — ran (output: reports/earnings/<TICKER>_<date>.md)` or `— skipped (<reason>)`. A US-issuer report whose log has neither is not done.
+**Do not re-run this step if you already produced the scratch narrative earlier in this same session** for this ticker — read the existing `/tmp/finagent-sec-summary/<TICKER>.md` instead. (There is no cross-session cache by design; an initiation is a first write, so there is rarely a prior pass to reuse.)
+
+**Run-or-log rule (MANDATORY — silent skipping is the documented failure mode).** Run this step on every initiation (first write for the ticker). For a refresh of an existing research doc it may be skipped — it is a heavy multi-10-K pass on a 16 GB machine — but only with a stated reason. Either way, the Step 10.6 verification log MUST carry the line `**Step 0.5 sec-report-summary** — ran (in-session scratch, not persisted)` or `— skipped (<reason>)`. A US-issuer report whose log has neither is not done.
 
 **Skip this step entirely for non-US issuers** — sec-report-summary depends on the `/sec/` Flask service + `db/financial_reports.db`, which only cover SEC filings. For China A-share / HK / Taiwan / Japan / Korea, build the historical-evolution threads directly from the domicile-portal filings synced in Step 0.
 

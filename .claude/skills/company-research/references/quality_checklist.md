@@ -187,7 +187,7 @@ Required before declaring done:
 - [ ] Every named executive is confirmed in an 8-K or DEF 14A. Grep the cited filing for the exact name.
 - [ ] Internal consistency: Section 1's competitive framing matches Section 7's; Section 2 timeline matches Section 1 prose; restructuring counts in narrative match the timeline numbers; product classifications (e.g. "Akara conductor vs dielectric etch") are consistent across the mermaid graph, Section 4 subsections, and Section 5 references.
 - [ ] At least five 10-K-cited financial numbers spot-checked against the actual 10-K (revenue, gross margin, customer concentration, geographic mix, segment %, restructuring headcount, R&D as % of revenue, cash returned).
-- [ ] **Step 0.5 sec-report-summary disposition recorded** (US issuers): the verification log states `ran (output: reports/earnings/<TICKER>_<date>.md)` or `skipped (<reason>)` — never silently omitted.
+- [ ] **Step 0.5 sec-report-summary disposition recorded** (US issuers): the verification log states `ran (in-session scratch, not persisted)` or `skipped (<reason>)` — never silently omitted. The SEC narrative is an intermediate input folded into the body, **not** a committed `reports/earnings/` file.
 - [ ] **Link-title ↔ URL consistency checked**: every link whose title names a source (indicators.db, FRED, Yahoo, a broker, a filing) resolves to that source's domain — a 200-OK URL paired with the wrong title (e.g. `[indicators.db 快照](https://www.sec.gov/...)`) is a fail.
 - [ ] A `<details>`-folded verification log appended after the References section, listing what was checked and any residual unknowns — with the `<summary>` line as the exact English string `Verification log (Step 10) — YYYY-MM-DD` (even in Chinese reports; tooling greps for it).
 

@@ -93,7 +93,7 @@ After the References section in **every report produced** (the Chinese report by
 
 **URL check** — all <N> URLs HTTP-checked YYYY-MM-DD; all return 200 / known-good 301.
 
-**Step 0.5 sec-report-summary** — ran (output: `reports/earnings/<TICKER>_<date>.md`) / skipped (<reason>) / n/a (non-US issuer).
+**Step 0.5 sec-report-summary** — ran (in-session scratch `/tmp/finagent-sec-summary/<TICKER>.md`, not persisted under `reports/`) / skipped (<reason>) / n/a (non-US issuer).
 
 **Further-viewing URLs** — <N> links validated (200 with a browser UA) / omitted because <reason — e.g. "purely numeric report, nothing worth visualizing">.
 
