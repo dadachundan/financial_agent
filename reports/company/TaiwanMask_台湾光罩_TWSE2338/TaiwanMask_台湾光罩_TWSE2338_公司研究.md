@@ -559,7 +559,7 @@ Photronics 是全球第二大专业光罩厂, 其 2025-12-17 提交的 FY2025 10
 ```mermaid
 quadrantChart
     title 全球光罩玩家在节点 vs 规模 的相对定位
-    x-axis 节点深度 (10nm) --> 节点保守 (200nm)
+    x-axis 节点深度 10nm --> 节点保守 200nm
     y-axis 单家规模小 --> 规模大
     quadrant-1 高阶高规模
     quadrant-2 中阶高规模

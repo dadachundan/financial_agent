@@ -430,7 +430,7 @@ The DDR5 / MRDIMM memory interface chip market is structurally a **three-supplie
 ```mermaid
 quadrantChart
     title Memory IF chip + IP positioning (price vs IP/technical depth)
-    x-axis Low price (commoditized) --> High price (premium)
+    x-axis Low price commoditized --> High price premium
     y-axis Narrow product range --> Broad product range
     quadrant-1 Premium broad-line
     quadrant-2 Volume broad-line

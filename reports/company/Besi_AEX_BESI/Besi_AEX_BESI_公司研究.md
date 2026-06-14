@@ -373,7 +373,7 @@ Besi 在结构性整合的半导体后段设备市场竞争, 其中四到六家�
 quadrantChart
     title Besi 竞争地位 — 组装设备格局
     x-axis 主流 / 商品化 --> 先进 / 专业
-    y-axis 小规模 --> 大规模 (全球规模)
+    y-axis 小规模 --> 大规模 全球规模
     quadrant-1 先进领域规模领导者
     quadrant-2 主流领域规模领导者
     quadrant-3 利基 / 亚规模

@@ -243,11 +243,11 @@ quadrantChart
     quadrant-3 价值陷阱/搁浅
     quadrant-4 稳态现金牛
     GMIN: [0.25, 0.90]
-    AGI (Alamos): [0.55, 0.70]
-    EQX (Equinox): [0.85, 0.55]
-    IAG (IAMGOLD): [0.85, 0.40]
-    KNT (K92): [0.50, 0.85]
-    K (Kinross): [0.55, 0.30]
+    AGI Alamos: [0.55, 0.70]
+    EQX Equinox: [0.85, 0.55]
+    IAG IAMGOLD: [0.85, 0.40]
+    KNT K92: [0.50, 0.85]
+    K Kinross: [0.55, 0.30]
 ```
 
 **竞争优势——GMIN。**

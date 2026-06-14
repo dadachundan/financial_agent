@@ -317,7 +317,7 @@ pie title 君实生物 2025 FY 收入结构 (近似估算 / approximate)
 ```mermaid
 quadrantChart
     title 中国 PD-1 市场竞争象限 (Quadrant)
-    x-axis 国内销售规模 (Domestic Sales) --> 大
+    x-axis 国内销售规模 Domestic Sales --> 大
     y-axis 海外授权进展 --> 强
     quadrant-1 "海外授权强 + 国内大"
     quadrant-2 "海外强 + 国内小"

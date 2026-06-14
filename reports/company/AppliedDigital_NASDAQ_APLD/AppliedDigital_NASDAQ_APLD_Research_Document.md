@@ -320,7 +320,7 @@ quadrantChart
     Digital Realty: [0.30, 0.95]
     Iron Mountain: [0.15, 0.60]
     Switch / DigitalBridge: [0.55, 0.70]
-    Crusoe Energy (private): [0.85, 0.55]
+    Crusoe Energy private: [0.85, 0.55]
     Applied Digital APLD: [0.85, 0.60]
     Iris Energy IREN: [0.75, 0.45]
     TeraWulf WULF: [0.70, 0.30]

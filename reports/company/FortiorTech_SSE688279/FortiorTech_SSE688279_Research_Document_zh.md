@@ -211,7 +211,7 @@ quadrantChart
     Toshiba: [0.5, 0.65]
     NoveLogic: [0.45, 0.4]
     Shanghai Belling: [0.4, 0.35]
-    Midea Semi (captive): [0.55, 0.3]
+    Midea Semi captive: [0.55, 0.3]
 ```
 
 **1. Texas Instruments 德州仪器（TI，NASDAQ:TXN）。** 全球电机驱动 IC 的标杆，其 C2000 Piccolo F2802x/F2806x/F28004x DSP-MCU 家族是与峰岹 FU6xxx 旗舰 MCU 最直接的竞争产品，DRV8xxx 栅极驱动家族对位峰岹 HVIC。TI 拥有巨大的生态优势（Code Composer Studio、MotorWare、数十年参考设计）与无可匹敌的渠道。峰岹胜在成本（同等功能通常低 30–50%）、电机控制环时延（ME 内核的硬连线 FOC 控制环胜过 Cortex-M / C28x 上的软件控制环）及中国客户服务。TI 胜在路线图宽度、汽车长期供应保证及生态。

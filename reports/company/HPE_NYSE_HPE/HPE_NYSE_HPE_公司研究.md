@@ -251,10 +251,10 @@ quadrantChart
     title HPE 与同行 — 网络 vs 算力存储敞口
     x-axis 低网络比重 --> 高网络比重
     y-axis 低算力存储比重 --> 高算力存储比重
-    quadrant-1 网络主导 (Cisco-like)
-    quadrant-2 多元化 (HPE-like)
-    quadrant-3 多元化 (小)
-    quadrant-4 算力主导 (Dell-like)
+    quadrant-1 网络主导 Cisco-like
+    quadrant-2 多元化 HPE-like
+    quadrant-3 多元化 小
+    quadrant-4 算力主导 Dell-like
     HPE: [0.55, 0.65]
     Dell: [0.05, 0.85]
     Cisco: [0.95, 0.10]

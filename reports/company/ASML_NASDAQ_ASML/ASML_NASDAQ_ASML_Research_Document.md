@@ -277,8 +277,8 @@ quadrantChart
     quadrant-2 "EUV / DUV crossover"
     quadrant-3 "Mature DUV / legacy"
     quadrant-4 "Niche advanced packaging"
-    ASML EUV (NXE/EXE): [0.85, 0.95]
-    ASML DUV (ArFi): [0.65, 0.75]
+    ASML EUV NXE/EXE: [0.85, 0.95]
+    ASML DUV ArFi: [0.65, 0.75]
     ASML KrF / i-line: [0.30, 0.20]
     Nikon ArF immersion: [0.45, 0.55]
     Nikon KrF: [0.25, 0.20]

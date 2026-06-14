@@ -418,10 +418,10 @@ quadrantChart
     Synopsys: [0.92, 0.95]
     Cadence: [0.88, 0.93]
     Siemens EDA: [0.78, 0.7]
-    Ansys (now SNPS): [0.55, 0.85]
+    Ansys now SNPS: [0.55, 0.85]
     Altium: [0.32, 0.4]
-    Empyrean (China): [0.4, 0.45]
-    OpenROAD (open-src): [0.25, 0.35]
+    Empyrean China: [0.4, 0.45]
+    OpenROAD open-src: [0.25, 0.35]
     Altair: [0.5, 0.55]
 ```
 

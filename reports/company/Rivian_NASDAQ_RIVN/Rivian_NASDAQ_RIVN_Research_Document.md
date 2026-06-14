@@ -271,7 +271,7 @@ quadrantChart
     Tesla Model Y: [0.4, 0.85]
     Tesla Cybertruck: [0.7, 0.85]
     Rivian R1T/R1S: [0.85, 0.8]
-    Rivian R2 (2026): [0.45, 0.75]
+    Rivian R2 2026: [0.45, 0.75]
     Lucid Air: [0.85, 0.7]
     Ford F-150 Lightning: [0.55, 0.45]
     GM Chevy Equinox EV: [0.3, 0.4]

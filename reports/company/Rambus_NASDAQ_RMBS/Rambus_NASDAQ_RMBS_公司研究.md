@@ -432,7 +432,7 @@ DDR5 / MRDIMM 内存接口芯片市场在结构上是一个**三方寡头**, 三
 ```mermaid
 quadrantChart
     title 内存 IF 芯片 + IP 定位 (定价 vs IP / 技术深度)
-    x-axis 低价 (商品化) --> 高价 (溢价)
+    x-axis 低价 商品化 --> 高价 溢价
     y-axis 窄产品线 --> 宽产品线
     quadrant-1 高端宽产品线
     quadrant-2 走量宽产品线

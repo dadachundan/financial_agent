@@ -348,10 +348,10 @@ quadrantChart
     title 半导体设备厂竞争定位 价格 vs. 产品广度
     x-axis 低价 --> 高价
     y-axis 单一产品 --> 全产品线
-    quadrant-1 全产品线高价 (寡占)
-    quadrant-2 全产品线低价 (新兴大厂)
-    quadrant-3 单一产品低价 (零件商)
-    quadrant-4 单一产品高价 (利基精品)
+    quadrant-1 全产品线高价 寡占
+    quadrant-2 全产品线低价 新兴大厂
+    quadrant-3 单一产品低价 零件商
+    quadrant-4 单一产品高价 利基精品
 
     Applied Materials AMAT: [0.85, 0.95]
     ASML: [0.95, 0.4]

@@ -347,7 +347,7 @@ pie title 2025 PD-1/VEGF 双抗 BD 交易 upfront (USD millions)
 quadrantChart
     title 中国 Biotech BD-Out 同业格局 (估值 vs. 创新管线深度)
     x-axis 创新管线浅 --> 创新管线深
-    y-axis 估值乘数低 (PE 10×以下) --> 估值乘数高 (PE 30×+ / 亏损)
+    y-axis 估值乘数低 PE 10×以下 --> 估值乘数高 PE 30×+ / 亏损
     quadrant-1 高估值创新 biotech
     quadrant-2 高估值早期资产
     quadrant-3 低估值传统药企

@@ -273,16 +273,16 @@ quadrantChart
     title GDS 与同业竞争定位 (中国 vs 国际, REIT vs 非 REIT)
     x-axis 中国市场 --> 国际市场
     y-axis 非REIT 结构 --> REIT 结构
-    quadrant-1 国际 REIT (溢价区)
+    quadrant-1 国际 REIT 溢价区
     quadrant-2 国际非 REIT
-    quadrant-3 中国非 REIT (GDS 所处)
+    quadrant-3 中国非 REIT GDS 所处
     quadrant-4 中国 REIT-like
     EQIX: [0.85, 0.92]
     DLR: [0.85, 0.85]
     GDS: [0.20, 0.25]
     VNET: [0.15, 0.20]
     GDS C-REIT: [0.30, 0.78]
-    秦淮数据 (退市): [0.18, 0.18]
+    秦淮数据 退市: [0.18, 0.18]
 ```
 
 ### 7.3 GDS 竞争优势 (按 20-F 自述 + 分析师补充)

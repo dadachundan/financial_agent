@@ -278,7 +278,7 @@ quadrantChart
     title China AI competitive positioning — Vertical depth vs. Foundation-model breadth
     x-axis Narrow products --> Broad foundation models
     y-axis Limited verticals --> Deep verticals
-    quadrant-1 Vertical & broad (full-stack)
+    quadrant-1 Vertical & broad full-stack
     quadrant-2 Vertical-focused
     quadrant-3 Niche
     quadrant-4 Horizontal model only

@@ -243,7 +243,7 @@ quadrantChart
     quadrant-4 Broad + Hardware
     KLA: [0.80, 0.85]
     Applied Materials: [0.95, 0.40]
-    ASML (HMI e-beam): [0.45, 0.55]
+    ASML HMI e-beam: [0.45, 0.55]
     Lasertec: [0.20, 0.30]
     Onto Innovation: [0.35, 0.50]
     Hitachi High-Tech: [0.40, 0.35]

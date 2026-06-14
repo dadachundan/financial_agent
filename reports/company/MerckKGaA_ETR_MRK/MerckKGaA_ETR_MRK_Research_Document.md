@@ -412,17 +412,17 @@ quadrantChart
     title Electronics-materials competitive positioning
     x-axis Single-product specialist --> Broad portfolio
     y-axis Smaller scale --> Larger scale
-    quadrant-1 Broad + Large (scale leaders)
-    quadrant-2 Single-product + Large (focused giants)
-    quadrant-3 Single-product + Small (niche)
-    quadrant-4 Broad + Small (diversified subscale)
+    quadrant-1 Broad + Large scale leaders
+    quadrant-2 Single-product + Large focused giants
+    quadrant-3 Single-product + Small niche
+    quadrant-4 Broad + Small diversified subscale
     Merck KGaA Electronics: [0.85, 0.78]
     Fujifilm El. Materials: [0.80, 0.85]
     Linde Electronics: [0.55, 0.85]
     Air Liquide Elec.: [0.55, 0.80]
     Entegris: [0.65, 0.55]
     Resonac: [0.70, 0.65]
-    JSR (pre-PE): [0.40, 0.55]
+    JSR pre-PE: [0.40, 0.55]
     TOK: [0.30, 0.40]
     DuPont Semi: [0.60, 0.50]
     Dongjin Semichem: [0.45, 0.35]

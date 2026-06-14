@@ -219,8 +219,8 @@ GSK 在每个业务板块面对不同的竞争对手矩阵 — 没有任何一�
 ```mermaid
 quadrantChart
     title 主要专科药 / 疫苗药企竞争定位 (2025)
-    x-axis 营收规模 (从小到大) →
-    y-axis 增长率 (从低到高) →
+    x-axis 营收规模 从小到大 →
+    y-axis 增长率 从低到高 →
     quadrant-1 高增长 + 大规模
     quadrant-2 高增长 + 小规模
     quadrant-3 低增长 + 小规模

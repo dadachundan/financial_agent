@@ -198,7 +198,7 @@ quadrantChart
     quadrant-3 Mass-market ICE/HEV
     quadrant-4 Mass-market BEV
     Toyota: [0.35, 0.18]
-    Hyundai (HMC): [0.45, 0.50]
+    Hyundai HMC: [0.45, 0.50]
     Volkswagen: [0.50, 0.55]
     GM: [0.40, 0.45]
     Ford: [0.45, 0.40]

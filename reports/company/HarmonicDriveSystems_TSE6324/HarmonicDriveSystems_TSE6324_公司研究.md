@@ -232,7 +232,7 @@ quadrantChart
     Suzhou Green Harmonic: [0.35, 0.78]
     Leaderdrive 来福: [0.30, 0.65]
     Nidec-Shimpo: [0.55, 0.75]
-    Nabtesco(RV): [0.70, 0.88]
+    Nabtesco RV: [0.70, 0.88]
     Spinea TwinSpin: [0.65, 0.85]
 ```
 

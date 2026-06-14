@@ -278,8 +278,8 @@ quadrantChart
     quadrant-2 "EUV / DUV 交错"
     quadrant-3 "成熟 DUV / 遗留"
     quadrant-4 "细分先进封装"
-    ASML EUV (NXE/EXE): [0.85, 0.95]
-    ASML DUV (ArFi): [0.65, 0.75]
+    ASML EUV NXE/EXE: [0.85, 0.95]
+    ASML DUV ArFi: [0.65, 0.75]
     ASML KrF / i-line: [0.30, 0.20]
     Nikon ArF 浸没式: [0.45, 0.55]
     Nikon KrF: [0.25, 0.20]

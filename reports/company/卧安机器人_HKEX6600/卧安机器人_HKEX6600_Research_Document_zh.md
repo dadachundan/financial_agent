@@ -329,7 +329,7 @@ quadrantChart
     quadrant-2 低价 + 全球深耕
     quadrant-3 低价 + 本土
     quadrant-4 高价 + 本土
-    SwitchBot (卧安): [0.45, 0.85]
+    SwitchBot 卧安: [0.45, 0.85]
     Aqara: [0.5, 0.55]
     Aeotec: [0.7, 0.6]
     Sonoff: [0.2, 0.7]

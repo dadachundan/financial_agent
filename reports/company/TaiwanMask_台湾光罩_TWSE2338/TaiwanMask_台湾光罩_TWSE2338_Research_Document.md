@@ -560,7 +560,7 @@ Photronics, the world's second-largest merchant photomask shop, filed its FY2025
 ```mermaid
 quadrantChart
     title Global photomask players — node depth vs. scale positioning
-    x-axis Deeper node (10nm) --> Mature node (200nm)
+    x-axis Deeper node 10nm --> Mature node 200nm
     y-axis Small scale --> Large scale
     quadrant-1 High-end / large
     quadrant-2 Mid-node / large

@@ -289,7 +289,7 @@ quadrantChart
     Lenovo: [0.90, 0.45]
     SMCI: [0.20, 0.85]
     Cisco: [0.50, 0.35]
-    Apple (Mac): [0.30, 0.10]
+    Apple Mac: [0.30, 0.10]
 ```
 
 ### Dell 的竞争优势

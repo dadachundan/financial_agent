@@ -324,7 +324,7 @@ quadrantChart
     Shuangfei SZSE:300817: [0.45, 0.55]
     Chongde SZSE:301548: [0.55, 0.40]
     Wuzhou New Spring SH:603667: [0.42, 0.50]
-    Renkang Group (private): [0.50, 0.78]
+    Renkang Group private: [0.50, 0.78]
 ```
 
 ### Detailed competitor profiles

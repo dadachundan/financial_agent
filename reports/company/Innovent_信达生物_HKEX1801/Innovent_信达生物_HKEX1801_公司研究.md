@@ -227,7 +227,7 @@ quadrantChart
     title 中国创新生物药企竞争定位 (规模 vs. 全球化)
     x-axis 国内规模较小 --> 国内规模领先
     y-axis 区域化 --> 全球化能力强
-    quadrant-1 全球+规模双强 (头部)
+    quadrant-1 全球+规模双强 头部
     quadrant-2 全球但相对小规模
     quadrant-3 区域+小规模
     quadrant-4 区域规模头部

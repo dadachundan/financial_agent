@@ -292,14 +292,14 @@ quadrantChart
     quadrant-2 "低 capex + 高算力占比"
     quadrant-3 "低 capex + 低算力占比"
     quadrant-4 "高 capex + 低算力占比"
-    China Mobile (0941): [0.95, 0.55]
-    China Telecom (0728): [0.65, 0.70]
-    China Unicom (0762): [0.40, 0.62]
+    China Mobile 0941: [0.95, 0.55]
+    China Telecom 0728: [0.65, 0.70]
+    China Unicom 0762: [0.40, 0.62]
     Alibaba Cloud: [0.50, 0.85]
     Tencent Cloud: [0.45, 0.80]
-    Huawei Cloud (private): [0.60, 0.80]
-    GDS (DC pure-play): [0.30, 0.95]
-    VNET (DC pure-play): [0.20, 0.95]
+    Huawei Cloud private: [0.60, 0.80]
+    GDS DC pure-play: [0.30, 0.95]
+    VNET DC pure-play: [0.20, 0.95]
 ```
 *数据来源: 各公司 2025 年报 / 2026 业绩会 / Q1 2026 财报披露的 capex 与 cloud / AI 收入占比综合估算; 联通数据来自 [2025 Annual Results Transcript](https://www.chinaunicom.com.hk/en/ir/transcript/transcript_25ar.pdf); 中国电信、中国移动数据来自 [Mobile World Live: China operator growth stalls](https://www.mobileworldlive.com/china-mobile/china-operator-growth-stalls-capex-continues-to-drop/) 与 [Caixin Global, 2026-03-25](https://www.caixinglobal.com/2026-03-25/china-telecom-to-boost-ai-spending-amid-capex-cut-and-slowing-growth-102426994.html)。*
 

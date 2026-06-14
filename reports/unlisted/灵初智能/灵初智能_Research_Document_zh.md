@@ -312,7 +312,7 @@ quadrantChart
     x-axis 低硬件集成度 --> 重度双足硬件
     y-axis VLA 落后 --> 前沿 VLA / 基础模型
     quadrant-1 前沿模型 + 双足人形
-    quadrant-2 前沿模型,模型优先(无自有本体)
+    quadrant-2 前沿模型,模型优先无自有本体
     quadrant-3 两端均落后
     quadrant-4 硬件优先,模型落后
     Physical Intelligence: [0.15, 0.85]

@@ -256,15 +256,15 @@ quadrantChart
     quadrant-2 高质量低价
     quadrant-3 低质量低价
     quadrant-4 低质量高价
-    Sora 2 (OpenAI): [0.85, 0.92]
-    Veo 3.1 (Google): [0.78, 0.90]
+    Sora 2 OpenAI: [0.85, 0.92]
+    Veo 3.1 Google: [0.78, 0.90]
     Runway Gen-4: [0.72, 0.85]
-    Kling 2.6 (Kuaishou): [0.35, 0.88]
-    Vidu (ShengShu AI): [0.30, 0.70]
-    Hailuo (MiniMax): [0.40, 0.78]
+    Kling 2.6 Kuaishou: [0.35, 0.88]
+    Vidu ShengShu AI: [0.30, 0.70]
+    Hailuo MiniMax: [0.40, 0.78]
     Pika Labs: [0.40, 0.65]
-    Hunyuan Video (Tencent): [0.25, 0.72]
-    PixelDance (ByteDance): [0.45, 0.82]
+    Hunyuan Video Tencent: [0.25, 0.72]
+    PixelDance ByteDance: [0.45, 0.82]
 ```
 
 **中文释义 / Plain-language gloss:** 可灵 AI 的竞争定位是 **"高质量 + 低价格"** 象限的明星玩家 — 视频质量与 Sora 2 / Veo 3.1 接近但 API 价格仅为 Sora 的约 35%, 这使其在企业 / 创作者市场上获得相对 ROI 优势。最大风险来自 (1) 美国闭源模型在企业级 / 好莱坞影视场景的品牌信任优势, (2) 字节 PixelDance 在国内的算力 / 流量协同优势, (3) Veo 3.1 / Sora 2 的迭代速度可能压缩可灵的时间窗口([Kling AI vs competitors review, pixflow.net](https://pixflow.net/blog/best-ai-video-generator/); [Best AI Video Generators 2026, getaiperks.com](https://www.getaiperks.com/en/blogs/44-best-ai-video-generators-2026))。

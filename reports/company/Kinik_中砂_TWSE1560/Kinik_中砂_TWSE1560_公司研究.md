@@ -463,7 +463,7 @@ pie title 中砂 2024 营收客户集中度估算 (基于 36.99% 单一最大客
 quadrantChart
     title CMP 钻石碟竞争格局：技术先进性 vs 地理覆盖
     x-axis 单一地区为主 --> 全球均衡覆盖
-    y-axis 中低阶节点为主 --> 先进节点 (N5 以下) 为主
+    y-axis 中低阶节点为主 --> 先进节点 N5 以下 为主
     quadrant-1 高阶 + 全球
     quadrant-2 高阶 + 区域
     quadrant-3 中低阶 + 区域

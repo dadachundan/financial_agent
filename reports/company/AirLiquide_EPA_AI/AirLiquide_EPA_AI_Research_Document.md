@@ -381,7 +381,7 @@ quadrantChart
     Air Products: [0.45, 0.55]
     Nippon Sanso: [0.65, 0.40]
     Messer: [0.30, 0.20]
-    Resonac (specialty gas only): [0.92, 0.18]
+    Resonac specialty gas only: [0.92, 0.18]
     Merck Electronics: [0.92, 0.25]
     Entegris: [0.85, 0.15]
 ```

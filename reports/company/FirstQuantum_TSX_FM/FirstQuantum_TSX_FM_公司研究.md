@@ -357,13 +357,13 @@ quadrantChart
     quadrant-2 "高产量集中区"
     quadrant-3 "区域专家"
     quadrant-4 "中产量多区域"
-    Codelco (智利): [0.85, 0.15]
+    Codelco 智利: [0.85, 0.15]
     BHP: [0.75, 0.75]
-    Freeport (FCX): [0.80, 0.55]
+    Freeport FCX: [0.80, 0.55]
     Glencore: [0.70, 0.80]
-    Southern Copper (SCCO): [0.65, 0.20]
-    Antofagasta (ANTO): [0.40, 0.15]
-    First Quantum (FM): [0.35, 0.45]
+    Southern Copper SCCO: [0.65, 0.20]
+    Antofagasta ANTO: [0.40, 0.15]
+    First Quantum FM: [0.35, 0.45]
     Zijin Mining: [0.55, 0.70]
     KGHM: [0.40, 0.35]
     Teck Resources: [0.30, 0.50]

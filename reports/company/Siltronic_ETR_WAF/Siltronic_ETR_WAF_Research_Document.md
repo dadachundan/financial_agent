@@ -293,7 +293,7 @@ quadrantChart
     GlobalWafers: [0.68, 0.85]
     Siltronic: [0.55, 0.75]
     SK Siltron: [0.50, 0.30]
-    Soitec (SOI specialist): [0.30, 0.50]
+    Soitec SOI specialist: [0.30, 0.50]
     Chinese entrants: [0.35, 0.10]
 ```
 

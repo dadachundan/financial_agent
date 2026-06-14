@@ -229,7 +229,7 @@ quadrantChart
     Lilly tirzepatide+管线: [0.92, 0.95]
     Novo semaglutide+CagriSema: [0.75, 0.78]
     Roche 口服 GLP-1: [0.45, 0.42]
-    Pfizer (danuglipron 后): [0.25, 0.18]
+    Pfizer danuglipron 后: [0.25, 0.18]
     Amgen MariTide: [0.55, 0.32]
     Boehringer survodutide: [0.5, 0.38]
 ```

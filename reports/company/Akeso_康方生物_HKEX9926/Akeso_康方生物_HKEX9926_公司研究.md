@@ -274,20 +274,20 @@ pie title 康方生物 FY2025 前五大客户集中度 (集团合并口径)
 ```mermaid
 quadrantChart
     title 中国 IO 2.0 / PD-1/VEGF 与 PD-1/CTLA-4 双抗竞争格局
-    x-axis 海外授权深度 (低 → 高)
-    y-axis 商业化产品成熟度 (低 → 高)
+    x-axis 海外授权深度 低 → 高
+    y-axis 商业化产品成熟度 低 → 高
     quadrant-1 头部商业化 + 海外深绑定
     quadrant-2 头部商业化 + 海外初探
     quadrant-3 早期阶段
     quadrant-4 海外深绑定 + 早期商业化
-    Akeso (cadonilimab + ivonescimab): [0.85, 0.85]
-    Innovent (sintilimab): [0.55, 0.85]
-    BeiGene (tislelizumab + Brukinsa): [0.7, 0.9]
-    Hengrui (camrelizumab): [0.85, 0.7]
-    3SBio (SSGJ-707 PD-1/VEGF): [0.75, 0.3]
-    Junshi (toripalimab): [0.4, 0.5]
-    RemeGen (disitamab vedotin): [0.6, 0.55]
-    CSPC (obesity portfolio): [0.95, 0.4]
+    Akeso cadonilimab + ivonescimab: [0.85, 0.85]
+    Innovent sintilimab: [0.55, 0.85]
+    BeiGene tislelizumab + Brukinsa: [0.7, 0.9]
+    Hengrui camrelizumab: [0.85, 0.7]
+    3SBio SSGJ-707 PD-1/VEGF: [0.75, 0.3]
+    Junshi toripalimab: [0.4, 0.5]
+    RemeGen disitamab vedotin: [0.6, 0.55]
+    CSPC obesity portfolio: [0.95, 0.4]
 ```
 
 ### 7.1 国内 PD-1 单抗红海 — penpulimab 的处境

@@ -312,7 +312,7 @@ quadrantChart
     x-axis Low hardware integration --> Heavy bipedal hardware
     y-axis Behind on VLA --> Frontier VLA / foundation model
     quadrant-1 Frontier model + bipedal humanoid
-    quadrant-2 Frontier model, model-first (no own bot)
+    quadrant-2 Frontier model, model-first no own bot
     quadrant-3 Behind on both
     quadrant-4 Hardware-first, model lagging
     Physical Intelligence: [0.15, 0.85]

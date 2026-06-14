@@ -222,11 +222,11 @@ quadrantChart
     quadrant-2 销售强但覆盖窄
     quadrant-3 边缘
     quadrant-4 覆盖广但销售弱
-    CARVYKTI cilta-cel (LEGN/JNJ): [0.85, 0.95]
-    Abecma ide-cel (BMS): [0.45, 0.30]
-    Anito-cel (Arcellx/Gilead): [0.30, 0.15]
-    CARsgen zevor-cel (HKEX:2171): [0.20, 0.10]
-    IASO equa-cel (HKEX:2533): [0.20, 0.08]
+    CARVYKTI cilta-cel LEGN/JNJ: [0.85, 0.95]
+    Abecma ide-cel BMS: [0.45, 0.30]
+    Anito-cel Arcellx/Gilead: [0.30, 0.15]
+    CARsgen zevor-cel HKEX:2171: [0.20, 0.10]
+    IASO equa-cel HKEX:2533: [0.20, 0.08]
 ```
 
 **CARVYKTI (LEGN/JNJ) — 当前的事实领导者.** 2025 年全球销售 USD 1.9B,临床数据具有 OS 获益,二线扩展已落地。**Abecma (ide-cel, BMS) — 早期上市者陷入衰退.** 2024 年全年销售 USD 406M (美国 USD 242M, -32% YoY; 国际 USD 164M, +44% YoY),2025 年 Bristol-Myers Squibb (NYSE:BMY) 以 USD 286M 收购长期合作伙伴 2seventy bio (NASDAQ:TSVT) 以获得 Abecma 完整所有权 ([Fierce Biotech — Bristol Myers, 2seventy cull multiple myeloma CAR-T as Abecma sales pick up](https://www.fiercebiotech.com/biotech/bristol-myers-2seventy-cull-multiple-myeloma-car-t-as-abecma-sales-pick-up), [Medcity News — BMS buys 2seventy bio for $286M](https://medcitynews.com/2025/03/bristol-myers-squibb-2seventy-bio-acquisition-abecma-cell-therapy-bmy-tsvt/))。Abecma 在头对头 PFS 数据上劣于 cilta-cel,并且 BMS 已经裁掉了相关研发团队 — 在 BCMA CAR-T 上已基本"放弃竞争"。**anito-cel (Arcellx/Gilead) — 最值得关注的下一波竞争者.** Arcellx (NASDAQ:ACLX) 在 2024-2025 年间与 Gilead (Kite) 共同开发,iMMagine-1 Phase 2 数据在 2025 年 ASH 会议上公布显示与 cilta-cel 类似的疗效,**iMMagine-3 Phase 3 试验已经入组 450 例患者**,目标 2028 年读出,直接对标 CARVYKTI 在 1–3 线 RRMM 的市场 ([Clinical Trials Arena — ASH 2025 Anito-cel challenges CAR-T market](https://www.clinicaltrialsarena.com/analyst-comment/ash-2025-arcellx-gilead-anito-cel-car-t-r-r-mm/), [Arcellx — iMMagine-1 data](https://www.businesswire.com/news/home/20251206931756/en/Arcellx-Announces-New-Positive-Data-for-Its-iMMagine-1-Study-in-Patients-with-Relapsed-andor-Refractory-Multiple-Myeloma))。

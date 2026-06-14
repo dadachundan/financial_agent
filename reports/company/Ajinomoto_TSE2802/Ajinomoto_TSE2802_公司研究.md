@@ -325,7 +325,7 @@ quadrantChart
     Ajinomoto: [0.95, 0.95]
     Sumitomo Bakelite: [0.40, 0.10]
     Mitsubishi Gas Chemical: [0.45, 0.08]
-    Resonac (旧 Showa Denko Materials): [0.50, 0.07]
+    Resonac 旧 Showa Denko Materials: [0.50, 0.07]
     Toray Industries: [0.35, 0.05]
     "Glass-core (Corning/AT&S)": [0.30, 0.02]
 ```

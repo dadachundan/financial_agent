@@ -302,7 +302,7 @@ quadrantChart
     Cognex: [0.45, 0.92]
     Keyence: [0.50, 0.95]
     Basler: [0.40, 0.78]
-    JAI (并入凌云光): [0.30, 0.88]
+    JAI 并入凌云光: [0.30, 0.88]
 ```
 
 来源：本报告综合判断。估值与营收对比见 [东方财富工业自动化板块](https://data.eastmoney.com/bkzj/BK1037.html) 及各公司最新年报。

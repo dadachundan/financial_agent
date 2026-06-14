@@ -335,8 +335,8 @@ FY2025 直销占比 98.87%、经销 1.13%——典型 Tier-2 汽车与家电零�
 ```mermaid
 quadrantChart
     title 国内 / 国际传感器同业定价-性能定位
-    x-axis 低性能 --> 高性能 (车规、可靠性)
-    y-axis 低价 --> 高价 (单价、毛利)
+    x-axis 低性能 --> 高性能 车规、可靠性
+    y-axis 低价 --> 高价 单价、毛利
     quadrant-1 高端外资
     quadrant-2 国产替代龙头
     quadrant-3 价格战

@@ -280,8 +280,8 @@ Gorilla Glass 在全球智能手机的盖板玻璃市场占比高 (估计 75–8
 ```mermaid
 quadrantChart
     title 竞争位置 — 技术领先 vs 制造规模 (Corning 与同业)
-    x-axis 制造规模 (Manufacturing scale)
-    y-axis 技术 / IP 优势 (Technology leadership)
+    x-axis 制造规模 Manufacturing scale
+    y-axis 技术 / IP 优势 Technology leadership
     quadrant-1 全球领导者
     quadrant-2 技术领导但规模有限
     quadrant-3 边缘玩家

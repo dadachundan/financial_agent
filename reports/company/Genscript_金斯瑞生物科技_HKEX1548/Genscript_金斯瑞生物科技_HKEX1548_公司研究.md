@@ -236,10 +236,10 @@ quadrantChart
     title CDMO 与生命科学服务 — 中国 origin × 全球制造拓扑
     x-axis "中国 origin" --> "西方 origin"
     y-axis "服务深度有限" --> "全链条 + 资产授权"
-    quadrant-1 "全球 origin · 全链条" (Lonza / Samsung Bio / Catalent)
-    quadrant-2 "西方 origin · 服务专注" (Thermo Fisher / IDT)
-    quadrant-3 "中国 origin · 服务专注" (Sino Biological / 国内传统 CDMO)
-    quadrant-4 "中国 origin · 全链条" (Genscript / WuXi Bio / Pharmaron)
+    quadrant-1 "全球 origin · 全链条" Lonza / Samsung Bio / Catalent
+    quadrant-2 "西方 origin · 服务专注" Thermo Fisher / IDT
+    quadrant-3 "中国 origin · 服务专注" Sino Biological / 国内传统 CDMO
+    quadrant-4 "中国 origin · 全链条" Genscript / WuXi Bio / Pharmaron
     "Genscript": [0.20, 0.85]
     "WuXi Biologics": [0.15, 0.75]
     "Lonza": [0.85, 0.90]

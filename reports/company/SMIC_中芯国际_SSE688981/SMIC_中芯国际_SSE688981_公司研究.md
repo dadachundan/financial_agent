@@ -329,10 +329,10 @@ quadrantChart
     title 全球代工厂竞争定位：先进节点能力 vs ASP 溢价
     x-axis 低 ASP 溢价 --> 高 ASP 溢价
     y-axis 成熟节点专长 --> 先进节点专长
-    quadrant-1 高溢价 + 先进节点 (TSMC 主导)
+    quadrant-1 高溢价 + 先进节点 TSMC 主导
     quadrant-2 高溢价 + 成熟特色
-    quadrant-3 低溢价 + 成熟节点 (规模化竞争)
-    quadrant-4 低溢价 + 先进节点 (政治-成本权衡)
+    quadrant-3 低溢价 + 成熟节点 规模化竞争
+    quadrant-4 低溢价 + 先进节点 政治-成本权衡
     TSMC: [0.95, 0.97]
     Samsung: [0.7, 0.85]
     Intel-IFS: [0.6, 0.8]

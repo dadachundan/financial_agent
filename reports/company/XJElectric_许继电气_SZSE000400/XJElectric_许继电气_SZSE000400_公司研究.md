@@ -284,7 +284,7 @@ quadrantChart
     title 中国电力装备 — 特高压 + 数据中心配电 (定性)
     x-axis Low Tech Depth --> High Tech Depth
     y-axis Low Customer Diversification --> High Customer Diversification
-    quadrant-1 全能领先 (技术 + 客户分散)
+    quadrant-1 全能领先 技术 + 客户分散
     quadrant-2 客户广但技术浅
     quadrant-3 集中度风险
     quadrant-4 技术深但单一客户

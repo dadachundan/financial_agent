@@ -340,11 +340,11 @@ quadrantChart
     Disney+/Hulu: [0.78, 0.55]
     Amazon Prime Video: [0.75, 0.50]
     YouTube: [0.95, 0.80]
-    Max (WBD): [0.55, 0.35]
+    Max WBD: [0.55, 0.35]
     Paramount+: [0.45, 0.30]
     Peacock: [0.35, 0.25]
     Apple TV+: [0.30, 0.15]
-    Spotify (音频): [0.40, 0.55]
+    Spotify 音频: [0.40, 0.55]
 ```
 *来源: 作者基于公司文件与行业报告的评估。*
 

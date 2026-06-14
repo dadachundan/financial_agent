@@ -419,12 +419,12 @@ quadrantChart
     Li Auto: [0.6, 0.7]
     Nio: [0.8, 0.75]
     Xiaomi: [0.55, 0.9]
-    Aito (Huawei): [0.8, 0.85]
+    Aito Huawei: [0.8, 0.85]
     Zeekr: [0.6, 0.45]
     Tesla CN: [0.7, 0.6]
     BYD: [0.35, 0.3]
     Leapmotor: [0.25, 0.5]
-    MONA (entry): [0.25, 0.65]
+    MONA entry: [0.25, 0.65]
 ```
 *Source: positioning author estimate; underlying data from each company's most recent annual filing and [CnEVPost: China NEV market share series, 2026](https://cnevpost.com/2026/05/13/automakers-share-china-nev-market-apr-2026/).*
 

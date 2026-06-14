@@ -372,7 +372,7 @@ The principal competitors in Besi's addressable market segment by structural ove
 quadrantChart
     title Besi competitive position — assembly equipment landscape
     x-axis Mainstream / commoditized --> Advanced / specialty
-    y-axis Small footprint --> Large footprint (global scale)
+    y-axis Small footprint --> Large footprint global scale
     quadrant-1 Scale leader in advanced
     quadrant-2 Scale leader in mainstream
     quadrant-3 Niche / sub-scale

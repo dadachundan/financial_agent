@@ -309,8 +309,8 @@ Source: composite of Yahoo Finance / company filings, 2026-06-02.
 ```mermaid
 quadrantChart
     title Solid-tumour IO bispecific competitive positioning
-    x-axis Pipeline breadth (low-->high)
-    y-axis Cash runway / scale (low-->high)
+    x-axis Pipeline breadth low-->high
+    y-axis Cash runway / scale low-->high
     quadrant-1 Scale leaders w/ broad pipeline
     quadrant-2 Scale leaders, narrow pipeline
     quadrant-3 Subscale, narrow pipeline

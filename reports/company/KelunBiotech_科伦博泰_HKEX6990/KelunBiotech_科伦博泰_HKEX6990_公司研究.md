@@ -309,7 +309,7 @@ quadrantChart
     title 中国 ADC 龙头竞争定位 (估值 vs 资产数量, 2026)
     x-axis Low Asset Count --> High Asset Count
     y-axis Low Valuation Multiple --> High Valuation Multiple
-    quadrant-1 Premium Multi-asset (Kelun-Biotech)
+    quadrant-1 Premium Multi-asset Kelun-Biotech
     quadrant-2 Premium Single-asset
     quadrant-3 Low-multi Niche
     quadrant-4 Multi-asset Discounted

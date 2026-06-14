@@ -211,7 +211,7 @@ quadrantChart
     Toshiba: [0.5, 0.65]
     NoveLogic: [0.45, 0.4]
     Shanghai Belling: [0.4, 0.35]
-    Midea Semi (captive): [0.55, 0.3]
+    Midea Semi captive: [0.55, 0.3]
 ```
 
 **1. Texas Instruments (TI, NASDAQ:TXN).** The global benchmark for motor-drive ICs, with the C2000 Piccolo F2802x/F2806x/F28004x DSP-MCU family the most directly competitive product against Fortior's FU6xxx flagship MCUs, plus the DRV8xxx gate-driver family against Fortior's HVICs. TI has a massive ecosystem advantage (Code Composer Studio, MotorWare, decades of reference designs) and unmatched distribution. Fortior wins on cost (typically 30–50% cheaper for comparable function), on motor-loop latency (the ME core's hardwired FOC loop beats a software loop on Cortex-M / C28x), and on Chinese customer service. TI wins on roadmap breadth, automotive long-term-supply assurance, and ecosystem.

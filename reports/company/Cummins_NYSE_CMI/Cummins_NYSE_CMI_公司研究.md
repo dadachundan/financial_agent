@@ -295,13 +295,13 @@ quadrantChart
     title 备用电源 (data center backup) 竞争象限
     x-axis "低成本 / 低复杂度" --> "高容量 / 高复杂度"
     y-axis "区域 / 单一应用" --> "全球 / 多应用"
-    quadrant-1 高端寡占 (Cummins / CAT)
-    quadrant-2 区域整机商 (Kohler / INNIO)
-    quadrant-3 入门 / 商用 (Generac)
-    quadrant-4 高端区域 (MTU / Mitsubishi)
+    quadrant-1 高端寡占 Cummins / CAT
+    quadrant-2 区域整机商 Kohler / INNIO
+    quadrant-3 入门 / 商用 Generac
+    quadrant-4 高端区域 MTU / Mitsubishi
     Cummins: [0.85, 0.90]
     Caterpillar: [0.88, 0.92]
-    MTU (Rolls Royce): [0.75, 0.65]
+    MTU Rolls Royce: [0.75, 0.65]
     Kohler / Rehlko: [0.60, 0.55]
     Generac: [0.45, 0.40]
     INNIO: [0.55, 0.45]

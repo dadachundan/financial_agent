@@ -366,7 +366,7 @@ quadrantChart
     title Foundry positioning — Leading-edge capability vs Specialty breadth
     x-axis Low specialty breadth --> High specialty breadth
     y-axis Trailing-node only --> Leading-edge capable
-    quadrant-1 Leading & broad (TSMC sweet spot)
+    quadrant-1 Leading & broad TSMC sweet spot
     quadrant-2 Leading but narrow
     quadrant-3 Trailing & narrow
     quadrant-4 Trailing but broad specialty

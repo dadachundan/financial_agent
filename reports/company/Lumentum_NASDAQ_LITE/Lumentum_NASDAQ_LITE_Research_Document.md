@@ -306,14 +306,14 @@ quadrantChart
     title Optical-network competitor positioning
     x-axis Module / system focus --> Chip / component focus
     y-axis Telecom-heavy --> Datacom / AI-heavy
-    quadrant-1 Datacom + chip-focused (AI optics core)
-    quadrant-2 Datacom + module-focused (transceiver vendors)
-    quadrant-3 Telecom + module-focused (line-system NEMs)
-    quadrant-4 Telecom + chip-focused (legacy components)
+    quadrant-1 Datacom + chip-focused AI optics core
+    quadrant-2 Datacom + module-focused transceiver vendors
+    quadrant-3 Telecom + module-focused line-system NEMs
+    quadrant-4 Telecom + chip-focused legacy components
     Lumentum: [0.7, 0.75]
     Coherent: [0.55, 0.65]
     Marvell: [0.85, 0.85]
-    Broadcom (AVGO): [0.95, 0.9]
+    Broadcom AVGO: [0.95, 0.9]
     Innolight / Eoptolink: [0.2, 0.85]
     Ciena: [0.3, 0.5]
     Nokia: [0.25, 0.3]

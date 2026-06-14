@@ -353,8 +353,8 @@ pie title FY2024 收入按客户集中度
 ```mermaid
 quadrantChart
     title 人形机器人竞争定位 (2026)
-    x-axis 商业化进度 (慢 → 快)
-    y-axis 技术 + 资本壁垒 (低 → 高)
+    x-axis 商业化进度 慢 → 快
+    y-axis 技术 + 资本壁垒 低 → 高
     quadrant-1 商业化领先 + 高壁垒
     quadrant-2 高壁垒 + 待商业化
     quadrant-3 早期低壁垒

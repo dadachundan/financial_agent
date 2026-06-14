@@ -323,16 +323,16 @@ pie title AEM FY2025 黄金产量地理分布 (basis: production oz)
 ```mermaid
 quadrantChart
     title 黄金大矿在 "司法辖区风险 × 生产规模" 的相对定位
-    x-axis 低司法辖区风险 (OECD %) --> 高司法辖区风险 (非 OECD %)
-    y-axis 低产量规模 --> 高产量规模 (>5 Moz)
+    x-axis 低司法辖区风险 OECD % --> 高司法辖区风险 非 OECD %
+    y-axis 低产量规模 --> 高产量规模 >5 Moz
     quadrant-1 高规模高政治风险
     quadrant-2 高规模低政治风险（理想）
     quadrant-3 低规模低政治风险
     quadrant-4 低规模高政治风险
-    Newmont (NEM): [0.40, 0.95]
+    Newmont NEM: [0.40, 0.95]
     AEM: [0.05, 0.70]
-    Barrick (B): [0.70, 0.65]
-    Gold Fields (GFI): [0.55, 0.55]
+    Barrick B: [0.70, 0.65]
+    Gold Fields GFI: [0.55, 0.55]
     Kinross: [0.45, 0.35]
     Harmony: [0.60, 0.30]
 ```

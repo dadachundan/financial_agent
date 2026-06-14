@@ -400,7 +400,7 @@ quadrantChart
     title 大药企的竞争位置 — "增长 vs 现金牛"
     x-axis "Legacy 现金流压力大" --> "Legacy 压力小"
     y-axis "Growth 增长慢" --> "Growth 增长快"
-    quadrant-1 高成长低压力 (理想)
+    quadrant-1 高成长低压力 理想
     quadrant-2 高增长但高悬崖压力
     quadrant-3 低成长高悬崖压力
     quadrant-4 现金牛但低成长

@@ -267,7 +267,7 @@ PROTAC / 分子胶 / CDAC 是 2019 以来肿瘤研发的最大平台型机会。
 quadrantChart
     title BTK 抑制剂全球竞争格局 (BTK Inhibitor Competitive Landscape)
     x-axis 美国份额低 --> 美国份额高
-    y-axis 临床证据弱 --> 临床证据强 (head-to-head)
+    y-axis 临床证据弱 --> 临床证据强 head-to-head
     quadrant-1 "护城河"
     quadrant-2 "新兴竞争者"
     quadrant-3 "尾部"

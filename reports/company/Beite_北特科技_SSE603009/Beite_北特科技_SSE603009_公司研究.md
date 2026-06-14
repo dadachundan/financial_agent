@@ -258,8 +258,8 @@ Source: [北特科技 2024 年年度报告, 第 13 页 — 客户资源优势](h
 ```mermaid
 quadrantChart
     title 国内乘用车转向器齿条 + 减振器活塞杆 竞争象限
-    x-axis 国内市场份额 (低) --> (高)
-    y-axis 产品矩阵广度 (窄) --> (宽)
+    x-axis 国内市场份额 低 --> 高
+    y-axis 产品矩阵广度 窄 --> 宽
     quadrant-1 龙头
     quadrant-2 单品冠军
     quadrant-3 长尾

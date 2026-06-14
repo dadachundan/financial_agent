@@ -293,7 +293,7 @@ quadrantChart
     Everpure FlashArray: [0.85, 0.80]
     VAST Data: [0.85, 0.55]
     Weka: [0.80, 0.45]
-    Public Cloud (S3/EBS): [0.95, 0.95]
+    Public Cloud S3/EBS: [0.95, 0.95]
 ```
 
 *Source (chart):* 分析师测算, 基于各公司公开产品页面与 IR 披露; 不来自任何单一 10-K.

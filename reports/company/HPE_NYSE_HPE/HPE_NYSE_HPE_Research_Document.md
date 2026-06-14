@@ -251,10 +251,10 @@ quadrantChart
     title HPE vs peers — Networking vs Compute-Storage exposure
     x-axis Low Networking Mix --> High Networking Mix
     y-axis Low Compute/Storage Mix --> High Compute/Storage Mix
-    quadrant-1 Networking-heavy (Cisco-like)
-    quadrant-2 Diversified (HPE-like)
-    quadrant-3 Diversified (small)
-    quadrant-4 Compute-heavy (Dell-like)
+    quadrant-1 Networking-heavy Cisco-like
+    quadrant-2 Diversified HPE-like
+    quadrant-3 Diversified small
+    quadrant-4 Compute-heavy Dell-like
     HPE: [0.55, 0.65]
     Dell: [0.05, 0.85]
     Cisco: [0.95, 0.10]

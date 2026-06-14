@@ -268,13 +268,13 @@ HCM 主要业务聚焦在三大肿瘤适应症领域：CRC、NSCLC、NET，以�
 ```mermaid
 quadrantChart
     title 中国创新药出海公司比较矩阵 / China innovative drug out-licensing peer matrix
-    x-axis 创新药管线深度 (低 → 高)
-    y-axis 海外授权变现规模 (小 → 大)
+    x-axis 创新药管线深度 低 → 高
+    y-axis 海外授权变现规模 小 → 大
     quadrant-1 高管线 + 大授权（板块龙头）
     quadrant-2 大授权 + 浅管线（单一资产驱动）
     quadrant-3 浅管线 + 小授权（待证明）
     quadrant-4 高管线 + 小授权（潜在重估）
-    BeiGene(ONC): [0.95, 0.95]
+    BeiGene ONC: [0.95, 0.95]
     HUTCHMED: [0.70, 0.60]
     CSPC: [0.65, 0.92]
     Innovent: [0.80, 0.85]

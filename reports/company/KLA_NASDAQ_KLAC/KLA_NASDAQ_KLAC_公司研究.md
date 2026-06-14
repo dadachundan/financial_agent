@@ -250,7 +250,7 @@ quadrantChart
     quadrant-4 广 + 硬件
     KLA: [0.80, 0.85]
     Applied Materials: [0.95, 0.40]
-    ASML (HMI 电子束): [0.45, 0.55]
+    ASML HMI 电子束: [0.45, 0.55]
     Lasertec: [0.20, 0.30]
     Onto Innovation: [0.35, 0.50]
     Hitachi High-Tech: [0.40, 0.35]

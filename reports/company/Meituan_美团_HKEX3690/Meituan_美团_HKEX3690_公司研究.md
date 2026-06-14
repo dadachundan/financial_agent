@@ -242,10 +242,10 @@ quadrantChart
     title 中国本地生活竞争象限 (规模 vs. 业务广度)
     x-axis 业务窄 --> 业务广
     y-axis 规模小 --> 规模大
-    quadrant-1 规模大 + 业务广 (生态型)
-    quadrant-2 规模大 + 业务窄 (深度型)
-    quadrant-3 规模小 + 业务窄 (细分型)
-    quadrant-4 规模小 + 业务广 (尝试型)
+    quadrant-1 规模大 + 业务广 生态型
+    quadrant-2 规模大 + 业务窄 深度型
+    quadrant-3 规模小 + 业务窄 细分型
+    quadrant-4 规模小 + 业务广 尝试型
     "美团 Meituan": [0.92, 0.95]
     "阿里淘宝闪购": [0.80, 0.85]
     "JD.com 外卖": [0.55, 0.65]

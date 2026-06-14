@@ -330,8 +330,8 @@ pie title FY2024 商汤集团收入按前五大客户披露 (RMB 百万)
 ```mermaid
 quadrantChart
     title 中国 AI 厂商定位 — 多模态深度 vs 商业化规模
-    x-axis 商业化规模 (年化收入) --> 大
-    y-axis 多模态深度 (视觉/语音/具身) --> 深
+    x-axis 商业化规模 年化收入 --> 大
+    y-axis 多模态深度 视觉/语音/具身 --> 深
     quadrant-1 大规模 + 多模态
     quadrant-2 多模态领先 + 规模待突破
     quadrant-3 规模有限 + 单模态

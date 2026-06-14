@@ -257,8 +257,8 @@ xychart-beta
 ```mermaid
 quadrantChart
     title 中国金融科技公司竞争定位 (2025)
-    x-axis 业务覆盖广度 (单点 → 综合)
-    y-axis 产品标准化程度 (定制化 → 标准化)
+    x-axis 业务覆盖广度 单点 → 综合
+    y-axis 产品标准化程度 定制化 → 标准化
     quadrant-1 高广度+高标准化
     quadrant-2 单点+高标准化
     quadrant-3 单点+定制化

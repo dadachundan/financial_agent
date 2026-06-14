@@ -417,10 +417,10 @@ quadrantChart
     title 光伏设备竞争定位 (HJT 整线维度)
     x-axis 单点设备 --> 整线方案
     y-axis 低端/规模 --> 高端/差异化
-    quadrant-1 整线 + 高端 (战略制高点)
-    quadrant-2 单点 + 高端 (利基玩家)
-    quadrant-3 单点 + 低端 (退出区)
-    quadrant-4 整线 + 低端 (快进追赶)
+    quadrant-1 整线 + 高端 战略制高点
+    quadrant-2 单点 + 高端 利基玩家
+    quadrant-3 单点 + 低端 退出区
+    quadrant-4 整线 + 低端 快进追赶
     迈为股份: [0.85, 0.85]
     捷佳伟创: [0.75, 0.72]
     帝尔激光: [0.32, 0.78]

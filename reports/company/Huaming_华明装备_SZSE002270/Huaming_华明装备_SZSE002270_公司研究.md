@@ -248,10 +248,10 @@ quadrantChart
     title 全球 OLTC 主要玩家定位 (品牌强度 vs 价格性价比)
     x-axis 低性价比 --> 高性价比
     y-axis 弱品牌 --> 强全球品牌
-    quadrant-1 强品牌+高性价比 (最理想)
-    quadrant-2 强品牌+低性价比 (高溢价)
-    quadrant-3 弱品牌+低性价比 (无竞争力)
-    quadrant-4 弱品牌+高性价比 (国产化突破)
+    quadrant-1 强品牌+高性价比 最理想
+    quadrant-2 强品牌+低性价比 高溢价
+    quadrant-3 弱品牌+低性价比 无竞争力
+    quadrant-4 弱品牌+高性价比 国产化突破
     MR 德国: [0.30, 0.95]
     Hitachi Energy: [0.40, 0.85]
     华明装备: [0.85, 0.65]

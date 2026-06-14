@@ -288,12 +288,12 @@ A 股战略配售部分共144,145,000股 (含中国人寿、中国人保、中�
 ```mermaid
 quadrantChart
 title 三大运营商 + 互联网云厂商竞争定位 / Operator vs Cloud-vendor positioning
-x-axis 低规模 --> 高规模 (Scale)
-y-axis 通信主导 --> 云/AI 主导 (Cloud/AI emphasis)
-quadrant-1 高规模+云/AI主导 (云巨头)
-quadrant-2 低规模+云/AI主导 (新势力)
+x-axis 低规模 --> 高规模 Scale
+y-axis 通信主导 --> 云/AI 主导 Cloud/AI emphasis
+quadrant-1 高规模+云/AI主导 云巨头
+quadrant-2 低规模+云/AI主导 新势力
 quadrant-3 低规模+通信主导
-quadrant-4 高规模+通信主导 (传统运营商)
+quadrant-4 高规模+通信主导 传统运营商
 中国移动: [0.95, 0.45]
 中国电信: [0.55, 0.50]
 中国联通: [0.40, 0.50]

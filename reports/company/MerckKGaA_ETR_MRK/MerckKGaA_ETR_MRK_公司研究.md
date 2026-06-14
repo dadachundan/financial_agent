@@ -424,7 +424,7 @@ quadrantChart
     Air Liquide Elec.: [0.55, 0.80]
     Entegris: [0.65, 0.55]
     Resonac: [0.70, 0.65]
-    JSR (pre-PE): [0.40, 0.55]
+    JSR pre-PE: [0.40, 0.55]
     TOK: [0.30, 0.40]
     DuPont Semi: [0.60, 0.50]
     Dongjin Semichem: [0.45, 0.35]

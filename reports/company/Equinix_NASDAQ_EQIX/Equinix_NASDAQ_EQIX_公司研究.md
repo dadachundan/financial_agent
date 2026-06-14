@@ -260,19 +260,19 @@ quadrantChart
     title 数据中心竞争格局 (互联深度 vs 全球规模, 2026)
     x-axis 全球规模与电力容量 -->
     y-axis 互联生态深度 -->
-    quadrant-1 高互联 + 大规模 (强护城河)
-    quadrant-2 高互联 + 小规模 (区域性)
-    quadrant-3 低互联 + 小规模 (单一资产)
-    quadrant-4 低互联 + 大规模 (hyperscale-only)
+    quadrant-1 高互联 + 大规模 强护城河
+    quadrant-2 高互联 + 小规模 区域性
+    quadrant-3 低互联 + 小规模 单一资产
+    quadrant-4 低互联 + 大规模 hyperscale-only
     Equinix: [0.92, 0.96]
     Digital Realty: [0.85, 0.55]
     NTT GDC: [0.70, 0.35]
     CyrusOne: [0.55, 0.25]
     Aligned: [0.45, 0.20]
     Compass: [0.40, 0.18]
-    Megaport (interconnection-only): [0.20, 0.85]
-    GDS (NASDAQ:GDS): [0.45, 0.40]
-    VNET (NASDAQ:VNET): [0.30, 0.35]
+    Megaport interconnection-only: [0.20, 0.85]
+    GDS NASDAQ:GDS: [0.45, 0.40]
+    VNET NASDAQ:VNET: [0.30, 0.35]
 ```
 
 | 竞争对手 / Peer | 商业模式 | 互联深度 | 主要差异化 |

@@ -347,7 +347,7 @@ quadrantChart
     Resonac: [0.55, 0.65]
     Air Liquide AM: [0.4, 0.6]
     Linde: [0.4, 0.5]
-    Pall (Danaher): [0.3, 0.5]
+    Pall Danaher: [0.3, 0.5]
     DuPont/Qnity: [0.45, 0.7]
     Anji: [0.2, 0.45]
     Dinglong: [0.35, 0.4]

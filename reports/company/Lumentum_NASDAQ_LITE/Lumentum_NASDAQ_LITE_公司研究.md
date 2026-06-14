@@ -308,14 +308,14 @@ quadrantChart
     title 光通信网络竞争者定位
     x-axis 模组 / 系统聚焦 --> 芯片 / 元件聚焦
     y-axis 电信主导 --> 数据中心通信 / AI 主导
-    quadrant-1 数据中心通信 + 芯片聚焦 (AI 光学核心)
-    quadrant-2 数据中心通信 + 模组聚焦 (收发器供应商)
-    quadrant-3 电信 + 模组聚焦 (线路系统 NEM)
-    quadrant-4 电信 + 芯片聚焦 (传统元件)
+    quadrant-1 数据中心通信 + 芯片聚焦 AI 光学核心
+    quadrant-2 数据中心通信 + 模组聚焦 收发器供应商
+    quadrant-3 电信 + 模组聚焦 线路系统 NEM
+    quadrant-4 电信 + 芯片聚焦 传统元件
     Lumentum: [0.7, 0.75]
     Coherent: [0.55, 0.65]
     Marvell: [0.85, 0.85]
-    Broadcom (AVGO): [0.95, 0.9]
+    Broadcom AVGO: [0.95, 0.9]
     Innolight / Eoptolink: [0.2, 0.85]
     Ciena: [0.3, 0.5]
     Nokia: [0.25, 0.3]

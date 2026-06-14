@@ -298,7 +298,7 @@ quadrantChart
     x-axis 单一硬件焦点 --> 软硬一体方案
     y-axis 通用计算 --> AI 算力专精
     quadrant-1 软硬一体 AI 专精: 华为 + 浪潮
-    quadrant-2 软硬一体通用: 浪潮 (历史定位)
+    quadrant-2 软硬一体通用: 浪潮 历史定位
     quadrant-3 单一硬件通用: 超聚变, 宁畅
     quadrant-4 单一硬件 AI 专精: 中科曙光
     浪潮信息 000977: [0.65, 0.78]
