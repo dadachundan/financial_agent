@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">ASML FY2025 现金流量表 Sankey (cash flow, €m, IFRS)</text>
+<path d="M 204.00,63.06 C 306.00,63.06 306.00,78.00 408.00,78.00 L 408.00,309.65 C 306.00,309.65 306.00,294.70 204.00,294.70 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,94.82 C 526.00,94.82 526.00,108.82 424.00,108.82 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,108.82 C 526.00,108.82 526.00,108.82 628.00,108.82 L 628.00,266.53 C 526.00,266.53 526.00,266.53 424.00,266.53 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,266.53 C 526.00,266.53 526.00,280.53 628.00,280.53 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,108.82 C 746.00,108.82 746.00,216.15 848.00,216.15 L 848.00,315.28 C 746.00,315.28 746.00,207.95 644.00,207.95 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,207.95 C 746.00,207.95 746.00,329.28 848.00,329.28 L 848.00,373.94 C 746.00,373.94 746.00,252.62 644.00,252.62 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,252.62 C 746.00,252.62 746.00,387.94 848.00,387.94 L 848.00,401.85 C 746.00,401.85 746.00,266.53 644.00,266.53 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,308.70 C 306.00,308.70 306.00,309.65 408.00,309.65 L 408.00,539.88 C 306.00,539.88 306.00,538.94 204.00,538.94 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,552.94 C 306.00,552.94 306.00,539.88 408.00,539.88 L 408.00,541.88 C 306.00,541.88 306.00,554.94 204.00,554.94 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="63.06" width="16" height="231.65" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="308.70" width="16" height="230.24" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="552.94" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="30.82" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="108.82" width="16" height="157.70" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="280.53" width="16" height="273.47" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="216.15" width="16" height="99.13" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="329.28" width="16" height="44.67" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="387.94" width="16" height="13.91" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="175.88" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="188.88" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€12.7B  (50.1%)</text>
+<rect x="207.00" y="273.76" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="285.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="298.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€12.7B  (49.8%)</text>
+<rect x="207.00" y="518.00" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€6.4M  (0.03%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€25.4B  (100.0%)</text>
+<rect x="647.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€1.7B  (6.7%)</text>
+<rect x="647.00" y="90.82" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="102.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="115.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€8.7B  (34.1%)</text>
+<text x="653.00" y="414.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="427.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€15.0B  (59.2%)</text>
+<text x="873.00" y="262.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股票回购 Buybacks</text>
+<text x="873.00" y="275.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€5.5B  (21.5%)</text>
+<text x="873.00" y="348.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">分红 Dividends</text>
+<text x="873.00" y="361.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€2.5B  (9.7%)</text>
+<text x="873.00" y="391.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">债务净额/其他 Debt &amp; other</text>
+<text x="873.00" y="404.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€764.8M  (3.0%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = €10.6B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ASML 2025 20-F (FY2025, IFRS) — Consolidated statements &amp; Note 2</text>
+</svg>

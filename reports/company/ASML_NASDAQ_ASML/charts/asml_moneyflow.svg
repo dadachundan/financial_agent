@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1116" width="1180" height="1116" role="img" aria-label="钱从哪来、ASML 又把钱付给谁 — How AI capex flows into ASML, and where ASML's COGS pools" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1116" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">半导体光刻资金流 · SEMICONDUCTOR LITHO MONEY FLOW · 2025–26</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱从哪来、ASML 又把钱付给谁 — How AI capex flows into ASML, and where</text>
+<text x="42.00" y="138.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">ASML's COGS pools</text>
+<text x="42.00" y="180.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求侧:AI 数据中心资本开支 → 晶圆代工厂/存储厂的产能投资 → 光刻设备订单流入 ASML;供给侧:ASML 把营业成本付给一条由 Carl Zeiss SMT 光学、Cymer 光源、Trumpf 激光把守的单一来源 (single-source)</text>
+<text x="42.00" y="202.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">欧洲子供应链——这才是真正的瓶颈。</text>
+<ellipse cx="1031.00" cy="470.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="248.00" x2="369.50" y2="688.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="248.00" x2="810.50" y2="688.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="232.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="248.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁在付钱 (需求驱动)</text>
+<text x="483.00" y="232.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="248.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">ASML 与其产品线</text>
+<text x="924.00" y="232.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="248.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">ASML 把成本付给谁 (上游瓶颈)</text>
+<path d="M 256.00 402.00 C 149.00 402.00, 149.00 538.00, 42.00 538.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 526.00 C 369.50 526.00, 369.50 360.00, 483.00 360.00" fill="none" stroke="url(#mfgold)" stroke-width="17.60" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 542.00 C 369.50 542.00, 369.50 470.00, 483.00 470.00" fill="none" stroke="url(#mfgold)" stroke-width="14.40" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 554.00 C 369.50 554.00, 369.50 580.00, 483.00 580.00" fill="none" stroke="url(#mfgold)" stroke-width="9.60" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 352.40 C 810.50 352.40, 810.50 305.00, 924.00 305.00" fill="none" stroke="url(#mfgold)" stroke-width="12.80" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 362.40 C 810.50 362.40, 810.50 415.00, 924.00 415.00" fill="none" stroke="url(#mfgold)" stroke-width="7.20" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 1138.00 415.00 C 1031.00 415.00, 1031.00 525.00, 924.00 525.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 370.00 C 810.50 370.00, 810.50 631.00, 924.00 631.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 470.00 C 810.50 470.00, 810.50 639.00, 924.00 639.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="149.00" y="464.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AI capex 拉动</text>
+<text x="369.50" y="437.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">EUV 订单</text>
+<text x="369.50" y="500.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">DUV 订单</text>
+<text x="369.50" y="561.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">服务合同</text>
+<text x="810.50" y="322.70" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">光学 COGS</text>
+<text x="810.50" y="382.70" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">光源</text>
+<text x="1031.00" y="464.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">激光泵浦</text>
+<rect x="42.00" y="342.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="342.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="375.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AI 数据中心资本开支</text>
+<text x="60.00" y="396.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">微软/Meta/Alphabet/亚马逊/甲骨文</text>
+<text x="60.00" y="413.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">训练+推理算力需求</text>
+<rect x="42.00" y="478.00" width="214" height="120.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="478.00" width="3" height="120.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="511.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">晶圆代工 + 存储扩产</text>
+<text x="60.00" y="532.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">TSMC/Samsung/Intel/SK Hynix/Micron</text>
+<text x="60.00" y="549.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">先进逻辑 + HBM DRAM</text>
+<rect x="483.00" y="313.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="313.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="346.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">EUV (NXE+EXE)</text>
+<text x="501.00" y="367.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">€11.6bn / 48 台</text>
+<text x="501.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">100% 全球份额 · 高 ASP</text>
+<rect x="483.00" y="423.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="423.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="456.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">DUV (ArFi+干式)</text>
+<text x="501.00" y="477.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">€12.0bn</text>
+<text x="501.00" y="494.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">7–28nm 主力 + 中国成熟节点</text>
+<rect x="483.00" y="533.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="533.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="566.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">服务与现场升级 IBM</text>
+<text x="501.00" y="587.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">€8.2bn / 25% 收入</text>
+<text x="501.00" y="604.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">装机 95% 仍在用 · 经常性年金</text>
+<rect x="924.00" y="258.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="258.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="291.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Carl Zeiss SMT</text>
+<text x="942.00" y="312.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">EUV 光学反射镜 · 独家</text>
+<text x="942.00" y="329.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">ASML 持股 24.9% · 头号瓶颈</text>
+<rect x="924.00" y="368.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="368.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="401.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Cymer (自有)</text>
+<text x="942.00" y="422.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">EUV 锡等离子体光源</text>
+<text x="942.00" y="439.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">2013 并购 · 美国原产成分</text>
+<rect x="924.00" y="478.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="478.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="511.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Trumpf 通快</text>
+<text x="942.00" y="532.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">CO₂ 高功率激光泵浦</text>
+<text x="942.00" y="549.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">单一来源</text>
+<rect x="924.00" y="588.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="588.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="621.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">约 5,100 家供应商</text>
+<text x="942.00" y="642.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">欧洲中型单一来源厂商群</text>
+<text x="942.00" y="659.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">VDL/Settels/Neways 等</text>
+<rect x="42.00" y="708.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="712.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="710.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="710.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="710.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="710.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="712.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="712.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="703.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="712.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="703.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="840.40" y="712.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="965.20" y="703.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="984.20" y="712.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="42.00" y="723.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="61.00" y="732.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="135.40" y="723.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="154.40" y="732.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="279.20" y="723.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="298.20" y="732.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="415.80" y="723.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="434.80" y="732.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<line x1="42" y1="748.00" x2="1138" y2="748.00" stroke="#222a3a"/>
+<text x="42.00" y="764.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — ASML 资金流要点</text>
+<rect x="42.00" y="784.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="784.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="808.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求源头 · AI CAPEX</text>
+<text x="58.00" y="826.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AI 资本开支是总开关</text>
+<text x="58.00" y="850.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">CEO</tspan><tspan fill="#9aa3b8" font-weight="400"> Fouquet:</tspan><tspan fill="#f4d58a" font-weight="700"> &quot;芯片需求正超过供给&quot;</tspan><tspan fill="#9aa3b8" font-weight="400"> ,客户</tspan><tspan fill="#f4d58a" font-weight="700"> 加速</tspan><tspan fill="#f4d58a" font-weight="700"> 2026</tspan><tspan fill="#f4d58a" font-weight="700"> 年起的产能扩张</tspan><tspan fill="#9aa3b8" font-weight="400"> 。AI</tspan></text>
+<text x="58.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">训练+推理算力把先进逻辑与</tspan><tspan fill="#f4d58a" font-weight="700"> HBM</tspan><tspan fill="#f4d58a" font-weight="700"> DRAM</tspan><tspan fill="#9aa3b8" font-weight="400"> 的产能投资推到历史高位,这是</tspan><tspan fill="#9aa3b8" font-weight="400"> ASML</tspan><tspan fill="#f4d58a" font-weight="700"> €36–40bn</tspan></text>
+<text x="58.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 指引的单一最大驱动。</tspan></text>
+<rect x="412.00" y="784.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="784.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="808.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">买成品 · 垄断品类</text>
+<text x="428.00" y="826.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">EUV = 100% 份额的现金引擎</text>
+<text x="428.00" y="850.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 净销售</tspan><tspan fill="#f4d58a" font-weight="700"> €11.6bn</tspan><tspan fill="#9aa3b8" font-weight="400"> (48</tspan><tspan fill="#9aa3b8" font-weight="400"> 台),ASML</tspan><tspan fill="#9aa3b8" font-weight="400"> 是</tspan><tspan fill="#f4d58a" font-weight="700"> 全球唯一</tspan><tspan fill="#9aa3b8" font-weight="400"> EUV</tspan></text>
+<text x="428.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">制造商。每个节点</tspan><tspan fill="#9aa3b8" font-weight="400"> (3nm→2nm→1.4nm)</tspan><tspan fill="#9aa3b8" font-weight="400"> 增加每片晶圆的</tspan><tspan fill="#9aa3b8" font-weight="400"> EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 曝光层数,是对</tspan><tspan fill="#9aa3b8" font-weight="400"> ASML</tspan></text>
+<text x="428.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">扫描机的直接需求拉动。</tspan></text>
+<rect x="782.00" y="784.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="784.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="808.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">钱往哪汇 · 头号瓶颈</text>
+<text x="798.00" y="826.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Carl Zeiss SMT 独家光学</text>
+<text x="798.00" y="850.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 反射镜由</tspan><tspan fill="#f4d58a" font-weight="700"> Zeiss</tspan><tspan fill="#f4d58a" font-weight="700"> SMT</tspan><tspan fill="#9aa3b8" font-weight="400"> (德国奥伯科亨)独家供应,每面镜</tspan><tspan fill="#9aa3b8" font-weight="400"> Mo/Si</tspan><tspan fill="#9aa3b8" font-weight="400"> 镀约</tspan><tspan fill="#f4d58a" font-weight="700"> 50</tspan><tspan fill="#f4d58a" font-weight="700"> 对</tspan></text>
+<text x="798.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">。ASML</tspan><tspan fill="#9aa3b8" font-weight="400"> 自</tspan><tspan fill="#9aa3b8" font-weight="400"> 2017</tspan><tspan fill="#9aa3b8" font-weight="400"> 年持有</tspan><tspan fill="#f4d58a" font-weight="700"> 24.9%</tspan><tspan fill="#9aa3b8" font-weight="400"> 经济权益锁定该合作——这是整条</tspan><tspan fill="#9aa3b8" font-weight="400"> EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 链最深的单点瓶颈。</tspan></text>
+<rect x="42.00" y="930.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="42.00" y="930.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="58.00" y="954.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">自有 + 单一来源</text>
+<text x="58.00" y="972.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Cymer 光源 + Trumpf 激光</text>
+<text x="58.00" y="996.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">光源由自有的</tspan><tspan fill="#f4d58a" font-weight="700"> Cymer</tspan><tspan fill="#9aa3b8" font-weight="400"> (2013</tspan><tspan fill="#9aa3b8" font-weight="400"> 年并购)整合,</tspan><tspan fill="#f4d58a" font-weight="700"> Trumpf</tspan><tspan fill="#9aa3b8" font-weight="400"> CO₂</tspan><tspan fill="#9aa3b8" font-weight="400"> 激光每秒击中锡液滴</tspan><tspan fill="#f4d58a" font-weight="700"> 约</tspan><tspan fill="#f4d58a" font-weight="700"> 5</tspan></text>
+<text x="58.00" y="1012.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">万次</tspan><tspan fill="#9aa3b8" font-weight="400"> 产生</tspan><tspan fill="#9aa3b8" font-weight="400"> EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 等离子体。两者均为单一来源,且</tspan><tspan fill="#9aa3b8" font-weight="400"> Cymer</tspan><tspan fill="#9aa3b8" font-weight="400"> 含</tspan><tspan fill="#f4d58a" font-weight="700"> 美国原产成分</tspan></text>
+<text x="58.00" y="1028.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">——这正是美国出口管制能卡住对华</tspan><tspan fill="#9aa3b8" font-weight="400"> EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 的法理支点。</tspan></text>
+<rect x="412.00" y="930.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="930.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="954.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">非周期地板 · 经常性</text>
+<text x="428.00" y="972.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">服务年金 = 25% 收入</text>
+<text x="428.00" y="996.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">服务与现场升级</tspan><tspan fill="#9aa3b8" font-weight="400"> (IBM)</tspan><tspan fill="#f4d58a" font-weight="700"> €8.2bn</tspan><tspan fill="#9aa3b8" font-weight="400"> ,占总收入</tspan><tspan fill="#f4d58a" font-weight="700"> 25%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。ASML</tspan><tspan fill="#9aa3b8" font-weight="400"> 称</tspan><tspan fill="#f4d58a" font-weight="700"> 近</tspan><tspan fill="#f4d58a" font-weight="700"> 30</tspan><tspan fill="#f4d58a" font-weight="700"> 年售出设备约</tspan></text>
+<text x="428.00" y="1012.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">95%</tspan><tspan fill="#f4d58a" font-weight="700"> 仍在使用</tspan><tspan fill="#9aa3b8" font-weight="400"> ,一手</tspan><tspan fill="#9aa3b8" font-weight="400"> EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 服务是</tspan><tspan fill="#f4d58a" font-weight="700"> 100%</tspan><tspan fill="#f4d58a" font-weight="700"> 垄断</tspan><tspan fill="#9aa3b8" font-weight="400"> ——周期下行时这是收入地板。</tspan></text>
+<rect x="782.00" y="930.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="782.00" y="930.00" width="3" height="132.00" rx="2" fill="#a78bfa"/>
+<text x="798.00" y="954.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">供应商群 · 护城河</text>
+<text x="798.00" y="972.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">约 5,100 家供应商</text>
+<text x="798.00" y="996.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 是工业界最复杂的跨国子供应链:约</tspan><tspan fill="#f4d58a" font-weight="700"> 5,100</tspan><tspan fill="#f4d58a" font-weight="700"> 家</tspan></text>
+<text x="798.00" y="1012.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">供应商,大量欧洲中型单一来源厂商。重建这套供应商基础需累计</tspan><tspan fill="#f4d58a" font-weight="700"> 超</tspan><tspan fill="#f4d58a" font-weight="700"> 25</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan></text>
+<text x="798.00" y="1028.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">——是任何追赶者无法在相关投资期内复制的护城河。</tspan></text>
+<text x="590.00" y="1098.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: ASML 2025 20-F (Note 2 收入分拆 · 供应链披露) · Q1-2026 6-K (2026-04-15 CEO 声明) · ASML Zeiss/Cymer 并购新闻稿</text>
+</svg>

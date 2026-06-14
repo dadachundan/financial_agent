@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">ASML FY2025 利润表 Sankey (income statement, €m, IFRS)</text>
+<path d="M 204.00,71.00 C 258.00,71.00 258.00,78.00 312.00,78.00 L 312.00,394.16 C 258.00,394.16 258.00,387.16 204.00,387.16 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,71.00 C 506.00,71.00 506.00,164.94 560.00,164.94 L 560.00,310.92 C 506.00,310.92 506.00,216.97 452.00,216.97 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,216.97 C 506.00,216.97 506.00,324.92 560.00,324.92 L 560.00,397.06 C 506.00,397.06 506.00,289.12 452.00,289.12 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,78.00 C 382.00,78.00 382.00,71.00 436.00,71.00 L 436.00,293.94 C 382.00,293.94 382.00,300.94 328.00,300.94 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,300.94 C 382.00,300.94 382.00,307.94 436.00,307.94 L 436.00,507.00 C 382.00,507.00 382.00,500.00 328.00,500.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,164.94 C 630.00,164.94 630.00,165.26 684.00,165.26 L 684.00,311.23 C 630.00,311.23 630.00,310.92 576.00,310.92 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,165.26 C 754.00,165.26 754.00,206.93 808.00,206.93 L 808.00,331.06 C 754.00,331.06 754.00,289.39 700.00,289.39 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,289.39 C 754.00,289.39 754.00,345.06 808.00,345.06 L 808.00,371.07 C 754.00,371.07 754.00,315.40 700.00,315.40 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,324.92 C 630.00,324.92 630.00,326.60 684.00,326.60 L 684.00,342.69 C 630.00,342.69 630.00,341.01 576.00,341.01 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,341.01 C 630.00,341.01 630.00,356.69 684.00,356.69 L 684.00,412.74 C 630.00,412.74 630.00,397.06 576.00,397.06 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,401.16 C 258.00,401.16 258.00,394.16 312.00,394.16 L 312.00,500.00 C 258.00,500.00 258.00,507.00 204.00,507.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,411.06 C 630.00,411.06 630.00,311.23 684.00,311.23 L 684.00,313.23 C 630.00,313.23 630.00,413.06 576.00,413.06 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="316.16" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="401.16" width="16" height="105.84" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="71.00" width="16" height="222.94" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="307.94" width="16" height="199.06" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="164.94" width="16" height="145.97" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="324.92" width="16" height="72.14" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="411.06" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="165.26" width="16" height="147.35" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="326.60" width="16" height="16.09" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="356.69" width="16" height="56.05" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="206.93" width="16" height="124.14" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="345.06" width="16" height="26.01" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="226.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">新机销售 New systems</text>
+<text x="179.00" y="239.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€24.5B  (74.9%)</text>
+<text x="179.00" y="451.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">服务与现场升级 Service&amp;IBM</text>
+<text x="179.00" y="464.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€8.2B  (25.1%)</text>
+<rect x="331.00" y="60.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€32.7B  (100.0%)</text>
+<rect x="455.00" y="53.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€17.3B  (52.8%)</text>
+<rect x="455.00" y="289.94" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="301.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="314.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€15.4B  (47.2%)</text>
+<rect x="579.00" y="146.94" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="158.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="171.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€11.3B  (34.6%)</text>
+<rect x="579.00" y="306.92" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="318.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="331.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€5.6B  (17.1%)</text>
+<text x="551.00" y="409.06" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="422.06" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€106.1M  (0.32%)</text>
+<rect x="703.00" y="147.26" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="159.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="172.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€11.4B  (34.9%)</text>
+<rect x="703.00" y="308.60" width="87.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="320.60" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="333.60" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€1.2B  (3.8%)</text>
+<rect x="703.00" y="338.69" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="350.69" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="363.69" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€4.3B  (13.3%)</text>
+<text x="833.00" y="266.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="279.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€9.6B  (29.4%)</text>
+<text x="833.00" y="355.07" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="368.07" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€2.0B  (6.2%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ASML 2025 20-F (FY2025, IFRS) — Consolidated statements &amp; Note 2</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">ASML FY2025 净销售额结构 (by product line, €m)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 392.21,320.22 L 349.58,287.08 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 392.21,320.22 A 132 132 0 0 1 172.00,302.19 L 219.45,276.42 A 78 78 0 0 0 349.58,287.08 Z" fill="#15803d"/>
+<path d="M 172.00,302.19 A 132 132 0 0 1 157.76,260.70 L 211.04,251.91 A 78 78 0 0 0 219.45,276.42 Z" fill="#d97706"/>
+<path d="M 157.76,260.70 A 132 132 0 0 1 156.00,239.86 L 210.00,239.59 A 78 78 0 0 0 211.04,251.91 Z" fill="#7c3aed"/>
+<path d="M 156.00,239.86 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 210.00,239.59 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">€32.7bn</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">€32.7B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="411.96" y1="178.56" x2="427.96" y2="178.56" stroke="#2563eb" stroke-width="1.4"/>
+<text x="431.96" y="176.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">EUV (NXE+EXE)</text>
+<text x="431.96" y="190.56" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€11.6B  (35.5%)</text>
+<line x1="276.74" y1="376.74" x2="260.74" y2="376.74" stroke="#15803d" stroke-width="1.4"/>
+<text x="256.74" y="374.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">ArF 浸没式 ArFi</text>
+<text x="256.74" y="388.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€10.3B  (31.6%)</text>
+<line x1="157.47" y1="283.99" x2="141.47" y2="283.99" stroke="#d97706" stroke-width="1.4"/>
+<text x="137.47" y="281.99" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">ArF干式/KrF/i-line DUV干式</text>
+<text x="137.47" y="295.99" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€1.7B  (5.3%)</text>
+<line x1="150.49" y1="250.82" x2="134.49" y2="250.82" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="130.49" y="248.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">量测检测 M&amp;I</text>
+<text x="130.49" y="262.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€824.6M  (2.5%)</text>
+<line x1="190.17" y1="141.87" x2="174.17" y2="141.87" stroke="#dc2626" stroke-width="1.4"/>
+<text x="170.17" y="139.87" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">服务与现场升级 Service&amp;IBM</text>
+<text x="170.17" y="153.87" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€8.2B  (25.1%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: ASML 2025 20-F (FY2025, IFRS) — Note 2 Disaggregation of revenue</text>
+</svg>
