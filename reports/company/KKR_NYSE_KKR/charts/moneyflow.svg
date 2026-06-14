@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 940" width="1180" height="940" role="img" aria-label="KKR 的资金飞轮：谁出资 → KKR 平台 → 资本流向何处" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="940" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">另类资产管理 · 资金流向 · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">KKR 的资金飞轮：谁出资 → KKR 平台 → 资本流向何处</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">机构 LP、个人投资者（K-Series）与 Global Atlantic 保单持有人把资金交给 KKR，平台抽取管理费/carry 与保险利差，再把约 7,440 亿美元 AUM 部署到私募股权、信贷、基础设施与实物资产。</text>
+<ellipse cx="1031.00" cy="368.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="544.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="544.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁出资 / who pays in</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">KKR 平台 / the platform</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">资本流向 / where capital is deployed</text>
+<path d="M 256.00 255.50 C 369.50 255.50, 369.50 252.55, 483.00 252.55" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 381.00 C 369.50 381.00, 369.50 270.00, 483.00 270.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 491.00 C 369.50 491.00, 369.50 381.00, 483.00 381.00" fill="none" stroke="url(#mfgold)" stroke-width="21.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 238.36 C 810.50 238.36, 810.50 254.73, 924.00 254.73" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 259.09 C 810.50 259.09, 810.50 349.68, 924.00 349.68" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 278.73 C 810.50 278.73, 810.50 465.14, 924.00 465.14" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 491.00 C 810.50 491.00, 810.50 266.73, 924.00 266.73" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 270.00 C 369.50 270.00, 369.50 491.00, 483.00 491.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 376.64 C 810.50 376.64, 810.50 371.50, 924.00 371.50" fill="none" stroke="url(#mfgold)" stroke-width="19.64" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 390.82 C 810.50 390.82, 810.50 477.14, 924.00 477.14" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="248.02" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">承诺资本 commitments</text>
+<text x="369.50" y="319.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">K-Series 流入</text>
+<text x="369.50" y="430.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">保费 premiums</text>
+<text x="810.50" y="368.07" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">GA 资产配置</text>
+<rect x="42.00" y="198.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">机构 LP</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">养老金 / 主权基金 / 保险</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">drawdown + 永续资本</text>
+<rect x="42.00" y="334.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="334.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="367.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">个人投资者</text>
+<text x="60.00" y="388.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">K-Series 财富产品</text>
+<text x="60.00" y="405.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Capital Group 合作</text>
+<rect x="42.00" y="444.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="42.00" y="444.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="60.00" y="477.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">保单持有人</text>
+<text x="60.00" y="498.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Global Atlantic</text>
+<text x="60.00" y="515.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">退休 + 寿险负债</text>
+<rect x="483.00" y="198.00" width="214" height="120.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="483.00" y="198.00" width="3" height="120.00" rx="2" fill="#34d399"/>
+<text x="501.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">资产管理</text>
+<text x="501.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">管理费 $4.1bn</text>
+<text x="501.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">carry / FRE $3.7bn</text>
+<rect x="483.00" y="334.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="334.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="367.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Global Atlantic</text>
+<text x="501.00" y="388.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">利差业务 spread</text>
+<text x="501.00" y="405.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">NII $7.2bn</text>
+<rect x="483.00" y="444.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="444.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="477.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Strategic Holdings</text>
+<text x="501.00" y="498.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">19 家核心 PE 公司</text>
+<text x="501.00" y="515.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">分红 dividends</text>
+<rect x="924.00" y="219.50" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="924.00" y="219.50" width="3" height="77.00" rx="2" fill="#56c6e6"/>
+<text x="942.00" y="252.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">私募股权 $229bn</text>
+<text x="942.00" y="273.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">传统 PE + 核心 PE + 成长</text>
+<rect x="924.00" y="312.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="312.50" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="345.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">信贷 $322bn</text>
+<text x="942.00" y="366.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">杠杆 + 另类信贷</text>
+<text x="942.00" y="383.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">私募信贷 / ABF</text>
+<rect x="924.00" y="422.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="422.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="455.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">实物资产 $192bn</text>
+<text x="942.00" y="476.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">基础设施 + 地产 + 能源</text>
+<text x="942.00" y="493.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">数据中心 / 电力</text>
+<rect x="42.00" y="564.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="566.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="566.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="566.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="566.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="559.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="747.00" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="821.40" y="559.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="840.40" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="907.60" y="559.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="926.60" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="42.00" y="579.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="61.00" y="588.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="135.40" y="579.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="154.40" y="588.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="236.00" y="579.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="255.00" y="588.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<line x1="42" y1="604.00" x2="1138" y2="604.00" stroke="#222a3a"/>
+<text x="42.00" y="620.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 资金如何流动</text>
+<rect x="42.00" y="640.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="640.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="664.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">平台费 · 抽佣</text>
+<text x="58.00" y="682.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">管理费 + carry</text>
+<text x="58.00" y="706.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">KKR</tspan><tspan fill="#9aa3b8" font-weight="400"> 资产管理段</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 收取管理费</tspan><tspan fill="#f4d58a" font-weight="700"> $4.1bn</tspan><tspan fill="#9aa3b8" font-weight="400"> 、FRE</tspan><tspan fill="#f4d58a" font-weight="700"> $3.71bn</tspan><tspan fill="#9aa3b8" font-weight="400"> ；FRE</tspan></text>
+<text x="58.00" y="722.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">是最稳定的'抽佣'收入，5</tspan><tspan fill="#9aa3b8" font-weight="400"> 年从</tspan><tspan fill="#f4d58a" font-weight="700"> $1.97bn</tspan><tspan fill="#9aa3b8" font-weight="400"> （2021）升至</tspan><tspan fill="#f4d58a" font-weight="700"> $3.71bn</tspan><tspan fill="#9aa3b8" font-weight="400"> （2025）。</tspan></text>
+<rect x="412.00" y="640.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="412.00" y="640.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="428.00" y="664.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">永续资本 · 利差</text>
+<text x="428.00" y="682.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Global Atlantic 利差引擎</text>
+<text x="428.00" y="706.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GA</tspan><tspan fill="#9aa3b8" font-weight="400"> 用保单负债换来</tspan><tspan fill="#f4d58a" font-weight="700"> $219bn</tspan><tspan fill="#9aa3b8" font-weight="400"> 永续资本，靠投资收益与负债成本的</tspan><tspan fill="#f4d58a" font-weight="700"> 利差</tspan><tspan fill="#f4d58a" font-weight="700"> spread</tspan></text>
+<text x="428.00" y="722.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">赚钱，FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 净投资收益</tspan><tspan fill="#f4d58a" font-weight="700"> $7.2bn</tspan><tspan fill="#9aa3b8" font-weight="400"> 、保险经营利润</tspan><tspan fill="#f4d58a" font-weight="700"> $1.11bn</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="782.00" y="640.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="640.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="664.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">信贷 · 最大资产类</text>
+<text x="798.00" y="682.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">私募信贷流向哪里</text>
+<text x="798.00" y="706.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">信贷与流动策略</tspan><tspan fill="#9aa3b8" font-weight="400"> AUM</tspan><tspan fill="#9aa3b8" font-weight="400"> 达</tspan><tspan fill="#f4d58a" font-weight="700"> $322bn</tspan><tspan fill="#9aa3b8" font-weight="400"> ，是最大资产类；GA</tspan><tspan fill="#9aa3b8" font-weight="400"> 资产端也把资金</tspan><tspan fill="#f4d58a" font-weight="700"> 嵌入式</tspan></text>
+<text x="798.00" y="722.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">配置到私募信贷/ABF（虚线），这是</tspan><tspan fill="#9aa3b8" font-weight="400"> KKR</tspan><tspan fill="#9aa3b8" font-weight="400"> 资金飞轮的核心闭环。</tspan></text>
+<rect x="42.00" y="770.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="770.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="794.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">实物资产 · AI 受益</text>
+<text x="58.00" y="812.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">基础设施 / 数据中心</text>
+<text x="58.00" y="836.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">实物资产</tspan><tspan fill="#f4d58a" font-weight="700"> $192bn</tspan><tspan fill="#9aa3b8" font-weight="400"> （基础设施</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 地产</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 能源），承接</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 数据中心与电力的资本超级周期；MS</tspan></text>
+<text x="58.00" y="852.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">测算</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 年美国</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 相关固收供给约</tspan><tspan fill="#f4d58a" font-weight="700"> $5,000亿</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="412.00" y="770.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="770.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="794.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">私募股权 · 起家业务</text>
+<text x="428.00" y="812.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">PE 占比已降至 &lt;25%</text>
+<text x="428.00" y="836.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">传统私募股权从</tspan><tspan fill="#9aa3b8" font-weight="400"> 2010</tspan><tspan fill="#9aa3b8" font-weight="400"> 年占</tspan><tspan fill="#9aa3b8" font-weight="400"> AUM</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;70%</tspan><tspan fill="#9aa3b8" font-weight="400"> 降至</tspan><tspan fill="#9aa3b8" font-weight="400"> 2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#f4d58a" font-weight="700"> &lt;25%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，反映平台从单一</tspan><tspan fill="#9aa3b8" font-weight="400"> PE</tspan></text>
+<text x="428.00" y="852.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">公司转型为多资产另类管理人。</tspan></text>
+<rect x="782.00" y="770.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="770.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="794.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">永续资本 · 43%</text>
+<text x="798.00" y="812.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AUM 越来越'黏'</text>
+<text x="798.00" y="836.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">永续资本</tspan><tspan fill="#f4d58a" font-weight="700"> $321bn</tspan><tspan fill="#9aa3b8" font-weight="400"> （2025，+20%</tspan><tspan fill="#9aa3b8" font-weight="400"> YoY），占</tspan><tspan fill="#9aa3b8" font-weight="400"> AUM</tspan><tspan fill="#f4d58a" font-weight="700"> 43%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、FPAUM</tspan><tspan fill="#f4d58a" font-weight="700"> 51%</tspan></text>
+<text x="798.00" y="852.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">——锁定的长久期资本让管理费基础更稳定。</tspan></text>
+<text x="590.00" y="922.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: KKR FY2025 10-K + FY2025 8-K 业绩发布（2026-02-05）；MS《AI: Financing the Next 10x Tech Cycle》(2026-05-29)</text>
+</svg>

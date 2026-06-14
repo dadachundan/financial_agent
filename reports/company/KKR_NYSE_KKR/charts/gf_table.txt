@@ -1,0 +1,10 @@
+| 维度 / Dimension | 评分 / Score (0–10) | |
+|---|---|---|
+| Financial Strength (财务实力) | 6 | `██████░░░░` |
+| Profitability (盈利能力) | 8 | `████████░░` |
+| Growth (成长性) | 8 | `████████░░` |
+| GF Value (估值) | 8 | `████████░░` |
+| Momentum (动量) | 2 | `██░░░░░░░░` |
+| **GF Score (composite, *Analyst view:*)** | **67 / 100** | **51–70 Poor future performance potential** |
+
+*Composite weights (*Analyst view:*): Financial Strength 20% · Profitability 25% · Growth 25% · GF Value 15% · Momentum 15% (transparent reproduction — not GuruFocus's proprietary weighting).*
