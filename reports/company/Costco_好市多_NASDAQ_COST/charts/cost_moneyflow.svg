@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1150" width="1180" height="1150" role="img" aria-label="会员的每一美元流向哪里 — Costco 的成本与资本去处" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1150" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">COSTCO 资金流向 · FY2025（截至 2025-08-31）</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">会员的每一美元流向哪里 — Costco 的成本与资本去处</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">会员费 $5.32B 几乎全额转化为利润；$269.9B 净销售按约 11.1% 毛利率运作，意味着 $239.9B 商品成本流向供应商。资金的真正去处是上游：Kirkland Signature 代工厂、品牌商品供应商、油商、以及自有地产的资本开支。</text>
+<ellipse cx="1031.00" cy="465.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="738.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="738.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">会员支付（净销售 + 会员费）</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Costco 买什么</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终汇向哪里</text>
+<path d="M 256.00 455.50 C 369.50 455.50, 369.50 300.00, 483.00 300.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 470.50 C 369.50 470.50, 369.50 410.00, 483.00 410.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 482.50 C 369.50 482.50, 369.50 630.00, 483.00 630.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 476.00 C 369.50 476.00, 369.50 520.00, 483.00 520.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 304.50 C 810.50 304.50, 810.50 355.00, 924.00 355.00" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 410.00 C 810.50 410.00, 810.50 465.00, 924.00 465.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 520.00 C 810.50 520.00, 810.50 575.00, 924.00 575.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 630.00 C 810.50 630.00, 810.50 685.00, 924.00 685.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 293.00 C 810.50 293.00, 810.50 245.00, 924.00 245.00" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="371.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$239.9B 商品成本</text>
+<text x="369.50" y="434.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">~$27B 汽油</text>
+<text x="369.50" y="550.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$24.97B SG&amp;A</text>
+<text x="369.50" y="492.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$5.50B capex</text>
+<rect x="42.00" y="390.00" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="390.00" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="423.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">8,100 万付费会员</text>
+<text x="60.00" y="444.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">净销售 $269.9B</text>
+<text x="60.00" y="461.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">会员费 $5.32B（~88% drop-through）</text>
+<rect x="483.00" y="253.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="253.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="286.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">商品采购 COGS</text>
+<text x="501.00" y="307.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">商品成本 $239.9B</text>
+<text x="501.00" y="324.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">毛利率仅 11.1%</text>
+<rect x="483.00" y="363.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="363.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="396.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">汽油采购</text>
+<text x="501.00" y="417.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">占净销售 ~10%</text>
+<text x="501.00" y="434.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">747 个加油站</text>
+<rect x="483.00" y="473.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="473.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="506.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">资本开支 Capex</text>
+<text x="501.00" y="527.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">FY25 $5.50B</text>
+<text x="501.00" y="544.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">FY26 指引 $6.0–6.5B</text>
+<rect x="483.00" y="583.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="583.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="616.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SG&amp;A（含薪酬）</text>
+<text x="501.00" y="637.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">$24.97B；占销售 9.07%</text>
+<text x="501.00" y="654.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">起薪 ≥$20/小时</text>
+<rect x="924.00" y="198.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="198.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Kirkland 代工厂</text>
+<text x="942.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">自有品牌 ~$86–90B（第三方估算）</text>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">毛利杠杆</text>
+<rect x="924.00" y="308.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="308.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="341.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">全国品牌供应商</text>
+<text x="942.00" y="362.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">每细分品类仅 1 个上架 SKU</text>
+<text x="942.00" y="379.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">锦标赛式议价</text>
+<rect x="924.00" y="418.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="418.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="451.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">油商 / 炼厂</text>
+<text x="942.00" y="472.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">低毛利引流</text>
+<text x="942.00" y="489.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">中东地缘推高 Q3 油价</text>
+<rect x="924.00" y="528.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="528.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="561.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">自有地产 / 建店</text>
+<text x="942.00" y="582.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">914→931 家仓储店</text>
+<text x="942.00" y="599.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">每店全成本 ~$80–110M</text>
+<rect x="924.00" y="638.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="638.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="671.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">34.1 万员工</text>
+<text x="942.00" y="692.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">平均时薪 ~$32</text>
+<text x="942.00" y="709.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">续费 + 频次飞轮基础</text>
+<rect x="42.00" y="758.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="762.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="760.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="760.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="760.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="760.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="762.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="762.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="753.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="762.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="753.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="847.60" y="762.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="972.40" y="753.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="991.40" y="762.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="42.00" y="773.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="61.00" y="782.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="178.60" y="773.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="197.60" y="782.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<line x1="42" y1="798.00" x2="1138" y2="798.00" stroke="#222a3a"/>
+<text x="42.00" y="814.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">顺着钱看 / FOLLOW THE MONEY</text>
+<rect x="42.00" y="834.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="834.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="858.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">买成品 · 商品成本</text>
+<text x="58.00" y="876.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">供应商承担议价权</text>
+<text x="58.00" y="900.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">$269.9B</tspan><tspan fill="#9aa3b8" font-weight="400"> 净销售对应</tspan><tspan fill="#f4d58a" font-weight="700"> $239.9B</tspan><tspan fill="#9aa3b8" font-weight="400"> 商品成本——</tspan><tspan fill="#f4d58a" font-weight="700"> 11.1%</tspan></text>
+<text x="58.00" y="916.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">毛利率把压力推给供应商：每个细分品类只留</tspan><tspan fill="#f4d58a" font-weight="700"> 1</tspan><tspan fill="#f4d58a" font-weight="700"> 个</tspan><tspan fill="#9aa3b8" font-weight="400"> 上架</tspan><tspan fill="#9aa3b8" font-weight="400"> SKU，供应商为这唯一货架位竞标，让</tspan><tspan fill="#9aa3b8" font-weight="400"> Costco</tspan></text>
+<text x="58.00" y="932.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">拿到大盒零售业最低实付价。</tspan></text>
+<rect x="412.00" y="834.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="834.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="858.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">自有品牌 · 毛利杠杆</text>
+<text x="428.00" y="876.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Kirkland Signature</text>
+<text x="428.00" y="900.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">第三方估算</tspan><tspan fill="#9aa3b8" font-weight="400"> Kirkland</tspan><tspan fill="#9aa3b8" font-weight="400"> 全集团约</tspan><tspan fill="#f4d58a" font-weight="700"> $86–90B</tspan><tspan fill="#9aa3b8" font-weight="400"> ，由代工厂生产；10-K</tspan></text>
+<text x="428.00" y="916.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">称其&quot;通常比国际品牌毛利更高&quot;。Costco</tspan><tspan fill="#9aa3b8" font-weight="400"> 不披露具体拆分，任何百分比都是分析师估算。</tspan></text>
+<rect x="782.00" y="834.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="782.00" y="834.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="798.00" y="858.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">引流 · 低毛利</text>
+<text x="798.00" y="876.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">汽油是客流引擎</text>
+<text x="798.00" y="900.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">汽油占净销售约</tspan><tspan fill="#f4d58a" font-weight="700"> 10%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，毛利率低于其他业务、几乎无增量</tspan><tspan fill="#9aa3b8" font-weight="400"> SG&amp;A。Q3</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 中东地缘推高油价，最后</tspan></text>
+<text x="798.00" y="916.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">5</tspan><tspan fill="#f4d58a" font-weight="700"> 周</tspan><tspan fill="#9aa3b8" font-weight="400"> 创公司史上单周销量前五纪录，并拉动新会员办卡。</tspan></text>
+<rect x="42.00" y="980.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="980.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="1004.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">资本去处 · 建店</text>
+<text x="58.00" y="1022.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">自有地产 capex</text>
+<text x="58.00" y="1046.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> capex</tspan><tspan fill="#f4d58a" font-weight="700"> $5.50B</tspan><tspan fill="#9aa3b8" font-weight="400"> 、FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 指引</tspan><tspan fill="#f4d58a" font-weight="700"> $6.0–6.5B</tspan><tspan fill="#9aa3b8" font-weight="400"> ；每家新店全成本约</tspan></text>
+<text x="58.00" y="1062.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$80–110M</tspan><tspan fill="#9aa3b8" font-weight="400"> 。Costco</tspan><tspan fill="#9aa3b8" font-weight="400"> 自持大量地产，把租金支出转化为资产，是被低估的隐性价值。</tspan></text>
+<rect x="412.00" y="980.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="980.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="1004.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">人力 · 飞轮基础</text>
+<text x="428.00" y="1022.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">员工与续费飞轮</text>
+<text x="428.00" y="1046.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">SG&amp;A</tspan><tspan fill="#f4d58a" font-weight="700"> $24.97B</tspan><tspan fill="#9aa3b8" font-weight="400"> （占销售</tspan><tspan fill="#f4d58a" font-weight="700"> 9.07%</tspan><tspan fill="#9aa3b8" font-weight="400"> ）；起薪</tspan><tspan fill="#f4d58a" font-weight="700"> ≥$20</tspan><tspan fill="#9aa3b8" font-weight="400"> /小时、平均时薪</tspan><tspan fill="#f4d58a" font-weight="700"> ~$32</tspan></text>
+<text x="428.00" y="1062.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">。高于行业的薪酬换来低流失、高续费（</tspan><tspan fill="#f4d58a" font-weight="700"> 92.2%</tspan><tspan fill="#9aa3b8" font-weight="400"> 北美），是会员体验飞轮的人力地基。</tspan></text>
+<text x="590.00" y="1132.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Costco FY25 10-K + Q3 FY26 8-K；Kirkland 规模为第三方估算（PLMA）</text>
+</svg>
