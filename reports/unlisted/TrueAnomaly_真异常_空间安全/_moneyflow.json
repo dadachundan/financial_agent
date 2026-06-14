@@ -1,0 +1,47 @@
+{
+  "eyebrow": "空间安全资金流 · 2026",
+  "title": "True Anomaly 的「资金流向」——谁付钱 → 买什么 → 钱流向哪里",
+  "thesis": "需求侧视角：政府项目与风险资本流入 True Anomaly，再向下游流向发射、零部件与自建产能（GravityWorks）。实线为直接付款，虚线为隐含在成品/服务里的间接支出。",
+  "stages": ["谁付钱（客户 / 资本）", "True Anomaly 业务线", "钱流向哪里（供应链 / 产能）"],
+  "nodes": [
+    {"id": "ssc",  "stage": 0, "label": "USSF / SSC", "kind": "buyer",  "sub": ["太空军太空系统司令部", "Andromeda / Golden Dome 主出资方"], "h": 110},
+    {"id": "werx", "stage": 0, "label": "SpaceWERX",  "kind": "buyer2", "sub": ["太空军创新部门", "VICTUS HAZE 出资"]},
+    {"id": "vc",   "stage": 0, "label": "VC / 债权", "kind": "neutral", "sub": ["Eclipse · Riot · Accel", "Series D $650M + Stifel $50M"]},
+    {"id": "victus","stage": 1, "label": "VICTUS HAZE", "kind": "custom", "sub": ["TacRS-3 战术响应", "$30M 政府 + $30M 自筹"]},
+    {"id": "andro", "stage": 1, "label": "Andromeda",  "kind": "custom", "sub": ["10 年 $1.8B 框架(14 厂商)", "GEO 侦察星座交付 Jackal"]},
+    {"id": "gold",  "stage": 1, "label": "Golden Dome SBI", "kind": "custom", "sub": ["$3.2B 池 / 12 家入选", "天基拦截器原型"]},
+    {"id": "mosaic","stage": 1, "label": "Mosaic 软件", "kind": "compute", "sub": ["$17.4M 太空军合同", "C2 + 数字靶场 + 自主"]},
+    {"id": "gw",    "stage": 2, "label": "GravityWorks", "kind": "inhouse", "sub": ["自建产能(科罗拉多/长滩)", "目标 50 架 Jackal/年 · 钱池"], "h": 110},
+    {"id": "launch","stage": 2, "label": "发射服务", "kind": "rf", "sub": ["SpaceX 拼车 · Firefly Alpha", "X-1/X-2 + VICTUS HAZE"]},
+    {"id": "redwire","stage": 2, "label": "Redwire 等零部件", "kind": "power", "sub": ["相机 / 传感器", "推进 / 结构供应商"]}
+  ],
+  "flows": [
+    {"from": "ssc",  "to": "andro",  "weight": 22, "style": "direct", "label": "$1.8B 框架"},
+    {"from": "ssc",  "to": "gold",   "weight": 20, "style": "direct", "label": "$3.2B 池"},
+    {"from": "werx", "to": "victus", "weight": 10, "style": "direct", "label": "$30M"},
+    {"from": "ssc",  "to": "mosaic", "weight": 8,  "style": "direct", "label": "$17.4M"},
+    {"from": "vc",   "to": "andro",  "weight": 16, "style": "direct", "label": "$650M 自筹/扩产"},
+    {"from": "vc",   "to": "victus", "weight": 8,  "style": "embedded", "label": "$30M 自筹"},
+    {"from": "victus","to": "gw",    "weight": 12, "style": "direct"},
+    {"from": "andro", "to": "gw",    "weight": 20, "style": "direct"},
+    {"from": "gold",  "to": "gw",    "weight": 16, "style": "direct"},
+    {"from": "andro", "to": "launch","weight": 8,  "style": "embedded"},
+    {"from": "victus","to": "launch","weight": 8,  "style": "embedded"},
+    {"from": "gw",    "to": "redwire","weight": 10, "style": "embedded"},
+    {"from": "mosaic","to": "gw",    "weight": 4,  "style": "direct"}
+  ],
+  "cards_title": "Follow the money — 资金流向要点",
+  "cards": [
+    {"kind": "custom", "tag": "政府项目 · 需求", "title": "两大框架托底 2026 增长",
+     "body": "2026 年 4 月接连入选 *Andromeda*（10 年 *$1.8B* 框架、14 家厂商）与 *Golden Dome* 天基拦截器（*$3.2B* 池、12 家入选）——是 *$650M* D 轮叙事的两大订单支柱。"},
+    {"kind": "buyer2", "tag": "战术响应 · 旗舰", "title": "VICTUS HAZE：政企各半",
+     "body": "太空军出 *$30M*、True Anomaly 自筹 *$30M*，合计 *$60M* 的 TacRS-3 任务——政府与商业资本「共担」的典型结构。"},
+    {"kind": "neutral", "tag": "资本 · 加速", "title": "$650M D 轮转化为产能",
+     "body": "D 轮（*$2.2B* 估值，Eclipse/Riot 领投）+ Stifel *$50M* 债权，用于把人员从 *250* 扩到 *500*（2026 年底）、产能扩到目标 *50 架/年*。"},
+    {"kind": "inhouse", "tag": "钱池 · 自建产能", "title": "GravityWorks 是最大「钱池」",
+     "body": "合同与资本最终汇入自建工厂 *GravityWorks*（科罗拉多 Centennial + 加州 Long Beach），实现 Jackal 低成本量产——垂直整合是其核心模式。"},
+    {"kind": "rf", "tag": "外购 · 发射", "title": "发射靠 SpaceX 与 Firefly",
+     "body": "X-1/X-2 任务用 *SpaceX* 拼车；VICTUS HAZE 选 *Firefly Alpha* 提供 24 小时响应发射——发射不是其自研环节。"}
+  ],
+  "source": "True Anomaly newsroom (Series D / VICTUS HAZE) · DefenseScoop Andromeda 2026-04-10 · SatNews Golden Dome 2026-04-25 · TechCrunch Mosaic $17.4M 2023-09-21 · Contrary Research"
+}

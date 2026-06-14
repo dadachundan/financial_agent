@@ -1,7 +1,7 @@
 # Northrop Grumman 诺斯罗普·格鲁曼 (NYSE: NOC) 公司研究报告
 
-> **报告日期 (as of)：2026-06-09** ｜ 主题归属：**太空投资主题 (Space Theme) — 标签 `adjacent`（美国大型国防主承包商中太空敞口最高者）**
-> 主要数据源：SEC EDGAR 10-K (FY2025) / 10-Q (Q1 2026) / DEF 14A (2026) / 8-K，公司官网 northropgrumman.com 与投资者关系页，本地券商研究库 `db/zsxq.db`，yfinance（2026-06-08 收盘）。
+> **报告日期 (as of)：2026-06-14** ｜ 主题归属：**太空投资主题 (Space Theme) — 标签 `adjacent`（美国大型国防主承包商中太空敞口最高者）**
+> 主要数据源：SEC EDGAR 10-K (FY2025) / 10-Q (Q1 2026) / DEF 14A (2026) / 8-K，公司官网 northropgrumman.com 与投资者关系页，本地券商研究库 `db/zsxq.db`，yfinance（2026-06-12 收盘）。
 > 语言说明：正文为简体中文，技术 / 财务 / 行业术语首次出现保留英文原词并加中文注释；项目名（B-21 Raider、Sentinel/GBSD、E-2D、IBCS 等）、评级标签、指数名保持英文。
 
 ---
@@ -14,12 +14,12 @@
 |---|---|
 | **评级 (Rating)** | **Overweight / 增持** |
 | **12 个月目标价 (12-mo Price Target)** | **$650**（base case） |
-| 当前股价 (2026-06-08 收盘) | **$540.81** |
-| 隐含上行空间 (Implied upside) | **约 +20%**（不含 ~1.7% 股息） |
+| 当前股价 (2026-06-12 收盘) | **$550.33** |
+| 隐含上行空间 (Implied upside) | **约 +18%**（至 base case $650；不含 ~1.7% 股息） |
 | 估值方法 (Valuation method) | forward P/E：2027E MTM-adjusted EPS ~$30.0 × 21.7× 目标 P/E |
-| 市值 (Market cap) | 约 **$76.8bn** |
-| 52 周区间 (52-wk range) | $472.02 – $774.00 |
-| 1 年涨幅 | **+11.8%**（2025-06-09 → 2026-06-08） |
+| 市值 (Market cap) | 约 **$78.2bn** |
+| 52 周区间 (52-wk range) | $481.28 – $774.00 |
+| 相对表现 (relative performance) | 1 年 **+8.2%**（2025-06-13 → 2026-06-12）vs S&P 500 **+25.7%**（**跑输约 17.5pp**）；6 个月 −3.7%；现价低于 200 日均线（~$612）约 10% |
 | 共识 (Consensus) | **Buy**，21 位分析师，平均目标价 **$696.95**（区间 $603–$815） |
 | Ticker / 交易所 | **NOC / New York Stock Exchange (NYSE)** |
 
@@ -28,7 +28,7 @@
 1. **核三位一体 (nuclear triad) 现代化的近乎垄断地位。** NOC 是美国陆基核威慑现代化项目 **Sentinel (GBSD) ICBM (洲际弹道导弹)** 的唯一主承包商 (prime contractor)，同时是隐身战略轰炸机 **B-21 Raider** 的唯一承包商——这两条护城河极深、替代成本极高，是典型的 Buffett/Munger 式"质量复利"标的。
 2. **太空敞口为美国大型主承包商之最。** Space Systems 段 FY2025 收入 $10.8bn，约占四段合计收入的 **25.7%**；叠加 Defense Systems 内的 Sentinel、固体火箭发动机 (solid rocket motor / SRM)、导弹防御与导弹预警/跟踪层，NOC 是 **Golden Dome (金穹)** $185bn 导弹防御计划的核心受益者之一。
 3. **现金回报型"压舱石/质量"资产，而非成长股。** profitable、付息、回购密集；FY2025 自由现金流 (free cash flow / FCF) $3.3bn（+26% YoY），股息连续多年两位数增长（2025 年 +12%），β 约 −0.12，与大盘弱相关——在 late-cycle 宏观下是防御性配置。
-4. **估值相对自身历史与同业仍具吸引力。** forward P/E ~17.9×，介于 LMT (~16×) 与 RTX (~24×) 之间；大摩测算美国国防巨头在 NTM P/FCF 口径下相对 S&P 500 仍有约 16% 折价，未充分反映 FY27 预算上行。
+4. **估值相对自身历史与同业仍具吸引力。** forward P/E ~18.3×，介于 LMT (~16×) 与 RTX (~24×) 之间；大摩测算美国国防巨头在 NTM P/FCF 口径下相对 S&P 500 仍有约 16% 折价，未充分反映 FY27 预算上行。
 
 **关键摆动变量 (swing variables)：** ① **Sentinel 的 Production & Deployment 阶段定价与合同类型**（cost-type vs fixed-price）——这是利润率风险与 Nunn-McCurdy 超支审查 (Nunn-McCurdy breach) 后重组结果的核心；② **B-21 LRIP 固定价批次的成本到位情况**（已累计计提亏损，剩余亏损准备 $1.0bn）。
 
@@ -37,6 +37,7 @@
 ## 目录
 
 1. [公司概览](#1-公司概览)
+1B. [GF Score 基本面评分 (Fundamental Scorecard)](#1b-gf-score-基本面评分)
 2. [估值与目标价 (Valuation & Price Target)](#2-估值与目标价)
 3. [公司历史](#3-公司历史)
 4. [管理团队](#4-管理团队)
@@ -74,7 +75,150 @@ xychart-beta
 
 Source: 收入来自 [NOC FY2022 10-K](https://www.sec.gov/Archives/edgar/data/1133421/000113342123000006/noc-20221231.htm)（FY2021/2022）与 [NOC FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)（FY2023–2025 收入及 FCF）。注：bar = Sales，line = FCF；FY2021 FCF $2.97bn 来自 FY2022 10-K 现金流量重述（FY2022–2025 FCF 取 FY2025 10-K 三年表 + FY2022 10-K）。
 
-**估值快照 (valuation snapshot)：** 截至 2026-06-08 收盘，股价 $540.81，市值约 $76.8bn，trailing P/E ~16.9×、forward P/E ~17.9×、P/S ~1.81×、P/B ~4.49×，股息 $9.40/年（yield ~1.74%）（[yfinance NOC key statistics, 2026-06-08](https://finance.yahoo.com/quote/NOC/)）。这是一个 profitable、付息、回购密集的成熟主承包商，估值应被框定为**质量/压舱石**而非成长——详见 Section 2。
+**估值快照 (valuation snapshot)：** 截至 2026-06-12 收盘，股价 $550.33，市值约 $78.2bn，trailing P/E ~17.2×、forward P/E ~18.3×、P/S ~1.84×、P/B ~4.57×，股息 $9.40/年（yield ~1.71%）（[yfinance NOC key statistics, 2026-06-12](https://finance.yahoo.com/quote/NOC/)）。这是一个 profitable、付息、回购密集的成熟主承包商，估值应被框定为**质量/压舱石**而非成长——详见 Section 2。
+
+**FY2025 利润表资金流 (income-statement Sankey) 与收入构成 (revenue donut)：**
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">NOC FY2025 利润表 Sankey (income statement)</text>
+<path d="M 359.00,71.00 C 428.50,71.00 428.50,229.23 498.00,229.23 L 498.00,274.60 C 428.50,274.60 428.50,116.37 359.00,116.37 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 359.00,116.37 C 428.50,116.37 428.50,288.60 498.00,288.60 L 498.00,329.17 C 428.50,329.17 428.50,156.94 359.00,156.94 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,78.00 C 273.50,78.00 273.50,71.00 343.00,71.00 L 343.00,156.94 C 273.50,156.94 273.50,163.94 204.00,163.94 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,163.94 C 273.50,163.94 273.50,170.94 343.00,170.94 L 343.00,507.00 C 273.50,507.00 273.50,500.00 204.00,500.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 514.00,229.23 C 583.50,229.23 583.50,236.23 653.00,236.23 L 653.00,281.60 C 583.50,281.60 583.50,274.60 514.00,274.60 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 669.00,236.23 C 738.50,236.23 738.50,256.51 808.00,256.51 L 808.00,298.58 C 738.50,298.58 738.50,278.29 669.00,278.29 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 669.00,278.29 C 738.50,278.29 738.50,312.58 808.00,312.58 L 808.00,321.49 C 738.50,321.49 738.50,287.21 669.00,287.21 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 514.00,288.60 C 583.50,288.60 583.50,301.21 653.00,301.21 L 653.00,341.77 C 583.50,341.77 583.50,329.17 514.00,329.17 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 514.00,343.17 C 583.50,343.17 583.50,281.60 653.00,281.60 L 653.00,287.21 C 583.50,287.21 583.50,348.77 514.00,348.77 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="343.00" y="71.00" width="16" height="85.94" rx="1.5" fill="#15803d"/>
+<rect x="343.00" y="170.94" width="16" height="336.06" rx="1.5" fill="#dc2626"/>
+<rect x="498.00" y="229.23" width="16" height="45.37" rx="1.5" fill="#15803d"/>
+<rect x="498.00" y="288.60" width="16" height="40.57" rx="1.5" fill="#dc2626"/>
+<rect x="498.00" y="343.17" width="16" height="5.60" rx="1.5" fill="#2563eb"/>
+<rect x="653.00" y="236.23" width="16" height="50.98" rx="1.5" fill="#15803d"/>
+<rect x="653.00" y="301.21" width="16" height="40.57" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="256.51" width="16" height="42.07" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="312.58" width="16" height="8.91" rx="1.5" fill="#dc2626"/>
+<rect x="207.00" y="60.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="210.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$42.0B  (100.0%)</text>
+<rect x="362.00" y="53.00" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="365.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="365.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$8.5B  (20.4%)</text>
+<rect x="362.00" y="152.94" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="365.00" y="164.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="365.00" y="177.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$33.4B  (79.6%)</text>
+<rect x="517.00" y="211.23" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="520.00" y="223.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="520.00" y="236.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.5B  (10.8%)</text>
+<rect x="517.00" y="270.60" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="520.00" y="282.60" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="520.00" y="295.60" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.0B  (9.6%)</text>
+<text x="489.00" y="342.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="489.00" y="355.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$557.0M  (1.3%)</text>
+<rect x="672.00" y="218.23" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="675.00" y="230.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="675.00" y="243.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.1B  (12.1%)</text>
+<rect x="672.00" y="283.21" width="87.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="675.00" y="295.21" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="675.00" y="308.21" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.0B  (9.6%)</text>
+<text x="833.00" y="274.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="287.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.2B  (10.0%)</text>
+<text x="833.00" y="314.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="327.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$886.0M  (2.1%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: NOC FY2025 10-K (consolidated statements), filed 2026-01-27 · CIK 0001133421</text>
+</svg>
+
+*图：NOC FY2025 利润表 Sankey——总收入 $41,954M（100%）拆为 cost of sales（销售成本）$33,410M（79.6%，= 总收入 − G&A − operating income，推算）与 gross profit（毛利）$8,544M（20.4%）；毛利再分为 G&A $4,033M 与 operating income $4,511M（margin 10.8%）；加 net interest / other income（净利息及其他收入）$557M 得 pretax $5,068M；减 income tax $886M 后为 net earnings $4,182M（net margin 10.0%）。* Source: [NOC FY2025 10-K, Consolidated Statements of Earnings](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">NOC FY2025 收入构成 (by segment)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 415.11,274.80 L 363.11,260.24 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 415.11,274.80 A 132 132 0 0 1 227.37,356.45 L 252.17,308.49 A 78 78 0 0 0 363.11,260.24 Z" fill="#15803d"/>
+<path d="M 227.37,356.45 A 132 132 0 0 1 168.30,183.56 L 217.27,206.32 A 78 78 0 0 0 252.17,308.49 Z" fill="#d97706"/>
+<path d="M 168.30,183.56 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 217.27,206.32 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">NOC</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$44.3B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="397.96" y1="155.81" x2="413.96" y2="155.81" stroke="#2563eb" stroke-width="1.4"/>
+<text x="417.96" y="153.81" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Aeronautics</text>
+<text x="417.96" y="167.81" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13.0B  (29.3%)</text>
+<line x1="343.04" y1="365.75" x2="359.04" y2="365.75" stroke="#15803d" stroke-width="1.4"/>
+<text x="363.04" y="363.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Mission</text>
+<text x="363.04" y="377.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$12.5B  (28.2%)</text>
+<line x1="157.41" y1="283.82" x2="141.41" y2="283.82" stroke="#d97706" stroke-width="1.4"/>
+<text x="137.41" y="281.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Space</text>
+<text x="137.41" y="295.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$10.8B  (24.3%)</text>
+<line x1="213.78" y1="122.86" x2="197.78" y2="122.86" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="193.78" y="120.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Defense</text>
+<text x="193.78" y="134.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$8.0B  (18.1%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: NOC FY2025 10-K (consolidated statements), filed 2026-01-27 · CIK 0001133421</text>
+</svg>
+
+*图：NOC FY2025 收入按段构成（段口径、含段间销售；四段合计 $44,271M，抵消段间 $2,317M 后为合并总收入 $41,954M）。Mission Systems 14.6% 的 OM rate 最高，Space Systems 占四段 25.7%（美国大型主承包商中太空敞口最高）。* Source: [NOC FY2025 10-K, Product and Service Analysis](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)。
+
+---
+
+## 1B. GF Score 基本面评分
+
+> *分析师观点 (Analyst view)：* 以下 GF Score（GuruFocus 式五维基本面评分）为本报告自有评分框架 (rubric)，**非 GuruFocus 官方数据、非背书**；五个分项与综合分均不引用任何备案文件，但每个分项背后的具体指标（margins / leverage / CAGR / multiples / returns）均在 Section 1–2 逐项引用一手来源。综合分采用透明权重（财务实力 20% / 盈利能力 25% / 成长性 25% / 估值 15% / 动量 15%），非 GuruFocus 专有权重。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="GF Score radar">
+<rect x="0" y="0" width="500" height="500" fill="#ffffff"/>
+<text x="20" y="24" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">GF Score (GuruFocus-style): 58/100</text>
+<text x="20" y="41" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#52606d">51–70 Poor future performance potential</text>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="#e9f5ec" stroke="none"/>
+<polygon points="250.0,208.0 278.5,228.7 267.6,262.3 232.4,262.3 221.5,228.7" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,178.0 307.1,219.5 285.3,286.5 214.7,286.5 192.9,219.5" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,148.0 335.6,210.2 302.9,310.8 197.1,310.8 164.4,210.2" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,118.0 364.1,200.9 320.5,335.1 179.5,335.1 135.9,200.9" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="none" stroke="#c5d3cb" stroke-width="1.3"/>
+<line x1="250" y1="238" x2="161.8" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="146.5" y="392.4" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">财务实力</text>
+<text x="192.7" y="310.9" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">6.5</text>
+<line x1="250" y1="238" x2="250.0" y2="88.0" stroke="#cfdad3" stroke-width="1"/>
+<text x="250.0" y="58.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">盈利能力</text>
+<text x="250.0" y="127.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">7</text>
+<line x1="250" y1="238" x2="107.3" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="82.6" y="183.6" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">成长性</text>
+<text x="178.7" y="208.8" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">5</text>
+<line x1="250" y1="238" x2="392.7" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="417.4" y="183.6" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">估值</text>
+<text x="335.6" y="204.2" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">6</text>
+<line x1="250" y1="238" x2="338.2" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="353.5" y="392.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">动量</text>
+<text x="285.3" y="280.5" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">4</text>
+<polygon points="250.0,133.0 335.6,210.2 285.3,286.5 192.7,316.9 178.7,214.8" fill="#2e8b57" fill-opacity="0.34" stroke="#2e8b57" stroke-width="2"/>
+<circle cx="192.7" cy="316.9" r="2.6" fill="#2e8b57"/>
+<circle cx="250.0" cy="133.0" r="2.6" fill="#2e8b57"/>
+<circle cx="178.7" cy="214.8" r="2.6" fill="#2e8b57"/>
+<circle cx="335.6" cy="210.2" r="2.6" fill="#2e8b57"/>
+<circle cx="285.3" cy="286.5" r="2.6" fill="#2e8b57"/>
+<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: NOC FY2025 10-K · Yahoo Finance (2026-06-12) · indicators.db</text>
+<text x="250" y="485" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#52606d">GF Score = independent analyst rubric (*Analyst view:*) — not GuruFocus™ official number</text>
+</svg>
+
+| 维度 | 评分 (0–10) | |
+|---|---|---|
+| 财务实力 (Financial Strength) | 6.5 | `██████░░░░` |
+| 盈利能力 (Profitability) | 7 | `███████░░░` |
+| 成长性 (Growth) | 5 | `█████░░░░░` |
+| 估值 (GF Value，越高越便宜) | 6 | `██████░░░░` |
+| 动量 (Momentum) | 4 | `████░░░░░░` |
+| **GF Score (composite, *分析师观点*)** | **58 / 100** | **51–70 区间（增长/动量倾斜的 rubric 对低增长防御股的常见落点）** |
+
+**综合 GF Score = 58/100**，落在 GuruFocus 口径 "51–70" 区间。**这个看似中游的分数恰恰揭示了 NOC 的本质：它是质量/收益型 (quality/income) 压舱石资产，而非成长/动量型标的。** GF Score 把 40% 权重压在成长性 (25%) 与动量 (15%) 上，对一个收入年增 ~4–5%、近一年跑输标普 500 约 17.5pp 的低 beta 防御股自然给出中游分。这与 Section 11 中 Buffett / Munger 质量视角给出的偏正面结论并不矛盾，而是同一事实的两面：**在成长/动量维度普通，在质量/护城河维度优异。** 逐维度评分理由如下。
+
+**财务实力 (Financial Strength) = 6.5/10。** investment-grade 资产负债表但杠杆中等：截至 2025-12-31，long-term debt $15,162M、现金 $4,403M，net debt ≈ $10.8bn；以 EBITDA ≈ operating income $4,511M + D&A ≈ $5.5bn 计，net debt/EBITDA ≈ ~1.9×；interest coverage（operating income / 利息）约 6×（[NOC FY2025 10-K, Liquidity & Consolidated Balance Sheets](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）。稳健但非零杠杆，叠加 B-21/Sentinel 的固定价执行风险，故不给满分。
+
+**盈利能力 (Profitability) = 7/10。** operating margin 10.8%、net margin 10.0%、ROE ≈ 26.2%（net earnings $4,182M / 平均权益 $15,982M）、ROIC 约 13–14% 高于 WACC ~8.6%，且历年持续为正（仅被 B-21 计提阶段性压低）（[NOC FY2025 10-K, MD&A & Consolidated Statements of Earnings](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）。扣分在于 ~11% 的段利润率是国防主承包商的结构性天花板，难有大幅扩张。
+
+**成长性 (Growth) = 5/10。** 收入 3 年 CAGR 约 4.6%（FY2022 $36.6bn → FY2025 $41.95bn）；FY2026 指引中点 $43.75bn（~+4.5%）；EPS 受 B-21 计提与养老金 mark-to-market (MTM) 影响而波动（[NOC FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)；[NOC Q1 2026 Earnings Release](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000015/noc-03312026xearningsrelea.htm)）。中个位数增长是国防压舱石常态——评分中性；但 Sentinel/B-21 量产爬坡 + Golden Dome 提供了高于历史的成长可选性 (optionality)。
+
+**估值 (GF Value，越高越便宜) = 6/10。** forward P/E ~18.3× 处于 NOC 自身 5 年区间（约 13–20×）中上沿、同业中段（LMT ~16× 与 RTX ~24× 之间）；相对本报告 base case $650 有 ~18% 上行/安全边际（[yfinance, 2026-06-12](https://finance.yahoo.com/quote/NOC/)）。不算深度低估，但相对自身在国防扩张期的溢价中枢有折价——中性偏正。
+
+**动量 (Momentum) = 4.0/10。** 最弱的一维：近 1 年 +8.2% 但**跑输标普 500 约 17.5pp**（SPY +25.7%）；近 6 个月 −3.7%；现价 $550.33 **低于 200 日均线 ~$612 约 10%**（[yfinance, 2026-06-12](https://finance.yahoo.com/quote/NOC/)）。技术面弱势——这也是估值折价的镜像：对逆向/价值型买家是机会信号，对动量型买家是劝退信号。
 
 ---
 
@@ -82,30 +226,30 @@ Source: 收入来自 [NOC FY2022 10-K](https://www.sec.gov/Archives/edgar/data/1
 
 ### 2a. 估值快照与同业对比
 
-NOC 当前 forward P/E ~17.9×，明显低于其自身在国防预算扩张期常见的溢价区间，也低于部分同业。下表为美国主要主承包商的对比（数据来自 yfinance，2026-06-08；fwd P/E 为前瞻市盈率）：
+NOC 当前 forward P/E ~18.3×（2026-06-12），明显低于其自身在国防预算扩张期常见的溢价区间，也低于部分同业。下表为美国主要主承包商的对比（数据来自 yfinance，2026-06-08；fwd P/E 为前瞻市盈率）：
 
 | 公司 | Ticker | forward P/E | P/S (TTM) | 市值 |
 |---|---|---|---|---|
-| **Northrop Grumman** | **NOC** | **~17.9×** | **~1.81×** | **~$77bn** |
+| **Northrop Grumman** | **NOC** | **~18.3×** | **~1.84×** | **~$78bn** |
 | Lockheed Martin | LMT | ~16.2× | ~1.60× | ~$120bn |
 | RTX Corporation | RTX | ~23.6× | ~2.66× | ~$241bn |
 | General Dynamics | GD | ~18.8× | ~1.71× | ~$92bn |
 | L3Harris | LHX | ~22.2× | ~4.38× | ~$56bn |
 | The Boeing Company | BA | ~51.6× | ~1.85× | ~$170bn |
 
-Source: [yfinance peer key statistics, 2026-06-08](https://finance.yahoo.com/quote/NOC/)。
+Source: [yfinance peer key statistics, 2026-06-08](https://finance.yahoo.com/quote/NOC/)。注：NOC 行已更新至 2026-06-12 收盘（$550.33），同业各行仍为 2026-06-08（4 日内相对定位不变）。
 
 ```mermaid
 xychart-beta
     title "主承包商 forward P/E 对比 (2026-06-08)"
     x-axis [NOC, LMT, GD, RTX, LHX, BA]
     y-axis "forward P/E (x)" 0 --> 55
-    bar [17.9, 16.2, 18.8, 23.6, 22.2, 51.6]
+    bar [18.3, 16.2, 18.8, 23.6, 22.2, 51.6]
 ```
 
 Source: [yfinance, 2026-06-08](https://finance.yahoo.com/quote/NOC/)。
 
-NOC 处于同业中段——比 LMT、GD 略高，但显著低于 RTX、LHX，更远低于因 737 MAX/777X 拖累而 EPS 受抑的 Boeing。在防御类资产中，NOC 的 P/S ~1.81× 处于合理区间，反映其 ~11% 的 segment operating margin 与稳定的政府客户基础。**值得注意的是，NOC 当前股价 $540.81 距 52 周高点 $774 有约 30% 回撤**——市场对 Sentinel 重组的不确定性、B-21 固定价批次的执行风险、以及 FY26/FY27 预算与持续决议 (continuing resolution / CR) 的扰动给予了折价。*分析师观点 (Analyst view)：* 大摩在其国防深度报告中测算，美国国防巨头当前在 NTM P/FCF 口径下相对 S&P 500 仍有约 **16% 折价**，未充分反映预算上行与结构性重估潜力（[Morgan Stanley — Defense: Dollars, Disruptors, and De(Consolidation), 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184442822484282/Morgan%20Stanley-Defense%EF%BC%9ADollars%EF%BC%8C%20Disruptors%EF%BC%8C%20and%20De%EF%BC%88Consolidation%EF%BC%89%EF%BC%9B%20Identifying%20Investment%20Opportunities-260306.pdf)）。
+NOC 处于同业中段——比 LMT、GD 略高，但显著低于 RTX、LHX，更远低于因 737 MAX/777X 拖累而 EPS 受抑的 Boeing。在防御类资产中，NOC 的 P/S ~1.81× 处于合理区间，反映其 ~11% 的 segment operating margin 与稳定的政府客户基础。**值得注意的是，NOC 当前股价 $550.33 距 52 周高点 $774 有约 29% 回撤、且仍低于 200 日均线（~$612）约 10%**——市场对 Sentinel 重组的不确定性、B-21 固定价批次的执行风险、以及 FY26/FY27 预算与持续决议 (continuing resolution / CR) 的扰动给予了折价。*分析师观点 (Analyst view)：* 大摩在其国防深度报告中测算，美国国防巨头当前在 NTM P/FCF 口径下相对 S&P 500 仍有约 **16% 折价**，未充分反映预算上行与结构性重估潜力（[Morgan Stanley — Defense: Dollars, Disruptors, and De(Consolidation), 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184442822484282/Morgan%20Stanley-Defense%EF%BC%9ADollars%EF%BC%8C%20Disruptors%EF%BC%8C%20and%20De%EF%BC%88Consolidation%EF%BC%89%EF%BC%9B%20Identifying%20Investment%20Opportunities-260306.pdf)）。
 
 ### 2b. 前瞻估值、目标价与情景
 
@@ -129,19 +273,212 @@ NOC 处于同业中段——比 LMT、GD 略高，但显著低于 RTX、LHX，�
 
 > 2027E MTM-adjusted EPS ~$30.0 × 目标 forward P/E **21.7×** = **$650**。
 >
-> 目标倍数 21.7× 的依据：① 高于 NOC 当前 17.9× 的折价倍数，反映 Sentinel/B-21 执行风险逐步消化后向其国防扩张期溢价中枢回归；② 仍低于 RTX (~23.6×)、LHX (~22.2×)，但高于 LMT (~16.2×)——NOC 凭借 Sentinel/B-21 双护城河与最高的太空敞口，理应享受相对 LMT 的溢价、相对 RTX（商用航发拖累）的折价。倍数本身的论证与目标价数字同等重要。
+> 目标倍数 21.7× 的依据：① 高于 NOC 当前 ~18.3× 的折价倍数，反映 Sentinel/B-21 执行风险逐步消化后向其国防扩张期溢价中枢回归；② 仍低于 RTX (~23.6×)、LHX (~22.2×)，但高于 LMT (~16.2×)——NOC 凭借 Sentinel/B-21 双护城河与最高的太空敞口，理应享受相对 LMT 的溢价、相对 RTX（商用航发拖累）的折价。倍数本身的论证与目标价数字同等重要。
 
 **Bull / Base / Bear 情景（本报告观点，每项与其摆动假设挂钩）：**
 
-| 情景 | 关键假设 | 2027E EPS | 目标 P/E | 目标价 | 相对 $540.81 |
+| 情景 | 关键假设 | 2027E EPS | 目标 P/E | 目标价 | 相对 $550.33 |
 |---|---|---|---|---|---|
-| **Bull** | Sentinel P&D 以有利的成本加成条款重启 + Golden Dome 太空拦截器大额拨款 + FY27 $1.5trn 预算兑现 | ~$32 | 24× | **$768** | **+42%** |
-| **Base** | Sentinel 平稳重组、B-21 量产无新增重大亏损、预算温和上行 | ~$30 | 21.7× | **$650** | **+20%** |
-| **Bear** | Sentinel/B-21 再现重大成本超支 + CR 拖延 + 行政令限制回购/分红 | ~$27 | 16× | **$432** | **−20%** |
+| **Bull** | Sentinel P&D 以有利的成本加成条款重启 + Golden Dome 太空拦截器大额拨款 + FY27 $1.5trn 预算兑现 | ~$32 | 24× | **$768** | **+40%** |
+| **Base** | Sentinel 平稳重组、B-21 量产无新增重大亏损、预算温和上行 | ~$30 | 21.7× | **$650** | **+18%** |
+| **Bear** | Sentinel/B-21 再现重大成本超支 + CR 拖延 + 行政令限制回购/分红 | ~$27 | 16× | **$432** | **−21%** |
 
 *分析师观点 (Analyst view)：* 大摩在其国防报告中，为反映 $1.5trn FY27 预算情景，将国防巨头 bull-case 目标价平均上调约 **61%**，其中 **NOC 上调 62%**，使 bull-bear 区间扩大到约 4 倍（此前约 1.5 倍），并给予 NOC **Overweight** 评级（[Morgan Stanley — Defense, 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184442822484282/Morgan%20Stanley-Defense%EF%BC%9ADollars%EF%BC%8C%20Disruptors%EF%BC%8C%20and%20De%EF%BC%88Consolidation%EF%BC%89%EF%BC%9B%20Identifying%20Investment%20Opportunities-260306.pdf)）。
 
 **与共识对比 (consensus benchmark)：** 本报告 base case 目标价 $650 低于卖方共识平均目标价 **$696.95**（21 位分析师，区间 $603–$815，评级共识 *Buy*）（[yfinance analyst estimates, 2026-06-08](https://finance.yahoo.com/quote/NOC/)）——本报告相对共识偏保守约 7%，因我们对 Sentinel P&D 阶段定价与 B-21 固定价批次给予更高风险权重（[yfinance NOC analyst estimates, 2026-06-08](https://finance.yahoo.com/quote/NOC/)）。
+
+### 2c. ROE 杜邦分解与资产负债结构
+
+**ROE 杜邦五步分解 (5-step DuPont)：**
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 540" width="1240" height="540" role="img" aria-label="DuPont ROE decomposition"><rect x="0" y="0" width="1240" height="540" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">NOC FY2025 DuPont ROE 分解 (5-step)</text>
+<rect x="545.00" y="56.00" width="150" height="56" rx="7" fill="#1e3a8a"/>
+<text x="620.00" y="76.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">ROE</text>
+<text x="620.00" y="94.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">26.17%</text>
+<text x="620.00" y="106.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">= Net Income / Avg Equity</text>
+<rect x="191.60" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Margin</text>
+<text x="266.60" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">9.97%</text>
+<text x="266.60" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Income / Revenue</text>
+<line x1="620.00" y1="112.00" x2="266.60" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="545.00" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="620.00" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Asset Turnover</text>
+<text x="620.00" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.83</text>
+<text x="620.00" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Revenue / Avg Assets</text>
+<line x1="620.00" y1="112.00" x2="620.00" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="898.40" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="973.40" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Equity Multiplier</text>
+<text x="973.40" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">3.15</text>
+<text x="973.40" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Avg Assets / Avg Equity</text>
+<line x1="620.00" y1="112.00" x2="973.40" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="443.30" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="443.30" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="796.70" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="796.70" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="65.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="124.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Margin</text>
+<text x="124.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">10.75%</text>
+<text x="124.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Op Inc / Revenue</text>
+<line x1="266.60" y1="224.00" x2="124.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="207.60" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Tax Burden</text>
+<text x="266.60" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.8252</text>
+<text x="266.60" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Inc / Pretax</text>
+<line x1="266.60" y1="224.00" x2="266.60" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="350.20" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="409.20" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Interest Burden</text>
+<text x="409.20" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">1.1235</text>
+<text x="409.20" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Pretax / Op Inc</text>
+<line x1="266.60" y1="224.00" x2="409.20" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="195.30" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="195.30" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="337.90" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="337.90" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="479.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="538.00" y="326.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Revenue</text>
+<text x="538.00" y="342.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$42.0B</text>
+<line x1="620.00" y1="224.00" x2="538.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="643.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="702.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="702.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$50.4B</text>
+<text x="702.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="620.00" y1="224.00" x2="702.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="620.00" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="620.00" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="832.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="891.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="891.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$50.4B</text>
+<text x="891.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="891.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="996.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="1055.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Equity</text>
+<text x="1055.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$16.0B</text>
+<text x="1055.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="1055.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="967.20" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="967.20" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="69.00" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="124.00" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Income</text>
+<text x="124.00" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$4.5B</text>
+<line x1="124.00" y1="356.00" x2="124.00" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="211.60" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="266.60" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Income</text>
+<text x="266.60" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$4.2B</text>
+<line x1="266.60" y1="356.00" x2="266.60" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="354.20" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="409.20" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Pretax Income</text>
+<text x="409.20" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">$5.1B</text>
+<line x1="409.20" y1="356.00" x2="409.20" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<text x="620.00" y="524.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: NOC FY2025 10-K (consolidated statements), filed 2026-01-27 · CIK 0001133421</text>
+</svg>
+
+*图：NOC FY2025 五步杜邦分解——ROE ≈ 26.2% = 税负 (net income/pretax = 4,182/5,068 ≈ 0.83) × 利息负担 (pretax/EBIT = 5,068/4,511 ≈ 1.12，因非经营性收入为正) × operating margin (4,511/41,954 = 10.8%) × 资产周转 (revenue/平均资产 = 41,954/50,368 ≈ 0.83×) × 权益乘数 (平均资产/平均权益 = 50,368/15,982 ≈ 3.15×)。高 ROE 主要由权益乘数（杠杆 + 历次并购形成的大额商誉摊薄了权益基数）与稳定的 operating margin 驱动，而非高资产周转——这是并购整合型国防巨头的典型特征。* Source: [NOC FY2025 10-K, Consolidated Statements of Earnings & Balance Sheets](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)。
+
+**资产负债表结构 (balance-sheet Sankey)：**
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">NOC FY2025 资产负债表 Sankey (balance sheet)</text>
+<path d="M 204.00,64.00 C 262.00,64.00 262.00,78.00 320.00,78.00 L 320.00,211.30 C 262.00,211.30 262.00,197.30 204.00,197.30 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,71.00 C 790.00,71.00 790.00,64.00 848.00,64.00 L 848.00,185.05 C 790.00,185.05 790.00,192.05 732.00,192.05 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,78.00 C 394.00,78.00 394.00,85.00 452.00,85.00 L 452.00,218.30 C 394.00,218.30 394.00,211.30 336.00,211.30 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,78.00 C 658.00,78.00 658.00,71.00 716.00,71.00 L 716.00,192.05 C 658.00,192.05 658.00,199.05 600.00,199.05 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,199.05 C 658.00,199.05 658.00,206.05 716.00,206.05 L 716.00,387.61 C 658.00,387.61 658.00,380.61 600.00,380.61 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,85.00 C 526.00,85.00 526.00,78.00 584.00,78.00 L 584.00,380.61 C 526.00,380.61 526.00,387.61 468.00,387.61 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,387.61 C 526.00,387.61 526.00,394.61 584.00,394.61 L 584.00,540.00 C 526.00,540.00 526.00,533.00 468.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,206.05 C 790.00,206.05 790.00,199.05 848.00,199.05 L 848.00,331.26 C 790.00,331.26 790.00,338.26 732.00,338.26 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,338.26 C 790.00,338.26 790.00,345.26 848.00,345.26 L 848.00,394.61 C 790.00,394.61 790.00,387.61 732.00,387.61 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,211.30 C 262.00,211.30 262.00,225.30 320.00,225.30 L 320.00,320.97 C 262.00,320.97 262.00,306.97 204.00,306.97 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,225.30 C 394.00,225.30 394.00,218.30 452.00,218.30 L 452.00,533.00 C 394.00,533.00 394.00,540.00 336.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,320.97 C 262.00,320.97 262.00,320.97 320.00,320.97 L 320.00,473.02 C 262.00,473.02 262.00,473.02 204.00,473.02 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 600.00,394.61 C 658.00,394.61 658.00,401.61 716.00,401.61 L 716.00,547.00 C 658.00,547.00 658.00,540.00 600.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,401.61 C 790.00,401.61 790.00,408.61 848.00,408.61 L 848.00,554.00 C 790.00,554.00 790.00,547.00 732.00,547.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,487.02 C 262.00,487.02 262.00,473.02 320.00,473.02 L 320.00,540.00 C 262.00,540.00 262.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="133.30" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="211.30" width="16" height="95.67" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="320.97" width="16" height="152.05" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="487.02" width="16" height="66.98" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="78.00" width="16" height="133.30" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="225.30" width="16" height="314.70" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="78.00" width="16" height="302.61" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="394.61" width="16" height="145.39" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="71.00" width="16" height="121.05" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="206.05" width="16" height="181.56" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="401.61" width="16" height="145.39" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="64.00" width="16" height="121.05" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="199.05" width="16" height="132.21" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="345.26" width="16" height="49.35" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="408.61" width="16" height="145.39" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="127.65" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current assets</text>
+<text x="179.00" y="140.65" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$15.3B  (29.8%)</text>
+<text x="179.00" y="256.14" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">PP&amp;E net</text>
+<text x="179.00" y="269.14" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$11.0B  (21.4%)</text>
+<text x="179.00" y="394.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Goodwill</text>
+<text x="179.00" y="407.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$17.4B  (33.9%)</text>
+<text x="179.00" y="517.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other LT assets</text>
+<text x="179.00" y="530.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$7.7B  (15.0%)</text>
+<rect x="339.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$15.3B  (29.8%)</text>
+<rect x="339.00" y="207.30" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="219.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="232.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$36.1B  (70.2%)</text>
+<rect x="471.00" y="67.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$51.4B  (100.0%)</text>
+<rect x="603.00" y="60.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$34.7B  (67.5%)</text>
+<rect x="603.00" y="376.61" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="388.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="401.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$16.7B  (32.5%)</text>
+<rect x="735.00" y="53.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13.9B  (27.0%)</text>
+<rect x="735.00" y="188.05" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="200.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="213.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$20.8B  (40.5%)</text>
+<rect x="735.00" y="383.61" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="395.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="408.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$16.7B  (32.5%)</text>
+<text x="873.00" y="121.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current liabilities</text>
+<text x="873.00" y="134.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13.9B  (27.0%)</text>
+<text x="873.00" y="262.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Long-term debt</text>
+<text x="873.00" y="275.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$15.2B  (29.5%)</text>
+<text x="873.00" y="366.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other LT liabilities</text>
+<text x="873.00" y="379.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.7B  (11.0%)</text>
+<text x="873.00" y="478.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' equity</text>
+<text x="873.00" y="491.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$16.7B  (32.5%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: NOC FY2025 10-K (consolidated statements), filed 2026-01-27 · CIK 0001133421</text>
+</svg>
+
+*图：NOC FY2025 资产负债表 Sankey——总资产 $51,377M（current assets $15,287M + PP&E net $10,972M + goodwill $17,437M + 其他长期资产 $7,681M）= 总负债 $34,703M（current liabilities $13,882M + long-term debt $15,162M + 其他长期负债 $5,659M）+ shareholders' equity $16,674M。注意 goodwill $17.4bn（主要来自 Orbital ATK 等历次收购）已超过账面权益——这是连续并购整合型主承包商的典型结构，意味着账面 ROE 被高商誉/低权益基数放大。* Source: [NOC FY2025 10-K, Consolidated Balance Sheets](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)。
+
+### 2d. 卖方观点演变 (Sell-side view evolution)
+
+> 本报告引用 ≥2 篇 `db/zsxq.db` 券商研报，故按规范给出"卖方观点演变"。**机械化前置（read-only）：** 查询 `db/stock_price_target.db`（NOC）**返回 0 行**——本地 PT 库尚未沉淀 NOC 的逐机构目标价记录，故下方时间线直接取自所引券商 PDF（均为 *分析师观点*，路由至 `/zsxq/pdf/`）。需诚实说明：本地库中明确给出 NOC **个股**评级/目标价的仅 Morgan Stanley 一家，其余为含 NOC 的行业/主题报告。
+
+**按机构的观点时间线 (per-institute view timeline)：**
+
+| 机构 | 日期 | 评级 / 目标价 | 核心论点 | 链接 |
+|---|---|---|---|---|
+| Morgan Stanley | 2026-03-06 | **Overweight**；bull-case PT 较基准 **+62%** | 国防巨头相对 S&P 500 有 ~16% NTM P/FCF 折价；为 FY27 $1.5trn 预算情景把 bull-bear 区间拉宽至 ~4 倍；NOC 受益于核现代化与最高太空敞口 | [MS Defense, 2026-03-06, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184442822484282/Morgan%20Stanley-Defense%EF%BC%9ADollars%EF%BC%8C%20Disruptors%EF%BC%8C%20and%20De%EF%BC%88Consolidation%EF%BC%89%EF%BC%9B%20Identifying%20Investment%20Opportunities-260306.pdf) |
+| Morgan Stanley | 2026-04-12 | （主题报告，无个股 PT） | "Space 60"——将 NOC 列为"航天器与发射系统"代表；太空经济以"大规模"方式回归 | [MS Space 60, 2026-04-12, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415521254142458/Morgan%20Stanley-Space%20-%20North%20America%EF%BC%9AThe%20Space%2060%EF%BC%9A%20Picks%20%26%20Shovels%20for%20the%20Final%20Frontier-260412.pdf) |
+| Goldman Sachs | 2026-05-11 | （主题报告，无个股 PT） | Golden Dome $185bn；传统军工（含 NOC）通过 Anduril Lattice 集成获益，聚焦传感器/武器利润 | [GS Anduril Lattice, 2026-05-11, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/415245828888188/Goldman%20Sachs-AMERICAS%EF%BC%9A%20SOFTWARE%20AEROSPACE%20%26%20DEFENSE%EF%BC%9AA%20deep%20dive%20into%20Anduril%E2%80%99s%20Lattice%20software%20post%20leadership%20meetings-260511.pdf) |
+| Bernstein | 2026-06-02 | （主题纪要，无个股 PT） | B-21 加速建造、Sentinel 导弹 2027 试飞、SRM 5–7 年扩产 3–4×、Golden Dome 带动太空；FY27 基数预算 ~$1.15trn | [Bernstein A&D, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812485114412812/Bernstein-Global%20Aerospace%20%26%20Defense%EF%BC%9AAerospace%20%26%20Defense%EF%BC%9A%20Twelve%20CEOs%20in%20three%20days~A%26D%20themes%20from%20Bernstein%27s%20Strategic%20Decisions%20Conference-260602.pdf) |
+
+**自我修订 (self-revisions)：** 两篇均出自 Morgan Stanley，但属不同主题（3 月国防策略 vs 4 月太空产业链），并非对同一 NOC 个股调用的前后修订；MS 对 NOC 的评级在区间内维持 **Overweight**，未见降级或 PT 下调。其余机构本地各仅一篇，无法构建同机构时间线。
+
+**机构间分歧 (cross-institute disagreement)：** 四家对 NOC 的方向性判断高度一致（均偏正面：核现代化 + Golden Dome + 太空驱动），主要差异在"传统巨头 vs 软件新进入者"的价值分配——不应混为单一"假共识"：
+
+| 机构 | 日期 | 立场 | 核心论点 | 什么证据能证明其正确 |
+|---|---|---|---|---|
+| Morgan Stanley | 2026-03-06 | 看多传统巨头 | 颠覆是技术赋能而非取代，预算扩张下巨头与新进入者均增长 | NOC backlog 持续 >1 book-to-bill、Sentinel/B-21 利润率修复 |
+| Goldman Sachs | 2026-05-11 | 价值向软件层迁移 | Anduril Lattice 成战术互联骨干，传统军工被"集成"在下层 | C2/软件订单更多流向 Anduril/Palantir，巨头硬件利润率承压 |
+| Bernstein | 2026-06-02 | 看多产能瓶颈受益者 | SRM/导弹需求 3–4×，微电子与铸件是瓶颈，NOC 在 SRM 与 B-21 被点名 | NOC SRM 扩产订单兑现、B-21 加速合同落地 |
+
+**本报告立场：** 与 MS / Bernstein 的"传统巨头受益"一致，但对 Sentinel P&D 阶段定价与 B-21 固定价批次给予更高风险权重，故 base case $650 较 MS 隐含的乐观区间与卖方共识 $696.95 偏保守约 7%（见 Section 2b 与共识对比）。
 
 ---
 
@@ -302,6 +639,178 @@ Source: 各段产品组合与项目均来自 [NOC FY2025 10-K, Item 1 Business](
 
 这个闭环解释了为何 NOC 在 Golden Dome 中独具优势：它**同时**拥有天基探测/跟踪层（SS 的 SDA 跟踪层、Next-Gen OPIR）、天基与陆基拦截器（SS 的 GPI、GMD；GEM/SRM 推进）、以及网络化战场管理（DS 的 IBCS、MS 的 C4ISR）——而多数竞争对手只覆盖其中一两环。
 
+### 5.6 资金流向图 (money-flow / supply-chain map)
+
+下图以"需求/收入视角 (demand view)"追踪 NOC 的 $42bn 如何流动：**谁付钱（客户）→ 建造什么（四段）→ 钱最终汇聚到哪里（成本去向与瓶颈）**。NOC 是高度垂直整合的主承包商 (vertically integrated prime)，因此与组装型企业不同，其约 $33.4bn 的 cost of sales 最大的一块流向**自有的 ~95,000 名工程师与工厂**，外部仅在 microelectronics（微电子）与 castings & forgings（铸件与锻件）两处构成真正的瓶颈 (chokepoint)。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1133" width="1180" height="1133" role="img" aria-label="How Northrop Grumman's $42bn flows — who pays, what it builds, where the cash pools" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1133" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">DEFENSE MONEY FLOW · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">How Northrop Grumman's $42bn flows — who pays, what it builds,</text>
+<text x="42.00" y="138.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">where the cash pools</text>
+<text x="42.00" y="180.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">The U.S. government funds 84% of sales; the money fans out across four segments, then pools mostly into NOC's own ~95,000-person</text>
+<text x="42.00" y="202.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">workforce and factories, with microelectronics and castings the only real outside chokepoints.</text>
+<ellipse cx="1031.00" cy="478.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="248.00" x2="369.50" y2="705.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="248.00" x2="810.50" y2="705.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="232.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="248.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">WHO PAYS (customers)</text>
+<text x="483.00" y="232.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="248.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">WHAT IT BUILDS (segments)</text>
+<text x="924.00" y="232.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="248.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">WHERE THE CASH POOLS</text>
+<path d="M 256.00 294.71 C 369.50 294.71, 369.50 332.14, 483.00 332.14" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 313.57 C 369.50 313.57, 369.50 426.93, 483.00 426.93" fill="none" stroke="url(#mfgold)" stroke-width="13.71" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 323.86 C 369.50 323.86, 369.50 607.71, 483.00 607.71" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 415.79 C 369.50 415.79, 369.50 348.43, 483.00 348.43" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 430.36 C 369.50 430.36, 369.50 520.71, 483.00 520.71" fill="none" stroke="url(#mfgold)" stroke-width="10.29" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 422.64 C 369.50 422.64, 369.50 436.36, 483.00 436.36" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 544.50 C 369.50 544.50, 369.50 618.86, 483.00 618.86" fill="none" stroke="url(#mfgold)" stroke-width="15.43" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 534.29 C 369.50 534.29, 369.50 441.43, 483.00 441.43" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 658.86 C 369.50 658.86, 369.50 629.14, 483.00 629.14" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 652.00 C 369.50 652.00, 369.50 530.14, 483.00 530.14" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 645.14 C 369.50 645.14, 369.50 355.29, 483.00 355.29" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 333.00 C 810.50 333.00, 810.50 310.00, 924.00 310.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 347.57 C 810.50 347.57, 810.50 533.50, 924.00 533.50" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 341.57 C 810.50 341.57, 810.50 419.21, 924.00 419.21" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 437.93 C 810.50 437.93, 810.50 632.43, 924.00 632.43" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 425.21 C 810.50 425.21, 810.50 319.43, 924.00 319.43" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 431.14 C 810.50 431.14, 810.50 424.29, 924.00 424.29" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 529.29 C 810.50 529.29, 810.50 433.64, 924.00 433.64" fill="none" stroke="url(#mfgold)" stroke-width="13.71" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 518.14 C 810.50 518.14, 810.50 327.14, 924.00 327.14" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 612.00 C 810.50 612.00, 810.50 335.71, 924.00 335.71" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 619.71 C 810.50 619.71, 810.50 443.93, 924.00 443.93" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 625.71 C 810.50 625.71, 810.50 639.29, 924.00 639.29" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.9"/>
+<rect x="42.00" y="258.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="258.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="291.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">U.S. AIR FORCE</text>
+<text x="60.00" y="312.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">B-21, Sentinel ICBM</text>
+<text x="60.00" y="329.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Next-Gen OPIR</text>
+<rect x="42.00" y="368.00" width="214" height="111.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="368.00" width="3" height="111.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="401.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">U.S. NAVY</text>
+<text x="60.00" y="422.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">E-2D, Triton</text>
+<text x="60.00" y="439.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Columbia/Virginia propulsion</text>
+<text x="60.00" y="456.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Trident II SRM</text>
+<rect x="42.00" y="495.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="495.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="528.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">SPACE FORCE / MDA</text>
+<text x="60.00" y="549.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">SDA tracking layer</text>
+<text x="60.00" y="566.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">GMD, GPI — Golden Dome</text>
+<rect x="42.00" y="605.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="605.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="638.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">NASA + INTL/COMMERCIAL</text>
+<text x="60.00" y="659.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">HALO, Cygnus, SLS boosters</text>
+<text x="60.00" y="676.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">~16% of sales</text>
+<rect x="483.00" y="300.50" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="300.50" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="333.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AERONAUTICS</text>
+<text x="501.00" y="354.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$13.0bn — B-21/E-2D</text>
+<rect x="483.00" y="393.50" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="393.50" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="426.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">DEFENSE SYS</text>
+<text x="501.00" y="447.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$8.0bn — Sentinel/IBCS/SRM</text>
+<rect x="483.00" y="486.50" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="486.50" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="519.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MISSION SYS</text>
+<text x="501.00" y="540.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$12.5bn — radar/EW/C4ISR</text>
+<rect x="483.00" y="579.50" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="579.50" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="612.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SPACE SYS</text>
+<text x="501.00" y="633.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$10.8bn — satellites/interceptors</text>
+<rect x="924.00" y="275.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="275.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="308.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">IN-HOUSE LABOR &amp; PLANTS</text>
+<text x="942.00" y="329.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">~95,000 engineers</text>
+<text x="942.00" y="346.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">the biggest pool</text>
+<rect x="924.00" y="385.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="924.00" y="385.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="942.00" y="418.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MICROELECTRONICS</text>
+<text x="942.00" y="439.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">semiconductors</text>
+<text x="942.00" y="456.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">the outside chokepoint</text>
+<rect x="924.00" y="495.00" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="495.00" width="3" height="77.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="528.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">CASTINGS &amp; FORGINGS</text>
+<text x="942.00" y="549.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">caps SRM 3-4x expansion</text>
+<rect x="924.00" y="588.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="588.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="621.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">SOLID ROCKET MOTORS</text>
+<text x="942.00" y="642.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">in-house since Orbital ATK</text>
+<text x="942.00" y="659.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">a moat, not a purchase</text>
+<rect x="42.00" y="725.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="729.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="727.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="727.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="727.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="727.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="729.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="729.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="720.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="729.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="720.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="847.60" y="729.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="972.40" y="720.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="991.40" y="729.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="42.00" y="740.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="61.00" y="749.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="185.80" y="740.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="204.80" y="749.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<line x1="42" y1="765.00" x2="1138" y2="765.00" stroke="#222a3a"/>
+<text x="42.00" y="781.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY</text>
+<rect x="42.00" y="801.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="801.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="825.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">WHO PAYS · ONE CUSTOMER</text>
+<text x="58.00" y="843.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">The U.S. government</text>
+<text x="58.00" y="867.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Washington</tspan><tspan fill="#9aa3b8" font-weight="400"> funded</tspan><tspan fill="#f4d58a" font-weight="700"> 84%</tspan><tspan fill="#9aa3b8" font-weight="400"> of</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> sales;</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#f4d58a" font-weight="700"> Air</tspan><tspan fill="#f4d58a" font-weight="700"> Force</tspan></text>
+<text x="58.00" y="883.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">(B-21,</tspan><tspan fill="#9aa3b8" font-weight="400"> Sentinel)</tspan><tspan fill="#9aa3b8" font-weight="400"> and</tspan><tspan fill="#f4d58a" font-weight="700"> Space</tspan><tspan fill="#f4d58a" font-weight="700"> Force/MDA</tspan><tspan fill="#9aa3b8" font-weight="400"> (SDA,</tspan><tspan fill="#9aa3b8" font-weight="400"> GMD</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan></text>
+<text x="58.00" y="899.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Golden</tspan><tspan fill="#9aa3b8" font-weight="400"> Dome)</tspan><tspan fill="#9aa3b8" font-weight="400"> are</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> heaviest</tspan><tspan fill="#9aa3b8" font-weight="400"> payers.</tspan></text>
+<rect x="412.00" y="801.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="801.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="825.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">WHAT IT BUYS · ~$33.4BN COST OF SALES</text>
+<text x="428.00" y="843.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Mostly in-house value-add</text>
+<text x="428.00" y="867.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Of</tspan><tspan fill="#9aa3b8" font-weight="400"> ~</tspan><tspan fill="#f4d58a" font-weight="700"> $33.4bn</tspan><tspan fill="#9aa3b8" font-weight="400"> operating</tspan><tspan fill="#9aa3b8" font-weight="400"> cost,</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> largest</tspan><tspan fill="#9aa3b8" font-weight="400"> pool</tspan><tspan fill="#9aa3b8" font-weight="400"> is</tspan></text>
+<text x="428.00" y="883.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">NOC's</tspan><tspan fill="#9aa3b8" font-weight="400"> own</tspan><tspan fill="#f4d58a" font-weight="700"> ~95,000</tspan><tspan fill="#9aa3b8" font-weight="400"> engineers</tspan><tspan fill="#9aa3b8" font-weight="400"> and</tspan><tspan fill="#9aa3b8" font-weight="400"> factories</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> a</tspan></text>
+<text x="428.00" y="899.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">vertically</tspan><tspan fill="#9aa3b8" font-weight="400"> integrated</tspan><tspan fill="#9aa3b8" font-weight="400"> prime,</tspan><tspan fill="#9aa3b8" font-weight="400"> not</tspan><tspan fill="#9aa3b8" font-weight="400"> an</tspan><tspan fill="#9aa3b8" font-weight="400"> assembler.</tspan></text>
+<rect x="782.00" y="801.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="782.00" y="801.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="798.00" y="825.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">CHOKEPOINT · MICROELECTRONICS</text>
+<text x="798.00" y="843.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Semiconductors</text>
+<text x="798.00" y="867.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Microelectronics</tspan><tspan fill="#9aa3b8" font-weight="400"> shortages</tspan><tspan fill="#9aa3b8" font-weight="400"> lengthened</tspan><tspan fill="#9aa3b8" font-weight="400"> lead-times</tspan><tspan fill="#9aa3b8" font-weight="400"> and</tspan></text>
+<text x="798.00" y="883.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">raised</tspan><tspan fill="#9aa3b8" font-weight="400"> costs</tspan><tspan fill="#9aa3b8" font-weight="400"> (10-K</tspan><tspan fill="#9aa3b8" font-weight="400"> Raw</tspan><tspan fill="#9aa3b8" font-weight="400"> Materials)</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> bottleneck</tspan></text>
+<text x="798.00" y="899.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">most</tspan><tspan fill="#9aa3b8" font-weight="400"> exposed</tspan><tspan fill="#9aa3b8" font-weight="400"> to</tspan><tspan fill="#9aa3b8" font-weight="400"> outside</tspan><tspan fill="#9aa3b8" font-weight="400"> suppliers.</tspan></text>
+<rect x="42.00" y="947.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="42.00" y="947.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="58.00" y="971.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">CHOKEPOINT · CASTINGS</text>
+<text x="58.00" y="989.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Castings &amp; forgings</text>
+<text x="58.00" y="1013.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Castings</tspan><tspan fill="#9aa3b8" font-weight="400"> (with</tspan><tspan fill="#9aa3b8" font-weight="400"> microelectronics)</tspan><tspan fill="#9aa3b8" font-weight="400"> are</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> named</tspan></text>
+<text x="58.00" y="1029.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">bottleneck</tspan><tspan fill="#9aa3b8" font-weight="400"> capping</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> planned</tspan><tspan fill="#f4d58a" font-weight="700"> 3-4x</tspan></text>
+<text x="58.00" y="1045.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">solid-rocket-motor</tspan><tspan fill="#9aa3b8" font-weight="400"> expansion.</tspan></text>
+<rect x="412.00" y="947.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="947.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="971.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">IN-HOUSE · SRM</text>
+<text x="428.00" y="989.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Rocket motors = a moat</text>
+<text x="428.00" y="1013.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Since</tspan><tspan fill="#f4d58a" font-weight="700"> Orbital</tspan><tspan fill="#f4d58a" font-weight="700"> ATK</tspan><tspan fill="#9aa3b8" font-weight="400"> (2018)</tspan><tspan fill="#9aa3b8" font-weight="400"> NOC</tspan><tspan fill="#9aa3b8" font-weight="400"> makes</tspan><tspan fill="#9aa3b8" font-weight="400"> its</tspan><tspan fill="#9aa3b8" font-weight="400"> own</tspan><tspan fill="#9aa3b8" font-weight="400"> solid</tspan></text>
+<text x="428.00" y="1029.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">rocket</tspan><tspan fill="#9aa3b8" font-weight="400"> motors</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> cash</tspan><tspan fill="#9aa3b8" font-weight="400"> that</tspan><tspan fill="#9aa3b8" font-weight="400"> would</tspan><tspan fill="#9aa3b8" font-weight="400"> otherwise</tspan><tspan fill="#9aa3b8" font-weight="400"> pool</tspan><tspan fill="#9aa3b8" font-weight="400"> at</tspan><tspan fill="#9aa3b8" font-weight="400"> a</tspan></text>
+<text x="428.00" y="1045.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">supplier</tspan><tspan fill="#9aa3b8" font-weight="400"> stays</tspan><tspan fill="#9aa3b8" font-weight="400"> in-house.</tspan></text>
+<rect x="782.00" y="947.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="782.00" y="947.00" width="3" height="132.00" rx="2" fill="#a78bfa"/>
+<text x="798.00" y="971.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">WHERE IT POOLS · FCF</text>
+<text x="798.00" y="989.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Then back to owners</text>
+<text x="798.00" y="1013.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">After</tspan><tspan fill="#9aa3b8" font-weight="400"> payroll</tspan><tspan fill="#9aa3b8" font-weight="400"> and</tspan><tspan fill="#9aa3b8" font-weight="400"> suppliers,</tspan><tspan fill="#f4d58a" font-weight="700"> $3.3bn</tspan><tspan fill="#9aa3b8" font-weight="400"> free</tspan><tspan fill="#9aa3b8" font-weight="400"> cash</tspan><tspan fill="#9aa3b8" font-weight="400"> flow</tspan></text>
+<text x="798.00" y="1029.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">pooled</tspan><tspan fill="#9aa3b8" font-weight="400"> to</tspan><tspan fill="#9aa3b8" font-weight="400"> shareholders</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#f4d58a" font-weight="700"> $1.29bn</tspan><tspan fill="#9aa3b8" font-weight="400"> dividends</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#f4d58a" font-weight="700"> $1.62bn</tspan></text>
+<text x="798.00" y="1045.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">buybacks.</tspan></text>
+<text x="590.00" y="1115.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: NOC FY2025 10-K — Item 1 (programs, customers, ~95,000 employees, microelectronics raw-materials) &amp; consolidated cash-flow statement (capex $1.45bn, dividends $1.29bn, buybacks $1.62bn) · Bernstein Global A&amp;D, 2026-06-02 (microelectronics/castings bottlenecks; SRM 3-4x expansion)</text>
+</svg>
+
+*图：NOC FY2025"资金流向"价值链图——实线为直接付款；本图为相对规模示意（非流量守恒），ribbon 粗细 ≈ rough scale。* **顺着钱走 (follow the money)：** 美国政府支付了 FY2025 收入的 **84%**（[NOC FY2025 10-K, Customer Concentration](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）；约 **$33.4bn** 的 cost of sales（= 总收入 − G&A − operating income，10-K 推算）大部分以自有工程与制造形式留在公司内部（~95,000 名员工，[NOC FY2025 10-K, Human Capital](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）；唯一显著的外部瓶颈是 microelectronics（10-K Raw Materials 披露的短缺）与 castings——后者与微电子一同被伯恩斯坦点名为限制 SRM 产能扩张 **3–4 倍** 的瓶颈（[Bernstein — Global A&D, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812485114412812/Bernstein-Global%20Aerospace%20%26%20Defense%EF%BC%9AAerospace%20%26%20Defense%EF%BC%9A%20Twelve%20CEOs%20in%20three%20days~A%26D%20themes%20from%20Bernstein%27s%20Strategic%20Decisions%20Conference-260602.pdf)）；而 solid rocket motors（固体火箭发动机）自 2018 年收购 Orbital ATK 后已内化为自产能力，是"护城河而非采购项"（[NOC FY2025 10-K, Item 1 — History](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）；扣除工资与供应商后，**$3.3bn** 自由现金流最终汇聚为股东回报（**$1.29bn** 分红 + **$1.62bn** 回购）（[NOC FY2025 10-K, Liquidity & Financing Activities](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)）。
+
+**延伸观看 / Further viewing**（帮助看清 NOC 难以用文字想象的硬件机理；视频为教学辅助，**不构成引用、不承载任何数字**）：
+
+- [B-21 Raider 揭幕实况 — 看清第六代隐身战略轰炸机的外形与任务定位（五角大楼官方揭幕，2022-12；CNET Highlights 频道）](https://www.youtube.com/watch?v=fsmHeCcwPnY)
+
+（说明：Sentinel/GBSD 与固体火箭发动机的可靠"官方频道"YouTube 解说视频本次未检索到可长期留存者；其试车里程碑以官方文字/图像来源在正文与 Section 9.5 催化剂中引用，故此处不附弱来源视频。）
+
 ---
 
 ## 6. 客户与商业模式
@@ -352,6 +861,68 @@ xychart-beta
 ```
 
 Source: FCF 与股东回报均来自 [NOC FY2025 10-K, Liquidity & FCF / Financing Activities](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)。bar = FCF，line = 回购+分红合计。
+
+**FY2025 现金流 Sankey (cash-flow statement)：**
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">NOC FY2025 现金流 Sankey (cash flow)</text>
+<path d="M 369.00,71.00 C 443.50,71.00 443.50,85.00 518.00,85.00 L 518.00,292.35 C 443.50,292.35 443.50,278.35 369.00,278.35 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 699.00,78.00 C 773.50,78.00 773.50,203.40 848.00,203.40 L 848.00,264.99 C 773.50,264.99 773.50,139.59 699.00,139.59 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,139.59 C 773.50,139.59 773.50,278.99 848.00,278.99 L 848.00,356.35 C 773.50,356.35 773.50,216.95 699.00,216.95 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,216.95 C 773.50,216.95 773.50,370.35 848.00,370.35 L 848.00,394.26 C 773.50,394.26 773.50,240.86 699.00,240.86 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,240.86 C 773.50,240.86 773.50,408.26 848.00,408.26 L 848.00,414.60 C 773.50,414.60 773.50,247.20 699.00,247.20 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,85.00 C 608.50,85.00 608.50,78.00 683.00,78.00 L 683.00,247.20 C 608.50,247.20 608.50,254.20 534.00,254.20 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,254.20 C 608.50,254.20 608.50,261.20 683.00,261.20 L 683.00,540.00 C 608.50,540.00 608.50,533.00 534.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,188.70 C 278.50,188.70 278.50,292.35 353.00,292.35 L 353.00,491.56 C 278.50,491.56 278.50,387.91 204.00,387.91 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 369.00,292.35 C 443.50,292.35 443.50,292.35 518.00,292.35 L 518.00,518.95 C 443.50,518.95 443.50,518.95 369.00,518.95 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,401.91 C 278.50,401.91 278.50,491.56 353.00,491.56 L 353.00,518.95 C 278.50,518.95 278.50,429.30 204.00,429.30 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 369.00,532.95 C 443.50,532.95 443.50,518.95 518.00,518.95 L 518.00,533.00 C 443.50,533.00 443.50,547.00 369.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="188.70" width="16" height="199.21" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="401.91" width="16" height="27.39" rx="1.5" fill="#2563eb"/>
+<rect x="353.00" y="71.00" width="16" height="207.35" rx="1.5" fill="#2563eb"/>
+<rect x="353.00" y="292.35" width="16" height="226.60" rx="1.5" fill="#2563eb"/>
+<rect x="353.00" y="532.95" width="16" height="14.05" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="683.00" y="78.00" width="16" height="169.20" rx="1.5" fill="#dc2626"/>
+<rect x="683.00" y="261.20" width="16" height="278.80" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="203.40" width="16" height="61.59" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="278.99" width="16" height="77.36" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="370.35" width="16" height="23.91" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="408.26" width="16" height="6.34" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="285.31" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net earnings</text>
+<text x="179.00" y="298.31" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.2B  (44.5%)</text>
+<text x="179.00" y="412.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">D&amp;A + 营运资本等</text>
+<text x="179.00" y="425.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$575.0M  (6.1%)</text>
+<rect x="372.00" y="53.00" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="375.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="375.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.4B  (46.3%)</text>
+<rect x="372.00" y="274.35" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="375.00" y="286.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="375.00" y="299.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.8B  (50.6%)</text>
+<rect x="372.00" y="514.95" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="375.00" y="526.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="375.00" y="539.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$295.0M  (3.1%)</text>
+<rect x="537.00" y="67.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$9.4B  (100.0%)</text>
+<rect x="702.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="705.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="705.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.6B  (37.8%)</text>
+<text x="708.00" y="397.60" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="708.00" y="410.60" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.9B  (62.2%)</text>
+<text x="873.00" y="231.20" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Dividends paid</text>
+<text x="873.00" y="244.20" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.3B  (13.7%)</text>
+<text x="873.00" y="314.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Share buybacks</text>
+<text x="873.00" y="327.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.6B  (17.3%)</text>
+<text x="873.00" y="379.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net debt repaid</text>
+<text x="873.00" y="392.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$502.0M  (5.3%)</text>
+<text x="873.00" y="408.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other financing</text>
+<text x="873.00" y="421.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$133.0M  (1.4%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = $3.3B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: NOC FY2025 10-K (consolidated cash-flow statement), filed 2026-01-27 · CIK 0001133421</text>
+</svg>
+
+*图：NOC FY2025 现金流 Sankey——operating cash flow (CFO) $4,757M（net earnings $4,182M + D&A 及营运资本 $575M）→ 扣 capex $1,450M 得 free cash flow $3,307M；financing (CFF) 流出 $3,552M（分红 $1,293M + 回购 $1,624M + 净偿债 $502M + 其他 $133M）；investing 含其他投资净 +$295M；期初现金 $4,353M → 期末现金 $4,403M（净增 +$50M）。* Source: [NOC FY2025 10-K, Consolidated Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1133421/000113342126000003/noc-20251231.htm)。
 
 ---
 
@@ -496,14 +1067,14 @@ Source: [World Economic Forum / McKinsey, 2024-04](https://www.weforum.org/press
 
 ### 11.1 Buffett 视角（质量 + 合理价格，0–100）
 
-**视角观点 (Lens view)：偏正面（~74/100）。** NOC 具备 Buffett 偏好的核心特征：① **近乎垄断的特许经营权**——Sentinel 与 B-21 的独家承包权是典型的"toll-bridge"经济学，更换成本极高、监管壁垒极深；② **可预测的现金流**——$95.7bn backlog 覆盖 2.3 倍年收入，84% 政府客户提供稳定性；③ **股东友好的资本配置**——连续两位数股息增长 + $3bn 回购。扣分项：forward P/E ~17.9× 并非深度低估，且 84% 单一客户集中度是 Buffett 会警惕的"客户即政府"风险。
+**视角观点 (Lens view)：偏正面（~74/100）。** NOC 具备 Buffett 偏好的核心特征：① **近乎垄断的特许经营权**——Sentinel 与 B-21 的独家承包权是典型的"toll-bridge"经济学，更换成本极高、监管壁垒极深；② **可预测的现金流**——$95.7bn backlog 覆盖 2.3 倍年收入，84% 政府客户提供稳定性；③ **股东友好的资本配置**——连续两位数股息增长 + $3bn 回购。扣分项：forward P/E ~18.3× 并非深度低估，且 84% 单一客户集中度是 Buffett 会警惕的"客户即政府"风险。
 
 | 维度 | 评分 | 依据 |
 |---|---|---|
 | 特许经营护城河 | 高 | Sentinel/B-21 独家、太空 45% 受限项目 |
 | 盈利可预测性 | 高 | backlog 2.3× 年收入、政府客户 |
 | 资本配置 | 高 | FCF $3.3bn、+12% 股息、$3bn 回购 |
-| 估值安全边际 | 中 | fwd P/E 17.9×，非深度折价 |
+| 估值安全边际 | 中 | fwd P/E 18.3×，非深度折价 |
 
 ### 11.2 Munger 视角（质量 + 反向思考，0–10）
 
@@ -511,7 +1082,7 @@ Source: [World Economic Forum / McKinsey, 2024-04](https://www.weforum.org/press
 
 ### 11.3 Damodaran 视角（故事 + 数字 DCF，±%）
 
-**视角观点 (Lens view)：合理估值，安全边际约 +15–20%。** 关键假设（required block）：risk-free rate = 4.536%（10Y Treasury，`indicators.db` as of 2026-06-05）；ERP 假设 4.5%；β ~0.9（行业，非 yfinance 的 −0.12 异常值）；WACC ≈ 4.536% + 0.9×4.5% ≈ 8.6%；terminal growth ≤ 2.5%（≤ risk-free）。以本报告 base case 2027E EPS ~$30 与 21.7× 目标倍数得 $650，相对 $540.81 有 ~20% 上行——"故事"（核现代化 + Golden Dome）与"数字"（稳定 FCF、可见 backlog）一致，故事可信。
+**视角观点 (Lens view)：合理估值，安全边际约 +15–20%。** 关键假设（required block）：risk-free rate = 4.536%（10Y Treasury，`indicators.db` as of 2026-06-05）；ERP 假设 4.5%；β ~0.9（行业，非 yfinance 的 −0.12 异常值）；WACC ≈ 4.536% + 0.9×4.5% ≈ 8.6%；terminal growth ≤ 2.5%（≤ risk-free）。以本报告 base case 2027E EPS ~$30 与 21.7× 目标倍数得 $650，相对 $550.33 有 ~18% 上行——"故事"（核现代化 + Golden Dome）与"数字"（稳定 FCF、可见 backlog）一致，故事可信。
 
 ### 11.4 Howard Marks 周期视角（市场 regime，0–100）
 
@@ -569,11 +1140,26 @@ Source: [World Economic Forum / McKinsey, 2024-04](https://www.weforum.org/press
 | 太空经济 $1.8trn by 2035 | WEF / McKinsey (2024-04) | 9 |
 | 卖方观点（评级/PT/折价/SRM/试飞/Golden Dome） | db/zsxq.db (MS×2, Bernstein, GS) | 2, 5, 7, 8, 9, 10 |
 | Cycle 快照 (VIX/10Y/HY OAS/IG OAS/MOVE) | db/indicators.db (2026-06-04/05) | 11 |
+| 利润表/资产负债表/现金流/DuPont 明细（COGS 推算、CFI/CFF、债务流） | SEC XBRL companyfacts (CIK 0001133421, FY2025 10-K accn …26-000003) | 1, 2, 6（财报图） |
+| GF Score 五维评分（FS/Prof/Growth/Value/Momentum）+ 综合 58/100 | 本报告 rubric（输入取自 1–2 节一手数据 + yfinance 2026-06-12） | 1B |
+| 资金流向图节点/瓶颈（客户、~95k 员工、微电子/铸件瓶颈、SRM 内化、股东回报） | NOC FY2025 10-K（Item 1、现金流表）+ Bernstein A&D 2026-06-02 | 5.6 |
+| 相对表现（1Y +8.2% vs SPY +25.7%、6M −3.7%、200dma ~$612） | yfinance (2026-06-12) | 头部、1B |
+| 延伸观看（B-21 揭幕视频） | YouTube（CNET Highlights，已验证 playabilityStatus=OK） | 5.6 |
 
 ---
 
 <details>
-<summary>Verification log (Step 10) — 2026-06-09</summary>
+<summary>Verification log (Step 10) — 2026-06-14</summary>
+
+**本次刷新 (2026-06-14 refresh) — 新增/校验项：**
+- **EDGAR submissions JSON 复核 (CIK 0001133421)：** FY2025 10-K = `noc-20251231.htm` accn `0001133421-26-000003` (filed 2026-01-27)、Q1 2026 10-Q = `noc-20260331.htm` accn `0001133421-26-000016` (filed 2026-04-21)、DEF 14A accn `…26-000007`、Q1 2026 Earnings 8-K accn `…26-000015`、2026-02-13 8-K accn `0001628280-26-008140` — 均与正文引用逐一字符串匹配 ✓。报告写作日 (2026-06-09) 之后唯一新增 SEC 备案为 2026-05-21 8-K（年度股东大会投票结果，accn `0001628280-26-037375`，非财务重大事项），故财报数据仍为最新。
+- **估值快照刷新至 2026-06-12 收盘：** 价 $550.33（前 $540.81）、市值 $78.2bn、trailing P/E 17.2×、forward P/E 18.3×、P/S 1.84×、P/B 4.57×；52 周区间 $481.28–$774.00；隐含上行至 base $650 = +18%；bull/base/bear 相对价已重算为 +40%/+18%/−21%（[yfinance, 2026-06-12](https://finance.yahoo.com/quote/NOC/)）。
+- **相对表现校正：** 近 1 年 +8.2%（前文 +11.8% 为不同窗口）、跑输 S&P 500 约 17.5pp（SPY +25.7%）、6 个月 −3.7%、现价低于 200 日均线 ~$612 约 10%（yfinance 2026-06-12）。
+- **新增图表（全部 stdlib inline-SVG，均 un-fenced，数字逐项对回 FY2025 10-K）：** 利润表 Sankey（Rev $41,954M → COGS $33,410M[推算] + GP $8,544M → G&A $4,033M + OI $4,511M → pretax $5,068M → tax $886M + NI $4,182M）✓；收入 donut（四段合计 $44,271M）✓；DuPont（ROE 26.2%）✓；资产负债表 Sankey（资产 $51,377M = 负债 $34,703M + 权益 $16,674M）✓；现金流 Sankey（CFO $4,757M − capex $1,450M = FCF $3,307M；期末现金 $4,403M 对回 10-K）✓；money-flow（节点均为 10-K/Bernstein 实有交易方，无杜撰供应商；卡片数字 84%/$33.4bn/95,000/3–4×/$3.3bn/$1.29bn/$1.62bn 均字符串匹配所引来源）✓。
+- **新增 Section 1B GF Score：** 58/100（FS 6.5 / Prof 7 / Growth 5 / Value 6 / Momentum 4.0），标 *分析师观点*、未引用任何备案、未归因 GuruFocus；各维度指标均引一手来源。
+- **新增 Section 2d 卖方观点演变：** `db/stock_price_target.db` 只读前置 = NOC 0 行（已注明）；按机构时间线 + 机构间分歧表，引用 4 个 file_id（184442822484282 / 415521254142458 / 415245828888188 / 812485114412812，均经 zsxq.db 只读确认存在），全部标 *分析师观点* 并路由 `/zsxq/pdf/`，未与备案引用混合。
+- **新增延伸观看：** B-21 揭幕视频经 curl(real-UA) 验证 `playabilityStatus=OK`（200）；Sentinel/SRM 未得可长期留存的官方 YouTube，故只附 1 条强来源视频并在正文说明（视频不承载任何数字）。
+
 
 **SEC filenames** — 全部经 EDGAR submissions JSON (CIK 0001133421) 解析，无合成文件名：
 - 10-K (FY2025) = `noc-20251231.htm`，accession `0001133421-26-000003`，filed 2026-01-27 ✓
