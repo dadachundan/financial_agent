@@ -7,7 +7,8 @@ node_modules/
 package.json
 package-lock.json
 *.db
-!db/zsxq.db
+# db/zsxq.db is NOT git-tracked — it exceeds GitHub's 100 MB file limit (~124 MB).
+# Backed up to Google Cloud Storage instead: scripts/backup_dbs_to_gcs.sh
 !db/notes.db
 # SQLite transient transaction logs — regenerated automatically, never commit
 *.db-wal
