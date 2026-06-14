@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Teradyne FY2025 现金流 Sankey (US$ 百万)</text>
+<path d="M 534.00,128.32 C 691.00,128.32 691.00,64.00 848.00,64.00 L 848.00,174.38 C 691.00,174.38 691.00,238.70 534.00,238.70 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,128.32 C 361.00,128.32 361.00,128.32 518.00,128.32 L 518.00,489.68 C 361.00,489.68 361.00,489.68 204.00,489.68 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,238.70 C 691.00,238.70 691.00,188.38 848.00,188.38 L 848.00,489.68 C 691.00,489.68 691.00,540.00 534.00,540.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,540.00 C 691.00,540.00 691.00,503.68 848.00,503.68 L 848.00,554.00 C 691.00,554.00 691.00,590.32 534.00,590.32 Z" fill="#86efac" fill-opacity="0.55"/>
+<rect x="188.00" y="128.32" width="16" height="361.37" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="128.32" width="16" height="361.37" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="110.38" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="188.38" width="16" height="301.30" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="503.68" width="16" height="50.32" rx="1.5" fill="#15803d"/>
+<rect x="207.00" y="110.32" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="122.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="135.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$674.4M  (100.0%)</text>
+<rect x="537.00" y="110.32" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="122.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="135.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$674.4M  (100.0%)</text>
+<rect x="867.00" y="46.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$206.0M  (30.5%)</text>
+<rect x="867.00" y="170.38" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="182.38" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="195.38" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$562.3M  (83.4%)</text>
+<text x="873.00" y="525.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="538.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$93.9M  (13.9%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$450.4M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Teradyne FY2025 10-K — consolidated statement of cash flows</text>
+</svg>

@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1251" width="1180" height="1251" role="img" aria-label="谁为 Teradyne 的测试买单 —— 以及 Teradyne 的钱又流向谁" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1251" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">TERADYNE 测试价值链 · 钱从哪来、流向哪 · 2025–2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">谁为 Teradyne 的测试买单 —— 以及 Teradyne 的钱又流向谁</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">Teradyne 处在 AI 芯片价值链的咽喉位置：超大规模厂商与 fabless 设计的 AI 计算 ASIC、HBM、硅光子越复杂，单颗器件的测试时长与测试强度越高，钱就越多地流进 Teradyne 的 UltraFLEXplus / Magnum / IST</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">机型。顺着金色的钱往下看：收入在左侧汇入，再分流到 Teradyne 自己的关键供应商与合作方 —— 合约制造、探针卡、零部件，这才是它的 COGS / 资本真正落地的地方。粗细仅为相对规模示意。</text>
+<ellipse cx="1031.00" cy="510.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="807.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="807.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱给 Teradyne</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Teradyne 的测试产品线</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Teradyne 的钱流向谁</text>
+<path d="M 256.00 280.64 C 369.50 280.64, 369.50 339.82, 483.00 339.82" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 421.23 C 369.50 421.23, 369.50 360.55, 483.00 360.55" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 433.23 C 369.50 433.23, 369.50 470.32, 483.00 470.32" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 551.00 C 369.50 551.00, 369.50 480.14, 483.00 480.14" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 297.00 C 369.50 297.00, 369.50 462.68, 483.00 462.68" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 759.23 C 369.50 759.23, 369.50 576.50, 483.00 576.50" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 767.41 C 369.50 767.41, 369.50 675.50, 483.00 675.50" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 439.00 C 369.50 439.00, 369.50 569.09, 483.00 569.09" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 339.27 C 810.50 339.27, 810.50 270.23, 924.00 270.23" fill="none" stroke="url(#mfgold)" stroke-width="19.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 467.05 C 810.50 467.05, 810.50 285.50, 924.00 285.50" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 574.00 C 810.50 574.00, 810.50 294.77, 924.00 294.77" fill="none" stroke="url(#mfgold)" stroke-width="7.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 362.73 C 810.50 362.73, 810.50 626.27, 924.00 626.27" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 480.68 C 810.50 480.68, 810.50 633.91, 924.00 633.91" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 475.23 C 810.50 475.23, 810.50 519.00, 924.00 519.00" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 373.09 C 810.50 373.09, 810.50 739.00, 924.00 739.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 675.50 C 810.50 675.50, 810.50 301.09, 924.00 301.09" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 661.00 C 369.50 661.00, 369.50 374.73, 483.00 374.73" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 353.45 C 810.50 353.45, 810.50 400.50, 924.00 400.50" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="304.23" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AI 计算测试</text>
+<text x="369.50" y="509.57" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">HBM/DRAM 终测</text>
+<text x="369.50" y="511.86" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">替终端采购</text>
+<text x="810.50" y="298.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">外包组装</text>
+<text x="810.50" y="370.98" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">探针卡协同</text>
+<text x="810.50" y="491.11" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AI I/O 测试</text>
+<rect x="42.00" y="220.00" width="214" height="130.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="42.00" y="220.00" width="3" height="130.00" rx="2" fill="#56c6e6"/>
+<text x="60.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">超大规模厂商 VIP</text>
+<text x="60.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">定制 AI 训练/推理 ASIC</text>
+<text x="60.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">TPU·Trainium·Maia·MTIA 类</text>
+<text x="60.00" y="308.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">2025 占 SoC TAM 大头</text>
+<rect x="42.00" y="366.00" width="214" height="122.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="42.00" y="366.00" width="3" height="122.00" rx="2" fill="#56c6e6"/>
+<text x="60.00" y="399.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">商用 AI / Fabless</text>
+<text x="60.00" y="420.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">NVIDIA·AMD·Broadcom</text>
+<text x="60.00" y="437.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Marvell·MediaTek·Qualcomm</text>
+<text x="60.00" y="454.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">GPU/ASIC 终测+探针</text>
+<rect x="42.00" y="504.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="42.00" y="504.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="60.00" y="537.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">存储厂商</text>
+<text x="60.00" y="558.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">SK Hynix·Samsung·Micron</text>
+<text x="60.00" y="575.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">HBM/DRAM 终测</text>
+<rect x="42.00" y="614.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="42.00" y="614.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="60.00" y="647.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">OSAT / 代工</text>
+<text x="60.00" y="668.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">ASE·Amkor·KYEC·SPIL</text>
+<text x="60.00" y="685.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">TSMC · 替终端客户采购</text>
+<rect x="42.00" y="724.00" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="42.00" y="724.00" width="3" height="77.00" rx="2" fill="#d9a05b"/>
+<text x="60.00" y="757.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">汽车/工业/制造</text>
+<text x="60.00" y="778.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">IDM 功率器件 + cobot/AMR 买家</text>
+<rect x="483.00" y="298.50" width="214" height="111.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="298.50" width="3" height="111.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="331.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ULTRAFLEXPLUS</text>
+<text x="501.00" y="352.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">AI 计算 SoC 旗舰</text>
+<text x="501.00" y="369.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">9 个月出货翻倍</text>
+<text x="501.00" y="386.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">PACE 架构·IG-XL 软件</text>
+<rect x="483.00" y="425.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="425.50" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="458.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MAGNUM / IST</text>
+<text x="501.00" y="479.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">HBM·DRAM 终测 + SLT</text>
+<text x="501.00" y="496.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">先进封装系统级测试</text>
+<rect x="483.00" y="535.50" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="535.50" width="3" height="77.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="568.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">ETS·J750·LITEPOINT</text>
+<text x="501.00" y="589.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">模拟/功率·MCU·无线测试</text>
+<rect x="483.00" y="628.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="628.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="661.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">ROBOTICS (UR + MiR)</text>
+<text x="501.00" y="682.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">cobot 机械臂 + AMR</text>
+<text x="501.00" y="699.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">FY25 营收 $308M (-15%)</text>
+<rect x="924.00" y="235.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="235.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="268.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">合约制造 (马来西亚)</text>
+<text x="942.00" y="289.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">测试机外包生产</text>
+<text x="942.00" y="306.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">COGS 主体落地处</text>
+<rect x="924.00" y="345.00" width="214" height="111.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="345.00" width="3" height="111.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="378.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">TECHNOPROBE</text>
+<text x="942.00" y="399.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">全球 #1 探针卡</text>
+<text x="942.00" y="416.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">TER 持 10% 股权·权益法</text>
+<text x="942.00" y="433.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$537M 投资</text>
+<rect x="924.00" y="472.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="472.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="505.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MULTILANE 合资</text>
+<text x="942.00" y="526.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">AI 数据中心 I/O 测试</text>
+<text x="942.00" y="543.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">TER 持 75%·$157M</text>
+<rect x="924.00" y="582.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="582.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="615.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">仪器/零部件供应商</text>
+<text x="942.00" y="636.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">电源·数字/模拟仪器卡</text>
+<text x="942.00" y="653.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">探卡接口·热管理</text>
+<rect x="924.00" y="692.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="692.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="725.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">研发与工程 (自有)</text>
+<text x="942.00" y="746.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">FY25 E&amp;D $505M</text>
+<text x="942.00" y="763.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">IG-XL 软件生态护城河</text>
+<rect x="42.00" y="827.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="831.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="829.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="829.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="829.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="829.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="831.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="831.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="822.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="747.00" y="831.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="886.20" y="822.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="905.20" y="831.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="979.60" y="822.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="998.60" y="831.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="42.00" y="842.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="61.00" y="851.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="185.80" y="842.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="204.80" y="851.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="279.20" y="842.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="298.20" y="851.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="867.00" x2="1138" y2="867.00" stroke="#222a3a"/>
+<text x="42.00" y="883.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">顺着钱看 / FOLLOW THE MONEY</text>
+<rect x="42.00" y="903.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="903.00" width="3" height="148.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="927.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">收入侧 · AI 计算</text>
+<text x="58.00" y="945.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AI 占 Q1 2026 营收约 70%</text>
+<text x="58.00" y="969.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Teradyne</tspan><tspan fill="#9aa3b8" font-weight="400"> 最大的钱袋是</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 计算</tspan><tspan fill="#9aa3b8" font-weight="400"> SoC</tspan><tspan fill="#9aa3b8" font-weight="400"> 测试。管理层披露</tspan><tspan fill="#f4d58a" font-weight="700"> Q1</tspan><tspan fill="#f4d58a" font-weight="700"> 2026</tspan><tspan fill="#f4d58a" font-weight="700"> 约</tspan><tspan fill="#f4d58a" font-weight="700"> 70%</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收与</tspan></text>
+<text x="58.00" y="985.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 相关；2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> SoC</tspan><tspan fill="#9aa3b8" font-weight="400"> TAM</tspan><tspan fill="#9aa3b8" font-weight="400"> 约</tspan><tspan fill="#f4d58a" font-weight="700"> $7.2B</tspan><tspan fill="#9aa3b8" font-weight="400"> ，其中计算约</tspan><tspan fill="#f4d58a" font-weight="700"> $5B</tspan></text>
+<text x="58.00" y="1001.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">。UltraFLEXplus</tspan><tspan fill="#9aa3b8" font-weight="400"> 过去</tspan><tspan fill="#f4d58a" font-weight="700"> 9</tspan><tspan fill="#f4d58a" font-weight="700"> 个月出货翻倍</tspan><tspan fill="#9aa3b8" font-weight="400"> ，交期</tspan><tspan fill="#f4d58a" font-weight="700"> 12–16</tspan><tspan fill="#f4d58a" font-weight="700"> 周</tspan><tspan fill="#9aa3b8" font-weight="400"> ——</tspan></text>
+<text x="58.00" y="1017.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">测试环节是当前供不应求的瓶颈。</tspan></text>
+<rect x="412.00" y="903.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="903.00" width="3" height="148.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="927.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">护城河 · 软件生态</text>
+<text x="428.00" y="945.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">IG-XL 软件 + 切换成本</text>
+<text x="428.00" y="969.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">买单的真正理由不是硬件，而是</tspan><tspan fill="#f4d58a" font-weight="700"> 25</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 积累的</tspan><tspan fill="#9aa3b8" font-weight="400"> IG-XL</tspan></text>
+<text x="428.00" y="985.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">测试程序生态。换平台意味着重新验证成千上万个器件专用测试程序</tspan><tspan fill="#9aa3b8" font-weight="400"> ——</tspan></text>
+<text x="428.00" y="1001.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">多季度、数百万美元的工程项目。这把收入牢牢锁在</tspan><tspan fill="#9aa3b8" font-weight="400"> UltraFLEXplus</tspan><tspan fill="#9aa3b8" font-weight="400"> 上。</tspan></text>
+<rect x="782.00" y="903.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="782.00" y="903.00" width="3" height="148.00" rx="2" fill="#a78bfa"/>
+<text x="798.00" y="927.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">收入侧 · 存储</text>
+<text x="798.00" y="945.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">HBM / DRAM 终测份额提升</text>
+<text x="798.00" y="969.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">SK</tspan><tspan fill="#9aa3b8" font-weight="400"> Hynix·Samsung·Micron</tspan><tspan fill="#9aa3b8" font-weight="400"> 为</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 加速器扩产</tspan><tspan fill="#f4d58a" font-weight="700"> HBM3e→HBM4</tspan><tspan fill="#9aa3b8" font-weight="400"> ，钱流进</tspan></text>
+<text x="798.00" y="985.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Magnum</tspan><tspan fill="#9aa3b8" font-weight="400"> 终测。Teradyne</tspan><tspan fill="#9aa3b8" font-weight="400"> 是存储测试明确的</tspan><tspan fill="#f4d58a" font-weight="700"> #2</tspan><tspan fill="#9aa3b8" font-weight="400"> （晶圆测试由</tspan><tspan fill="#9aa3b8" font-weight="400"> Advantest</tspan><tspan fill="#9aa3b8" font-weight="400"> 主导），但</tspan></text>
+<text x="798.00" y="1001.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 爬坡对双方都是顺风，份额在提升。</tspan></text>
+<rect x="42.00" y="1065.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="1065.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="1089.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">支出侧 · 咽喉</text>
+<text x="58.00" y="1107.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">合约制造 + Technoprobe 探针卡</text>
+<text x="58.00" y="1131.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Teradyne</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS</tspan><tspan fill="#9aa3b8" font-weight="400"> 主体落在</tspan><tspan fill="#f4d58a" font-weight="700"> 马来西亚合约制造</tspan><tspan fill="#9aa3b8" font-weight="400"> ；它还以</tspan><tspan fill="#f4d58a" font-weight="700"> $537M</tspan><tspan fill="#9aa3b8" font-weight="400"> 持有</tspan></text>
+<text x="58.00" y="1147.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Technoprobe</tspan><tspan fill="#f4d58a" font-weight="700"> 10%</tspan><tspan fill="#9aa3b8" font-weight="400"> 股权（全球</tspan><tspan fill="#9aa3b8" font-weight="400"> #1</tspan><tspan fill="#9aa3b8" font-weight="400"> 探针卡），把钱纵向押在</tspan><tspan fill="#9aa3b8" font-weight="400"> SoC</tspan><tspan fill="#9aa3b8" font-weight="400"> 测试堆栈的探针环节，应对</tspan></text>
+<text x="58.00" y="1163.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2nm</tspan><tspan fill="#9aa3b8" font-weight="400"> 以下多裸片、富</tspan><tspan fill="#9aa3b8" font-weight="400"> HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 配置。</tspan></text>
+<rect x="412.00" y="1065.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="1065.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="1089.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">支出侧 · 相邻扩张</text>
+<text x="428.00" y="1107.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">MultiLane 合资 + 研发</text>
+<text x="428.00" y="1131.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$157M</tspan><tspan fill="#9aa3b8" font-weight="400"> 拿下</tspan><tspan fill="#9aa3b8" font-weight="400"> MultiLane</tspan><tspan fill="#f4d58a" font-weight="700"> 75%</tspan><tspan fill="#9aa3b8" font-weight="400"> 股权进入</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 数据中心高速</tspan><tspan fill="#9aa3b8" font-weight="400"> I/O</tspan><tspan fill="#9aa3b8" font-weight="400"> 测试；FY25</tspan></text>
+<text x="428.00" y="1147.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">自有研发</tspan><tspan fill="#f4d58a" font-weight="700"> $505M</tspan><tspan fill="#9aa3b8" font-weight="400"> （占营收</tspan><tspan fill="#f4d58a" font-weight="700"> 15.8%</tspan><tspan fill="#9aa3b8" font-weight="400"> ）。这两笔是</tspan><tspan fill="#9aa3b8" font-weight="400"> Teradyne</tspan><tspan fill="#9aa3b8" font-weight="400"> 把钱花在守住并拓宽</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan></text>
+<text x="428.00" y="1163.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">测试堆栈的地方，而非帝国式扩张。</tspan></text>
+<rect x="782.00" y="1065.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="782.00" y="1065.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="798.00" y="1089.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">拖累 · 机器人</text>
+<text x="798.00" y="1107.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Robotics 是失望项</text>
+<text x="798.00" y="1131.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">UR</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> MiR</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收</tspan><tspan fill="#f4d58a" font-weight="700"> $308M</tspan><tspan fill="#f4d58a" font-weight="700"> (-15%)</tspan><tspan fill="#9aa3b8" font-weight="400"> ，较</tspan><tspan fill="#9aa3b8" font-weight="400"> 2022</tspan><tspan fill="#9aa3b8" font-weight="400"> 峰值低约</tspan><tspan fill="#f4d58a" font-weight="700"> 18%</tspan></text>
+<text x="798.00" y="1147.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">；2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 财年</tspan><tspan fill="#f4d58a" font-weight="700"> 400</tspan><tspan fill="#f4d58a" font-weight="700"> 人</tspan><tspan fill="#9aa3b8" font-weight="400"> 遣散、</tspan><tspan fill="#f4d58a" font-weight="700"> $24.3M</tspan><tspan fill="#9aa3b8" font-weight="400"> 费用。中国</tspan><tspan fill="#9aa3b8" font-weight="400"> cobot</tspan><tspan fill="#9aa3b8" font-weight="400"> 同规格便宜</tspan><tspan fill="#f4d58a" font-weight="700"> 30–50%</tspan></text>
+<text x="798.00" y="1163.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">，把这块的定价权与增长都侵蚀掉了。</tspan></text>
+<text x="590.00" y="1233.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Teradyne FY2025 10-K · Q1 2026 8-K (2026-04-29) · Q4 FY2025 业绩电话会 (2026-02-03) · J.P. Morgan / Morgan Stanley 卖方纪要 (2026-05)</text>
+</svg>
