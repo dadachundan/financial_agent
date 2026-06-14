@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Besi FY2025 资产负债表 Sankey (€ mn)</text>
+<path d="M 204.00,64.00 C 262.00,64.00 262.00,99.00 320.00,99.00 L 320.00,296.92 C 262.00,296.92 262.00,261.92 204.00,261.92 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,92.04 C 790.00,92.04 790.00,85.04 848.00,85.04 L 848.00,141.28 C 790.00,141.28 790.00,148.28 732.00,148.28 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,99.00 C 394.00,99.00 394.00,106.00 452.00,106.00 L 452.00,418.40 C 394.00,418.40 394.00,411.40 336.00,411.40 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,99.04 C 658.00,99.04 658.00,92.04 716.00,92.04 L 716.00,148.28 C 658.00,148.28 658.00,155.28 600.00,155.28 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,155.28 C 658.00,155.28 658.00,162.28 716.00,162.28 L 716.00,360.19 C 658.00,360.19 658.00,353.19 600.00,353.19 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,106.00 C 526.00,106.00 526.00,99.04 584.00,99.04 L 584.00,353.19 C 526.00,353.19 526.00,360.16 468.00,360.16 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,360.16 C 526.00,360.16 526.00,367.19 584.00,367.19 L 584.00,518.96 C 526.00,518.96 526.00,511.93 468.00,511.93 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,162.28 C 790.00,162.28 790.00,155.28 848.00,155.28 L 848.00,340.07 C 790.00,340.07 790.00,347.07 732.00,347.07 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,347.07 C 790.00,347.07 790.00,354.07 848.00,354.07 L 848.00,367.19 C 790.00,367.19 790.00,360.19 732.00,360.19 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,275.92 C 262.00,275.92 262.00,296.92 320.00,296.92 L 320.00,360.23 C 262.00,360.23 262.00,339.23 204.00,339.23 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,353.23 C 262.00,353.23 262.00,360.23 320.00,360.23 L 320.00,398.17 C 262.00,398.17 262.00,391.17 204.00,391.17 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 600.00,367.19 C 658.00,367.19 658.00,374.19 716.00,374.19 L 716.00,525.96 C 658.00,525.96 658.00,518.96 600.00,518.96 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,374.19 C 790.00,374.19 790.00,381.19 848.00,381.19 L 848.00,532.96 C 790.00,532.96 790.00,525.96 732.00,525.96 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,405.17 C 262.00,405.17 262.00,398.17 320.00,398.17 L 320.00,411.40 C 262.00,411.40 262.00,418.40 204.00,418.40 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,425.40 C 394.00,425.40 394.00,418.40 452.00,418.40 L 452.00,512.00 C 394.00,512.00 394.00,519.00 336.00,519.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,432.40 C 262.00,432.40 262.00,425.40 320.00,425.40 L 320.00,452.04 C 262.00,452.04 262.00,459.04 204.00,459.04 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,473.04 C 262.00,473.04 262.00,452.04 320.00,452.04 L 320.00,506.50 C 262.00,506.50 262.00,527.50 204.00,527.50 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,541.50 C 262.00,541.50 262.00,506.50 320.00,506.50 L 320.00,519.00 C 262.00,519.00 262.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="197.92" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="275.92" width="16" height="63.31" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="353.23" width="16" height="37.94" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="405.17" width="16" height="13.23" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="432.40" width="16" height="26.64" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="473.04" width="16" height="54.45" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="541.50" width="16" height="12.50" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="99.00" width="16" height="312.40" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="425.40" width="16" height="93.60" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="106.00" width="16" height="406.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="99.04" width="16" height="254.16" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="367.19" width="16" height="151.77" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="92.04" width="16" height="56.24" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="162.28" width="16" height="197.92" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="374.19" width="16" height="151.77" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="85.04" width="16" height="56.24" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="155.28" width="16" height="184.79" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="354.07" width="16" height="13.12" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="381.19" width="16" height="151.77" rx="1.5" fill="#15803d"/>
+<line x1="188.00" y1="162.96" x2="182.00" y2="142.21" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="145.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">现金与存款 Cash+Deposits</text>
+<text x="179.00" y="158.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€543.0M  (48.7%)</text>
+<line x1="188.00" y1="307.57" x2="182.00" y2="286.82" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="289.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">应收账款 Receivables</text>
+<text x="179.00" y="302.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€173.7M  (15.6%)</text>
+<line x1="188.00" y1="372.20" x2="182.00" y2="351.45" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="354.45" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">存货 Inventories</text>
+<text x="179.00" y="367.45" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€104.1M  (9.3%)</text>
+<line x1="188.00" y1="411.78" x2="182.00" y2="391.04" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="394.04" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他流动资产 Other current</text>
+<text x="179.00" y="407.04" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€36.3M  (3.3%)</text>
+<line x1="188.00" y1="445.72" x2="182.00" y2="424.97" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="427.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">PP&amp;E+使用权 PP&amp;E+RoU</text>
+<text x="179.00" y="440.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€73.1M  (6.6%)</text>
+<line x1="188.00" y1="500.27" x2="182.00" y2="479.52" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="482.52" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">商誉+无形 Goodwill+Intangibles</text>
+<text x="179.00" y="495.52" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€149.4M  (13.4%)</text>
+<line x1="188.00" y1="547.75" x2="182.00" y2="527.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="530.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他非流动 Other non-current</text>
+<text x="179.00" y="543.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€34.3M  (3.1%)</text>
+<rect x="339.00" y="81.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="93.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="106.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€857.1M  (76.9%)</text>
+<rect x="339.00" y="407.40" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="419.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="432.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€256.8M  (23.1%)</text>
+<rect x="471.00" y="88.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="100.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="113.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€1.1B  (100.0%)</text>
+<rect x="603.00" y="81.04" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="93.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="106.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€697.3M  (62.6%)</text>
+<rect x="603.00" y="349.19" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="361.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="374.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€416.4M  (37.4%)</text>
+<rect x="735.00" y="74.04" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="86.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="99.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€154.3M  (13.9%)</text>
+<rect x="735.00" y="144.28" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="156.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="169.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€543.0M  (48.7%)</text>
+<rect x="735.00" y="356.19" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="368.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="381.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€416.4M  (37.4%)</text>
+<text x="873.00" y="110.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">流动负债 Current liabilities</text>
+<text x="873.00" y="123.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€154.3M  (13.9%)</text>
+<text x="873.00" y="244.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">长期债务 Long-term debt</text>
+<text x="873.00" y="257.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€507.0M  (45.5%)</text>
+<text x="873.00" y="357.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他非流动负债 Other non-current</text>
+<text x="873.00" y="370.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€36.0M  (3.2%)</text>
+<text x="873.00" y="454.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股东权益 Equity</text>
+<text x="873.00" y="467.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€416.4M  (37.4%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">总资产 €1,113.7mn · 净现金（现金+存款−总债务）约 €36mn</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Besi 2025 年报 (IFRS, € mn) — 第 193-196 页, 第 193 页资产负债表</text>
+</svg>

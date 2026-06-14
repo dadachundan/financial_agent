@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Besi 营业收入历史（按分部，€ mn）</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Die Attach</text>
+<rect x="116.00" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="132.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Packaging</text>
+<rect x="205.40" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="221.40" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Plating</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">€0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">€161.8M</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">€323.7M</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">€485.5M</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">€647.4M</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">€809.2M</text>
+<rect x="102.09" y="164.36" width="88.62" height="247.64" fill="#2563eb"/>
+<rect x="102.09" y="114.83" width="88.62" height="49.53" fill="#15803d"/>
+<rect x="102.09" y="102.74" width="88.62" height="12.09" fill="#d97706"/>
+<text x="146.40" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2021</text>
+<rect x="254.89" y="172.62" width="88.62" height="239.38" fill="#2563eb"/>
+<rect x="254.89" y="124.33" width="88.62" height="48.29" fill="#15803d"/>
+<rect x="254.89" y="113.64" width="88.62" height="10.69" fill="#d97706"/>
+<text x="299.20" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2022</text>
+<rect x="407.69" y="220.91" width="88.62" height="191.09" fill="#2563eb"/>
+<rect x="407.69" y="180.46" width="88.62" height="40.45" fill="#15803d"/>
+<rect x="407.69" y="173.07" width="88.62" height="7.39" fill="#d97706"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2023</text>
+<rect x="560.49" y="209.56" width="88.62" height="202.44" fill="#2563eb"/>
+<rect x="560.49" y="168.28" width="88.62" height="41.27" fill="#15803d"/>
+<rect x="560.49" y="161.27" width="88.62" height="7.02" fill="#d97706"/>
+<text x="604.80" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2024</text>
+<rect x="713.29" y="216.32" width="88.62" height="195.68" fill="#2563eb"/>
+<rect x="713.29" y="175.42" width="88.62" height="40.90" fill="#15803d"/>
+<rect x="713.29" y="167.95" width="88.62" height="7.47" fill="#d97706"/>
+<text x="757.60" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2025</text>
+<text x="430.00" y="440.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">2021-2023 分部为近似拆分；2024/2025 为年报披露值</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Besi 2025 年报 (IFRS, € mn), 第 7 页关键指标 + 第 222 页分部（2025/2024）</text>
+</svg>

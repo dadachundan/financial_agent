@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Besi FY2025 收入地理分布 (€ mn)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 394.59,317.07 L 350.98,285.21 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 394.59,317.07 A 132 132 0 0 1 291.16,371.16 L 289.86,317.18 A 78 78 0 0 0 350.98,285.21 Z" fill="#15803d"/>
+<path d="M 291.16,371.16 A 132 132 0 0 1 199.09,336.76 L 235.46,296.85 A 78 78 0 0 0 289.86,317.18 Z" fill="#d97706"/>
+<path d="M 199.09,336.76 A 132 132 0 0 1 165.27,287.79 L 215.48,267.91 A 78 78 0 0 0 235.46,296.85 Z" fill="#7c3aed"/>
+<path d="M 165.27,287.79 A 132 132 0 0 1 156.37,229.36 L 210.22,233.38 A 78 78 0 0 0 215.48,267.91 Z" fill="#dc2626"/>
+<path d="M 156.37,229.36 A 132 132 0 0 1 166.80,186.92 L 216.38,208.31 A 78 78 0 0 0 210.22,233.38 Z" fill="#0891b2"/>
+<path d="M 166.80,186.92 A 132 132 0 0 1 214.47,129.58 L 244.55,174.42 A 78 78 0 0 0 216.38,208.31 Z" fill="#db2777"/>
+<path d="M 214.47,129.58 A 132 132 0 0 1 273.72,107.97 L 279.56,161.66 A 78 78 0 0 0 244.55,174.42 Z" fill="#65a30d"/>
+<path d="M 273.72,107.97 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 279.56,161.66 Z" fill="#9333ea"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">FY25\n€591mn</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">€591.3M</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="411.04" y1="176.71" x2="427.04" y2="176.71" stroke="#2563eb" stroke-width="1.4"/>
+<text x="431.04" y="174.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">China 中国</text>
+<text x="431.04" y="188.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€207.2M  (35.0%)</text>
+<line x1="351.96" y1="361.48" x2="367.96" y2="361.48" stroke="#15803d" stroke-width="1.4"/>
+<text x="371.96" y="359.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States 美国</text>
+<text x="371.96" y="373.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€86.2M  (14.6%)</text>
+<line x1="239.70" y1="368.47" x2="223.70" y2="368.47" stroke="#d97706" stroke-width="1.4"/>
+<text x="219.70" y="366.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Taiwan 台湾</text>
+<text x="219.70" y="380.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€71.8M  (12.1%)</text>
+<line x1="174.44" y1="317.62" x2="158.44" y2="317.62" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="154.44" y="315.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Malaysia 马来西亚</text>
+<text x="154.44" y="329.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€42.8M  (7.2%)</text>
+<line x1="151.57" y1="259.98" x2="135.57" y2="259.98" stroke="#dc2626" stroke-width="1.4"/>
+<text x="131.57" y="257.98" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Thailand 泰国</text>
+<text x="131.57" y="271.98" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€42.5M  (7.2%)</text>
+<line x1="153.99" y1="206.27" x2="137.99" y2="206.27" stroke="#0891b2" stroke-width="1.4"/>
+<text x="133.99" y="204.27" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Korea 韩国</text>
+<text x="133.99" y="218.27" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€31.3M  (5.3%)</text>
+<line x1="181.89" y1="150.97" x2="165.89" y2="150.97" stroke="#db2777" stroke-width="1.4"/>
+<text x="161.89" y="148.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other Asia 其他亚太</text>
+<text x="161.89" y="162.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€53.9M  (9.1%)</text>
+<line x1="240.73" y1="109.55" x2="224.73" y2="109.55" stroke="#65a30d" stroke-width="1.4"/>
+<text x="220.73" y="107.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other Europe 其他欧洲</text>
+<text x="220.73" y="121.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€45.4M  (7.7%)</text>
+<line x1="280.53" y1="101.40" x2="264.53" y2="101.40" stroke="#9333ea" stroke-width="1.4"/>
+<text x="260.53" y="99.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">RoW 其他地区</text>
+<text x="260.53" y="113.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">€10.2M  (1.7%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Besi 2025 年报 (IFRS, € mn), 第 222 页地理收入分布</text>
+</svg>
