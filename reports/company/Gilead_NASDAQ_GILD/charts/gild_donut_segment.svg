@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 产品销售构成（按治疗领域）/ Product Sales by Therapeutic Area</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 158.71,265.81 L 211.60,254.93 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 158.71,265.81 A 132 132 0 0 1 171.91,176.38 L 219.40,202.08 A 78 78 0 0 0 211.60,254.93 Z" fill="#15803d"/>
+<path d="M 171.91,176.38 A 132 132 0 0 1 240.07,116.21 L 259.68,166.52 A 78 78 0 0 0 219.40,202.08 Z" fill="#d97706"/>
+<path d="M 240.07,116.21 A 132 132 0 0 1 265.20,109.18 L 274.53,162.37 A 78 78 0 0 0 259.68,166.52 Z" fill="#7c3aed"/>
+<path d="M 265.20,109.18 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 274.53,162.37 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">GILD</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$28.9B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="394.97" y1="326.39" x2="410.97" y2="326.39" stroke="#2563eb" stroke-width="1.4"/>
+<text x="414.97" y="324.39" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">HIV</text>
+<text x="414.97" y="338.39" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$20.8B  (71.8%)</text>
+<line x1="151.48" y1="219.05" x2="135.48" y2="219.05" stroke="#15803d" stroke-width="1.4"/>
+<text x="131.48" y="217.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Liver Disease</text>
+<text x="131.48" y="231.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.2B  (11.1%)</text>
+<line x1="196.68" y1="135.74" x2="180.68" y2="135.74" stroke="#d97706" stroke-width="1.4"/>
+<text x="176.68" y="133.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Oncology</text>
+<text x="176.68" y="147.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.2B  (11.2%)</text>
+<line x1="250.85" y1="106.30" x2="234.85" y2="106.30" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="230.85" y="104.30" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Veklury</text>
+<text x="230.85" y="118.30" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$911.0M  (3.2%)</text>
+<line x1="276.04" y1="101.72" x2="260.04" y2="101.72" stroke="#dc2626" stroke-width="1.4"/>
+<text x="256.04" y="99.72" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other</text>
+<text x="256.04" y="113.72" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$799.0M  (2.8%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Gilead FY2025 earnings 8-K (Ex 99.1, 2026-02-10), Product Sales Summary</text>
+</svg>

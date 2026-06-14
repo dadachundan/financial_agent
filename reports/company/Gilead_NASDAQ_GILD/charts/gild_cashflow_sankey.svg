@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Gilead 现金流 / Cash Flow — FY2025 (USD m)</text>
+<path d="M 204.00,77.99 C 306.00,77.99 306.00,92.00 408.00,92.00 L 408.00,307.70 C 306.00,307.70 306.00,293.70 204.00,293.70 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,78.00 C 746.00,78.00 746.00,145.65 848.00,145.65 L 848.00,157.81 C 746.00,157.81 746.00,90.16 644.00,90.16 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,90.16 C 746.00,90.16 746.00,171.81 848.00,171.81 L 848.00,263.13 C 746.00,263.13 746.00,181.48 644.00,181.48 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,92.00 C 526.00,92.00 526.00,78.00 628.00,78.00 L 628.00,181.48 C 526.00,181.48 526.00,195.48 424.00,195.48 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,195.48 C 526.00,195.48 526.00,195.48 628.00,195.48 L 628.00,362.69 C 526.00,362.69 526.00,362.69 424.00,362.69 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,362.69 C 526.00,362.69 526.00,376.69 628.00,376.69 L 628.00,540.00 C 526.00,540.00 526.00,526.00 424.00,526.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,195.48 C 746.00,195.48 746.00,277.13 848.00,277.13 L 848.00,363.56 C 746.00,363.56 746.00,281.90 644.00,281.90 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,281.90 C 746.00,281.90 746.00,377.56 848.00,377.56 L 848.00,399.15 C 746.00,399.15 746.00,303.49 644.00,303.49 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,303.49 C 746.00,303.49 746.00,413.15 848.00,413.15 L 848.00,472.35 C 746.00,472.35 746.00,362.69 644.00,362.69 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,307.70 C 306.00,307.70 306.00,307.70 408.00,307.70 L 408.00,524.01 C 306.00,524.01 306.00,524.01 204.00,524.01 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,538.01 C 306.00,538.01 306.00,524.01 408.00,524.01 L 408.00,526.01 C 306.00,526.01 306.00,540.01 204.00,540.01 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="77.99" width="16" height="215.70" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="307.70" width="16" height="216.31" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="538.01" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="92.00" width="16" height="434.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="78.00" width="16" height="103.48" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="195.48" width="16" height="167.21" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="376.69" width="16" height="163.31" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="145.65" width="16" height="12.16" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="171.81" width="16" height="91.33" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="277.13" width="16" height="86.42" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="377.56" width="16" height="21.59" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="413.15" width="16" height="59.20" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="182.85" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="195.85" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$10.0B  (49.7%)</text>
+<rect x="207.00" y="287.69" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="299.69" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="312.69" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$10.0B  (49.8%)</text>
+<rect x="207.00" y="518.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$92.0M  (0.46%)</text>
+<rect x="427.00" y="74.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$20.1B  (100.0%)</text>
+<rect x="647.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.8B  (23.8%)</text>
+<rect x="647.00" y="177.48" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="189.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="202.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$7.7B  (38.5%)</text>
+<text x="653.00" y="455.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="468.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$7.6B  (37.6%)</text>
+<text x="873.00" y="148.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Capex (PP&amp;E)</text>
+<text x="873.00" y="161.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$563.0M  (2.8%)</text>
+<text x="873.00" y="214.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Acquisitions &amp; Investments</text>
+<text x="873.00" y="227.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.2B  (21.0%)</text>
+<text x="873.00" y="317.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Dividends Paid</text>
+<text x="873.00" y="330.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.0B  (19.9%)</text>
+<text x="873.00" y="385.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Buybacks</text>
+<text x="873.00" y="398.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.0B  (5.0%)</text>
+<text x="873.00" y="439.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Debt &amp; Other</text>
+<text x="873.00" y="452.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.7B  (13.6%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = $9.5B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Gilead FY2025 10-K + FY2025 earnings 8-K, Statements of Cash Flows</text>
+</svg>

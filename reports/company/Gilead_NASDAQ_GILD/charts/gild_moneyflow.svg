@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1079" width="1180" height="1079" role="img" aria-label="Gilead 的资金流 / How the dollars flow through Gilead — FY2025" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1079" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">SPECIALTY PHARMA MONEY FLOW · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">Gilead 的资金流 / How the dollars flow through Gilead — FY2025</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">美国支付方与三大批发商把钱付进来，HIV 占 ~72% 产品销售；现金再流向研发、合作伙伴里程碑款与大额并购，最后以股息+回购回流股东。</text>
+<ellipse cx="1031.00" cy="429.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="667.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="667.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 / Who pays in</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">吉利德与产品线 / Gilead &amp; its franchises</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱流向哪里 / Where the money goes</text>
+<path d="M 256.00 374.50 C 369.50 374.50, 369.50 268.43, 483.00 268.43" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 497.50 C 369.50 497.50, 369.50 285.00, 483.00 285.00" fill="none" stroke="url(#mfgold)" stroke-width="9.14" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 268.00 C 590.00 268.00, 590.00 411.00, 483.00 411.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 282.50 C 590.00 282.50, 590.00 512.50, 483.00 512.50" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 287.50 C 590.00 287.50, 590.00 614.00, 483.00 614.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 414.43 C 810.50 414.43, 810.50 539.50, 924.00 539.50" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 407.57 C 810.50 407.57, 810.50 317.00, 924.00 317.00" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 614.00 C 810.50 614.00, 810.50 429.50, 924.00 429.50" fill="none" stroke="url(#mfgold)" stroke-width="9.14" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 512.50 C 810.50 512.50, 810.50 322.93, 924.00 322.93" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="315.46" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$20.8B</text>
+<text x="369.50" y="385.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$8.1B</text>
+<text x="810.50" y="470.96" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$5.0B</text>
+<text x="810.50" y="515.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Arcellx $7.8B</text>
+<rect x="42.00" y="314.50" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="314.50" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="347.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">美国支付方 US PAYERS</text>
+<text x="60.00" y="368.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Medicare/Medicaid/商保/340B/Ryan White</text>
+<text x="60.00" y="385.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">经三大批发商分销 $20.8B (72%)</text>
+<rect x="42.00" y="450.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="450.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="483.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">海外市场 EX-US</text>
+<text x="60.00" y="504.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">欧洲 $4.6B + 其他 $3.5B</text>
+<text x="60.00" y="521.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">自有销售队伍 + 分销商</text>
+<rect x="483.00" y="198.00" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="198.00" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">GILEAD</text>
+<text x="501.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">产品销售 $28.9B</text>
+<text x="501.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">产品毛利率 78.4%</text>
+<rect x="483.00" y="364.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="364.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="397.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">HIV $20.8B</text>
+<text x="501.00" y="418.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Biktarvy $14.3B</text>
+<text x="501.00" y="435.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Descovy + Yeztugo PrEP</text>
+<rect x="483.00" y="474.00" width="214" height="77.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="474.00" width="3" height="77.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="507.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Liver $3.2B</text>
+<text x="501.00" y="528.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">Epclusa/Vemlidy/Livdelzi</text>
+<rect x="483.00" y="567.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="567.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="600.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Oncology $3.2B</text>
+<text x="501.00" y="621.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Yescarta/Tecartus CAR-T</text>
+<text x="501.00" y="638.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Trodelvy ADC</text>
+<rect x="924.00" y="272.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="272.50" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="305.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">R&amp;D $5.8B</text>
+<text x="942.00" y="326.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">~50+ 临床项目</text>
+<text x="942.00" y="343.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">病毒学/肿瘤/炎症</text>
+<rect x="924.00" y="382.50" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="382.50" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="415.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">并购 &amp; 里程碑 M&amp;A</text>
+<text x="942.00" y="436.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Arcellx $7.8B (anito-cel)</text>
+<text x="942.00" y="453.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Tubulis/Ouro; Merck islatravir 合作</text>
+<rect x="924.00" y="492.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="492.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="525.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">股东回报 SHAREHOLDERS</text>
+<text x="942.00" y="546.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">股息 $4.0B</text>
+<text x="942.00" y="563.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">回购 $1.0B</text>
+<rect x="42.00" y="687.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="689.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="689.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="689.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="689.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="682.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="747.00" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="886.20" y="682.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="905.20" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="979.60" y="682.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="998.60" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="42.00" y="702.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="61.00" y="711.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="185.80" y="702.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="204.80" y="711.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="286.40" y="702.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="305.40" y="711.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="379.80" y="702.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="398.80" y="711.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<line x1="42" y1="727.00" x2="1138" y2="727.00" stroke="#222a3a"/>
+<text x="42.00" y="743.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — FY2025</text>
+<rect x="42.00" y="763.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="763.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="787.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">现金引擎 · HIV</text>
+<text x="58.00" y="805.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Biktarvy 是发动机</text>
+<text x="58.00" y="829.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">HIV</tspan><tspan fill="#9aa3b8" font-weight="400"> 贡献</tspan><tspan fill="#f4d58a" font-weight="700"> $20.8B</tspan><tspan fill="#9aa3b8" font-weight="400"> （~72%</tspan><tspan fill="#9aa3b8" font-weight="400"> 产品销售），其中</tspan><tspan fill="#9aa3b8" font-weight="400"> Biktarvy</tspan><tspan fill="#9aa3b8" font-weight="400"> 一款就</tspan><tspan fill="#f4d58a" font-weight="700"> $14.3B</tspan><tspan fill="#9aa3b8" font-weight="400"> ，美国</tspan></text>
+<text x="58.00" y="845.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">HIV</tspan><tspan fill="#9aa3b8" font-weight="400"> 治疗份额</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;52%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；这是支撑股息与并购的现金底座。</tspan></text>
+<rect x="412.00" y="763.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="763.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="787.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">通道 · 美国分销</text>
+<text x="428.00" y="805.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱经三大批发商进来</text>
+<text x="428.00" y="829.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">美国约</tspan><tspan fill="#f4d58a" font-weight="700"> 90%</tspan><tspan fill="#9aa3b8" font-weight="400"> 总产品销售经</tspan><tspan fill="#f4d58a" font-weight="700"> Cardinal</tspan><tspan fill="#f4d58a" font-weight="700"> Health</tspan><tspan fill="#f4d58a" font-weight="700"> 29%</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#f4d58a" font-weight="700"> McKesson</tspan><tspan fill="#f4d58a" font-weight="700"> 24%</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan></text>
+<text x="428.00" y="845.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Cencora</tspan><tspan fill="#f4d58a" font-weight="700"> 21%</tspan><tspan fill="#9aa3b8" font-weight="400"> 流转——是物流通道集中度，不是终端需求集中度。</tspan></text>
+<rect x="782.00" y="763.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="763.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="787.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">再投资 · 并购</text>
+<text x="798.00" y="805.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">现金流向管线补强</text>
+<text x="798.00" y="829.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 年完成</tspan><tspan fill="#f4d58a" font-weight="700"> Arcellx</tspan><tspan fill="#f4d58a" font-weight="700"> $7.8B</tspan><tspan fill="#9aa3b8" font-weight="400"> 收购（anito-cel</tspan><tspan fill="#9aa3b8" font-weight="400"> BCMA</tspan><tspan fill="#9aa3b8" font-weight="400"> CAR-T），叠加</tspan></text>
+<text x="798.00" y="845.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Tubulis</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#f4d58a" font-weight="700"> Ouro</tspan><tspan fill="#9aa3b8" font-weight="400"> 交易，触发</tspan><tspan fill="#9aa3b8" font-weight="400"> ~</tspan><tspan fill="#f4d58a" font-weight="700"> $11.5B</tspan><tspan fill="#9aa3b8" font-weight="400"> 已购入</tspan><tspan fill="#9aa3b8" font-weight="400"> IPR&amp;D</tspan><tspan fill="#9aa3b8" font-weight="400"> 费用，把</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2026</tspan></text>
+<text x="798.00" y="861.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> EPS</tspan><tspan fill="#9aa3b8" font-weight="400"> 指引压成亏损。</tspan></text>
+<rect x="42.00" y="909.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="909.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="933.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">回流 · 股东</text>
+<text x="58.00" y="951.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">股息 + 回购回流股东</text>
+<text x="58.00" y="975.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 派息</tspan><tspan fill="#f4d58a" font-weight="700"> $4.0B</tspan><tspan fill="#9aa3b8" font-weight="400"> （$3.16/股，连续八年上调）+</tspan><tspan fill="#9aa3b8" font-weight="400"> 回购</tspan><tspan fill="#f4d58a" font-weight="700"> $1.0B</tspan><tspan fill="#9aa3b8" font-weight="400"> ；强</tspan><tspan fill="#9aa3b8" font-weight="400"> FCF</tspan></text>
+<text x="58.00" y="991.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">覆盖，是防御型配置的核心吸引力。</tspan></text>
+<text x="590.00" y="1061.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Gilead FY2025 10-K + FY2025/Q1-2026 earnings 8-Ks (Product Sales Summary, Note 2 Concentrations, Cash Flow); Arcellx/Tubulis deal terms per Q1-2026 release</text>
+</svg>
