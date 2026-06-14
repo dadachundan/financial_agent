@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Linde plc — sales by end-market (FY2024)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 417.66,214.47 L 364.62,224.58 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 417.66,214.47 A 132 132 0 0 1 336.59,361.93 L 316.71,311.72 A 78 78 0 0 0 364.62,224.58 Z" fill="#15803d"/>
+<path d="M 336.59,361.93 A 132 132 0 0 1 203.86,340.91 L 238.28,299.30 A 78 78 0 0 0 316.71,311.72 Z" fill="#d97706"/>
+<path d="M 203.86,340.91 A 132 132 0 0 1 156.26,247.49 L 210.15,244.10 A 78 78 0 0 0 238.28,299.30 Z" fill="#7c3aed"/>
+<path d="M 156.26,247.49 A 132 132 0 0 1 172.33,175.61 L 219.65,201.62 A 78 78 0 0 0 210.15,244.10 Z" fill="#dc2626"/>
+<path d="M 172.33,175.61 A 132 132 0 0 1 224.41,123.53 L 250.42,170.85 A 78 78 0 0 0 219.65,201.62 Z" fill="#0891b2"/>
+<path d="M 224.41,123.53 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 250.42,170.85 Z" fill="#db2777"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">END MKT</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$100</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="375.96" y1="132.87" x2="391.96" y2="132.87" stroke="#2563eb" stroke-width="1.4"/>
+<text x="395.96" y="130.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Chemicals &amp; Energy</text>
+<text x="395.96" y="144.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$22  (22.0%)</text>
+<line x1="408.93" y1="305.68" x2="424.93" y2="305.68" stroke="#15803d" stroke-width="1.4"/>
+<text x="428.93" y="303.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Manufacturing</text>
+<text x="428.93" y="317.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$22  (22.0%)</text>
+<line x1="266.41" y1="375.50" x2="250.41" y2="375.50" stroke="#d97706" stroke-width="1.4"/>
+<text x="246.41" y="373.50" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Healthcare</text>
+<text x="246.41" y="387.50" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$17  (17.0%)</text>
+<line x1="165.04" y1="301.85" x2="149.04" y2="301.85" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="145.04" y="299.85" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Food &amp; Beverage</text>
+<text x="145.04" y="313.85" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13  (13.0%)</text>
+<line x1="153.32" y1="209.10" x2="137.32" y2="209.10" stroke="#dc2626" stroke-width="1.4"/>
+<text x="133.32" y="207.10" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Electronics</text>
+<text x="133.32" y="221.10" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$9  (9.0%)</text>
+<line x1="190.42" y1="141.62" x2="174.42" y2="141.62" stroke="#0891b2" stroke-width="1.4"/>
+<text x="170.42" y="139.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other</text>
+<text x="170.42" y="153.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$9  (9.0%)</text>
+<line x1="253.68" y1="105.54" x2="237.68" y2="105.54" stroke="#db2777" stroke-width="1.4"/>
+<text x="233.68" y="103.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Metals &amp; Mining</text>
+<text x="233.68" y="117.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$8  (8.0%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Linde 2024 Annual Report to Shareholders — Financial Highlights, End Markets pie (FY2024)</text>
+</svg>

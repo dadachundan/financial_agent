@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Linde plc — FY2025 sales by major country (US$ mn)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 390.53,322.34 L 348.58,288.33 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 390.53,322.34 A 132 132 0 0 1 340.47,360.33 L 319.00,310.77 A 78 78 0 0 0 348.58,288.33 Z" fill="#15803d"/>
+<path d="M 340.47,360.33 A 132 132 0 0 1 282.61,371.09 L 284.81,317.13 A 78 78 0 0 0 319.00,310.77 Z" fill="#d97706"/>
+<path d="M 282.61,371.09 A 132 132 0 0 1 246.47,364.50 L 263.46,313.24 A 78 78 0 0 0 284.81,317.13 Z" fill="#7c3aed"/>
+<path d="M 246.47,364.50 A 132 132 0 0 1 215.97,349.82 L 245.44,304.56 A 78 78 0 0 0 263.46,313.24 Z" fill="#dc2626"/>
+<path d="M 215.97,349.82 A 132 132 0 0 1 191.30,329.05 L 230.86,292.29 A 78 78 0 0 0 245.44,304.56 Z" fill="#0891b2"/>
+<path d="M 191.30,329.05 A 132 132 0 0 1 172.84,303.72 L 219.95,277.33 A 78 78 0 0 0 230.86,292.29 Z" fill="#db2777"/>
+<path d="M 172.84,303.72 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 219.95,277.33 Z" fill="#65a30d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">LIN</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$34.0B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="412.58" y1="179.83" x2="428.58" y2="179.83" stroke="#2563eb" stroke-width="1.4"/>
+<text x="432.58" y="177.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States</text>
+<text x="432.58" y="191.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$12.2B  (35.8%)</text>
+<line x1="371.42" y1="349.13" x2="387.42" y2="349.13" stroke="#15803d" stroke-width="1.4"/>
+<text x="391.42" y="347.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">China</text>
+<text x="391.42" y="361.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.6B  (7.7%)</text>
+<line x1="313.24" y1="374.87" x2="329.24" y2="374.87" stroke="#d97706" stroke-width="1.4"/>
+<text x="333.24" y="372.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Germany</text>
+<text x="333.24" y="386.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.4B  (7.2%)</text>
+<line x1="263.23" y1="374.96" x2="247.23" y2="374.96" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="243.23" y="372.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United Kingdom</text>
+<text x="243.23" y="386.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.5B  (4.4%)</text>
+<line x1="228.15" y1="363.55" x2="212.15" y2="363.55" stroke="#dc2626" stroke-width="1.4"/>
+<text x="208.15" y="361.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Mexico</text>
+<text x="208.15" y="375.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.4B  (4.1%)</text>
+<line x1="199.13" y1="344.78" x2="183.13" y2="344.78" stroke="#0891b2" stroke-width="1.4"/>
+<text x="179.13" y="342.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Brazil</text>
+<text x="179.13" y="356.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (3.9%)</text>
+<line x1="176.47" y1="320.47" x2="160.47" y2="320.47" stroke="#db2777" stroke-width="1.4"/>
+<text x="156.47" y="318.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Australia</text>
+<text x="156.47" y="332.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (3.8%)</text>
+<line x1="168.94" y1="169.43" x2="152.94" y2="169.43" stroke="#65a30d" stroke-width="1.4"/>
+<text x="148.94" y="167.43" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other non-US</text>
+<text x="148.94" y="181.43" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.3B  (33.1%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Linde 2025 10-K — Geographic Information (FY2025 sales by major country)</text>
+</svg>

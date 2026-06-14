@@ -1,10 +1,31 @@
 # Linde plc (NASDAQ: LIN) — Company Research
 
-**Report date:** 2026-05-26 *(as of)*
-**Listing:** NASDAQ Global Select (ticker `LIN`), constituent of the S&P 500 and the German DAX 40 dual-listed industrial-gas leader
+**Report date:** 2026-06-14 *(as of; price data as of 2026-06-12 close)*
+**Listing:** NASDAQ Global Select (ticker `LIN`), constituent of the S&P 500; trading consolidated on NASDAQ after the FY2024 Frankfurt delisting
 **Domicile:** Public limited company organised in Ireland; principal offices in Woking (UK) and Danbury, CT (US) ([Linde 2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm))
-**Fiscal year:** Calendar year — most recent 10-K covers the year ended **December 31, 2025**
+**Fiscal year:** Calendar year — most recent 10-K covers the year ended **December 31, 2025**; latest quarter is **Q1 FY2026 (ended 2026-03-31)**
 **Auditor:** PricewaterhouseCoopers (engaged since 2019) ([2026 DEF 14A, Audit Matters](https://www.sec.gov/Archives/edgar/data/1707925/000119312526192209/lin-20260429.htm))
+
+---
+
+### Investment Summary — *Analyst view (not filing data)*
+
+| Item | Value |
+|---|---|
+| **Rating** | **Hold / Neutral** (high-quality, fully valued) |
+| **12-month Price Target** | **USD 545** (base; ~+4% upside) |
+| **Current price (2026-06-12 close)** | **USD 523.57** |
+| **Implied upside / downside** | Base +4% ｜ Bull +18% (USD 620) ｜ Bear −16% (USD 440) |
+| **Valuation method** | FY2027E adjusted EPS ~USD 19.7 × target P/E ~28× (a fair multi-year multiple for a quality compounder) |
+| **Market cap** | **~USD 242 bn** |
+| **52-week range** | USD 387.78 – 525.82 (price near top of range) |
+| **TTM P/E ｜ Forward P/E** | 34.7× ｜ 26.6× |
+
+**Thesis pillars (*Analyst view*):**
+1. **Duopoly moat + best-in-class cash returns.** Co-leader of global industrial gases with Air Liquide; FY25 after-tax ROC ~25.9% and adjusted operating margin 29.8% lead the Western majors ([Linde 2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)).
+2. **Structural visibility.** ~USD 7.1 bn contractual sale-of-gas backlog (~USD 10 bn incl. letters of intent) converts into 10–20-year on-site contracts across 2026–2030 ([Q1-2026 8-K Ex.99.1](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm)).
+3. **Electronics + clean-hydrogen dual growth engines.** New fab on-site nitrogen + electronic specialty gas (Samsung Taylor TX, TSMC Arizona) plus blue-H₂ / carbon-capture wins (ExxonMobil Baytown).
+4. **Valuation is the binding constraint.** 26.6× forward / 34.7× TTM is a fair quality multiple for a single-digit EPS grower but caps upside — hence **Hold**, not Buy.
 
 > **Update — FY2026 guidance raised (2026-05-01):** Management raised the low end of full-year FY26 adjusted-EPS guidance to **USD 17.60 – 17.90** (from the February 5, 2026 initial range of **USD 17.40 – 17.90**), tightening implied growth from "6–9% YoY" to **"7–9% YoY"** after a Q1 print of $4.33 (up 10% YoY) and 30% adjusted operating margin. Capex range reaffirmed at USD 5.0–5.5 bn against a **USD 7.1 bn contractual sale-of-gas project backlog**. Drivers cited by CEO Sanjiv Lamba: "resiliency of our operating model, discipline of capital allocation and perseverance of management actions."
 > Source: [Linde Q1-2026 Earnings Press Release, 2026-05-01 (8-K Ex.99.1)](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm); compare against [Q4-2025 Earnings Press Release, 2026-02-05 (8-K Ex.99.1)](https://www.sec.gov/Archives/edgar/data/1707925/000165495426000913/lin_ex991.htm).
@@ -12,6 +33,10 @@
 ---
 
 ## Table of Contents
+
+- Investment Summary — decision layer
+- 1B. GF Score fundamental scorecard
+- 1C. Valuation & Price Target
 
 1. Company Overview
 2. Company History
@@ -36,19 +61,412 @@ Linde plc is **the largest industrial-gas company in the world** by revenue, by 
 
 **Scale indicators.** FY25 revenue $33,986 mn (+3% YoY); adjusted operating profit $10,137 mn at 29.8% margin (+30 bps YoY); adjusted EPS $16.46 (+6% YoY); operating cash flow $10,350 mn (+10%); capex $5,261 mn; net buybacks $4,578 mn; dividends paid $2,811 mn (≈22% / 17% / 30% / 8% of operating cash flow respectively, totalling $7.4 bn returned to shareholders) ([Linde 2025 10-K, MD&A — Executive Summary](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)). Headcount stood at **65,177 employees** at year-end ([Linde 2025 10-K, Item 1 — Employees](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)). Adjusted after-tax return on capital was **25.9% in FY24**, the most recent figure printed in the 2024 ARS ([Linde 2024 Annual Report to Shareholders — Financial Highlights](https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2024-annual-report-to-shareholders.pdf)); FY25 ROC trended higher per the Q1-2026 release citing 24% ROC for Q1 ([Q1-2026 Earnings Press Release, 2026-05-01](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm)).
 
-![Linde 2024 Annual Report — Financial Highlights summary page (Reported and Adjusted figures, end-market / segment / distribution-mode pies)](../../charts/linde_2024_ars_financial_highlights.png)
-*Source: [Linde 2024 Annual Report to Shareholders — Financial Highlights page](https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2024-annual-report-to-shareholders.pdf). This is the primary-source page Linde publishes summarising sales, operating profit, EPS, cash flow, capex, after-tax return on capital, and the three pies (End Markets / Business Segments / Distribution Mode). Note Linde does not publish an equivalent 2025 ARS Financial Highlights page (only the 10-K + 8-K press releases); FY25 figures are derived from the 10-K text and reproduced in the FY21–FY25 trend chart that follows.*
+**FY2025 income-statement Sankey.** The chart traces FY25 sales of $33,986 mn from the four segment sources on the left down through COGS, operating expenses, tax and net income — making visible the 48.8% gross margin, 26.3% reported operating margin, and 20.3% net margin.
 
-![Linde plc — revenue and adjusted operating margin, FY2021–FY2025](../../charts/linde_revenue_margin_trend.png)
-*Source: [Linde 2025 10-K MD&A Executive Summary](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm) and prior-year 10-Ks (FY21–FY24).*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Linde plc — FY2025 income-statement Sankey (US$ mn)</text>
+<path d="M 204.00,64.00 C 258.00,64.00 258.00,92.00 312.00,92.00 L 312.00,268.31 C 258.00,268.31 258.00,240.31 204.00,240.31 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,85.00 C 506.00,85.00 506.00,177.80 560.00,177.80 L 560.00,281.24 C 506.00,281.24 506.00,188.44 452.00,188.44 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,188.44 C 506.00,188.44 506.00,295.24 560.00,295.24 L 560.00,384.20 C 506.00,384.20 506.00,277.41 452.00,277.41 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,92.00 C 382.00,92.00 382.00,85.00 436.00,85.00 L 436.00,277.41 C 382.00,277.41 382.00,284.41 328.00,284.41 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,284.41 C 382.00,284.41 382.00,291.41 436.00,291.41 L 436.00,493.00 C 382.00,493.00 382.00,486.00 328.00,486.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,171.80 C 754.00,171.80 754.00,222.49 808.00,222.49 L 808.00,302.46 C 754.00,302.46 754.00,251.77 700.00,251.77 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,251.77 C 754.00,251.77 754.00,316.46 808.00,316.46 L 808.00,339.51 C 754.00,339.51 754.00,274.83 700.00,274.83 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,274.83 C 754.00,274.83 754.00,353.51 808.00,353.51 L 808.00,355.51 C 754.00,355.51 754.00,276.83 700.00,276.83 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,177.80 C 630.00,177.80 630.00,171.80 684.00,171.80 L 684.00,275.24 C 630.00,275.24 630.00,281.24 576.00,281.24 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,254.31 C 258.00,254.31 258.00,268.31 312.00,268.31 L 312.00,367.42 C 258.00,367.42 258.00,353.42 204.00,353.42 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,295.24 C 630.00,295.24 630.00,288.94 684.00,288.94 L 684.00,328.74 C 630.00,328.74 630.00,335.04 576.00,335.04 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,335.04 C 630.00,335.04 630.00,342.74 684.00,342.74 L 684.00,344.74 C 630.00,344.74 630.00,337.04 576.00,337.04 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,337.04 C 630.00,337.04 630.00,358.74 684.00,358.74 L 684.00,406.20 C 630.00,406.20 630.00,384.50 576.00,384.50 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,367.42 C 258.00,367.42 258.00,367.42 312.00,367.42 L 312.00,444.64 C 258.00,444.64 258.00,444.64 204.00,444.64 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,398.20 C 630.00,398.20 630.00,275.24 684.00,275.24 L 684.00,277.24 C 630.00,277.24 630.00,400.20 576.00,400.20 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,458.64 C 258.00,458.64 258.00,444.64 312.00,444.64 L 312.00,470.72 C 258.00,470.72 258.00,484.72 204.00,484.72 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,498.72 C 258.00,498.72 258.00,470.72 312.00,470.72 L 312.00,486.00 C 258.00,486.00 258.00,514.00 204.00,514.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="176.31" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="254.31" width="16" height="99.11" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="367.42" width="16" height="77.22" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="458.64" width="16" height="26.08" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="498.72" width="16" height="15.28" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="92.00" width="16" height="394.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="85.00" width="16" height="192.41" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="291.41" width="16" height="201.59" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="177.80" width="16" height="103.44" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="295.24" width="16" height="88.96" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="398.20" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="171.80" width="16" height="103.14" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="288.94" width="16" height="39.80" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="342.74" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="358.74" width="16" height="47.46" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="222.49" width="16" height="79.97" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="316.46" width="16" height="23.06" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="353.51" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="152.15" x2="182.00" y2="132.79" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="135.79" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Americas</text>
+<text x="179.00" y="148.79" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$15.2B  (44.7%)</text>
+<line x1="188.00" y1="303.86" x2="182.00" y2="284.50" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="287.50" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">EMEA</text>
+<text x="179.00" y="300.50" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.5B  (25.2%)</text>
+<line x1="188.00" y1="406.03" x2="182.00" y2="386.67" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="389.67" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">APAC</text>
+<text x="179.00" y="402.67" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.7B  (19.6%)</text>
+<line x1="188.00" y1="471.68" x2="182.00" y2="452.32" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="455.32" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Engineering</text>
+<text x="179.00" y="468.32" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.2B  (6.6%)</text>
+<line x1="188.00" y1="506.36" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (3.9%)</text>
+<rect x="331.00" y="74.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$34.0B  (100.0%)</text>
+<rect x="455.00" y="67.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$16.6B  (48.8%)</text>
+<rect x="455.00" y="273.41" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="285.41" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="298.41" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$17.4B  (51.2%)</text>
+<rect x="579.00" y="159.80" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="171.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="184.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.9B  (26.3%)</text>
+<rect x="579.00" y="277.24" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="289.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="302.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$7.7B  (22.6%)</text>
+<text x="551.00" y="396.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="409.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$26.0M  (0.08%)</text>
+<rect x="703.00" y="153.80" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="165.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="178.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.9B  (26.2%)</text>
+<rect x="703.00" y="270.94" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="282.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="295.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.4B  (10.1%)</text>
+<rect x="703.00" y="324.74" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="336.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="349.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$147.0M  (0.43%)</text>
+<rect x="703.00" y="349.74" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="361.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="374.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.1B  (12.0%)</text>
+<text x="833.00" y="259.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="272.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.9B  (20.3%)</text>
+<text x="833.00" y="324.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="337.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.0B  (5.9%)</text>
+<text x="833.00" y="351.51" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Minority Interest</text>
+<text x="833.00" y="364.51" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$160.0M  (0.47%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Linde 2025 10-K (FY2025) — Consolidated Statements of Income</text>
+</svg>
 
-![Linde plc — FY2025 sales by reportable segment](../../charts/linde_segment_mix.png)
+*Source: [Linde 2025 10-K — Consolidated Statements of Income](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm). Every figure is taken from the 10-K income statement; the Sankey only lays out the numbers.*
+
+**Sales by segment, FY2021–FY2025.** Over five years total sales rose from $30,793 mn to $33,986 mn (~2% annualised), Americas expanding steadily while Engineering and Other oscillate with the delivery cadence of large post-merger EPC orders.
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Linde plc — sales by reportable segment, FY2021-FY2025 (US$ mn)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Americas</text>
+<rect x="102.80" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="118.80" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">EMEA</text>
+<rect x="159.20" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="175.20" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">APAC</text>
+<rect x="215.60" y="44" width="11" height="11" rx="2" fill="#7c3aed"/>
+<text x="231.60" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Engineering</text>
+<rect x="318.20" y="44" width="11" height="11" rx="2" fill="#dc2626"/>
+<text x="334.20" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Other</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$7.3B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$14.7B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$22.0B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$29.4B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$36.7B</text>
+<rect x="102.09" y="301.87" width="88.62" height="110.13" fill="#2563eb"/>
+<rect x="102.09" y="232.32" width="88.62" height="69.55" fill="#15803d"/>
+<rect x="102.09" y="176.51" width="88.62" height="55.81" fill="#d97706"/>
+<rect x="102.09" y="150.42" width="88.62" height="26.09" fill="#7c3aed"/>
+<rect x="102.09" y="131.80" width="88.62" height="18.63" fill="#dc2626"/>
+<text x="146.40" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2021</text>
+<rect x="254.89" y="285.75" width="88.62" height="126.25" fill="#2563eb"/>
+<rect x="254.89" y="208.92" width="88.62" height="76.83" fill="#15803d"/>
+<rect x="254.89" y="149.96" width="88.62" height="58.97" fill="#d97706"/>
+<rect x="254.89" y="124.83" width="88.62" height="25.13" fill="#7c3aed"/>
+<rect x="254.89" y="108.40" width="88.62" height="16.42" fill="#dc2626"/>
+<text x="299.20" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2022</text>
+<rect x="407.69" y="281.84" width="88.62" height="130.16" fill="#2563eb"/>
+<rect x="407.69" y="204.11" width="88.62" height="77.73" fill="#15803d"/>
+<rect x="407.69" y="144.43" width="88.62" height="59.68" fill="#d97706"/>
+<rect x="407.69" y="124.77" width="88.62" height="19.66" fill="#7c3aed"/>
+<rect x="407.69" y="113.04" width="88.62" height="11.73" fill="#dc2626"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2023</text>
+<rect x="560.49" y="280.58" width="88.62" height="131.42" fill="#2563eb"/>
+<rect x="560.49" y="204.58" width="88.62" height="76.00" fill="#15803d"/>
+<rect x="560.49" y="144.23" width="88.62" height="60.35" fill="#d97706"/>
+<rect x="560.49" y="123.11" width="88.62" height="21.13" fill="#7c3aed"/>
+<rect x="560.49" y="111.67" width="88.62" height="11.44" fill="#dc2626"/>
+<text x="604.80" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2024</text>
+<rect x="713.29" y="273.61" width="88.62" height="138.39" fill="#2563eb"/>
+<rect x="713.29" y="195.82" width="88.62" height="77.79" fill="#15803d"/>
+<rect x="713.29" y="135.21" width="88.62" height="60.61" fill="#d97706"/>
+<rect x="713.29" y="114.73" width="88.62" height="20.47" fill="#7c3aed"/>
+<rect x="713.29" y="102.74" width="88.62" height="11.99" fill="#dc2626"/>
+<text x="757.60" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2025</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Linde 10-K filings FY2021-FY2025 — Note 18 / MD&amp;A segment sales</text>
+</svg>
+
+*Source: [Linde 10-K filings FY2021–FY2025 — Note 18 / MD&A segment sales](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm) (FY25) and the prior four 10-Ks.*
+
+**FY2025 sales by reportable segment.**
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Linde plc — FY2025 sales by reportable segment (US$ mn)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 330.77,364.08 L 313.28,312.99 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 330.77,364.08 A 132 132 0 0 1 162.71,280.76 L 213.97,263.76 A 78 78 0 0 0 313.28,312.99 Z" fill="#15803d"/>
+<path d="M 162.71,280.76 A 132 132 0 0 1 207.11,134.89 L 240.20,177.56 A 78 78 0 0 0 213.97,263.76 Z" fill="#d97706"/>
+<path d="M 207.11,134.89 A 132 132 0 0 1 256.15,111.10 L 269.18,163.50 A 78 78 0 0 0 240.20,177.56 Z" fill="#7c3aed"/>
+<path d="M 256.15,111.10 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 269.18,163.50 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">LIN</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$34.0B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="424.13" y1="216.53" x2="440.13" y2="216.53" stroke="#2563eb" stroke-width="1.4"/>
+<text x="444.13" y="214.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Americas</text>
+<text x="444.13" y="228.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$15.2B  (44.7%)</text>
+<line x1="226.70" y1="362.84" x2="210.70" y2="362.84" stroke="#15803d" stroke-width="1.4"/>
+<text x="206.70" y="360.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">EMEA</text>
+<text x="206.70" y="374.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.5B  (25.2%)</text>
+<line x1="155.98" y1="199.02" x2="139.98" y2="199.02" stroke="#d97706" stroke-width="1.4"/>
+<text x="135.98" y="197.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">APAC</text>
+<text x="135.98" y="211.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.7B  (19.6%)</text>
+<line x1="227.77" y1="115.04" x2="211.77" y2="115.04" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="207.77" y="113.04" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Engineering</text>
+<text x="207.77" y="127.04" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.2B  (6.6%)</text>
+<line x1="271.23" y1="102.22" x2="255.23" y2="102.22" stroke="#dc2626" stroke-width="1.4"/>
+<text x="251.23" y="100.22" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other</text>
+<text x="251.23" y="114.22" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (3.9%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Linde 2025 10-K — Note 18 Segment Information (FY2025 sales by segment)</text>
+</svg>
+
 *Source: [Linde 2025 10-K Note 18 Segment Information](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm). External sales by segment.*
 
-**Valuation snapshot (as of 2026-05-25).** Spot price ~**USD 517.58**, market cap **USD ~239 bn**, **TTM P/E 34.4×**, **TTM P/S 6.9×**, **EV/EBITDA 19.4×**, dividend yield ~**1.24%**, beta ~**0.74**, shares outstanding ~462 mn ([Yahoo Finance — LIN Key Statistics](https://finance.yahoo.com/quote/LIN/key-statistics/)). The three-year P/E band has run ~28×–37× on TTM earnings, so today's 34.4× sits in the **upper third** of its own range and at a modest premium to direct peers (APD 30.5×, Air Liquide 30.3×, Nippon Sanso 22.0×; Shin-Etsu Chemical at 27.9× sits in the same range but with a very different mix) ([Yahoo Finance — APD](https://finance.yahoo.com/quote/APD/key-statistics/), [Yahoo Finance — AI.PA](https://finance.yahoo.com/quote/AI.PA/key-statistics/), [Yahoo Finance — 4091.T](https://finance.yahoo.com/quote/4091.T/key-statistics/)). *Analyst view:* the premium reflects (i) the highest cash-on-cash returns in the peer group, (ii) the largest Electronics on-site footprint among Western gas majors (the Nomura Greater-China-Semi 2026–30 anchor report illustrates exactly this point — see [Nomura semi-materials note](../../sector/半导体材料.md)), and (iii) the largest clean-hydrogen / blue-ammonia project backlog ($7.1 bn contractual, ~$10 bn total at year-end 2025 ([Q4-2025 Press Release](https://www.sec.gov/Archives/edgar/data/1707925/000165495426000913/lin_ex991.htm))). 34× TTM EPS is not "stretched" by hyper-growth standards — it is a high-quality compounder at a quality multiple, and the Section 9 risk write-up flags multiple-compression as a *possible* (not material) risk if EPS growth deceleration coincides with a rate move.
+**Valuation snapshot (as of 2026-06-12 close).** Spot price **USD 523.57**, market cap **USD ~242 bn**, **TTM P/E 34.7×**, **forward P/E 26.6×**, **TTM P/S 6.99×**, **P/B 6.28×**, **EV/EBITDA 19.6×**, **EV/Revenue 7.68×**, dividend yield ~**1.22%**, beta ~**0.73**, shares outstanding ~**462.3 mn**, enterprise value ~**USD 266 bn** ([Yahoo Finance — LIN Key Statistics](https://finance.yahoo.com/quote/LIN/key-statistics/)). The price sits near the top of its 52-week range (387.78–525.82), rebounding from ~USD 502 on 6/8 to 523.57 on 6/12. The three-year P/E band has run ~28×–37× on TTM earnings, so today's 34.7× sits in the **upper third** of its own range and at a modest premium to the direct peers (Air Products, Air Liquide, Nippon Sanso). *Analyst view:* the premium reflects (i) the highest cash-on-cash returns in the peer group (FY24 after-tax ROC 25.9%), (ii) the largest Electronics on-site footprint among Western gas majors, and (iii) the largest clean-hydrogen / blue-ammonia project backlog ($7.1 bn contractual, ~$10 bn total at year-end 2025 ([Q1-2026 8-K Ex.99.1](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm))). 34.7× TTM EPS is a fair quality multiple for a high-quality compounder but is no longer cheap; the 26.6× forward P/E embeds market expectations that FY26–27 high-single-digit EPS growth is delivered. The Section 9 risk write-up flags multiple-compression as a *possible* (not material) risk if EPS-growth deceleration coincides with a rate move.
 
-![Industrial-gas / materials peer valuation — TTM P/E and P/S, as of 2026-05-25](../../charts/linde_peer_valuation.png)
-*Source: Yahoo Finance Key Statistics, accessed 2026-05-25 — [LIN](https://finance.yahoo.com/quote/LIN/key-statistics/), [APD](https://finance.yahoo.com/quote/APD/key-statistics/), [AI.PA](https://finance.yahoo.com/quote/AI.PA/key-statistics/), [4091.T (Nippon Sanso)](https://finance.yahoo.com/quote/4091.T/key-statistics/), [4063.T (Shin-Etsu Chemical)](https://finance.yahoo.com/quote/4063.T/key-statistics/).*
+*Analyst view:* the sell side is pricing the industrial-gas / electronic-specialty-gas complex cautiously right now — a useful cross-read from the local broker library: **UBS downgraded Guangdong Huate Gas (688268.SH) from Buy to Neutral on 2026-06-11**, arguing "helium price hikes are fully priced in" and noting the stock trades at **73× 2027E PE**, above the electronic-specialty-gas peer average of 70× ([UBS — Guangdong Huate Gas 688268, 2026-06-11, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412455482522448/UBS-Guangdong%20Huate%20Gas%EF%BC%88688268%EF%BC%89Helium%20price%20hikes%20fully%20priced%20in%EF%BC%9B%20downgrade%20to%20Neutral-260611.pdf); *Analyst view*; 688268 closed ~Rmb190.68 on the report date). As the global leader in downstream fab on-site supply and electronic specialty gases, Linde's 34.7× multiple sits in the same "high-quality but fully-valued" regime the sector is in.
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Linde plc — FY2025 sales by major country (US$ mn)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 390.53,322.34 L 348.58,288.33 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 390.53,322.34 A 132 132 0 0 1 340.47,360.33 L 319.00,310.77 A 78 78 0 0 0 348.58,288.33 Z" fill="#15803d"/>
+<path d="M 340.47,360.33 A 132 132 0 0 1 282.61,371.09 L 284.81,317.13 A 78 78 0 0 0 319.00,310.77 Z" fill="#d97706"/>
+<path d="M 282.61,371.09 A 132 132 0 0 1 246.47,364.50 L 263.46,313.24 A 78 78 0 0 0 284.81,317.13 Z" fill="#7c3aed"/>
+<path d="M 246.47,364.50 A 132 132 0 0 1 215.97,349.82 L 245.44,304.56 A 78 78 0 0 0 263.46,313.24 Z" fill="#dc2626"/>
+<path d="M 215.97,349.82 A 132 132 0 0 1 191.30,329.05 L 230.86,292.29 A 78 78 0 0 0 245.44,304.56 Z" fill="#0891b2"/>
+<path d="M 191.30,329.05 A 132 132 0 0 1 172.84,303.72 L 219.95,277.33 A 78 78 0 0 0 230.86,292.29 Z" fill="#db2777"/>
+<path d="M 172.84,303.72 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 219.95,277.33 Z" fill="#65a30d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">LIN</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$34.0B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="412.58" y1="179.83" x2="428.58" y2="179.83" stroke="#2563eb" stroke-width="1.4"/>
+<text x="432.58" y="177.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States</text>
+<text x="432.58" y="191.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$12.2B  (35.8%)</text>
+<line x1="371.42" y1="349.13" x2="387.42" y2="349.13" stroke="#15803d" stroke-width="1.4"/>
+<text x="391.42" y="347.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">China</text>
+<text x="391.42" y="361.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.6B  (7.7%)</text>
+<line x1="313.24" y1="374.87" x2="329.24" y2="374.87" stroke="#d97706" stroke-width="1.4"/>
+<text x="333.24" y="372.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Germany</text>
+<text x="333.24" y="386.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.4B  (7.2%)</text>
+<line x1="263.23" y1="374.96" x2="247.23" y2="374.96" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="243.23" y="372.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United Kingdom</text>
+<text x="243.23" y="386.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.5B  (4.4%)</text>
+<line x1="228.15" y1="363.55" x2="212.15" y2="363.55" stroke="#dc2626" stroke-width="1.4"/>
+<text x="208.15" y="361.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Mexico</text>
+<text x="208.15" y="375.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.4B  (4.1%)</text>
+<line x1="199.13" y1="344.78" x2="183.13" y2="344.78" stroke="#0891b2" stroke-width="1.4"/>
+<text x="179.13" y="342.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Brazil</text>
+<text x="179.13" y="356.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (3.9%)</text>
+<line x1="176.47" y1="320.47" x2="160.47" y2="320.47" stroke="#db2777" stroke-width="1.4"/>
+<text x="156.47" y="318.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Australia</text>
+<text x="156.47" y="332.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (3.8%)</text>
+<line x1="168.94" y1="169.43" x2="152.94" y2="169.43" stroke="#65a30d" stroke-width="1.4"/>
+<text x="148.94" y="167.43" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other non-US</text>
+<text x="148.94" y="181.43" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.3B  (33.1%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Linde 2025 10-K — Geographic Information (FY2025 sales by major country)</text>
+</svg>
+
+*Source: [Linde 2025 10-K — Geographic Information (external sales by major country)](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm). Approximately 64% of FY25 sales were outside the United States.*
+
+---
+
+## 1B. GF Score (GuruFocus-style fundamental scorecard)
+
+A GuruFocus-style five-axis fundamental scorecard scoring **Financial Strength · Profitability · Growth · GF Value (higher = cheaper) · Momentum** each 0–10, mapped to a transparent 0–100 composite. **This is the analyst's own rubric (*Analyst view*), not a data source and not attributed to GuruFocus** — each underlying metric carries its own citation below; the composite carries no filing citation.
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="GF Score radar">
+<rect x="0" y="0" width="500" height="500" fill="#ffffff"/>
+<text x="20" y="24" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">GF Score (GuruFocus-style): 72/100</text>
+<text x="20" y="41" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#52606d">71–80 Likely average performance</text>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="#e9f5ec" stroke="none"/>
+<polygon points="250.0,208.0 278.5,228.7 267.6,262.3 232.4,262.3 221.5,228.7" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,178.0 307.1,219.5 285.3,286.5 214.7,286.5 192.9,219.5" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,148.0 335.6,210.2 302.9,310.8 197.1,310.8 164.4,210.2" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,118.0 364.1,200.9 320.5,335.1 179.5,335.1 135.9,200.9" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="none" stroke="#c5d3cb" stroke-width="1.3"/>
+<line x1="250" y1="238" x2="161.8" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="146.5" y="392.4" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Financial Strength</text>
+<text x="146.5" y="405.4" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">财务实力</text>
+<text x="179.5" y="329.1" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">8</text>
+<line x1="250" y1="238" x2="250.0" y2="88.0" stroke="#cfdad3" stroke-width="1"/>
+<text x="250.0" y="58.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Profitability</text>
+<text x="250.0" y="71.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">盈利能力</text>
+<text x="250.0" y="97.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">9</text>
+<line x1="250" y1="238" x2="107.3" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="82.6" y="183.6" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Growth</text>
+<text x="82.6" y="196.6" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">成长性</text>
+<text x="164.4" y="204.2" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">6</text>
+<line x1="250" y1="238" x2="392.7" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="417.4" y="183.6" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">GF Value</text>
+<text x="417.4" y="196.6" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">估值</text>
+<text x="307.1" y="213.5" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">4</text>
+<line x1="250" y1="238" x2="338.2" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="353.5" y="392.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Momentum</text>
+<text x="353.5" y="405.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">动量</text>
+<text x="320.5" y="329.1" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">8</text>
+<polygon points="250.0,103.0 307.1,219.5 320.5,335.1 179.5,335.1 164.4,210.2" fill="#2e8b57" fill-opacity="0.34" stroke="#2e8b57" stroke-width="2"/>
+<circle cx="179.5" cy="335.1" r="2.6" fill="#2e8b57"/>
+<circle cx="250.0" cy="103.0" r="2.6" fill="#2e8b57"/>
+<circle cx="164.4" cy="210.2" r="2.6" fill="#2e8b57"/>
+<circle cx="307.1" cy="219.5" r="2.6" fill="#2e8b57"/>
+<circle cx="320.5" cy="335.1" r="2.6" fill="#2e8b57"/>
+<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: Linde 2025 10-K · Q1-2026 8-K · Yahoo Finance, as of 2026-06-12</text>
+<text x="250" y="485" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#52606d">GF Score = independent analyst rubric (*Analyst view:*) — not GuruFocus™ official number</text>
+</svg>
+
+| Dimension | Score (0–10) | Driving metrics (each cited below) |
+|---|---|---|
+| Financial Strength | **8** | Net Debt/EBITDA ~1.7× (net debt ~$21.9 bn / EBITDA $12.7 bn); interest coverage ~35× (operating profit $8,923 mn / net interest $255 mn); A/A2 investment-grade |
+| Profitability | **9** | Adjusted operating margin 29.8%, net margin 20.3%, FY24 after-tax ROC 25.9%, ROE 18.1% — best among Western majors and highly consistent |
+| Growth | **6** | Revenue 5-yr CAGR ~2% ($30,793→$33,986 mn) but adjusted-EPS FY21–25 CAGR ~11.4% ($10.69→$16.46); FY26 guidance +7–9% |
+| GF Value | **4** | TTM P/E 34.7×, forward P/E 26.6× — rich vs own history and peers, thin margin of safety |
+| Momentum | **8** | Price USD 523.57 near 52-week top (387.78–525.82), 12-month outperformance, above 200-day MA |
+| **GF Score (composite, *Analyst view*)** | **72 / 100** | 71–80 band: high-quality, steady growth, but valuation reflects most of the good news — consistent with the Hold rating |
+
+**Per-axis rationale.** **Financial Strength = 8:** FY25 total debt ~$26,989 mn ($4,510 short-term + $1,796 current LT + $20,683 LT) less $5,056 mn cash ≈ $21,933 mn net debt; against EBITDA ≈ operating profit $8,923 mn + D&A $3,763 mn = $12,686 mn, **Net Debt/EBITDA ≈ 1.7×** — conservative for a utility-like cash generator ([Linde 2025 10-K — Balance Sheets & Income Statement](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)). **Profitability = 9:** adjusted operating profit $10,137 mn / sales $33,986 mn = **29.8%**, net margin 20.3%, both highest in the group; FY24 ARS prints 25.9% after-tax ROC ([Linde 2024 ARS](https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2024-annual-report-to-shareholders.pdf)). **Growth = 6:** modest revenue growth but EPS amplified by pricing, productivity and buybacks — adjusted EPS $10.69 (FY21) → $16.46 (FY25) ([FY22 10-K](https://www.sec.gov/Archives/edgar/data/1707925/000162828023005434/lin-20221231.htm), [FY25 10-K](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)). **GF Value = 4:** 34.7× TTM / 26.6× forward, upper third of the 28–37× band, thin safety margin. **Momentum = 8:** price near 52-week high amid a cautious sector ([Yahoo Finance — LIN](https://finance.yahoo.com/quote/LIN/key-statistics/)).
+
+---
+
+## 1C. Valuation & Price Target
+
+> **This chapter is the decision layer — the rating, price target, forward estimates and scenario PTs are all *Analyst view* and carry no filing citation** (a 10-K contains no price target). Each driver of the forward model (segment revenue, guidance range, industry forecast) cites its external basis inline.
+
+**1C.1 Forward estimates (*Analyst view*).** Built bottom-up off FY25 actuals ($33,986 mn revenue / 29.8% adjusted operating margin), extrapolated by management's FY26 guidance ($17.60–17.90 adjusted EPS, +7–9% YoY) and backlog-conversion cadence.
+
+| FY | Revenue (US$ mn) | YoY | Adj. operating margin | Adj. EPS (US$) | YoY |
+|---|---|---|---|---|---|
+| FY2025 (actual) | 33,986 | +3% | 29.8% | 16.46 | +6% |
+| FY2026E | ~35,400 | +4% | ~30.3% | ~17.75 (guidance midpoint) | +8% |
+| FY2027E | ~37,000 | +5% | ~30.8% | ~19.70 | +11% |
+| FY2028E | ~38,600 | +4% | ~31.2% | ~21.50 | +9% |
+
+*Drivers & basis:* (i) revenue from underlying price/volume (~+2–4%) plus backlog start-ups ([Q1-2026 8-K — $7.1 bn sale-of-gas backlog](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm)); (ii) ~40–50 bps annual margin expansion from pricing discipline + productivity + ongoing merger synergies ([Linde 2025 10-K MD&A](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)); (iii) EPS outgrows revenue via ~$4–5 bn/yr buybacks + margin gains. FY26 midpoint $17.75 matches the guided $17.60–17.90; FY27–28 are this report's extrapolation. The 26.6× forward P/E implies the market already embeds forward EPS ~$19.71 ([Yahoo Finance — LIN](https://finance.yahoo.com/quote/LIN/key-statistics/)), aligning with the model's FY27E $19.70.
+
+**1C.2 Price-target derivation (*Analyst view*).** Method: **FY2027E adjusted EPS ~$19.70 × target P/E 28× ≈ USD 552**, rounded to **USD 545** as the 12-month PT (~+4% upside). The 28× target sits at the lower edge of Linde's own 3-year band (28–37×) — today's 34.7× is hard to sustain and rate normalisation caps high-multiple names — but stays above the ~30× of Air Products / Air Liquide because Linde's ROC and margins lead structurally. *Multiple justification:* peer forward P/Es cluster 22–30× (Air Liquide, Air Products ~30×; Nippon Sanso ~22×); Linde's quality premium supports the upper edge of the band, not the top.
+
+**1C.3 Bull / base / bear (*Analyst view*).**
+
+| Scenario | Swing assumption | PT | vs spot |
+|---|---|---|---|
+| **Bull** | FY27E EPS $20.5 (electronics + clean-H₂ accelerate, faster margin expansion) × 30× | **USD 620** | **+18%** |
+| **Base** | FY27E EPS $19.7 × 28× | **USD 545** | **+4%** |
+| **Bear** | FY27E EPS $18.3 (weaker price/volume / FX headwind) × 24× (rates up + multiple compression) | **USD 440** | **−16%** |
+
+**1C.4 vs consensus.** Yahoo Finance aggregates **25 analysts, mean PT USD 545.44, consensus rating Buy** ([Yahoo Finance — LIN](https://finance.yahoo.com/quote/LIN/key-statistics/)). This report's USD 545 base PT **matches the sell-side consensus on the number** — the difference is the rating: the Street leans Buy, this report is **Hold** at USD 523.57 because +4% implied upside is too thin to compensate the asymmetric downside of a high-multiple, rate-sensitive name.
+
+**1C.5 Swing variables.** The 1–2 variables the call hinges on: (1) **whether underlying volume re-accelerates** — FY25 underlying growth was modest; mid-single-digit volume from 2026–27 fab/clean-H₂ start-ups validates the bull case; (2) **the rate path and the durability of a high multiple** — with beta just 0.73 Linde is a rate-sensitive "bond-proxy" quality name, and a higher 10Y directly compresses its P/E.
+
+**ROE decomposition (5-step DuPont).** Linde's ROE (on Linde plc shareholders' equity) is 18.1%, which understates true earning power because the ~$40 bn of goodwill / intangibles created in the Linde AG merger inflates the denominator. Decomposing ROE into net margin × asset turnover × equity multiplier shows the high return comes from the **20.3% net margin** (earnings quality), not leverage — the equity multiplier is only 2.19×, a conservative balance sheet.
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 540" width="1240" height="540" role="img" aria-label="DuPont ROE decomposition"><rect x="0" y="0" width="1240" height="540" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Linde plc — FY2025 5-step DuPont ROE decomposition</text>
+<rect x="545.00" y="56.00" width="150" height="56" rx="7" fill="#1e3a8a"/>
+<text x="620.00" y="76.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">ROE</text>
+<text x="620.00" y="94.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">18.07%</text>
+<text x="620.00" y="106.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">= Net Income / Avg Equity</text>
+<rect x="191.60" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Margin</text>
+<text x="266.60" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">20.30%</text>
+<text x="266.60" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Income / Revenue</text>
+<line x1="620.00" y1="112.00" x2="266.60" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="545.00" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="620.00" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Asset Turnover</text>
+<text x="620.00" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.41</text>
+<text x="620.00" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Revenue / Avg Assets</text>
+<line x1="620.00" y1="112.00" x2="620.00" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="898.40" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="973.40" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Equity Multiplier</text>
+<text x="973.40" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">2.19</text>
+<text x="973.40" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Avg Assets / Avg Equity</text>
+<line x1="620.00" y1="112.00" x2="973.40" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="443.30" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="443.30" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="796.70" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="796.70" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="65.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="124.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Margin</text>
+<text x="124.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">26.25%</text>
+<text x="124.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Op Inc / Revenue</text>
+<line x1="266.60" y1="224.00" x2="124.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="207.60" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Tax Burden</text>
+<text x="266.60" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.7753</text>
+<text x="266.60" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Inc / Pretax</text>
+<line x1="266.60" y1="224.00" x2="266.60" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="350.20" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="409.20" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Interest Burden</text>
+<text x="409.20" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.9971</text>
+<text x="409.20" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Pretax / Op Inc</text>
+<line x1="266.60" y1="224.00" x2="409.20" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="195.30" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="195.30" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="337.90" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="337.90" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="479.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="538.00" y="326.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Revenue</text>
+<text x="538.00" y="342.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$34.0B</text>
+<line x1="620.00" y1="224.00" x2="538.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="643.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="702.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="702.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$83.5B</text>
+<text x="702.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="620.00" y1="224.00" x2="702.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="620.00" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="620.00" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="832.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="891.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="891.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$83.5B</text>
+<text x="891.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="891.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="996.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="1055.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Equity</text>
+<text x="1055.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$38.2B</text>
+<text x="1055.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="1055.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="967.20" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="967.20" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="69.00" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="124.00" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Income</text>
+<text x="124.00" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$8.9B</text>
+<line x1="124.00" y1="356.00" x2="124.00" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="211.60" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="266.60" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Income</text>
+<text x="266.60" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$6.9B</text>
+<line x1="266.60" y1="356.00" x2="266.60" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="354.20" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="409.20" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Pretax Income</text>
+<text x="409.20" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$8.9B</text>
+<line x1="409.20" y1="356.00" x2="409.20" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<text x="620.00" y="524.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Linde 2025 10-K — Income Statement + Balance Sheets (FY2025; equity = Linde plc shareholders')</text>
+</svg>
+
+*Source: [Linde 2025 10-K — Income Statement + Balance Sheets](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm). Equity uses Linde plc shareholders' equity (FY24 $38,092 mn, FY25 $38,245 mn); ROE = 18.1%.*
 
 ---
 
@@ -141,24 +559,47 @@ The verbatim 10-K text the table is built from:
 
 ```mermaid
 graph LR
-    A[Air separation unit (ASU) cryogenic] --> B[On-site pipeline<br/>O₂ / N₂ / Ar / H₂<br/>10-20 yr contracts]
-    A --> C[Merchant liquid<br/>LOX / LIN / LAR truck<br/>3-7 yr contracts]
-    A --> D[Cylinder filling<br/>packaged gases<br/>1-3 yr / PO]
-    E[SMR / ATR / electrolyser] --> B
+    A["Air separation unit ASU cryogenic"] --> B["On-site pipeline<br/>O₂ / N₂ / Ar / H₂<br/>10-20 yr contracts"]
+    A --> C["Merchant liquid<br/>LOX / LIN / LAR truck<br/>3-7 yr contracts"]
+    A --> D["Cylinder filling<br/>packaged gases<br/>1-3 yr / PO"]
+    E["SMR / ATR / electrolyser"] --> B
     E --> C
-    F[He extraction / specialty gas plant] --> C
+    F["He extraction / specialty gas plant"] --> C
     F --> D
-    G[Engineering EPC delivers plants] -.builds.-> A
+    G["Engineering EPC delivers plants"] -.builds.-> A
     G -.builds.-> E
-    B --> Z[Customer: steel mill / fab / refinery / hospital]
+    B --> Z["Customer: steel mill / fab / refinery / hospital"]
     C --> Z
     D --> Z
 ```
 
 **中文释义 / Plain-language gloss:** an industrial-gas company is — at its heart — a giant **molecule logistics network**. One ASU may produce 2,000 tonnes/day of oxygen for a Gulf-Coast refinery on a 15-year take-or-pay contract (the on-site "tonnage" mode), simultaneously bottle off 500 tonnes/day of LOX (liquid O2) into tanker trucks for delivery to a 50-mile-radius cluster of secondary customers (the merchant mode), and finally re-liquefy / re-pressurise the smallest output into high-pressure steel cylinders for a hospital network 300 km away (the packaged mode). The same molecules, the same plant — but **three pricing models, three contract lengths, three sales-cycle motions, and three different gross-margin profiles**. The 10-K explains it plainly: "These distribution methods are often integrated, with products from all three supply modes coming from the same plant. The method of supply is generally determined by the lowest cost means of meeting the customer's needs" ([Linde 2025 10-K, Item 1 — Industrial Gases Distribution](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)).
 
-![Linde plc — FY2025 sales by distribution method](../../charts/linde_distribution_mix.png)
-*Source: management-disclosed Distribution Mode mix in the [Linde 2024 Annual Report to Shareholders, Financial Highlights](https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2024-annual-report-to-shareholders.pdf) (FY24 mix of 38% packaged / 32% merchant / 25% on-site / 5% other, ex-Engineering) extrapolated to FY25 segment totals from [Linde 2025 10-K, MD&A — Segment Discussion](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm).*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Linde plc — sales by distribution method (FY2024, ex-Engineering)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 378.36,335.42 L 341.39,296.06 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 378.36,335.42 A 132 132 0 0 1 162.46,279.99 L 213.82,263.30 A 78 78 0 0 0 341.39,296.06 Z" fill="#15803d"/>
+<path d="M 162.46,279.99 A 132 132 0 0 1 247.21,113.66 L 263.90,165.02 A 78 78 0 0 0 213.82,263.30 Z" fill="#d97706"/>
+<path d="M 247.21,113.66 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 263.90,165.02 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">MIX</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$100</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="416.31" y1="188.40" x2="432.31" y2="188.40" stroke="#2563eb" stroke-width="1.4"/>
+<text x="436.31" y="186.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Packaged 包装</text>
+<text x="436.31" y="200.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$38  (38.0%)</text>
+<line x1="253.68" y1="372.86" x2="237.68" y2="372.86" stroke="#15803d" stroke-width="1.4"/>
+<text x="233.68" y="370.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Merchant 散装液体</text>
+<text x="233.68" y="384.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$32  (32.0%)</text>
+<line x1="165.04" y1="176.55" x2="149.04" y2="176.55" stroke="#d97706" stroke-width="1.4"/>
+<text x="145.04" y="174.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">On-site 驻厂</text>
+<text x="145.04" y="188.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$25  (25.0%)</text>
+<line x1="266.41" y1="102.90" x2="250.41" y2="102.90" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="246.41" y="100.90" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other 其他</text>
+<text x="246.41" y="114.90" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5  (5.0%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Linde 2024 Annual Report to Shareholders — Financial Highlights (distribution mode %, ex-Engineering)</text>
+</svg>
+
+*Source: [Linde 2024 Annual Report to Shareholders, Financial Highlights — Distribution Mode pie](https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2024-annual-report-to-shareholders.pdf) (FY24: Packaged 38% / Merchant 32% / On-site 25% / Other 5%, ex-Engineering). Linde does not disclose a separate FY25 distribution-mode split, so the company's official FY24 pie is used.*
 
 ### 4.3 Atmospheric gases — O₂, N₂, Ar, rare gases
 
@@ -250,6 +691,186 @@ graph TD
 
 The three rings share the same upstream production plant but face very different competitive dynamics, contract lengths, and gross-margin profiles. Linde's strategy is to **anchor each region with a Ring-1 mega-customer (refinery / fab / steel)** that justifies the on-site infrastructure capex, then use that infrastructure's spare capacity and pipeline reach to serve Ring 2 / Ring 3 demand at marginal cost. The **Engineering segment is the orthogonal arm** that builds out the production / treatment plants serving all three rings — both for Linde's own use and for third-party customers — and creates a continuous EPC backlog of $2.8 bn for third-party equipment as of Q1 FY26 ([Q1-2026 Earnings Press Release — Linde Engineering](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm)).
 
+**Money-flow ("follow the dollars") map.** The diagram below takes the **demand / revenue view** (right for Linde as a downstream supplier): on the left, the end markets paying Linde; in the middle, the three distribution channels; on the right, where Linde's own cost ultimately pools. The key follow-the-money conclusion: **energy — chiefly electricity and natural gas — is the "single largest cost item" in producing and distributing industrial gases** (10-K verbatim: "Energy is the single largest cost item in the production and distribution of industrial gases"), and on-site take-or-pay contracts pass that cost through to customers, decoupling Linde's margins from energy-price swings ([Linde 2025 10-K, Item 1 — Raw Materials and Energy Costs](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)). The secondary cost pools are **ASU hardware** (compressors, cold boxes — much built in-house by Linde Engineering, capturing margin peers outsource) and **~USD 5.3 bn/yr of growth capex** that continuously fills the USD 7.1 bn sale-of-gas backlog ([Linde 2025 10-K, MD&A — Capital Expenditures](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm); [Q1-2026 8-K Ex.99.1](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm)). Residual cash returned USD 7.4 bn to shareholders in FY25 (USD 4.6 bn buybacks + USD 2.8 bn dividends).
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1227" width="1180" height="1227" role="img" aria-label="How money flows through Linde — who pays, what they buy, where the cost pools" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1227" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">INDUSTRIAL-GAS MONEY FLOW · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">How money flows through Linde — who pays, what they buy, where</text>
+<text x="42.00" y="138.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">the cost pools</text>
+<text x="42.00" y="180.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">End markets pay Linde US$34.0bn for gases under multi-decade take-or-pay and merchant contracts; that revenue funds COGS and</text>
+<text x="42.00" y="202.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">US$5.3bn capex that pools onto one dominant cost — energy (the single largest cost item) — plus the air-separation hardware Linde</text>
+<text x="42.00" y="224.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">Engineering builds in-house.</text>
+<ellipse cx="1031.00" cy="504.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="270.00" x2="369.50" y2="735.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="270.00" x2="810.50" y2="735.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="254.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="270.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">who pays Linde</text>
+<text x="483.00" y="254.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="270.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Linde's distribution channels</text>
+<text x="924.00" y="254.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="270.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">where Linde's cost pools</text>
+<path d="M 256.00 314.00 C 369.50 314.00, 369.50 446.75, 483.00 446.75" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 324.50 C 369.50 324.50, 369.50 564.25, 483.00 564.25" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 407.75 C 369.50 407.75, 369.50 335.25, 483.00 335.25" fill="none" stroke="url(#mfgold)" stroke-width="21.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 422.00 C 369.50 422.00, 369.50 669.50, 483.00 669.50" fill="none" stroke="url(#mfgold)" stroke-width="7.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 497.75 C 369.50 497.75, 369.50 351.75, 483.00 351.75" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 510.50 C 369.50 510.50, 369.50 459.50, 483.00 459.50" fill="none" stroke="url(#mfgold)" stroke-width="13.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 593.75 C 369.50 593.75, 369.50 364.50, 483.00 364.50" fill="none" stroke="url(#mfgold)" stroke-width="13.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 604.25 C 369.50 604.25, 369.50 572.50, 483.00 572.50" fill="none" stroke="url(#mfgold)" stroke-width="7.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 690.50 C 369.50 690.50, 369.50 470.75, 483.00 470.75" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 331.50 C 810.50 331.50, 810.50 338.25, 924.00 338.25" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 452.75 C 810.50 452.75, 810.50 357.00, 924.00 357.00" fill="none" stroke="url(#mfgold)" stroke-width="13.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 563.50 C 810.50 563.50, 810.50 366.75, 924.00 366.75" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 351.00 C 810.50 351.00, 810.50 460.50, 924.00 460.50" fill="none" stroke="url(#mfgold)" stroke-width="15.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 669.50 C 810.50 669.50, 810.50 474.00, 924.00 474.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 367.50 C 810.50 367.50, 810.50 576.50, 924.00 576.50" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 464.75 C 810.50 464.75, 810.50 673.50, 924.00 673.50" fill="none" stroke="url(#mfgold)" stroke-width="10.50" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 571.00 C 810.50 571.00, 810.50 683.25, 924.00 683.25" fill="none" stroke="url(#mfgold)" stroke-width="9.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="365.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">pipeline H2/O2</text>
+<text x="369.50" y="473.12" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">fab N2 + ESG</text>
+<text x="810.50" y="328.88" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">electricity</text>
+<text x="810.50" y="565.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">cold boxes</text>
+<text x="810.50" y="466.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">US$5.3bn</text>
+<text x="810.50" y="621.12" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">US$7.4bn</text>
+<rect x="42.00" y="280.00" width="214" height="77.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="280.00" width="3" height="77.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="313.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">HEALTHCARE</text>
+<text x="60.00" y="334.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">O2 / medical gases</text>
+<rect x="42.00" y="373.00" width="214" height="77.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="373.00" width="3" height="77.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="406.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">CHEM &amp; ENERGY</text>
+<text x="60.00" y="427.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">refining H2, ASU O2/N2</text>
+<rect x="42.00" y="466.00" width="214" height="77.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="466.00" width="3" height="77.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="499.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MFG / METALS</text>
+<text x="60.00" y="520.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">steel, metals, glass</text>
+<rect x="42.00" y="559.00" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="42.00" y="559.00" width="3" height="77.00" rx="2" fill="#56c6e6"/>
+<text x="60.00" y="592.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ELECTRONICS</text>
+<text x="60.00" y="613.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">fab on-site N2 + ESG</text>
+<rect x="42.00" y="652.00" width="214" height="77.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="652.00" width="3" height="77.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="685.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">FOOD &amp; BEV</text>
+<text x="60.00" y="706.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">CO2, freezing</text>
+<rect x="483.00" y="301.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="483.00" y="301.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="501.00" y="334.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">ON-SITE</text>
+<text x="501.00" y="355.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">pipeline ASU/H2</text>
+<text x="501.00" y="372.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">10-20yr take-or-pay</text>
+<rect x="483.00" y="411.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="411.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="444.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MERCHANT</text>
+<text x="501.00" y="465.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">bulk liquid, tankers</text>
+<text x="501.00" y="482.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">3-7yr</text>
+<rect x="483.00" y="521.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="521.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="554.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">PACKAGED</text>
+<text x="501.00" y="575.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">cylinders, specialty</text>
+<text x="501.00" y="592.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">1-3yr</text>
+<rect x="483.00" y="631.00" width="214" height="77.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="631.00" width="3" height="77.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="664.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ENGINEERING</text>
+<text x="501.00" y="685.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">ASU / H2 plant EPC</text>
+<rect x="924.00" y="292.50" width="214" height="111.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="292.50" width="3" height="111.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="325.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">ENERGY</text>
+<text x="942.00" y="346.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">electricity + nat-gas</text>
+<text x="942.00" y="363.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">single largest cost item</text>
+<text x="942.00" y="380.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">passed through contractually</text>
+<rect x="924.00" y="419.50" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="419.50" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="452.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ASU HARDWARE</text>
+<text x="942.00" y="473.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">compressors, cold boxes</text>
+<text x="942.00" y="490.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">much built in-house</text>
+<rect x="924.00" y="529.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="529.50" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="562.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">GROWTH CAPEX</text>
+<text x="942.00" y="583.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">US$5.3bn/yr</text>
+<text x="942.00" y="600.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">US$7.1bn sale-of-gas backlog</text>
+<rect x="924.00" y="639.50" width="214" height="77.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="639.50" width="3" height="77.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="672.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SHAREHOLDERS</text>
+<text x="942.00" y="693.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">US$7.4bn returned FY25</text>
+<rect x="42.00" y="755.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="759.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="757.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="757.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="757.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="757.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="759.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="759.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="750.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="747.00" y="759.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="821.40" y="750.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="840.40" y="759.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="922.00" y="750.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="941.00" y="759.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="1008.20" y="750.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="1027.20" y="759.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="42.00" y="770.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="61.00" y="779.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="185.80" y="770.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="204.80" y="779.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="344.00" y="770.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="363.00" y="779.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<line x1="42" y1="795.00" x2="1138" y2="795.00" stroke="#222a3a"/>
+<text x="42.00" y="811.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY</text>
+<rect x="42.00" y="831.00" width="356.00" height="180.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="42.00" y="831.00" width="3" height="180.00" rx="2" fill="#d9a05b"/>
+<text x="58.00" y="855.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">WHERE IT POOLS · THE CHOKEPOINT</text>
+<text x="58.00" y="873.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Energy is the single largest cost</text>
+<text x="58.00" y="897.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">The</tspan><tspan fill="#9aa3b8" font-weight="400"> 10-K</tspan><tspan fill="#9aa3b8" font-weight="400"> states</tspan><tspan fill="#f4d58a" font-weight="700"> energy</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> mostly</tspan><tspan fill="#f4d58a" font-weight="700"> electricity</tspan><tspan fill="#f4d58a" font-weight="700"> and</tspan></text>
+<text x="58.00" y="913.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">natural</tspan><tspan fill="#f4d58a" font-weight="700"> gas</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> is</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#f4d58a" font-weight="700"> single</tspan><tspan fill="#f4d58a" font-weight="700"> largest</tspan><tspan fill="#f4d58a" font-weight="700"> cost</tspan><tspan fill="#f4d58a" font-weight="700"> item</tspan><tspan fill="#9aa3b8" font-weight="400"> in</tspan></text>
+<text x="58.00" y="929.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">producing</tspan><tspan fill="#9aa3b8" font-weight="400"> and</tspan><tspan fill="#9aa3b8" font-weight="400"> distributing</tspan><tspan fill="#9aa3b8" font-weight="400"> industrial</tspan><tspan fill="#9aa3b8" font-weight="400"> gases.</tspan><tspan fill="#9aa3b8" font-weight="400"> On-site</tspan></text>
+<text x="58.00" y="945.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">take-or-pay</tspan><tspan fill="#9aa3b8" font-weight="400"> contracts</tspan><tspan fill="#9aa3b8" font-weight="400"> pass</tspan><tspan fill="#9aa3b8" font-weight="400"> these</tspan><tspan fill="#9aa3b8" font-weight="400"> costs</tspan><tspan fill="#9aa3b8" font-weight="400"> through</tspan><tspan fill="#9aa3b8" font-weight="400"> to</tspan></text>
+<text x="58.00" y="961.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">customers,</tspan><tspan fill="#9aa3b8" font-weight="400"> so</tspan><tspan fill="#9aa3b8" font-weight="400"> margins</tspan><tspan fill="#9aa3b8" font-weight="400"> are</tspan><tspan fill="#9aa3b8" font-weight="400"> insulated</tspan><tspan fill="#9aa3b8" font-weight="400"> from</tspan><tspan fill="#9aa3b8" font-weight="400"> energy</tspan><tspan fill="#9aa3b8" font-weight="400"> price</tspan></text>
+<text x="58.00" y="977.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">swings.</tspan></text>
+<rect x="412.00" y="831.00" width="356.00" height="180.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="831.00" width="3" height="180.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="855.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">MOST STABLE · ~24% OF SALES</text>
+<text x="428.00" y="873.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">On-site = 10-20yr take-or-pay</text>
+<text x="428.00" y="897.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Pipeline</tspan><tspan fill="#9aa3b8" font-weight="400"> ASUs</tspan><tspan fill="#9aa3b8" font-weight="400"> and</tspan><tspan fill="#9aa3b8" font-weight="400"> H2</tspan><tspan fill="#9aa3b8" font-weight="400"> reformers</tspan><tspan fill="#9aa3b8" font-weight="400"> sit</tspan><tspan fill="#9aa3b8" font-weight="400"> on</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> customer's</tspan></text>
+<text x="428.00" y="913.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">fence-line</tspan><tspan fill="#9aa3b8" font-weight="400"> under</tspan><tspan fill="#f4d58a" font-weight="700"> 10-20</tspan><tspan fill="#f4d58a" font-weight="700"> year</tspan><tspan fill="#9aa3b8" font-weight="400"> full-requirements</tspan></text>
+<text x="428.00" y="929.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">contracts</tspan><tspan fill="#9aa3b8" font-weight="400"> with</tspan><tspan fill="#9aa3b8" font-weight="400"> take-or-pay</tspan><tspan fill="#9aa3b8" font-weight="400"> minimums</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> backbone</tspan><tspan fill="#9aa3b8" font-weight="400"> of</tspan></text>
+<text x="428.00" y="945.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Linde's</tspan><tspan fill="#f4d58a" font-weight="700"> US$7.1bn</tspan><tspan fill="#9aa3b8" font-weight="400"> contractual</tspan><tspan fill="#9aa3b8" font-weight="400"> sale-of-gas</tspan><tspan fill="#9aa3b8" font-weight="400"> backlog.</tspan></text>
+<rect x="782.00" y="831.00" width="356.00" height="180.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="782.00" y="831.00" width="3" height="180.00" rx="2" fill="#56c6e6"/>
+<text x="798.00" y="855.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">GROWTH DRIVER · ELECTRONICS</text>
+<text x="798.00" y="873.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Fab on-site + specialty gases</text>
+<text x="798.00" y="897.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">New</tspan><tspan fill="#9aa3b8" font-weight="400"> wafer-fab</tspan><tspan fill="#9aa3b8" font-weight="400"> clusters</tspan><tspan fill="#9aa3b8" font-weight="400"> (Samsung</tspan><tspan fill="#9aa3b8" font-weight="400"> Taylor</tspan><tspan fill="#9aa3b8" font-weight="400"> TX,</tspan><tspan fill="#9aa3b8" font-weight="400"> TSMC</tspan></text>
+<text x="798.00" y="913.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Arizona)</tspan><tspan fill="#9aa3b8" font-weight="400"> anchor</tspan><tspan fill="#9aa3b8" font-weight="400"> large</tspan><tspan fill="#9aa3b8" font-weight="400"> on-site</tspan><tspan fill="#9aa3b8" font-weight="400"> N2/O2</tspan><tspan fill="#9aa3b8" font-weight="400"> contracts</tspan><tspan fill="#9aa3b8" font-weight="400"> plus</tspan></text>
+<text x="798.00" y="929.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">electronic</tspan><tspan fill="#9aa3b8" font-weight="400"> specialty</tspan><tspan fill="#9aa3b8" font-weight="400"> gas</tspan><tspan fill="#9aa3b8" font-weight="400"> (ESG)</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> fastest-growing</tspan></text>
+<text x="798.00" y="945.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">slice</tspan><tspan fill="#9aa3b8" font-weight="400"> of</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> backlog.</tspan></text>
+<rect x="42.00" y="1025.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="1025.00" width="3" height="148.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="1049.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">IN-HOUSE · VERTICAL INTEGRATION</text>
+<text x="58.00" y="1067.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Linde Engineering builds the plants</text>
+<text x="58.00" y="1091.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">The</tspan><tspan fill="#f4d58a" font-weight="700"> Engineering</tspan><tspan fill="#9aa3b8" font-weight="400"> segment</tspan><tspan fill="#9aa3b8" font-weight="400"> (US$2.25bn</tspan><tspan fill="#9aa3b8" font-weight="400"> sales)</tspan><tspan fill="#9aa3b8" font-weight="400"> designs</tspan><tspan fill="#9aa3b8" font-weight="400"> and</tspan></text>
+<text x="58.00" y="1107.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">EPC-builds</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> air-separation</tspan><tspan fill="#9aa3b8" font-weight="400"> units,</tspan><tspan fill="#9aa3b8" font-weight="400"> cold</tspan><tspan fill="#9aa3b8" font-weight="400"> boxes</tspan><tspan fill="#9aa3b8" font-weight="400"> and</tspan></text>
+<text x="58.00" y="1123.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">H2</tspan><tspan fill="#9aa3b8" font-weight="400"> plants</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> gas</tspan><tspan fill="#9aa3b8" font-weight="400"> business</tspan><tspan fill="#9aa3b8" font-weight="400"> runs</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> capturing</tspan><tspan fill="#9aa3b8" font-weight="400"> margin</tspan></text>
+<text x="58.00" y="1139.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">that</tspan><tspan fill="#9aa3b8" font-weight="400"> peers</tspan><tspan fill="#9aa3b8" font-weight="400"> outsource.</tspan></text>
+<rect x="412.00" y="1025.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="1025.00" width="3" height="148.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="1049.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">CAPITAL CYCLE</text>
+<text x="428.00" y="1067.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">US$5.3bn capex feeds the backlog</text>
+<text x="428.00" y="1091.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> capex</tspan><tspan fill="#9aa3b8" font-weight="400"> of</tspan><tspan fill="#f4d58a" font-weight="700"> US$5.3bn</tspan><tspan fill="#9aa3b8" font-weight="400"> funds</tspan><tspan fill="#9aa3b8" font-weight="400"> the</tspan><tspan fill="#9aa3b8" font-weight="400"> new</tspan><tspan fill="#9aa3b8" font-weight="400"> on-site</tspan><tspan fill="#9aa3b8" font-weight="400"> plants;</tspan></text>
+<text x="428.00" y="1107.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">each</tspan><tspan fill="#9aa3b8" font-weight="400"> project</tspan><tspan fill="#9aa3b8" font-weight="400"> converts</tspan><tspan fill="#9aa3b8" font-weight="400"> into</tspan><tspan fill="#9aa3b8" font-weight="400"> a</tspan><tspan fill="#f4d58a" font-weight="700"> 10-20yr</tspan><tspan fill="#9aa3b8" font-weight="400"> contract</tspan><tspan fill="#9aa3b8" font-weight="400"> as</tspan><tspan fill="#9aa3b8" font-weight="400"> it</tspan></text>
+<text x="428.00" y="1123.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">starts</tspan><tspan fill="#9aa3b8" font-weight="400"> up</tspan><tspan fill="#9aa3b8" font-weight="400"> across</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026-2030,</tspan><tspan fill="#9aa3b8" font-weight="400"> compounding</tspan><tspan fill="#9aa3b8" font-weight="400"> visible</tspan></text>
+<text x="428.00" y="1139.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">revenue.</tspan></text>
+<rect x="782.00" y="1025.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="1025.00" width="3" height="148.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="1049.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">WHERE THE REST GOES</text>
+<text x="798.00" y="1067.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">US$7.4bn back to shareholders</text>
+<text x="798.00" y="1091.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">After</tspan><tspan fill="#9aa3b8" font-weight="400"> capex,</tspan><tspan fill="#9aa3b8" font-weight="400"> FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> returned</tspan><tspan fill="#f4d58a" font-weight="700"> US$7.4bn</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#f4d58a" font-weight="700"> US$4.6bn</tspan></text>
+<text x="798.00" y="1107.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">buybacks</tspan><tspan fill="#9aa3b8" font-weight="400"> (a</tspan><tspan fill="#9aa3b8" font-weight="400"> company</tspan><tspan fill="#9aa3b8" font-weight="400"> record)</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#f4d58a" font-weight="700"> US$2.8bn</tspan><tspan fill="#9aa3b8" font-weight="400"> dividends</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan></text>
+<text x="798.00" y="1123.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">funded</tspan><tspan fill="#9aa3b8" font-weight="400"> by</tspan><tspan fill="#f4d58a" font-weight="700"> US$10.4bn</tspan><tspan fill="#9aa3b8" font-weight="400"> operating</tspan><tspan fill="#9aa3b8" font-weight="400"> cash</tspan><tspan fill="#9aa3b8" font-weight="400"> flow.</tspan></text>
+<text x="590.00" y="1209.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Linde 2025 10-K (Item 1 Business — distribution &amp; energy costs; MD&amp;A — capex &amp; cash returns; Note 18 segments) · Q1-2026 8-K (backlog)</text>
+</svg>
+
+*Source: [Linde 2025 10-K (Item 1 Business — distribution & energy costs; MD&A — capex & cash returns; Note 18 segments)](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm) and [Q1-2026 8-K (backlog)](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm). Every node is a real, sourced counterpart / cost item from the filings; ribbon thickness is rough relative scale, not flow-conserving.*
+
 ### 4.10 Flagship franchises and recent launches
 
 **Flagship #1 — On-site oxygen / nitrogen for refineries (Gulf Coast cluster).** Anchored by ExxonMobil Baytown, BP Whiting, Marathon Galveston Bay, Valero / Diamond Green Diesel. ~30+ ASUs feeding a Texas/Louisiana pipeline network of ~~1,000 miles. Highest single-asset gross-margin pool inside Linde.
@@ -265,9 +886,44 @@ The three rings share the same upstream production plant but face very different
 - **2025-Q4 — Dow Path-2-Zero — Linde awarded ASU + ATR-based clean H₂ supply** for the Fort Saskatchewan, Alberta complex, supporting Dow's net-zero ethylene cracker ([Dow 2025 10-K, Item 7 — Path 2 Zero](https://www.sec.gov/Archives/edgar/data/1751788/000175178826000018/dow-20251231.htm)).
 - **2026-Q1 — Multiple electronics on-site project start-ups** flowing into FY26 volume — see segment color in [Q1-2026 Earnings Press Release, 2026-05-01](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm) showing electronics-led volume growth in both Americas and APAC.
 
-The 10-K does NOT report revenue by product line; the 2024 ARS End-Markets pie below is the most-granular source the company publishes:
+The 10-K does NOT report revenue by product line; the 2024 ARS End-Markets pie below is the most-granular source the company publishes (Chemicals & Energy 22% / Manufacturing 22% / Healthcare 17% / Food & Beverage 13% / Electronics 9% / Other 9% / Metals & Mining 8%):
 
-![Linde plc — FY2024 sales by end-market (ex-Engineering)](../../charts/linde_end_market_mix.png)
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Linde plc — sales by end-market (FY2024)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 417.66,214.47 L 364.62,224.58 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 417.66,214.47 A 132 132 0 0 1 336.59,361.93 L 316.71,311.72 A 78 78 0 0 0 364.62,224.58 Z" fill="#15803d"/>
+<path d="M 336.59,361.93 A 132 132 0 0 1 203.86,340.91 L 238.28,299.30 A 78 78 0 0 0 316.71,311.72 Z" fill="#d97706"/>
+<path d="M 203.86,340.91 A 132 132 0 0 1 156.26,247.49 L 210.15,244.10 A 78 78 0 0 0 238.28,299.30 Z" fill="#7c3aed"/>
+<path d="M 156.26,247.49 A 132 132 0 0 1 172.33,175.61 L 219.65,201.62 A 78 78 0 0 0 210.15,244.10 Z" fill="#dc2626"/>
+<path d="M 172.33,175.61 A 132 132 0 0 1 224.41,123.53 L 250.42,170.85 A 78 78 0 0 0 219.65,201.62 Z" fill="#0891b2"/>
+<path d="M 224.41,123.53 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 250.42,170.85 Z" fill="#db2777"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">END MKT</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$100</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="375.96" y1="132.87" x2="391.96" y2="132.87" stroke="#2563eb" stroke-width="1.4"/>
+<text x="395.96" y="130.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Chemicals &amp; Energy</text>
+<text x="395.96" y="144.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$22  (22.0%)</text>
+<line x1="408.93" y1="305.68" x2="424.93" y2="305.68" stroke="#15803d" stroke-width="1.4"/>
+<text x="428.93" y="303.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Manufacturing</text>
+<text x="428.93" y="317.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$22  (22.0%)</text>
+<line x1="266.41" y1="375.50" x2="250.41" y2="375.50" stroke="#d97706" stroke-width="1.4"/>
+<text x="246.41" y="373.50" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Healthcare</text>
+<text x="246.41" y="387.50" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$17  (17.0%)</text>
+<line x1="165.04" y1="301.85" x2="149.04" y2="301.85" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="145.04" y="299.85" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Food &amp; Beverage</text>
+<text x="145.04" y="313.85" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13  (13.0%)</text>
+<line x1="153.32" y1="209.10" x2="137.32" y2="209.10" stroke="#dc2626" stroke-width="1.4"/>
+<text x="133.32" y="207.10" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Electronics</text>
+<text x="133.32" y="221.10" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$9  (9.0%)</text>
+<line x1="190.42" y1="141.62" x2="174.42" y2="141.62" stroke="#0891b2" stroke-width="1.4"/>
+<text x="170.42" y="139.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other</text>
+<text x="170.42" y="153.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$9  (9.0%)</text>
+<line x1="253.68" y1="105.54" x2="237.68" y2="105.54" stroke="#db2777" stroke-width="1.4"/>
+<text x="233.68" y="103.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Metals &amp; Mining</text>
+<text x="233.68" y="117.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$8  (8.0%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Linde 2024 Annual Report to Shareholders — Financial Highlights, End Markets pie (FY2024)</text>
+</svg>
+
 *Source: [Linde 2024 Annual Report to Shareholders — Financial Highlights, End Markets pie](https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2024-annual-report-to-shareholders.pdf). Note: Linde does not disclose specialty-electronic-gas revenue separately from broader Electronics; the 9% Electronics slice includes both bulk gases sold to fabs and the specialty-precursor sub-business.*
 
 ---
@@ -364,7 +1020,7 @@ This list is the **anchor** for the competitive analysis below. Any competitor I
 
 ### 7.1 Direct global competitors
 
-**L'Air Liquide S.A. (EPA:AI, market cap ~EUR 100 bn) — the #2 in industrial gases globally.** Air Liquide is the closest peer by product mix, geographic footprint and EPC capability — both companies serve refineries, fabs, healthcare, with similar on-site contract structures and similar Engineering arms (Air Liquide Engineering & Construction is privately reported but operates EPC for ASUs and H₂ plants). Air Liquide's revenue mix tilts more European (~38% EMEA in its 2024 disclosure) and more healthcare-heavy than Linde's; its electronics franchise — anchored by **Voltaix** (acquired 2013) for specialty silicon and germanium precursors — is competitive with Linde's at advanced nodes but smaller in absolute scale ([Air Liquide Electronics — Semiconductors page](https://electronics.airliquide.com/who-we-are/our-markets/semiconductors-0); [Air Liquide 2024 Universal Registration Document](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf)). Operating margin sits in the mid-19%s — below Linde's 29.8% adjusted — reflecting both genuine business-mix differences (more European exposure with structurally higher energy costs) and a less-disciplined contract / cost programme. The TTM P/E is **30.3×** vs LIN 34.4× ([Yahoo Finance — AI.PA](https://finance.yahoo.com/quote/AI.PA/key-statistics/)). *Analyst view:* Linde and Air Liquide are the only two players in the world with a fully integrated gas + EPC + global pipeline footprint; together they form an effective Western duopoly with ~50% combined merchant-and-tonnage share globally.
+**L'Air Liquide S.A. (EPA:AI, market cap ~EUR 100 bn) — the #2 in industrial gases globally.** Air Liquide is the closest peer by product mix, geographic footprint and EPC capability — both companies serve refineries, fabs, healthcare, with similar on-site contract structures and similar Engineering arms (Air Liquide Engineering & Construction is privately reported but operates EPC for ASUs and H₂ plants). Air Liquide's revenue mix tilts more European (~38% EMEA in its 2024 disclosure) and more healthcare-heavy than Linde's; its electronics franchise — anchored by **Voltaix** (acquired 2013) for specialty silicon and germanium precursors — is competitive with Linde's at advanced nodes but smaller in absolute scale ([Air Liquide Electronics — Semiconductors page](https://electronics.airliquide.com/who-we-are/our-markets/semiconductors-0); [Air Liquide 2024 Universal Registration Document](https://www.airliquide.com/sites/airliquide.com/files/2025-03/air-liquide-2024-universal-registration-document.pdf)). Operating margin sits in the mid-19%s — below Linde's 29.8% adjusted — reflecting both genuine business-mix differences (more European exposure with structurally higher energy costs) and a less-disciplined contract / cost programme. Air Liquide trades around a ~30× TTM P/E band vs LIN 34.7× ([Yahoo Finance — AI.PA](https://finance.yahoo.com/quote/AI.PA/key-statistics/)). *Analyst view:* Linde and Air Liquide are the only two players in the world with a fully integrated gas + EPC + global pipeline footprint; together they form an effective Western duopoly with ~50% combined merchant-and-tonnage share globally.
 
 **Air Products and Chemicals, Inc. (NYSE:APD, market cap ~USD 64 bn) — the #3 global player.** APD competes head-to-head with Linde across all distribution channels, with a particular strength in hydrogen (NEOM green-H₂, Louisiana blue-H₂ exporter) and in helium (where APD is one of the two Western leaders alongside Linde). Recent management turnover (Seifi Ghasemi retired in 2024–25 after a 12-year tenure; new CEO took over) has accompanied a partial walk-back of APD's previous aggressive green-H₂ project strategy, with the Texas / Louisiana blue-NH₃ project delayed and capex priorities being reconsidered ([Air Products 2025 10-K, Item 7 — Outlook](https://www.sec.gov/Archives/edgar/data/2969/000000296925000055/apd-20250930.htm)). APD's revenue base of ~USD 12 bn is roughly one-third of Linde's, and its TTM operating margin sits in the low-to-mid 20%s — meaningfully below Linde. The valuation is **TTM P/E 30.5×, P/S 5.2×, EV/EBITDA 21.8×** ([Yahoo Finance — APD](https://finance.yahoo.com/quote/APD/key-statistics/)) — closer to Linde on P/E but with higher EV/EBITDA reflecting more leveraged hydrogen capex.
 
@@ -416,8 +1072,55 @@ Linde anchors the **top-right quadrant — scale leader with full specialty-elec
 4. **Productivity-program culture.** Linde discloses annual productivity savings as a contributor to operating-profit growth (FY25 management commentary explicitly cites "savings from productivity initiatives" — see [Linde 2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)). The cost-reduction discipline is run-rate, embedded in operating cadence rather than periodic restructuring.
 5. **Capital allocation track record.** **$7.4 bn returned to shareholders in FY25** via $2.8 bn dividends + $4.6 bn net buybacks ([Linde 2025 10-K, MD&A — Liquidity](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)); 30+ consecutive years of dividend increases at Praxair and successor Linde. The combination of growth capex ($5.3 bn) + buyback + dividend is unique among industrial-cyclical peers.
 
-![Linde plc — annual capital returns to shareholders, FY2021–FY2025](../../charts/linde_capital_returns.png)
-*Source: [Linde 2025 10-K, Consolidated Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm).*
+**Cash-flow Sankey.** The chart splits FY25's USD 10.4 bn operating cash flow (CFO) into capex, acquisitions, buybacks and dividends — showing that after USD 5.3 bn of growth capex, Linde still returned USD 7.4 bn to shareholders on industry-leading cash conversion.
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Linde plc — FY2025 cash-flow Sankey (US$ mn)</text>
+<path d="M 204.00,64.00 C 306.00,64.00 306.00,78.00 408.00,78.00 L 408.00,224.15 C 306.00,224.15 306.00,210.15 204.00,210.15 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,64.00 C 746.00,64.00 746.00,294.79 848.00,294.79 L 848.00,307.21 C 746.00,307.21 746.00,76.42 644.00,76.42 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,76.42 C 746.00,76.42 746.00,321.21 848.00,321.21 L 848.00,323.21 C 746.00,323.21 746.00,78.42 644.00,78.42 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,77.86 C 526.00,77.86 526.00,91.86 424.00,91.86 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,91.86 C 526.00,91.86 526.00,91.86 628.00,91.86 L 628.00,227.89 C 526.00,227.89 526.00,227.89 424.00,227.89 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,227.89 C 526.00,227.89 526.00,241.89 628.00,241.89 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,224.15 C 306.00,224.15 306.00,224.15 408.00,224.15 L 408.00,536.05 C 306.00,536.05 306.00,536.05 204.00,536.05 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,550.05 C 306.00,550.05 306.00,536.05 408.00,536.05 L 408.00,540.00 C 306.00,540.00 306.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="146.15" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="224.15" width="16" height="311.90" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="550.05" width="16" height="3.95" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="13.86" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="91.86" width="16" height="136.03" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="241.89" width="16" height="312.11" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="294.79" width="16" height="12.42" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="321.21" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="134.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="147.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.8B  (31.6%)</text>
+<rect x="207.00" y="192.10" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="204.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="217.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$10.3B  (67.5%)</text>
+<rect x="207.00" y="518.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$131.0M  (0.85%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$15.3B  (100.0%)</text>
+<rect x="647.00" y="46.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$460.0M  (3.0%)</text>
+<rect x="647.00" y="73.86" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="85.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="98.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.5B  (29.4%)</text>
+<text x="653.00" y="394.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="407.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$10.4B  (67.6%)</text>
+<text x="873.00" y="298.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Acquisitions</text>
+<text x="873.00" y="311.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$412.0M  (2.7%)</text>
+<text x="873.00" y="323.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other investing</text>
+<text x="873.00" y="336.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$48.0M  (0.31%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$5.1B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Linde 2025 10-K — Consolidated Statements of Cash Flows (FY2025)</text>
+</svg>
+
+*Source: [Linde 2025 10-K, Consolidated Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm). Every figure is taken from the 10-K cash-flow statement.*
 
 ### 7.5 Competitive vulnerabilities
 
@@ -506,9 +1209,137 @@ The combination is why Linde's revenue is forecast to grow at **GDP + 4–5 ppt*
 
 **10. Capital-intensity / FCF conversion at peak backlog.** Linde's FY25 capex of $5.26 bn is the highest in company history, driven by clean-H₂ project starts and electronics fab ASUs. Capex is projected to peak at **$5.0–5.5 bn in FY26** ([Q1-2026 Earnings Press Release](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm)) — well above the 2018–2022 baseline of $2.5–3.5 bn. The FCF profile in 2026–2028 will be tighter than historical, with FCF/OCF conversion dipping to ~50% from ~70% historical. Severity: **low** (FCF is still $5+ bn; buyback / dividend capacity is preserved); likelihood: **high** (already disclosed).
 
-**11. Valuation / multiple-compression risk.** At 34.4× TTM P/E, Linde trades **2–3 P/E turns above peer Air Liquide (30.3×) and Air Products (30.5×)**, reflecting its quality-and-growth premium. If FY26 EPS comes in at the low end of guidance ($17.60) and the multiple compresses one turn to ~30×, the stock falls ~10% on a $528 EPS-implied price ($17.60 × 30× = $528, vs. spot $517.58). Catalysts for compression: a clean-H₂ project cancellation, an electronics-capex deceleration, a Linde-specific charge, or a broader rate move pushing the long-duration-growth complex lower. Severity: **moderate**; likelihood: **low-to-moderate** (the company's earnings consistency is the structural mitigant).
+**11. Valuation / multiple-compression risk.** At 34.7× TTM P/E (26.6× forward), Linde trades **2–3 P/E turns above peers Air Liquide and Air Products (~30× each)**, reflecting its quality-and-growth premium. If FY26 adjusted EPS lands at the low end of guidance ($17.60) and the multiple compresses one turn to ~30×, the stock falls ~−1% from spot on a $528 EPS-implied price ($17.60 × 30× = $528, vs. spot $523.57); a deeper de-rate to ~28× ($493) is roughly −6%. Catalysts for compression: a clean-H₂ project cancellation, an electronics-capex deceleration, a Linde-specific charge, or a broader rate move pushing the long-duration-growth complex lower. Severity: **moderate**; likelihood: **low-to-moderate** (the company's earnings consistency is the structural mitigant).
 
-**12. Interest-rate sensitivity at higher debt load.** Linde's FY25 net debt borrowings were **$2.9 bn** ([Linde 2025 10-K, Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)), funding the buyback + project capex above OCF. Interest expense, net was $255 mn in FY25 vs. $256 mn in FY24 ([Linde 2025 10-K, MD&A Reconciliation](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)). Refinancing in a higher-for-longer rate regime adds ~$50–100 mn of incremental annual interest over a 3-year window — material but small relative to $10 bn of OCF. Severity: **low**; likelihood: **moderate**.
+**12. Interest-rate sensitivity at higher debt load.** Linde's FY25 net debt borrowings were **$2.9 bn** ([Linde 2025 10-K, Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)), funding the buyback + project capex above OCF. Interest expense, net was $255 mn in FY25 vs. $256 mn in FY24 ([Linde 2025 10-K, MD&A Reconciliation](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm)). Refinancing in a higher-for-longer rate regime adds ~$50–100 mn of incremental annual interest over a 3-year window — material but small relative to $10 bn of OCF. On 2026-05-13 Linde issued a further **EUR 1.6 bn** of euro notes (€600 mn floating-rate 2028 + €500 mn 3.200% 2030 + €500 mn 3.800% 2036), continuing its local-currency-debt natural-hedge practice ([Linde 8-K, 2026-05-13 — Item 8.01](https://www.sec.gov/Archives/edgar/data/1707925/000119312526221558/d108557d8k.htm)). Severity: **low**; likelihood: **moderate**.
+
+**Balance-sheet Sankey.** FY25 total assets of USD 86.8 bn — of which ~USD 40 bn is goodwill + intangibles from the Linde AG merger, the root of the high-EPS / low-book-ROE appearance; on the liability side long-term debt is USD 20.7 bn and total equity USD 39.7 bn, modest leverage.
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Linde plc — FY2025 balance-sheet Sankey (US$ mn)</text>
+<path d="M 204.00,71.00 C 262.00,71.00 262.00,120.00 320.00,120.00 L 320.00,141.20 C 262.00,141.20 262.00,92.20 204.00,92.20 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,106.03 C 790.00,106.03 790.00,28.83 848.00,28.83 L 848.00,40.62 C 790.00,40.62 790.00,117.81 732.00,117.81 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,117.81 C 790.00,117.81 790.00,54.62 848.00,54.62 L 848.00,73.52 C 790.00,73.52 790.00,136.72 732.00,136.72 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,136.72 C 790.00,136.72 790.00,87.52 848.00,87.52 L 848.00,95.05 C 790.00,95.05 790.00,144.25 732.00,144.25 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,144.25 C 790.00,144.25 790.00,109.05 848.00,109.05 L 848.00,134.55 C 790.00,134.55 790.00,169.75 732.00,169.75 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,106.20 C 262.00,106.20 262.00,141.20 320.00,141.20 L 320.00,162.02 C 262.00,162.02 262.00,127.02 204.00,127.02 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,120.00 C 394.00,120.00 394.00,127.00 452.00,127.00 L 452.00,182.87 C 394.00,182.87 394.00,175.87 336.00,175.87 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,120.03 C 658.00,120.03 658.00,106.03 716.00,106.03 L 716.00,169.75 C 658.00,169.75 658.00,183.75 600.00,183.75 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,183.75 C 658.00,183.75 658.00,183.75 716.00,183.75 L 716.00,317.40 C 658.00,317.40 658.00,317.40 600.00,317.40 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,127.00 C 526.00,127.00 526.00,120.03 584.00,120.03 L 584.00,317.40 C 526.00,317.40 526.00,324.38 468.00,324.38 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,324.38 C 526.00,324.38 526.00,331.40 584.00,331.40 L 584.00,497.97 C 526.00,497.97 526.00,490.95 468.00,490.95 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,141.02 C 262.00,141.02 262.00,162.02 320.00,162.02 L 320.00,170.64 C 262.00,170.64 262.00,149.64 204.00,149.64 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,163.64 C 262.00,163.64 262.00,170.64 320.00,170.64 L 320.00,175.87 C 262.00,175.87 262.00,168.87 204.00,168.87 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,182.87 C 262.00,182.87 262.00,189.87 320.00,189.87 L 320.00,308.35 C 262.00,308.35 262.00,301.35 204.00,301.35 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,183.75 C 790.00,183.75 790.00,148.55 848.00,148.55 L 848.00,235.27 C 790.00,235.27 790.00,270.47 732.00,270.47 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,270.47 C 790.00,270.47 790.00,249.27 848.00,249.27 L 848.00,277.95 C 790.00,277.95 790.00,299.14 732.00,299.14 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,299.14 C 790.00,299.14 790.00,291.95 848.00,291.95 L 848.00,310.21 C 790.00,310.21 790.00,317.40 732.00,317.40 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,189.87 C 394.00,189.87 394.00,182.87 452.00,182.87 L 452.00,491.00 C 394.00,491.00 394.00,498.00 336.00,498.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,315.35 C 262.00,315.35 262.00,308.35 320.00,308.35 L 320.00,425.44 C 262.00,425.44 262.00,432.44 204.00,432.44 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,331.40 C 790.00,331.40 790.00,324.21 848.00,324.21 L 848.00,489.53 C 790.00,489.53 790.00,496.73 732.00,496.73 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,331.40 C 658.00,331.40 658.00,331.40 716.00,331.40 L 716.00,491.75 C 658.00,491.75 658.00,491.75 600.00,491.75 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,496.73 C 790.00,496.73 790.00,503.53 848.00,503.53 L 848.00,573.17 C 790.00,573.17 790.00,566.36 732.00,566.36 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,491.75 C 658.00,491.75 658.00,505.75 716.00,505.75 L 716.00,511.97 C 658.00,511.97 658.00,497.97 600.00,497.97 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,566.36 C 790.00,566.36 790.00,587.17 848.00,587.17 L 848.00,589.17 C 790.00,589.17 790.00,568.36 732.00,568.36 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,446.44 C 262.00,446.44 262.00,425.44 320.00,425.44 L 320.00,475.22 C 262.00,475.22 262.00,496.22 204.00,496.22 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,510.22 C 262.00,510.22 262.00,475.22 320.00,475.22 L 320.00,483.67 C 262.00,483.67 262.00,518.67 204.00,518.67 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,532.67 C 262.00,532.67 262.00,483.67 320.00,483.67 L 320.00,498.00 C 262.00,498.00 262.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="21.20" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="106.20" width="16" height="20.82" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="141.02" width="16" height="8.62" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="163.64" width="16" height="5.23" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="182.87" width="16" height="118.49" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="315.35" width="16" height="117.09" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="446.44" width="16" height="49.77" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="510.22" width="16" height="8.45" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="532.67" width="16" height="14.33" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="120.00" width="16" height="55.87" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="189.87" width="16" height="308.13" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="127.00" width="16" height="364.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="120.03" width="16" height="197.38" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="331.40" width="16" height="166.57" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="106.03" width="16" height="63.72" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="183.75" width="16" height="133.66" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="331.40" width="16" height="160.35" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="505.75" width="16" height="6.22" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="28.83" width="16" height="11.78" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="54.62" width="16" height="18.91" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="87.52" width="16" height="7.53" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="109.05" width="16" height="25.50" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="148.55" width="16" height="86.72" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="249.27" width="16" height="28.68" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="291.95" width="16" height="18.26" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="324.21" width="16" height="165.32" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="503.53" width="16" height="69.63" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="587.17" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="76.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash</text>
+<text x="179.00" y="89.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.1B  (5.8%)</text>
+<text x="179.00" y="111.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Receivables</text>
+<text x="179.00" y="124.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.0B  (5.7%)</text>
+<text x="179.00" y="139.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Inventories</text>
+<text x="179.00" y="152.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.1B  (2.4%)</text>
+<text x="179.00" y="164.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other current</text>
+<text x="179.00" y="177.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (1.4%)</text>
+<text x="179.00" y="236.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">PP&amp;E net</text>
+<text x="179.00" y="249.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$28.3B  (32.6%)</text>
+<text x="179.00" y="368.30" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Goodwill</text>
+<text x="179.00" y="381.30" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$27.9B  (32.2%)</text>
+<text x="179.00" y="465.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Intangibles</text>
+<text x="179.00" y="478.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.9B  (13.7%)</text>
+<text x="179.00" y="508.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Equity investments</text>
+<text x="179.00" y="521.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.0B  (2.3%)</text>
+<text x="179.00" y="534.23" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other LT assets</text>
+<text x="179.00" y="547.23" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.4B  (3.9%)</text>
+<rect x="339.00" y="102.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="114.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="127.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$13.3B  (15.3%)</text>
+<rect x="339.00" y="171.87" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="183.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="196.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$73.5B  (84.7%)</text>
+<rect x="471.00" y="109.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="121.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="134.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$86.8B  (100.0%)</text>
+<rect x="603.00" y="102.03" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="114.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="127.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$47.1B  (54.2%)</text>
+<rect x="603.00" y="313.40" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="325.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="338.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$39.7B  (45.8%)</text>
+<rect x="735.00" y="88.03" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="100.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="113.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$15.2B  (17.5%)</text>
+<rect x="735.00" y="165.75" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="177.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="190.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$31.9B  (36.7%)</text>
+<rect x="735.00" y="313.40" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="325.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="338.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$38.2B  (44.1%)</text>
+<text x="741.00" y="505.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Minority Interest</text>
+<text x="741.00" y="518.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.5B  (1.7%)</text>
+<text x="873.00" y="31.72" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Accounts payable</text>
+<text x="873.00" y="44.72" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.8B  (3.2%)</text>
+<text x="873.00" y="61.07" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Short-term debt</text>
+<text x="873.00" y="74.07" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.5B  (5.2%)</text>
+<text x="873.00" y="88.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Curr. LT debt</text>
+<text x="873.00" y="101.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.8B  (2.1%)</text>
+<text x="873.00" y="118.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other current liab</text>
+<text x="873.00" y="131.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.1B  (7.0%)</text>
+<text x="873.00" y="188.91" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Long-term debt</text>
+<text x="873.00" y="201.91" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$20.7B  (23.8%)</text>
+<text x="873.00" y="260.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Deferred credits</text>
+<text x="873.00" y="273.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.8B  (7.9%)</text>
+<text x="873.00" y="298.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other LT liab</text>
+<text x="873.00" y="311.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.4B  (5.0%)</text>
+<text x="873.00" y="403.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Paid-in capital</text>
+<text x="873.00" y="416.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$39.4B  (45.4%)</text>
+<text x="873.00" y="535.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Retained earnings</text>
+<text x="873.00" y="548.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$16.6B  (19.1%)</text>
+<text x="873.00" y="585.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Treasury &amp; AOCI</text>
+<text x="873.00" y="598.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$17.8B  (-20.5%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Linde 2025 10-K — Consolidated Balance Sheets (Dec 31, 2025)</text>
+</svg>
+
+*Source: [Linde 2025 10-K — Consolidated Balance Sheets (Dec 31, 2025)](https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/lin-20251231.htm). Every figure is taken from the 10-K consolidated balance sheet.*
 
 ### Macroeconomic risks
 
@@ -549,6 +1380,9 @@ The compounded risk picture for Linde is unusually **balanced**: no single risk 
 - [Linde 2026 DEF 14A (filed 2026-04-29)](https://www.sec.gov/Archives/edgar/data/1707925/000119312526192209/lin-20260429.htm) — for governance, director / CEO bios, executive compensation.
 - [Linde 8-K — Q1-FY2026 Earnings Press Release Exhibit 99.1 (filed 2026-05-01)](https://www.sec.gov/Archives/edgar/data/1707925/000165495426004202/lin_ex991.htm) — for Q1 results and FY26 guidance raise.
 - [Linde 8-K — Q4-FY2025 Earnings Press Release Exhibit 99.1 (filed 2026-02-05)](https://www.sec.gov/Archives/edgar/data/1707925/000165495426000913/lin_ex991.htm) — for FY26 initial guidance.
+- [Linde 8-K (filed 2026-05-13) — Item 8.01 EUR 1.6 bn euro-note issuance](https://www.sec.gov/Archives/edgar/data/1707925/000119312526221558/d108557d8k.htm) — §9 latest rate / debt-structure event.
+- [Linde 10-K FY2023 (filed 2024-02-28) — FY21–FY23 revenue / adjusted EPS history](https://www.sec.gov/Archives/edgar/data/1707925/000162828024007424/lin-20231231.htm) — basis for the revbars / GF Score history series.
+- [Linde 10-K FY2022 (filed 2023-02-28) — FY21–FY22 revenue / adjusted EPS](https://www.sec.gov/Archives/edgar/data/1707925/000162828023005434/lin-20221231.htm) — source of FY21 adjusted EPS $10.69.
 - [Linde 2017 10-K (filed 2018-03-23) — predecessor / Zamalight plc filing](https://www.sec.gov/Archives/edgar/data/1707925/000170792518000004/lindeplc201710k.htm) — for Praxair-Linde merger documentation.
 - [SEC EDGAR Linde plc filings page (CIK lookup, Zamalight prior-name disclosure)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001707925&type=10-K&dateb=&owner=include&count=10).
 
@@ -575,11 +1409,15 @@ The compounded risk picture for Linde is unusually **balanced**: no single risk 
 
 ### Market-data sources
 
-- [Yahoo Finance — LIN Key Statistics](https://finance.yahoo.com/quote/LIN/key-statistics/) (accessed 2026-05-25).
+- [Yahoo Finance — LIN Key Statistics](https://finance.yahoo.com/quote/LIN/key-statistics/) (price data as of 2026-06-12 close / accessed 2026-06-14; spot USD 523.57, market cap ~USD 242 bn, TTM P/E 34.7×, forward P/E 26.6×, consensus PT USD 545.44 / 25 analysts).
 - [Yahoo Finance — APD Key Statistics](https://finance.yahoo.com/quote/APD/key-statistics/).
 - [Yahoo Finance — AI.PA Key Statistics](https://finance.yahoo.com/quote/AI.PA/key-statistics/).
 - [Yahoo Finance — 4091.T (Nippon Sanso) Key Statistics](https://finance.yahoo.com/quote/4091.T/key-statistics/).
 - [Yahoo Finance — 4063.T (Shin-Etsu Chemical) Key Statistics](https://finance.yahoo.com/quote/4063.T/key-statistics/).
+
+### Local broker-research library (db/zsxq.db) — sell-side (*Analyst view*)
+
+- *Analyst view:* [UBS — Guangdong Huate Gas (688268.SH): Helium price hikes fully priced in; downgrade to Neutral, 2026-06-11, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412455482522448/UBS-Guangdong%20Huate%20Gas%EF%BC%88688268%EF%BC%89Helium%20price%20hikes%20fully%20priced%20in%EF%BC%9B%20downgrade%20to%20Neutral-260611.pdf) — used as a sector cross-read that the electronic-specialty-gas / helium chain is fully valued (§1C valuation snapshot). The local library holds no single-name English broker deep-dive on Linde / Air Products; this UBS peer note is the closest industrial-gas sell-side view.
 
 ### Internal cross-references
 
@@ -659,5 +1497,47 @@ SEC URLs (all confirmed 200 with `Research Analyst lx00617@gmail.com` UA per SEC
 - The 2024 ARS end-market pie cited in §4.10 is from the published annual report; subsequent updates (2025 ARS) were not yet available as of the report date.
 - Helium recovery / source detail beyond the verbatim 10-K text relies on industry observation; precise Linde helium-business revenue is not separately disclosed.
 - Yingde Gases revenue figures are analyst estimates — the company has been private since the 2017 take-private and does not publish audited annuals.
+
+</details>
+
+<details>
+<summary>Verification log (Step 10) — 2026-06-14</summary>
+
+**Scope of this refresh (2026-06-14).** Built on the 2026-05-26 version as a "refresh to current spec": (1) price / market cap / valuation updated to the 2026-06-12 close; (2) added the decision layer (Investment Summary header + rating / PT + bull/base/bear + vs consensus); (3) added §1B GF Score scorecard (72/100); (4) added §1C Valuation & Price Target chapter; (5) replaced all 7 legacy matplotlib PNGs with 11 stdlib inline SVG charts (income/balance/cashflow Sankey, segment/geo/distribution/end-market donut, revbars, DuPont, GF radar, moneyflow supply-chain map); (6) added one peer sell-side note from the local broker library; (7) appended this log. The §1–§10 descriptive body (FY25 10-K / Q1 FY26 data) was re-checked and remains current, with light edits.
+
+**Step 0.5 sec-report-summary** — skipped (this is a refresh of existing coverage, not an initiation; the multi-year evolution threads in §4/§6/§9 were built from the FY21–FY25 10-Ks in the 2026-05-26 version and retained. A heavy multi-10-K read is not required for a refresh on a 16 GB machine).
+
+**Price / valuation update (2026-06-12 close, yfinance + Yahoo Finance Key Statistics, accessed 2026-06-14):** spot USD 523.57 ✓; market cap ~USD 242 bn ✓; shares 462.3 mn ✓; 52-wk 387.78–525.82 ✓; TTM P/E 34.7× ✓; forward P/E 26.6× (forward EPS ~$19.71) ✓; P/S 6.99× ✓; P/B 6.28× ✓; EV/EBITDA 19.6× ✓; EV/Rev 7.68× ✓; div yield 1.22% ✓; beta 0.73 ✓; EV ~USD 266 bn ✓; consensus PT USD 545.44 / 25 analysts, rating Buy ✓ ([Yahoo Finance — LIN](https://finance.yahoo.com/quote/LIN/key-statistics/)).
+
+**New SEC URLs (UA = `Research Analyst lx00617@gmail.com`, all HTTP 200):**
+- Linde 8-K 2026-05-13 `d108557d8k.htm` (0001193125-26-221558) — 200; Item 8.01 EUR 1.6 bn euro notes (€600 mn FRN 2028 + €500 mn 3.200% 2030 + €500 mn 3.800% 2036) ✓ verbatim string-match.
+- Linde 10-K FY2023 `lin-20231231.htm` (0001628280-24-007424) — 200; FY21 sales $30,793 / FY22 $33,364 / FY23 $32,854 ✓; FY23 adjusted EPS $14.20 ✓.
+- Linde 10-K FY2022 `lin-20221231.htm` (0001628280-23-005434) — 200; FY21 adjusted EPS $10.69 ✓ string-match.
+- All resolved via `https://data.sec.gov/submissions/CIK0001707925.json`; no synthetic filenames.
+
+**Financial-chart figure string-matches (every value from FY25 10-K; all 11 charts pasted un-fenced):**
+- income Sankey: revenue 33,986 / COGS 17,389 / gross profit 16,597 / operating income 8,923 / tax 1,989 / minority 160 / net income 6,898 ✓.
+- balance Sankey: total assets 86,817 / PP&E 28,260 / goodwill 27,927 / intangibles 11,871 / LT debt 20,683 / total equity 39,728 ✓.
+- cashflow Sankey: CFO 10,350 / capex 5,261 / buybacks 4,601 / dividends 2,811 / acquisitions 412 ✓.
+- segment donut: Americas 15,208 / EMEA 8,549 / APAC 6,661 / Engineering 2,250 / Other 1,318 ✓ (Note 18).
+- geo donut: US 12,182 / China 2,600 / Germany 2,432 / UK 1,510 / Mexico 1,391 / Brazil 1,325 / Australia 1,287 / Other 11,259 ✓.
+- revbars FY21–25 by segment ✓ (from FY22 / FY23 / FY25 10-K Note 18 / MD&A).
+- DuPont: ROE 18.07% / net margin 20.30% / reported operating margin 26.25% / asset turnover 0.41 / equity multiplier 2.19 — self-consistent from 10-K income statement + balance sheet.
+- distribution donut (38/32/25/5) & end-market donut (22/22/17/13/9/9/8) ✓ from the [2024 ARS Financial Highlights pies](https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/full-year-financial-reports/2024-annual-report-to-shareholders.pdf) (PDF page 2 rendered + pixel-checked).
+
+**moneyflow node/label string-matches:** all nodes are 10-K-verifiable; "energy is the single largest cost item" ✓ verbatim 10-K; ribbon labels capex US$5.3bn ✓, returns US$7.4bn ✓, backlog US$7.1bn ✓ — each cited inline in the surrounding paragraph.
+
+**GF Score (*Analyst view*, no filing citation):** axes 8/9/6/4/8 → composite 72/100; each underlying metric cited in §1B; not attributed to GuruFocus.
+
+**Decision layer (*Analyst view*, no filing citation):** rating Hold; base PT USD 545 = FY27E EPS $19.70 × 28×; bull USD 620 / bear USD 440; matches consensus number (USD 545.44) with a rating split (Street Buy vs Hold) called out. Forward-estimate table cites each driver's external basis; no `(Source: our model)`.
+
+**Local broker library (db/zsxq.db):** searched LIN / Linde / 林德 / industrial gas / Air Products — no single-name Linde / APD English deep-dive; closest is [UBS Guangdong Huate Gas 688268, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/412455482522448/UBS-Guangdong%20Huate%20Gas%EF%BC%88688268%EF%BC%89Helium%20price%20hikes%20fully%20priced%20in%EF%BC%9B%20downgrade%20to%20Neutral-260611.pdf) (file_id 412455482522448, local_exists ✓). Quoted "73x 2027E PE", "Rmb190.68", "downgrade to Neutral" all string-match the summary. Only 1 note → the ≥2-note sell-side-view-evolution subsection is not triggered. Labelled *Analyst view:*, never blended into a filing citation.
+
+**Render check (viewer port 5002):** report served HTTP 200; all 11 chart SVGs + 5 mermaid blocks render (mermaid `graph LR` fixed — unquoted-parenthesis node labels quoted); 0 broken images, 0 mermaid syntax errors.
+
+**Residual unknowns:**
+- Still no top-1 / top-5 customer revenue-share disclosure (10-K only the "not dependent on a single customer" statement).
+- FY27–28E forward estimates are this report's extrapolation (FY26 uses the guided midpoint $17.75).
+- The 2025 ARS single-page Financial Highlights is not yet published; end-market / distribution-mode pies use the official 2024 ARS data.
 
 </details>
