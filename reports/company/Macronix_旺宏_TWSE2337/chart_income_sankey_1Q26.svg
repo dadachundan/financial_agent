@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">旺宏 1Q26 损益 Sankey（NT$m，结束十连亏之季）</text>
+<path d="M 204.00,64.00 C 258.00,64.00 258.00,85.00 312.00,85.00 L 312.00,321.64 C 258.00,321.64 258.00,300.64 204.00,300.64 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,198.77 560.00,198.77 L 560.00,274.26 C 506.00,274.26 506.00,153.49 452.00,153.49 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,153.49 C 506.00,153.49 506.00,288.26 560.00,288.26 L 560.00,379.23 C 506.00,379.23 506.00,244.45 452.00,244.45 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,244.45 C 382.00,244.45 382.00,251.45 328.00,251.45 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,251.45 C 382.00,251.45 382.00,258.45 436.00,258.45 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,196.83 C 754.00,196.83 754.00,242.31 808.00,242.31 L 808.00,311.64 C 754.00,311.64 754.00,266.16 700.00,266.16 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,266.16 C 754.00,266.16 754.00,325.64 808.00,325.64 L 808.00,335.69 C 754.00,335.69 754.00,276.21 700.00,276.21 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,198.77 C 630.00,198.77 630.00,196.83 684.00,196.83 L 684.00,272.32 C 630.00,272.32 630.00,274.26 576.00,274.26 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,288.26 C 630.00,288.26 630.00,290.21 684.00,290.21 L 684.00,381.17 C 630.00,381.17 630.00,379.23 576.00,379.23 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,314.64 C 258.00,314.64 258.00,321.64 312.00,321.64 L 312.00,444.05 C 258.00,444.05 258.00,437.05 204.00,437.05 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,451.05 C 258.00,451.05 258.00,444.05 312.00,444.05 L 312.00,476.71 C 258.00,476.71 258.00,483.71 204.00,483.71 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,497.71 C 258.00,497.71 258.00,476.71 312.00,476.71 L 312.00,493.00 C 258.00,493.00 258.00,514.00 204.00,514.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="236.64" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="314.64" width="16" height="122.41" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="451.05" width="16" height="32.66" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="497.71" width="16" height="16.29" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="166.45" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="258.45" width="16" height="241.55" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="198.77" width="16" height="75.49" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="288.26" width="16" height="90.96" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="196.83" width="16" height="79.39" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="290.21" width="16" height="90.96" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="242.31" width="16" height="69.33" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="325.64" width="16" height="10.05" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="182.32" x2="182.00" y2="163.46" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="166.46" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">NOR Flash 58%</text>
+<text x="179.00" y="179.46" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$6.1B  (58.0%)</text>
+<line x1="188.00" y1="375.85" x2="182.00" y2="356.99" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="359.99" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">NAND/eMMC 30%</text>
+<text x="179.00" y="372.99" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$3.1B  (30.0%)</text>
+<line x1="188.00" y1="467.38" x2="182.00" y2="448.53" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="451.53" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">ROM 8%</text>
+<text x="179.00" y="464.53" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$838.0M  (8.0%)</text>
+<line x1="188.00" y1="505.85" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Foundry ~4%</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$418.0M  (4.0%)</text>
+<rect x="331.00" y="67.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$10.5B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$4.3B  (40.8%)</text>
+<rect x="455.00" y="240.45" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="252.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="265.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$6.2B  (59.2%)</text>
+<rect x="579.00" y="180.77" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="192.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="205.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$1.9B  (18.5%)</text>
+<rect x="579.00" y="270.26" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="282.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="295.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$2.3B  (22.3%)</text>
+<rect x="703.00" y="178.83" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="190.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="203.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$2.0B  (19.5%)</text>
+<rect x="703.00" y="272.21" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="284.21" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="297.21" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$2.3B  (22.3%)</text>
+<text x="833.00" y="273.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="286.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$1.8B  (17.0%)</text>
+<text x="833.00" y="327.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="340.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$258.0M  (2.5%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Macronix 2025 年报 p.103/127, 旺宏 1Q26 法说会 (TrendForce/Taipei Times 2026-04-28)</text>
+</svg>

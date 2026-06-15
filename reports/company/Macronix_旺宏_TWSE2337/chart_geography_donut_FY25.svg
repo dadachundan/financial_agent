@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">旺宏 FY2025 营收按地区（单一分母：合并净营收 NT$28.88bn）</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 372.39,340.70 L 337.87,299.18 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 372.39,340.70 A 132 132 0 0 1 196.55,334.39 L 233.96,295.45 A 78 78 0 0 0 337.87,299.18 Z" fill="#15803d"/>
+<path d="M 196.55,334.39 A 132 132 0 0 1 167.67,184.94 L 216.89,207.14 A 78 78 0 0 0 233.96,295.45 Z" fill="#d97706"/>
+<path d="M 167.67,184.94 A 132 132 0 0 1 235.74,117.99 L 257.12,167.57 A 78 78 0 0 0 216.89,207.14 Z" fill="#7c3aed"/>
+<path d="M 235.74,117.99 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 257.12,167.57 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">FY25</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">NT$28.9B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="417.78" y1="192.30" x2="433.78" y2="192.30" stroke="#2563eb" stroke-width="1.4"/>
+<text x="437.78" y="190.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">亚洲其他 Asia-other 38.96%</text>
+<text x="437.78" y="204.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$11.3B  (39.0%)</text>
+<line x1="283.05" y1="377.11" x2="267.05" y2="377.11" stroke="#15803d" stroke-width="1.4"/>
+<text x="263.05" y="375.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">台湾 Taiwan 23.22%</text>
+<text x="263.05" y="389.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$6.7B  (23.2%)</text>
+<line x1="152.51" y1="265.39" x2="136.51" y2="265.39" stroke="#d97706" stroke-width="1.4"/>
+<text x="132.51" y="263.39" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">日本 Japan 19.56%</text>
+<text x="132.51" y="277.39" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$5.6B  (19.6%)</text>
+<line x1="191.23" y1="140.82" x2="175.23" y2="140.82" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="171.23" y="138.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">欧洲 Europe 11.78%</text>
+<text x="171.23" y="152.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$3.4B  (11.8%)</text>
+<line x1="260.11" y1="104.05" x2="244.11" y2="104.05" stroke="#dc2626" stroke-width="1.4"/>
+<text x="240.11" y="102.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">美国 US 6.48%</text>
+<text x="240.11" y="116.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$1.9B  (6.5%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Macronix 2025 年报 p.108 (地区别营收)</text>
+</svg>

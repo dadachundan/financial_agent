@@ -1,19 +1,19 @@
 # 旺宏电子 Macronix International Co., Ltd.（TWSE:2337）公司研究报告
 
-**As of: 2026-06-11** · 初次覆盖（Initiating Coverage） · 报告语言：简体中文（技术/财务术语保留英文）
+**As of: 2026-06-15** · 初次覆盖（Initiating Coverage） · 报告语言：简体中文（技术/财务术语保留英文）
 
-> *分析师观点：* **评级：Buy（买入）· 12 个月目标价 NT$180（较 2026-06-10 收盘价 NT$135.0 上行 +33%）· 估值方法：4.6x 2026E BVPS（≈10.7x 2027E EPS 交叉验证）**
-> 市值 NT$260.4bn · 52 周区间 NT$18.15–180.0 · TWSE:2337 · 数据来源：[Yahoo Finance 2337.TW（yfinance，2026-06-10 收盘）](https://finance.yahoo.com/quote/2337.TW/)
+> *分析师观点：* **评级：Buy（买入）· 12 个月目标价 NT$180（较 2026-06-12 收盘价 NT$146.5 上行 +23%）· 估值方法：4.6x 2026E BVPS（≈10.7x 2027E EPS 交叉验证）**
+> 市值 NT$282.6bn · 52 周区间 NT$18.15–180.0 · TWSE:2337 · 数据来源：[Yahoo Finance 2337.TW（yfinance，2026-06-12 收盘）](https://finance.yahoo.com/quote/2337.TW/)
 >
 > | 倍数 / Multiple（*分析师观点：* 预测列） | FY2025A | FY2026E | FY2027E |
 > |---|---|---|---|
-> | P/E | n.m.（亏损，TTM EPS −NT$1.77） | ~9.6x（EPS NT$14.1E） | ~8.0x（EPS NT$16.9E） |
-> | P/B（年末 BVPS） | 5.1x（BVPS NT$26.25，1Q26 末） | ~3.5x（BVPS ~NT$39E） | ~2.4x（BVPS ~NT$56E） |
-> | P/S | 7.8x（TTM 营收 NT$33.2bn） | ~3.4x（营收 NT$76bnE） | ~2.8x（营收 NT$92bnE） |
+> | P/E | n.m.（亏损，TTM EPS −NT$1.77） | ~10.4x（EPS NT$14.1E） | ~8.7x（EPS NT$16.9E） |
+> | P/B（年末 BVPS） | 5.58x（BVPS NT$26.25，1Q26 末） | ~3.8x（BVPS ~NT$39E） | ~2.6x（BVPS ~NT$56E） |
+> | P/S | 8.5x（TTM 营收 NT$33.2bn） | ~3.7x（营收 NT$76bnE） | ~3.1x（营收 NT$92bnE） |
 >
-> 相对表现（截至 2026-06-10，yfinance）：1M **−11.8%** / 6M **+300.6%** / YTD **+211.4%** / 12M **+536.8%**，同期 TAIEX（^TWII）+7.0% / +63.1% / +52.3% / +109.5% → 相对收益 −18.8pp / +237.5pp / +159.1pp / +427.3pp（[Yahoo Finance](https://finance.yahoo.com/quote/2337.TW/)）。
+> 相对表现（截至 2026-06-12，yfinance）：1M **−12.8%** / 6M **+284.5%** / YTD **+237.9%** / 12M **+562.9%**，同期 TAIEX（^TWII）+6.8% / +56.6% / +50.5% / +98.2% → 相对收益 −19.6pp / +227.9pp / +187.4pp / +464.7pp（[Yahoo Finance](https://finance.yahoo.com/quote/2337.TW/)）。
 >
-> **核心论点（thesis pillars）**——（1）**legacy NAND（MLC/SLC/legacy TLC）供给真空**：Samsung 退出 eMMC、Kioxia/Micron 逐步淡出 SLC NAND，*分析师观点：* MS 称旺宏是"唯一能填补缺口的供应商"，2H26 低容量 NAND 缺口可达 ~40%；（2）**盈利拐点已确认**：1Q26 营收 NT$10.47bn（+71% YoY），gross margin（毛利率）由上季 24.2% 跳升至 40.8%，结束连续十个季度亏损，4–5 月营收同比 +153.7%/+175.8% 持续加速；（3）**NOR Flash（全球份额 ~16.9%）+ ROM（全球份额 >50%）双利基**：AI 服务器/VR 拉动高容量 NOR 渠道价从 US$1 涨至 US$8（*分析师观点：* MS 渠道观察）；（4）**估值仍低于盈利弹性**：现价对应 ~9.6x FY26E P/E / 3.5x 2026E BVPS，低于 MS 7.0x P/B 目标框架，BVPS 在 ROAE 50%+ 阶段快速复利。
+> **核心论点（thesis pillars）**——（1）**legacy NAND（MLC/SLC/legacy TLC）供给真空**：Samsung 退出 eMMC、Kioxia/Micron 逐步淡出 SLC NAND，*分析师观点：* MS 称旺宏是"唯一能填补缺口的供应商"，2H26 低容量 NAND 缺口可达 ~40%；（2）**盈利拐点已确认**：1Q26 营收 NT$10.47bn（+71% YoY），gross margin（毛利率）由上季 24.2% 跳升至 40.8%，结束连续十个季度亏损，4–5 月营收同比 +153.7%/+175.8% 持续加速（5 月 NT$6.256bn）；（3）**NOR Flash（全球份额 ~16.9%）+ ROM（全球份额 >50%）双利基**：AI 服务器/VR 拉动高容量 NOR 渠道价从 US$1 涨至 US$8（*分析师观点：* MS 渠道观察）；（4）**估值仍低于盈利弹性**：现价对应 ~10.4x FY26E P/E / 3.8x 2026E BVPS，低于 MS 7.0x P/B 目标框架，BVPS 在 ROAE 50%+ 阶段快速复利。需留意的近期信号：*分析师观点：* MS 5 月营收追踪显示旺宏 5 月营收较 MS 预期低 8%（板块普遍如此：华邦 −10%、南亚科 −6%），即"增速仍高、但环比斜率开始钝化"（[Morgan Stanley — Taiwan Tech Monthly Revenue Tracker: May Rev Wrap, 2026-06-10, p.1/p.7](http://xs-macbook-air.local:5001/zsxq/pdf/412458118152558/Morgan%20Stanley-Taiwan%20Tech%20%E2%80%93%20Monthly%20Revenue%20Tracker%20-%20Asia%20Pacific%EF%BC%9AMay%20Revenue%20Wrap%20%E2%80%93%20AI%20Momentum%20Persists-260610.pdf)）。
 
 ---
 
@@ -21,6 +21,7 @@
 
 1. [公司概览](#1-公司概览)
 1A. [估值与目标价](#1a-估值与目标价)
+1B. [GF Score 基本面评分卡](#1b-gf-score-基本面评分卡)
 2. [公司历史](#2-公司历史)
 3. [管理团队](#3-管理团队)
 4. [产品与服务](#4-产品与服务)
@@ -36,7 +37,7 @@
 
 ## 1. 公司概览
 
-*分析师观点：* 本报告以 **Buy（买入）、12 个月目标价 NT$180（+33%）** 初次覆盖旺宏电子。Why-now：存储行业正经历一场由 AI 资本开支驱动的结构性供给重置——头部大厂将产能全面转向 HBM（高带宽内存）与先进制程，致使 legacy memory（传统/利基存储）出现"退出式短缺"；旺宏作为全球 mask ROM 份额超过一半、NOR Flash 份额 ~16.9%、且在低容量 MLC/SLC NAND 上被 Morgan Stanley 称为"唯一能填补缺口的供应商"的 NVM（non-volatile memory，非挥发性存储）专业厂，是这场短缺中**杠杆最纯粹的价格受益者**：1Q26 公司毛利率单季提升 16.6 个百分点、十个季度以来首次转盈，而 4–5 月营收同比增速仍在加速（+153.7% → +175.8%）。在 MS 的 +200% 全年涨价路径与 Bernstein 的 2H26 涨价减速路径之间，我们取中性偏多假设，以 4.6x 2026E BVPS 定价（详见 1A 节）。
+*分析师观点：* 本报告以 **Buy（买入）、12 个月目标价 NT$180（较 2026-06-12 收盘 NT$146.5 上行 +23%）** 初次覆盖旺宏电子。Why-now：存储行业正经历一场由 AI 资本开支驱动的结构性供给重置——头部大厂将产能全面转向 HBM（高带宽内存）与先进制程，致使 legacy memory（传统/利基存储）出现"退出式短缺"；旺宏作为全球 mask ROM 份额超过一半、NOR Flash 份额 ~16.9%、且在低容量 MLC/SLC NAND 上被 Morgan Stanley 称为"唯一能填补缺口的供应商"的 NVM（non-volatile memory，非挥发性存储）专业厂，是这场短缺中**杠杆最纯粹的价格受益者**：1Q26 公司毛利率单季提升 16.6 个百分点、十个季度以来首次转盈，而 4–5 月营收同比增速仍在加速（+153.7% → +175.8%）。在 MS 的 +200% 全年涨价路径与 Bernstein 的 2H26 涨价减速路径之间，我们取中性偏多假设，以 4.6x 2026E BVPS 定价（详见 1A 节）。
 
 **公司是做什么的。** 旺宏电子成立于 1989 年，总部位于台湾新竹科学园区，是一家专注 NVM 的 IDM（integrated device manufacturer，整合元件制造商）。按公司 2025 年年报的表述："The Company and subsidiary main business concentrates on the design, manufacture, sales, and foundry services of integrated circuits and memory chips"（公司及子公司主营集成电路与存储芯片的设计、制造、销售及代工服务），产品线覆盖 **ROM、NOR Flash、NAND Flash（以 SLC 为主）与 eMMC**，并以成熟制程提供少量 wafer foundry（晶圆代工）服务（[Macronix 2025 年年报（英文版），p.103](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）。年报同页明确："The Company is the world's leading supplier of NOR Flash and SLC NAND Flash"，且 ROM 业务"has long been ranked as the largest ROM supplier in the world, with more than half of the market share"（长期位居全球最大 ROM 供应商、份额过半）（[2025 年年报, p.104](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）。
 
@@ -64,7 +65,7 @@ xychart-beta
 
 来源：FY 毛利率由各年年报损益表计算（FY22 GP NT$19.24bn/营收 NT$43.49bn 等，[2023 年年报, p.143](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2023_en.pdf)、[2025 年年报, p.127](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）；1Q26 见 [Taipei Times, 2026-04-28](https://www.taipeitimes.com/News/biz/archives/2026/04/28/2003856347)。
 
-**估值快照（TTM，2026-06-10）。** 现价 NT$135.0，市值 NT$260.4bn；**TTM P/E 为负**（TTM EPS −NT$1.77）——亏损源于 FY2025 全年经营亏损 NT$3.70bn（周期谷底 + 折旧与研发刚性，[2025 年年报, p.127](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)），属**典型周期谷底亏损**而非结构性衰退，1Q26 已转盈；**P/B 5.14x**（BVPS NT$26.25），*分析师观点：* 远高于 MS 统计的 2017 年以来 1.5x 历史均值，但低于 Winbond（华邦电）5.7x、Nanya（南亚科）5.3x 的当前水平（yfinance，2026-06-10；[Yahoo Finance](https://finance.yahoo.com/quote/2337.TW/)）；P/S（TTM）7.8x。yfinance 一致预期 forward EPS 为 NT$35.05（隐含 forward P/E 3.85x），*分析师观点：* 该"一致预期"样本极小且无法溯源拆解，本文模型 FY2026E EPS NT$14.1 显著低于该值，读者应以区间而非点位理解卖方分歧（详见 1A(d)）。52 周区间 NT$18.15–180.0 —— 12 个月 +537% 的涨幅本身就是本轮 legacy memory 重定价的注脚，也是估值风险的来源（见第 9 节）。
+**估值快照（TTM，2026-06-12）。** 现价 NT$146.5（自 06-10 的 NT$135.0 反弹），市值 NT$282.6bn；**TTM P/E 为负**（TTM EPS −NT$1.77）——亏损源于 FY2025 全年经营亏损 NT$3.70bn（周期谷底 + 折旧与研发刚性，[2025 年年报, p.127](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)），属**典型周期谷底亏损**而非结构性衰退，1Q26 已转盈；**P/B 5.58x**（BVPS NT$26.25），*分析师观点：* 远高于 MS 统计的 2017 年以来 1.5x 历史均值，但低于 Winbond（华邦电）、Nanya（南亚科）的当前水平（yfinance，2026-06-12；[Yahoo Finance](https://finance.yahoo.com/quote/2337.TW/)）；P/S（TTM）8.5x。yfinance 一致预期 forward EPS 为 NT$35.05（隐含 forward P/E 4.2x），*分析师观点：* 该"一致预期"样本极小且无法溯源拆解，本文模型 FY2026E EPS NT$14.1 显著低于该值，读者应以区间而非点位理解卖方分歧（详见 1A(d)）。52 周区间 NT$18.15–180.0 —— 12 个月 +563% 的涨幅本身就是本轮 legacy memory 重定价的注脚，也是估值风险的来源（见第 9 节）。
 
 ## 1A. 估值与目标价
 
@@ -86,19 +87,90 @@ xychart-beta
 | FCF（NT$bn） | n/a | +3.0 | ~+4.5 | ~+23 | ~+18 | |
 | 净现金/(净负债)（NT$bn） | n/a | −8.0 | ~0 | ~+20 | ~+35 | |
 
-FY2024/25 实际数与现金流（经营现金流 NT$4.84bn、capex NT$1.84bn、年末现金 NT$14.91bn）来自 [2025 年年报, p.127–128](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)；FY2025 末总借款 NT$22.9bn、现金 NT$15.97bn（含约当现金口径差异）来自 [Yahoo Finance（yfinance，2026-06-10）](https://finance.yahoo.com/quote/2337.TW/)。2026E capex 采用公司公告的 NT$22bn 扩产计划（[Taipei Times, 2026-04-28](https://www.taipeitimes.com/News/biz/archives/2026/04/28/2003856347)）。
+FY2024/25 实际数与现金流（经营现金流 NT$4.84bn、capex NT$1.84bn、年末现金 NT$14.91bn）来自 [2025 年年报, p.127–128](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)；FY2025 末总借款 NT$22.9bn、现金 NT$15.97bn（含约当现金口径差异）来自 [Yahoo Finance（yfinance，2026-06-12）](https://finance.yahoo.com/quote/2337.TW/)。2026E capex 采用公司公告的 NT$22bn 扩产计划（[Taipei Times, 2026-04-28](https://www.taipeitimes.com/News/biz/archives/2026/04/28/2003856347)）。
 
-**季度路径（2026E，*分析师观点：*）**——4Q25A 营收 NT$7.76bn（由 1Q26 +35% QoQ 反推）→ 1Q26A NT$10.47bn → 2Q26E ~NT$18.6bn（4 月 5.91 + 5 月 6.26 已实现，6 月假设与 5 月持平略增）→ 3Q26E ~NT$22bn → 4Q26E ~NT$25bn。3Q/4Q 增长几乎全部来自价格（产能已近满载、新机台 1H27 才到位），这正是本模型与"出货量驱动"型成长股的本质区别。
+**季度路径（2026E，*分析师观点：*）**——4Q25A 营收 NT$7.73bn（yfinance 季度营收口径 NT$7,729m，[Yahoo Finance](https://finance.yahoo.com/quote/2337.TW/)）→ 1Q26A NT$10.47bn → 2Q26E ~NT$18.6bn（4 月 5.91 + 5 月 6.26 已实现，6 月假设与 5 月持平略增）→ 3Q26E ~NT$22bn → 4Q26E ~NT$25bn。3Q/4Q 增长几乎全部来自价格（产能已近满载、新机台 1H27 才到位），这正是本模型与"出货量驱动"型成长股的本质区别。需注意 *分析师观点：* MS 5 月营收追踪已显示旺宏 5 月营收较 MS 预期低 8%（同业华邦 −10%、南亚科 −6% 同步走弱，[Morgan Stanley — Monthly Revenue Tracker, 2026-06-10, p.7](http://xs-macbook-air.local:5001/zsxq/pdf/412458118152558/Morgan%20Stanley-Taiwan%20Tech%20%E2%80%93%20Monthly%20Revenue%20Tracker%20-%20Asia%20Pacific%EF%BC%9AMay%20Revenue%20Wrap%20%E2%80%93%20AI%20Momentum%20Persists-260610.pdf)）——尚不改变 +176% YoY 的方向，但是 2Q26E 不宜线性外推的提示。
 
 ```mermaid
 xychart-beta
     title "季度营收路径（NT$bn）：4Q25A→4Q26E（2Q26E 起为分析师预测）"
     x-axis ["4Q25A", "1Q26A", "2Q26E", "3Q26E", "4Q26E"]
     y-axis "NT$bn" 0 --> 28
-    bar [7.76, 10.47, 18.6, 22.0, 25.0]
+    bar [7.73, 10.47, 18.6, 22.0, 25.0]
 ```
 
-来源：1Q26 实际值见 [TrendForce, 2026-04-28](https://www.trendforce.com/news/2026/04/28/news-macronix-nand-revenue-jumps-382-yoy-on-samsungs-mlc-exit-shifts-to-monthly-pricing-amid-deepening-crunch/)；4–5 月月报见 [TechNews, 2026-06-08](https://finance.technews.tw/2026/06/08/macronix-2337-202605-financial-report/)；2Q26E–4Q26E 为*分析师观点*。
+来源：4Q25A 季度营收 NT$7,729m 见 [Yahoo Finance（yfinance 季度财报口径）](https://finance.yahoo.com/quote/2337.TW/)；1Q26 实际值见 [TrendForce, 2026-04-28](https://www.trendforce.com/news/2026/04/28/news-macronix-nand-revenue-jumps-382-yoy-on-samsungs-mlc-exit-shifts-to-monthly-pricing-amid-deepening-crunch/)；4–5 月月报见 [TechNews, 2026-06-08](https://finance.technews.tw/2026/06/08/macronix-2337-202605-financial-report/)；2Q26E–4Q26E 为*分析师观点*。
+
+**1Q26 损益结构（转盈之季，NT$m）。** 下图把 1Q26 单季损益拆为"营收 → COGS / 毛利 → 经营费用 / 经营利润 → 税 / 净利"——左侧为产品线营收来源（NOR 58% / NAND·eMMC 30% / ROM 8% / Foundry ~4%）。营收 NT$10,469m、毛利 NT$4,271m（GM 40.8%）、经营利润 NT$1,937m（OPM 18.5%）、税后净利 NT$1,779m（EPS NT$0.90）——结束连续十个季度亏损（[Taipei Times, 2026-04-28](https://www.taipeitimes.com/News/biz/archives/2026/04/28/2003856347)；[TrendForce, 2026-04-28](https://www.trendforce.com/news/2026/04/28/news-macronix-nand-revenue-jumps-382-yoy-on-samsungs-mlc-exit-shifts-to-monthly-pricing-amid-deepening-crunch/)；产品线占比 [Taipei Times](https://www.taipeitimes.com/News/biz/archives/2026/04/28/2003856347)）。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">旺宏 1Q26 损益 Sankey（NT$m，结束十连亏之季）</text>
+<path d="M 204.00,64.00 C 258.00,64.00 258.00,85.00 312.00,85.00 L 312.00,321.64 C 258.00,321.64 258.00,300.64 204.00,300.64 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,198.77 560.00,198.77 L 560.00,274.26 C 506.00,274.26 506.00,153.49 452.00,153.49 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,153.49 C 506.00,153.49 506.00,288.26 560.00,288.26 L 560.00,379.23 C 506.00,379.23 506.00,244.45 452.00,244.45 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,244.45 C 382.00,244.45 382.00,251.45 328.00,251.45 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,251.45 C 382.00,251.45 382.00,258.45 436.00,258.45 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,196.83 C 754.00,196.83 754.00,242.31 808.00,242.31 L 808.00,311.64 C 754.00,311.64 754.00,266.16 700.00,266.16 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,266.16 C 754.00,266.16 754.00,325.64 808.00,325.64 L 808.00,335.69 C 754.00,335.69 754.00,276.21 700.00,276.21 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,198.77 C 630.00,198.77 630.00,196.83 684.00,196.83 L 684.00,272.32 C 630.00,272.32 630.00,274.26 576.00,274.26 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,288.26 C 630.00,288.26 630.00,290.21 684.00,290.21 L 684.00,381.17 C 630.00,381.17 630.00,379.23 576.00,379.23 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,314.64 C 258.00,314.64 258.00,321.64 312.00,321.64 L 312.00,444.05 C 258.00,444.05 258.00,437.05 204.00,437.05 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,451.05 C 258.00,451.05 258.00,444.05 312.00,444.05 L 312.00,476.71 C 258.00,476.71 258.00,483.71 204.00,483.71 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,497.71 C 258.00,497.71 258.00,476.71 312.00,476.71 L 312.00,493.00 C 258.00,493.00 258.00,514.00 204.00,514.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="236.64" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="314.64" width="16" height="122.41" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="451.05" width="16" height="32.66" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="497.71" width="16" height="16.29" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="166.45" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="258.45" width="16" height="241.55" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="198.77" width="16" height="75.49" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="288.26" width="16" height="90.96" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="196.83" width="16" height="79.39" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="290.21" width="16" height="90.96" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="242.31" width="16" height="69.33" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="325.64" width="16" height="10.05" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="182.32" x2="182.00" y2="163.46" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="166.46" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">NOR Flash 58%</text>
+<text x="179.00" y="179.46" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$6.1B  (58.0%)</text>
+<line x1="188.00" y1="375.85" x2="182.00" y2="356.99" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="359.99" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">NAND/eMMC 30%</text>
+<text x="179.00" y="372.99" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$3.1B  (30.0%)</text>
+<line x1="188.00" y1="467.38" x2="182.00" y2="448.53" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="451.53" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">ROM 8%</text>
+<text x="179.00" y="464.53" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$838.0M  (8.0%)</text>
+<line x1="188.00" y1="505.85" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Foundry ~4%</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$418.0M  (4.0%)</text>
+<rect x="331.00" y="67.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$10.5B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$4.3B  (40.8%)</text>
+<rect x="455.00" y="240.45" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="252.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="265.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$6.2B  (59.2%)</text>
+<rect x="579.00" y="180.77" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="192.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="205.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$1.9B  (18.5%)</text>
+<rect x="579.00" y="270.26" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="282.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="295.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$2.3B  (22.3%)</text>
+<rect x="703.00" y="178.83" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="190.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="203.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$2.0B  (19.5%)</text>
+<rect x="703.00" y="272.21" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="284.21" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="297.21" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$2.3B  (22.3%)</text>
+<text x="833.00" y="273.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="286.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$1.8B  (17.0%)</text>
+<text x="833.00" y="327.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="340.67" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$258.0M  (2.5%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Macronix 2025 年报 p.103/127, 旺宏 1Q26 法说会 (TrendForce/Taipei Times 2026-04-28)</text>
+</svg>
+
+
 
 **毛利率桥（1Q26 实际：24.2% → 40.8%，+16.6pp QoQ）**：ASP 上涨与产品组合（NAND 占比 21%→30%，eMMC 转月度议价）约 +12pp；存货跌价回冲 NT$5 亿约 +4.8pp（500/10,469，管理层在法说会上披露，并表示"未来还会有进一步的存货回冲"）（[BigGo Finance, 2026-04-27](https://finance.biggo.com/news/TW_2337.TW_2026-04-27)；[Taipei Times, 2026-04-28](https://www.taipeitimes.com/News/biz/archives/2026/04/28/2003856347)）。*分析师观点：* 2Q26E 起合约价 ~100% 的环比涨幅在近乎固定的成本基数上直接放大毛利率至 55%+；FY2028E 回落假设对应 Bernstein 的"自 2HCY27 起回归正常"路径。
 
@@ -106,17 +178,17 @@ xychart-beta
 
 *分析师观点：* 鉴于存储行业的强周期属性（盈利经常穿越零轴，P/E 在拐点失真），主估值采用 **P/B × 前瞻 BVPS** —— 与 MS 对大中华区存储股的统一框架一致（MS："Base case, P/B, in line with our Greater China memory coverage, due to the memory industry's cyclical nature"，[Morgan Stanley — Old Memory: Readacross from Kioxia IR Day, 2026-06-03, p.2](http://xs-macbook-air.local:5001/zsxq/pdf/812488554854482/Morgan%20Stanley-Greater%20China%20Semiconductors%EF%BC%9AOld%20Memory%EF%BC%9A%20Readacross%20from%20Kioxia%20IR%20Day-260603.pdf)）：
 
-- **2026E 年末 BVPS ≈ NT$39**：1Q26 末股东权益 ~NT$50.6bn（BVPS NT$26.25 × 1.929bn 股，[yfinance，2026-06-10](https://finance.yahoo.com/quote/2337.TW/)）+ 本模型 2Q–4Q26E 净利 NT$25.7bn，按可转债（公司 2025 年发行第二次国内无担保转换公司债，[2025 年年报, p.128](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）摊薄至 ~1.95bn 股。
-- **目标倍数 4.6x**：对标——MS 对旺宏的目标倍数 7.0x 2026E BVPS、对 Winbond 5.5x 2026E P/B（同一框架，[MS Kioxia readacross, 2026-06-03, p.2](http://xs-macbook-air.local:5001/zsxq/pdf/812488554854482/Morgan%20Stanley-Greater%20China%20Semiconductors%EF%BC%9AOld%20Memory%EF%BC%9A%20Readacross%20from%20Kioxia%20IR%20Day-260603.pdf)）；当前市场对 Winbond/Nanya 的定价为 5.7x/5.3x trailing P/B（[yfinance，2026-06-10](https://finance.yahoo.com/quote/2337.TW/)）；旺宏自身 2017 年以来历史均值仅 1.5x（*分析师观点：* MS 统计，[MS Turning Selective, 2026-03-19, p.2](http://xs-macbook-air.local:5001/zsxq/pdf/184444852442552/Morgan%20Stanley-Old%20Memory%EF%BC%9A%20Turning%20Selective-260319.pdf)）。本文取 4.6x——高于历史均值 3 倍（反映十年一遇的退出式短缺与"唯一供应商"地位），但对 MS 的 7.0x 打 ~35% 折扣（反映 Bernstein 路径下 2H26 涨价减速风险与产能天花板）。
-- **PT = NT$39 × 4.6 ≈ NT$180**（+33% vs NT$135）。交叉验证：NT$180 / FY2027E EPS NT$16.9 ≈ **10.7x**，相对 Winbond/Nanya 前瞻 P/E（5.6x/5.8x，[yfinance，2026-06-10](https://finance.yahoo.com/quote/2337.TW/)）有溢价，溢价的依据是旺宏在 MLC/SLC NAND 缺口中的独占性供给地位与更高的 ROAE 轨迹。
+- **2026E 年末 BVPS ≈ NT$39**：1Q26 末股东权益 ~NT$50.6bn（BVPS NT$26.25 × 1.929bn 股，[yfinance，2026-06-12](https://finance.yahoo.com/quote/2337.TW/)）+ 本模型 2Q–4Q26E 净利 NT$25.7bn，按可转债（公司 2025 年发行第二次国内无担保转换公司债，[2025 年年报, p.128](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）摊薄至 ~1.95bn 股。
+- **目标倍数 4.6x**：对标——MS 对旺宏的目标倍数 7.0x 2026E BVPS、对 Winbond 5.5x 2026E P/B（同一框架，[MS Kioxia readacross, 2026-06-03, p.2](http://xs-macbook-air.local:5001/zsxq/pdf/812488554854482/Morgan%20Stanley-Greater%20China%20Semiconductors%EF%BC%9AOld%20Memory%EF%BC%9A%20Readacross%20from%20Kioxia%20IR%20Day-260603.pdf)）；当前市场对 Winbond/Nanya 的定价为 6.6x/6.0x trailing P/B（[yfinance，2026-06-12](https://finance.yahoo.com/quote/2337.TW/)）；旺宏自身 2017 年以来历史均值仅 1.5x（*分析师观点：* MS 统计，[MS Turning Selective, 2026-03-19, p.2](http://xs-macbook-air.local:5001/zsxq/pdf/184444852442552/Morgan%20Stanley-Old%20Memory%EF%BC%9A%20Turning%20Selective-260319.pdf)）。本文取 4.6x——高于历史均值 3 倍（反映十年一遇的退出式短缺与"唯一供应商"地位），但对 MS 的 7.0x 打 ~35% 折扣（反映 Bernstein 路径下 2H26 涨价减速风险与产能天花板）。
+- **PT = NT$39 × 4.6 ≈ NT$180**（+23% vs 现价 NT$146.5）。交叉验证：NT$180 / FY2027E EPS NT$16.9 ≈ **10.7x**，相对 Winbond/Nanya 前瞻 P/E 有溢价（[yfinance，2026-06-12](https://finance.yahoo.com/quote/2337.TW/)），溢价的依据是旺宏在 MLC/SLC NAND 缺口中的独占性供给地位与更高的 ROAE 轨迹。
 
 ### (c) Bull / Base / Bear 情景
 
 | 情景（*分析师观点：*） | 关键假设 | 估值 | PT | vs 现价 |
 |---|---|---|---|---|
-| Bull | 2H26 低容量 NAND 缺口达 ~40%、MLC/TLC 全年 +200% 路径兑现，ROAE ≥65%，Switch 2 卡带订单回流 | 7.0x（MS 倍数）× 2026E BVPS ~NT$40 | **NT$280** | **+107%** |
-| Base | 2Q26 合约价 +100% 后涨幅减速但不逆转；FY26E EPS NT$14.1 | 4.6x × 2026E BVPS ~NT$39 | **NT$180** | **+33%** |
-| Bear | 3Q26 起涨价失速（Bernstein：10–20% QoQ → 4Q26 走平）、需求破坏显现，GM 峰值 ~45%，FY27E EPS ~NT$6 | 2.5x × 2026E BVPS ~NT$34 | **NT$85** | **−37%** |
+| Bull | 2H26 低容量 NAND 缺口达 ~40%、MLC/TLC 全年 +200% 路径兑现，ROAE ≥65%，Switch 2 卡带订单回流 | 7.0x（MS 倍数）× 2026E BVPS ~NT$40 | **NT$280** | **+91%** |
+| Base | 2Q26 合约价 +100% 后涨幅减速但不逆转；FY26E EPS NT$14.1 | 4.6x × 2026E BVPS ~NT$39 | **NT$180** | **+23%** |
+| Bear | 3Q26 起涨价失速（Bernstein：10–20% QoQ → 4Q26 走平）、需求破坏显现，GM 峰值 ~45%，FY27E EPS ~NT$6 | 2.5x × 2026E BVPS ~NT$34 | **NT$85** | **−42%** |
 
 ### (d) 一致预期对标
 
@@ -126,6 +198,202 @@ xychart-beta
 
 1. **2H26 legacy NAND/NOR 合约价斜率** —— MS 的"1Q–4Q26 累计 +200%"（[MS Turning Selective, 2026-03-19, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184444852442552/Morgan%20Stanley-Old%20Memory%EF%BC%9A%20Turning%20Selective-260319.pdf)）vs Bernstein 的"3QCY26 减速至 10–20% QoQ"（[Bernstein Memory Tracker, 2026-06-02, p.4](http://xs-macbook-air.local:5001/zsxq/pdf/212485115581121/Bernstein-Global%20Memory%EF%BC%9AMEMORY%20TRACKER%20%EF%BC%88May%EF%BC%89%EF%BC%9A%20Price%20hike%20c.%2060%25%20QoQ%20in%202QCY26%EF%BC%8C%20but%20likely%20at%20a%20slower%20pace%20in%202HCY26-260602.pdf)）之差，直接决定本模型 FY26E EPS 落在 NT$10 还是 NT$18。每月 10 日前后的营收月报是最高频的验证点。
 2. **有效产能与产品组合再平衡** —— 12 吋上限 2.5 万片/月、新机台 1H27 到位、NOR:NAND 投片比从 1:0.5 调向 1:1（[BigGo Finance, 2026-04-27](https://finance.biggo.com/news/TW_2337.TW_2026-04-27)）：量的天花板使 2H26 增长完全依赖价格，一旦涨价停滞营收即走平。
+
+### (f) 财务报表可视化（FY2025 实际 + 1Q26 年化）
+
+**资产负债表与现金流（FY2025 末实际）。** 下方两图分别为 FY2025 末资产负债表 Sankey（总资产 NT$78.50bn = 流动 NT$29.43bn + 非流动 NT$49.08bn；总负债 NT$32.69bn；母公司权益 NT$45.80bn）与 FY2025 现金流量 Sankey（期初现金 NT$11.62bn + CFO NT$4.84bn − 投资 NT$1.72bn + 筹资 NT$0.40bn − 汇兑 NT$0.22bn → 期末现金 NT$14.91bn，其中 capex NT$1.84bn）（[2025 年年报, p.126/127/128](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）。注意 FY2025 经营现金流为正（NT$4.84bn）即便损益表亏损——折旧与存货变动的非现金回补是 IDM 周期谷底的典型特征。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">旺宏 资产负债表 Sankey（FY2025 末，NT$bn）</text>
+<path d="M 732.00,63.01 C 790.00,63.01 790.00,71.01 848.00,71.01 L 848.00,141.80 C 790.00,141.80 790.00,133.80 732.00,133.80 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,78.00 C 658.00,78.00 658.00,63.01 716.00,63.01 L 716.00,133.80 C 658.00,133.80 658.00,148.79 600.00,148.79 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,78.00 C 262.00,78.00 262.00,78.00 320.00,78.00 L 320.00,245.93 C 262.00,245.93 262.00,245.93 204.00,245.93 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,78.00 C 394.00,78.00 394.00,85.00 452.00,85.00 L 452.00,252.93 C 394.00,252.93 394.00,245.93 336.00,245.93 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,148.79 C 658.00,148.79 658.00,147.80 716.00,147.80 L 716.00,263.59 C 658.00,263.59 658.00,264.58 600.00,264.58 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,85.00 C 526.00,85.00 526.00,78.00 584.00,78.00 L 584.00,264.58 C 526.00,264.58 526.00,271.58 468.00,271.58 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,271.58 C 526.00,271.58 526.00,278.58 584.00,278.58 L 584.00,540.00 C 526.00,540.00 526.00,533.00 468.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,147.80 C 790.00,147.80 790.00,155.80 848.00,155.80 L 848.00,271.59 C 790.00,271.59 790.00,263.59 732.00,263.59 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,259.93 C 394.00,259.93 394.00,252.93 452.00,252.93 L 452.00,533.00 C 394.00,533.00 394.00,540.00 336.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,259.93 C 262.00,259.93 262.00,259.93 320.00,259.93 L 320.00,540.00 C 262.00,540.00 262.00,540.00 204.00,540.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,277.59 C 790.00,277.59 790.00,285.59 848.00,285.59 L 848.00,546.99 C 790.00,546.99 790.00,538.99 732.00,538.99 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,278.58 C 658.00,278.58 658.00,277.59 716.00,277.59 L 716.00,538.99 C 658.00,538.99 658.00,539.97 600.00,539.97 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,539.97 C 658.00,539.97 658.00,552.99 716.00,552.99 L 716.00,554.99 C 658.00,554.99 658.00,541.97 600.00,541.97 Z" fill="#86efac" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="167.93" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="259.93" width="16" height="280.07" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="78.00" width="16" height="167.93" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="259.93" width="16" height="280.07" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="78.00" width="16" height="186.58" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="278.58" width="16" height="261.42" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="63.01" width="16" height="70.79" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="147.80" width="16" height="115.79" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="277.59" width="16" height="261.39" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="552.99" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="71.01" width="16" height="70.79" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="155.80" width="16" height="115.79" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="285.59" width="16" height="261.39" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="158.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">流动资产 Current assets</text>
+<text x="179.00" y="171.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$29.4B  (37.5%)</text>
+<text x="179.00" y="396.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">非流动资产 Non-current assets</text>
+<text x="179.00" y="409.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$49.1B  (62.5%)</text>
+<rect x="339.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$29.4B  (37.5%)</text>
+<rect x="339.00" y="241.93" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="253.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="266.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$49.1B  (62.5%)</text>
+<rect x="471.00" y="67.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$78.5B  (100.0%)</text>
+<rect x="603.00" y="60.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$32.7B  (41.6%)</text>
+<rect x="603.00" y="260.58" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="272.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="285.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$45.8B  (58.4%)</text>
+<rect x="735.00" y="45.01" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="57.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="70.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$12.4B  (15.8%)</text>
+<rect x="735.00" y="129.80" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="141.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="154.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$20.3B  (25.8%)</text>
+<rect x="735.00" y="259.59" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="271.59" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="284.59" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$45.8B  (58.3%)</text>
+<line x1="732.00" y1="553.99" x2="738.00" y2="527.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="741.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Minority Interest</text>
+<text x="741.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$5.1M  (0.01%)</text>
+<text x="873.00" y="103.41" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">流动负债 Current liab</text>
+<text x="873.00" y="116.41" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$12.4B  (15.8%)</text>
+<text x="873.00" y="210.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">非流动负债 Non-current liab</text>
+<text x="873.00" y="223.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$20.3B  (25.8%)</text>
+<text x="873.00" y="413.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">母公司股东权益 Parent equity</text>
+<text x="873.00" y="426.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$45.8B  (58.3%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Macronix 2025 年报 p.126 (财务状况分析)</text>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">旺宏 现金流量 Sankey（FY2025，NT$bn）</text>
+<path d="M 204.00,64.00 C 361.00,64.00 361.00,78.00 518.00,78.00 L 518.00,396.57 C 361.00,396.57 361.00,382.57 204.00,382.57 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,78.00 C 691.00,78.00 691.00,64.00 848.00,64.00 L 848.00,111.26 C 691.00,111.26 691.00,125.26 534.00,125.26 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,125.26 C 691.00,125.26 691.00,125.26 848.00,125.26 L 848.00,131.29 C 691.00,131.29 691.00,131.29 534.00,131.29 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,131.29 C 691.00,131.29 691.00,145.29 848.00,145.29 L 848.00,554.00 C 691.00,554.00 691.00,540.00 534.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,396.57 C 361.00,396.57 361.00,396.57 518.00,396.57 L 518.00,529.15 C 361.00,529.15 361.00,529.15 204.00,529.15 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,543.15 C 361.00,543.15 361.00,529.15 518.00,529.15 L 518.00,540.00 C 361.00,540.00 361.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="318.57" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="396.57" width="16" height="132.58" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="543.15" width="16" height="10.85" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="47.26" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="125.26" width="16" height="6.03" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="145.29" width="16" height="408.71" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="220.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="233.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$11.6B  (69.0%)</text>
+<rect x="207.00" y="371.42" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="383.42" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="396.42" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$4.8B  (28.7%)</text>
+<rect x="207.00" y="518.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$396.0M  (2.3%)</text>
+<rect x="537.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$16.9B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$1.7B  (10.2%)</text>
+<rect x="867.00" y="107.26" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="119.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="870.00" y="132.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$219.9M  (1.3%)</text>
+<text x="873.00" y="346.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="359.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$14.9B  (88.5%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = NT$3.0B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Macronix 2025 年报 p.128 (现金流量分析)</text>
+</svg>
+
+**5 步 DuPont（1Q26 年化口径）。** 由于 FY2025 全年为亏损，DuPont ROE 树以 1Q26 单季年化（×4）口径呈现，用以展示拐点后的盈利结构（净利率 ~17% × 资产周转 × 权益乘数）——此为分析师年化口径，非已实现全年值。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 540" width="1240" height="540" role="img" aria-label="DuPont ROE decomposition"><rect x="0" y="0" width="1240" height="540" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">旺宏 5 步 DuPont ROE（1Q26 年化，NT$m）</text>
+<rect x="545.00" y="56.00" width="150" height="56" rx="7" fill="#1e3a8a"/>
+<text x="620.00" y="76.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">ROE</text>
+<text x="620.00" y="94.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">14.76%</text>
+<text x="620.00" y="106.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">= Net Income / Avg Equity</text>
+<rect x="191.60" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Margin</text>
+<text x="266.60" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">16.99%</text>
+<text x="266.60" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Income / Revenue</text>
+<line x1="620.00" y1="112.00" x2="266.60" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="545.00" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="620.00" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Asset Turnover</text>
+<text x="620.00" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.53</text>
+<text x="620.00" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Revenue / Avg Assets</text>
+<line x1="620.00" y1="112.00" x2="620.00" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="898.40" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="973.40" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Equity Multiplier</text>
+<text x="973.40" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">1.65</text>
+<text x="973.40" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Avg Assets / Avg Equity</text>
+<line x1="620.00" y1="112.00" x2="973.40" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="443.30" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="443.30" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="796.70" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="796.70" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="65.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="124.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Margin</text>
+<text x="124.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">18.50%</text>
+<text x="124.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Op Inc / Revenue</text>
+<line x1="266.60" y1="224.00" x2="124.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="207.60" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Tax Burden</text>
+<text x="266.60" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.8733</text>
+<text x="266.60" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Inc / Pretax</text>
+<line x1="266.60" y1="224.00" x2="266.60" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="350.20" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="409.20" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Interest Burden</text>
+<text x="409.20" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">1.0516</text>
+<text x="409.20" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Pretax / Op Inc</text>
+<line x1="266.60" y1="224.00" x2="409.20" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="195.30" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="195.30" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="337.90" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="337.90" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="479.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="538.00" y="326.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Revenue</text>
+<text x="538.00" y="342.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">NT$41.9B</text>
+<line x1="620.00" y1="224.00" x2="538.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="643.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="702.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="702.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">NT$79.5B</text>
+<text x="702.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="620.00" y1="224.00" x2="702.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="620.00" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="620.00" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="832.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="891.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="891.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">NT$79.5B</text>
+<text x="891.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="891.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="996.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="1055.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Equity</text>
+<text x="1055.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">NT$48.2B</text>
+<text x="1055.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="1055.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="967.20" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="967.20" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="69.00" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="124.00" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Income</text>
+<text x="124.00" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">NT$7.7B</text>
+<line x1="124.00" y1="356.00" x2="124.00" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="211.60" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="266.60" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Income</text>
+<text x="266.60" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">NT$7.1B</text>
+<line x1="266.60" y1="356.00" x2="266.60" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="354.20" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="409.20" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Pretax Income</text>
+<text x="409.20" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">NT$8.1B</text>
+<line x1="409.20" y1="356.00" x2="409.20" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<text x="620.00" y="510.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">ROE 为 1Q26 单季年化口径（×4），非已实现全年值；FY2025 全年为亏损</text>
+<text x="620.00" y="524.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Macronix 2025 年报 p.126/127 + 1Q26 法说会 (Taipei Times 2026-04-28); 年化为分析师口径</text>
+</svg>
 
 ### 卖方观点演变（Sell-side view evolution）
 
@@ -144,6 +412,7 @@ xychart-beta
 | 2026-05-28 | OW（板块内上调华邦电/南亚科回 OW） | — | SLC NAND 数据中心渗透逻辑强化；"SLC NAND could be supplied by Greater China vendors such as GigaDevice, Winbond, and Macronix" | [MS — Old Memory: Upside Surprise Ahead, 2026-05-28, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212451114418521/MS-Greater%20China%20Semiconductors%20-%20Asia%20Pacific%20Old%20Memory-Upside%20Surprise%20%20Ahead-260528.pdf) |
 | 2026-06-03 | OW 维持，7.0x 2026E BVPS 框架重申 | NT$175.5（评级披露页） | Kioxia IR Day 验证 SLC 数据中心化逻辑："remain OW on all three stocks"（兆易/华邦/旺宏）；上行风险含"Faster growth for Switch hardware and core titles"，下行风险含 NOR 下行周期 | [MS — Old Memory: Readacross from Kioxia IR Day, 2026-06-03, p.1–2](http://xs-macbook-air.local:5001/zsxq/pdf/812488554854482/Morgan%20Stanley-Greater%20China%20Semiconductors%EF%BC%9AOld%20Memory%EF%BC%9A%20Readacross%20from%20Kioxia%20IR%20Day-260603.pdf) |
 | 2026-06-07 | OW（"all OW"） | — | Computex 见闻："old memory (Winbond, Macronix, APMemory, Gigadevice, all OW)"；高容量 NOR 渠道价 US$1 → US$8（VR 内容翻倍驱动） | [MS — Computex takeaways, 2026-06-07, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412458541155248/Morgan%20Stanley-Greater%20China%20Technology%20Semiconductors%EF%BC%9AComputex%20takeaways%EF%BC%9A%20Cloud%EF%BC%8C%20PC%20and%20old%20memory-260607.pdf) |
+| **2026-06-10** | **偏好个股（preferred pick）维持，含旺宏** | — | **5 月营收追踪：台湾科技业 5 月营收 MoM +4% / YoY +39%、AI 动能延续；MS 偏好"订单能见度高、地位领先"个股，点名旺宏；但旺宏 5 月营收 NT$6,256m 较 MS 预期低 8%（华邦 −10%、南亚科 −6% 同步 Miss）——增速仍高、环比斜率开始钝化** | [MS — Taiwan Tech Monthly Revenue Tracker: May Rev Wrap, 2026-06-10, p.1/p.7](http://xs-macbook-air.local:5001/zsxq/pdf/412458118152558/Morgan%20Stanley-Taiwan%20Tech%20%E2%80%93%20Monthly%20Revenue%20Tracker%20-%20Asia%20Pacific%EF%BC%9AMay%20Revenue%20Wrap%20%E2%80%93%20AI%20Momentum%20Persists-260610.pdf) |
 
 **机构间分歧（个股评级 vs 行业价格路径，不可混为共识）：**
 
@@ -154,6 +423,68 @@ xychart-beta
 | BofA（行业） | 2026-05-16 | NAND 超级周期超预期（Kioxia 指引 1Q26 NAND 均价环比 +100%+） | eSSD 拉动、台系存储 4 月营收全面井喷 | 月度均价与 eSSD 出货持续超模型 |
 
 出处：[MS Kioxia readacross, 2026-06-03, p.2](http://xs-macbook-air.local:5001/zsxq/pdf/812488554854482/Morgan%20Stanley-Greater%20China%20Semiconductors%EF%BC%9AOld%20Memory%EF%BC%9A%20Readacross%20from%20Kioxia%20IR%20Day-260603.pdf)；[Bernstein Memory Tracker (May), 2026-06-02, p.1/p.4–5/p.15](http://xs-macbook-air.local:5001/zsxq/pdf/212485115581121/Bernstein-Global%20Memory%EF%BC%9AMEMORY%20TRACKER%20%EF%BC%88May%EF%BC%89%EF%BC%9A%20Price%20hike%20c.%2060%25%20QoQ%20in%202QCY26%EF%BC%8C%20but%20likely%20at%20a%20slower%20pace%20in%202HCY26-260602.pdf)；[BofA — Global Memory weekly, 2026-05-16](http://xs-macbook-air.local:5001/zsxq/pdf/812452144184522/Bofa-Global%20Memory%20Tech%20Theme%20of%20the%20week-NAND%20surprise%2C%20Samsung%20labor%20strike%2C%20TCB%20sales%20miss-260516.pdf)（均为*分析师观点*）。
+
+---
+
+## 1B. GF Score 基本面评分卡
+
+*本节为 GuruFocus 式五维基本面评分（Financial Strength / Profitability / Growth / GF Value / Momentum，各 0–10），综合分映射至 0–100。全部为* **分析师观点（Analyst view）** *的评分性重读——非 GuruFocus 官方数字，每个维度的底层指标在第 1/1A/2/9 节均已逐项引用；评分本身不附 filing 引用。*
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="GF Score radar">
+<rect x="0" y="0" width="500" height="500" fill="#ffffff"/>
+<text x="20" y="24" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">GF Score (GuruFocus-style): 56/100</text>
+<text x="20" y="41" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#52606d">51–70 Poor future performance potential</text>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="#e9f5ec" stroke="none"/>
+<polygon points="250.0,208.0 278.5,228.7 267.6,262.3 232.4,262.3 221.5,228.7" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,178.0 307.1,219.5 285.3,286.5 214.7,286.5 192.9,219.5" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,148.0 335.6,210.2 302.9,310.8 197.1,310.8 164.4,210.2" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,118.0 364.1,200.9 320.5,335.1 179.5,335.1 135.9,200.9" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="none" stroke="#c5d3cb" stroke-width="1.3"/>
+<line x1="250" y1="238" x2="161.8" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="146.5" y="392.4" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">财务实力</text>
+<text x="205.9" y="292.7" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">5</text>
+<line x1="250" y1="238" x2="250.0" y2="88.0" stroke="#cfdad3" stroke-width="1"/>
+<text x="250.0" y="58.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">盈利能力</text>
+<text x="250.0" y="187.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">3</text>
+<line x1="250" y1="238" x2="107.3" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="82.6" y="183.6" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">成长性</text>
+<text x="135.9" y="194.9" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">8</text>
+<line x1="250" y1="238" x2="392.7" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="417.4" y="183.6" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">估值</text>
+<text x="292.8" y="218.1" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">3</text>
+<line x1="250" y1="238" x2="338.2" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="353.5" y="392.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">动量</text>
+<text x="329.4" y="341.2" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">9</text>
+<polygon points="250.0,193.0 292.8,224.1 329.4,347.2 205.9,298.7 135.9,200.9" fill="#2e8b57" fill-opacity="0.34" stroke="#2e8b57" stroke-width="2"/>
+<circle cx="205.9" cy="298.7" r="2.6" fill="#2e8b57"/>
+<circle cx="250.0" cy="193.0" r="2.6" fill="#2e8b57"/>
+<circle cx="135.9" cy="200.9" r="2.6" fill="#2e8b57"/>
+<circle cx="292.8" cy="224.1" r="2.6" fill="#2e8b57"/>
+<circle cx="329.4" cy="347.2" r="2.6" fill="#2e8b57"/>
+<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: Macronix 2025 年报 (p.103/126/127) · yfinance 2026-06-12 · 本文 FY26E 模型 (§1A)</text>
+<text x="250" y="485" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#52606d">GF Score = independent analyst rubric (*Analyst view:*) — not GuruFocus™ official number</text>
+</svg>
+
+| 维度 | 评分 (0–10) | |
+|---|---|---|
+| 财务实力 Financial Strength | 5 | `█████░░░░░` |
+| 盈利能力 Profitability | 3 | `███░░░░░░░` |
+| 成长性 Growth | 8 | `████████░░` |
+| 估值 GF Value（higher = cheaper） | 3 | `███░░░░░░░` |
+| 动量 Momentum | 9 | `█████████░` |
+| **GF Score (composite, *分析师观点：*)** | **56 / 100** | **51–70 Poor future performance potential** |
+
+*综合权重（*分析师观点：*）：财务实力 20% · 盈利能力 25% · 成长性 25% · GF Value 15% · 动量 15%（透明复现——非 GuruFocus 的专有权重）。*
+
+**各维度评分理由（why these scores）。**
+
+- **财务实力 5/10。** FY2025 末总资产 NT$78.50bn、总负债 NT$32.69bn、母公司股东权益 NT$45.80bn（[2025 年年报, p.126](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）——资产负债结构尚稳健，但 2025 年发行第二次国内无担保可转债、年末总借款约 NT$22.9bn 对现金 NT$14.91bn（[2025 年年报, p.128](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)；[yfinance](https://finance.yahoo.com/quote/2337.TW/)），叠加 NT$22bn capex 再加杠杆，扣分。
+- **盈利能力 3/10。** FY2023–2025 连续三年经营亏损（FY2025 经营亏损 NT$3.70bn、净亏 NT$3.30bn，[2025 年年报, p.127](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）；1Q26 才单季转盈（GM 40.8%），盈利的持续性尚未被多季验证，且核心 Flash 业务本质是价格接受者（§7）——低分反映"周期盈利"而非"结构性盈利"。
+- **成长性 8/10。** *分析师观点：* 本文 FY2026E 营收 +163%、EPS 由 −NT$1.77 翻转至 NT$14.1（§1A 模型）；NAND 营收 1Q26 同比 +382%、eMMC 近 40 倍（[TrendForce, 2026-04-28](https://www.trendforce.com/news/2026/04/28/news-macronix-nand-revenue-jumps-382-yoy-on-samsungs-mlc-exit-shifts-to-monthly-pricing-amid-deepening-crunch/)）——成长弹性极高，但来自价格而非量、且具周期性，故非满分。
+- **估值 GF Value 3/10（higher = cheaper，低分=偏贵）。** 现价 5.58x trailing P/B 对历史均值 1.5x（*分析师观点：* MS 统计，[MS Turning Selective, 2026-03-19, p.2](http://xs-macbook-air.local:5001/zsxq/pdf/184444852442552/Morgan%20Stanley-Old%20Memory%EF%BC%9A%20Turning%20Selective-260319.pdf)）——账面值口径偏贵，仅在 ROAE 50%+ 兑现、forward BVPS 快速复利的前提下才"便宜"（§1A），安全边际对假设高度敏感。
+- **动量 9/10。** 12 个月 +562.9%、相对 TAIEX +464.7pp（yfinance，2026-06-12；§1A 头部相对表现），即便近 1 个月 −12.8% 回撤后仍是全市场最强动量标的之一——高分但需警惕"追涨入场"的行为学风险（§10.2 Munger 逆向检验）。
+
+**综合 56/100 落入"Poor"区间**，与本文的核心张力一致：这是一笔**周期内的相对价值交易**（成长 + 动量极强）而非**长期质量持有**（盈利可预测性 + 估值安全边际弱）——评分卡用机械化方式复述了第 10 节四视角的结论。
 
 ---
 
@@ -228,6 +559,152 @@ graph TD
 
 年报的自我定位是关键：NOR / NAND / eMMC 在嵌入式市场组成"低、中、高容量的完整布局"（[2025 年年报, p.103](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）。**中文释义 / Plain-language gloss：** 一台嵌入式设备（路由器、车机、医疗仪器、游戏机）的存储需求是分层的——开机代码（boot code）要求字节级随机读取、可直接执行（XIP, execute-in-place），用 **NOR**（Mb 级）；操作系统与应用数据要求大块顺序读写、低单位成本，用 **SLC NAND**（Gb 级）；影音内容与日志要求 GB 级容量并由控制器管理坏块（bad block）/磨损均衡（wear leveling），用 **eMMC**（内建 controller 的 managed NAND）。游戏卡带这类"只读+大容量+低成本"的内容载体，则是 **ROM/XtraROM®** 的地盘。同一客户经常在一块板子上同时采购旺宏的 NOR（开机）+ NAND/eMMC（存储），这是公司"complete layout"策略的商业含义——也是 1Q26 NOR:NAND 投片比要从 1:0.5 拉向 1:1 的原因（[BigGo Finance, 2026-04-27](https://finance.biggo.com/news/TW_2337.TW_2026-04-27)）。
 
+**供应链货币流向图（follow the money）。** 下图以**需求/收入视角**展示这门生意的钱流：左侧三股需求（AI 服务器/网通/AI PC/VR、游戏主机、工业车用网通）付钱买入旺宏的 NOR/NAND/eMMC/ROM，钱汇成营收；旺宏再把成本付给它自己的上游——自有 Fab 5（12 吋）、外购 3D NAND die、设备/材料厂，以及历史上把 6 吋厂卖给的鸿海。本图的核心信息：**大厂退出 2GB–64GB 容量段后，需求端无处可去，定价权（连同利润）全部回流到旺宏这唯一的补缺者**；solid 实线=直接付款，dashed 虚线=嵌入在外购成品中的间接成本。所有节点均为年报/法说会/MS 渠道笔记中的真实交易对手（图内数字为相对规模，非流量守恒）。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1051" width="1180" height="1051" role="img" aria-label="钱怎么流进旺宏：退出式短缺把定价权交到这家利基厂手里" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1051" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">NON-VOLATILE MEMORY MONEY FLOW · 2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱怎么流进旺宏：退出式短缺把定价权交到这家利基厂手里</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求/收入视角——AI 服务器、游戏主机、工业车用三股需求付钱买入旺宏的 NOR/NAND/eMMC/ROM，钱汇成营收；旺宏再把成本付给它自己的上游：自有 12 吋晶圆产能、外购 3D NAND die、设备与封测。大厂退出 2GB–64GB</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">容量段后，需求端无处可去，价格全部回流到旺宏。</text>
+<ellipse cx="1031.00" cy="434.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="655.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="655.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁在付钱（需求驱动）</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">旺宏与其产品线</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱流向哪里（旺宏的上游/成本）</text>
+<path d="M 256.00 324.50 C 369.50 324.50, 369.50 277.00, 483.00 277.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 447.50 C 369.50 447.50, 369.50 296.50, 483.00 296.50" fill="none" stroke="url(#mfgold)" stroke-width="15.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 557.50 C 369.50 557.50, 369.50 314.50, 483.00 314.50" fill="none" stroke="url(#mfgold)" stroke-width="21.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 284.50 C 590.00 284.50, 590.00 424.50, 483.00 424.50" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 301.00 C 590.00 301.00, 590.00 517.50, 483.00 517.50" fill="none" stroke="url(#mfgold)" stroke-width="15.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 311.50 C 590.00 311.50, 590.00 610.50, 483.00 610.50" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 424.50 C 810.50 424.50, 810.50 289.00, 924.00 289.00" fill="none" stroke="url(#mfgold)" stroke-width="21.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 514.50 C 810.50 514.50, 810.50 305.50, 924.00 305.50" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 1138.00 292.50 C 1031.00 292.50, 1031.00 489.50, 924.00 489.50" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 523.50 C 810.50 523.50, 810.50 396.50, 924.00 396.50" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 1138.00 301.00 C 1031.00 301.00, 1031.00 582.50, 924.00 582.50" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="294.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">NOR/eMMC 订单</text>
+<text x="369.50" y="366.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">卡带 ROM/NAND</text>
+<text x="369.50" y="430.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">SLC NAND/eMMC</text>
+<text x="810.50" y="350.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">自产晶圆</text>
+<text x="810.50" y="454.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">外购 die</text>
+<text x="1031.00" y="385.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">capex/设备</text>
+<text x="1031.00" y="435.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">6 吋厂已售</text>
+<rect x="42.00" y="264.50" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="42.00" y="264.50" width="3" height="120.00" rx="2" fill="#56c6e6"/>
+<text x="60.00" y="297.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">AI 服务器/交换机/AI PC/VR</text>
+<text x="60.00" y="318.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">每台需 NOR 存固件</text>
+<text x="60.00" y="335.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">高容量 NOR 渠道价 US$1→US$8</text>
+<rect x="42.00" y="400.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="400.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="433.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">游戏主机 (Switch/Switch 2)</text>
+<text x="60.00" y="454.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">卡带 ROM/NAND</text>
+<text x="60.00" y="471.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">日本占营收 19.56%</text>
+<rect x="42.00" y="510.50" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="510.50" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="543.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">工业/车用/网通</text>
+<text x="60.00" y="564.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">SLC NAND/eMMC</text>
+<text x="60.00" y="581.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">车规·航天认证</text>
+<rect x="483.00" y="220.00" width="214" height="150.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="220.00" width="3" height="150.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">旺宏 MACRONIX (NVM IDM)</text>
+<text x="501.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">1Q26 营收 NT$10.47bn</text>
+<text x="501.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">GM 40.8%, 转盈</text>
+<rect x="483.00" y="386.00" width="214" height="77.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="386.00" width="3" height="77.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="419.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">NOR Flash (1Q26 58%)</text>
+<text x="501.00" y="440.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">全球份额 ~16.9%</text>
+<rect x="483.00" y="479.00" width="214" height="77.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="479.00" width="3" height="77.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="512.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">NAND/eMMC (1Q26 30%)</text>
+<text x="501.00" y="533.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">NAND 营收 +382% YoY</text>
+<rect x="483.00" y="572.00" width="214" height="77.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="572.00" width="3" height="77.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="605.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">ROM/XtraROM (1Q26 8%)</text>
+<text x="501.00" y="626.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">全球份额 &gt;50%</text>
+<rect x="924.00" y="248.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="248.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="281.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">自有 Fab 5 (12 吋)</text>
+<text x="942.00" y="302.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">上限 2.5 万片/月</text>
+<text x="942.00" y="319.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">capex NT$22bn 扩产</text>
+<rect x="924.00" y="358.00" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="358.00" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="391.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">外购 3D NAND die</text>
+<text x="942.00" y="412.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">补 Switch 2 高容量卡带</text>
+<rect x="924.00" y="451.00" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="451.00" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="484.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">设备厂/材料 (机台交期→1H27)</text>
+<text x="942.00" y="505.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">量的天花板的来源</text>
+<rect x="924.00" y="544.00" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="544.00" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="577.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">鸿海 Foxconn (前 6 吋厂买家)</text>
+<text x="942.00" y="598.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">2021 以 NT$2.52bn 收购</text>
+<rect x="42.00" y="675.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="677.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="677.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="677.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="677.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="670.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="747.00" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="814.20" y="670.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="833.20" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="972.40" y="670.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="991.40" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="42.00" y="690.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="61.00" y="699.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="135.40" y="690.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="154.40" y="699.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="715.00" x2="1138" y2="715.00" stroke="#222a3a"/>
+<text x="42.00" y="731.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 退出式短缺如何重定价</text>
+<rect x="42.00" y="751.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="751.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="775.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">需求 · AI 硬件</text>
+<text x="58.00" y="793.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AI 把 NOR 渠道价抬 8 倍</text>
+<text x="58.00" y="817.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">每台</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 服务器/交换机/AI</tspan><tspan fill="#9aa3b8" font-weight="400"> PC</tspan><tspan fill="#9aa3b8" font-weight="400"> 都要</tspan><tspan fill="#9aa3b8" font-weight="400"> NOR</tspan><tspan fill="#9aa3b8" font-weight="400"> 存固件，VR</tspan><tspan fill="#9aa3b8" font-weight="400"> 设备单机用量翻倍——</tspan><tspan fill="#f4d58a" font-weight="700"> 高容量</tspan><tspan fill="#f4d58a" font-weight="700"> NOR</tspan></text>
+<text x="58.00" y="833.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">渠道价由</tspan><tspan fill="#f4d58a" font-weight="700"> US$1</tspan><tspan fill="#f4d58a" font-weight="700"> 涨至</tspan><tspan fill="#f4d58a" font-weight="700"> US$8</tspan><tspan fill="#9aa3b8" font-weight="400"> （MS</tspan><tspan fill="#9aa3b8" font-weight="400"> Computex</tspan><tspan fill="#9aa3b8" font-weight="400"> 观察，</tspan><tspan fill="#f4d58a" font-weight="700"> 分析师观点</tspan><tspan fill="#9aa3b8" font-weight="400"> ）。</tspan></text>
+<rect x="412.00" y="751.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="412.00" y="751.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="428.00" y="775.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">供给 · 退出式短缺</text>
+<text x="428.00" y="793.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">大厂退出 2GB–64GB 容量段</text>
+<text x="428.00" y="817.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Samsung</tspan><tspan fill="#9aa3b8" font-weight="400"> 退出</tspan><tspan fill="#9aa3b8" font-weight="400"> eMMC、Kioxia/Micron</tspan><tspan fill="#9aa3b8" font-weight="400"> 淡出</tspan><tspan fill="#9aa3b8" font-weight="400"> SLC，</tspan><tspan fill="#f4d58a" font-weight="700"> 2GB–64GB</tspan><tspan fill="#f4d58a" font-weight="700"> NAND</tspan></text>
+<text x="428.00" y="833.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">产能基本消失</tspan><tspan fill="#9aa3b8" font-weight="400"> ，旺宏成</tspan><tspan fill="#f4d58a" font-weight="700"> 唯一补缺者</tspan><tspan fill="#9aa3b8" font-weight="400"> ——NAND</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收</tspan><tspan fill="#f4d58a" font-weight="700"> +382%</tspan><tspan fill="#f4d58a" font-weight="700"> YoY</tspan><tspan fill="#9aa3b8" font-weight="400"> ，议价由季度改月度。</tspan></text>
+<rect x="782.00" y="751.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="751.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="775.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">护城河 · 自有产能</text>
+<text x="798.00" y="793.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">12 吋 Fab 5 是定价权的物理基础</text>
+<text x="798.00" y="817.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">全自有</tspan><tspan fill="#f4d58a" font-weight="700"> 2.5</tspan><tspan fill="#f4d58a" font-weight="700"> 万片/月</tspan><tspan fill="#9aa3b8" font-weight="400"> 上限产能，使旺宏能在缺口期把价格直接落袋；但量的天花板让</tspan><tspan fill="#9aa3b8" font-weight="400"> 2H26</tspan><tspan fill="#9aa3b8" font-weight="400"> 增长</tspan></text>
+<text x="798.00" y="833.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">几乎全靠价格</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="42.00" y="881.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="881.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="905.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">成本 · CAPEX 赛跑</text>
+<text x="58.00" y="923.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">NT$22bn 扩产对准价格回归窗口</text>
+<text x="58.00" y="947.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">2014</tspan><tspan fill="#f4d58a" font-weight="700"> 年以来最大扩产</tspan><tspan fill="#9aa3b8" font-weight="400"> ，新机台</tspan><tspan fill="#f4d58a" font-weight="700"> 1H27</tspan><tspan fill="#f4d58a" font-weight="700"> 到位</tspan><tspan fill="#9aa3b8" font-weight="400"> ——恰是</tspan><tspan fill="#9aa3b8" font-weight="400"> Bernstein</tspan></text>
+<text x="58.00" y="963.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">模型中价格开始正常化的时点：capex</tspan><tspan fill="#9aa3b8" font-weight="400"> 兑现成营收</tspan><tspan fill="#9aa3b8" font-weight="400"> vs</tspan><tspan fill="#9aa3b8" font-weight="400"> 价格回落，是</tspan><tspan fill="#9aa3b8" font-weight="400"> 2027–28E</tspan><tspan fill="#9aa3b8" font-weight="400"> 的核心赛跑。</tspan></text>
+<rect x="412.00" y="881.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="881.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="905.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">现金牛 · 结构性下行</text>
+<text x="428.00" y="923.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">ROM 垄断但市场萎缩</text>
+<text x="428.00" y="947.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">ROM</tspan><tspan fill="#9aa3b8" font-weight="400"> 全球份额</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;50%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，但营收三年缩水</tspan><tspan fill="#f4d58a" font-weight="700"> 57%</tspan><tspan fill="#9aa3b8" font-weight="400"> （FY22</tspan><tspan fill="#9aa3b8" font-weight="400"> NT$10.67bn→FY25</tspan></text>
+<text x="428.00" y="963.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">NT$4.63bn）；Switch</tspan><tspan fill="#9aa3b8" font-weight="400"> 2</tspan><tspan fill="#9aa3b8" font-weight="400"> 卡带订单能否回流是</tspan><tspan fill="#9aa3b8" font-weight="400"> ROM/NAND</tspan><tspan fill="#9aa3b8" font-weight="400"> 的可选上行。</tspan></text>
+<rect x="782.00" y="881.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="782.00" y="881.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="798.00" y="905.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">客户 · 关联方风险</text>
+<text x="798.00" y="923.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">单一最大客户 16.16%（不具名关联方）</text>
+<text x="798.00" y="947.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#f4d58a" font-weight="700"> Customer</tspan><tspan fill="#f4d58a" font-weight="700"> A</tspan><tspan fill="#9aa3b8" font-weight="400"> 占合并营收</tspan><tspan fill="#f4d58a" font-weight="700"> 16.16%</tspan><tspan fill="#9aa3b8" font-weight="400"> （FY24</tspan><tspan fill="#f4d58a" font-weight="700"> 21.08%</tspan></text>
+<text x="798.00" y="963.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">），为关联方且按契约保密未具名——集中度可控但外部可验证性低。</tspan></text>
+<text x="590.00" y="1033.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Macronix 2025 年报 (p.103/108/110/126) · 旺宏 1Q26 法说会 (TrendForce/Taipei Times 2026-04-28) · MS Computex takeaways 2026-06-07 (分析师观点)</text>
+</svg>
+
+
+
 ### 4.3 NOR Flash（1Q26 营收占比 58%）
 
 官网产品页的官方定义（verbatim）："Macronix, as a global leader in Serial NOR Flash memory, dedicates itself to developing comprehensive product portfolio to meet the requirements of high performance, reliable quality, low pin count and small form factor."（[Macronix NOR Flash 产品页](https://www.macronix.com/en-us/products/nor-flash/Pages/default.aspx)）。产品族覆盖 3V/2.5V/1.8V/1.2V 电压、512Kb–2Gb 容量，含 Serial（MX25/66L、MX25/66U）、Parallel（MX29 系列）、OctaBus（MX25/66LM/UM，Octa I/O + DTR）、宽压超低功耗（MX25R，功耗较传统产品低 60%）等（同上）。
@@ -280,6 +757,62 @@ pie title FY2025 合并营收按产品线（单一分母：合并净营收 NT$28
 
 来源：[Macronix 2025 年年报, p.103](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)。
 
+**产品组合的周期内再平衡（1Q26 口径，单一分母）。** FY2025 全年口径下 ROM 仍占 16%；但进入 1Q26，NAND/eMMC 占比已从一年前的 11% 跃升至 30%、ROM 降至 8%——下方左图为 1Q26 产品线占比，右图为 FY2025 地区别营收（亚洲其他 38.96% / 台湾 23.22% / 日本 19.56% / 欧洲 11.78% / 美国 6.48%，日本近两成与游戏主机供应链相关）（[Taipei Times, 2026-04-28](https://www.taipeitimes.com/News/biz/archives/2026/04/28/2003856347)；[2025 年年报, p.108](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">旺宏 1Q26 营收按产品线（单一分母：1Q26 合并营收 NT$10.47bn）</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 224.41,354.87 L 250.42,307.55 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 224.41,354.87 A 132 132 0 0 1 197.66,142.96 L 234.61,182.33 A 78 78 0 0 0 250.42,307.55 Z" fill="#15803d"/>
+<path d="M 197.66,142.96 A 132 132 0 0 1 255.23,111.33 L 268.64,163.64 A 78 78 0 0 0 234.61,182.33 Z" fill="#d97706"/>
+<path d="M 255.23,111.33 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 268.64,163.64 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">1Q26</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">NT$10.5B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="421.66" y1="273.52" x2="437.66" y2="273.52" stroke="#2563eb" stroke-width="1.4"/>
+<text x="441.66" y="271.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">NOR Flash 58%</text>
+<text x="441.66" y="285.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$6.1B  (58.0%)</text>
+<line x1="151.09" y1="256.49" x2="135.09" y2="256.49" stroke="#15803d" stroke-width="1.4"/>
+<text x="131.09" y="254.49" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">NAND/eMMC 30%</text>
+<text x="131.09" y="268.49" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$3.1B  (30.0%)</text>
+<line x1="221.56" y1="118.25" x2="205.56" y2="118.25" stroke="#d97706" stroke-width="1.4"/>
+<text x="201.56" y="116.25" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">ROM 8%</text>
+<text x="201.56" y="130.25" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$838.0M  (8.0%)</text>
+<line x1="270.74" y1="102.28" x2="254.74" y2="102.28" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="250.74" y="100.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Foundry 4%</text>
+<text x="250.74" y="114.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$418.0M  (4.0%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 旺宏 1Q26 法说会产品占比 (Taipei Times 2026-04-28)</text>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">旺宏 FY2025 营收按地区（单一分母：合并净营收 NT$28.88bn）</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 372.39,340.70 L 337.87,299.18 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 372.39,340.70 A 132 132 0 0 1 196.55,334.39 L 233.96,295.45 A 78 78 0 0 0 337.87,299.18 Z" fill="#15803d"/>
+<path d="M 196.55,334.39 A 132 132 0 0 1 167.67,184.94 L 216.89,207.14 A 78 78 0 0 0 233.96,295.45 Z" fill="#d97706"/>
+<path d="M 167.67,184.94 A 132 132 0 0 1 235.74,117.99 L 257.12,167.57 A 78 78 0 0 0 216.89,207.14 Z" fill="#7c3aed"/>
+<path d="M 235.74,117.99 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 257.12,167.57 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">FY25</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">NT$28.9B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="417.78" y1="192.30" x2="433.78" y2="192.30" stroke="#2563eb" stroke-width="1.4"/>
+<text x="437.78" y="190.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">亚洲其他 Asia-other 38.96%</text>
+<text x="437.78" y="204.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$11.3B  (39.0%)</text>
+<line x1="283.05" y1="377.11" x2="267.05" y2="377.11" stroke="#15803d" stroke-width="1.4"/>
+<text x="263.05" y="375.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">台湾 Taiwan 23.22%</text>
+<text x="263.05" y="389.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$6.7B  (23.2%)</text>
+<line x1="152.51" y1="265.39" x2="136.51" y2="265.39" stroke="#d97706" stroke-width="1.4"/>
+<text x="132.51" y="263.39" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">日本 Japan 19.56%</text>
+<text x="132.51" y="277.39" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$5.6B  (19.6%)</text>
+<line x1="191.23" y1="140.82" x2="175.23" y2="140.82" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="171.23" y="138.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">欧洲 Europe 11.78%</text>
+<text x="171.23" y="152.82" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$3.4B  (11.8%)</text>
+<line x1="260.11" y1="104.05" x2="244.11" y2="104.05" stroke="#dc2626" stroke-width="1.4"/>
+<text x="240.11" y="102.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">美国 US 6.48%</text>
+<text x="240.11" y="116.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$1.9B  (6.5%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Macronix 2025 年报 p.108 (地区别营收)</text>
+</svg>
+
+
+
 **应用市场。** 年报列举 Flash 的应用：手机、机顶盒、IoT、PC、人工智能、车用电子、医疗科技、工业、存储设备、网络设备、平板、无线通信（蓝牙/WLAN/5G）与大型娱乐设备；eMMC 主要用于工业与网通产品、车用辅助驾驶（ADAS）与影音娱乐系统、智能医疗设备；ROM 用于电视游戏卡、电子娱乐设备与电子玩具（[2025 年年报, p.109](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）。公司长期深耕工业、车用与通信三大高可靠性市场，产品已通过车规与航天级认证（[2025 年年报, p.2](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）。
 
 **销售模式与定价机制。** 公司透过直销与代理/分销并行覆盖全球客户（官网列有 Sales/Distributors 网络，[Macronix 官网](https://www.macronix.com/en-us/products/nor-flash/Pages/default.aspx)）。本轮周期最重要的 GTM 变化是定价机制：eMMC/SLC NAND 由季度议价改为**月度议价**、且法说会披露在手供给协议按月滚动（"Supply agreements operate on monthly rather than quarterly negotiation cycles"，[Taipei Times, 2026-04-28](https://www.taipeitimes.com/News/biz/archives/2026/04/28/2003856347)）——短单化在涨价周期中最大化价格捕获，但也意味着周期反转时缺乏长约保护（对比美系大厂的 LTA 模式，*分析师观点：* Bernstein 指出美系 CSP 的 LTA 多已签订、"LTAs may mitigate the impact of a correction"，[Bernstein Memory Tracker, 2026-06-02, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212485115581121/Bernstein-Global%20Memory%EF%BC%9AMEMORY%20TRACKER%20%EF%BC%88May%EF%BC%89%EF%BC%9A%20Price%20hike%20c.%2060%25%20QoQ%20in%202QCY26%EF%BC%8C%20but%20likely%20at%20a%20slower%20pace%20in%202HCY26-260602.pdf)）。
@@ -317,13 +850,13 @@ xychart-beta
 
 ```mermaid
 xychart-beta
-    title "同业 P/B 对比（trailing，2026-06-10，yfinance）"
+    title "同业 P/B 对比（trailing，2026-06-12，yfinance）"
     x-axis ["旺宏 2337", "华邦电 2344", "南亚科 2408", "兆易创新 603986", "Kioxia 285A"]
-    y-axis "P/B (x)" 0 --> 30
-    bar [5.14, 5.75, 5.35, 13.33, 27.52]
+    y-axis "P/B (x)" 0 --> 36
+    bar [5.58, 6.64, 6.01, 13.34, 34.60]
 ```
 
-来源：[Yahoo Finance（yfinance .info，2026-06-10）](https://finance.yahoo.com/quote/2337.TW/)。注：Kioxia 为 NAND 大宗厂、兆易为 fabless 设计公司，商业模式与 IDM 利基厂不完全可比。
+来源：[Yahoo Finance（yfinance .info，2026-06-12）](https://finance.yahoo.com/quote/2337.TW/)。注：Kioxia 为 NAND 大宗厂、兆易为 fabless 设计公司，商业模式与 IDM 利基厂不完全可比。
 
 **定位框架（价格 × 产品广度）。** *分析师观点：* 在"产品容量覆盖广度"与"自有产能控制力"两个维度上，旺宏是利基存储中唯一同时具备 **Mb→GB 全容量阶梯**（NOR+SLC+eMMC+ROM）与**全自有 12 吋产能**的厂商：华邦电以 NOR+利基 DRAM+SLC 见长但 DRAM 占比高、兆易创新为 fabless（依赖代工产能分配，在产能紧张期受制于人）、南亚科是纯 DRAM。竞争劣势同样清晰：旺宏的产能规模（2.5 万片/月）远小于大厂，决定了它只能做"大厂不要的容量段"——这在退出周期是护城河，在大厂回归时是脆弱性。
 
@@ -340,6 +873,41 @@ xychart-beta
 
 **SOM 的约束：产能而非需求。** *分析师观点：* 旺宏 2026 年的可实现市场份额由产能决定——12 吋 2.5 万片/月的上限、新机台 1H27 到位（[Taipei Times, 2026-04-28](https://www.taipeitimes.com/News/biz/archives/2026/04/28/2003856347)），意味着 2026 年营收增长 ≈ ASP 增长；NT$22bn capex 是 2014 年以来最大扩产承诺（对比 2023–2025 三年合计 NT$14.8bn，[2025 年年报, p.128](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)），其投产节奏（1H27 起）恰好对准 Bernstein 模型中价格开始回归的窗口——**capex 兑现成营收的速度 vs 价格回落的速度，是 2027–28E 模型的核心赛跑**。
 
+**产品线随周期的结构变化（周期高点 FY2022 vs 谷底 FY2025）。** 下图对比上一轮周期高点（FY2022 营收 NT$43.5bn）与谷底（FY2025 NT$28.9bn）的产品线构成：Flash 从 NT$29.0bn 收缩至 NT$22.4bn、ROM 从 NT$10.67bn 腰斩至 NT$4.63bn、Foundry 从 NT$3.80bn 降至 NT$1.86bn——ROM 的结构性下行（−57%）是谷底期最显著的拖累，本轮 NAND/eMMC 的重定价正是用来填补这块缺口的新引擎（[2023 年年报, p.109](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2023_en.pdf)；[2025 年年报, p.103](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)）。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">旺宏营收按产品线（NT$bn）：周期高点 FY2022 vs 谷底 FY2025</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Flash (NOR+NAND+eMMC)</text>
+<rect x="188.60" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="204.60" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">ROM</text>
+<rect x="238.40" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="254.40" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Foundry</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">NT$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">NT$9.4B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">NT$18.8B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">NT$28.2B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">NT$37.6B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">NT$47.0B</text>
+<rect x="150.22" y="205.64" width="221.56" height="206.36" fill="#2563eb"/>
+<rect x="150.22" y="129.76" width="221.56" height="75.87" fill="#15803d"/>
+<rect x="150.22" y="102.74" width="221.56" height="27.02" fill="#d97706"/>
+<text x="261.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2022</text>
+<rect x="532.22" y="252.71" width="221.56" height="159.29" fill="#2563eb"/>
+<rect x="532.22" y="219.82" width="221.56" height="32.89" fill="#15803d"/>
+<rect x="532.22" y="206.63" width="221.56" height="13.19" fill="#d97706"/>
+<text x="643.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2025</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Macronix 2023 年报 p.109 + 2025 年报 p.103 (产品别营收占比)</text>
+</svg>
+
+
+
 ## 9. 风险评估
 
 **公司特定风险**
@@ -354,11 +922,11 @@ xychart-beta
 
 6. **供给再进入。** *分析师观点：* +200% 的价格信号会吸引再进入：兆易创新在 SLC NAND 的布局、中国产能在利基容量段的扩张（MS 在 3 月即提示长存扩产对 DDR4 缺口的收窄效应，[MS Turning Selective, 2026-03-19（DDR4 段落）](http://xs-macbook-air.local:5001/zsxq/pdf/184444852442552/Morgan%20Stanley-Old%20Memory%EF%BC%9A%20Turning%20Selective-260319.pdf)）；"唯一供应商"地位的半衰期可能短于市场预期。
 7. **需求破坏（demand destruction）。** *分析师观点：* MS 自己的 Chipflation 框架承认下游将面临"传导涨价、降规格、或接受减利"的三难（[MS Chipflation, 2026-06-02, p.5](http://xs-macbook-air.local:5001/zsxq/pdf/184152882245822/MS-Global%20Technology%20Chipflation%20%E2%80%93%20Navigating%20A%20Memory%20Crisis-260602.pdf)）——工控/消费类客户对低容量 NAND 的涨价容忍度有限，规格下调（despeccing）与设计替代（如转向 managed NAND 外购方案）都会侵蚀缺口。
-8. **大盘/板块 beta。** 12 个月 +537% 之后，股票对板块情绪高度敏感——2026-05-29→06-10 窗口内随 SOCAMM 减配噪音回撤 ~19%（见第 1 节相对表现，[yfinance](https://finance.yahoo.com/quote/2337.TW/)）。
+8. **大盘/板块 beta。** 12 个月 +563% 之后，股票对板块情绪高度敏感——2026-05-29→06-12 窗口内随 SOCAMM 减配噪音与涨价斜率钝化回撤约 19%（自高点 NT$180 至 NT$146.5）（见第 1 节相对表现，[yfinance](https://finance.yahoo.com/quote/2337.TW/)）。
 
 **财务风险**
 
-9. **高 P/B 去估值（de-rating）。** 现价 5.14x P/B 对 2017 年以来 1.5x 均值（*分析师观点：* MS 统计，[MS Turning Selective, 2026-03-19, p.2](http://xs-macbook-air.local:5001/zsxq/pdf/184444852442552/Morgan%20Stanley-Old%20Memory%EF%BC%9A%20Turning%20Selective-260319.pdf)）的溢价完全由周期盈利预期支撑；若 ROAE 路径不及 MS 的 52%/65%，倍数与 BVPS 预期双杀。
+9. **高 P/B 去估值（de-rating）。** 现价 5.58x P/B 对 2017 年以来 1.5x 均值（*分析师观点：* MS 统计，[MS Turning Selective, 2026-03-19, p.2](http://xs-macbook-air.local:5001/zsxq/pdf/184444852442552/Morgan%20Stanley-Old%20Memory%EF%BC%9A%20Turning%20Selective-260319.pdf)）的溢价完全由周期盈利预期支撑；若 ROAE 路径不及 MS 的 52%/65%，倍数与 BVPS 预期双杀。
 10. **可转债摊薄与资本开支再加杠杆。** 公司 2025 年发行第二次国内无担保可转债、年末总借款 NT$22.9bn vs 现金 NT$14.9bn（[2025 年年报, p.126/p.128](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)；[yfinance](https://finance.yahoo.com/quote/2337.TW/)）；NT$22bn capex 若遇上 2027 价格回落，FCF 将再度转负（公司 2023–25 连续三年净亏损的资产负债表记忆犹新）。
 
 **宏观风险**
@@ -372,7 +940,7 @@ xychart-beta
 
 **分歧 2 —— 熊方："唯一供应商"地位会被中国低价产能击穿。** *分析师观点：* 反驳：短期（12 个月）内不现实——SLC/MLC 的工控与车规客户认证周期以年计，且 MS 点名的现存供应商三家中两家（兆易为 fabless、华邦产能优先 DRAM/NOR）并不在 2GB–64GB MLC 容量段与旺宏正面竞争（[MS — Upside Surprise Ahead, 2026-05-28, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212451114418521/MS-Greater%20China%20Semiconductors%20-%20Asia%20Pacific%20Old%20Memory-Upside%20Surprise%20%20Ahead-260528.pdf)）。但 24 个月以上维度此风险真实，故本文 FY2028E 模型假设营收 −20%、GM 回落至 42%。
 
-**分歧 3 —— 熊方：5.1x P/B 已经把超级周期 price-in，现在买是接最后一棒。** *分析师观点：* 反驳：P/B 的分母（BVPS）正以每季 ~NT$3+ 的速度复利——若本文 FY26E 净利 NT$27.5bn 兑现，年末 BVPS ~NT$39，当前价对应的 2026E P/B 仅 3.5x；MS 框架下 ROAE 52–65% 的公司在历史上交易于远高于 1.5x 的倍数（旺宏自身 3 月已交易至 5x forward P/B，MS 当时仍按 7.0x 给目标，[MS Turning Selective, 2026-03-19, p.2/p.8](http://xs-macbook-air.local:5001/zsxq/pdf/184444852442552/Morgan%20Stanley-Old%20Memory%EF%BC%9A%20Turning%20Selective-260319.pdf)）。真正的尾部在分歧 1 的失速情景，本文以 Bear NT$85（−37%）显式定价。
+**分歧 3 —— 熊方：5.1x P/B 已经把超级周期 price-in，现在买是接最后一棒。** *分析师观点：* 反驳：P/B 的分母（BVPS）正以每季 ~NT$3+ 的速度复利——若本文 FY26E 净利 NT$27.5bn 兑现，年末 BVPS ~NT$39，当前价对应的 2026E P/B 仅 3.5x；MS 框架下 ROAE 52–65% 的公司在历史上交易于远高于 1.5x 的倍数（旺宏自身 3 月已交易至 5x forward P/B，MS 当时仍按 7.0x 给目标，[MS Turning Selective, 2026-03-19, p.2/p.8](http://xs-macbook-air.local:5001/zsxq/pdf/184444852442552/Morgan%20Stanley-Old%20Memory%EF%BC%9A%20Turning%20Selective-260319.pdf)）。真正的尾部在分歧 1 的失速情景，本文以 Bear NT$85（−42%）显式定价。
 
 **催化剂日历（未来 12 个月，跟踪建议交给 `catalyst-calendar` skill）：**
 
@@ -399,21 +967,21 @@ xychart-beta
 | 盈利可预测性 | 2/10 | 2023–25 连亏三年、2026 暴利——典型周期盈利（§1） |
 | 管理层 | 8/10 | 创始人执掌 37 年、穿越多轮周期、自有 IDM 战略定力（§3） |
 | 资产负债表 | 6/10 | 年末净负债 ~NT$8bn、可控；但 capex 周期再启（§9 风险 10） |
-| 价格 vs 价值 | 2/10 | 5.14x P/B vs 历史均值 1.5x；安全边际为负（§1A） |
+| 价格 vs 价值 | 2/10 | 5.58x P/B vs 历史均值 1.5x；安全边际为负（§1A） |
 
 失败模式：把"退出式短缺"误读为永久性护城河——若 2027 年价格回归，5x 账面值买入的投资者将承受倍数与盈利的双杀。
 
 ### 10.2 Munger 视角（加权质量 + 逆向思维，0–10）
 
-*视角观点:* **4/10 —— "聪明的周期客可以参与，长期主义者应当跳过。"** 逆向检验（invert）：这笔投资如何失败？(a) 涨价引发的需求破坏快于预期（MS 自己的 Chipflation 三难，§9 风险 7）；(b) 中国低价产能 18–24 个月内进场（§9.5 分歧 2）；(c) 在 12 个月 +537% 之后买入，行为学上是典型的追涨入场点（§1 相对表现）。三条失败路径中有两条不受公司控制。质量分被 ROM 垄断与创始人治理拉高，价格分被 5x P/B 拉低。
+*视角观点:* **4/10 —— "聪明的周期客可以参与，长期主义者应当跳过。"** 逆向检验（invert）：这笔投资如何失败？(a) 涨价引发的需求破坏快于预期（MS 自己的 Chipflation 三难，§9 风险 7）；(b) 中国低价产能 18–24 个月内进场（§9.5 分歧 2）；(c) 在 12 个月 +563% 之后买入，行为学上是典型的追涨入场点（§1 相对表现）。三条失败路径中有两条不受公司控制。质量分被 ROM 垄断与创始人治理拉高，价格分被 5x P/B 拉低。
 
 ### 10.3 Damodaran 视角（story + numbers，内在价值 ±%）
 
-*视角观点:* **正常化估值下高估约 −30%；当前价格内含"超级周期延续到 2028"的强叙事。** 故事归类：**cyclical windfall（周期暴利）**而非 growth story——营收跳升来自价格而非量（产能锁死，§8）。粗略正常化（rough numbers，Rf = 4.536%，indicators.db 快照如上）：本文 2022–2028E 七年全周期平均 EPS ≈ NT$5.6（§1A 模型 + 历史实际值），给 12–14x 周期股中枢 P/E → 内在价值锚 NT$67–78 + 2026–27 暴利现金的折现增量 ~NT$20–25 → 合计 ~NT$90–105 vs 现价 NT$135。要为现价辩护，必须相信 MS 的 ROAE 65% 轨迹至少持续到 2027 年中（§1A(d)）。关键假设：终值正常化 EPS NT$5.6、周期溢价现金 NT$45bn、无永久性份额扩张。失败模式：把 2026 年的 EPS 当作可资本化的常态。
+*视角观点:* **正常化估值下高估约 −30%；当前价格内含"超级周期延续到 2028"的强叙事。** 故事归类：**cyclical windfall（周期暴利）**而非 growth story——营收跳升来自价格而非量（产能锁死，§8）。粗略正常化（rough numbers，Rf = 4.536%，indicators.db 快照如上）：本文 2022–2028E 七年全周期平均 EPS ≈ NT$5.6（§1A 模型 + 历史实际值），给 12–14x 周期股中枢 P/E → 内在价值锚 NT$67–78 + 2026–27 暴利现金的折现增量 ~NT$20–25 → 合计 ~NT$90–105 vs 现价 NT$146.5。要为现价辩护，必须相信 MS 的 ROAE 65% 轨迹至少持续到 2027 年中（§1A(d)）。关键假设：终值正常化 EPS NT$5.6、周期溢价现金 NT$45bn、无永久性份额扩张。失败模式：把 2026 年的 EPS 当作可资本化的常态。
 
 ### 10.4 Howard Marks 周期视角（offense ↔ defense，0–100；100 = 全防御）
 
-*视角观点:* **62/100 —— 钟摆在贪婪侧，参与可以、但必须带退出纪律。** 组件：信用利差 HY 274bp / IG 74bp（历史紧位 → 风险定价自满）；VIX 21.5（波动率已苏醒）；存储板块情绪——PT 上修潮单向（§1A 卖方观点演变；理由"chasing the tape"模式见 [memory-upcycle 主题档案](../../themes/memory-upcycle_theme.md)）、12 个月 +537% 的标的仍在被新增 OW 覆盖；但反面证据是 5–6 月板块已自发回撤（旺宏 −18.9%/窗口），说明市场并非无脑追价。结论：本文的 Buy 评级是一笔**周期内的相对价值交易**（盈利兑现快于估值消化），与 10.1–10.3 视角的长期谨慎并不矛盾——分歧点在持有期限与退出纪律：催化剂日历（§9.5）中的 3Q26 合约价谈判是第一个强制重估检查点；建议配合 `take-profit-lab` 设定分层止盈。
+*视角观点:* **62/100 —— 钟摆在贪婪侧，参与可以、但必须带退出纪律。** 组件：信用利差 HY 274bp / IG 74bp（历史紧位 → 风险定价自满）；VIX 21.5（波动率已苏醒）；存储板块情绪——PT 上修潮单向（§1A 卖方观点演变；理由"chasing the tape"模式见 [memory-upcycle 主题档案](../../themes/memory-upcycle_theme.md)）、12 个月 +563% 的标的仍在被维持 OW/偏好覆盖；但反面证据是 5–6 月板块已自发回撤（旺宏自高点 −19%），说明市场并非无脑追价。结论：本文的 Buy 评级是一笔**周期内的相对价值交易**（盈利兑现快于估值消化），与 10.1–10.3 视角的长期谨慎并不矛盾——分歧点在持有期限与退出纪律：催化剂日历（§9.5）中的 3Q26 合约价谈判是第一个强制重估检查点；建议配合 `take-profit-lab` 设定分层止盈。
 
 ---
 
@@ -428,9 +996,9 @@ xychart-beta
 - 1Q26 法人说明会（2026-04-27，董事长兼 CEO 主持）——经由 BigGo/Taipei Times/TrendForce/DigiTimes 报道引用；官方 deck 无公开稳定 PDF 链接（见验证日志 gap 项）。IR 页面：[每季营运报告](https://www.mxic.com.tw/zh-tw/about/investor-relations/Pages/quarterly-results.aspx)。
 - 月度营收公告（2026 年 4 月、5 月）——经 TechNews 转载（官方披露于 MOPS）。
 
-**Market data（市场数据，截至 2026-06-10）**
+**Market data（市场数据，截至 2026-06-12）**
 - 2337.TW 价格/市值/倍数/52 周区间/相对收益；同业 2344.TW、2408.TW、603986.SS、285A.T 倍数。Source: [Yahoo Finance（yfinance）](https://finance.yahoo.com/quote/2337.TW/)。
-- TAIEX（^TWII）基准收益（yfinance，最近收盘 2026-06-09）。
+- TAIEX（^TWII）基准收益（yfinance，最近收盘 2026-06-12）。
 
 **Institute research（本地 `db/zsxq.db`，均为 *分析师观点*）**
 - 检索别名 8 个（2337 / Macronix / 旺宏 / NOR / legacy NAND / 存储 / 记忆体 / memory），命中 14 条旺宏相关笔记，深读 9 条、补抓 1 条（Kioxia readacross 透过 downloader 补全本地 PDF）。引用清单（每条 file_id 即直链）：
@@ -449,7 +1017,11 @@ xychart-beta
   - [`212485115581121` — Bernstein：MEMORY TRACKER (May)（2H26 减速路径），2026-06-02](http://xs-macbook-air.local:5001/zsxq/pdf/212485115581121/Bernstein-Global%20Memory%EF%BC%9AMEMORY%20TRACKER%20%EF%BC%88May%EF%BC%89%EF%BC%9A%20Price%20hike%20c.%2060%25%20QoQ%20in%202QCY26%EF%BC%8C%20but%20likely%20at%20a%20slower%20pace%20in%202HCY26-260602.pdf)
   - [`812452144184522` — BofA：Global Memory Tech Theme of the week，2026-05-16](http://xs-macbook-air.local:5001/zsxq/pdf/812452144184522/Bofa-Global%20Memory%20Tech%20Theme%20of%20the%20week-NAND%20surprise%2C%20Samsung%20labor%20strike%2C%20TCB%20sales%20miss-260516.pdf)
   - [`585424842252824` — Morgan Stanley：Nintendo: Expectations Reset（存储涨价对任天堂成本冲击），2026-05-20](http://xs-macbook-air.local:5001/zsxq/pdf/585424842252824/Morgan%20Stanley-Nintendo%20%EF%BC%887974.T%EF%BC%89Expectations%20Reset%EF%BC%9B%20Focus%20Shifts%20to%20New%20Software%EF%BC%8C%20Impact%20of%202027%20Memory%20Prices-260520.pdf)
-- 机械预检：`db/stock_price_target.db`（只读）2337.TW 共 4 条记录（全部 Morgan Stanley，2026-03-16 至 2026-05-08）。
+  - [`412458118152558` — Morgan Stanley：Taiwan Tech Monthly Revenue Tracker — May Rev Wrap（旺宏 5 月营收 +176% YoY 但较 MSe −8%，列偏好个股），2026-06-10](http://xs-macbook-air.local:5001/zsxq/pdf/412458118152558/Morgan%20Stanley-Taiwan%20Tech%20%E2%80%93%20Monthly%20Revenue%20Tracker%20-%20Asia%20Pacific%EF%BC%9AMay%20Revenue%20Wrap%20%E2%80%93%20AI%20Momentum%20Persists-260610.pdf)（2026-06-15 刷新补入）
+- 机械预检：`db/stock_price_target.db`（只读）2337.TW 共 4 条记录（全部 Morgan Stanley，2026-03-16 至 2026-05-08）；2026-06-15 复检无新 PT 记录入库。
+
+**Financial-statement charts（Step 8，stdlib inline SVG，由 `scripts/financial_charts.py` / `scripts/gf_score.py` 生成）**
+- 损益 Sankey（1Q26）、资产负债表 Sankey（FY2025）、现金流量 Sankey（FY2025）、产品线 donut（1Q26）、地区 donut（FY2025）、产品线 revbars（FY2022 vs FY2025）、5 步 DuPont（1Q26 年化）、GF Score 雷达（五维）、供应链 moneyflow（需求/收入视角）——共 9 张 SVG，数字全部取自 [Macronix 2025 年报 p.103/108/110/126/127/128](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf) 与 1Q26 法说会（[Taipei Times](https://www.taipeitimes.com/News/biz/archives/2026/04/28/2003856347) / [TrendForce](https://www.trendforce.com/news/2026/04/28/news-macronix-nand-revenue-jumps-382-yoy-on-samsungs-mlc-exit-shifts-to-monthly-pricing-amid-deepening-crunch/)）；moneyflow 节点为年报/法说会/MS 渠道笔记中的真实交易对手。
 
 **Theme cross-reference（项目内部）**
 - [memory-upcycle 主题档案（reports/themes/memory-upcycle_theme.md，2026-06-10 刷新）](../../themes/memory-upcycle_theme.md)——旺宏为 16 标的篮子 core 成员；本报告复用其周期框架并补足个股层。
@@ -467,7 +1039,7 @@ xychart-beta
 
 ## 参考资料
 
-**公司官方（均访问于 2026-06-10/11）**
+**公司官方（均访问于 2026-06-11/15）**
 
 - [Macronix 2025 年年报（FY2025，英文版，printed 2026-03-07）](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2025_en.pdf)
 - [Macronix 2023 年年报（FY2023，英文版）](https://www.mxic.com.tw/en-us/about/investor-relations/Documents/annualreport_2023_en.pdf)
@@ -480,6 +1052,7 @@ xychart-beta
 
 **本地机构研究（zsxq，按报告日期倒序；均为 *分析师观点*）**
 
+- 2026-06-10 · [Morgan Stanley — Taiwan Tech Monthly Revenue Tracker: May Rev Wrap（旺宏列偏好个股，5 月营收较 MSe −8%）](http://xs-macbook-air.local:5001/zsxq/pdf/412458118152558/Morgan%20Stanley-Taiwan%20Tech%20%E2%80%93%20Monthly%20Revenue%20Tracker%20-%20Asia%20Pacific%EF%BC%9AMay%20Revenue%20Wrap%20%E2%80%93%20AI%20Momentum%20Persists-260610.pdf)
 - 2026-06-07 · [Morgan Stanley — Computex takeaways: Cloud, PC and old memory](http://xs-macbook-air.local:5001/zsxq/pdf/412458541155248/Morgan%20Stanley-Greater%20China%20Technology%20Semiconductors%EF%BC%9AComputex%20takeaways%EF%BC%9A%20Cloud%EF%BC%8C%20PC%20and%20old%20memory-260607.pdf)
 - 2026-06-03 · [Morgan Stanley — Old Memory: Readacross from Kioxia IR Day](http://xs-macbook-air.local:5001/zsxq/pdf/812488554854482/Morgan%20Stanley-Greater%20China%20Semiconductors%EF%BC%9AOld%20Memory%EF%BC%9A%20Readacross%20from%20Kioxia%20IR%20Day-260603.pdf)
 - 2026-06-02 · [Morgan Stanley — Chipflation – Navigating A Memory Crisis](http://xs-macbook-air.local:5001/zsxq/pdf/184152882245822/MS-Global%20Technology%20Chipflation%20%E2%80%93%20Navigating%20A%20Memory%20Crisis-260602.pdf)
@@ -496,7 +1069,7 @@ xychart-beta
 - 2026-03-16 · [Morgan Stanley — Further Strength in TPU, GPU and Memory](http://xs-macbook-air.local:5001/zsxq/pdf/212222844524521/Morgan%20Stanley-Greater%20China%20Semiconductors%EF%BC%9AFurther%20Strength%20in%20TPU%EF%BC%8C%20GPU%20and%20Memory%EF%BC%8C%20but%20More%20Downside%20in%20Smartphones%20and%20PC%20Semis-260316.pdf)
 - 2026-03-09 · [Morgan Stanley — Old memory: How to think about DDR4 price hike in 2Q26?](http://xs-macbook-air.local:5001/zsxq/pdf/812228884854442/Morgan%20Stanley-Old%20memory%EF%BC%9A%20How%20to%20think%20about%20DDR4%20price%20hike%20in%202Q26%EF%BC%9F-260309.pdf)
 
-**市场数据（均访问于 2026-06-10/11）**
+**市场数据（均访问于 2026-06-12/15）**
 
 - [Yahoo Finance — Macronix International Co., Ltd. (2337.TW)](https://finance.yahoo.com/quote/2337.TW/)
 
@@ -513,7 +1086,7 @@ xychart-beta
 - 2023 · [Nature — "I helped to build Taiwan's Silicon Valley"（吴敏求第一人称访谈）](https://www.nature.com/articles/d41586-023-01468-1)
 - 2019-12 · [TweakTown — 64GB Switch carts won't use 3D NAND, Game Cards use Macronix's XtraROM（历史结构性事实）](https://www.tweaktown.com/news/69461/64gb-switch-carts-use-3d-nand-game-cards-macronixs-xtrarom/index.html)
 
-**百科/词条（访问于 2026-06-11）**
+**百科/词条（访问于 2026-06-11/15）**
 
 - [Wikipedia — Macronix](https://en.wikipedia.org/wiki/Macronix)
 
@@ -574,5 +1147,39 @@ xychart-beta
 - 4Q25 营收 NT$7.76bn 为"1Q26 +35% QoQ"反推值（未单独从 4Q25 财报核对）。
 - MS 2026-03-16 与 04-20、05-08 三条记录的 PT 栏在 PT db 中为空（笔记未披露 PT 数字），时间线如实留空。
 - FY2026E 摊薄股数 ~1.95bn 为可转债全转换假设的近似值（转换价未从公告核对）。
+
+</details>
+
+<details>
+<summary>Verification log (Step 10) — 2026-06-15</summary>
+
+**刷新范围（refresh delta vs 2026-06-11 初稿）。** 本次为 *refresh*：（1）价格/估值快照由 2026-06-10 NT$135.0 滚动至 **2026-06-12 收盘 NT$146.5**（最后交易日为周五，yfinance 实时拉取：市值 NT$282.6bn、P/B 5.58x、P/S 8.5x、52 周 18.15–180.0、TTM EPS −1.77）；相对表现四窗口同步更新（1M −12.8% / 6M +284.5% / YTD +237.9% / 12M +562.9%，相对 TAIEX +464.7pp/12M）；PT 维持 NT$180，上行随现价回落由 +33% 调整为 **+23%**（PT 推导 NT$39×4.6 不变）。（2）新增 1 条 zsxq 笔记并入 *卖方观点演变*：MS Taiwan Tech Monthly Revenue Tracker（2026-06-10，file_id 412458118152558）——旺宏列 MS 偏好个股，但 5 月营收 NT$6,256m 较 MSe **−8%（Miss）**，同业华邦 −10%、南亚科 −6% 同步走弱；该"增速仍高、环比斜率钝化"信号已写入头部、季度路径与 9.5 节风险。（3）6 月营收尚未公布（台湾约每月 10 日披露，6 月数据预计 ~2026-07-08），5 月仍为最新月报。（4）`db/stock_price_target.db` 只读复检：2337.TW 仍为 4 条 MS 记录，无新 PT 入库。
+
+**新增图表（Step 8，本次刷新补全 financial_charts.py SVG 全套）。** 初稿仅含 mermaid；本次新增 **9 张 stdlib inline SVG**：损益 Sankey（1Q26）、资产负债表 Sankey（FY2025）、现金流量 Sankey（FY2025）、产品线 donut（1Q26）、地区 donut（FY2025）、产品线 revbars（FY2022 vs FY2025）、5 步 DuPont（1Q26 年化）、GF Score 雷达、供应链 **moneyflow**（需求/收入视角，REQUIRED）。9 张均经 `xml.dom.minidom` 解析为 well-formed，嵌入后报告内 `<svg>` 计数 = 9。
+
+**图表数字 string-match（FY2025 年报 PDF 抽取原文，printed p.126/127/128）** — 营收 28,879,986 ✓ / 营业成本 23,748,974 ✓ / 毛利 5,131,012 ✓ / 净亏 3,304,971 ✓ / 总资产 78,500,385 ✓ / 母公司权益 45,802,485 ✓ / 期初现金 11,623,489 ✓ / 期末现金 14,912,667 ✓ / CFO 4,837,543 ✓ / capex 1,840,798 ✓（10/10 命中，年报全文核对）。R&D 5,713,852（19.78%）✓（p.105）。opex 拆分：SG&A = 8,828,599 − 5,713,852（R&D）= 3,114,747（推导，已在图表注明口径）。
+
+**1Q26 损益 Sankey 输入** — 营收 10,469、毛利 4,271（GM 40.8%）、经营利润 1,937（OPM 18.5%）、净利 1,779（EPS NT$0.90），交叉一致于 [Taipei Times, 2026-04-28] 与 [TrendForce, 2026-04-28]；COGS 6,198 与 opex 2,334 为由 GM/OPM 反算（口径已在正文标注）。4Q25A 季度营收由初稿"NT$7.76bn 反推"修正为 **yfinance 季度财报口径 NT$7,729m（NT$7.73bn）**，季度路径图与 mermaid 已同步。
+
+**新增 MS Tracker 笔记核对** — file_id 412458118152558 `find_pdf.py --file-id` 验证 `local_exists: true`，报告内 `pdf_url` 为脚本原样输出（直下载路由，5 处一致）；抽取原文 string-match："Macronix … 6,256"（5 月营收）、"−8%"（vs MSe）、华邦 −10% / 南亚科 −6%、"We prefer stocks with healthy order visibility or leading positions: MediaTek, Macronix …" ✓。
+
+**URL 复核** — 本次新增/变更 URL：MS Tracker zsxq 直链（本地路由，find_pdf 验证）。关键公开 URL 以浏览器 UA 复测 200：mxic.com.tw 年报 PDF ✓、Yahoo Finance 2337.TW ✓、TechNews 5 月营收 ✓。其余 23 个 URL 与 2026-06-11 初稿一致（见上一版日志），未改动故不重复全量 HTTP 检查。
+
+**同业 P/B 图刷新** — 由 yfinance 2026-06-12 重新拉取：旺宏 5.58 / 华邦 6.64 / 南亚科 6.01 / 兆易 13.34 / Kioxia 34.60（mermaid y 轴上限由 30 调至 36 以容纳 Kioxia）；正文对标文本"Winbond/Nanya 6.6x/6.0x"同步更新。
+
+**Section 1B GF Score（本次补全）** — 五维评分 5/3/8/3/9（财务实力/盈利/成长/估值/动量），综合 **56/100（Poor 区间）**，权重 20/25/25/15/15（透明复现）；雷达 SVG + 五维理由段落均标 *分析师观点：*，每维度底层指标引年报/yfinance/§1A 模型，无 filing 引用挂在评分上；动量 9 分对应 12M +562.9% / rel +464.7pp（yfinance 2026-06-12），与头部相对表现一致。
+
+**Step 0.5 sec-report-summary** — skipped (non-US issuer; Macronix files via TWSE/MOPS, not SEC)。
+
+**Mermaid 渲染陷阱 lint** — 8 个 mermaid 块逐块检查：3 个 xychart-beta（营收/毛利/季度路径）+ 同业 P/B + TAM 共 5 个 xychart 标题均加引号、x 轴 CJK 标签均加引号、y 轴范围均用 `min --> max`；timeline / graph TD / pie 无陷阱。本次未启服务器（并行安全），未做 live render-check。
+
+**Analyst-view 合规复核** — 新增内容（GF Score 五维、MS Tracker May-rev miss、moneyflow 卡片中的份额/缺口/涨价数字）均带 *分析师观点：* 并引 zsxq 直链或年报原文；"本模型 X" 为"本报告模型预测 X"的中文表述（grep 确认无 `(Source: our model)` / `模型估算` 归因）。Management 章节仍仅创始人兼 CEO 吴敏求一人（grep 无其他高管姓名残留）。
+
+**Residual unknowns（延续上版 + 本次新增）**
+- 6 月营收未公布（~2026-07-08 披露），5 月为最新；2Q26E 路径含 6 月与 5 月持平的假设。
+- MS 5 月营收 Miss（−8% vs MSe）为单月信号，方向（+176% YoY）未变；是否预示涨价斜率持续钝化需 6–7 月营收验证。
+- 1Q26 损益 Sankey 的 COGS/opex 为由 GM/OPM 反算（公司未单独披露 1Q26 R&D/SG&A 季度拆分），已标注口径。
+- DuPont 为 1Q26 单季年化（×4）口径，非已实现全年值（FY2025 全年为亏损，无法直接做 ROE 树）。
+- 其余未决项（Customer A 关联方身份、yfinance forward EPS NT$35.05 无法溯源、可转债摊薄股数近似）见上一版 2026-06-11 日志，状态不变。
 
 </details>

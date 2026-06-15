@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1051" width="1180" height="1051" role="img" aria-label="钱怎么流进旺宏：退出式短缺把定价权交到这家利基厂手里" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1051" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">NON-VOLATILE MEMORY MONEY FLOW · 2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱怎么流进旺宏：退出式短缺把定价权交到这家利基厂手里</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求/收入视角——AI 服务器、游戏主机、工业车用三股需求付钱买入旺宏的 NOR/NAND/eMMC/ROM，钱汇成营收；旺宏再把成本付给它自己的上游：自有 12 吋晶圆产能、外购 3D NAND die、设备与封测。大厂退出 2GB–64GB</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">容量段后，需求端无处可去，价格全部回流到旺宏。</text>
+<ellipse cx="1031.00" cy="434.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="655.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="655.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁在付钱（需求驱动）</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">旺宏与其产品线</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱流向哪里（旺宏的上游/成本）</text>
+<path d="M 256.00 324.50 C 369.50 324.50, 369.50 277.00, 483.00 277.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 447.50 C 369.50 447.50, 369.50 296.50, 483.00 296.50" fill="none" stroke="url(#mfgold)" stroke-width="15.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 557.50 C 369.50 557.50, 369.50 314.50, 483.00 314.50" fill="none" stroke="url(#mfgold)" stroke-width="21.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 284.50 C 590.00 284.50, 590.00 424.50, 483.00 424.50" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 301.00 C 590.00 301.00, 590.00 517.50, 483.00 517.50" fill="none" stroke="url(#mfgold)" stroke-width="15.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 311.50 C 590.00 311.50, 590.00 610.50, 483.00 610.50" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 424.50 C 810.50 424.50, 810.50 289.00, 924.00 289.00" fill="none" stroke="url(#mfgold)" stroke-width="21.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 514.50 C 810.50 514.50, 810.50 305.50, 924.00 305.50" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 1138.00 292.50 C 1031.00 292.50, 1031.00 489.50, 924.00 489.50" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 523.50 C 810.50 523.50, 810.50 396.50, 924.00 396.50" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 1138.00 301.00 C 1031.00 301.00, 1031.00 582.50, 924.00 582.50" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="294.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">NOR/eMMC 订单</text>
+<text x="369.50" y="366.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">卡带 ROM/NAND</text>
+<text x="369.50" y="430.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">SLC NAND/eMMC</text>
+<text x="810.50" y="350.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">自产晶圆</text>
+<text x="810.50" y="454.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">外购 die</text>
+<text x="1031.00" y="385.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">capex/设备</text>
+<text x="1031.00" y="435.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">6 吋厂已售</text>
+<rect x="42.00" y="264.50" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="42.00" y="264.50" width="3" height="120.00" rx="2" fill="#56c6e6"/>
+<text x="60.00" y="297.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">AI 服务器/交换机/AI PC/VR</text>
+<text x="60.00" y="318.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">每台需 NOR 存固件</text>
+<text x="60.00" y="335.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">高容量 NOR 渠道价 US$1→US$8</text>
+<rect x="42.00" y="400.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="400.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="433.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">游戏主机 (Switch/Switch 2)</text>
+<text x="60.00" y="454.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">卡带 ROM/NAND</text>
+<text x="60.00" y="471.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">日本占营收 19.56%</text>
+<rect x="42.00" y="510.50" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="510.50" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="543.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">工业/车用/网通</text>
+<text x="60.00" y="564.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">SLC NAND/eMMC</text>
+<text x="60.00" y="581.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">车规·航天认证</text>
+<rect x="483.00" y="220.00" width="214" height="150.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="220.00" width="3" height="150.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">旺宏 MACRONIX (NVM IDM)</text>
+<text x="501.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">1Q26 营收 NT$10.47bn</text>
+<text x="501.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">GM 40.8%, 转盈</text>
+<rect x="483.00" y="386.00" width="214" height="77.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="386.00" width="3" height="77.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="419.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">NOR Flash (1Q26 58%)</text>
+<text x="501.00" y="440.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">全球份额 ~16.9%</text>
+<rect x="483.00" y="479.00" width="214" height="77.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="479.00" width="3" height="77.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="512.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">NAND/eMMC (1Q26 30%)</text>
+<text x="501.00" y="533.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">NAND 营收 +382% YoY</text>
+<rect x="483.00" y="572.00" width="214" height="77.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="572.00" width="3" height="77.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="605.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">ROM/XtraROM (1Q26 8%)</text>
+<text x="501.00" y="626.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">全球份额 &gt;50%</text>
+<rect x="924.00" y="248.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="248.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="281.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">自有 Fab 5 (12 吋)</text>
+<text x="942.00" y="302.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">上限 2.5 万片/月</text>
+<text x="942.00" y="319.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">capex NT$22bn 扩产</text>
+<rect x="924.00" y="358.00" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="358.00" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="391.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">外购 3D NAND die</text>
+<text x="942.00" y="412.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">补 Switch 2 高容量卡带</text>
+<rect x="924.00" y="451.00" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="451.00" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="484.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">设备厂/材料 (机台交期→1H27)</text>
+<text x="942.00" y="505.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">量的天花板的来源</text>
+<rect x="924.00" y="544.00" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="544.00" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="577.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">鸿海 Foxconn (前 6 吋厂买家)</text>
+<text x="942.00" y="598.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">2021 以 NT$2.52bn 收购</text>
+<rect x="42.00" y="675.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="677.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="677.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="677.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="677.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="670.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="747.00" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="814.20" y="670.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="833.20" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="972.40" y="670.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="991.40" y="679.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="42.00" y="690.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="61.00" y="699.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="135.40" y="690.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="154.40" y="699.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="715.00" x2="1138" y2="715.00" stroke="#222a3a"/>
+<text x="42.00" y="731.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 退出式短缺如何重定价</text>
+<rect x="42.00" y="751.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="751.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="775.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">需求 · AI 硬件</text>
+<text x="58.00" y="793.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AI 把 NOR 渠道价抬 8 倍</text>
+<text x="58.00" y="817.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">每台</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 服务器/交换机/AI</tspan><tspan fill="#9aa3b8" font-weight="400"> PC</tspan><tspan fill="#9aa3b8" font-weight="400"> 都要</tspan><tspan fill="#9aa3b8" font-weight="400"> NOR</tspan><tspan fill="#9aa3b8" font-weight="400"> 存固件，VR</tspan><tspan fill="#9aa3b8" font-weight="400"> 设备单机用量翻倍——</tspan><tspan fill="#f4d58a" font-weight="700"> 高容量</tspan><tspan fill="#f4d58a" font-weight="700"> NOR</tspan></text>
+<text x="58.00" y="833.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">渠道价由</tspan><tspan fill="#f4d58a" font-weight="700"> US$1</tspan><tspan fill="#f4d58a" font-weight="700"> 涨至</tspan><tspan fill="#f4d58a" font-weight="700"> US$8</tspan><tspan fill="#9aa3b8" font-weight="400"> （MS</tspan><tspan fill="#9aa3b8" font-weight="400"> Computex</tspan><tspan fill="#9aa3b8" font-weight="400"> 观察，</tspan><tspan fill="#f4d58a" font-weight="700"> 分析师观点</tspan><tspan fill="#9aa3b8" font-weight="400"> ）。</tspan></text>
+<rect x="412.00" y="751.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="412.00" y="751.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="428.00" y="775.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">供给 · 退出式短缺</text>
+<text x="428.00" y="793.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">大厂退出 2GB–64GB 容量段</text>
+<text x="428.00" y="817.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Samsung</tspan><tspan fill="#9aa3b8" font-weight="400"> 退出</tspan><tspan fill="#9aa3b8" font-weight="400"> eMMC、Kioxia/Micron</tspan><tspan fill="#9aa3b8" font-weight="400"> 淡出</tspan><tspan fill="#9aa3b8" font-weight="400"> SLC，</tspan><tspan fill="#f4d58a" font-weight="700"> 2GB–64GB</tspan><tspan fill="#f4d58a" font-weight="700"> NAND</tspan></text>
+<text x="428.00" y="833.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">产能基本消失</tspan><tspan fill="#9aa3b8" font-weight="400"> ，旺宏成</tspan><tspan fill="#f4d58a" font-weight="700"> 唯一补缺者</tspan><tspan fill="#9aa3b8" font-weight="400"> ——NAND</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收</tspan><tspan fill="#f4d58a" font-weight="700"> +382%</tspan><tspan fill="#f4d58a" font-weight="700"> YoY</tspan><tspan fill="#9aa3b8" font-weight="400"> ，议价由季度改月度。</tspan></text>
+<rect x="782.00" y="751.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="751.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="775.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">护城河 · 自有产能</text>
+<text x="798.00" y="793.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">12 吋 Fab 5 是定价权的物理基础</text>
+<text x="798.00" y="817.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">全自有</tspan><tspan fill="#f4d58a" font-weight="700"> 2.5</tspan><tspan fill="#f4d58a" font-weight="700"> 万片/月</tspan><tspan fill="#9aa3b8" font-weight="400"> 上限产能，使旺宏能在缺口期把价格直接落袋；但量的天花板让</tspan><tspan fill="#9aa3b8" font-weight="400"> 2H26</tspan><tspan fill="#9aa3b8" font-weight="400"> 增长</tspan></text>
+<text x="798.00" y="833.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">几乎全靠价格</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="42.00" y="881.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="881.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="905.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">成本 · CAPEX 赛跑</text>
+<text x="58.00" y="923.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">NT$22bn 扩产对准价格回归窗口</text>
+<text x="58.00" y="947.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">2014</tspan><tspan fill="#f4d58a" font-weight="700"> 年以来最大扩产</tspan><tspan fill="#9aa3b8" font-weight="400"> ，新机台</tspan><tspan fill="#f4d58a" font-weight="700"> 1H27</tspan><tspan fill="#f4d58a" font-weight="700"> 到位</tspan><tspan fill="#9aa3b8" font-weight="400"> ——恰是</tspan><tspan fill="#9aa3b8" font-weight="400"> Bernstein</tspan></text>
+<text x="58.00" y="963.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">模型中价格开始正常化的时点：capex</tspan><tspan fill="#9aa3b8" font-weight="400"> 兑现成营收</tspan><tspan fill="#9aa3b8" font-weight="400"> vs</tspan><tspan fill="#9aa3b8" font-weight="400"> 价格回落，是</tspan><tspan fill="#9aa3b8" font-weight="400"> 2027–28E</tspan><tspan fill="#9aa3b8" font-weight="400"> 的核心赛跑。</tspan></text>
+<rect x="412.00" y="881.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="881.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="905.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">现金牛 · 结构性下行</text>
+<text x="428.00" y="923.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">ROM 垄断但市场萎缩</text>
+<text x="428.00" y="947.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">ROM</tspan><tspan fill="#9aa3b8" font-weight="400"> 全球份额</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;50%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，但营收三年缩水</tspan><tspan fill="#f4d58a" font-weight="700"> 57%</tspan><tspan fill="#9aa3b8" font-weight="400"> （FY22</tspan><tspan fill="#9aa3b8" font-weight="400"> NT$10.67bn→FY25</tspan></text>
+<text x="428.00" y="963.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">NT$4.63bn）；Switch</tspan><tspan fill="#9aa3b8" font-weight="400"> 2</tspan><tspan fill="#9aa3b8" font-weight="400"> 卡带订单能否回流是</tspan><tspan fill="#9aa3b8" font-weight="400"> ROM/NAND</tspan><tspan fill="#9aa3b8" font-weight="400"> 的可选上行。</tspan></text>
+<rect x="782.00" y="881.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="782.00" y="881.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="798.00" y="905.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">客户 · 关联方风险</text>
+<text x="798.00" y="923.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">单一最大客户 16.16%（不具名关联方）</text>
+<text x="798.00" y="947.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#f4d58a" font-weight="700"> Customer</tspan><tspan fill="#f4d58a" font-weight="700"> A</tspan><tspan fill="#9aa3b8" font-weight="400"> 占合并营收</tspan><tspan fill="#f4d58a" font-weight="700"> 16.16%</tspan><tspan fill="#9aa3b8" font-weight="400"> （FY24</tspan><tspan fill="#f4d58a" font-weight="700"> 21.08%</tspan></text>
+<text x="798.00" y="963.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">），为关联方且按契约保密未具名——集中度可控但外部可验证性低。</tspan></text>
+<text x="590.00" y="1033.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Macronix 2025 年报 (p.103/108/110/126) · 旺宏 1Q26 法说会 (TrendForce/Taipei Times 2026-04-28) · MS Computex takeaways 2026-06-07 (分析师观点)</text>
+</svg>

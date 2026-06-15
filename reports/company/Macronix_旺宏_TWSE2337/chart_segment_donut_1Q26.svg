@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">旺宏 1Q26 营收按产品线（单一分母：1Q26 合并营收 NT$10.47bn）</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 224.41,354.87 L 250.42,307.55 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 224.41,354.87 A 132 132 0 0 1 197.66,142.96 L 234.61,182.33 A 78 78 0 0 0 250.42,307.55 Z" fill="#15803d"/>
+<path d="M 197.66,142.96 A 132 132 0 0 1 255.23,111.33 L 268.64,163.64 A 78 78 0 0 0 234.61,182.33 Z" fill="#d97706"/>
+<path d="M 255.23,111.33 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 268.64,163.64 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">1Q26</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">NT$10.5B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="421.66" y1="273.52" x2="437.66" y2="273.52" stroke="#2563eb" stroke-width="1.4"/>
+<text x="441.66" y="271.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">NOR Flash 58%</text>
+<text x="441.66" y="285.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$6.1B  (58.0%)</text>
+<line x1="151.09" y1="256.49" x2="135.09" y2="256.49" stroke="#15803d" stroke-width="1.4"/>
+<text x="131.09" y="254.49" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">NAND/eMMC 30%</text>
+<text x="131.09" y="268.49" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$3.1B  (30.0%)</text>
+<line x1="221.56" y1="118.25" x2="205.56" y2="118.25" stroke="#d97706" stroke-width="1.4"/>
+<text x="201.56" y="116.25" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">ROM 8%</text>
+<text x="201.56" y="130.25" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$838.0M  (8.0%)</text>
+<line x1="270.74" y1="102.28" x2="254.74" y2="102.28" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="250.74" y="100.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Foundry 4%</text>
+<text x="250.74" y="114.28" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">NT$418.0M  (4.0%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 旺宏 1Q26 法说会产品占比 (Taipei Times 2026-04-28)</text>
+</svg>
