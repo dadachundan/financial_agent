@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1066" width="1180" height="1066" role="img" aria-label="钱怎么流过 Ambarella：终端需求 → 产品线 → 代工/封测/IP 链条" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1066" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">EDGE-AI VISION SOC MONEY FLOW · FY2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱怎么流过 Ambarella：终端需求 → 产品线 → 代工/封测/IP 链条</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">营业收入几乎全部经由分销商 WT（占 70%）汇入，再沿无晶圆厂链条流向少数代工与封测/IP 瓶颈节点：Samsung（绝大多数 SoC）、TSMC（4nm/2nm 对冲）、Arm（CPU IP）。</text>
+<ellipse cx="1031.00" cy="423.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="654.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="654.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱（终端需求）</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Ambarella 产品线</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱汇向哪里（代工/封测/IP 瓶颈）</text>
+<path d="M 256.00 253.27 C 149.00 253.27, 149.00 573.82, 42.00 573.82" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 362.73 C 149.00 362.73, 149.00 586.91, 42.00 586.91" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 473.82 C 149.00 473.82, 149.00 601.09, 42.00 601.09" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 588.00 C 369.50 588.00, 369.50 316.27, 483.00 316.27" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 245.64 C 369.50 245.64, 369.50 301.00, 483.00 301.00" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 464.55 C 369.50 464.55, 369.50 423.00, 483.00 423.00" fill="none" stroke="url(#mfgold)" stroke-width="7.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 351.27 C 369.50 351.27, 369.50 533.00, 483.00 533.00" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 302.09 C 810.50 302.09, 810.50 254.18, 924.00 254.18" fill="none" stroke="url(#mfgold)" stroke-width="21.82" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 420.50 C 810.50 420.50, 810.50 268.91, 924.00 268.91" fill="none" stroke="url(#mfgold)" stroke-width="7.64" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 317.36 C 810.50 317.36, 810.50 381.00, 924.00 381.00" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 325.00 C 810.50 325.00, 810.50 488.50, 924.00 488.50" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 331.55 C 810.50 331.55, 810.50 601.00, 924.00 601.00" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 426.82 C 810.50 426.82, 810.50 494.27, 924.00 494.27" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="446.14" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">FY26 营收 $390.7M</text>
+<text x="369.50" y="267.32" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">直接 Tier-1</text>
+<text x="810.50" y="272.14" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">晶圆成本</text>
+<text x="810.50" y="343.18" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">4nm/2nm</text>
+<text x="810.50" y="400.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">IP 授权费</text>
+<rect x="42.00" y="203.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="203.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="236.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">车载 ADAS/AD</text>
+<text x="60.00" y="257.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Tier-1: Continental / Bosch / ZF</text>
+<text x="60.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">CV3-AD 域控制器</text>
+<rect x="42.00" y="313.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="313.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="346.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">安防 / IP cam</text>
+<text x="60.00" y="367.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">IP cam ODM + 西方品牌</text>
+<text x="60.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">CV5S/CV72S/CV75S</text>
+<rect x="42.00" y="423.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="423.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="456.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">消费 / AIoT / 机器人</text>
+<text x="60.00" y="477.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">运动相机/行车记录仪/无人机</text>
+<text x="60.00" y="494.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">CV7 / N1 边缘生成式 AI</text>
+<rect x="42.00" y="533.00" width="214" height="110.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="533.00" width="3" height="110.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="566.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">WT 文晔（分销商）</text>
+<text x="60.00" y="587.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY26 占营收 70%</text>
+<text x="60.00" y="604.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">日本以外亚洲履约</text>
+<rect x="483.00" y="266.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="266.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="299.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">CVflow SoC</text>
+<text x="501.00" y="320.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">CV2/CV5/CV7/CV3</text>
+<text x="501.00" y="337.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">第三代 CVflow 加速器</text>
+<rect x="483.00" y="376.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="376.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="409.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">N1 家族</text>
+<text x="501.00" y="430.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">端侧多模态 LLM</text>
+<text x="501.00" y="447.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">16× Cortex-A78AE</text>
+<rect x="483.00" y="486.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="486.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="519.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Cooper + Oculii</text>
+<text x="501.00" y="540.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">AD 栈 + 4D 成像雷达感知</text>
+<text x="501.00" y="557.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">软件差异化</text>
+<rect x="924.00" y="198.00" width="214" height="120.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="198.00" width="3" height="120.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SAMSUNG 代工</text>
+<text x="942.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">绝大多数 SoC</text>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">5nm/4nm（奥斯汀/韩国）</text>
+<text x="942.00" y="286.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">瓶颈</text>
+<rect x="924.00" y="334.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="334.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="367.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">TSMC 代工</text>
+<text x="942.00" y="388.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">4nm / 2nm 对冲</text>
+<text x="942.00" y="405.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">2nm SoC 已 tape-out</text>
+<rect x="924.00" y="444.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="444.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="477.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">Arm IP</text>
+<text x="942.00" y="498.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Cortex-A78AE / R52 授权</text>
+<text x="942.00" y="515.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">GPU/CPU IP</text>
+<rect x="924.00" y="554.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="554.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="587.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">封测 OSAT</text>
+<text x="942.00" y="608.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">ASE / STATS ChipPAC</text>
+<text x="942.00" y="625.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Signetics / 京元电子</text>
+<rect x="42.00" y="674.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="676.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="676.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="676.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="676.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="669.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="669.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="840.40" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="965.20" y="669.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="984.20" y="678.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="42.00" y="689.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="61.00" y="698.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="178.60" y="689.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="197.60" y="698.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="714.00" x2="1138" y2="714.00" stroke="#222a3a"/>
+<text x="42.00" y="730.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 钱在哪里汇聚</text>
+<rect x="42.00" y="750.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="750.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="774.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">渠道 · 极度集中</text>
+<text x="58.00" y="792.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">WT 文晔是营收阀门</text>
+<text x="58.00" y="816.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收的</tspan><tspan fill="#f4d58a" font-weight="700"> 70%</tspan><tspan fill="#9aa3b8" font-weight="400"> 经由非独家分销商</tspan><tspan fill="#f4d58a" font-weight="700"> WT</tspan><tspan fill="#f4d58a" font-weight="700"> Microelectronics</tspan><tspan fill="#9aa3b8" font-weight="400"> （文晔）计入，较</tspan></text>
+<text x="58.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> 63%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、FY24</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> 53%</tspan><tspan fill="#9aa3b8" font-weight="400"> 持续上升；底层终端客户是亚洲</tspan><tspan fill="#9aa3b8" font-weight="400"> ODM/OEM</tspan><tspan fill="#9aa3b8" font-weight="400"> 群体，协议延至</tspan></text>
+<text x="58.00" y="848.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">2029</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan><tspan fill="#f4d58a" font-weight="700"> 1</tspan><tspan fill="#f4d58a" font-weight="700"> 月</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="412.00" y="750.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="750.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="774.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">代工 · 瓶颈</text>
+<text x="428.00" y="792.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Samsung 造绝大多数 SoC</text>
+<text x="428.00" y="816.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">10-K：</tspan><tspan fill="#f4d58a" font-weight="700"> 绝大多数</tspan><tspan fill="#9aa3b8" font-weight="400"> SoC</tspan><tspan fill="#9aa3b8" font-weight="400"> 由</tspan><tspan fill="#f4d58a" font-weight="700"> Samsung</tspan></text>
+<text x="428.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">在美国奥斯汀及韩国设施供货（5nm/4nm）；单一领先节点代工依赖是结构性风险，</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan></text>
+<text x="428.00" y="848.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">4nm/2nm</tspan><tspan fill="#9aa3b8" font-weight="400"> 是明确双供应对冲。</tspan></text>
+<rect x="782.00" y="750.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="782.00" y="750.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="798.00" y="774.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">产品 · ASP 抬升</text>
+<text x="798.00" y="792.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AI 推理 SoC ASP 高于旧视频芯片</text>
+<text x="798.00" y="816.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收</tspan><tspan fill="#f4d58a" font-weight="700"> +37%</tspan><tspan fill="#9aa3b8" font-weight="400"> 至</tspan><tspan fill="#f4d58a" font-weight="700"> $390.7M</tspan><tspan fill="#9aa3b8" font-weight="400"> ；CV3-AD</tspan><tspan fill="#9aa3b8" font-weight="400"> 较上代</tspan><tspan fill="#9aa3b8" font-weight="400"> CV2</tspan><tspan fill="#9aa3b8" font-weight="400"> 提供</tspan><tspan fill="#f4d58a" font-weight="700"> 20×</tspan></text>
+<text x="798.00" y="832.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">神经网络算力，单车</tspan><tspan fill="#9aa3b8" font-weight="400"> ADAS</tspan><tspan fill="#9aa3b8" font-weight="400"> SoC</tspan><tspan fill="#9aa3b8" font-weight="400"> ASP</tspan><tspan fill="#9aa3b8" font-weight="400"> 远高于其取代的传统视频芯片。</tspan></text>
+<rect x="42.00" y="896.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="896.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="920.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">软件 · 差异化</text>
+<text x="58.00" y="938.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Oculii 4D 雷达 + Cooper 栈</text>
+<text x="58.00" y="962.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Oculii</tspan><tspan fill="#9aa3b8" font-weight="400"> （2021</tspan><tspan fill="#9aa3b8" font-weight="400"> 年以</tspan><tspan fill="#f4d58a" font-weight="700"> $355.7M</tspan><tspan fill="#9aa3b8" font-weight="400"> 收购）提供</tspan><tspan fill="#9aa3b8" font-weight="400"> 4D</tspan><tspan fill="#9aa3b8" font-weight="400"> 成像雷达感知，</tspan><tspan fill="#f4d58a" font-weight="700"> Cooper</tspan><tspan fill="#9aa3b8" font-weight="400"> 平台打包</tspan></text>
+<text x="58.00" y="978.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">AD</tspan><tspan fill="#9aa3b8" font-weight="400"> 栈与模型迁移工具——这是相对</tspan><tspan fill="#9aa3b8" font-weight="400"> Mobileye/TI</tspan><tspan fill="#9aa3b8" font-weight="400"> 的真实差异化。</tspan></text>
+<rect x="412.00" y="896.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="896.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="920.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">IP · 内嵌成本</text>
+<text x="428.00" y="938.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Arm CPU/GPU IP 授权</text>
+<text x="428.00" y="962.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">CV3/N1</tspan><tspan fill="#9aa3b8" font-weight="400"> 内嵌</tspan><tspan fill="#f4d58a" font-weight="700"> Arm</tspan><tspan fill="#9aa3b8" font-weight="400"> Cortex-A78AE/R52</tspan><tspan fill="#9aa3b8" font-weight="400"> 与车规</tspan><tspan fill="#9aa3b8" font-weight="400"> GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> IP，授权费随每颗</tspan><tspan fill="#9aa3b8" font-weight="400"> SoC</tspan></text>
+<text x="428.00" y="978.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">出货支付，是</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS</tspan><tspan fill="#9aa3b8" font-weight="400"> 中的内嵌外部成本。</tspan></text>
+<rect x="782.00" y="896.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="896.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="920.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求 · 最高杠杆</text>
+<text x="798.00" y="938.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">车载设计中标决定 FY28+</text>
+<text x="798.00" y="962.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">现在拿下的</tspan><tspan fill="#9aa3b8" font-weight="400"> CV3-AD</tspan><tspan fill="#9aa3b8" font-weight="400"> Tier-1</tspan><tspan fill="#9aa3b8" font-weight="400"> 设计中标将于</tspan><tspan fill="#f4d58a" font-weight="700"> 2027–2030</tspan></text>
+<text x="798.00" y="978.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">在车上放量；车载放量节奏是多头逻辑的最高杠杆变量。</tspan></text>
+<text x="590.00" y="1048.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Ambarella FY2026 10-K（Manufacturing / Major Customers / MD&amp;A）· Q4 FY2026 8-K Ex-99.1（2026-02-26）· FY2022 10-K（Oculii 收购附注）</text>
+</svg>

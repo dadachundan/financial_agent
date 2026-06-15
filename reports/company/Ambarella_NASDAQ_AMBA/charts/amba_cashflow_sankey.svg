@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Ambarella FY2026 现金流量表 Sankey（CFO 转正）</text>
+<path d="M 204.00,64.00 C 361.00,64.00 361.00,71.00 518.00,71.00 L 518.00,523.57 C 361.00,523.57 361.00,516.57 204.00,516.57 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,71.00 C 691.00,71.00 691.00,64.00 848.00,64.00 L 848.00,251.71 C 691.00,251.71 691.00,258.71 534.00,258.71 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,258.71 C 691.00,258.71 691.00,265.71 848.00,265.71 L 848.00,554.00 C 691.00,554.00 691.00,547.00 534.00,547.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,530.57 C 361.00,530.57 361.00,523.57 518.00,523.57 L 518.00,547.00 C 361.00,547.00 361.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="452.57" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="530.57" width="16" height="23.43" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="71.00" width="16" height="476.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="187.71" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="265.71" width="16" height="288.29" rx="1.5" fill="#15803d"/>
+<rect x="207.00" y="46.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$73.5M  (95.1%)</text>
+<rect x="207.00" y="512.57" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="524.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="210.00" y="537.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.8M  (4.9%)</text>
+<rect x="537.00" y="53.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$77.3M  (100.0%)</text>
+<rect x="867.00" y="46.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$30.5M  (39.4%)</text>
+<text x="873.00" y="406.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="419.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$46.8M  (60.6%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Ambarella FY2026 10-K（合并现金流量表, FY ended 2026-01-31）</text>
+</svg>

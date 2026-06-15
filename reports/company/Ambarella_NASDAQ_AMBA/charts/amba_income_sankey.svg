@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Ambarella FY2026 利润表 Sankey（GAAP, 经营亏损以左侧来源呈现）</text>
+<path d="M 452.00,71.00 C 506.00,71.00 506.00,111.53 560.00,111.53 L 560.00,113.53 C 506.00,113.53 506.00,73.00 452.00,73.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,73.00 C 506.00,73.00 506.00,127.53 560.00,127.53 L 560.00,466.47 C 506.00,466.47 506.00,411.93 452.00,411.93 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,78.00 C 382.00,78.00 382.00,71.00 436.00,71.00 L 436.00,320.79 C 382.00,320.79 382.00,327.79 328.00,327.79 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,78.00 C 258.00,78.00 258.00,78.00 312.00,78.00 L 312.00,500.00 C 258.00,500.00 258.00,500.00 204.00,500.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 328.00,327.79 C 382.00,327.79 382.00,334.79 436.00,334.79 L 436.00,507.00 C 382.00,507.00 382.00,500.00 328.00,500.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,104.53 C 754.00,104.53 754.00,279.83 808.00,279.83 L 808.00,281.83 C 754.00,281.83 754.00,106.53 700.00,106.53 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,106.53 C 754.00,106.53 754.00,295.83 808.00,295.83 L 808.00,298.17 C 754.00,298.17 754.00,108.88 700.00,108.88 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,111.53 C 630.00,111.53 630.00,104.53 684.00,104.53 L 684.00,106.53 C 630.00,106.53 630.00,113.53 576.00,113.53 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,127.53 C 630.00,127.53 630.00,120.53 684.00,120.53 L 684.00,201.84 C 630.00,201.84 630.00,208.84 576.00,208.84 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,208.84 C 630.00,208.84 630.00,215.84 684.00,215.84 L 684.00,473.47 C 630.00,473.47 630.00,466.47 576.00,466.47 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="71.00" width="16" height="249.79" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="334.79" width="16" height="172.21" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="111.53" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="127.53" width="16" height="338.93" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="104.53" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="120.53" width="16" height="81.30" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="215.84" width="16" height="257.63" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="279.83" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="295.83" width="16" height="2.34" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="286.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">车载 / 安防 / 消费 / AIoT（按渠道 WT 70%）</text>
+<text x="179.00" y="299.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$390.7M  (100.0%)</text>
+<rect x="331.00" y="60.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$390.7M  (100.0%)</text>
+<rect x="455.00" y="53.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$231.3M  (59.2%)</text>
+<rect x="455.00" y="316.79" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="328.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="341.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$159.4M  (40.8%)</text>
+<rect x="579.00" y="93.53" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="105.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="118.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$82.5M  (-21.1%)</text>
+<rect x="579.00" y="118.53" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="130.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="143.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$313.8M  (80.3%)</text>
+<rect x="703.00" y="86.53" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="98.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="111.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$73.7M  (-18.9%)</text>
+<rect x="703.00" y="111.53" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="123.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="136.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$75.3M  (19.3%)</text>
+<rect x="703.00" y="197.84" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="209.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="222.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$238.5M  (61.0%)</text>
+<text x="833.00" y="277.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="290.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$75.9M  (-19.4%)</text>
+<text x="833.00" y="302.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="315.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.2M  (0.55%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Ambarella FY2026 10-K（Q4 FY2026 8-K Ex-99.1, 2026-02-26）</text>
+</svg>
