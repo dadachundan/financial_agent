@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">峰岹科技 FY2025 收入结构（按产品线，人民币百万元）</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 195.72,333.58 L 233.47,294.97 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 195.72,333.58 A 132 132 0 0 1 161.26,202.32 L 213.11,217.41 A 78 78 0 0 0 233.47,294.97 Z" fill="#15803d"/>
+<path d="M 161.26,202.32 A 132 132 0 0 1 222.92,124.36 L 249.55,171.34 A 78 78 0 0 0 213.11,217.41 Z" fill="#d97706"/>
+<path d="M 222.92,124.36 A 132 132 0 0 1 284.46,107.25 L 285.91,161.23 A 78 78 0 0 0 249.55,171.34 Z" fill="#7c3aed"/>
+<path d="M 284.46,107.25 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 285.91,161.23 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">FY2025</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">¥773.9M</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="415.79" y1="291.29" x2="431.79" y2="291.29" stroke="#2563eb" stroke-width="1.4"/>
+<text x="435.79" y="289.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">MCU 主控</text>
+<text x="435.79" y="303.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥482.3M  (62.3%)</text>
+<line x1="154.52" y1="274.24" x2="138.52" y2="274.24" stroke="#15803d" stroke-width="1.4"/>
+<text x="134.52" y="272.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">ASIC 主控</text>
+<text x="134.52" y="286.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥133.0M  (17.2%)</text>
+<line x1="179.76" y1="153.59" x2="163.76" y2="153.59" stroke="#d97706" stroke-width="1.4"/>
+<text x="159.76" y="151.59" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">HVIC 驱动</text>
+<text x="159.76" y="165.59" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥95.1M  (12.3%)</text>
+<line x1="251.04" y1="106.24" x2="235.04" y2="106.24" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="231.04" y="104.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">IPM 模块</text>
+<text x="231.04" y="118.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥60.2M  (7.8%)</text>
+<line x1="286.15" y1="101.21" x2="270.15" y2="101.21" stroke="#dc2626" stroke-width="1.4"/>
+<text x="266.15" y="99.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">MOSFET 等</text>
+<text x="266.15" y="113.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥3.3M  (0.4%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 峰岹科技 2025 年年度报告（主营业务分产品/分地区 p29）</text>
+</svg>
