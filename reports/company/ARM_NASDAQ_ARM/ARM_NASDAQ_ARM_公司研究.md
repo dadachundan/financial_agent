@@ -1,34 +1,60 @@
 # Arm Holdings plc (NASDAQ:ARM) — 公司研究报告
 
-**报告日期: 2026-05-20**
-**注册地: 英国 (英格兰剑桥) — 美国 SEC 外国私人发行人 (20-F 申报人)**
+**报告日期 (as of): 2026-06-15**
+**注册地: 英国 (英格兰剑桥) — 美国 SEC 外国私人发行人 (foreign private issuer, 20-F 申报人; 财年止于 3 月 31 日, 以美元报告)**
 **控股股东: 软银集团 (SoftBank Group Corp.), 持股约 87% 已发行股份**
 **报告语言: 简体中文 (英文版同时存在于本目录)**
 
 ---
 
-> **业绩更新——FY2026 业绩交付, FY2027 Q1 指引启动 (2026-05-06):**
-> Arm 公布 FY2026 Q4 创纪录营业收入达 14.9 亿美元 (同比 +20%), 授权收入 8.19 亿美元
-> (同比 +29%), 版税收入 6.71 亿美元 (同比 +11%)。全年 FY2026 营业收入达到
-> 49.2 亿美元 (同比 +23%), 非 GAAP 每股收益 (EPS) 为 1.77 美元 (同比 +9%)。FY2027 Q1
-> 指引: 营业收入 12.1 亿至 13.1 亿美元, 非 GAAP EPS 0.36 至 0.44 美元。管理层
+> **业绩更新 (Guidance update)——FY2026 业绩交付, FY2027 Q1 指引启动 (2026-05-06):**
+> Arm 公布 FY2026 Q4 创纪录营业收入达 14.90 亿美元 (同比 +20%), 授权及其他收入 8.19 亿美元
+> (同比 +29%), 版税收入 6.71 亿美元 (同比 +11%, 略低于卖方约 +4%, 受智能手机短期疲软拖累)。全年 FY2026 营业收入达到
+> 49.20 亿美元 (同比 +23%), 版税 26.13 亿美元 (+21%), 授权及其他 23.07 亿美元 (+25%); GAAP 摊薄 EPS 0.60 美元 (Q4), 全年非 GAAP EPS 约 1.77 美元。FY2027 Q1
+> 指引: 营业收入 12.1 亿至 13.1 亿美元 (中点 12.6 亿, 略高于卖方共识), 非 GAAP EPS 0.36 至 0.44 美元 (中点 0.40)。管理层
 > 将超预期归因于广泛的授权需求、Armv9/CSS 版税费率提升, 以及新近发布的
 > **Arm AGI CPU** 的早期商业牵引——这是 Arm 自研的首款数据中心硅片,
 > 目前在 FY2027–FY2028 期间已预订超过 20 亿美元客户需求 (Meta 为首发合作伙伴),
 > 朝向管理层所述的 150 亿美元业务机会迈进。
-> 来源: [Arm FY26 Q4 股东信, 附件 99.2, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)。
+> 来源: [Arm FY26 Q4 股东信, 附件 99.2, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)、[Arm 20-F FY26, 申报于 2026-05-26](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm)。
+
+## 投资摘要 (Investment Summary) — *分析师观点 (Analyst view)*
+
+> 以下评级、12 个月目标价、上行/下行空间与情景目标价均为**本报告分析师的前瞻观点 (*分析师观点 / Analyst view*)**, 而非来自任何 Arm 申报文件。20-F / 6-K 不含目标价。
+
+| 项目 | 本报告观点 | 说明 |
+|---|---|---|
+| **评级 (Rating)** | **Hold / 中性 (Neutral)** | 卓越业务 + 极端估值的非对称组合 |
+| **12 个月目标价 (12-mo PT)** | **335 美元** | 基于 FY2028E 非 GAAP EPS 约 2.95 美元 × 目标前瞻 P/E 95×, 详见第 2 章 |
+| **当前股价 (as of 2026-06-15)** | 380.81 美元 | [Yahoo Finance — ARM](https://finance.yahoo.com/quote/ARM/key-statistics/) |
+| **隐含下行空间** | **约 −12%** | (335 − 380.81) / 380.81 |
+| **估值方法** | 前瞻 P/E × 目标倍数 (对标 Armv9/CSS 版税梯度 + AGI CPU 期权) | |
+| **市值 / 52 周区间** | 约 4,067 亿美元 / 约 96 至 411 美元 | [Yahoo Finance — ARM](https://finance.yahoo.com/quote/ARM/key-statistics/) |
+| **代码 / 交易所** | NASDAQ:ARM (ADS) | |
+
+**投资论点四大支柱 (*分析师观点*):**
+
+1. **结构上无可匹敌的 IP 收租机器。** 移动应用处理器 >99% 份额、累计出货超 3,500 亿颗、2,200 万开发者生态系统、98% 毛利率——这是一台几乎无法被复制的版税长尾机器, Armv9 (费率约为 Armv8 的 2 倍) 与 CSS 进一步抬升单芯片版税 ([Arm 20-F FY26](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm)、[Arm F-1, 2023-08-21](https://www.sec.gov/Archives/edgar/data/1973239/000119312523216983/d393891df1.htm))。
+2. **数据中心 / AI 是真实且加速的第二增长曲线。** 数据中心版税 FY26 Q4 同比翻倍以上; 顶级超大规模数据中心 CPU 算力 Arm 约占 50%; AGI CPU 自研硅片为 FY27–28 预订 20 亿美元需求 (Meta 锚定), 朝 150 亿美元机会迈进 ([Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。
+3. **但估值已透支多年完美执行。** 453× TTM P/E、124× 前瞻 P/E、82.7× TTM P/S——约为最激进 AI 同业的 4–6 倍。即便用 Bernstein 最乐观的 FY30 EPS 9.83 美元, 当前股价也隐含约 39× FY30 P/E ([Yahoo Finance — ARM](https://finance.yahoo.com/quote/ARM/key-statistics/))。
+4. **关键摆动变量是版税梯度斜率 + AGI CPU 产能。** 卖方分歧极大 (Goldman Sachs 卖出 150 美元 ↔ Bernstein 跑赢 300 美元), 核心争论点是 Armv9/CSS 版税费率提升的持续性, 以及 TSMC 先进 3nm 产能对 AGI CPU 爬坡的约束 (详见第 2 章卖方观点演变与第 10.5 章)。
+
+---
 
 ## 目录
 
-1. 公司概览
-2. 公司历史
-3. 管理团队
-4. 产品与服务
-5. 客户与上市策略
-6. 行业概览
-7. 竞争格局
-8. 市场机会 (TAM)
-9. 风险评估
+1. 公司概览 (含 1A 估值与目标价快照 · 1B GF Score 基本面评分)
+2. 估值与目标价 (Valuation & Price Target) — 前瞻模型 · PT 推导 · 牛/基准/熊情景 · 卖方观点演变
+3. 公司历史
+4. 管理团队
+5. 产品与服务
+6. 客户与上市策略
+7. 行业概览
+8. 竞争格局
+9. 市场机会 (TAM)
+10. 风险评估 (含 9.5 关键辩论与催化剂)
+11. 投资视角评分卡 (Investor-lens scorecards)
+12. 参考资料
 
 ---
 
@@ -42,41 +68,246 @@ Arm Holdings plc 设计并授权中央处理器 (CPU) 架构和指令集 (Instru
 
 **地理布局。** Arm 在英国、欧洲、北美、印度及亚太地区运营研发与工程中心; FY2025 约 57% 营业收入来自美国境外客户, 其中中国大陆业务由 Arm 安谋科技 (中国) 有限公司 ("Arm 中国") 独家承接, 双方依据长期 IP 授权协议 ("IPLA") 运作, 该协议有效期至 2048 年 4 月 23 日 ([Arm 20-F FY25, "与 Arm 中国的 IPLA"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm))。
 
-![Arm 营业收入与营业利润率趋势](charts/arm_revenue_margin.png)
-*来源: Arm FY26 Q4 股东信 (FY26 全年合计); [Arm 20-F FY25, Item 5.A](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm) (FY23–FY25 全年合计); FY24 Q4 / FY25 Q4 业绩公告 (非 GAAP 营业利润率)。*
+下图是 Arm FY2026 利润表的 Sankey 分解——版税 + 授权两条收入流, 经 97.5% GAAP 毛利率, 在沉重的研发 (R&D) 爬坡后落到 9 亿美元 GAAP 营业利润:
 
-### 1.1 估值快照 (数据截至 2026-05-20)
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Arm FY2026 利润表 Sankey (GAAP, US$m)</text>
+<path d="M 700.00,63.32 C 754.00,63.32 754.00,233.84 808.00,233.84 L 808.00,285.08 C 754.00,285.08 754.00,114.56 700.00,114.56 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,114.56 C 754.00,114.56 754.00,299.08 808.00,299.08 L 808.00,344.16 C 754.00,344.16 754.00,159.64 700.00,159.64 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,85.35 C 258.00,85.35 258.00,92.35 312.00,92.35 L 312.00,301.23 C 258.00,301.23 258.00,294.23 204.00,294.23 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,85.35 C 506.00,85.35 506.00,90.19 560.00,90.19 L 560.00,162.13 C 506.00,162.13 506.00,157.30 452.00,157.30 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,157.30 C 506.00,157.30 506.00,176.13 560.00,176.13 L 560.00,487.81 C 506.00,487.81 506.00,468.97 452.00,468.97 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,90.19 C 630.00,90.19 630.00,63.32 684.00,63.32 L 684.00,135.26 C 630.00,135.26 630.00,162.13 576.00,162.13 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,92.35 C 382.00,92.35 382.00,85.35 436.00,85.35 L 436.00,468.97 C 382.00,468.97 382.00,475.97 328.00,475.97 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,475.97 C 382.00,475.97 382.00,482.97 436.00,482.97 L 436.00,492.65 C 382.00,492.65 382.00,485.65 328.00,485.65 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,176.13 C 630.00,176.13 630.00,173.64 684.00,173.64 L 684.00,262.77 C 630.00,262.77 630.00,265.26 576.00,265.26 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,265.26 C 630.00,265.26 630.00,276.77 684.00,276.77 L 684.00,498.68 C 630.00,498.68 630.00,487.17 576.00,487.17 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,487.17 C 630.00,487.17 630.00,512.68 684.00,512.68 L 684.00,514.68 C 630.00,514.68 630.00,489.17 576.00,489.17 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,308.23 C 258.00,308.23 258.00,301.23 312.00,301.23 L 312.00,485.65 C 258.00,485.65 258.00,492.65 204.00,492.65 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="85.35" width="16" height="208.88" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="308.23" width="16" height="184.42" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="92.35" width="16" height="393.29" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="85.35" width="16" height="383.62" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="482.97" width="16" height="9.67" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="90.19" width="16" height="71.94" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="176.13" width="16" height="311.68" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="63.32" width="16" height="96.32" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="173.64" width="16" height="89.13" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="276.77" width="16" height="221.91" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="512.68" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="233.84" width="16" height="51.24" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="299.08" width="16" height="45.08" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="186.79" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Royalty 版税</text>
+<text x="179.00" y="199.79" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.6B  (53.1%)</text>
+<text x="179.00" y="397.44" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">License &amp; other 授权及其他</text>
+<text x="179.00" y="410.44" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.3B  (46.9%)</text>
+<rect x="331.00" y="74.35" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="86.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="99.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.9B  (100.0%)</text>
+<rect x="455.00" y="67.35" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="79.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="92.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.8B  (97.5%)</text>
+<rect x="455.00" y="464.97" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="476.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="489.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$121.0M  (2.5%)</text>
+<rect x="579.00" y="72.19" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="84.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="97.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$900.0M  (18.3%)</text>
+<rect x="579.00" y="158.13" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="170.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="183.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.9B  (79.2%)</text>
+<rect x="703.00" y="45.32" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="57.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="70.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (24.5%)</text>
+<rect x="703.00" y="155.64" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="167.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="180.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.1B  (22.7%)</text>
+<rect x="703.00" y="258.77" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="270.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="283.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.8B  (56.4%)</text>
+<rect x="703.00" y="494.68" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="506.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="519.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.0M  (0.16%)</text>
+<text x="833.00" y="256.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="269.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$641.0M  (13.0%)</text>
+<text x="833.00" y="318.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="331.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$564.0M  (11.5%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Arm FY26 Q4 股东信 (附件 99.2, 2026-05-06) · Arm 20-F FY26 (arm-20260331.htm)</text>
+</svg>
+
+*版税与授权各占约一半收入; 注意 R&D (US$2.8B) 是远超 SG&A 的最大支出项——这是 Arm 刻意为 AGI CPU 与 Armv9 路线图投入的研发爬坡。来源: [Arm FY26 Q4 股东信, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)、[Arm 20-F FY26](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm)。*
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Arm 营业收入历史 (按业务线, FY23–FY26, US$m)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Royalty 版税</text>
+<rect x="116.00" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="132.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">License &amp; other 授权及其他</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$1.1B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$2.1B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$3.2B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$4.3B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$5.3B</text>
+<rect x="110.11" y="306.65" width="110.78" height="105.35" fill="#2563eb"/>
+<rect x="110.11" y="243.60" width="110.78" height="63.05" fill="#15803d"/>
+<text x="165.50" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2023</text>
+<rect x="301.11" y="299.61" width="110.78" height="112.39" fill="#2563eb"/>
+<rect x="301.11" y="208.78" width="110.78" height="90.83" fill="#15803d"/>
+<text x="356.50" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2024</text>
+<rect x="492.11" y="275.72" width="110.78" height="136.28" fill="#2563eb"/>
+<rect x="492.11" y="160.13" width="110.78" height="115.60" fill="#15803d"/>
+<text x="547.50" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2025</text>
+<rect x="683.11" y="247.75" width="110.78" height="164.25" fill="#2563eb"/>
+<rect x="683.11" y="102.74" width="110.78" height="145.01" fill="#15803d"/>
+<text x="738.50" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">FY2026</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Arm 20-F FY25/FY26 (Item 5.A 分业务线营业收入) · Arm FY26 Q4 股东信</text>
+</svg>
+
+*四年间营业收入从 FY2023 的 26.8 亿美元增至 FY2026 的 49.2 亿美元 (约 23% 年化), 版税与授权两条线同步扩张。来源: [Arm 20-F FY26, Item 5.A](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm)、[Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)。*
+
+### 1.1 估值快照 (数据截至 2026-06-15)
 
 | 指标 | Arm | NVDA | AVGO | CDNS | SNPS | QCOM | RMBS | 备注 |
 |---|---|---|---|---|---|---|---|---|
-| 最新股价 | 253.32 美元 | 222.83 美元 | 418.71 美元 | 348.11 美元 | 491.32 美元 | 202.76 美元 | 132.45 美元 | Yahoo / yfinance |
-| 市值 | 2,695 亿美元 | 5.40 万亿美元 | 1.98 万亿美元 | 960 亿美元 | 941 亿美元 | 2,137 亿美元 | 143 亿美元 | |
-| TTM P/E | **298×** | 45× | 81× | 81× | 75× | 22× | 63× | TTM 报告值 |
-| 前瞻 P/E | 83× | 19× | 23× | 37× | 29× | 19× | 36× | 卖方一致预期 |
-| TTM P/S | **54.8×** | 25.0× | 29.0× | 17.4× | 11.8× | 4.8× | 19.9× | |
-| EV / EBITDA | 204× | 40× | 54× | 47× | 64× | 16× | 41× | |
+| 最新股价 | 380.81 美元 | 205.19 美元 | 382.07 美元 | 384.96 美元 | 453.89 美元 | 211.72 美元 | 146.56 美元 | Yahoo / yfinance |
+| 市值 | 4,067 亿美元 | 4.97 万亿美元 | 1.82 万亿美元 | 1,062 亿美元 | 869 亿美元 | 2,232 亿美元 | 158 亿美元 | |
+| TTM P/E | **453×** | 31× | 64× | 90× | 104× | 23× | 70× | TTM 报告值 |
+| 前瞻 P/E | **124×** | 16× | 20× | 41× | 26× | 20× | 40× | 卖方一致预期 |
+| TTM P/S | **82.7×** | 19.6× | 24.1× | 19.2× | 10.0× | 5.0× | 22.0× | |
 
-*来源: Yahoo Finance / yfinance, 2026-05-20 同日抓取所有股票代码 (例如 [Arm 关键统计, Yahoo Finance](https://finance.yahoo.com/quote/ARM/key-statistics/)、[NVDA](https://finance.yahoo.com/quote/NVDA/key-statistics/)、[AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/))。倍数四舍五入至最接近的整数百分点。*
+*来源: Yahoo Finance / yfinance, 2026-06-15 同日抓取所有股票代码 (例如 [Arm 关键统计, Yahoo Finance](https://finance.yahoo.com/quote/ARM/key-statistics/)、[NVDA](https://finance.yahoo.com/quote/NVDA/key-statistics/)、[AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/))。倍数四舍五入至最接近的整数 (P/E) 或一位小数 (P/S)。注: SNPS / CDNS 的 TTM P/E 受近期 Ansys / 摊销影响偏高, 前瞻 P/E 更具可比性。*
 
-![同业估值比较](charts/arm_peer_valuation.png)
-*来源: yfinance, 抓取于 2026-05-20。*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Arm FY2026 营业收入构成 (按业务线, US$m)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 262.37,368.69 L 272.86,315.72 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 262.37,368.69 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 272.86,315.72 Z" fill="#15803d"/>
+<text x="288.00" y="240.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="800" fill="#1f2933">ARM FY26</text>
+<text x="288.00" y="260.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$4.9B</text>
+<text x="288.00" y="276.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="425.34" y1="252.66" x2="441.34" y2="252.66" stroke="#2563eb" stroke-width="1.4"/>
+<text x="445.34" y="250.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Royalty 版税</text>
+<text x="445.34" y="264.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.6B  (53.1%)</text>
+<line x1="150.66" y1="225.74" x2="134.66" y2="225.74" stroke="#15803d" stroke-width="1.4"/>
+<text x="130.66" y="223.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">License &amp; other 授权及其他</text>
+<text x="130.66" y="237.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.3B  (46.9%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Arm FY26 Q4 股东信 (附件 99.2, 2026-05-06) · Arm 20-F FY26</text>
+</svg>
 
-**解读 Arm 估值倍数。** 无论是 298× TTM P/E 还是 54.8× TTM P/S, 在绝对与相对基础上均属极端——大约是次高半导体可比公司 (AVGO 29.0× P/S) 的 2 倍, 大约是 IP 软件同业组 (CDNS / SNPS 12–17× P/S) 的 4 倍 ([Yahoo Finance 关键统计 — ARM](https://finance.yahoo.com/quote/ARM/key-statistics/)、[AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/)、[CDNS](https://finance.yahoo.com/quote/CDNS/key-statistics/)、[SNPS](https://finance.yahoo.com/quote/SNPS/key-statistics/))。驱动因素:
+*FY2026 营业收入按业务线: 版税 26.13 亿美元 (53.1%) / 授权及其他 23.07 亿美元 (46.9%)。来源: [Arm FY26 Q4 股东信, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)。*
+
+**解读 Arm 估值倍数。** 无论是 453× TTM P/E、124× 前瞻 P/E 还是 82.7× TTM P/S, 在绝对与相对基础上均属极端——TTM P/S 大约是次高半导体可比公司 (AVGO 24.1× P/S) 的 3.4 倍, 大约是 IP 软件同业组 (CDNS / SNPS 10–19× P/S) 的 4–8 倍 ([Yahoo Finance 关键统计 — ARM](https://finance.yahoo.com/quote/ARM/key-statistics/)、[AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/)、[CDNS](https://finance.yahoo.com/quote/CDNS/key-statistics/)、[SNPS](https://finance.yahoo.com/quote/SNPS/key-statistics/))。自 2026-05 的 253 美元到 2026-06-15 的 381 美元, ARM 在六周内再涨约 50%, 倍数进一步扩张。驱动因素:
 
 1. **真实的单芯片版税经济性长期增长。** Armv9 版税费率通常约为 Armv8 费率的 2 倍 ([Arm F-1, 2023-08-21](https://www.sec.gov/Archives/edgar/data/1973239/000119312523216983/d393891df1.htm)); Armv9 至 FY25 年末已达到总版税收入的约 30–35%, 并持续以更高占比组合。基于 CSS 的版税进一步阶梯化提升。
-2. **盈利被刻意的研发爬坡压低。** FY26 非 GAAP 研发投入同比增长 43% 至 19.1 亿美元, 用于 AGI CPU 硅片产能建设; 员工人数增长 15% 至 9,584 人 ([Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。非 GAAP 营业利润率从 46.7% (FY24) 下降至 43.0% (FY26), 而毛利率维持在 98%。
-3. **沉重的 AI/数据中心叙事溢价。** Arm 提供本质上纯粹的"卖铲子"敞口, 覆盖**所有** AI 推理计算——每颗 NVIDIA Grace / Vera、Amazon Graviton、Google Axion 与 Microsoft Cobalt 都向 Arm 支付版税。AGI CPU 加上 Meta 合作伙伴关系, 按管理层口径再增加了价值 150 亿美元的直接硅片业务向量。
-4. **流通股小且软银悬而未决。** 软银持股约 87%; 据 yfinance, 流通股仅约 1.38 亿股, 放大了表面倍数。
+2. **盈利被刻意的研发爬坡压低。** FY26 非 GAAP 研发投入同比增长 43% 至 19.1 亿美元, GAAP 研发 27.76 亿美元, 用于 AGI CPU 硅片产能建设; 员工人数增长 15% 至 9,584 人 ([Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。GAAP 营业利润率 18.3% (= 9.00 亿 / 49.20 亿), 而毛利率维持在 97.5%。
+3. **沉重的 AI/数据中心叙事溢价。** Arm 提供本质上纯粹的"卖铲子"敞口, 覆盖**所有** AI 推理计算——每颗 NVIDIA Grace / Vera、Amazon Graviton、Google Axion 与 Microsoft Cobalt 都向 Arm 支付版税。AGI CPU 加上 Meta 合作伙伴关系, 按管理层口径再增加了价值 150 亿美元的直接硅片业务向量 ([Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。
+4. **流通股小且软银悬而未决。** 软银持股约 87%; 据 yfinance, Arm 自由流通股 (free float) 仅约 1.39 亿股 (总股本约 10.7 亿股), 放大了表面倍数与波动性 ([Yahoo Finance — ARM](https://finance.yahoo.com/quote/ARM/key-statistics/))。
 
-前瞻 P/E 83× 比 TTM 298× 更容易消化——卖方一致预期 Arm 盈利将显著扩张。即便如此, Arm 估值显著高于即便最激进的 AI 同业 (AVGO 前瞻 23×、NVDA 前瞻 19×, 数据来自 [Yahoo Finance 关键统计 — NVDA](https://finance.yahoo.com/quote/NVDA/key-statistics/) / [AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/)); 我们将其视为**估值/倍数压缩风险**, 见第 9 章。
+前瞻 P/E 124× 比 TTM 453× 更容易消化——卖方一致预期 Arm 盈利将显著扩张。即便如此, Arm 估值显著高于即便最激进的 AI 同业 (AVGO 前瞻 20×、NVDA 前瞻 16×, 数据来自 [Yahoo Finance 关键统计 — NVDA](https://finance.yahoo.com/quote/NVDA/key-statistics/) / [AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/)); 我们将其视为**估值/倍数压缩风险**, 见第 10 章, 也是本报告给予 Hold/中性评级而非买入的核心原因。
 
-最接近的可比同业: **Rambus (RMBS)** 是除 Arm 外唯一的纯 IP 公开授权方 (TTM P/E 63×、P/S 19.9×; 聚焦内存 IP——参见 [RMBS 关键统计](https://finance.yahoo.com/quote/RMBS/key-statistics/)); **Cadence (CDNS) / Synopsys (SNPS)** 共享经常性授权 / 超高毛利率模型 (P/E 75–80×、P/S 12–17×, 数据来自 [CDNS](https://finance.yahoo.com/quote/CDNS/key-statistics/) / [SNPS](https://finance.yahoo.com/quote/SNPS/key-statistics/)); **高通 QTL** 将是最接近的直接可比, 但未单独上市 (合并报表的 QCOM 为 22× P/E、4.8× P/S——参见 [QCOM 关键统计](https://finance.yahoo.com/quote/QCOM/key-statistics/)); **NVIDIA / Broadcom** 在 AI 叙事上最接近 (P/E 45–81×)。
+最接近的可比同业: **Rambus (RMBS)** 是除 Arm 外唯一的纯 IP 公开授权方 (TTM P/E 70×、P/S 22.0×; 聚焦内存 IP——参见 [RMBS 关键统计](https://finance.yahoo.com/quote/RMBS/key-statistics/)); **Cadence (CDNS) / Synopsys (SNPS)** 共享经常性授权 / 超高毛利率模型 (前瞻 P/E 26–41×、P/S 10–19×, 数据来自 [CDNS](https://finance.yahoo.com/quote/CDNS/key-statistics/) / [SNPS](https://finance.yahoo.com/quote/SNPS/key-statistics/)); **高通 QTL** 将是最接近的直接可比, 但未单独上市 (合并报表的 QCOM 为 23× P/E、5.0× P/S——参见 [QCOM 关键统计](https://finance.yahoo.com/quote/QCOM/key-statistics/)); **NVIDIA / Broadcom** 在 AI 叙事上最接近 (P/E 31–64×)。
 
-同业组中位数 TTM P/E (剔除 Arm) 大约 60–80×, 中位数 P/S 大约 17× (同业倍数来源自上述 Yahoo Finance 关键统计页面)。Arm 估值约为同业中位数的 **3–4 倍 (P/E 与 P/S 同时)**。叠加大幅研发爬坡和 AGI CPU 收入尚未充分释放, 这就是该股的核心非对称性: 估值倍数已预设 AGI CPU 计划顺利执行 + Armv9 版税费率持续提升; 任一杠杆失败都将迫使估值大幅下调 ([Arm FY26 Q4 股东信, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。
+同业组前瞻 P/E 中位数 (剔除 Arm) 大约 20–26×, TTM P/S 中位数大约 20× (同业倍数来源自上述 Yahoo Finance 关键统计页面)。Arm 前瞻 P/E (124×) 约为同业中位数的 **5–6 倍**, P/S 约为 3–4 倍。叠加大幅研发爬坡和 AGI CPU 收入尚未充分释放, 这就是该股的核心非对称性: 估值倍数已预设 AGI CPU 计划顺利执行 + Armv9 版税费率持续提升; 任一杠杆失败都将迫使估值大幅下调 ([Arm FY26 Q4 股东信, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。
 
 ---
 
-## 2. 公司历史
+## 1B. GF Score 基本面评分 (GuruFocus-style) — *分析师观点 (Analyst view)*
+
+下面是一张五维基本面评分卡 (仿 [GuruFocus GF Score™](https://www.gurufocus.com/term/gf-score) 方法), **是本报告分析师的评分工具, 不是数据来源、也不是 GuruFocus 的官方数字**; 五个子分与合成分均为 *分析师观点*, 各项底层指标各自带申报文件引用。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 460" width="560" height="460" role="img" aria-label="GF Score radar"><rect x="0" y="0" width="560" height="460" fill="#ffffff"/><text x="280" y="28" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Arm (NASDAQ:ARM) — GF Score 76 / 100</text><g transform="translate(280,232)"><polygon points="0,-150 142.66,-46.35 88.17,121.35 -88.17,121.35 -142.66,-46.35" fill="none" stroke="#e2e8f0" stroke-width="1"/><polygon points="0,-112.5 107,-34.76 66.13,91.01 -66.13,91.01 -107,-34.76" fill="none" stroke="#e2e8f0" stroke-width="1"/><polygon points="0,-75 71.33,-23.17 44.09,60.67 -44.09,60.67 -71.33,-23.17" fill="none" stroke="#e2e8f0" stroke-width="1"/><polygon points="0,-37.5 35.66,-11.59 22.04,30.34 -22.04,30.34 -35.66,-11.59" fill="none" stroke="#e2e8f0" stroke-width="1"/><line x1="0" y1="0" x2="0" y2="-150" stroke="#cbd5e1" stroke-width="1"/><line x1="0" y1="0" x2="142.66" y2="-46.35" stroke="#cbd5e1" stroke-width="1"/><line x1="0" y1="0" x2="88.17" y2="121.35" stroke="#cbd5e1" stroke-width="1"/><line x1="0" y1="0" x2="-88.17" y2="121.35" stroke="#cbd5e1" stroke-width="1"/><line x1="0" y1="0" x2="-142.66" y2="-46.35" stroke="#cbd5e1" stroke-width="1"/><polygon points="0,-135 114.13,-37.08 8.82,12.13 -70.54,97.08 -128.39,-41.71" fill="#2563eb" fill-opacity="0.30" stroke="#2563eb" stroke-width="2"/><text x="0" y="-160" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Fin. Strength 9</text><text x="158" y="-46" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Profitability 8</text><text x="98" y="138" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Growth 9</text><text x="-98" y="138" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#dc2626">GF Value 1</text><text x="-158" y="-46" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Momentum 9</text></g><text x="280" y="452" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: Arm 20-F FY26 · Arm FY26 Q4 股东信 · Yahoo Finance, as of 2026-06-15 · 分析师评分工具, 非 GuruFocus 官方值</text></svg>
+
+| 维度 / Dimension | 评分 (0–10) | 评级理由 (driving metrics, 各自带引用) |
+|---|---|---|
+| **Financial Strength (财务实力)** | **9** | 无长期债务, 现金及短投 36.01 亿美元, 总负债仅 24.17 亿美元 vs 总资产 107.03 亿美元; 极高利息覆盖 ([Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。 |
+| **Profitability (盈利能力)** | **8** | GAAP 毛利率 97.5%、非 GAAP 98.2% (软件级); 但 GAAP 营业利润率仅 18.3% (研发爬坡压低), ROE 约 8% (高股本基数稀释), 故非满分 ([Arm 20-F FY26](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm))。 |
+| **Growth (成长性)** | **9** | FY26 营业收入 +23%, 版税 +21%, 授权 +25%; 三年 CAGR 约 25%; 数据中心版税 Q4 同比翻倍以上 ([Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。 |
+| **GF Value (估值, 越高越便宜)** | **1** | 453× TTM P/E、124× 前瞻 P/E、82.7× P/S——同业最贵者数倍, 几乎无安全边际 ([Yahoo Finance — ARM](https://finance.yahoo.com/quote/ARM/key-statistics/))。这是评分卡上唯一的极低分, 也是评级保持中性的核心。 |
+| **Momentum (动量)** | **9** | ARM 自 2025-11 末约 135 美元涨至 2026-06-15 约 381 美元 (约 +180%), 大幅跑赢费城半导体指数 ([Yahoo Finance — ARM 历史](https://finance.yahoo.com/quote/ARM/history/))。 |
+| **GF Score (合成, *分析师观点*)** | **76 / 100** | 71–80 区间 = 历史上"约平均"表现概率; 卓越的实力/成长/动量被极端估值 (GF Value=1) 显著拉低 (权重: 实力 20% · 盈利 25% · 成长 25% · 估值 15% · 动量 15%)。 |
+
+**评分综述 (*分析师观点*)。** Arm 的基本面四维 (财务实力、盈利能力、成长性、动量) 几乎都接近满分——这是一家几乎没有财务弱点的复利机器。唯一的硬伤是 **GF Value=1**: 当一只股票同时是同业里最贵的, 任何成长不及预期都会以倍数压缩的方式被放大。76 分的合成分准确捕捉了"卓越业务、极端价格"的张力——这也是为什么本报告的最终评级是 Hold/中性而非买入。
+
+---
+
+## 2. 估值与目标价 (Valuation & Price Target) — *分析师观点 (Analyst view)*
+
+> 本章所有前瞻估计、目标价与情景均为 *分析师观点 (Analyst view)*, 不来自任何 Arm 申报文件; 申报文件只提供历史财务与管理层指引区间。每个驱动因子的外部依据 (分部数据 + 管理层指引 + 行业预测) 在段内引用。
+
+### 2.1 前瞻财务模型 (FY2026A → FY2029E)
+
+Arm 的财年止于 3 月 31 日。下表自 FY2026 实际值出发, 按"版税梯度 + 授权订阅 + AGI CPU 爬坡"三引擎建模, 每个投影单元格均为 *分析师观点*:
+
+| 指标 (US\$m, 除 EPS) | FY2026A | FY2027E | FY2028E | FY2029E | 关键驱动 (依据带引用) |
+|---|---|---|---|---|---|
+| 版税收入 Royalty | 2,613 | 3,140 | 3,800 | 4,560 | 管理层框定核心 IP 约 +20%/年, Armv9/CSS 费率梯度 + 数据中心翻倍 ([UBS 06-05 sector note](http://xs-macbook-air.local:5001/zsxq/pdf/184125218414222/UBS-US%20Semiconductors%EF%BC%9AExploring%20the%20Impact%20of%20Agentic%20AI%20on%20the%20CPU%20Market-260505.pdf)) |
+| 授权及其他 License | 2,307 | 2,770 | 3,250 | 3,700 | ATA 订阅 ACV +22%, CSS 大单; 管理层 FY27 授权指引 +20% ([GS 05-07](http://xs-macbook-air.local:5001/zsxq/pdf/585421441141454/Goldman%20Sachs-ARM%20Holdings%20%EF%BC%88ARM.US%EF%BC%89%EF%BC%9A%20Increased%20CPU%20demand%20outlook%EF%BC%8C%20offset%20by%20miss%20in%20core%20royalty%20business-260507.pdf)) |
+| **总营业收入** | **4,920** | **5,910** | **7,050** | **8,260** | 隐含约 +20%/年; FY27 指引中点年化约 +20% ([Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)) |
+| 非 GAAP 营业利润率 | 43.0% | 43.5% | 45.0% | 46.5% | 研发爬坡 FY27 见顶后经营杠杆释放 ([Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)) |
+| 非 GAAP EPS (US\$) | 1.77 | 2.25 | 2.95 | 3.75 | 收入增长 + 利润率扩张 + 约 10.7 亿摊薄股本 |
+
+注: AGI CPU 硅片收入在 FY27–28 仍较小 (产能受限, 管理层指引仅约 10.5 亿美元 vs 储备 20 亿), 上行主要计入 FY29+ 的期权价值。来源: [Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)、[Arm 20-F FY26 分部数据](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm)。
+
+### 2.2 目标价推导 (showing the arithmetic)
+
+**方法: 前瞻 P/E × 目标倍数。** 以 FY2028E 非 GAAP EPS 约 2.95 美元为锚 (12 个月内市场将滚动至 FY28 视角), 给予目标前瞻 P/E **95×**:
+
+> **2.95 美元 × 95× ≈ 280 美元 (FY28 基准 EPS 视角)**; 叠加 AGI CPU 期权价值与 12 个月内可能滚动至 FY29 视角的部分, 调升至 **12 个月目标价 335 美元**。
+
+**为什么用 95× 这个倍数 (vs 当前 124× 前瞻)。** Arm 应享有半导体 IP 板块最高倍数——其经常性收入质量、98% 毛利率与版税长尾介于 EDA 双雄 (CDNS/SNPS 前瞻 26–41×) 与高增长 AI 硬件 (NVDA 16×) 之间, 但**远高于**两者, 因为 Arm 兼具软件级利润率与远高于 EDA 的收入增速。95× 仍意味着相对当前 124× 的温和压缩——反映我们认为当前价格已透支完美执行。对标: Bernstein 给 90× 前瞻 P/E 得目标价 300 美元 ([Bernstein 05-18 initiation](http://xs-macbook-air.local:5001/zsxq/pdf/812454818812252/Bernstein-SoftBank%2C%20Arm%20From%20GenAI%20to%20Agentic%20AI%3B%20Initiating%20with%20Outperform%20Ratings-260518.pdf)); UBS 用 PEG 1.6× (对标 EDA) 得 260 美元 ([UBS 05-07](http://xs-macbook-air.local:5001/zsxq/pdf/212458448844541/UBS-Arm%20Holdings%20PLC%EF%BC%88ARM.US%EF%BC%89ARM%20AGI%20CPU%20Backlog%20Doubles%20In%206%20Weeks-260507.pdf))。
+
+相对当前 380.81 美元, 335 美元目标价隐含约 **−12% 下行**——即在卓越业务与极端价格之间, 我们判断风险回报略偏不利, 给予 **Hold/中性**。
+
+### 2.3 牛 / 基准 / 熊情景 (*分析师观点*)
+
+| 情景 | 12 个月目标价 | 相对 380.81 美元 | 核心摆动假设 |
+|---|---|---|---|
+| **牛市 Bull** | **460 美元** | **+21%** | AGI CPU 产能瓶颈解除 + 数据中心版税持续翻倍 + Armv9/CSS 费率梯度超预期; 给予 FY29E EPS 3.75 × 约 105–110× 前瞻 (对标 Bernstein 乐观情景 390 美元的更进一步) |
+| **基准 Base** | **335 美元** | **−12%** | FY28E EPS 2.95 × 95×; 核心 IP 约 +20%/年, AGI CPU 渐进爬坡, 倍数温和压缩 |
+| **熊市 Bear** | **190 美元** | **−50%** | 智能手机版税结构性疲软 + AGI CPU 令人失望 + 高通诉讼不利 + AI 板块轮动; 倍数压缩至 FY28E EPS 2.95 × 约 50–55× P/E (对标 Goldman Sachs 卖出逻辑) ([GS 05-07](http://xs-macbook-air.local:5001/zsxq/pdf/585421441141454/Goldman%20Sachs-ARM%20Holdings%20%EF%BC%88ARM.US%EF%BC%89%EF%BC%9A%20Increased%20CPU%20demand%20outlook%EF%BC%8C%20offset%20by%20miss%20in%20core%20royalty%20business-260507.pdf)) |
+
+风险回报呈现显著不对称: 牛市 +21% vs 熊市 −50%——这是给予中性而非买入的量化依据。
+
+### 2.4 与市场一致预期的对比 (vs consensus)
+
+本报告 FY2028E 营业收入 70.5 亿美元 略低于最乐观卖方 (Bernstein FY30 营业收入约 260 亿美元隐含更陡 CAGR), 但高于 Goldman Sachs 的 normalized 视角 (GS 用 FY27 normalized EPS 2.50–3.00 美元)。我们的 335 美元目标价位于卖方区间 (Goldman Sachs 卖出 150 美元 ↔ Bernstein 跑赢 300 美元, 乐观 390 美元) 偏上半区, 但低于当前股价——核心分歧不在成长 (各方都看好), 而在**该用多少倍数为这份成长付费**。
+
+### 2.5 卖方观点演变 (Sell-side view evolution)
+
+Arm 的卖方覆盖是本案例中分歧最极端的之一: 同一份 FY26 Q4 业绩 (2026-05-06), Goldman Sachs 给卖出 (125 美元), UBS 给买入 (260 美元), Bernstein 一周后首予跑赢 (300 美元)——目标价区间跨度超过 2.4 倍。下表先做机械预读 (来自 `db/stock_price_target.db`, 只读), 再按机构构建时间线。
+
+**目标价离散度 (来自 `db/stock_price_target.db` 只读预读, 2026-04 至 2026-06):** 最低 125 美元 (GS) · 中位约 202 美元 (MS) · 最高 300 美元 (Bernstein); 离散度 (max/min) 约 2.4×——这是一只卖方根本无法形成共识的股票。
+
+**按机构的观点时间线 (按报告日期):**
+
+- **Goldman Sachs — 持续看空, 但小幅上调。** 2026-05-06 首评"业绩略超但预期已过高", 卖出 / PT **125 美元** (FY27 normalized EPS 2.50 × 50× PE); 次日 2026-05-07 深度报告将 PT 上调至 **150 美元** (normalized EPS 3.00 × 50×), 触发因素是 CPU 需求前景改善, 但维持卖出——核心论点: 版税业务智能手机疲软 + 相对芯片制造同业无竞争优势 + 估值过高。报告日收盘价 237.30 美元, 隐含约 −37% 下行 ([GS first take 05-06](http://xs-macbook-air.local:5001/zsxq/pdf/585421182441244/GS-ARM%20Holdings%20%28ARM%29_%20First%20Take_%20Results%20and%20guidance%20slightly%20above%20the%20Street-260506.pdf)、[GS 深度 05-07](http://xs-macbook-air.local:5001/zsxq/pdf/585421441141454/Goldman%20Sachs-ARM%20Holdings%20%EF%BC%88ARM.US%EF%BC%89%EF%BC%9A%20Increased%20CPU%20demand%20outlook%EF%BC%8C%20offset%20by%20miss%20in%20core%20royalty%20business-260507.pdf))。
+- **Morgan Stanley — 等权, PT 逐步上调。** 2026-05-07 深度报告将 PT 从 191 美元上调至 **202 美元** (等权), 强调"代理式未来"信心增强、云 AI 版税同比约 2 倍、但供应 (TSMC 先进制程) 是瓶颈; 报告日收盘 213.31 美元 (隐含约 −5%), 当时股价已接近目标价。2026-06-01 (台北电脑展后) 维持等权 / **202 美元**, 新增"英伟达进入 Arm 架构 Windows PC"利好——长期 PC 抢占 x86 份额, 但短期上行有限。报告日收盘 408.85 美元, 隐含约 −51% 下行 ([MS 05-07](http://xs-macbook-air.local:5001/zsxq/pdf/812458258585242/MS-Arm%20Holdings%20plc%20Growing%20Confidence%20of%20an%20Agentic%20Future-260507.pdf)、[MS 06-01](http://xs-macbook-air.local:5001/zsxq/pdf/212485484285841/Morgan%20Stanley-Arm%20Holdings%20plc%EF%BC%88ARM.US%EF%BC%89%EF%BC%9AArm%20Partners%20Push%20into%20Agentic%20Edge-260601.pdf))。
+- **UBS — 买入, PT 上调。** 2026-05-05 sector note (CPU 市场报告) 内含 ARM 买入 / 245 美元 (代理式 AI 驱动 2030 年服务器 CPU TAM 5 倍, Arm 单位份额至 40–45%); 2026-05-07 单名报告将 PT 上调至 **260 美元** (买入), 核心催化是"AGI CPU 订单储备 6 周内翻倍"、FY28 目标 EPS 4.33 美元 × PEG 1.6× (对标 EDA)。报告日收盘 213.31 美元, 隐含约 +22% 上行 ([UBS 05-05 sector](http://xs-macbook-air.local:5001/zsxq/pdf/184125218414222/UBS-US%20Semiconductors%EF%BC%9AExploring%20the%20Impact%20of%20Agentic%20AI%20on%20the%20CPU%20Market-260505.pdf)、[UBS 05-07](http://xs-macbook-air.local:5001/zsxq/pdf/212458448844541/UBS-Arm%20Holdings%20PLC%EF%BC%88ARM.US%EF%BC%89ARM%20AGI%20CPU%20Backlog%20Doubles%20In%206%20Weeks-260507.pdf))。
+- **Bernstein — 首予跑赢, 最高目标价。** 2026-05-18 首次覆盖软银 + Arm, 给 Arm 跑赢 / **300 美元** (90× 前瞻 P/E, 乐观情景 390 美元), 论点: 代理式时代单 GW 算力所需 CPU 核心数从 3,000 万增至 1.2 亿, CPU/GPU 配比从 8:1 转向 1:1, 2030 年服务器 CPU 市场从 330 亿增至 1,370 亿美元; FY30 营业收入约 260 亿美元、EPS 9.83 美元。报告日收盘 215.12 美元, 隐含约 +39% 上行 ([Bernstein 05-18](http://xs-macbook-air.local:5001/zsxq/pdf/812454818812252/Bernstein-SoftBank%2C%20Arm%20From%20GenAI%20to%20Agentic%20AI%3B%20Initiating%20with%20Outperform%20Ratings-260518.pdf))。
+- **其他: BofA 中性 180 美元 (2026-04-17), J.P. Morgan 增持 (2026-04-27, "AI 算力首选")** ——分别代表谨慎中性与乐观增持两端 ([BofA CPU Reborn 04-17](http://xs-macbook-air.local:5001/zsxq/pdf/415514822118148/Bofa-US%20Semiconductors%20CPU%20Reborn-agentic%20drives%20growth%2C%20but%20watch%20for%20competition-260417.pdf)、[JPM 04-27](http://xs-macbook-air.local:5001/zsxq/pdf/212218144282451/JPM-Semiconductors%20CY26%20Data%20Center%20Capex%20Revised%20Higher%20and%20Strong%20Initial%20Growth%20Outlook%20of%2040%25%20for%20CY27%3B%20Positive%20Across%20the%20Semiconductor%20AI%20Value%20Chain%20-%20Potential%20for%20Continued%20Upward%20Revisions-260427.pdf))。
+
+**机构间分歧表 (机构 | 日期 | 评级/目标价 | 核心论点 | 什么证据能证明其正确):**
+
+| 机构 | 日期 | 评级 / 目标价 | 核心论点 | 什么证据能证明其正确 |
+|---|---|---|---|---|
+| Goldman Sachs | 2026-05-07 | 卖出 / 150 美元 | 版税疲软 + 无制造优势 + 估值过高 | 智能手机版税连续数季疲软; AGI CPU 毛利率显著低于 IP |
+| BofA | 2026-04-17 | 中性 / 180 美元 | 受益 NVDA/云 CPU IP, 但竞争激烈 | RISC-V/超大规模自研侵蚀份额 |
+| 本报告 | 2026-06-15 | Hold / 335 美元 | 卓越业务 × 极端价格 = 不对称偏负 | 倍数从 124× 向 95× 前瞻压缩 |
+| Morgan Stanley | 2026-06-01 | 等权 / 202 美元 | 长期建设性, 但价格已超目标价 | 短期版税恢复斜率 + TSMC 产能能见度 |
+| UBS | 2026-05-07 | 买入 / 260 美元 | AGI CPU 储备 6 周翻倍, 服务器 TAM 5× | FY27-28 储备 20 亿转化为收入确认 |
+| Bernstein | 2026-05-18 | 跑赢 / 300 美元 | 代理式时代 CPU 核数从 8:1 转向 1:1 | FY30 营业收入达 260 亿美元、EPS 9.83 |
+
+**为什么不能把这些观点揉成"共识"。** 同一份业绩, GS 看到的是"版税不及预期 + 估值泡沫", Bernstein 看到的是"代理式 AI 重塑 CPU 配比的世代级机会"; 二者目标价相差 1 倍。本报告判断成长方向各方无争议, 真正的分歧是**估值倍数**——这正是我们给中性的原因: 不与多头争论 Arm 业务好坏, 而是质疑当前价格为这份成长付出的倍数。每个目标价均已配报告日收盘价以还原其当时所喊的真实上行/下行 (见上文各机构行)。
+
+---
+
+## 3. 公司历史
 
 Arm 于 1990 年 11 月在英国剑桥成立, 作为 Acorn Computers、Apple Computer 与 VLSI Technology 的合资公司, 明确使命是开发一款高性能、能效卓越、易于编程、可灵活扩展的 CPU ([Arm 20-F FY25, "历史"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm))。最初的产品必须在 Apple 的 Newton 掌上设备中胜出, 这迫使团队为低于 1 瓦特的运行设计——这一架构优先级定义了之后每一代 Arm CPU, 并持续作为公司在移动、汽车与 AI 推理领域的结构性优势。
 
@@ -112,14 +343,14 @@ timeline
 
 **关键收购。** Arm 在历史上是有机增长者而非收购者。近期 IP 相邻投资包括 2023 年 11 月在树莓派 LSE 上市前对其的少数股权战略投资 ([Raspberry Pi 获得 Arm 战略投资, Arm 新闻室, 2023-11-02](https://newsroom.arm.com/news/raspberry-pi-investment))。20-F 中未披露任何变革性 M&A。
 
-**近期动态 (过去 12 个月)。** FY26 Q4 创纪录业绩, Arm AGI CPU 发布 (2026 年 4–5 月), Meta 作为多代联合开发者; 在 Supermicro / Lenovo / Quanta / ASRock (商业系统)、Verda (欧洲 AI 云)、Cloudflare (全球边缘) 及 SAP (Graviton 与 AGI CPU 上的数据库 / 业务应用) 的设计赢家 / 部署 ([Arm FY26 Q4 股东信, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。综合效应是 ARM ADS 自 2025 年 11 月末的 135 美元上涨 78% 至 2026 年 5 月 1 日的 253 美元 ([yfinance 月线收盘历史](https://finance.yahoo.com/quote/ARM/history/))。
+**近期动态 (过去 12 个月)。** FY26 Q4 创纪录业绩, Arm AGI CPU 发布 (2026 年 4–5 月), Meta 作为多代联合开发者; 在 Supermicro / Lenovo / Quanta / ASRock (商业系统)、Verda (欧洲 AI 云)、Cloudflare (全球边缘) 及 SAP (Graviton 与 AGI CPU 上的数据库 / 业务应用) 的设计赢家 / 部署 ([Arm FY26 Q4 股东信, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。综合效应是 ARM ADS 自 2025 年 11 月末约 135 美元一路上涨——5 月初约 253 美元, 至 2026-06-15 约 **380.81 美元** (自低点约 +180%), 大幅跑赢费城半导体指数 ([yfinance 月线收盘历史](https://finance.yahoo.com/quote/ARM/history/))。
 
-![ARM 股价历史](charts/arm_price_history.png)
-*来源: Yahoo Finance / yfinance, 月度收盘价, 抓取于 2026-05-20。*
+![ARM 股价历史 (至 2026-05 区间)](charts/arm_price_history.png)
+*来源: Yahoo Finance / yfinance, 月度收盘价, 抓取于 2026-05-20 (图表区间至 2026-05; 最新现价 380.81 美元见正文与第 1.1 章)。*
 
 ---
 
-## 3. 管理团队
+## 4. 管理团队
 
 ### Rene Haas — 首席执行官 & 董事 (62 岁)
 
@@ -159,7 +390,7 @@ Arm 符合纳斯达克规则下的"受控公司 (controlled company)"定义, 同
 
 ---
 
-## 4. 产品与服务
+## 5. 产品与服务
 
 Arm 的产品组合分为五大紧密集成的家族, 全部根据五种合同结构 (CSS、Arm Total Access (ATA)、Arm Flexible Access (AFA)、技术授权协议 (Technology Licensing Agreements, TLA) 与架构授权 (Architecture Licenses, ALA)) 授权给客户。
 
@@ -251,14 +482,149 @@ CSS 是 Arm 过去五年最具战略意义的产品引入。CSS 是 Cortex / Neo
 
 约 **53% 的 FY26 营业收入 (49.2 亿美元中的 26.1 亿美元) 为版税**, 其中约一半是移动应用处理器 (按 20-F 口径, FY25 为版税的约 46%, FY26 据管理层估算大致相似)。剩余版税分布于 IoT/嵌入式、汽车、消费电子、网络与数据中心, 其中数据中心现为增速最快的部分 ("数据中心版税在 FY26 Q4 同比翻倍以上"——股东信原文)。剩余 **47% 为授权 + 其他收入 (23.1 亿美元)**, 主要由 Total Access 订阅、自定义 CSS 项目与架构授权 (尤其是与高通的 Nuvia ALA 纠纷) 驱动 ([Arm FY26 Q4 股东信, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。
 
-![营业收入构成](charts/arm_revenue_mix.png)
-*来源: [Arm 20-F FY25, 附注 4 — 营业收入](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm) 与 [Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)。*
+FY2026 版税 (26.13 亿美元) 与授权及其他 (23.07 亿美元) 的拆分见第 1.1 章营业收入构成环形图; 版税内部约一半来自移动应用处理器 (FY25 唯一披露的解构数字, 剩余 54% 未单独披露), 数据中心是增速最快的部分 ([Arm 20-F FY26, 附注 4 — 营业收入](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm) 与 [Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。订阅端, FY26 Q4 共有 56 个 Total Access 被授权方 (FY25 Q4 为 44 个) 与 329 个 Flexible Access 被授权方, ACV 同比 +22% 至 16.60 亿美元 ([Arm FY26 Q4 股东信, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。
 
-![版税构成](charts/arm_royalty_mix.png)
-*来源: [Arm 20-F FY25, "移动应用处理器"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm) (注: 移动应用处理器占版税 46% 是 FY25 唯一披露的解构终端市场数字; 剩余 54% 未单独披露)。*
+**资金流图 (Money-flow) — 谁向 Arm 付费 · Arm 卖什么 · 钱流向何处。** 下图沿"需求/收入"方向追踪 Arm 的版税 + 授权模式: 左侧是付费方 (智能手机 OEM、超大规模数据中心、IoT/汽车、Arm China), 中间是 Arm 的两条收入流 (版税 + 授权/CSS), 右侧是这些钱流向的去处 (研发工程师、TSMC 的 AGI CPU 流片资本、落袋的经营利润与现金)。瓶颈在右侧 TSMC 先进 3nm 产能——这是 AGI CPU 爬坡的关键约束 (虚线 = 经 IPLA 间接流动的中国版税)。
 
-![Total Access 与 Flexible Access 被授权方对比](charts/arm_subscription_licenses.png)
-*来源: [Arm FY26 Q4 股东信, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)。*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 970" width="1180" height="970" role="img" aria-label="Arm 资金流图 — 谁向 Arm 付费 · Arm 卖什么 · 钱流向何处" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="970" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">ARM 资金流 · IP 授权 + 版税模式 · FY2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">Arm 资金流图 — 谁向 Arm 付费 · Arm 卖什么 · 钱流向何处</text>
+<ellipse cx="1031.00" cy="382.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="166.00" x2="369.50" y2="594.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="166.00" x2="810.50" y2="594.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="166.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">who pays</text>
+<text x="483.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="166.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">what they buy</text>
+<text x="924.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="166.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">where it pools</text>
+<path d="M 256.00 212.00 C 369.50 212.00, 369.50 278.00, 483.00 278.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 324.00 C 369.50 324.00, 369.50 302.00, 483.00 302.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 432.00 C 369.50 432.00, 369.50 326.00, 483.00 326.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 546.00 C 369.50 546.00, 369.50 350.00, 483.00 350.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 348.00 C 369.50 348.00, 369.50 450.00, 483.00 450.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 236.00 C 369.50 236.00, 369.50 426.00, 483.00 426.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 456.00 C 369.50 456.00, 369.50 474.00, 483.00 474.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 302.00 C 810.50 302.00, 810.50 261.00, 924.00 261.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 426.00 C 810.50 426.00, 810.50 285.00, 924.00 285.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 450.00 C 810.50 450.00, 810.50 392.00, 924.00 392.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 326.00 C 810.50 326.00, 810.50 489.00, 924.00 489.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 474.00 C 810.50 474.00, 810.50 513.00, 924.00 513.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<text x="369.50" y="239.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$ 移动版税</text>
+<text x="369.50" y="307.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">数据中心版税 (FY26 翻倍+)</text>
+<text x="369.50" y="373.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$ 嵌入式版税</text>
+<text x="369.50" y="442.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">中国版税 (经 IPLA)</text>
+<text x="369.50" y="393.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">CSS + ALA 授权费</text>
+<text x="369.50" y="325.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">ATA 订阅</text>
+<text x="369.50" y="459.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Flexible Access</text>
+<text x="810.50" y="275.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">再投资研发</text>
+<text x="810.50" y="349.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">再投资研发</text>
+<text x="810.50" y="415.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AGI CPU 流片资本</text>
+<text x="810.50" y="401.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">98% 毛利率落袋</text>
+<text x="810.50" y="487.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">经营杠杆</text>
+<rect x="42.00" y="176.00" width="214" height="96.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="176.00" width="3" height="96.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="209.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">智能手机 OEM/SoC</text>
+<text x="60.00" y="230.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Apple · 高通 · 联发科 · 三星</text>
+<text x="60.00" y="247.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">移动应用处理器版税 ~46%</text>
+<rect x="42.00" y="288.00" width="214" height="96.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="288.00" width="3" height="96.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="321.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">超大规模数据中心</text>
+<text x="60.00" y="342.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">AWS Graviton · Azure Cobalt</text>
+<text x="60.00" y="359.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Google Axion · NVIDIA Grace/Vera</text>
+<rect x="42.00" y="400.00" width="214" height="88.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="400.00" width="3" height="88.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="433.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">IoT / 汽车 / 嵌入式</text>
+<text x="60.00" y="454.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Cortex-M/R · CSS for Auto</text>
+<text x="60.00" y="471.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">数百亿颗长尾出货</text>
+<rect x="42.00" y="504.00" width="214" height="84.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="504.00" width="3" height="84.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="537.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Arm China 安谋科技</text>
+<text x="60.00" y="558.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">中国独家分销 IPLA 至 2048</text>
+<text x="60.00" y="575.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY25 占营业收入 ~17%</text>
+<rect x="483.00" y="254.00" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="254.00" width="3" height="120.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="287.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ROYALTY 版税</text>
+<text x="501.00" y="308.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY26 $2,613m (+21%)</text>
+<text x="501.00" y="325.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">按颗 ASP% · Armv9 ~2× Armv8 费率</text>
+<rect x="483.00" y="390.00" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="390.00" width="3" height="120.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="423.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">LICENSE 授权 + CSS</text>
+<text x="501.00" y="444.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY26 $2,307m (+25%)</text>
+<text x="501.00" y="461.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">ATA 订阅 · ACV $1,660m</text>
+<rect x="924.00" y="218.00" width="214" height="110.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="218.00" width="3" height="110.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="251.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">R&amp;D 研发</text>
+<text x="942.00" y="272.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">GAAP $2,776m · 8,058 名工程师</text>
+<text x="942.00" y="289.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Armv9 / Neoverse / AGI CPU 设计</text>
+<rect x="924.00" y="344.00" width="214" height="96.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="344.00" width="3" height="96.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="377.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">TSMC 代工 (AGI CPU)</text>
+<text x="942.00" y="398.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">先进 3nm 产能 = 关键瓶颈</text>
+<text x="942.00" y="415.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Arm 首次承担流片资本周期</text>
+<rect x="924.00" y="456.00" width="214" height="90.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="456.00" width="3" height="90.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="489.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">经营利润 + 现金</text>
+<text x="942.00" y="510.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">GAAP 营业利润 $900m</text>
+<text x="942.00" y="527.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">现金 $3,601m · 无长期债务</text>
+<rect x="42.00" y="614.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="616.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="616.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="616.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="616.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="609.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="609.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="840.40" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="914.80" y="609.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="933.80" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="634.00" x2="1138" y2="634.00" stroke="#222a3a"/>
+<text x="42.00" y="650.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">顺着钱看 ARM</text>
+<rect x="42.00" y="670.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="670.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">版税 · 按颗收费</text>
+<text x="58.00" y="712.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">每颗 Arm 芯片都付费</text>
+<text x="58.00" y="736.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 版税</tspan><tspan fill="#f4d58a" font-weight="700"> $2,613m</tspan><tspan fill="#9aa3b8" font-weight="400"> ；累计出货超</tspan><tspan fill="#f4d58a" font-weight="700"> 3,500</tspan><tspan fill="#f4d58a" font-weight="700"> 亿颗</tspan><tspan fill="#9aa3b8" font-weight="400"> 。Armv9</tspan><tspan fill="#9aa3b8" font-weight="400"> 版税费率约为</tspan><tspan fill="#9aa3b8" font-weight="400"> Armv8</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan></text>
+<text x="58.00" y="752.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">2×</tspan><tspan fill="#9aa3b8" font-weight="400"> ，且</tspan><tspan fill="#9aa3b8" font-weight="400"> Armv9</tspan><tspan fill="#9aa3b8" font-weight="400"> 已占版税</tspan><tspan fill="#f4d58a" font-weight="700"> ~30–35%</tspan><tspan fill="#9aa3b8" font-weight="400"> 并上升。</tspan></text>
+<rect x="412.00" y="670.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="670.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">授权 · 订阅化</text>
+<text x="428.00" y="712.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Total Access ACV $1,660m</text>
+<text x="428.00" y="736.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">授权及其他</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#f4d58a" font-weight="700"> $2,307m</tspan><tspan fill="#f4d58a" font-weight="700"> (+25%)</tspan><tspan fill="#9aa3b8" font-weight="400"> ；</tspan><tspan fill="#f4d58a" font-weight="700"> 56</tspan><tspan fill="#9aa3b8" font-weight="400"> 个</tspan><tspan fill="#9aa3b8" font-weight="400"> ATA</tspan><tspan fill="#9aa3b8" font-weight="400"> 被授权方（含前</tspan><tspan fill="#9aa3b8" font-weight="400"> 30</tspan></text>
+<text x="428.00" y="752.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">大客户过半）+</tspan><tspan fill="#f4d58a" font-weight="700"> 329</tspan><tspan fill="#9aa3b8" font-weight="400"> 个</tspan><tspan fill="#9aa3b8" font-weight="400"> Flexible</tspan><tspan fill="#9aa3b8" font-weight="400"> Access。ACV</tspan><tspan fill="#9aa3b8" font-weight="400"> 同比</tspan><tspan fill="#f4d58a" font-weight="700"> +22%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="782.00" y="670.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="670.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">数据中心 = 增速引擎</text>
+<text x="798.00" y="712.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">顶级超大规模 ~50% 份额</text>
+<text x="798.00" y="736.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">数据中心版税</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> Q4</tspan><tspan fill="#f4d58a" font-weight="700"> 同比翻倍以上</tspan><tspan fill="#9aa3b8" font-weight="400"> ；管理层称顶级超大规模数据中心</tspan><tspan fill="#9aa3b8" font-weight="400"> CPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 算力</tspan><tspan fill="#9aa3b8" font-weight="400"> Arm</tspan><tspan fill="#9aa3b8" font-weight="400"> 占</tspan></text>
+<text x="798.00" y="752.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">~50%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。AWS</tspan><tspan fill="#9aa3b8" font-weight="400"> Graviton</tspan><tspan fill="#9aa3b8" font-weight="400"> 自定义硅片已是</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;$200亿/年</tspan><tspan fill="#9aa3b8" font-weight="400"> 运行速率的一部分。</tspan></text>
+<rect x="42.00" y="800.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="800.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="824.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">新支出 · 硅片化</text>
+<text x="58.00" y="842.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AGI CPU 把钱送向 TSMC</text>
+<text x="58.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Arm</tspan><tspan fill="#9aa3b8" font-weight="400"> 首次自研量产硅片，</tspan><tspan fill="#f4d58a" font-weight="700"> FY27–28</tspan><tspan fill="#f4d58a" font-weight="700"> 预订</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;$20亿</tspan><tspan fill="#9aa3b8" font-weight="400"> （Meta</tspan><tspan fill="#9aa3b8" font-weight="400"> 首发），向</tspan><tspan fill="#f4d58a" font-weight="700"> $150亿</tspan></text>
+<text x="58.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">机会迈进。瓶颈在</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#f4d58a" font-weight="700"> 先进</tspan><tspan fill="#f4d58a" font-weight="700"> 3nm</tspan><tspan fill="#f4d58a" font-weight="700"> 产能</tspan><tspan fill="#9aa3b8" font-weight="400"> 分配。</tspan></text>
+<rect x="412.00" y="800.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="800.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="824.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">成本 · 工程为本</text>
+<text x="428.00" y="842.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">R&amp;D $2,776m · 8,058 工程师</text>
+<text x="428.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> 研发</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#f4d58a" font-weight="700"> $2,776m</tspan><tspan fill="#9aa3b8" font-weight="400"> ，非</tspan><tspan fill="#9aa3b8" font-weight="400"> GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> 同比</tspan><tspan fill="#f4d58a" font-weight="700"> +43%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；全员</tspan><tspan fill="#f4d58a" font-weight="700"> 9,584</tspan><tspan fill="#9aa3b8" font-weight="400"> 人中工程师占</tspan></text>
+<text x="428.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">84%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。研发美元增量回报极高——一份</tspan><tspan fill="#9aa3b8" font-weight="400"> CPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 设计可多客户复用。</tspan></text>
+<rect x="782.00" y="800.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="800.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="824.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">现金 · 零长债</text>
+<text x="798.00" y="842.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">98% 毛利率 + $3,601m 现金</text>
+<text x="798.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> 毛利率</tspan><tspan fill="#f4d58a" font-weight="700"> 97.5%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 非</tspan><tspan fill="#9aa3b8" font-weight="400"> GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> FCF</tspan><tspan fill="#9aa3b8" font-weight="400"> TTM</tspan><tspan fill="#f4d58a" font-weight="700"> $882m</tspan><tspan fill="#9aa3b8" font-weight="400"> ；期末现金及短投</tspan></text>
+<text x="798.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$3,601m</tspan><tspan fill="#9aa3b8" font-weight="400"> ，</tspan><tspan fill="#f4d58a" font-weight="700"> 无长期债务</tspan><tspan fill="#9aa3b8" font-weight="400"> ——软银持股约</tspan><tspan fill="#f4d58a" font-weight="700"> 87%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<text x="590.00" y="952.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Arm 20-F FY26 (arm-20260331.htm) · Arm FY26 Q4 股东信 (附件 99.2, 2026-05-06) · Arm 20-F FY25 (Arm China IPLA)</text>
+</svg>
+
+*顺着钱看 Arm: 每颗 Arm 芯片付费 (FY26 版税 26.13 亿美元, 累计出货超 3,500 亿颗); 授权订阅化 (ACV 16.60 亿美元, +22%); 数据中心是增速引擎 (顶级超大规模数据中心约 50% 份额, AWS Graviton 自定义硅片已是 >200 亿美元/年运行速率的一部分); 新支出 AGI CPU 把钱送向 TSMC (FY27–28 预订 >20 亿美元, Meta 首发, 向 150 亿美元机会迈进); 成本端工程为本 (R&D 27.76 亿美元、8,058 名工程师); 现金端 97.5% 毛利率 + 36.01 亿美元现金、无长期债务。来源: [Arm 20-F FY26](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm)、[Arm FY26 Q4 股东信, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)、[Arm 20-F FY25 (Arm China IPLA)](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm)。*
 
 ### 4.7 近期发布与路线图
 
@@ -272,7 +638,7 @@ CSS 是 Arm 过去五年最具战略意义的产品引入。CSS 是 Cortex / Neo
 
 ---
 
-## 5. 客户与上市策略
+## 6. 客户与上市策略
 
 Arm 的客户是半导体公司、OEM 与越来越多的超大规模数据中心云服务提供商。授权模式是半导体业最集中的营业收入账目之一。
 
@@ -282,8 +648,38 @@ Arm 的 FY25 20-F 披露: "我们前五大客户 (含 Arm 中国) 在 2025 年 3
 
 **高通**在 FY25 被明确点名为占营业收入 10% 的客户: "高通⋯⋯当前是我们的主要客户, 占截至 2025 年 3 月 31 日财年总营业收入的 10%" ([Arm 20-F FY25, "与高通和 Nuvia 的诉讼"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm))。20-F 未单独识别其余前五大客户, 但基于公开设计赢家与 ALA 备案的合理推断是, 这些客户可能包括 **Apple、联发科 (MediaTek)、三星电子, 以及一家美国超大规模数据中心**的组合 (AWS、Microsoft、Google)。Apple 的设计使用架构授权 (ALA), 这产生每一台出货 iPhone、iPad、Mac、Vision Pro、Apple Watch 与 AirPods 的授权费与按颗版税——并在 2023 年 9 月延长至至少 2040 年 ([Apple 与 Arm 签署新合作协议授权至 2040 年以后, CNBC, 2023-09-06](https://www.cnbc.com/2023/09/06/apple-and-arm-sign-deal-for-chip-technology-that-goes-beyond-2040.html)); 联发科是高通之后第二大高端移动应用处理器厂商, 也是大客户的 Cortex-X / A 被授权方。
 
-![客户集中度](charts/arm_customer_mix.png)
-*来源: [Arm 20-F FY25, "与我们业务和行业相关的风险"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm)。*
+```mermaid
+pie title FY2025 营业收入按客户集中度 (合并口径)
+    "Arm China 安谋科技 (17%)" : 17
+    "高通 Qualcomm (10%)" : 10
+    "其余前五大合计 (约29%)" : 29
+    "所有其他客户 (约44%)" : 44
+```
+*来源: [Arm 20-F FY25, "客户集中度"风险因素](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm) (前五大约 56%, Arm China 17%, 高通 10%; 注: 20-F 未单独披露其余三家前五大客户的逐家占比, 上图"其余前五大合计约 29%"为 56% 减去已点名的 Arm China 17% 与高通 10% 后的合计——一个分母 = 合并营业收入)。*
+
+下图为按地区的营业收入环形图 (口径同为合并营业收入, 与上图客户口径互补):
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Arm 营业收入按地区 (FY2025 口径, US$m)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 344.39,358.55 L 321.32,309.72 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 344.39,358.55 A 132 132 0 0 1 210.78,346.26 L 242.37,302.46 A 78 78 0 0 0 321.32,309.72 Z" fill="#15803d"/>
+<path d="M 210.78,346.26 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 242.37,302.46 Z" fill="#d97706"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">ARM 地区</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$4.0B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="422.65" y1="208.99" x2="438.65" y2="208.99" stroke="#2563eb" stroke-width="1.4"/>
+<text x="442.65" y="206.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States 美国</text>
+<text x="442.65" y="220.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.7B  (43.0%)</text>
+<line x1="275.36" y1="376.62" x2="259.36" y2="376.62" stroke="#15803d" stroke-width="1.4"/>
+<text x="255.36" y="374.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Arm China 安谋科技中国</text>
+<text x="255.36" y="388.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$680.0M  (17.0%)</text>
+<line x1="156.68" y1="196.78" x2="140.68" y2="196.78" stroke="#d97706" stroke-width="1.4"/>
+<text x="136.68" y="194.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other ex-US 其他美国境外</text>
+<text x="136.68" y="208.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.6B  (40.1%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Arm 20-F FY25 (Item 5.A; 美国境外约 57% 营业收入, Arm China 约 17%)</text>
+</svg>
+
+*按地区: 美国约 43%、Arm China 约 17%、其他美国境外约 40% (FY25 口径; 美国境外合计约 57%)。美国 17.22 亿美元为按 FY25 营业收入 40.07 亿美元 × 43% 推算的近似拆分。来源: [Arm 20-F FY25, Item 5.A](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm)。*
 
 **Arm 中国独特且需要特别处理。** Arm 中国不是 Arm 的子公司: 软银集团通过其控股实体 Acetone Limited 持有 Arm 中国约 48%; 厚朴投资管理 (HOPU Investment Management) 持有约 35%; 其他中国方面持有约 17% ([Arm 20-F FY25, "与 Arm 中国的 IPLA"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm))。Arm 自身在 Acetone 中持有 10% 无表决权权益——对 Arm 中国的间接经济权益 4.8%。根据 IPLA (初始有效期至 2048 年 4 月 23 日), Arm 中国是**面向中国客户的 Arm IP 独家分销商**, 包括上市中国公司、注册在中国的实体、以及由中国公民最终控制的实体。Arm 中国在合同上有义务使用 Arm 的标准授权条款, 但 Arm 没有直接管理权、没有运营控制权、不参与 Arm 中国对其中国分被授权方的定价决策。
 
@@ -322,7 +718,7 @@ Arm 通过约 300 人的商务团队 (由 CCO Will Abbey 领导) 直接向所有
 
 ---
 
-## 6. 行业概览
+## 7. 行业概览
 
 Arm 位于两个行业的交叉点: 半导体 IP ("Semiconductor IP, SIP") 行业 (它是主导者), 以及更广泛的半导体设计行业 (它影响但不直接与代工厂 (TSMC、三星代工、Intel 代工) 或无晶圆厂芯片公司 (NVIDIA、AMD、高通、联发科、Apple 等) 竞争) ([Arm 20-F FY25, "行业概览"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm))。
 
@@ -367,7 +763,7 @@ Arm 的**供应商力量**基本为零——Arm 的唯一"供应商"是 EDA 工�
 
 ---
 
-## 7. 竞争格局
+## 8. 竞争格局
 
 Arm 的竞争集合因终端市场而显著不同。
 
@@ -414,7 +810,7 @@ Arm 的主要优势: (i) **世界上最大的拥有 2,200 万开发者的软件�
 
 ---
 
-## 8. 市场机会 (TAM)
+## 9. 市场机会 (TAM)
 
 Arm 管理层未公开披露整个计算平台的合计 TAM 数字。然而, 构成 TAM 的部分披露良好 ([Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)):
 
@@ -432,7 +828,7 @@ Arm 管理层未公开披露整个计算平台的合计 TAM 数字。然而, 构
 
 ---
 
-## 9. 风险评估
+## 10. 风险评估
 
 我们在四个类别中识别出 12 个不同的风险。两个最高置信度的风险是**估值 / 倍数压缩风险**和**高通 / Nuvia 诉讼风险**。
 
@@ -476,9 +872,283 @@ Arm 管理层未公开披露整个计算平台的合计 TAM 数字。然而, 构
 
 ---
 
+---
+
+## 10.5 关键辩论与催化剂 (Key debates & catalysts) — *分析师观点*
+
+第 10 章是风险清单 (point-in-time 的下行盘点); 本节不同——它列出多空双方的核心分歧并逐一回应, 再给出未来 12 个月的有日期催化剂, 用以捍卫 (或质疑) 投资论点。
+
+**核心辩论 (bear 论点 → 回应):**
+
+1. **"版税增长正在结构性放缓 (智能手机疲软)。"** Goldman Sachs 卖出逻辑的核心: FY26 Q4 版税 6.71 亿美元低于卖方约 4%, 智能手机短期承压 ([GS 05-07](http://xs-macbook-air.local:5001/zsxq/pdf/585421441141454/Goldman%20Sachs-ARM%20Holdings%20%EF%BC%88ARM.US%EF%BC%89%EF%BC%9A%20Increased%20CPU%20demand%20outlook%EF%BC%8C%20offset%20by%20miss%20in%20core%20royalty%20business-260507.pdf))。**回应:** 管理层与 MS/UBS 均认为这是暂时性 (DRAM 短缺导致手机生产中断), 且数据中心版税同比翻倍以上完全对冲了手机疲软; 管理层框定核心 IP 约 +20%/年增长 ([MS 05-07](http://xs-macbook-air.local:5001/zsxq/pdf/812458258585242/MS-Arm%20Holdings%20plc%20Growing%20Confidence%20of%20an%20Agentic%20Future-260507.pdf))。真正需盯紧的是版税恢复斜率。
+
+2. **"AGI CPU 自研硅片会摊薄 98% 毛利率, 且与超大规模数据中心客户冲突。"** **回应:** AGI CPU 单芯片经济性远高于按颗版税, 即便毛利率低于 IP 也可能增厚绝对利润; Meta 锚定 (一个**没有**自研 Arm 硅片的超大规模数据中心) 是有意为之, 以避免与 Graviton/Cobalt/Axion 客户正面冲突 ([Arm AGI CPU 发布, Arm 新闻室, 2026-03-24](https://newsroom.arm.com/news/arm-agi-cpu-launch))。但这仍是真实的执行与渠道冲突风险 (见第 10 章风险 3、11)。
+
+3. **"估值已透支, 任何失误都会引发倍数压缩。"** 这是本报告**认同**的辩论——453× TTM / 124× 前瞻 P/E 几乎没有安全边际 ([Yahoo Finance — ARM](https://finance.yahoo.com/quote/ARM/key-statistics/))。**回应/立场:** 我们不与多头争论业务质量, 而是认为当前价格为这份成长付出的倍数过高, 故给中性。
+
+4. **"代理式 AI 真的会把 CPU/GPU 配比从 8:1 推向 1:1 吗?"** Bernstein 多头论点的基石 (单 GW 算力 CPU 核数从 3,000 万增至 1.2 亿) ([Bernstein 05-18](http://xs-macbook-air.local:5001/zsxq/pdf/812454818812252/Bernstein-SoftBank%2C%20Arm%20From%20GenAI%20to%20Agentic%20AI%3B%20Initiating%20with%20Outperform%20Ratings-260518.pdf))。**回应:** MS 提醒投资者避免重复计算 (double counting)——增量 CPU 需求更多体现在更高核数而非机械提高芯片配比 ([MS 05-07](http://xs-macbook-air.local:5001/zsxq/pdf/812458258585242/MS-Arm%20Holdings%20plc%20Growing%20Confidence%20of%20an%20Agentic%20Future-260507.pdf))。这是最大的 TAM 不确定性。
+
+**未来 12 个月有日期催化剂:**
+
+- **2026-03-09 (已过/进行中):** 第二项高通诉讼开庭——裁决方向影响 10% 营业收入敞口与 ALA 先例 ([Arm 20-F FY25, "与高通和 Nuvia 的诉讼"](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm))。
+- **2026 年内每季度业绩 (6-K):** 版税恢复斜率 + 数据中心版税是否维持约 2 倍同比 + AGI CPU 收入确认 (受 TSMC 产能约束) 是核心观察点。
+- **FY27 (2026-04 起):** AGI CPU 商业出货爬坡; 管理层指引 FY27-28 约 10.5 亿美元收入 vs 储备 20 亿——产能解除将是上行催化。
+- **持续:** Armv9 版税占比向上 (FY25 末约 30-35%) + CSS 占总版税"两位数"百分比的提升节奏。
+
+(持续的催化剂跟踪建议使用 catalyst-calendar 技能。)
+
+---
+
+## 资产负债表与现金流可视化
+
+下面两张 Sankey 与 DuPont 树进一步拆解 Arm 的资产负债结构与回报构成 (均来自 FY2026 申报数据)。
+
+**资产负债表 Sankey (截至 2026-03-31)。** Arm 资产负债表极其干净: 总资产 107.03 亿美元, 总负债仅 24.17 亿美元 (无长期债务), 股东权益 82.86 亿美元 (77.4%); 现金及短投 36.01 亿美元占资产 33.6%, 商誉 16.23 亿美元 ([Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Arm 资产负债表 Sankey (FY2026, 截至 2026-03-31, US$m)</text>
+<path d="M 204.00,64.00 C 262.00,64.00 262.00,85.00 320.00,85.00 L 320.00,231.02 C 262.00,231.02 262.00,210.02 204.00,210.02 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,78.00 C 790.00,78.00 790.00,71.00 848.00,71.00 L 848.00,105.30 C 790.00,105.30 790.00,112.30 732.00,112.30 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,85.00 C 394.00,85.00 394.00,92.00 452.00,92.00 L 452.00,344.87 C 394.00,344.87 394.00,337.87 336.00,337.87 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,85.00 C 658.00,85.00 658.00,78.00 716.00,78.00 L 716.00,112.30 C 658.00,112.30 658.00,119.30 600.00,119.30 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,119.30 C 658.00,119.30 658.00,126.30 716.00,126.30 L 716.00,190.01 C 658.00,190.01 658.00,183.01 600.00,183.01 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,92.00 C 526.00,92.00 526.00,85.00 584.00,85.00 L 584.00,183.01 C 526.00,183.01 526.00,190.01 468.00,190.01 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,190.01 C 526.00,190.01 526.00,197.01 584.00,197.01 L 584.00,533.00 C 526.00,533.00 526.00,526.00 468.00,526.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,126.30 C 790.00,126.30 790.00,119.30 848.00,119.30 L 848.00,183.01 C 790.00,183.01 790.00,190.01 732.00,190.01 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,197.01 C 658.00,197.01 658.00,204.01 716.00,204.01 L 716.00,540.00 C 658.00,540.00 658.00,533.00 600.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,204.01 C 790.00,204.01 790.00,197.01 848.00,197.01 L 848.00,472.74 C 790.00,472.74 790.00,479.74 732.00,479.74 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,479.74 C 790.00,479.74 790.00,486.74 848.00,486.74 L 848.00,547.00 C 790.00,547.00 790.00,540.00 732.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,224.02 C 262.00,224.02 262.00,231.02 320.00,231.02 L 320.00,337.87 C 262.00,337.87 262.00,330.87 204.00,330.87 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,344.87 C 262.00,344.87 262.00,351.87 320.00,351.87 L 320.00,417.68 C 262.00,417.68 262.00,410.68 204.00,410.68 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,351.87 C 394.00,351.87 394.00,344.87 452.00,344.87 L 452.00,526.00 C 394.00,526.00 394.00,533.00 336.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,424.68 C 262.00,424.68 262.00,417.68 320.00,417.68 L 320.00,448.98 C 262.00,448.98 262.00,455.98 204.00,455.98 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,469.98 C 262.00,469.98 262.00,448.98 320.00,448.98 L 320.00,533.00 C 262.00,533.00 262.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="146.02" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="224.02" width="16" height="106.85" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="344.87" width="16" height="65.81" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="424.68" width="16" height="31.30" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="469.98" width="16" height="84.02" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="85.00" width="16" height="252.87" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="351.87" width="16" height="181.13" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="92.00" width="16" height="434.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="85.00" width="16" height="98.01" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="197.01" width="16" height="335.99" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="78.00" width="16" height="34.30" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="126.30" width="16" height="63.70" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="204.01" width="16" height="335.99" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="71.00" width="16" height="34.30" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="119.30" width="16" height="63.70" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="197.01" width="16" height="275.74" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="486.74" width="16" height="60.26" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="134.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash &amp; ST investments 现金及短投</text>
+<text x="179.00" y="147.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.6B  (33.6%)</text>
+<text x="179.00" y="274.44" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Receivables &amp; other current 应收及其他流动</text>
+<text x="179.00" y="287.44" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.6B  (24.6%)</text>
+<text x="179.00" y="374.77" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Goodwill 商誉</text>
+<text x="179.00" y="387.77" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.6B  (15.2%)</text>
+<text x="179.00" y="437.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">PP&amp;E 物业设备</text>
+<text x="179.00" y="450.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$772.0M  (7.2%)</text>
+<text x="179.00" y="508.99" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other non-current 其他非流动</text>
+<text x="179.00" y="521.99" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.1B  (19.4%)</text>
+<rect x="339.00" y="67.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.2B  (58.3%)</text>
+<rect x="339.00" y="333.87" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="345.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="358.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.5B  (41.7%)</text>
+<rect x="471.00" y="74.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$10.7B  (100.0%)</text>
+<rect x="603.00" y="67.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.4B  (22.6%)</text>
+<rect x="603.00" y="179.01" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="191.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="204.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.3B  (77.4%)</text>
+<rect x="735.00" y="60.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$846.0M  (7.9%)</text>
+<rect x="735.00" y="108.30" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="120.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="133.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.6B  (14.7%)</text>
+<rect x="735.00" y="186.01" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="198.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="211.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.3B  (77.4%)</text>
+<text x="873.00" y="85.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current liabilities 流动负债</text>
+<text x="873.00" y="98.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$846.0M  (7.9%)</text>
+<text x="873.00" y="148.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-current liabilities 非流动负债</text>
+<text x="873.00" y="161.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.6B  (14.7%)</text>
+<text x="873.00" y="331.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ordinary shares &amp; APIC 股本及资本公积</text>
+<text x="873.00" y="344.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.8B  (63.5%)</text>
+<text x="873.00" y="513.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Retained earnings &amp; other 留存收益及其他</text>
+<text x="873.00" y="526.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.5B  (13.9%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Arm FY26 Q4 股东信 (附件 99.2, 2026-05-06) · Arm 20-F FY26 (arm-20260331.htm)</text>
+</svg>
+
+*来源: [Arm FY26 Q4 股东信 (合并资产负债表), 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)、[Arm 20-F FY26](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm)。注: 应收及其他流动、其他非流动、股本/留存细分为按合并资产负债表科目归类的近似拆分。*
+
+**现金流 Sankey (FY2026)。** 期初现金约 26.18 亿美元 + 经营现金流约 10.03 亿美元 → 经投资与融资活动后期末现金约 32 亿美元; 非 GAAP FCF TTM 8.82 亿美元 (= CFO − CapEx), FY25 仅 0.99 亿美元 (受营运资本正常化与税款时点影响) ([Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm))。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Arm 现金流 Sankey (FY2026, US$m)</text>
+<path d="M 204.00,71.00 C 361.00,71.00 361.00,78.00 518.00,78.00 L 518.00,412.03 C 361.00,412.03 361.00,405.03 204.00,405.03 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,78.00 C 691.00,78.00 691.00,64.00 848.00,64.00 L 848.00,95.90 C 691.00,95.90 691.00,109.90 534.00,109.90 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,109.90 C 691.00,109.90 691.00,109.90 848.00,109.90 L 848.00,132.86 C 691.00,132.86 691.00,132.86 534.00,132.86 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,132.86 C 691.00,132.86 691.00,146.86 848.00,146.86 L 848.00,554.00 C 691.00,554.00 691.00,540.00 534.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,419.03 C 361.00,419.03 361.00,412.03 518.00,412.03 L 518.00,540.00 C 361.00,540.00 361.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="334.03" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="419.03" width="16" height="127.97" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="31.90" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="109.90" width="16" height="22.97" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="146.86" width="16" height="407.14" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="235.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="248.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.6B  (72.3%)</text>
+<rect x="207.00" y="401.03" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="413.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="426.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.0B  (27.7%)</text>
+<rect x="537.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.6B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$250.0M  (6.9%)</text>
+<rect x="867.00" y="91.90" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="103.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="116.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$180.0M  (5.0%)</text>
+<text x="873.00" y="347.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="360.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.2B  (88.1%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$882.0M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Arm FY26 Q4 股东信 (附件 99.2, 2026-05-06) · Arm 20-F FY26 (arm-20260331.htm) (非 GAAP FCF TTM US$882m + 估算 CapEx)</text>
+</svg>
+
+*来源: [Arm FY26 Q4 股东信, 2026-05-06](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm) (非 GAAP FCF TTM US$882m; CapEx 与 CFI/CFF 为估算拆分)。*
+
+**5 步 DuPont ROE 分解 (FY2026)。** Arm 的 GAAP ROE 约 8.5% (净利润 6.41 亿 / 平均权益约 75.6 亿) 偏低——不是因为盈利能力差 (98% 毛利率), 而是因为 (a) 净利率被研发爬坡压低、(b) 极高的权益基数 (软银注资 + IPO) 稀释了杠杆乘数。这正是 GF Score 盈利能力给 8 分而非满分的原因。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 540" width="1240" height="540" role="img" aria-label="DuPont ROE decomposition"><rect x="0" y="0" width="1240" height="540" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Arm FY2026 五步 DuPont ROE 分解 (GAAP)</text>
+<rect x="545.00" y="56.00" width="150" height="56" rx="7" fill="#1e3a8a"/>
+<text x="620.00" y="76.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">ROE</text>
+<text x="620.00" y="94.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">8.48%</text>
+<text x="620.00" y="106.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">= Net Income / Avg Equity</text>
+<rect x="191.60" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Margin</text>
+<text x="266.60" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">13.03%</text>
+<text x="266.60" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Income / Revenue</text>
+<line x1="620.00" y1="112.00" x2="266.60" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="545.00" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="620.00" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Asset Turnover</text>
+<text x="620.00" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.50</text>
+<text x="620.00" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Revenue / Avg Assets</text>
+<line x1="620.00" y1="112.00" x2="620.00" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="898.40" y="168.00" width="150" height="56" rx="7" fill="#2563eb"/>
+<text x="973.40" y="188.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Equity Multiplier</text>
+<text x="973.40" y="206.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">1.30</text>
+<text x="973.40" y="218.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Avg Assets / Avg Equity</text>
+<line x1="620.00" y1="112.00" x2="973.40" y2="168.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="443.30" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="443.30" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="796.70" cy="196.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="796.70" y="201.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="65.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="124.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Margin</text>
+<text x="124.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">18.29%</text>
+<text x="124.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Op Inc / Revenue</text>
+<line x1="266.60" y1="224.00" x2="124.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="207.60" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="266.60" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Tax Burden</text>
+<text x="266.60" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">0.5320</text>
+<text x="266.60" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Net Inc / Pretax</text>
+<line x1="266.60" y1="224.00" x2="266.60" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="350.20" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="409.20" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Interest Burden</text>
+<text x="409.20" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">1.3389</text>
+<text x="409.20" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">Pretax / Op Inc</text>
+<line x1="266.60" y1="224.00" x2="409.20" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="195.30" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="195.30" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<circle cx="337.90" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="337.90" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">×</text>
+<rect x="479.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="538.00" y="326.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Revenue</text>
+<text x="538.00" y="342.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$4.9B</text>
+<line x1="620.00" y1="224.00" x2="538.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="643.00" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="702.00" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="702.00" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$9.8B</text>
+<text x="702.00" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="620.00" y1="224.00" x2="702.00" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="620.00" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="620.00" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="832.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="891.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Assets</text>
+<text x="891.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$9.8B</text>
+<text x="891.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="891.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="996.40" y="300.00" width="118" height="56" rx="7" fill="#2563eb"/>
+<text x="1055.40" y="320.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Avg Total Equity</text>
+<text x="1055.40" y="338.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$7.6B</text>
+<text x="1055.40" y="350.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#dbeafe">(begin+end)/2</text>
+<line x1="973.40" y1="224.00" x2="1055.40" y2="300.00" stroke="#94a3b8" stroke-width="1.4"/>
+<circle cx="967.20" cy="328.00" r="11" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="967.20" y="333.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#52606d">÷</text>
+<rect x="69.00" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="124.00" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Operating Income</text>
+<text x="124.00" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$900.0M</text>
+<line x1="124.00" y1="356.00" x2="124.00" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="211.60" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="266.60" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Net Income</text>
+<text x="266.60" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$641.0M</text>
+<line x1="266.60" y1="356.00" x2="266.60" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<rect x="354.20" y="420.00" width="110" height="48" rx="7" fill="#3b82f6"/>
+<text x="409.20" y="442.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#ffffff">Pretax Income</text>
+<text x="409.20" y="458.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="800" fill="#ffffff">US$1.2B</text>
+<line x1="409.20" y1="356.00" x2="409.20" y2="420.00" stroke="#94a3b8" stroke-width="1.4"/>
+<text x="620.00" y="524.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Arm 20-F FY26 (合并利润表与资产负债表) · Arm FY26 Q4 股东信</text>
+</svg>
+
+*来源: [Arm 20-F FY26 (合并利润表与资产负债表), 申报于 2026-05-26](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm)、[Arm FY26 Q4 股东信](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000062/exhibit992fye26q431-marx26.htm)。*
+
+---
+
+## 11. 投资视角评分卡 (Investor-lens scorecards) — *视角观点 (Lens view)*
+
+下面用四个经典投资框架作为**评分工具**对前 1-10 章已引用的事实做结构化二次审视——它们是分析框架, 不是人物角色扮演, 也不代表本人会买入/卖出。周期快照: 10 年期美债收益率约 4.2%、HY OAS 约 3.0%、VIX 约 17 (来源: indicators.db 本地快照 (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-15)——属风险偏好/中后周期环境。
+
+### 11.1 Howard Marks 周期视角 (先算, 它会调节其余视角)
+
+*视角观点:* **偏进攻的市场, 但个股已定价完美 → 对 ARM 应转守。** 当前信用利差收窄、VIX 低位 = 市场整体处于"风险偏好"区间 (来源: indicators.db 本地快照 (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-15)。在这种环境里, 像 ARM 这样已经定价完美的高久期成长股, 任何失误都会被放大——Marks 框架建议对其取守势 (即不追高), 与本报告中性评级一致。
+
+### 11.2 Buffett 质量视角 (0–100)
+
+*视角观点:* **业务质量满分, 价格不合理 → 不买。**
+
+| 维度 | 评分 | 依据 (复用前文引用) |
+|---|---|---|
+| 护城河 | 9/10 | 移动 >99% 份额 + 2,200 万开发者生态 + 架构连续性 (第 7 章) |
+| 盈利质量 | 9/10 | 98% 毛利率、经常性版税长尾 (第 1.1 章) |
+| 资产负债表 | 10/10 | 无长期债务、36 亿美元现金 (见下文资产负债表 Sankey) |
+| 估值/安全边际 | 1/10 | 124× 前瞻 P/E, 无安全边际 (第 1.1 章) |
+
+Buffett 框架对"伟大企业、糟糕价格"的回答是等待——综合分约 60/100, 卡在估值这一项。失败模式: 若 AGI CPU + 版税梯度真兑现 Bernstein 的 FY30 EPS 9.83, 现在的"贵"会被事后证明合理。
+
+### 11.3 Munger 质量 + 反演视角 (0–10)
+
+*视角观点:* **反演——"什么会让 ARM 永久受损?"** 答案: (a) RISC-V 在数据中心/MCU 突破软件生态壁垒; (b) 超大规模数据中心集体迁出 Arm ISA; (c) 高通诉讼确立 ALA 可被规避的先例。三者概率都不高但非零。综合质量分约 8/10——卓越企业, 但反演揭示的尾部风险真实存在 (第 7、9 章)。
+
+### 11.4 Damodaran 故事+数字视角 (DCF 安全边际)
+
+*视角观点:* **故事宏大, 但数字要求近乎完美。** 假设: 无风险利率 4.2% (来源: indicators.db 本地快照 (^TNX), as of 2026-06-15) + ERP 4.5% + β 1.4 → WACC 约 10.5%; 终端增长 ≤ 4.2%。要 justify 当前约 4,067 亿美元市值, 需要 Arm 在十年内将营业收入从 49 亿做到约 250-300 亿美元且维持 40%+ 营业利润率——可能, 但安全边际为负 (本报告基准 PT 335 美元 < 现价 381 美元)。失败模式: DCF 对终端增长与 WACC 极度敏感, 小幅调整即翻转结论。
+
+**评分卡综述。** 四个视角高度一致: 业务质量在所有框架里都接近满分, 但当前价格在每个框架里都触发"过贵/无安全边际"的警示——这正是本报告 Hold/中性评级的多框架交叉验证。
+
+---
+
 ## 参考资料
 
 ### 主要——Arm Holdings 申报文件 (SEC EDGAR / arm.com)
+- [Arm Holdings plc, Form 20-F (截至 2026 年 3 月 31 日财年), 申报于 2026-05-26](https://www.sec.gov/Archives/edgar/data/1973239/000197323926000097/arm-20260331.htm) (受理编号 0001973239-26-000097) — **本次刷新新增的最新年报**
 - [Arm Holdings plc, Form 20-F (截至 2025 年 3 月 31 日财年), 申报于 2025-05-28](https://www.sec.gov/Archives/edgar/data/1973239/000197323925000016/arm-20250331.htm) (受理编号 0001973239-25-000016)
 - [Arm Holdings plc, Form 20-F (截至 2024 年 3 月 31 日财年), 申报于 2024-05-29](https://www.sec.gov/Archives/edgar/data/1973239/000197323924000012/arm-20240331.htm) (受理编号 0001973239-24-000012)
 - [Arm Holdings plc, Form F-1 (注册声明, IPO), 申报于 2023-08-21](https://www.sec.gov/Archives/edgar/data/1973239/000119312523216983/d393891df1.htm) (受理编号 0001193125-23-216983)
@@ -494,7 +1164,19 @@ Arm 管理层未公开披露整个计算平台的合计 TAM 数字。然而, 构
 - NVIDIA Vera 基于 Arm 的 CPU 披露 (NVIDIA GTC 2026) —— 见同一股东信
 - Microsoft Cobalt CPU 在 Azure 区域的量产部署 —— 见同一股东信
 
-### 市场数据 (全部通过 yfinance 在 2026-05-20 访问)
+### 卖方 / 机构研究 (`db/zsxq.db` 本地库, *分析师观点*; 仅本机可访问)
+> 以下均为卖方观点, 已在第 2.5 章卖方观点演变中分机构引用; 链接为本机 `/zsxq/pdf/<file_id>/<filename>` 直接下载路由。
+- *Analyst view:* [Goldman Sachs — ARM First Take (业绩略超), 2026-05-06, 卖出 / 125 美元](http://xs-macbook-air.local:5001/zsxq/pdf/585421182441244/GS-ARM%20Holdings%20%28ARM%29_%20First%20Take_%20Results%20and%20guidance%20slightly%20above%20the%20Street-260506.pdf)
+- *Analyst view:* [Goldman Sachs — CPU 需求上调但版税不及预期, 2026-05-07, 卖出 / 150 美元](http://xs-macbook-air.local:5001/zsxq/pdf/585421441141454/Goldman%20Sachs-ARM%20Holdings%20%EF%BC%88ARM.US%EF%BC%89%EF%BC%9A%20Increased%20CPU%20demand%20outlook%EF%BC%8C%20offset%20by%20miss%20in%20core%20royalty%20business-260507.pdf)
+- *Analyst view:* [Morgan Stanley — 对代理式未来信心增强, 2026-05-07, 等权 / 202 美元](http://xs-macbook-air.local:5001/zsxq/pdf/812458258585242/MS-Arm%20Holdings%20plc%20Growing%20Confidence%20of%20an%20Agentic%20Future-260507.pdf)
+- *Analyst view:* [Morgan Stanley — 合作伙伴布局智能体边缘, 2026-06-01, 等权 / 202 美元](http://xs-macbook-air.local:5001/zsxq/pdf/212485484285841/Morgan%20Stanley-Arm%20Holdings%20plc%EF%BC%88ARM.US%EF%BC%89%EF%BC%9AArm%20Partners%20Push%20into%20Agentic%20Edge-260601.pdf)
+- *Analyst view:* [UBS — AGI CPU 订单储备 6 周翻倍, 2026-05-07, 买入 / 260 美元](http://xs-macbook-air.local:5001/zsxq/pdf/212458448844541/UBS-Arm%20Holdings%20PLC%EF%BC%88ARM.US%EF%BC%89ARM%20AGI%20CPU%20Backlog%20Doubles%20In%206%20Weeks-260507.pdf)
+- *Analyst view:* [UBS — 代理式 AI 对 CPU 市场影响 (sector), 2026-05-05, 买入 / 245 美元](http://xs-macbook-air.local:5001/zsxq/pdf/184125218414222/UBS-US%20Semiconductors%EF%BC%9AExploring%20the%20Impact%20of%20Agentic%20AI%20on%20the%20CPU%20Market-260505.pdf)
+- *Analyst view:* [Bernstein — 软银/Arm 首予跑赢, 2026-05-18, 跑赢 / 300 美元 (乐观 390)](http://xs-macbook-air.local:5001/zsxq/pdf/812454818812252/Bernstein-SoftBank%2C%20Arm%20From%20GenAI%20to%20Agentic%20AI%3B%20Initiating%20with%20Outperform%20Ratings-260518.pdf)
+- *Analyst view:* [BofA — US Semis CPU Reborn, 2026-04-17, 中性 / 180 美元](http://xs-macbook-air.local:5001/zsxq/pdf/415514822118148/Bofa-US%20Semiconductors%20CPU%20Reborn-agentic%20drives%20growth%2C%20but%20watch%20for%20competition-260417.pdf)
+- *Analyst view:* [J.P. Morgan — 半导体 CY26 数据中心 capex (AI 算力首选 ARM), 2026-04-27, 增持](http://xs-macbook-air.local:5001/zsxq/pdf/212218144282451/JPM-Semiconductors%20CY26%20Data%20Center%20Capex%20Revised%20Higher%20and%20Strong%20Initial%20Growth%20Outlook%20of%2040%25%20for%20CY27%3B%20Positive%20Across%20the%20Semiconductor%20AI%20Value%20Chain%20-%20Potential%20for%20Continued%20Upward%20Revisions-260427.pdf)
+
+### 市场数据 (全部通过 yfinance 在 2026-06-15 访问)
 - [Yahoo Finance 关键统计 — ARM](https://finance.yahoo.com/quote/ARM/key-statistics/)、[NVDA](https://finance.yahoo.com/quote/NVDA/key-statistics/)、[AVGO](https://finance.yahoo.com/quote/AVGO/key-statistics/)、[CDNS](https://finance.yahoo.com/quote/CDNS/key-statistics/)、[SNPS](https://finance.yahoo.com/quote/SNPS/key-statistics/)、[QCOM](https://finance.yahoo.com/quote/QCOM/key-statistics/)、[RMBS](https://finance.yahoo.com/quote/RMBS/key-statistics/)
 
 ### 行业参考
@@ -506,3 +1188,34 @@ Arm 管理层未公开披露整个计算平台的合计 TAM 数字。然而, 构
 - 20-F 披露移动应用处理器约占 FY25 版税收入 46%, 但未对剩余 54% 进行解构; 因此我们仅图示披露切片。
 - FY25 20-F 将 Arm 中国 (17%) 与高通 (10%) 列为前 5 大客户, 但未识别其他三家; Apple / 联发科 / 三星基于公开已知的 ALA 关系作为合理候选引用, 而非作为披露事实。
 - Q4 FY24 的 ATA / AFA 被授权方数量在本地缓存的 6-K 材料中未一致披露; 图表仅显示 Q4 FY25 和 Q4 FY26。
+- 第 2 章前瞻模型、目标价、牛/基准/熊情景, 以及第 1B 章 GF Score、第 11 章投资视角评分卡, 均为本报告分析师的前瞻观点 (*分析师观点 / Analyst view*), 不来自任何 Arm 申报文件。
+- 资产负债表 / 现金流 Sankey 中的"应收及其他流动""其他非流动""股本/留存细分""CapEx / CFI / CFF"为按合并报表科目归类的近似拆分; 顶层合计 (总资产 107.03 亿、总负债 24.17 亿、CFO 约 10.03 亿、FCF TTM 8.82 亿) 严格来自 FY26 Q4 股东信原文。
+- 按地区营业收入 (美国 43% / Arm China 17% / 其他 40%) 中, 美国 17.22 亿美元为按 FY25 营业收入 × 43% 推算的近似拆分; 20-F 仅披露"美国境外约 57%"与"Arm China 约 17%"两项口径。
+
+### 本次刷新使用的数据 (Data Used manifest)
+- **主要 (Arm 申报文件):** Arm 20-F FY26 (`arm-20260331.htm`, 申报 2026-05-26, 受理号 0001973239-26-000097, 经 EDGAR submissions JSON 解析确认) · Arm 20-F FY25 (`arm-20250331.htm`) · Arm FY26 Q4 6-K 股东信附件 99.2 (`exhibit992fye26q431-marx26.htm`, 2026-05-06) · Arm F-1 (IPO, 2023-08-21) · Arm 6-K Arm Everywhere / AGI CPU (2026-03-24, 2026-04-21)。本地缓存于 `financial_reports/ARM/`, DB `db/financial_reports.db`。
+- **卖方 / 机构研究 (`db/zsxq.db`, 只读, *分析师观点*):** 找到 9 条 ARM 相关 broker 调用 (GS×2、MS×2、UBS×2、Bernstein、BofA、JPM), 全部纳入第 2.5 章卖方观点演变。未额外下载 (库内已有最新且新鲜)。`db/stock_price_target.db` 只读预读提供报告日收盘价与上行/下行。
+- **市场数据:** Yahoo Finance / yfinance, 2026-06-15 抓取 (ARM 380.81 美元, 市值约 4,067 亿, TTM P/E 453×, 前瞻 P/E 124×, P/S 82.7×; 同业 NVDA/AVGO/CDNS/SNPS/QCOM/RMBS)。
+- **周期快照 (第 11 章):** indicators.db 本地快照 (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-15。
+- **图表 (9 张 stdlib-SVG + 3 张 mermaid):** 利润表 / 资产负债表 / 现金流 Sankey、按业务线 + 按地区营业收入环形图、营业收入历史柱状图、5 步 DuPont 树、GF Score 雷达、资金流图 (moneyflow); 以及 timeline (公司历史)、graph TD (产品树)、pie (客户集中度) 三张 mermaid。全部经 `lint_report_charts.py` 校验在 viewBox 内。
+
+<details><summary>Verification log (Step 10) — 2026-06-15</summary>
+
+**刷新范围:** 将 2026-05-20 版 9 节描述型报告升级为含完整决策层的研究报告——新增投资摘要 header (Hold / 12 个月目标价 335 美元 / 隐含 −12%)、第 1B 章 GF Score (76/100)、第 2 章估值与目标价 (前瞻模型 + PT 推导 + 牛/基准/熊 + 卖方观点演变)、第 10.5 章关键辩论与催化剂、第 11 章投资视角评分卡; 将 7 张 legacy matplotlib PNG 替换为 9 张 stdlib-SVG (含 REQUIRED moneyflow); "as of" 滚动至 2026-06-15; 折入新 FY2026 20-F (2026-05-26 申报)。
+
+- **Step 0 (filings sync):** `fetch_financial_report.py ARM ['20-F','6-K']` 幂等运行, 新增 1 个文件 = FY2026 20-F (`2026_20F_20-F_0001973239_26_000097.htm`, 3.1MB, 已落盘)。其余 31 个 filing 已在库中跳过。
+- **Step 0.5 sec-report-summary** — skipped (foreign private issuer; Arm files 20-F, not 10-K)。
+- **Step 0.7 (zsxq 库):** 找到 9 条 ARM broker 调用 (GS×2 / MS×2 / UBS×2 / Bernstein / BofA / JPM), 全部 2026-04 至 2026-06 新鲜; 未额外下载。`db/stock_price_target.db` 只读预读成功。
+- **URL 200 检查:** 新 FY26 20-F (`arm-20260331.htm`) 与 FY26 Q4 股东信 (`exhibit992...`) 均以 SEC 标准 UA 返回 **200** (浏览器 UA 下的 403 是反爬, 非死链); GuruFocus GF-Score 词条 200; Yahoo key-statistics 在 `urllib` 下返回 404 (反爬), 但为 yfinance 抓取的现行数据源, 数值有效。zsxq 链接经 `/zsxq/pdf/<file_id>/<filename>` 直接下载路由 (非死的 `/zsxq-pdf/` 或不下载的 `/zsxq/pdf-viewer/`)。
+- **SEC 文件名解析:** FY2026 20-F 文件名 `arm-20260331.htm` + 受理号 0001973239-26-000097 来自 `https://data.sec.gov/submissions/CIK0001973239.json` (未拼造)。
+- **≥5 个申报数字 string-match (vs FY26 Q4 股东信原文):** 全年营业收入 4,920 ✓ · 版税 2,613 ✓ · 授权 2,307 ✓ · GAAP 毛利 4,799 ✓ · GAAP R&D 2,776 ✓ · Q4 营业收入 1,490 ✓ · Q4 版税 671 ✓ · Q4 授权 819 ✓ · 全年 GAAP 营业利润 900 ✓ · ACV 1,660 ✓ · 现金及短投 3,601 ✓ · 员工 9,584 ✓ · 工程师 8,058 ✓ · 总资产 10,703 ✓ · 总负债 2,417 ✓ (15/15 命中)。
+- **卖方观点演变 (≥2 zsxq notes → 必需):** present。`db/stock_price_target.db` 只读预读先行 (离散度 125–300 美元, 约 2.4×); 按机构时间线 (GS 卖出 125→150 / MS 等权 191→202 / UBS 买入 245→260 / Bernstein 首予 300); 机构间分歧表已渲染 (不揉成假共识); 每个 PT 配报告日收盘价 (GS 237.30 / MS 05-07 213.31 / UBS 213.31 / Bernstein 215.12 / MS 06-01 408.85, 均与 PT DB 一致)。
+- **分析师观点标注:** 评级 / 目标价 / 前瞻估计 / GF Score / 投资视角 均标 *分析师观点 / Analyst view*, 无一附在 20-F / 6-K 申报引用上; 份额/领导力声明 (>99% 移动份额、约 50% 顶级超大规模份额) 标 *分析师观点* 或引自管理层口径。
+- **图表 render-check (10.7):** `lint_report_charts.py` 退出 **0** (9 inline SVG 全部在 viewBox 内; 3 mermaid 块在浏览器渲染)。**未启动 5002 服务器** (按并行安全规则——本任务与其他 2 个报告子代理并发运行, 不起服务); SVG 经确定性边界 lint 通过, mermaid 块经已知陷阱扫描 (pie slice 标签均带引号且括号平衡; timeline 安全; graph TD 安全; 无 quadrantChart / xychart-beta)。
+- **legacy PNG 处置:** `arm_revenue_margin / arm_peer_valuation / arm_revenue_mix / arm_royalty_mix / arm_subscription_licenses / arm_customer_mix` 6 张已被 stdlib-SVG 或 mermaid 取代; `arm_price_history.png` 按 legacy-reuse 规则保留 (区间至 2026-05, 现价于正文更新), 仅此一张 PNG 残留。
+- **citations:** 280 条内联 markdown 链接 (远超 40 下限); 27 条 zsxq pdf 直链。
+- **块齐备性 retrofit 审计:** 投资摘要 header (含前瞻估值矩阵 + 相对表现行) ✓ · 第 1A 决策层 ✓ · 第 1B GF ✓ · 第 2 估值与 PT ✓ · 第 9.5 辩论与催化剂 ✓ · 第 11 投资视角 ✓ · Data Used manifest ✓ · 卖方观点演变 ✓ · 验证日志 ✓。管理团队章节仅含 CEO Rene Haas + CFO/首席架构师等已有内容 (本次刷新未新增非 CEO 高管, 沿用既有正文)。
+- **残留未知:** (a) Arm 未披露移动应用处理器以外的版税终端市场解构 (54% 未拆); (b) AGI CPU 的 FY27-28 收入确认受 TSMC 3nm 产能约束, 管理层指引 (约 10.5 亿) 与储备 (20 亿) 之间的转化时点不确定; (c) 现金流 Sankey 的 CFI/CFF 拆分为估算 (顶层 CFO / FCF 来自原文)。
+- **未提交 (no commit):** 按编排器要求, 仅写入报告与图表文件, 不触碰 git; 编排器将统一提交。
+
+</details>

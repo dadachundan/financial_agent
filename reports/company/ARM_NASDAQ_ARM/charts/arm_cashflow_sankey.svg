@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Arm 现金流 Sankey (FY2026, US$m)</text>
+<path d="M 204.00,71.00 C 361.00,71.00 361.00,78.00 518.00,78.00 L 518.00,412.03 C 361.00,412.03 361.00,405.03 204.00,405.03 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,78.00 C 691.00,78.00 691.00,64.00 848.00,64.00 L 848.00,95.90 C 691.00,95.90 691.00,109.90 534.00,109.90 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,109.90 C 691.00,109.90 691.00,109.90 848.00,109.90 L 848.00,132.86 C 691.00,132.86 691.00,132.86 534.00,132.86 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,132.86 C 691.00,132.86 691.00,146.86 848.00,146.86 L 848.00,554.00 C 691.00,554.00 691.00,540.00 534.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,419.03 C 361.00,419.03 361.00,412.03 518.00,412.03 L 518.00,540.00 C 361.00,540.00 361.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="334.03" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="419.03" width="16" height="127.97" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="31.90" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="109.90" width="16" height="22.97" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="146.86" width="16" height="407.14" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="235.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="248.01" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.6B  (72.3%)</text>
+<rect x="207.00" y="401.03" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="413.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="426.03" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.0B  (27.7%)</text>
+<rect x="537.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.6B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$250.0M  (6.9%)</text>
+<rect x="867.00" y="91.90" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="103.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="116.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$180.0M  (5.0%)</text>
+<text x="873.00" y="347.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="360.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.2B  (88.1%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$882.0M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Arm FY26 Q4 股东信 (附件 99.2, 2026-05-06) · Arm 20-F FY26 (arm-20260331.htm) (非 GAAP FCF TTM US$882m + 估算 CapEx)</text>
+</svg>

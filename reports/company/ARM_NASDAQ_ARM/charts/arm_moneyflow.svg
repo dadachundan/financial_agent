@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 970" width="1180" height="970" role="img" aria-label="Arm 资金流图 — 谁向 Arm 付费 · Arm 卖什么 · 钱流向何处" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="970" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">ARM 资金流 · IP 授权 + 版税模式 · FY2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">Arm 资金流图 — 谁向 Arm 付费 · Arm 卖什么 · 钱流向何处</text>
+<ellipse cx="1031.00" cy="382.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="166.00" x2="369.50" y2="594.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="166.00" x2="810.50" y2="594.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="166.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">who pays</text>
+<text x="483.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="166.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">what they buy</text>
+<text x="924.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="166.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">where it pools</text>
+<path d="M 256.00 212.00 C 369.50 212.00, 369.50 278.00, 483.00 278.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 324.00 C 369.50 324.00, 369.50 302.00, 483.00 302.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 432.00 C 369.50 432.00, 369.50 326.00, 483.00 326.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 546.00 C 369.50 546.00, 369.50 350.00, 483.00 350.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 348.00 C 369.50 348.00, 369.50 450.00, 483.00 450.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 236.00 C 369.50 236.00, 369.50 426.00, 483.00 426.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 456.00 C 369.50 456.00, 369.50 474.00, 483.00 474.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 302.00 C 810.50 302.00, 810.50 261.00, 924.00 261.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 426.00 C 810.50 426.00, 810.50 285.00, 924.00 285.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 450.00 C 810.50 450.00, 810.50 392.00, 924.00 392.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 326.00 C 810.50 326.00, 810.50 489.00, 924.00 489.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 474.00 C 810.50 474.00, 810.50 513.00, 924.00 513.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<text x="369.50" y="239.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$ 移动版税</text>
+<text x="369.50" y="307.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">数据中心版税 (FY26 翻倍+)</text>
+<text x="369.50" y="373.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$ 嵌入式版税</text>
+<text x="369.50" y="442.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">中国版税 (经 IPLA)</text>
+<text x="369.50" y="393.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">CSS + ALA 授权费</text>
+<text x="369.50" y="325.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">ATA 订阅</text>
+<text x="369.50" y="459.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Flexible Access</text>
+<text x="810.50" y="275.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">再投资研发</text>
+<text x="810.50" y="349.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">再投资研发</text>
+<text x="810.50" y="415.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AGI CPU 流片资本</text>
+<text x="810.50" y="401.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">98% 毛利率落袋</text>
+<text x="810.50" y="487.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">经营杠杆</text>
+<rect x="42.00" y="176.00" width="214" height="96.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="176.00" width="3" height="96.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="209.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">智能手机 OEM/SoC</text>
+<text x="60.00" y="230.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Apple · 高通 · 联发科 · 三星</text>
+<text x="60.00" y="247.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">移动应用处理器版税 ~46%</text>
+<rect x="42.00" y="288.00" width="214" height="96.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="288.00" width="3" height="96.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="321.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">超大规模数据中心</text>
+<text x="60.00" y="342.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">AWS Graviton · Azure Cobalt</text>
+<text x="60.00" y="359.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Google Axion · NVIDIA Grace/Vera</text>
+<rect x="42.00" y="400.00" width="214" height="88.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="400.00" width="3" height="88.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="433.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">IoT / 汽车 / 嵌入式</text>
+<text x="60.00" y="454.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Cortex-M/R · CSS for Auto</text>
+<text x="60.00" y="471.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">数百亿颗长尾出货</text>
+<rect x="42.00" y="504.00" width="214" height="84.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="504.00" width="3" height="84.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="537.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Arm China 安谋科技</text>
+<text x="60.00" y="558.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">中国独家分销 IPLA 至 2048</text>
+<text x="60.00" y="575.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY25 占营业收入 ~17%</text>
+<rect x="483.00" y="254.00" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="254.00" width="3" height="120.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="287.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ROYALTY 版税</text>
+<text x="501.00" y="308.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY26 $2,613m (+21%)</text>
+<text x="501.00" y="325.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">按颗 ASP% · Armv9 ~2× Armv8 费率</text>
+<rect x="483.00" y="390.00" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="390.00" width="3" height="120.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="423.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">LICENSE 授权 + CSS</text>
+<text x="501.00" y="444.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY26 $2,307m (+25%)</text>
+<text x="501.00" y="461.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">ATA 订阅 · ACV $1,660m</text>
+<rect x="924.00" y="218.00" width="214" height="110.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="218.00" width="3" height="110.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="251.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">R&amp;D 研发</text>
+<text x="942.00" y="272.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">GAAP $2,776m · 8,058 名工程师</text>
+<text x="942.00" y="289.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Armv9 / Neoverse / AGI CPU 设计</text>
+<rect x="924.00" y="344.00" width="214" height="96.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="344.00" width="3" height="96.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="377.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">TSMC 代工 (AGI CPU)</text>
+<text x="942.00" y="398.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">先进 3nm 产能 = 关键瓶颈</text>
+<text x="942.00" y="415.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Arm 首次承担流片资本周期</text>
+<rect x="924.00" y="456.00" width="214" height="90.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="456.00" width="3" height="90.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="489.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">经营利润 + 现金</text>
+<text x="942.00" y="510.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">GAAP 营业利润 $900m</text>
+<text x="942.00" y="527.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">现金 $3,601m · 无长期债务</text>
+<rect x="42.00" y="614.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="616.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="616.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="616.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="616.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="609.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="609.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="840.40" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="914.80" y="609.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="933.80" y="618.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="634.00" x2="1138" y2="634.00" stroke="#222a3a"/>
+<text x="42.00" y="650.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">顺着钱看 ARM</text>
+<rect x="42.00" y="670.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="670.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">版税 · 按颗收费</text>
+<text x="58.00" y="712.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">每颗 Arm 芯片都付费</text>
+<text x="58.00" y="736.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 版税</tspan><tspan fill="#f4d58a" font-weight="700"> $2,613m</tspan><tspan fill="#9aa3b8" font-weight="400"> ；累计出货超</tspan><tspan fill="#f4d58a" font-weight="700"> 3,500</tspan><tspan fill="#f4d58a" font-weight="700"> 亿颗</tspan><tspan fill="#9aa3b8" font-weight="400"> 。Armv9</tspan><tspan fill="#9aa3b8" font-weight="400"> 版税费率约为</tspan><tspan fill="#9aa3b8" font-weight="400"> Armv8</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan></text>
+<text x="58.00" y="752.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">2×</tspan><tspan fill="#9aa3b8" font-weight="400"> ，且</tspan><tspan fill="#9aa3b8" font-weight="400"> Armv9</tspan><tspan fill="#9aa3b8" font-weight="400"> 已占版税</tspan><tspan fill="#f4d58a" font-weight="700"> ~30–35%</tspan><tspan fill="#9aa3b8" font-weight="400"> 并上升。</tspan></text>
+<rect x="412.00" y="670.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="670.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">授权 · 订阅化</text>
+<text x="428.00" y="712.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Total Access ACV $1,660m</text>
+<text x="428.00" y="736.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">授权及其他</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#f4d58a" font-weight="700"> $2,307m</tspan><tspan fill="#f4d58a" font-weight="700"> (+25%)</tspan><tspan fill="#9aa3b8" font-weight="400"> ；</tspan><tspan fill="#f4d58a" font-weight="700"> 56</tspan><tspan fill="#9aa3b8" font-weight="400"> 个</tspan><tspan fill="#9aa3b8" font-weight="400"> ATA</tspan><tspan fill="#9aa3b8" font-weight="400"> 被授权方（含前</tspan><tspan fill="#9aa3b8" font-weight="400"> 30</tspan></text>
+<text x="428.00" y="752.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">大客户过半）+</tspan><tspan fill="#f4d58a" font-weight="700"> 329</tspan><tspan fill="#9aa3b8" font-weight="400"> 个</tspan><tspan fill="#9aa3b8" font-weight="400"> Flexible</tspan><tspan fill="#9aa3b8" font-weight="400"> Access。ACV</tspan><tspan fill="#9aa3b8" font-weight="400"> 同比</tspan><tspan fill="#f4d58a" font-weight="700"> +22%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="782.00" y="670.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="670.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">数据中心 = 增速引擎</text>
+<text x="798.00" y="712.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">顶级超大规模 ~50% 份额</text>
+<text x="798.00" y="736.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">数据中心版税</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> Q4</tspan><tspan fill="#f4d58a" font-weight="700"> 同比翻倍以上</tspan><tspan fill="#9aa3b8" font-weight="400"> ；管理层称顶级超大规模数据中心</tspan><tspan fill="#9aa3b8" font-weight="400"> CPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 算力</tspan><tspan fill="#9aa3b8" font-weight="400"> Arm</tspan><tspan fill="#9aa3b8" font-weight="400"> 占</tspan></text>
+<text x="798.00" y="752.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">~50%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。AWS</tspan><tspan fill="#9aa3b8" font-weight="400"> Graviton</tspan><tspan fill="#9aa3b8" font-weight="400"> 自定义硅片已是</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;$200亿/年</tspan><tspan fill="#9aa3b8" font-weight="400"> 运行速率的一部分。</tspan></text>
+<rect x="42.00" y="800.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="800.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="824.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">新支出 · 硅片化</text>
+<text x="58.00" y="842.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AGI CPU 把钱送向 TSMC</text>
+<text x="58.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Arm</tspan><tspan fill="#9aa3b8" font-weight="400"> 首次自研量产硅片，</tspan><tspan fill="#f4d58a" font-weight="700"> FY27–28</tspan><tspan fill="#f4d58a" font-weight="700"> 预订</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;$20亿</tspan><tspan fill="#9aa3b8" font-weight="400"> （Meta</tspan><tspan fill="#9aa3b8" font-weight="400"> 首发），向</tspan><tspan fill="#f4d58a" font-weight="700"> $150亿</tspan></text>
+<text x="58.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">机会迈进。瓶颈在</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#f4d58a" font-weight="700"> 先进</tspan><tspan fill="#f4d58a" font-weight="700"> 3nm</tspan><tspan fill="#f4d58a" font-weight="700"> 产能</tspan><tspan fill="#9aa3b8" font-weight="400"> 分配。</tspan></text>
+<rect x="412.00" y="800.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="800.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="824.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">成本 · 工程为本</text>
+<text x="428.00" y="842.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">R&amp;D $2,776m · 8,058 工程师</text>
+<text x="428.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> 研发</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#f4d58a" font-weight="700"> $2,776m</tspan><tspan fill="#9aa3b8" font-weight="400"> ，非</tspan><tspan fill="#9aa3b8" font-weight="400"> GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> 同比</tspan><tspan fill="#f4d58a" font-weight="700"> +43%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；全员</tspan><tspan fill="#f4d58a" font-weight="700"> 9,584</tspan><tspan fill="#9aa3b8" font-weight="400"> 人中工程师占</tspan></text>
+<text x="428.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">84%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。研发美元增量回报极高——一份</tspan><tspan fill="#9aa3b8" font-weight="400"> CPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 设计可多客户复用。</tspan></text>
+<rect x="782.00" y="800.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="800.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="824.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">现金 · 零长债</text>
+<text x="798.00" y="842.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">98% 毛利率 + $3,601m 现金</text>
+<text x="798.00" y="866.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> 毛利率</tspan><tspan fill="#f4d58a" font-weight="700"> 97.5%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 非</tspan><tspan fill="#9aa3b8" font-weight="400"> GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> FCF</tspan><tspan fill="#9aa3b8" font-weight="400"> TTM</tspan><tspan fill="#f4d58a" font-weight="700"> $882m</tspan><tspan fill="#9aa3b8" font-weight="400"> ；期末现金及短投</tspan></text>
+<text x="798.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$3,601m</tspan><tspan fill="#9aa3b8" font-weight="400"> ，</tspan><tspan fill="#f4d58a" font-weight="700"> 无长期债务</tspan><tspan fill="#9aa3b8" font-weight="400"> ——软银持股约</tspan><tspan fill="#f4d58a" font-weight="700"> 87%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<text x="590.00" y="952.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Arm 20-F FY26 (arm-20260331.htm) · Arm FY26 Q4 股东信 (附件 99.2, 2026-05-06) · Arm 20-F FY25 (Arm China IPLA)</text>
+</svg>

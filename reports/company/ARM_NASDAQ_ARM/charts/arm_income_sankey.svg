@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Arm FY2026 利润表 Sankey (GAAP, US$m)</text>
+<path d="M 700.00,63.32 C 754.00,63.32 754.00,233.84 808.00,233.84 L 808.00,285.08 C 754.00,285.08 754.00,114.56 700.00,114.56 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,114.56 C 754.00,114.56 754.00,299.08 808.00,299.08 L 808.00,344.16 C 754.00,344.16 754.00,159.64 700.00,159.64 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,85.35 C 258.00,85.35 258.00,92.35 312.00,92.35 L 312.00,301.23 C 258.00,301.23 258.00,294.23 204.00,294.23 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,85.35 C 506.00,85.35 506.00,90.19 560.00,90.19 L 560.00,162.13 C 506.00,162.13 506.00,157.30 452.00,157.30 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,157.30 C 506.00,157.30 506.00,176.13 560.00,176.13 L 560.00,487.81 C 506.00,487.81 506.00,468.97 452.00,468.97 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,90.19 C 630.00,90.19 630.00,63.32 684.00,63.32 L 684.00,135.26 C 630.00,135.26 630.00,162.13 576.00,162.13 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,92.35 C 382.00,92.35 382.00,85.35 436.00,85.35 L 436.00,468.97 C 382.00,468.97 382.00,475.97 328.00,475.97 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,475.97 C 382.00,475.97 382.00,482.97 436.00,482.97 L 436.00,492.65 C 382.00,492.65 382.00,485.65 328.00,485.65 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,176.13 C 630.00,176.13 630.00,173.64 684.00,173.64 L 684.00,262.77 C 630.00,262.77 630.00,265.26 576.00,265.26 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,265.26 C 630.00,265.26 630.00,276.77 684.00,276.77 L 684.00,498.68 C 630.00,498.68 630.00,487.17 576.00,487.17 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,487.17 C 630.00,487.17 630.00,512.68 684.00,512.68 L 684.00,514.68 C 630.00,514.68 630.00,489.17 576.00,489.17 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,308.23 C 258.00,308.23 258.00,301.23 312.00,301.23 L 312.00,485.65 C 258.00,485.65 258.00,492.65 204.00,492.65 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="85.35" width="16" height="208.88" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="308.23" width="16" height="184.42" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="92.35" width="16" height="393.29" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="85.35" width="16" height="383.62" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="482.97" width="16" height="9.67" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="90.19" width="16" height="71.94" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="176.13" width="16" height="311.68" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="63.32" width="16" height="96.32" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="173.64" width="16" height="89.13" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="276.77" width="16" height="221.91" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="512.68" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="233.84" width="16" height="51.24" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="299.08" width="16" height="45.08" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="186.79" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Royalty 版税</text>
+<text x="179.00" y="199.79" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.6B  (53.1%)</text>
+<text x="179.00" y="397.44" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">License &amp; other 授权及其他</text>
+<text x="179.00" y="410.44" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.3B  (46.9%)</text>
+<rect x="331.00" y="74.35" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="86.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="99.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.9B  (100.0%)</text>
+<rect x="455.00" y="67.35" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="79.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="92.35" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.8B  (97.5%)</text>
+<rect x="455.00" y="464.97" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="476.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="489.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$121.0M  (2.5%)</text>
+<rect x="579.00" y="72.19" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="84.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="97.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$900.0M  (18.3%)</text>
+<rect x="579.00" y="158.13" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="170.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="183.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.9B  (79.2%)</text>
+<rect x="703.00" y="45.32" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="57.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="70.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (24.5%)</text>
+<rect x="703.00" y="155.64" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="167.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="180.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.1B  (22.7%)</text>
+<rect x="703.00" y="258.77" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="270.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="283.77" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.8B  (56.4%)</text>
+<rect x="703.00" y="494.68" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="506.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="519.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.0M  (0.16%)</text>
+<text x="833.00" y="256.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="269.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$641.0M  (13.0%)</text>
+<text x="833.00" y="318.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="331.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$564.0M  (11.5%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Arm FY26 Q4 股东信 (附件 99.2, 2026-05-06) · Arm 20-F FY26 (arm-20260331.htm)</text>
+</svg>

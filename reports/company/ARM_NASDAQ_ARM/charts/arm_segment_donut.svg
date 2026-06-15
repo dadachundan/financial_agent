@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Arm FY2026 营业收入构成 (按业务线, US$m)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 262.37,368.69 L 272.86,315.72 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 262.37,368.69 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 272.86,315.72 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">ARM FY26</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$4.9B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="425.34" y1="252.66" x2="441.34" y2="252.66" stroke="#2563eb" stroke-width="1.4"/>
+<text x="445.34" y="250.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Royalty 版税</text>
+<text x="445.34" y="264.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.6B  (53.1%)</text>
+<line x1="150.66" y1="225.74" x2="134.66" y2="225.74" stroke="#15803d" stroke-width="1.4"/>
+<text x="130.66" y="223.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">License &amp; other 授权及其他</text>
+<text x="130.66" y="237.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.3B  (46.9%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Arm FY26 Q4 股东信 (附件 99.2, 2026-05-06) · Arm 20-F FY26</text>
+</svg>
