@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">澜起科技 FY2025 现金流量表 Sankey (RMB mn)</text>
+<path d="M 644.00,63.29 C 746.00,63.29 746.00,277.16 848.00,277.16 L 848.00,309.51 C 746.00,309.51 746.00,95.63 644.00,95.63 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,95.63 C 746.00,95.63 746.00,323.51 848.00,323.51 L 848.00,340.84 C 746.00,340.84 746.00,112.96 644.00,112.96 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,64.00 C 306.00,64.00 306.00,78.00 408.00,78.00 L 408.00,401.37 C 306.00,401.37 306.00,387.37 204.00,387.37 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,63.29 628.00,63.29 L 628.00,112.96 C 526.00,112.96 526.00,127.67 424.00,127.67 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,127.67 C 526.00,127.67 526.00,126.96 628.00,126.96 L 628.00,128.96 C 526.00,128.96 526.00,129.67 424.00,129.67 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,129.67 C 526.00,129.67 526.00,142.96 628.00,142.96 L 628.00,554.71 C 526.00,554.71 526.00,541.42 424.00,541.42 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,401.37 C 306.00,401.37 306.00,401.37 408.00,401.37 L 408.00,498.97 C 306.00,498.97 306.00,498.97 204.00,498.97 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,512.97 C 306.00,512.97 306.00,498.97 408.00,498.97 L 408.00,540.00 C 306.00,540.00 306.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="323.37" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="401.37" width="16" height="97.60" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="512.97" width="16" height="41.03" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="63.29" width="16" height="49.67" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="126.96" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="142.96" width="16" height="411.75" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="277.16" width="16" height="32.34" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="323.51" width="16" height="17.33" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="222.68" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="235.68" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB6.7B  (70.0%)</text>
+<rect x="207.00" y="383.37" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="395.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="408.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB2.0B  (21.1%)</text>
+<rect x="207.00" y="494.97" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="506.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="210.00" y="519.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB850.0M  (8.9%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB9.6B  (100.0%)</text>
+<rect x="647.00" y="45.29" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="57.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="70.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB1.0B  (10.8%)</text>
+<rect x="647.00" y="108.96" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="120.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="650.00" y="133.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB12.0M  (0.13%)</text>
+<text x="653.00" y="345.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="358.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB8.5B  (89.1%)</text>
+<text x="873.00" y="290.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">分红 Dividends</text>
+<text x="873.00" y="303.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB670.0M  (7.0%)</text>
+<text x="873.00" y="329.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">回购/其他筹资 Other fin.</text>
+<text x="873.00" y="342.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB359.0M  (3.8%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">FCF = CFO 20.22 亿 − Capex 2.66 亿 = 17.56 亿元；期末现金 84.16 亿  ·  Free Cash Flow = CFO − CapEx = RMB1.8B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 澜起科技 2025 年年度报告 (cninfo, 2026-03-30) 合并现金流量表 p154-155</text>
+</svg>

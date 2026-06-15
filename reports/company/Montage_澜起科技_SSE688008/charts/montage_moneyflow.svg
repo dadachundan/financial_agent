@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 940" width="1180" height="940" role="img" aria-label="钱怎么流向澜起科技：DRAM 三强 + 服务器 OEM 付费 → 互连芯片 → 上游晶圆/封测" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="940" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">内存/互连芯片 资金流 · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱怎么流向澜起科技：DRAM 三强 + 服务器 OEM 付费 → 互连芯片 → 上游晶圆/封测</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求端高度集中——三星/海力士/美光三大 DRAM 原厂 + 服务器 OEM/ODM + 中国 AI 加速器厂为澜起 54.56 亿元营收买单；澜起再把约 20.6 亿元 COGS 经 Fabless 模式付给台积电与封测厂。两端都极度集中。</text>
+<ellipse cx="1031.00" cy="368.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="544.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="544.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱给澜起</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买的是什么芯片</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">澜起的钱流向哪里(上游)</text>
+<path d="M 256.00 258.00 C 369.50 258.00, 369.50 304.50, 483.00 304.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 381.00 C 369.50 381.00, 369.50 437.73, 483.00 437.73" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 491.00 C 369.50 491.00, 369.50 445.91, 483.00 445.91" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 301.23 C 810.50 301.23, 810.50 309.18, 924.00 309.18" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 438.50 C 810.50 438.50, 810.50 321.73, 924.00 321.73" fill="none" stroke="url(#mfgold)" stroke-width="7.64" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 313.23 C 810.50 313.23, 810.50 433.50, 924.00 433.50" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 444.82 C 810.50 444.82, 810.50 439.27, 924.00 439.27" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="275.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">内存接口芯片采购</text>
+<text x="369.50" y="403.36" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">PCIe/CXL 采购</text>
+<text x="810.50" y="299.20" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">晶圆流片 COGS</text>
+<rect x="42.00" y="198.00" width="214" height="120.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="120.00" rx="2" fill="#a78bfa"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">三星/海力士/美光</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">全球 DRAM 三强</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">采购 RCD/DB/MRCD/MDB</text>
+<rect x="42.00" y="334.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="334.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="367.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">服务器 OEM/ODM</text>
+<text x="60.00" y="388.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Dell/HPE/浪潮/超聚变</text>
+<text x="60.00" y="405.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">采购 PCIe Retimer/CXL</text>
+<rect x="42.00" y="444.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="444.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="477.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">中国 AI 加速器厂</text>
+<text x="60.00" y="498.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">1Q26 营收同比 +99%</text>
+<text x="60.00" y="515.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">PCIe 互连国产替代</text>
+<rect x="483.00" y="239.50" width="214" height="130.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="239.50" width="3" height="130.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="272.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">内存接口+模组配套</text>
+<text x="501.00" y="293.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">DDR5 RCD/DB</text>
+<text x="501.00" y="310.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">MRCD/MDB·CKD</text>
+<text x="501.00" y="327.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">FY25 占互连约 80%+</text>
+<rect x="483.00" y="385.50" width="214" height="111.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="385.50" width="3" height="111.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="418.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">PCIe/CXL 互连</text>
+<text x="501.00" y="439.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">PCIe 5/6 Retimer</text>
+<text x="501.00" y="456.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">CXL MXC·新产品组合</text>
+<text x="501.00" y="473.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">1Q26 +93.8% YoY</text>
+<rect x="924.00" y="253.00" width="214" height="120.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="253.00" width="3" height="120.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="286.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">台积电 TSMC</text>
+<text x="942.00" y="307.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">#1 晶圆代工</text>
+<text x="942.00" y="324.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">RCD/Retimer 流片</text>
+<text x="942.00" y="341.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">单一最大供应链节点</text>
+<rect x="924.00" y="389.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="389.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="422.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">长电/日月光 OSAT</text>
+<text x="942.00" y="443.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">封装测试</text>
+<text x="942.00" y="460.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">前五大供应商集中度 79.39%</text>
+<rect x="42.00" y="564.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="566.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="566.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="566.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="566.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="559.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="747.00" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="886.20" y="559.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="905.20" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="979.60" y="559.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="998.60" y="568.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="42.00" y="579.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="61.00" y="588.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="604.00" x2="1138" y2="604.00" stroke="#222a3a"/>
+<text x="42.00" y="620.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">顺着钱看 — FOLLOW THE MONEY</text>
+<rect x="42.00" y="640.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="42.00" y="640.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="58.00" y="664.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">需求端·内存接口</text>
+<text x="58.00" y="682.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">三星/海力士/美光是基本盘</text>
+<text x="58.00" y="706.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">DRAM</tspan><tspan fill="#9aa3b8" font-weight="400"> 三强直接采购</tspan><tspan fill="#9aa3b8" font-weight="400"> RCD/DB/MRCD/MDB，构成澜起</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 互连营收</tspan><tspan fill="#f4d58a" font-weight="700"> 51.39</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan></text>
+<text x="58.00" y="722.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">的主体；前五大客户合计占总销售</tspan><tspan fill="#f4d58a" font-weight="700"> 77.24%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，客户集中度极高。</tspan></text>
+<rect x="412.00" y="640.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="640.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="664.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">需求端·AI 互连</text>
+<text x="428.00" y="682.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">PCIe/CXL 是第二增长曲线</text>
+<text x="428.00" y="706.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">服务器</tspan><tspan fill="#9aa3b8" font-weight="400"> OEM</tspan><tspan fill="#9aa3b8" font-weight="400"> 与中国</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 加速器厂采购</tspan><tspan fill="#9aa3b8" font-weight="400"> PCIe</tspan><tspan fill="#9aa3b8" font-weight="400"> Retimer/CXL</tspan><tspan fill="#9aa3b8" font-weight="400"> MXC；新产品组合</tspan><tspan fill="#9aa3b8" font-weight="400"> 1Q26</tspan></text>
+<text x="428.00" y="722.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">营收</tspan><tspan fill="#f4d58a" font-weight="700"> 2.69</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> 、同比</tspan><tspan fill="#f4d58a" font-weight="700"> +93.8%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，是估值溢价核心。</tspan></text>
+<rect x="782.00" y="640.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="640.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="664.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">上游·咽喉</text>
+<text x="798.00" y="682.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">台积电是单一最大节点</text>
+<text x="798.00" y="706.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Fabless</tspan><tspan fill="#9aa3b8" font-weight="400"> 模式下约</tspan><tspan fill="#f4d58a" font-weight="700"> 20.6</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS</tspan><tspan fill="#9aa3b8" font-weight="400"> 主要付给台积电流片；前五大供应商集中度</tspan><tspan fill="#f4d58a" font-weight="700"> 79.39%</tspan></text>
+<text x="798.00" y="722.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">——上游与下游一样集中，是供应链脆弱点。</tspan></text>
+<rect x="42.00" y="770.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="770.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="794.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">增量·国产替代</text>
+<text x="58.00" y="812.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">中国 AI 资本开支拉动</text>
+<text x="58.00" y="836.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">国内主要</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 加速器企业</tspan><tspan fill="#9aa3b8" font-weight="400"> 1Q26</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收平均同比</tspan><tspan fill="#f4d58a" font-weight="700"> +99%</tspan><tspan fill="#9aa3b8" font-weight="400"> （UBS），带动</tspan><tspan fill="#9aa3b8" font-weight="400"> PCIe</tspan></text>
+<text x="58.00" y="852.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">互连国产替代需求，为澜起打开海外厂之外的增量。</tspan></text>
+<text x="590.00" y="906.00" text-anchor="middle" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="10.5" font-weight="400" fill="#646d82">需求端 = 谁付钱给澜起；上游 = 澜起 COGS 流向。实线=直接采购，虚线=Fabless 嵌入成本。粗细仅为相对规模示意。</text>
+<text x="590.00" y="922.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: 澜起科技 2025 年年度报告 (cninfo) 第三节 客户/供应商集中度 + 2026 年第一季度报告新产品组合营收 + UBS Montage 报告 (2026-05-08, 中国 AI 加速器 1Q26 +99%)</text>
+</svg>
