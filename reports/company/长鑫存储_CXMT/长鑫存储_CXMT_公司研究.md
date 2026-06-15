@@ -1,8 +1,13 @@
 # 长鑫科技集团股份有限公司（长鑫存储 / CXMT Corporation）公司研究
 
-**报告日期：** 2026年5月25日（招股说明书申报稿截至 2026年5月17日）
+**报告日期（as of）：** 2026年6月15日（招股说明书申报稿截至 2026年5月17日；IPO 注册生效 2026年6月12日）
+
+**评级 / 目标价（Rating / PT）：** 不适用 — 注册生效待发行（pre-IPO）。公司科创板 IPO 已于 2026 年 6 月 12 日获中国证监会同意注册、进入发行阶段，但**截至 2026 年 6 月 15 日尚未询价定价、尚无二级市场价格**，故本报告不给出评级与 12 个月目标价，仅做定性的估值 / 战略地位讨论（见第 1 章末与第 8 章）。一级市场估值锚点：IPO 隐含市值约 RMB 2,950 亿元（按募资 295 亿元、发行后总股本不低于 10% 推算），较 2025 年 6 月最近一次私募融资估值（约 RMB 1,475 亿元）翻倍（[新浪财经 — 长鑫科技 IPO 估值, 2026-01-08](https://finance.sina.com.cn/stock/observe/2026-01-08/doc-inhfqtyr6649876.shtml)）。
 
 **披露口径：** 公司主体为「长鑫科技集团股份有限公司」（CXMT Corporation），其全资 / 控股子公司「长鑫存储技术有限公司」（CXMT，长鑫存储）系市场长期使用的品牌名。本报告所述「长鑫科技」或「长鑫存储」均指上市主体长鑫科技集团股份有限公司。
+
+> **Update — IPO 注册生效（2026-06-12）、预计 7–8 月挂牌:** 长鑫科技科创板 IPO 进程在本次刷新窗口内连续推进两大节点：**2026 年 5 月 27 日上交所上市审核委员会第 27 次会议审议通过（过会），并于同日提交注册**；**2026 年 6 月 12 日中国证监会发布同意注册批复，批复自同意注册之日起 12 个月内有效**。市场普遍预计公司将于 2026 年 7 月中旬至 8 月初正式挂牌，募资 295 亿元（超越中芯国际上市时的 207.15 亿元，为科创板历史最高计划募资额）。截至 2026 年 6 月 15 日，公司尚未公布询价区间 / 发行价 / 申购日。
+> 来源：[证监会 — 同意长鑫科技首次公开发行股票注册, 2026-06-12](https://finance.sina.com.cn/jjxw/2026-06-12/doc-iniceccp0252040.shtml)；[证券时报 — 长鑫科技科创板 IPO 过会, 拟募资295亿元, 2026-05-27](https://www.stcn.com/article/detail/3933177.html)；[投资界 — 长鑫 IPO 过会, 就等打新, 2026-05-28](https://news.pedaily.cn/202605/564502.shtml)。
 
 > **Update — 首次披露 2026 年上半年业绩预告（2026-05-17）:** 长鑫科技在更新的招股说明书中首次披露 2026 年 1–6 月业绩预告，预计营业收入 RMB 1,100–1,200 亿元（同比 +612.53% 至 +677.31%），归母净利润 RMB 500–570 亿元（同比 +2,244.03% 至 +2,544.19%）。这一指引将公司从 2025 年首次扭亏的 18.75 亿元归母净利润，一举抬升至上半年 500 亿元起，主要驱动为全球 DRAM 进入 AI 推动的「超级周期」、合约价自 2025 年下半年起持续大幅上涨、叠加公司 DDR5/LPDDR5/5X 产品结构持续优化。
 > 来源：[长鑫科技 招股说明书 (申报稿) 第 29–30 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)。
@@ -39,7 +44,9 @@
 
 公司是中国国家集成电路产业基金（俗称「大基金」）二期与合肥市国资体系合力扶持的代表性项目，五位 5% 以上股东合计持有 58.39% 的股份：清辉集电 21.67%（背后为芯睿投资 51.09% 与合肥长鑫集成 48.90%，最终穿透至合肥市国资委及国家大基金）、长鑫集成 11.71%（合肥市产业投资控股 100% 持股，合肥市国资委实控）、大基金二期 8.73%、合肥集鑫 8.37%、安徽省投 7.91%（[长鑫科技 招股说明书 第 77–80 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。兆易创新（SSE:603986）持股约 0.95%，其董事长朱一明同时担任长鑫科技董事长（[长鑫科技 招股说明书 第 39 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。员工总数 19,298 人（截至 2025 年 12 月 31 日），其中研发人员 6,259 人、占比 32.43%（[长鑫科技 招股说明书 第 115、165 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。
 
-**估值快照（一级市场口径，公司尚未上市）：** 长鑫科技选择科创板第四套上市标准——「预计市值不低于人民币 30 亿元，且最近一年营业收入不低于人民币 3 亿元」——拟公开发行不超过 1,062,225.9999 万股、占发行后总股本不低于 10%，由中金公司与中信建投联席保荐，募资 295 亿元（[长鑫科技 招股说明书 第 23–24、30 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。市场预期估值在 RMB 3,000 亿元 至 USD 420 亿（约 RMB 3,000 亿）区间，对应 2025 年 P/E 约 160 倍、TTM P/E（剔除 2026Q1 暴利后）约 6–12 倍（按 2026 半年报指引中值 535 亿净利润年化）、2025 年 P/S 约 4.9 倍（[Douglas Research / Smartkarma, 2026-04](https://douglasresearch.substack.com/p/initial-thoughts-on-the-changxin)；[第一财经/财联社, 2026-04-23](https://www.cls.cn/detail/2078242)）。可比对照：SK 海力士 2025 P/E 约 8.2 倍、P/B 约 2.7 倍；三星电子 2025 P/E 约 14.8 倍；美光 (NASDAQ:MU) FY2025 P/E 约 15.7 倍——这些海外可比的多倍数均处于 DRAM 周期上行阶段的「相对低位」（[Stockanalysis.com — Micron 估值, 截至 2026-05](https://stockanalysis.com/stocks/mu/financials/)）。若长鑫科技 2026 年全年归母净利润落于市场预期的 1,100–1,400 亿元区间，3,000 亿元市值对应 2026E P/E 约 2.1–2.7 倍，**显著低于海外同业的 8–15 倍区间**——既可解读为「中国 DRAM 唯一标的的稀缺性溢价被弱化」，亦可解读为「市场对 2026 年下半年 DRAM 价格回调、HBM3 量产时点不确定的折扣」（[CXMT Gears Up Post-IPO — economy.ac, 2026-02](https://economy.ac/news/2026/02/202602288291)）。负 P/E 区间（2023–2024 累亏 234.85 亿）系产能爬坡阶段折旧摊销、研发投入大额计提与 DRAM 行业 2022–2023 年下行周期所致，2025 年同步周期复苏与规模效应释放后扭亏（[长鑫科技 招股说明书 第 27 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。
+**估值快照（一级市场口径，注册生效待发行，as of 2026-06-15）：** 长鑫科技选择科创板第四套上市标准——「预计市值不低于人民币 30 亿元，且最近一年营业收入不低于人民币 3 亿元」——拟公开发行不超过 1,062,225.9999 万股、占发行后总股本不低于 10%，由中金公司与中信建投联席保荐，募资 295 亿元（[长鑫科技 招股说明书 第 23–24、30 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。**因公司尚未询价定价、无二级市场价格，本报告不给评级 / 目标价，仅列一级市场估值锚点。** 按募资 295 亿元、发行后总股本不低于 10% 反推，IPO 隐含市值约 RMB 2,950 亿元；较 2025 年 6 月最近一次私募融资估值（约 RMB 1,475 亿元）实现翻倍。若以可比公司平均市销率（P/S）约 15.32 倍、2025 年营收按前三季度增速年化约 478 亿元测算，PS 法对应总市值上限可达约 RMB 7,325 亿元——一级市场预期估值因此落在 RMB 3,000 亿元至 7,000+ 亿元的宽区间（[新浪财经 — 长鑫科技 IPO 估值, PS 法核算或超 7000 亿, 2026-01-08](https://finance.sina.com.cn/stock/observe/2026-01-08/doc-inhfqtyr6649876.shtml)；[Douglas Research / Smartkarma, 2026-04](https://douglasresearch.substack.com/p/initial-thoughts-on-the-changxin)）。海外可比对照：SK 海力士 2025 P/E 约 8.2 倍、P/B 约 2.7 倍；三星电子 2025 P/E 约 14.8 倍；美光 (NASDAQ:MU) FY2025 P/E 约 15.7 倍（[Stockanalysis.com — Micron 估值, 截至 2026-05](https://stockanalysis.com/stocks/mu/financials/)）。
+
+*分析师观点（卖方视角，仅供参照，非长鑫官方口径）：* 摩根士丹利在 2026-06-10 的亚太存储观察中指出，当前 DRAM 板块远期市盈率（forward P/E）仅约 *5 倍*，若长期协议（LTA）能覆盖未来 3–5 年 70% 以上供应、理论上板块估值可重估至 8–10 倍 PE；三星、SK 海力士当前远期 PE 分别仅约 *5.2 倍 / 4.7 倍*，处于 DRAM 周期上行阶段的相对低位（[Morgan Stanley — Asia Pacific Memory: A Healthy Reset, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/181245841252152/MS-Tech%20Bytes%20-%20Asia%20Pacific%20Memory%20%E2%80%93%20A%20Healthy%20Reset-260610.pdf)）。以此对照，若长鑫 2026 年全年归母净利润落于其半年报指引年化后的千亿级区间，RMB 3,000 亿元市值对应 2026E P/E 仅个位数——既可读作「A 股 DRAM 唯一标的的稀缺性溢价尚未充分体现」，亦可读作「市场对 2026 年下半年 DRAM 价格见顶回调、HBM3 量产时点不确定的折扣」（[CXMT Gears Up Post-IPO — economy.ac, 2026-02](https://economy.ac/news/2026/02/202602288291)）。负 P/E 区间（2023–2024 累亏 234.85 亿）系产能爬坡阶段折旧摊销、研发投入大额计提与 DRAM 行业 2022–2023 年下行周期所致，2025 年同步周期复苏与规模效应释放后扭亏（[长鑫科技 招股说明书 第 27 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。
 
 ## 2. 公司历史
 
@@ -56,7 +63,7 @@ timeline
     2022-23 : G3工艺平台量产 ; 2023年6月整体变更为股份公司
     2024 : G4工艺DDR5/LPDDR5 量产 ; DDR4 自有产品停产 ; HBM2/HBM2E 工程样品送样
     2025 : 全年首次盈利 18.75亿元 ; LPDDR5X 8533/9600 Mbps 量产 ; DDR5-8000 / LPDDR5X-10667 公开亮相
-    2026 : Q1 单季归母净利 247.62亿元 ; 5月17日更新招股书 ; 5月27日科创板上会审议
+    2026 : Q1 单季归母净利 247.62亿元 ; 5月17日更新招股书 ; 5月27日科创板过会+提交注册 ; 6月12日证监会同意注册 ; 预计7-8月挂牌
 ```
 *来源：[长鑫科技 招股说明书 第 36–58 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)；[长鑫存储 (中文维基), 截至 2026-05](https://zh.wikipedia.org/zh-cn/%E9%95%BF%E9%91%AB%E5%AD%98%E5%82%A8)；[Wccftech IC China 2025 — DDR5-8000 / LPDDR5X-10667 unveiling, 2025-11](https://wccftech.com/cxmt-debuts-domestically-produced-ddr5-memory-8000-mtps-lpddr5-10667-mtps/)。*
 
@@ -64,7 +71,7 @@ timeline
 
 **第二次是双地、三厂的产能布局。** 2020–2021 年公司启动北京 / 合肥双中心扩张：长鑫集电（北京，2020 年 7 月并表）由长鑫科技与北京亦庄国投各持 31.72%、大基金二期持 24.67% 共同建设；长鑫新桥（合肥，2021 年 1 月成立）由长鑫芯安、鑫益合升、大基金二期、合肥产投与长鑫科技分别持股 27.33% / 27.09% / 26.99% / 15.24% / 3.35%，公司通过一致行动协议合计掌握超过 2/3 表决权（[长鑫科技 招股说明书 第 60–65 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。双地三厂架构的战略动因明确：1）合肥市国资 + 国家大基金共同分担前期百亿级资本开支；2）北京厂临近清华系晶圆工艺人才；3）地理分散降低单点供应风险，亦为后续上海 HBM 后道封装基地（计划 2026 年底建成）腾出选址空间（[Tom's Hardware — China 2026 HBM3 production, 2025-09](https://www.tomshardware.com/pc-components/dram/chinese-semiconductor-industry-gears-up-for-domestic-hbm3-production-by-the-end-of-2026-cxmt-to-produce-chips-while-naura-maxwell-and-u-preseason-design-tools-for-assembly)）。
 
-2023 年 6 月 26–27 日，睿力集成基于德勤审计的截至 2023 年 3 月 31 日 670.63 亿元净资产，按 1:0.7997 比例折为股本，整体变更为「长鑫科技集团股份有限公司」，注册资本 536.33 亿元，发起人 49 名（[长鑫科技 招股说明书 第 38–40 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。2025 年 12 月公司向上交所提交科创板预先审阅申请并被受理，2026 年 5 月 17 日更新申报稿、5 月 27 日上市审核委员会召开第 27 次会议审议公司首发事项（[第一财经/财联社, 2026-04-25](https://www.cls.cn/detail/2373552)；[财联社 上会日程, 2026-05-21](https://www.stcn.com/article/detail/3918707.html)）。
+2023 年 6 月 26–27 日，睿力集成基于德勤审计的截至 2023 年 3 月 31 日 670.63 亿元净资产，按 1:0.7997 比例折为股本，整体变更为「长鑫科技集团股份有限公司」，注册资本 536.33 亿元，发起人 49 名（[长鑫科技 招股说明书 第 38–40 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。IPO 进程在 2025 年 12 月 30 日获上交所受理后连续推进：2026 年 5 月 17 日更新申报稿，**5 月 27 日上市审核委员会第 27 次会议审议通过（过会，无进一步落实事项），并于同日提交注册**；**6 月 12 日中国证监会发布同意注册批复，批复自同意注册之日起 12 个月内有效**——公司由此进入发行阶段，市场普遍预计 2026 年 7 月中旬至 8 月初挂牌（[证监会 — 同意长鑫科技 IPO 注册, 2026-06-12](https://finance.sina.com.cn/jjxw/2026-06-12/doc-iniceccp0252040.shtml)；[证券时报 — 长鑫科技科创板 IPO 过会, 2026-05-27](https://www.stcn.com/article/detail/3933177.html)；[投资界 — 长鑫 IPO 过会, 就等打新, 2026-05-28](https://news.pedaily.cn/202605/564502.shtml)）。
 
 ## 3. 管理团队
 
@@ -198,6 +205,19 @@ DRAM 是 CPU / GPU / SoC 与存储之间的「主内存」，无论数据中心�
 
 公司四代工艺平台对应不同产品代际，招股说明书第 161–162 页清晰披露：第一代（G1，约 23.8nm）已停产；第三代（G3，约 18nm）量产，作为 LPDDR4X 主力工艺；第四代（G4，约 17nm）量产，定位「国际先进水平」，承担 DDR5 / LPDDR5 / 5X；第五代（G5）研发阶段，采用「进一步优化的多重曝光技术」（multi-patterning lithography / 多重曝光光刻）以提升存储密度。除 G1–G5 之外，公司「预研项目」明确涉及 LPDDR6 与 CXL（Compute Express Link，新型内存互联标准）与「存内计算 / 近存计算」（compute-in-memory / processing-near-memory）（[长鑫科技 招股说明书 第 161–166、169 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。
 
+```mermaid
+graph LR
+    G1[G1 约23.8nm - 已停产] --> G3[G3 约18nm - 量产]
+    G3 --> G4[G4 约17nm - 量产]
+    G4 --> G5[G5 研发中 - 多重曝光优化]
+    G5 --> PRE[预研 LPDDR6 / CXL / 存内计算]
+    G1 -.承载.-> P1[8Gb DDR4 - 从零到一]
+    G3 -.承载.-> P3[LPDDR4X 主力]
+    G4 -.承载.-> P4[DDR5-8000 / LPDDR5X-10667]
+    G4 -.送样.-> H[HBM2E / HBM3 样品]
+```
+*数据来源：[长鑫科技 招股说明书 第 116、161–166 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)；HBM 样品时点为第三方报道（见 4.6）。工艺代际 G1→G5 全部基于 ArF DUV + 多重曝光，绕过 EUV。*
+
 *分析师观点：* 长鑫的工艺路线避免了对 EUV（极紫外光刻）的依赖——G3 / G4 / G5 均通过 multi-patterning（多重曝光）+ ArF DUV 浸没式光刻实现，因此在 ASML EUV 出口管制下仍可推进。**风险点是 G6+ 节点是否需要 EUV、以及国产 DUV 光刻机的进展节奏**——这超出本报告范围，但属于公司长期工艺路线图的隐性约束（[CSIS — Understanding the Biden Administration's Updated Export Controls, 2024-12](https://www.csis.org/analysis/understanding-biden-administrations-updated-export-controls)；[CRS — U.S. Export Controls and China: Advanced Semiconductors, R48642, 2025](https://www.congress.gov/crs-product/R48642)）。
 
 ## 5. 客户与上市策略
@@ -232,6 +252,16 @@ DRAM 是计算机系统中作为「主内存 / Main Memory」的随机存取存�
 ![全球 DRAM 市场份额 (2025 Q4)](charts/cxmt_market_share.png)
 *数据来源：Omdia 2025 Q4 DRAM 销售额统计，引自 [长鑫科技 招股说明书 第 26 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)；[Counterpoint Research, 2026](https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share)。*
 
+```mermaid
+pie showData title 全球 DRAM 市场份额 2025Q4 按销售额
+    "SK 海力士 SK Hynix" : 34.48
+    "三星 Samsung" : 33.96
+    "美光 Micron" : 23.41
+    "长鑫 CXMT" : 7.67
+    "其他 南亚/华邦/力积电" : 0.48
+```
+*数据来源：Omdia 2025 Q4 DRAM 销售额统计，引自 [长鑫科技 招股说明书 第 26、146 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)；[Counterpoint Research, 2026](https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share)。长鑫 7.67% 已稳居全球第四，但与三巨头各 23–34% 仍有数量级差距。*
+
 ### 6.2 当前周期：AI 驱动的「DRAM 超级周期」（2024 H2–2027+）
 
 自 2024 年下半年以来，DRAM 行业进入由生成式 AI（generative AI）需求驱动的「超级周期」，这与历史上前几次周期（PC 内存普及、智能手机普及、云计算 / 服务器普及）类似但更陡峭：
@@ -249,13 +279,156 @@ DRAM 产业链上游主要是：1）半导体设备（光刻机、刻蚀、薄�
 
 长鑫位于产业链「中游」，2025 年原材料采购前 5 大供应商占比 21.81%（2024 年 31.39%）——比 DRAM 行业三巨头的供应商集中度更分散，反映公司主动构建多源供应（[长鑫科技 招股说明书 第 154–155 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。值得注意的是，公司采购单价从 2023 到 2025 年呈现下降趋势：化学品价格指数 100 → 91.13 → 73.72，硅片 100 → 76.30 → 69.99，备件 100 → 105.58 → 53.33——这反映上游材料 / 设备的国产替代红利与公司议价能力提升，是公司毛利率快速改善的隐性贡献因素（[长鑫科技 招股说明书 第 154 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)）。
 
+下图以「资本开支视角」勾勒长鑫的资金流向：百亿级 capex 主要流向晶圆制造设备（光刻 / 刻蚀 / 沉积 / 清洗）与硅片 / 化学品 / 特气等材料，最终汇向 ASML（DUV 光刻独家卡点）、AMAT / Lam / TEL（海外刻蚀 / 沉积三强）与国产替代卡点（北方华创 / 中微 / 拓荆）；产出端则以经销为主，回流自云厂商、PC 与手机客户。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1078" width="1180" height="1078" role="img" aria-label="长鑫科技 (CXMT) 的钱流向哪里：设备 / 材料采购 → 上游供应商与国产替代卡点" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1078" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">DRAM 资金流向 · 2026（资本开支视角 / CAPEX VIEW）</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">长鑫科技 (CXMT) 的钱流向哪里：设备 / 材料采购 → 上游供应商与国产替代卡点</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">作为一家 IDM DRAM 厂，长鑫的百亿级资本开支(capex)主要流向晶圆制造设备(光刻 / 刻蚀 / 沉积 / 清洗)与硅片 / 化学品 / 特气等材料；在 ASML EUV 不可获得、美国 BIS 设备管制收紧的背景下，这股现金正从海外巨头(ASML /</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">AMAT / Lam / TEL)向国产卡点(北方华创 / 中微 / 拓荆 / 上海微电子)迁移。产出端则以经销为主，覆盖云厂商(阿里 / 字节 / 腾讯)、PC(联想)与手机(小米 / OPPO / vivo / 传音 / 荣耀)。</text>
+<ellipse cx="1031.00" cy="432.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="650.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="650.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">长鑫的采购支出</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买什么(设备 / 材料类别)</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终汇向谁(上游卡点)</text>
+<path d="M 256.00 412.00 C 369.50 412.00, 369.50 322.00, 483.00 322.00" fill="none" stroke="url(#mfgold)" stroke-width="22.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 435.00 C 369.50 435.00, 369.50 432.00, 483.00 432.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 455.00 C 369.50 455.00, 369.50 542.00, 483.00 542.00" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 319.00 C 810.50 319.00, 810.50 267.00, 924.00 267.00" fill="none" stroke="url(#mfgold)" stroke-width="20.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 425.00 C 810.50 425.00, 810.50 377.00, 924.00 377.00" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 440.00 C 810.50 440.00, 810.50 490.00, 924.00 490.00" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 542.00 C 810.50 542.00, 810.50 597.00, 924.00 597.00" fill="none" stroke="url(#mfgold)" stroke-width="14.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 332.00 C 810.50 332.00, 810.50 480.00, 924.00 480.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="361.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">光刻 capex</text>
+<text x="369.50" y="427.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">刻蚀/沉积 capex</text>
+<text x="369.50" y="492.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">材料采购</text>
+<rect x="42.00" y="357.00" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="357.00" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="390.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">长鑫科技 CXMT</text>
+<text x="60.00" y="411.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">中国第一 / 全球第四 DRAM IDM</text>
+<text x="60.00" y="428.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">合肥三厂 + 北京 ~30万片/月</text>
+<text x="60.00" y="445.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">募投 295 亿元</text>
+<rect x="483.00" y="275.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="275.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="308.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">光刻设备</text>
+<text x="501.00" y="329.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">ArF 浸没式 DUV</text>
+<text x="501.00" y="346.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">多重曝光(无 EUV)</text>
+<rect x="483.00" y="385.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="385.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="418.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">刻蚀 / 沉积 / 清洗</text>
+<text x="501.00" y="439.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Dry Etch / Deposition</text>
+<text x="501.00" y="456.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Cleaning / Thermal</text>
+<rect x="483.00" y="495.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="495.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="528.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">材料 / 硅片 / 特气</text>
+<text x="501.00" y="549.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">硅片 / 光阻 / 化学品</text>
+<text x="501.00" y="566.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">采购单价 3 年下行</text>
+<rect x="924.00" y="220.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="220.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">ASML</text>
+<text x="942.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">DUV 光刻独家</text>
+<text x="942.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">EUV 仍被管制</text>
+<rect x="924.00" y="330.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="330.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="363.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AMAT / Lam / TEL</text>
+<text x="942.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">刻蚀 / 沉积海外三强</text>
+<text x="942.00" y="401.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">经新马出货规避管制</text>
+<rect x="924.00" y="440.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="440.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="473.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">北方华创 / 中微 / 拓荆</text>
+<text x="942.00" y="494.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">国产设备卡点替代</text>
+<text x="942.00" y="511.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">清洗 / 沉积国产化提速</text>
+<rect x="924.00" y="550.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="550.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="583.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">信越 / SUMCO / 沪硅 / 立昂微</text>
+<text x="942.00" y="604.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">硅片日美主导</text>
+<text x="942.00" y="621.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">国产硅片 / 特气补位</text>
+<rect x="42.00" y="670.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="672.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="672.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="672.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="672.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="665.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="665.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="840.40" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="965.20" y="665.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="984.20" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="42.00" y="685.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="61.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="135.40" y="685.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="154.40" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="236.00" y="685.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="255.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="394.20" y="685.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="413.20" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<line x1="42" y1="710.00" x2="1138" y2="710.00" stroke="#222a3a"/>
+<text x="42.00" y="726.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 长鑫的现金流向与国产替代卡点</text>
+<rect x="42.00" y="746.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="746.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="770.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">支出 · 资本开支</text>
+<text x="58.00" y="788.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">百亿级 capex 是核心现金出口</text>
+<text x="58.00" y="812.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">长鑫本次募投</tspan><tspan fill="#f4d58a" font-weight="700"> 295</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> ，其中</tspan><tspan fill="#f4d58a" font-weight="700"> 75</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> 用于晶圆制造产线技术升级、</tspan><tspan fill="#f4d58a" font-weight="700"> 130</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> 用于</tspan><tspan fill="#9aa3b8" font-weight="400"> DRAM</tspan></text>
+<text x="58.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">技术升级、</tspan><tspan fill="#f4d58a" font-weight="700"> 90</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> 用于前瞻技术(HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> CXL</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> 存内计算)。三厂叠加产能逼近</tspan><tspan fill="#f4d58a" font-weight="700"> 月产</tspan><tspan fill="#f4d58a" font-weight="700"> 30</tspan></text>
+<text x="58.00" y="844.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">万片</tspan><tspan fill="#9aa3b8" font-weight="400"> 12</tspan><tspan fill="#9aa3b8" font-weight="400"> 英寸晶圆，设备</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 材料是</tspan><tspan fill="#9aa3b8" font-weight="400"> capex</tspan><tspan fill="#9aa3b8" font-weight="400"> 的主要去向。</tspan></text>
+<rect x="412.00" y="746.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="746.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="770.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">卡点 · 光刻</text>
+<text x="428.00" y="788.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">ASML 仍是绕不开的卡点</text>
+<text x="428.00" y="812.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">长鑫</tspan><tspan fill="#9aa3b8" font-weight="400"> G3</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> G4</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> G5</tspan><tspan fill="#9aa3b8" font-weight="400"> 工艺均靠</tspan><tspan fill="#f4d58a" font-weight="700"> ArF</tspan><tspan fill="#f4d58a" font-weight="700"> 浸没式</tspan><tspan fill="#f4d58a" font-weight="700"> DUV</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 多重曝光绕过</tspan><tspan fill="#f4d58a" font-weight="700"> EUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 管制；但</tspan></text>
+<text x="428.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">DUV</tspan><tspan fill="#9aa3b8" font-weight="400"> 光刻仍高度依赖</tspan><tspan fill="#f4d58a" font-weight="700"> ASML</tspan><tspan fill="#9aa3b8" font-weight="400"> ，美国</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 4</tspan><tspan fill="#9aa3b8" font-weight="400"> 月有议员提议进一步收紧</tspan><tspan fill="#9aa3b8" font-weight="400"> DUV</tspan></text>
+<text x="428.00" y="844.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">对华出口——这是</tspan><tspan fill="#9aa3b8" font-weight="400"> capex</tspan><tspan fill="#9aa3b8" font-weight="400"> 链条上最大的单点风险。</tspan></text>
+<rect x="782.00" y="746.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="746.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="770.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">迁移 · 国产替代</text>
+<text x="798.00" y="788.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">现金正流向国产设备卡点</text>
+<text x="798.00" y="812.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">伯恩斯坦(Bernstein)指出，长鑫</tspan><tspan fill="#f4d58a" font-weight="700"> 2025</tspan><tspan fill="#f4d58a" font-weight="700"> 年资本开支缩减</tspan><tspan fill="#9aa3b8" font-weight="400"> 且尝试国产化，少下日本(</tspan><tspan fill="#f4d58a" font-weight="700"> TEL</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan></text>
+<text x="798.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Screen</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> Kokusai</tspan><tspan fill="#9aa3b8" font-weight="400"> )订单造成日系在华份额&quot;表面下滑&quot;；清洗</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> 沉积环节国产化(</tspan><tspan fill="#f4d58a" font-weight="700"> 北方华创</tspan></text>
+<text x="798.00" y="844.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">/</tspan><tspan fill="#f4d58a" font-weight="700"> 中微</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> 拓荆</tspan><tspan fill="#9aa3b8" font-weight="400"> )提速，现金从海外向国产卡点迁移。</tspan></text>
+<rect x="42.00" y="892.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="42.00" y="892.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="58.00" y="916.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">成本 · 材料下行</text>
+<text x="58.00" y="934.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">材料采购单价三年下行</text>
+<text x="58.00" y="958.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">招股书披露报告期化学品价格指数</tspan><tspan fill="#f4d58a" font-weight="700"> 100→91.13→73.72</tspan><tspan fill="#9aa3b8" font-weight="400"> 、硅片</tspan><tspan fill="#f4d58a" font-weight="700"> 100→76.30→69.99</tspan></text>
+<text x="58.00" y="974.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">、备件</tspan><tspan fill="#f4d58a" font-weight="700"> 100→105.58→53.33</tspan><tspan fill="#9aa3b8" font-weight="400"> ；国产替代红利</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 议价能力提升压低材料成本，是毛利率从</tspan></text>
+<text x="58.00" y="990.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">-2.19%</tspan><tspan fill="#9aa3b8" font-weight="400"> 改善到</tspan><tspan fill="#f4d58a" font-weight="700"> 41.02%</tspan><tspan fill="#9aa3b8" font-weight="400"> 的隐性贡献。</tspan></text>
+<rect x="412.00" y="892.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="892.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="916.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">产出 · 下游客户</text>
+<text x="428.00" y="934.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱从下游回流：云 + 手机 + PC</text>
+<text x="428.00" y="958.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">产出端以经销为主(</tspan><tspan fill="#f4d58a" font-weight="700"> 85.38%</tspan><tspan fill="#9aa3b8" font-weight="400"> )，核心客户覆盖</tspan><tspan fill="#f4d58a" font-weight="700"> 阿里云</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> 字节</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> 腾讯</tspan><tspan fill="#9aa3b8" font-weight="400"> (云)、</tspan><tspan fill="#f4d58a" font-weight="700"> 联想</tspan><tspan fill="#9aa3b8" font-weight="400"> (PC)、</tspan></text>
+<text x="428.00" y="974.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">小米</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> OPPO</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> vivo</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> 传音</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> 荣耀</tspan><tspan fill="#9aa3b8" font-weight="400"> (手机)；前五大客户占主营</tspan><tspan fill="#f4d58a" font-weight="700"> 68.08%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，AI</tspan></text>
+<text x="428.00" y="990.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">超级周期下合约价大涨带动现金快速回流。</tspan></text>
+<rect x="782.00" y="892.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="782.00" y="892.00" width="3" height="132.00" rx="2" fill="#a78bfa"/>
+<text x="798.00" y="916.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">上方期权 · HBM</text>
+<text x="798.00" y="934.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">HBM 后道封装是新的资金去向</text>
+<text x="798.00" y="958.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">上海</tspan><tspan fill="#9aa3b8" font-weight="400"> HBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 后道封装基地计划</tspan><tspan fill="#f4d58a" font-weight="700"> 2026</tspan><tspan fill="#f4d58a" font-weight="700"> 年底</tspan><tspan fill="#9aa3b8" font-weight="400"> 建成，TSV</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> wafer</tspan><tspan fill="#9aa3b8" font-weight="400"> bonding</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan></text>
+<text x="798.00" y="974.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">stacking</tspan><tspan fill="#9aa3b8" font-weight="400"> 设备(部分国产</tspan><tspan fill="#9aa3b8" font-weight="400"> NAURA</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> 新益昌)是新增</tspan><tspan fill="#9aa3b8" font-weight="400"> capex</tspan><tspan fill="#9aa3b8" font-weight="400"> 去向；若</tspan><tspan fill="#9aa3b8" font-weight="400"> HBM3</tspan></text>
+<text x="798.00" y="990.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">量产成功，将打开对接华为昇腾国产</tspan><tspan fill="#9aa3b8" font-weight="400"> GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 的高利润现金回流。</tspan></text>
+<text x="590.00" y="1060.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: 长鑫科技 招股说明书(申报稿) 第 30/154-155 页, 2026-05-17 (sse.com.cn); Bernstein — Japan Semi Equipment: reversing share loss in China?, 2026-06-12; 证监会同意注册批复, 2026-06-12</text>
+</svg>
+
+*图：长鑫科技「资金流向」价值链图（资本开支视角）— 实线为直接付款，虚线为隐含在成品中的间接支出；带宽仅为粗略相对规模，非严格按金额守恒。* 来源：[长鑫科技 招股说明书 第 30、154–155 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)。
+
+*分析师观点（卖方视角）：* 伯恩斯坦（Bernstein）在 2026-06-12 的日本半导体设备报告中指出，日系设备商（TEL / Screen / Kokusai）在中国进口设备中占比从 2024 年 26% 降至 2025 年 23%，部分原因正是「长鑫存储（CXMT）2025 年资本开支缩减且尝试国产化、少下日本订单」造成的「表面份额流失」；剔除日元汇率影响后 2024/25 年调整后份额约 31%/26%，接近历史均值——意味着主要是订单时点错配而非竞争失守。其中清洗（Cleaning）与沉积（Deposition）环节国产化（北方华创 / 中微 / 拓荆）提速最快，是长鑫 capex 从海外向国产卡点迁移的直接证据（[Bernstein — Japan Semi Equipment: Potentially reversing share loss in China?, 2026-06-12](http://xs-macbook-air.local:5001/zsxq/pdf/412455442528458/Bernstein-Japan%20Semi%20Equipment%EF%BC%9A%20Potentially%20reversing%20share%20loss%20in%20China%EF%BC%9F-260612.pdf)）。
+
 ### 6.4 监管与地缘政治
 
 DRAM 行业是中美科技博弈的焦点之一。关键事件：
 
 - **2022 年 12 月：** 美国 NDAA 2023 禁止美国联邦政府采购或使用长鑫的存储芯片，标志着首个直接面向长鑫的法律层级出口管制（[CRS — U.S. Export Controls and China: Advanced Semiconductors, R48642, 2025](https://www.congress.gov/crs-product/R48642)）；
-- **2024 年 3 月：** 美国商务部 BIS（工业与安全局）据报道正在考虑将长鑫加入「实体清单」（Entity List），但截至 2026 年 5 月长鑫尚未被列入（[Taipei Times — US mulls blacklisting China's CXMT, 2024-03](https://www.taipeitimes.com/News/biz/archives/2024/03/11/2003814728)）；
-- **2024 年 12 月 2 日：** BIS 颁布全面新规，重点针对中国先进半导体的国产化，包括对 HBM 出口的明确控制（[Holland & Knight — US Strengthens Export Controls, 2024-12](https://www.hklaw.com/en/insights/publications/2024/12/us-strengthens-export-controls-on-advanced-computing-items)）；
+- **2024 年 3 月起（实体清单悬而未决，截至 2026-06 仍未列入）：** 美国商务部 BIS（工业与安全局，Bureau of Industry and Security）自 2023 年起多次被报道「考虑」将长鑫加入「实体清单」（Entity List），但**截至 2026 年 6 月长鑫仍未被正式列入**——这是与其国产存储「双雄」对手长江存储（YMTC，2022 年 12 月即被列入实体清单）的关键差异，长鑫因此在设备 / 材料的合规采购上仍保有比 YMTC 更宽的窗口（[Taipei Times — US mulls blacklisting China's CXMT, 2024-03](https://www.taipeitimes.com/News/biz/archives/2024/03/11/2003814728)；[DSET — The Rise of CXMT, 2026](https://dset.tw/en/publication-en/000411/)）。这是公司估值「悬顶之剑」式的尾部风险——一旦被列入，设备 / EDA / 材料的合规采购将骤然收紧（见第 9 章）；
+- **2024 年 12 月 2 日（HBM 出口管制成型，延续至 2026-12）：** BIS 颁布全面新规，重点针对中国先进半导体国产化，**对 HBM（ECCN 3A090.c）出口实施明确控制**，并将 140+ 家中国芯片制造与设备厂商列入实体清单；该 HBM 管制的有效期延续至 2026 年 12 月。第三方分析认为长鑫已为 HBM 量产储备了支撑到 2026–2027 年的设备，但此后在产能放量与更先进 HBM 代际研发上将遭遇设备获取瓶颈（[Holland & Knight — US Strengthens Export Controls, 2024-12](https://www.hklaw.com/en/insights/publications/2024/12/us-strengthens-export-controls-on-advanced-computing-items)；[AI Frontiers — High-Bandwidth Memory: The Critical Gaps in US Export Controls, 2026](https://ai-frontiers.org/articles/high-bandwidth-memory-critical-gaps-us-export-controls)）；
 - **EUV 光刻：** ASML 仍未向中国出口 EUV 设备，长鑫的 G3/G4/G5 工艺均通过多重曝光（multi-patterning）+ ArF immersion DUV 实现，绕过 EUV 依赖。但 G6+ 节点（理论上 1Y 以下）是否需要 EUV 取决于晶圆厂技术选择（[CSIS — Biden Updated Export Controls, 2024-12](https://www.csis.org/analysis/understanding-biden-administrations-updated-export-controls)）；
 - **DUV 出口管控提议：** 美国 2026 年 4 月有议员提议进一步收紧 DUV 浸没式光刻机对华出口（[Asia Times — US lawmakers seek to block China's DUV lithography access, 2026-04](https://asiatimes.com/2026/04/us-lawmakers-seek-to-block-chinas-duv-lithography-access/)）——若该提议落地，将对长鑫 G5+ 工艺推进构成重大阻碍。
 
@@ -305,6 +478,22 @@ DRAM 行业是中美科技博弈的焦点之一。关键事件：
 
 长鑫的市场渗透策略可分三层：1）**国产替代「保底层」**——中国 DRAM 自给率 2024 年仍 < 15%、2026 年随长鑫产能爬坡有望升至 25%+。即使没有进一步出海，长鑫亦可通过中国本土云厂商 / 手机厂商替代海外大厂获得长期稳定订单；2）**第三方市场「拓展层」**——通过香港、日本（横滨）子公司布局东南亚、中东、拉美等中立市场，避开美欧出口管制下的高敏感地区；3）**HBM「上方期权」**——若 2026–2027 年 HBM2E / HBM3 量产成功，长鑫将打开高利润、高估值的服务器 AI 市场。
 
+### 8.4 卖方观点（Sell-side view）——本地机构研究库的横向对照
+
+长鑫科技尚未上市、无卖方机构对其个股出具评级 / 目标价（公司不在 `db/stock_price_target.db` 中），但本地机构研究库（`db/zsxq.db`）中近一个月内有多份与「DRAM 周期 / 长鑫 IPO / 国产存储产业政策」直接相关的卖方报告。以下三家机构视角并非对长鑫个股的评级，而是对其所处周期、估值参照与产业政策环境的判断——**用于横向对照，均标注为 *分析师观点*，不代表长鑫官方口径**：
+
+| 机构 | 日期 | 主题 | 核心论点 | 对长鑫的含义 |
+|---|---|---|---|---|
+| 摩根士丹利 (Morgan Stanley) | 2026-06-10 | 亚太存储「健康回调」 | DRAM 板块远期 P/E 仅约 5 倍；2026Q3 DRAM 价格预计再涨 20–30%、HBM 2027 起同比涨 50–100%；AI 推理需求将周期顶点推后数季 | 周期顶点延后利好长鑫 2026 全年盈利兑现；海外可比(三星/SK forward PE 5.2×/4.7×)为长鑫一级估值提供低位锚 |
+| 摩根士丹利 (Morgan Stanley) | 2026-06-07 | 合肥发展悖论 | 合肥模式(京东方/蔚来/长鑫)能造世界级产业集群、却无法根除产能过剩与通缩的结构性矛盾；2026 中国实际 GDP +4.8% | 长鑫是合肥「政府统筹 + 政企联合投资 + 完整配套供应链」模式的样本，国资扶持是护城河也是宏观周期风险载体 |
+| 国内券商策略 (投资策略) | 2026-06-09 | 牛市下的 IPO「巨舰」 | 长鑫(295 亿)+长江存储「两存」上市是国产存储从「技术赶超」迈入「规模竞争」的标志；其流动性冲击预计明显低于 2020 年中芯国际 | 长鑫与 YMTC 并称国产存储「双雄」，自上而下拉动整条半导体产业链；上市本身是 A 股存储板块的行情催化剂 |
+
+*分析师观点（Morgan Stanley, 2026-06-10）：* 当前 DRAM 板块远期市盈率（forward P/E）仅约 5 倍，若长期协议（LTA）覆盖未来 3–5 年 70% 以上供应、板块估值理论上可重估至 8–10 倍 PE；公司测算 2026 年三季度 DRAM 价格还将上涨 20%–30%、HBM 价格 2027 年起同比上涨 50%–100%（[Morgan Stanley — Asia Pacific Memory: A Healthy Reset, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/181245841252152/MS-Tech%20Bytes%20-%20Asia%20Pacific%20Memory%20%E2%80%93%20A%20Healthy%20Reset-260610.pdf)）。
+
+*分析师观点（Morgan Stanley, 2026-06-07）：* 大摩以合肥发展模式为样本指出，地方产业政策（长期财政资金扶持龙头 + 政企联合投资 + 围绕核心企业搭建完整配套供应链 + 成熟后市场化退出）成功培育了京东方、蔚来、长鑫存储等龙头，但无法根除产能过剩与通缩的结构性矛盾——这一框架既解释了长鑫为何能在六年内从零到全球第四，也提示其高度依赖国资扶持的隐性周期风险（[Morgan Stanley — China's 3D Journey: The Hefei Paradox, 2026-06-07](http://xs-macbook-air.local:5001/zsxq/pdf/181245588485452/Morgan%20Stanley-China%27s%203D%20Journey%EF%BC%9AThe%20Hefei%20Paradox%EF%BC%9A%20Why%20Smart%20Industrial%20Policy%20Can%E2%80%99t%20Fix%20Macro%20Imbalances-260607.pdf)）。
+
+*分析师观点（国内券商策略, 2026-06-09）：* 长鑫科技（募资 295 亿元）与长江存储「两存」上市，是国产存储从「技术赶超」迈入「规模竞争」的标志性事件；参考 2020 年 7 月中芯国际上市前的半导体行情，行情中期高点可能在上市前几个交易日出现，但因新股预缴制度取消后大额资金冻结压力下降，其流动性冲击预计明显低于当年中芯国际（[投资策略 — 牛市下的 IPO「巨舰」将带领市场驶向何方?, 2026-06-09](http://xs-macbook-air.local:5001/zsxq/pdf/584251511845584/%E6%8A%95%E8%B5%84%E7%AD%96%E7%95%A5%EF%BC%9A%E7%89%9B%E5%B8%82%E4%B8%8B%E7%9A%84IPO%E2%80%9C%E5%B7%A8%E8%88%B0%E2%80%9D%E5%B0%86%E5%B8%A6%E9%A2%86%E5%B8%82%E5%9C%BA%E9%A9%B6%E5%90%91%E4%BD%95%E6%96%B9%EF%BC%9F.pdf)）。
+
 ## 9. 风险评估
 
 ### 9.1 公司层面风险
@@ -325,7 +514,7 @@ DRAM 行业是中美科技博弈的焦点之一。关键事件：
 
 **7. 行业强周期性。** DRAM 历史 3–4 年一循环，2026 年正处上行周期顶部、2027–2028 年合约价可能因供给追赶而回落。**严重程度：高**。一旦周期下行，公司净利润可能从 2026 年的千亿级回落至几十亿级（[长鑫科技 招股说明书 第 144 页, 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf)；[TrendForce, 2026](https://www.trendforce.com/presscenter/news/20260331-12995.html)）。
 
-**8. 国际地缘政治 / 出口管制。** 公司面临美国 BIS 实体清单（潜在）、EUV 设备不可获得、DUV 限制提议、以及 HBM 出口管控等多重风险。**严重程度：高**。缓解因素：公司当前所需 G4 工艺设备已国内储备 / 国产化部分替代；HBM 因主要供给国内国产 GPU、出口管控影响相对小（[CRS R48642, 2025](https://www.congress.gov/crs-product/R48642)；[Asia Times — DUV restrictions, 2026-04](https://asiatimes.com/2026/04/us-lawmakers-seek-to-block-chinas-duv-lithography-access/)）。
+**8. 国际地缘政治 / 出口管制（实体清单是「悬顶之剑」式尾部风险）。** 公司面临美国 BIS 实体清单（潜在、截至 2026-06 仍未列入）、EUV 设备不可获得、DUV 限制提议、以及 HBM（ECCN 3A090.c）出口管控等多重风险。**严重程度：高**。关键对照：国产存储「双雄」中的长江存储（YMTC）早在 2022 年 12 月即被列入实体清单，长鑫至今未被列入，因此在设备 / 材料合规采购上仍保有比 YMTC 更宽的窗口——但这也意味着一旦被列入将构成估值的非线性冲击。缓解因素：第三方分析认为公司已为 HBM 量产储备了支撑到 2026–2027 年的设备；当前所需 G4 工艺设备已国内储备 / 国产化部分替代；HBM 因主要供给国内国产 GPU、出口管控对终端市场影响相对小（[CRS R48642, 2025](https://www.congress.gov/crs-product/R48642)；[AI Frontiers — HBM Critical Gaps in US Export Controls, 2026](https://ai-frontiers.org/articles/high-bandwidth-memory-critical-gaps-us-export-controls)；[Asia Times — DUV restrictions, 2026-04](https://asiatimes.com/2026/04/us-lawmakers-seek-to-block-chinas-duv-lithography-access/)）。
 
 **9. 与三巨头的技术代差。** 长鑫在 HBM3 / HBM3E 上落后 SK 海力士 / 美光 2–3 年，AI 数据中心市场高利润机会被三巨头分占。**严重程度：中**。
 
@@ -345,7 +534,7 @@ DRAM 行业是中美科技博弈的焦点之一。关键事件：
 
 ### 公司公告与一手资料
 
-- [长鑫科技集团股份有限公司 首次公开发行股票并在科创板上市 招股说明书 (申报稿), 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf) ——本报告 60% 以上的事实引自此文件。
+- [长鑫科技集团股份有限公司 首次公开发行股票并在科创板上市 招股说明书 (申报稿), 2026-05-17](https://static.sse.com.cn/stock/disclosure/announcement/c/202605/002170_20260517_MGLN.pdf) ——本报告 55% 以上的事实引自此文件。
 - [长鑫科技集团股份有限公司 第二轮问询函回复, 2026-04](https://qxb-pdf-osscache.qixin.com/AnBaseinfo/4f77cb7e2aa32cc4566c529a4d4350e6.pdf)
 - [长鑫科技集团股份有限公司 第一轮问询函回复, 2025-12](https://pdf.dfcfw.com/pdf/H2_AN202512301811513792_1.pdf?t=1767447526446)
 - [兆易创新 (SSE:603986) 公司公告与年报 — 上交所披露页](http://www.sse.com.cn/disclosure/listedinfo/announcement/?productId=603986)
@@ -362,6 +551,13 @@ DRAM 行业是中美科技博弈的焦点之一。关键事件：
 - [TechInsights — China Enters 2025 with Big Memory Breakthroughs, 2025-01](https://www.techinsights.com/blog/china-enters-2025-big-memory-breakthroughs)
 - [ChinaTalk — Mapping China's HBM Advances, 2025](https://www.chinatalk.media/p/mapping-chinas-hbm-advancement)
 
+### 本地机构研究库（`db/zsxq.db`，卖方观点 *Analyst view:*）
+
+- [Morgan Stanley — Asia Pacific Memory: A Healthy Reset, 2026-06-10](http://xs-macbook-air.local:5001/zsxq/pdf/181245841252152/MS-Tech%20Bytes%20-%20Asia%20Pacific%20Memory%20%E2%80%93%20A%20Healthy%20Reset-260610.pdf) —— DRAM 远期 P/E ~5×、2026Q3 价格再涨 20–30%、HBM 2027 起 +50–100%。
+- [Morgan Stanley — China's 3D Journey: The Hefei Paradox, 2026-06-07](http://xs-macbook-air.local:5001/zsxq/pdf/181245588485452/Morgan%20Stanley-China%27s%203D%20Journey%EF%BC%9AThe%20Hefei%20Paradox%EF%BC%9A%20Why%20Smart%20Industrial%20Policy%20Can%E2%80%99t%20Fix%20Macro%20Imbalances-260607.pdf) —— 合肥产业政策模式样本（含长鑫）。
+- [Bernstein — Japan Semi Equipment: Potentially reversing share loss in China?, 2026-06-12](http://xs-macbook-air.local:5001/zsxq/pdf/412455442528458/Bernstein-Japan%20Semi%20Equipment%EF%BC%9A%20Potentially%20reversing%20share%20loss%20in%20China%EF%BC%9F-260612.pdf) —— CXMT 2025 capex 缩减 / 国产化对日系设备份额的影响。
+- [投资策略 — 牛市下的 IPO「巨舰」将带领市场驶向何方?, 2026-06-09](http://xs-macbook-air.local:5001/zsxq/pdf/584251511845584/%E6%8A%95%E8%B5%84%E7%AD%96%E7%95%A5%EF%BC%9A%E7%89%9B%E5%B8%82%E4%B8%8B%E7%9A%84IPO%E2%80%9C%E5%B7%A8%E8%88%B0%E2%80%9D%E5%B0%86%E5%B8%A6%E9%A2%86%E5%B8%82%E5%9C%BA%E9%A9%B6%E5%90%91%E4%BD%95%E6%96%B9%EF%BC%9F.pdf) —— 「两存」上市流动性冲击 vs 中芯国际。
+
 ### 重要新闻 (12 个月内为主)
 
 - [Caixin Global — China's CXMT Takes Aim at Global Leaders With High-End DDR5 Memory Chips, 2025-11-26](https://www.caixinglobal.com/2025-11-26/chinas-cxmt-takes-aim-at-global-leaders-with-high-end-ddr5-memory-chips-102386784.html)
@@ -375,6 +571,11 @@ DRAM 行业是中美科技博弈的焦点之一。关键事件：
 - [新浪科技 — 长鑫存储 DDR5 良率 80% 左右, 2024-12-24](https://finance.sina.com.cn/tech/discovery/2024-12-24/doc-ineahtaz4045543.shtml)
 - [第一财经/财联社 — 长鑫科技更新科创板 IPO 招股书, 2026-05-17](https://www.cls.cn/detail/2373552)
 - [财联社 — 长鑫科技 5月27日上会, 2026-05-21](https://www.stcn.com/article/detail/3918707.html)
+- [证券时报 — 长鑫科技科创板 IPO 过会, 拟募资295亿元, 2026-05-27](https://www.stcn.com/article/detail/3933177.html)
+- [投资界 — 长鑫 IPO 过会, 就等打新, 2026-05-28](https://news.pedaily.cn/202605/564502.shtml)
+- [证监会 — 同意长鑫科技集团股份有限公司首次公开发行股票注册, 2026-06-12](https://finance.sina.com.cn/jjxw/2026-06-12/doc-iniceccp0252040.shtml)
+- [21经济网 — 日赚近4亿! 存储龙头长鑫科技 IPO 有新进展, 2026-05-18](https://www.21jingji.com/article/20260518/herald/f01097574792308cb88be9d8e1c2b320.html)
+- [新浪财经 — 长鑫科技 IPO 估值, PS 法核算或超 7000 亿, 2026-01-08](https://finance.sina.com.cn/stock/observe/2026-01-08/doc-inhfqtyr6649876.shtml)
 - [21世纪经济报道 — 募资 295 亿元 A 股存储芯片第一股来了, 2025-12-31](https://m.21jingji.com/article/20251231/herald/1158b65e5308fc615eef69cc215976d3_zaker.html)
 - [21经济网 — 朱一明深度专访, 2026-01-04](https://www.21jingji.com/article/20260104/herald/67bbeabf0dd3a5bf0d973b49cd337caf.html)
 - [21经济网 — 长鑫科技 IPO 估值 1500 亿, 2026-01-04](https://www.21jingji.com/article/20260104/herald/8d4dfab1ca812163176730bd21fa0506.html)
@@ -388,6 +589,8 @@ DRAM 行业是中美科技博弈的焦点之一。关键事件：
 - [CSIS — Understanding the Biden Administration's Updated Export Controls, 2024-12](https://www.csis.org/analysis/understanding-biden-administrations-updated-export-controls)
 - [Taipei Times — US mulls blacklisting China's CXMT, 2024-03-11](https://www.taipeitimes.com/News/biz/archives/2024/03/11/2003814728)
 - [Asia Times — US lawmakers seek to block China's DUV lithography access, 2026-04](https://asiatimes.com/2026/04/us-lawmakers-seek-to-block-chinas-duv-lithography-access/)
+- [AI Frontiers — High-Bandwidth Memory: The Critical Gaps in US Export Controls, 2026](https://ai-frontiers.org/articles/high-bandwidth-memory-critical-gaps-us-export-controls)
+- [DSET — The Rise of CXMT: Inside the Hydra-like Chinese Memory Sector, 2026](https://dset.tw/en/publication-en/000411/)
 
 ### 估值与同业对照
 
@@ -406,6 +609,35 @@ DRAM 行业是中美科技博弈的焦点之一。关键事件：
 - [VersaLogic — Memory Market Conditions in 2026, 2026-03](https://www.versalogic.com/blog/supply-chain-brief-memory-market-conditions-in-2026/)
 
 ---
+
+<details>
+<summary>Verification log (Step 10) — 2026-06-15</summary>
+
+**本次刷新范围（2026-06-15 refresh）** — 仅做事实增量更新，未重写既有正文（历史 / 产品 / 财务 / 竞争 / 风险均沿用 2026-05-25 已核验内容）。本轮新增 / 修改：①IPO 状态从「5 月 27 日上会审议」推进为「5 月 27 日过会 + 提交注册、6 月 12 日证监会同意注册（注册生效）、预计 7–8 月挂牌」；②头部加入「评级 / 目标价：不适用 — 注册生效待发行（pre-IPO）」+ 一级市场估值锚（隐含市值 ~2,950 亿 / PS 法或超 7,325 亿 / 较 2025-06 私募估值翻倍）；③新增 8.4「卖方观点」横向对照（MS / Bernstein / 国内策略）；④BIS / HBM 出口管制更新至 2026 口径（含与 YMTC 实体清单状态对照）；⑤新增 REQUIRED moneyflow 资金流向 SVG + 两张 Mermaid（DRAM 市占率 pie、工艺代际 G1→G5 tree）。
+
+**新增 URL 检查（2026-06-15，real-browser UA）** — 本轮新增 8 个公开外部 URL，全部返回 HTTP 200：证监会同意注册（sina 06-12）✓、证券时报 过会 295 亿（stcn 05-27）✓、投资界 过会就等打新（pedaily 05-28）✓、新浪 PS 法估值 7000 亿（sina 01-08）✓、21经济 日赚近4亿（05-18）✓、AI Frontiers HBM 出口管制（2026）✓、DSET The Rise of CXMT（2026）✓、招股说明书 PDF（sse.com.cn，复核仍 200）✓。本地 zsxq PDF 链接（MS Healthy Reset / MS Hefei Paradox / Bernstein Japan SPE / 投资策略 IPO 巨舰）为用户机本地 `/zsxq/pdf/<file_id>/<filename>` 直链，已由 `find_pdf.py` 的 `pdf_url` 字段原样粘贴。
+
+**IPO 状态核验（dated source）** — 「2026-06-12 证监会同意长鑫科技 IPO 注册、批复自同意注册之日起 12 个月内有效」经 [证监会公告报道](https://finance.sina.com.cn/jjxw/2026-06-12/doc-iniceccp0252040.shtml) 正文 string-match 确认（`注册` ✓、`12个月` ✓）；「2026-05-27 上市委过会、拟募资 295 亿元」经 [证券时报](https://www.stcn.com/article/detail/3933177.html) string-match 确认（`过会` ✓、`295` ✓）。截至 2026-06-15 公司尚未公布询价 / 发行价 / 申购日，故头部不给评级 / PT、不编造发行价或代码。
+
+**新增数值 string-match（≥5 项）** —
+- 「IPO 注册批复 12 个月内有效」→ sina 06-12 正文含「12个月」✓
+- 「过会 + 募资 295 亿元」→ stcn 05-27 正文含「过会」「295」✓
+- 「PS 法估值或超 7,325 亿元、可比平均 PS 15.32 倍」→ sina 01-08 正文含「7325」「15.32」✓
+- 「较 2025-06 私募估值翻倍」→ sina 01-08 正文含「翻倍」✓
+- 「DRAM 远期 P/E ~5×、三星/SK forward PE 5.2×/4.7×、2026Q3 价格 +20–30%、HBM 2027 +50–100%」→ MS Healthy Reset (zsxq 06-10) OCR 原文逐项核对 ✓
+- 「日系设备在华份额 2024 26%→2025 23%、CXMT 2025 capex 缩减」→ Bernstein (zsxq 06-12) OCR 原文核对 ✓
+
+**图表说明（哪些被跳过、为何）** — 本报告为 **PRIVATE / pre-IPO 名称**：虽有招股说明书披露的三年财务，但**未跳过的图**为：①REQUIRED `moneyflow` 资金流向 SVG（financial_charts.py，资本开支视角，节点均为招股书 / Bernstein 实证供应商与客户）；②既有 PNG（营收利润趋势、营收结构、市占率、研发投入）保留；③新增 Mermaid：全球 DRAM 市占率 `pie`（Omdia 2025Q4）、工艺代际 `graph` 树（G1→G5）、既有 timeline / 产品 graph / 客户集中度 pie 保留。**主动跳过**：损益表 / 资产负债表 / 现金流量 Sankey 与 5 步 DuPont ROE 树——这些需要经审计的完整三表 + 分部明细按图表引擎逐项摆放，招股说明书虽披露汇总数但**不提供可绘制 Sankey 的完整科目级三表与 ASC 280 分部表**，且公司作为非上市主体无持续季度披露，故按 money_flow.md / financial_charts.md 的「披露不足则省略」原则跳过，不编造科目。`lint_report_charts.py`：1 个 inline SVG 全部落在 viewBox 内 ✓；5 个 Mermaid 块（里程碑 timeline / 产品 graph TD / 工艺代际 graph LR / 客户集中度 pie / 全球市占率 pie）均非 quadrantChart / xychart-beta，不触发已知渲染陷阱。
+
+**block-presence 复核（私有名称的 N/A 说明）** — 头部 Rating/PT block = **不适用（private/pre-IPO）**，按 report_structure.md 私有公司规则写为「not applicable — 注册生效待发行」✓；Step 0.5 sec-report-summary = **跳过（私有 / 非美股发行人，无 SEC filing）**；Section 1B GF Score / Section 2 三档 PT bull-base-bear / Section 10 投资者视角评分 = **均不适用**（无二级市场价格 / 无目标价 / 无可锚定的远期估值倍数），以第 1 章末 + 第 8 章的定性估值 / 战略地位讨论替代；卖方观点演变（按机构时间线）以 8.4「卖方观点」横向对照表替代（公司无个股评级 / PT，故为「周期 + 产业政策 + IPO 影响」三机构视角对照，而非 PT 修订时间线）；moneyflow = **存在（REQUIRED，已生成）**；Data Used / 参考资料 manifest = **存在**。
+
+**残余未验证项 / 已知局限（本轮新增）：**
+- 发行价 / 询价区间 / 申购日 / 正式上市日 截至 2026-06-15 均未公布；「预计 7–8 月挂牌」为市场预期（21经济 / 投资界报道），非公司公告，已如实标注。
+- 一级市场估值锚（隐含市值 2,950 亿 / PS 法 7,325 亿 / 私募 1,475 亿）属市场测算与预期，最终发行价以询价为准，已明确标注为假设性比对。
+- 卖方 forward-PE / 价格涨幅数据（MS / Bernstein）来自本地 zsxq 库 PDF，均标注 *分析师观点*、未挂载招股书引用、未声称长鑫官方口径。
+- HBM 量产时间表、上海后道封装基地建成时点仍为第三方报道，公司招股书层面未作承诺（沿用 2026-05-25 已标注的局限）。
+
+</details>
 
 <details>
 <summary>核查日志（Step 10）— 2026-05-25</summary>
@@ -461,5 +693,5 @@ DRAM 行业是中美科技博弈的焦点之一。关键事件：
 
 ---
 
-*本报告完稿于 2026-05-25，主要数据截至 2025-12-31，部分指引数据截至 2026-03-31 (Q1 审阅) 与 2026-06-30 (H1 预告)。报告中所有人民币/外币金额按招股说明书披露口径列示，未作汇率换算（除非特别说明）。*
+*本报告初稿完成于 2026-05-25，于 2026-06-15 刷新（as of 2026-06-15）：IPO 状态更新至「2026-06-12 证监会同意注册（注册生效）、预计 7–8 月挂牌」，新增一级市场估值锚、卖方观点横向对照、资金流向图与工艺代际 / 市占率 Mermaid 图，并将 BIS / HBM 出口管制更新至 2026 口径。主要财务数据截至 2025-12-31，部分指引数据截至 2026-03-31 (Q1 审阅) 与 2026-06-30 (H1 预告)。公司为科创板注册生效待发行（pre-IPO）名称，无评级 / 目标价、无二级市场价格；报告中所有人民币/外币金额按招股说明书披露口径列示，未作汇率换算（除非特别说明）。*
 

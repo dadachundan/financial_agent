@@ -1,0 +1,36 @@
+{
+  "eyebrow": "DRAM 资金流向 · 2026（资本开支视角 / capex view）",
+  "title": "长鑫科技 (CXMT) 的钱流向哪里：设备 / 材料采购 → 上游供应商与国产替代卡点",
+  "thesis": "作为一家 IDM DRAM 厂，长鑫的百亿级资本开支(capex)主要流向晶圆制造设备(光刻 / 刻蚀 / 沉积 / 清洗)与硅片 / 化学品 / 特气等材料；在 ASML EUV 不可获得、美国 BIS 设备管制收紧的背景下，这股现金正从海外巨头(ASML / AMAT / Lam / TEL)向国产卡点(北方华创 / 中微 / 拓荆 / 上海微电子)迁移。产出端则以经销为主，覆盖云厂商(阿里 / 字节 / 腾讯)、PC(联想)与手机(小米 / OPPO / vivo / 传音 / 荣耀)。",
+  "stages": ["长鑫的采购支出", "买什么(设备 / 材料类别)", "钱最终汇向谁(上游卡点)"],
+  "nodes": [
+    {"id": "cxmt", "stage": 0, "label": "长鑫科技 CXMT", "kind": "buyer", "sub": ["中国第一 / 全球第四 DRAM IDM", "合肥三厂 + 北京 ~30万片/月", "募投 295 亿元"], "h": 150},
+    {"id": "litho", "stage": 1, "label": "光刻设备", "kind": "compute", "sub": ["ArF 浸没式 DUV", "多重曝光(无 EUV)"]},
+    {"id": "etchdep", "stage": 1, "label": "刻蚀 / 沉积 / 清洗", "kind": "custom", "sub": ["Dry Etch / Deposition", "Cleaning / Thermal"]},
+    {"id": "matl", "stage": 1, "label": "材料 / 硅片 / 特气", "kind": "power", "sub": ["硅片 / 光阻 / 化学品", "采购单价 3 年下行"]},
+    {"id": "asml", "stage": 2, "label": "ASML", "kind": "foundry", "sub": ["DUV 光刻独家", "EUV 仍被管制"]},
+    {"id": "amatlam", "stage": 2, "label": "AMAT / Lam / TEL", "kind": "neutral", "sub": ["刻蚀 / 沉积海外三强", "经新马出货规避管制"]},
+    {"id": "naura", "stage": 2, "label": "北方华创 / 中微 / 拓荆", "kind": "silicon", "sub": ["国产设备卡点替代", "清洗 / 沉积国产化提速"]},
+    {"id": "matlsup", "stage": 2, "label": "信越 / SUMCO / 沪硅 / 立昂微", "kind": "memory", "sub": ["硅片日美主导", "国产硅片 / 特气补位"]}
+  ],
+  "flows": [
+    {"from": "cxmt", "to": "litho", "weight": 22, "style": "direct", "label": "光刻 capex"},
+    {"from": "cxmt", "to": "etchdep", "weight": 24, "style": "direct", "label": "刻蚀/沉积 capex"},
+    {"from": "cxmt", "to": "matl", "weight": 16, "style": "direct", "label": "材料采购"},
+    {"from": "litho", "to": "asml", "weight": 20, "style": "direct"},
+    {"from": "etchdep", "to": "amatlam", "weight": 16, "style": "direct"},
+    {"from": "etchdep", "to": "naura", "weight": 14, "style": "direct"},
+    {"from": "litho", "to": "naura", "weight": 6, "style": "embedded"},
+    {"from": "matl", "to": "matlsup", "weight": 14, "style": "direct"}
+  ],
+  "cards_title": "Follow the money — 长鑫的现金流向与国产替代卡点",
+  "cards": [
+    {"kind": "buyer", "tag": "支出 · 资本开支", "title": "百亿级 capex 是核心现金出口", "body": "长鑫本次募投 *295 亿元*，其中 *75 亿元* 用于晶圆制造产线技术升级、*130 亿元* 用于 DRAM 技术升级、*90 亿元* 用于前瞻技术(HBM / CXL / 存内计算)。三厂叠加产能逼近 *月产 30 万片* 12 英寸晶圆，设备 + 材料是 capex 的主要去向。"},
+    {"kind": "foundry", "tag": "卡点 · 光刻", "title": "ASML 仍是绕不开的卡点", "body": "长鑫 G3 / G4 / G5 工艺均靠 *ArF 浸没式 DUV* + 多重曝光绕过 *EUV* 管制；但 DUV 光刻仍高度依赖 *ASML*，美国 2026 年 4 月有议员提议进一步收紧 DUV 对华出口——这是 capex 链条上最大的单点风险。"},
+    {"kind": "silicon", "tag": "迁移 · 国产替代", "title": "现金正流向国产设备卡点", "body": "伯恩斯坦(Bernstein)指出，长鑫 *2025 年资本开支缩减* 且尝试国产化，少下日本(*TEL / Screen / Kokusai*)订单造成日系在华份额\"表面下滑\"；清洗 / 沉积环节国产化(*北方华创 / 中微 / 拓荆*)提速，现金从海外向国产卡点迁移。"},
+    {"kind": "power", "tag": "成本 · 材料下行", "title": "材料采购单价三年下行", "body": "招股书披露报告期化学品价格指数 *100→91.13→73.72*、硅片 *100→76.30→69.99*、备件 *100→105.58→53.33*；国产替代红利 + 议价能力提升压低材料成本，是毛利率从 *-2.19%* 改善到 *41.02%* 的隐性贡献。"},
+    {"kind": "compute", "tag": "产出 · 下游客户", "title": "钱从下游回流：云 + 手机 + PC", "body": "产出端以经销为主(*85.38%*)，核心客户覆盖 *阿里云 / 字节 / 腾讯*(云)、*联想*(PC)、*小米 / OPPO / vivo / 传音 / 荣耀*(手机)；前五大客户占主营 *68.08%*，AI 超级周期下合约价大涨带动现金快速回流。"},
+    {"kind": "memory", "tag": "上方期权 · HBM", "title": "HBM 后道封装是新的资金去向", "body": "上海 HBM 后道封装基地计划 *2026 年底* 建成，TSV / wafer bonding / stacking 设备(部分国产 NAURA / 新益昌)是新增 capex 去向；若 HBM3 量产成功，将打开对接华为昇腾国产 GPU 的高利润现金回流。"}
+  ],
+  "source": "长鑫科技 招股说明书(申报稿) 第 30/154-155 页, 2026-05-17 (sse.com.cn); Bernstein — Japan Semi Equipment: reversing share loss in China?, 2026-06-12; 证监会同意注册批复, 2026-06-12"
+}
