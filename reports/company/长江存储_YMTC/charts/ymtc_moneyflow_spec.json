@@ -1,0 +1,53 @@
+{
+  "eyebrow": "国产 NAND 供应链资金流 · 2026",
+  "title": "钱从哪来、流向何方：长江存储 (YMTC) 的供应链资金链",
+  "thesis": "国产手机 / 云厂商 / 贴牌客户的采购汇入 YMTC 的 NAND 与 SSD 产品线，再以 capex 与材料采购形式流出，最终汇集到少数设备与材料卡点——其中关键蚀刻 / 沉积设备的国产替代（中微 AMEC、北方华创 Naura、拓荆 Piotech）是 Entity List 后能否继续扩产的命门。",
+  "stages": ["谁在付钱（终端需求）", "长江存储产品线", "钱最终汇向哪（设备 / 材料卡点）"],
+  "width": 1240,
+  "nodes": [
+    {"id": "phone", "stage": 0, "label": "国产手机 OEM", "kind": "buyer", "sub": ["小米 / OPPO / vivo / 传音", "UFS / eMMC 嵌入式"], "h": 110},
+    {"id": "cloud", "stage": 0, "label": "中国云厂商", "kind": "buyer2", "sub": ["阿里云 / 字节 / 腾讯", "企业级 SSD · HDD 替代"], "h": 110},
+    {"id": "oem", "stage": 0, "label": "贴牌 / 模组客户", "kind": "buyer2", "sub": ["Lexar / HP / Acer / Kingston", "wafer / die 直销"], "h": 100},
+    {"id": "retail", "stage": 0, "label": "消费零售", "kind": "buyer", "sub": ["京东 / 天猫", "致态 ZhiTai 自有品牌"], "h": 90},
+
+    {"id": "wafer", "stage": 1, "label": "3D NAND 晶圆 / 颗粒", "kind": "inhouse", "sub": ["Xtacking 4.0 · 232–294L", "X5-9080 >300L (2026E)"], "h": 130},
+    {"id": "ssd", "stage": 1, "label": "致态 / 企业级 SSD", "kind": "compute", "sub": ["TiPro9000 PCIe5", "SE006 企业级"], "h": 110},
+    {"id": "hbf", "stage": 1, "label": "HBM / HBF 新业务", "kind": "memory", "sub": ["TSV + 混合键合", "三期 ~50% 改 DRAM"], "h": 100},
+
+    {"id": "etch", "stage": 2, "label": "蚀刻 / 沉积设备", "kind": "neutral", "color": "#e0a64a", "sub": ["中微 AMEC · 北方华创 Naura", "拓荆 Piotech (CVD/ALD)", "三期国产化率 >50%"], "h": 130},
+    {"id": "litho", "stage": 2, "label": "光刻设备", "kind": "rf", "sub": ["ASML 库存机 (受限新购)", "上海微电子 SMEE 28nm"], "h": 110},
+    {"id": "us_tool", "stage": 2, "label": "美系卡点设备", "kind": "silicon", "sub": ["Lam / AMAT / KLA", "Entity List 禁新购"], "h": 110},
+    {"id": "ctrl", "stage": 2, "label": "SSD 主控 / 材料", "kind": "foundry", "sub": ["慧荣 SMI · 群联 Phison", "电子特气 / 前驱体"], "h": 100}
+  ],
+  "flows": [
+    {"from": "phone", "to": "wafer", "weight": 22, "style": "direct", "label": "~35% 出货"},
+    {"from": "cloud", "to": "ssd", "weight": 16, "style": "direct", "label": "~20% 出货"},
+    {"from": "cloud", "to": "wafer", "weight": 8, "style": "direct"},
+    {"from": "oem", "to": "wafer", "weight": 12, "style": "direct", "label": "~15% wafer/die"},
+    {"from": "retail", "to": "ssd", "weight": 12, "style": "direct", "label": "致态 ~15%"},
+    {"from": "wafer", "to": "hbf", "weight": 6, "style": "embedded"},
+
+    {"from": "wafer", "to": "etch", "weight": 22, "style": "direct", "label": "capex 卡点"},
+    {"from": "wafer", "to": "litho", "weight": 12, "style": "direct"},
+    {"from": "wafer", "to": "us_tool", "weight": 10, "style": "embedded", "label": "存量依赖"},
+    {"from": "ssd", "to": "ctrl", "weight": 10, "style": "direct"},
+    {"from": "hbf", "to": "etch", "weight": 6, "style": "embedded"},
+    {"from": "hbf", "to": "us_tool", "weight": 5, "style": "embedded"}
+  ],
+  "cards_title": "顺着钱看 — 谁付钱、钱汇向哪个卡点",
+  "cards": [
+    {"kind": "buyer", "tag": "需求侧 · 内循环主导", "title": "国产手机 + 云厂商是引擎",
+     "body": "国产手机 OEM 约占 *35%* 出货、中国云厂商约 *20%*；正是 *Apple* 退出后大陆市场的国产替代刚性，把 YMTC 份额从 2025 年的约 *8%* 抬到 2026 Q1 的约 *13%*。"},
+    {"kind": "inhouse", "tag": "产品 · 工艺爬坡", "title": "Xtacking 4.0 → X5-9080",
+     "body": "232–294 层 TLC 已量产，*X5-9080* 计划 *2026* 年内将 *>300* 层推向量产（三 deck 堆叠），并探索 *HBF* (high-bandwidth flash) 新方向。"},
+    {"kind": "neutral", "tag": "卡点 · 命门", "title": "蚀刻 / 沉积设备的国产替代",
+     "body": "三期 (Phase III) 国产化设备率已 *>50%*，关键供应商为 *中微 AMEC*、*北方华创 Naura*、*拓荆 Piotech*；这是 Entity List 后能否继续扩产的根本约束。"},
+    {"kind": "silicon", "tag": "卡点 · 受限", "title": "美系设备禁新购",
+     "body": "*Lam* / *AMAT* / *KLA* 的最先进蚀刻、检测设备受 *BIS Entity List* 限制不得新购，YMTC 对 >10:1 高深宽比 etch 仍部分依赖存量 *ASML* / 美系机台。"},
+    {"kind": "memory", "tag": "第二曲线 · 早期", "title": "HBM / HBF 跨界",
+     "body": "三期约 *50%* 产能拟改 *DRAM*，并经 *TSV* + 混合键合切入 *HBM*；YMTC 既有的混合键合工艺与 HBM 路线高度同构，但量产时间表未公开。"},
+    {"kind": "compute", "tag": "产品 · 垂直一体化", "title": "致态自有品牌提毛利",
+     "body": "*致态 TiPro9000* (PCIe5, 14.5 GB/s) 经京东 / 天猫直销，毛利较 OEM wafer 直销高约 *8–12* 个百分点，是利润结构改善的关键。"}
+  ],
+  "source": "Digitimes (2025-11 / 2026-06), Tom's Hardware (2026-04), Caixin Global (2026-06-04), TrendForce (2025-09) — 节点均为公开披露的真实供应商 / 客户；比例为分析师估算（详见报告 §4.2 / §5.1 / §7.4）"
+}
