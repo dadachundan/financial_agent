@@ -1,10 +1,46 @@
 # Mobileye Global Inc.（NASDAQ:MBLY）—— 公司研究
 
-**截至日期:** 2026-06-03
+**截至日期:** 2026-06-15
 **股票代码:** MBLY（NASDAQ Global Select Market — Class A）
 **注册 / 总部:** Delaware（注册）/ 耶路撒冷，以色列
 **母公司持股:** 截至 2026-02-03，Intel Corporation 持有约 77.0% 的普通股 / 约 96.9% 的投票权（双层股权结构）
 **会计年度:** 52/53 周制，财年末为最接近 12 月 31 日的星期六（FY2025 截至 2025-12-27）
+
+---
+
+### 投资摘要（Investment Summary）— *分析师观点（Analyst view），非 filing 数据*
+
+| 项目 | 取值 |
+|---|---|
+| **评级 Rating** | **Hold / Neutral（持有）** |
+| **12 个月目标价 (Price Target)** | **USD 11.0** |
+| 现价（2026-06-15 附近） | USD 9.34 |
+| 隐含空间 | **+17.8%** |
+| 估值方法 | EV/Sales 与调整后盈利能力混合：~2.5× FY2027E EV/Sales（FCF 提供下行支撑）；与卖方共识中位数 $11 一致 |
+| 市值 | ~USD 7.87B |
+| 52 周区间 | USD 6.47 – 20.18 |
+| 母公司 | Intel 持股 ~77.0% / 投票权 ~96.9%（二次发行 overhang） |
+
+**前视估值矩阵（forward valuation matrix，分析师估算）**
+
+| 倍数 | FY2025A | FY2026E | FY2027E |
+|---|---|---|---|
+| EV/Sales | 3.5× | 3.3× | 3.1× |
+| Forward P/E（GAAP） | NM | NM | NM |
+| Forward P/E（Adjusted） | ~28× | ~24× | ~20× |
+| P/B | 0.96× | — | — |
+
+*GAAP P/E 因收购无形资产摊销 (acquired-intangible amortization) 与 Q1 2026 的 $3,788M 商誉减值 (goodwill impairment) 结构性为负 (NM)；现金经营基本面以 Adjusted Operating Income 计为正。*
+
+**相对表现 (relative performance)：** MBLY 过去 12 个月约 -54%（从 52 周高 $20.18 跌至 $9.34），同期 S&P 500 与半导体板块均录得正回报 —— 显著跑输，反映 GAAP 减值、中国 ADAS 收入重置与 in-house 芯片竞争担忧（[yfinance MBLY 52 周区间与价格, as of 2026-06-15](https://finance.yahoo.com/quote/MBLY/)）。
+
+**投资逻辑四支柱 (thesis pillars，*分析师观点*)：**
+1. **现金牛底盘 + 期权上行。** EyeQ ADAS 基础业务自由现金流 (FCF) 为正、资产负债表净现金约 $1.8B、几乎零有息负债 —— 为 SuperVision (L2++)→ Chauffeur (L3)→ Drive (L4 robotaxi) 的产品阶梯提供了"烧不死"的下行支撑；$24.5B 的 8 年 pipeline 是期权价值。
+2. **但上行高度依赖尚未兑现的西方 OEM L2++/L3 中标。** GS 明确指出"近期缺乏与西方 OEM 的 SuperVision / Chauffeur 新中标"是其维持 Neutral 的核心理由 —— pipeline 多为基础 ADAS 续标，高 ASP 项目放量集中在 2027–2028+。
+3. **中国 ADAS 收入重置 + in-house 芯片竞争是结构性逆风。** 中国占收入 23%，但本土 OEM 正转向自研或采用 Horizon / 华为 / 高通方案；这是 MBLY 估值长期承压的主因。
+4. **Intel 减持 overhang。** Intel 仍持 ~77% / ~96.9% 投票权，任何二次发行 (secondary offering) 都会构成供给冲击。
+
+---
 
 > **业绩指引上调 — FY2026 全年指引 (2026-04-23):** 管理层将 2026 全年收入指引中值上调约 2%，至 **USD 1,935–2,015 百万**（原 USD 1,900–1,980 百万，2026-01-22 指引）；将调整后经营利润 (Adjusted Operating Income) 指引中值上调约 8%，至 **USD 185–235 百万**（原 USD 170–220 百万）。上调原因：Q1 2026 EyeQ SoC 出货量 "同比增长 28%"，加上 Q1 公布的 Mahindra 公司 SuperVision / Surround ADAS 设计中标（"为 Surround ADAS 新增第三家客户"）。资料来源:[Q1 2026 earnings press release, 2026-04-23, 第 1 页 & 指引表](https://www.sec.gov/Archives/edgar/data/1910139/000110465926047231/tm2612233d1_ex99-1.htm)。
 
@@ -12,15 +48,16 @@
 
 ## 目录
 
-1. 公司概览
+1. 公司概览（含 1A 估值快照 · 1B GF Score 基本面打分）
 2. 公司历史
+2A. 估值与目标价（前瞻模型 · PT 推导 · bull/base/bear · 卖方观点演变）
 3. 管理团队
 4. 产品与服务
 5. 客户与上市策略
 6. 行业概览
 7. 竞争格局
 8. 市场机会（TAM）
-9. 风险评估
+9. 风险评估（含 9.5 关键分歧与催化剂）
 10. 投资视角打分
 11. 数据来源清单
 12. 参考资料
@@ -38,7 +75,7 @@ Mobileye Global 是全球部署量最大的计算机视觉 ADAS（advanced drive
 
 **FY2025 GAAP 损益规模.** 收入 $1,894M（同比 +14.5%，从 FY24 库存去化低点恢复）；毛利 $904M（毛利率 48%）；研发费用 $1,151M（占收入 61% —— Mobileye 财务画像的最显著特征）；销售与市场 $113M（6%）；管理费用 $80M（4%）；经营亏损 $(440)M（经营利润率 -23%）；净亏损 $(392)M。Adjusted（剔除 $443M 收购无形资产摊销 + $277M 股份支付）口径下 Adjusted Gross Margin 为 68%、Adjusted Operating Income 为 $280M（调整后经营利润率 15%）（[FY2025 10-K, MD&A Results of Operations](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。经营性现金流 FY25 为 $602M（同比 +51%），FY25 末现金 ~$1.8B 且基本无息债务 —— 这是在 Feb 3, 2026 完成 Mentee 收购、动用 $612M 现金之前的数据（[FY2025 earnings press release, 2026-01-22, p.1](https://www.sec.gov/Archives/edgar/data/1910139/000110465926005578/tm263599d1_ex99-1.htm)）。
 
-**估值快照（2026-06-02 收盘附近）.** 股价 $10.79；市值约 $9.09B；TTM 收入 $2.01B；**TTM P/E n/a（LTM Net Loss = $(4.11)B，受 Q1 2026 的 $3,788M goodwill impairment 一次性减值拖累）**；TTM P/S = 4.51×；Forward P/E = 48.32×；Forward P/S = 4.67×；EV/Sales = 3.88×（每股净现金 $1.52）；P/B = 1.11×；FCF yield = 5.2%；卖方共识 12 个月目标价 $13.29（30 家覆盖、共识评级 "Buy"，距现价 +23.2%）。资料来源:[stockanalysis.com MBLY statistics, as of 2026-06-02](https://stockanalysis.com/stocks/mbly/statistics/)（与 [yfinance MBLY info](https://finance.yahoo.com/quote/MBLY/key-statistics) 交叉核对）。
+**估值快照（截至 2026-06-15）.** 股价 $9.34（较 2026-06-02 报告的 $10.79 进一步回落，过去 12 个月约 -54%）；市值约 $7.87B；企业价值 (EV) $6.58B；TTM 收入 $2.01B；**TTM P/E n/a（LTM Net Loss 主要受 Q1 2026 的 $3,788M goodwill impairment 一次性非现金减值拖累）**；TTM P/S = 3.91×；**Forward P/E = 25.96×**（较 2026-06-02 报告的 48× 大幅下降，反映卖方将 FY26/27 调整后 EPS 上修后远期分母变化）；EV/Sales = 3.27×；**P/B = 0.96×（已跌破账面价值）**；52 周区间 $6.47–20.18。卖方共识 (29 家覆盖) 12 个月目标价均值 $13.29 / 中位数 $11.00 / 高 $27 / 低 $8 —— **目标价离散度极大，反映买卖双方对 AV/L2++ 兑现节奏的根本分歧**（见 2A 节卖方观点演变）。资料来源:[yfinance MBLY key-statistics, as of 2026-06-15](https://finance.yahoo.com/quote/MBLY/key-statistics)（与 [stockanalysis.com MBLY statistics](https://stockanalysis.com/stocks/mbly/statistics/) 交叉核对）。
 
 **对 TTM 负 P/E 与远期高倍数的解读.** TTM 净亏主要由 Q1 2026 录得的 **$3,788M 商誉非现金减值** 引起 —— 公司自己的措辞:" 资产负债表上的商誉源自 Intel 2017 年收购 Mobileye，于 IPO 及 2022 年从 Intel 分拆时下推入子公司账本。本季由于 Class A 普通股股价较前次评估时下跌 35%……我们进行了商誉减值复评……产生了非现金减值损失 "（[Q1 2026 10-Q, Note on Goodwill](https://www.sec.gov/Archives/edgar/data/1910139/000110465926047712/mbly-20260328x10q.htm)；[Q1 2026 press release, 经营利润率 commentary](https://www.sec.gov/Archives/edgar/data/1910139/000110465926047231/tm2612233d1_ex99-1.htm)）。剔除该项一次性后，FY25 Adjusted EBIT 利润率为 +15%、Q1 2026 Adjusted Operating Income 利润率为 +17% —— 即"现金经营基本面"是盈利的。Forward P/E 48× 反映两大缺口:(a) 经营性现金流（free cash flow $473M，FCF 收益率 5.2%）与（b）受 Intel 收购步入摊销影响的 GAAP 净利之间。同业比较中:Aptiv P/S 0.9×、Continental P/S 0.3×（传统 Tier 1）；NVIDIA Auto 嵌套在母公司 30× P/E 中（无法纯比对）；Ambarella P/S 6.0×（最接近的纯 ADAS 视觉 silicon 比较对象）。MBLY 当前 P/S 4.5× 较传统 Tier 1 ADAS 供应商溢价约 5×、较 Ambarella 折价约 25%（[Stockanalysis MBLY peer overview, 2026-06-02](https://stockanalysis.com/stocks/mbly/statistics/)）。
 
@@ -55,6 +92,370 @@ xychart-beta
 *Bars = 收入（US$M）；line = EyeQ 系统出货量（百万套）。资料来源:[Q1 2026 press release, EyeQ 收入 / 单位 / ASP 表](https://www.sec.gov/Archives/edgar/data/1910139/000110465926047231/tm2612233d1_ex99-1.htm)。*
 
 Q4 2025 单季同比下降 11% 反映 Tier 1 客户"年末库存比常态紧 "（Q4 2025 EyeQ 单位同比 -11%）；Q1 2026 +27% YoY 的反弹是安全库存补足叠加 EyeQ6 High 放量启动 —— 与 FY24（全年收入同比 -20% 至 $1.65B，自 FY23 库存峰值 $2.08B 回落）相同的库存周期波动（[FY2025 earnings press release, Q4 commentary](https://www.sec.gov/Archives/edgar/data/1910139/000110465926005578/tm263599d1_ex99-1.htm)；[Q1 2026 press release, Q1 commentary](https://www.sec.gov/Archives/edgar/data/1910139/000110465926047231/tm2612233d1_ex99-1.htm)）。
+
+### 1A 财务画像图（FY2025，来自公司自身报表）
+
+下面的利润表 / 资产负债表 / 现金流量表 Sankey 与收入构成图，全部取自 Mobileye 自身 FY2025 10-K 的合并报表与分部 / 地域附注，便于一眼看清"钱怎么进、怎么出、最终留下多少"。
+
+**利润表 Sankey（GAAP）.** 收入 $1,894M 经 COGS $990M 后得毛利 $904M（gross margin 48%）；但运营费用合计 $1,344M（其中 R&D $1,151M 占收入 61%、收购无形资产摊销 $377M），导致 GAAP 营业亏损 $(440)M、净亏损 $(392)M。注意这张图按"亏损口径"布局：营业亏损作为左侧补充来源汇入运营费用池，因此节点守恒、不溢出画布（[Mobileye FY2025 10-K, MD&A Results of Operations](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Mobileye FY2025 利润表 Sankey (GAAP，US$M)</text>
+<path d="M 204.00,78.00 C 258.00,78.00 258.00,85.00 312.00,85.00 L 312.00,456.38 C 258.00,456.38 258.00,449.38 204.00,449.38 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,95.63 560.00,95.63 L 560.00,97.63 C 506.00,97.63 506.00,80.00 452.00,80.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,80.00 C 506.00,80.00 506.00,111.63 560.00,111.63 L 560.00,482.37 C 506.00,482.37 506.00,450.73 452.00,450.73 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,81.63 C 754.00,81.63 754.00,288.00 808.00,288.00 L 808.00,290.00 C 754.00,290.00 754.00,83.63 700.00,83.63 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,272.74 C 382.00,272.74 382.00,279.74 328.00,279.74 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,279.74 C 382.00,279.74 382.00,286.74 436.00,286.74 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,95.63 C 630.00,95.63 630.00,81.63 684.00,81.63 L 684.00,83.63 C 630.00,83.63 630.00,97.63 576.00,97.63 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,111.63 C 630.00,111.63 630.00,97.63 684.00,97.63 L 684.00,139.21 C 630.00,139.21 630.00,153.21 576.00,153.21 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,153.21 C 630.00,153.21 630.00,153.21 684.00,153.21 L 684.00,401.15 C 630.00,401.15 630.00,401.15 576.00,401.15 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,401.15 C 630.00,401.15 630.00,415.15 684.00,415.15 L 684.00,496.37 C 630.00,496.37 630.00,482.37 576.00,482.37 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,463.38 C 258.00,463.38 258.00,456.38 312.00,456.38 L 312.00,493.00 C 258.00,493.00 258.00,500.00 204.00,500.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="371.38" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="463.38" width="16" height="36.62" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="194.74" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="286.74" width="16" height="213.26" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="95.63" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="111.63" width="16" height="370.73" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="81.63" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="97.63" width="16" height="41.58" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="153.21" width="16" height="247.95" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="415.15" width="16" height="81.21" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="288.00" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="260.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">EyeQ SoC + 视觉软件 (~91%)</text>
+<text x="179.00" y="273.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.7B  (91.0%)</text>
+<text x="179.00" y="478.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SuperVision/其他 (~9%)</text>
+<text x="179.00" y="491.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$170.0M  (9.0%)</text>
+<rect x="331.00" y="67.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.9B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$904.0M  (47.7%)</text>
+<rect x="455.00" y="268.74" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="280.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="293.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$990.0M  (52.3%)</text>
+<rect x="579.00" y="77.63" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="89.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="102.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$440.0M  (-23.2%)</text>
+<rect x="579.00" y="102.63" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="114.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="127.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.7B  (90.9%)</text>
+<rect x="703.00" y="63.63" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="75.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="88.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$440.0M  (-23.2%)</text>
+<rect x="703.00" y="88.63" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="100.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="113.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$193.0M  (10.2%)</text>
+<rect x="703.00" y="135.21" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="147.21" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="160.21" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.2B  (60.8%)</text>
+<rect x="703.00" y="397.15" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="409.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="422.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$377.0M  (19.9%)</text>
+<text x="833.00" y="286.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="299.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$392.0M  (-20.7%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">GAAP 口径：营业亏损 440（其中含收购无形资产摊销 377）；调整后营业利润为正 280</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Mobileye FY2025 10-K, MD&amp;A Results of Operations (Rev 1,894 / GP 904 / opex 1,344 / 营业亏损 440 / 净亏损 392)</text>
+</svg>
+
+**资产负债表 Sankey.** 总资产 $12,492M 中商誉 (goodwill) 高达 $8,200M（占 66%，源自 Intel 2017 年收购的下推会计 push-down accounting），无形资产 $1,166M；总负债仅 $611M、几乎零有息债务，股东权益 $11,881M。注意此图为 Q1 2026 商誉减值 $3,788M 之前的状态（[Mobileye FY2025 10-K, Consolidated Balance Sheets](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Mobileye FY2025 资产负债表 Sankey (US$M)</text>
+<path d="M 204.00,64.00 C 262.00,64.00 262.00,92.00 320.00,92.00 L 320.00,153.73 C 262.00,153.73 262.00,125.73 204.00,125.73 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,85.00 C 790.00,85.00 790.00,85.00 848.00,85.00 L 848.00,98.65 C 790.00,98.65 790.00,98.65 732.00,98.65 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,92.00 C 658.00,92.00 658.00,85.00 716.00,85.00 L 716.00,98.65 C 658.00,98.65 658.00,105.65 600.00,105.65 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,92.00 C 394.00,92.00 394.00,99.00 452.00,99.00 L 452.00,182.31 C 394.00,182.31 394.00,175.31 336.00,175.31 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,105.65 C 658.00,105.65 658.00,112.65 716.00,112.65 L 716.00,119.54 C 658.00,119.54 658.00,112.54 600.00,112.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,99.00 C 526.00,99.00 526.00,92.00 584.00,92.00 L 584.00,112.54 C 526.00,112.54 526.00,119.54 468.00,119.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,119.54 C 526.00,119.54 526.00,126.54 584.00,126.54 L 584.00,526.00 C 526.00,526.00 526.00,519.00 468.00,519.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,112.65 C 790.00,112.65 790.00,112.65 848.00,112.65 L 848.00,119.54 C 790.00,119.54 790.00,119.54 732.00,119.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,126.54 C 658.00,126.54 658.00,133.54 716.00,133.54 L 716.00,533.00 C 658.00,533.00 658.00,526.00 600.00,526.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,133.54 C 790.00,133.54 790.00,133.54 848.00,133.54 L 848.00,533.00 C 790.00,533.00 790.00,533.00 732.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,139.73 C 262.00,139.73 262.00,153.73 320.00,153.73 L 320.00,175.31 C 262.00,175.31 262.00,161.31 204.00,161.31 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,175.31 C 262.00,175.31 262.00,189.31 320.00,189.31 L 320.00,205.22 C 262.00,205.22 262.00,191.22 204.00,191.22 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,189.31 C 394.00,189.31 394.00,182.31 452.00,182.31 L 452.00,519.00 C 394.00,519.00 394.00,526.00 336.00,526.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,205.22 C 262.00,205.22 262.00,205.22 320.00,205.22 L 320.00,244.42 C 262.00,244.42 262.00,244.42 204.00,244.42 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,258.42 C 262.00,258.42 262.00,244.42 320.00,244.42 L 320.00,520.12 C 262.00,520.12 262.00,534.12 204.00,534.12 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,548.12 C 262.00,548.12 262.00,520.12 320.00,520.12 L 320.00,526.00 C 262.00,526.00 262.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="61.73" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="139.73" width="16" height="21.59" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="175.31" width="16" height="15.90" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="205.22" width="16" height="39.20" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="258.42" width="16" height="275.70" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="548.12" width="16" height="5.88" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="92.00" width="16" height="83.31" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="189.31" width="16" height="336.69" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="99.00" width="16" height="420.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="92.00" width="16" height="20.54" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="126.54" width="16" height="399.46" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="85.00" width="16" height="13.65" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="112.65" width="16" height="6.89" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="133.54" width="16" height="399.46" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="85.00" width="16" height="13.65" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="112.65" width="16" height="6.89" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="133.54" width="16" height="399.46" rx="1.5" fill="#15803d"/>
+<line x1="188.00" y1="94.86" x2="182.00" y2="73.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="76.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">现金 Cash</text>
+<text x="179.00" y="89.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.8B  (14.7%)</text>
+<line x1="188.00" y1="150.52" x2="182.00" y2="128.66" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="131.66" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">应收+存货+其他流动</text>
+<text x="179.00" y="144.66" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$642.0M  (5.1%)</text>
+<line x1="188.00" y1="183.27" x2="182.00" y2="161.40" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="164.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">物业设备 PP&amp;E</text>
+<text x="179.00" y="177.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$473.0M  (3.8%)</text>
+<line x1="188.00" y1="224.82" x2="182.00" y2="202.95" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="205.95" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">无形资产 Intangibles</text>
+<text x="179.00" y="218.95" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.2B  (9.3%)</text>
+<line x1="188.00" y1="396.27" x2="182.00" y2="374.40" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="377.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">商誉 Goodwill</text>
+<text x="179.00" y="390.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$8.2B  (65.6%)</text>
+<line x1="188.00" y1="551.06" x2="182.00" y2="529.19" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="532.19" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他长期资产</text>
+<text x="179.00" y="545.19" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$175.0M  (1.4%)</text>
+<rect x="339.00" y="74.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.5B  (19.8%)</text>
+<rect x="339.00" y="171.31" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="183.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="196.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$10.0B  (80.2%)</text>
+<rect x="471.00" y="81.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="93.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="106.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$12.5B  (100.0%)</text>
+<rect x="603.00" y="74.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$611.0M  (4.9%)</text>
+<rect x="603.00" y="108.54" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="120.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="133.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$11.9B  (95.1%)</text>
+<rect x="735.00" y="67.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$406.0M  (3.3%)</text>
+<rect x="735.00" y="94.65" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="106.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="119.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$205.0M  (1.6%)</text>
+<rect x="735.00" y="119.65" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="131.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="144.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$11.9B  (95.1%)</text>
+<text x="873.00" y="88.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">流动负债 Current</text>
+<text x="873.00" y="101.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$406.0M  (3.3%)</text>
+<text x="873.00" y="113.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">非流动负债 Non-current</text>
+<text x="873.00" y="126.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$205.0M  (1.6%)</text>
+<text x="873.00" y="330.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股东权益 Equity</text>
+<text x="873.00" y="343.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$11.9B  (95.1%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">商誉 8,200 占总资产 66%（Intel 2017 收购下推）；几乎零有息负债</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Mobileye FY2025 10-K, Consolidated Balance Sheets (总资产 12,492 / 总负债 611 / 权益 11,881)</text>
+</svg>
+
+**现金流量表 Sankey.** 经营现金流 (CFO) $602M（同比 +51%）远高于 GAAP 净亏损 —— 因为净亏损里含 $377M 摊销等大额非现金项；资本开支轻（$91M），自由现金流约 $511M；现金从期初 $1,426M 增至期末 $1,836M（[Mobileye FY2025 10-K, Consolidated Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。这张图是理解 MBLY"GAAP 亏损但现金为正"画像的关键。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Mobileye FY2025 现金流量表 Sankey (US$M)</text>
+<path d="M 204.00,71.00 C 361.00,71.00 361.00,78.00 518.00,78.00 L 518.00,402.86 C 361.00,402.86 361.00,395.86 204.00,395.86 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,78.00 C 691.00,78.00 691.00,64.00 848.00,64.00 L 848.00,84.73 C 691.00,84.73 691.00,98.73 534.00,98.73 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,98.73 C 691.00,98.73 691.00,98.73 848.00,98.73 L 848.00,122.88 C 691.00,122.88 691.00,122.88 534.00,122.88 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,122.88 C 691.00,122.88 691.00,136.88 848.00,136.88 L 848.00,554.00 C 691.00,554.00 691.00,540.00 534.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,409.86 C 361.00,409.86 361.00,402.86 518.00,402.86 L 518.00,540.00 C 361.00,540.00 361.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="324.86" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="409.86" width="16" height="137.14" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="20.73" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="98.73" width="16" height="24.15" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="136.88" width="16" height="417.12" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="230.43" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="243.43" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.4B  (70.3%)</text>
+<rect x="207.00" y="391.86" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="403.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="416.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$602.0M  (29.7%)</text>
+<rect x="537.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.0B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$91.0M  (4.5%)</text>
+<rect x="867.00" y="80.73" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="92.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="105.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$106.0M  (5.2%)</text>
+<text x="873.00" y="342.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="355.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.8B  (90.3%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">经营现金流 602（同比 +51%）；资本开支轻 91 → FCF 约 511；现金 1,426 → 1,836  ·  Free Cash Flow = CFO − CapEx = $511.0M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Mobileye FY2025 10-K, Consolidated Statements of Cash Flows (CFO 602 / 投资 -91 / 筹资 -106 / 期末现金 1,836)</text>
+</svg>
+
+**收入构成（按产品 / 按出货地）.** EyeQ SoC + 视觉/AI 软件占收入约 91%，SuperVision/Drive/其他约 9%；按出货地，中国 $428M (23%)、美国 $416M (22%) 两国合计 45%，是收入也是地缘风险的集中点（[Mobileye FY2025 10-K, Item 1 & Revenue by ship-to country Note](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Mobileye FY2025 收入构成（按产品，US$M）</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 217.44,127.64 L 246.31,173.28 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 217.44,127.64 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 246.31,173.28 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">MBLY 1,894</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$1.9B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="326.40" y1="371.75" x2="342.40" y2="371.75" stroke="#2563eb" stroke-width="1.4"/>
+<text x="346.40" y="369.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">EyeQ SoC + 视觉/AI 软件 (~91%)</text>
+<text x="346.40" y="383.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.7B  (91.0%)</text>
+<line x1="249.60" y1="106.65" x2="233.60" y2="106.65" stroke="#15803d" stroke-width="1.4"/>
+<text x="229.60" y="104.65" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">SuperVision/Drive/其他 (~9%)</text>
+<text x="229.60" y="118.65" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$170.0M  (9.0%)</text>
+<text x="360.00" y="430.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">EyeQ 仍是绝对主体；SuperVision/Drive 单车价值 10–20× 但占比尚低</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Mobileye FY2025 10-K, MD&amp;A &amp; Item 1 (EyeQ 占比约 91%；SuperVision 含 ECU)</text>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Mobileye FY2025 收入构成（按出货地，US$M）</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 418.50,219.35 L 365.11,227.47 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 418.50,219.35 A 132 132 0 0 1 332.23,363.57 L 314.14,312.69 A 78 78 0 0 0 365.11,227.47 Z" fill="#15803d"/>
+<path d="M 332.23,363.57 A 132 132 0 0 1 208.79,344.79 L 241.20,301.60 A 78 78 0 0 0 314.14,312.69 Z" fill="#d97706"/>
+<path d="M 208.79,344.79 A 132 132 0 0 1 161.52,276.98 L 213.26,261.52 A 78 78 0 0 0 241.20,301.60 Z" fill="#7c3aed"/>
+<path d="M 161.52,276.98 A 132 132 0 0 1 156.63,226.30 L 210.37,231.58 A 78 78 0 0 0 213.26,261.52 Z" fill="#dc2626"/>
+<path d="M 156.63,226.30 A 132 132 0 0 1 169.88,180.27 L 218.20,204.38 A 78 78 0 0 0 210.37,231.58 Z" fill="#0891b2"/>
+<path d="M 169.88,180.27 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 218.20,204.38 Z" fill="#db2777"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">MBLY 1,894</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$1.9B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="377.95" y1="134.54" x2="393.95" y2="134.54" stroke="#2563eb" stroke-width="1.4"/>
+<text x="397.95" y="132.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">中国 China</text>
+<text x="397.95" y="146.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$428.0M  (22.6%)</text>
+<line x1="406.43" y1="310.04" x2="422.43" y2="310.04" stroke="#15803d" stroke-width="1.4"/>
+<text x="426.43" y="308.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">美国 USA</text>
+<text x="426.43" y="322.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$416.0M  (22.0%)</text>
+<line x1="267.25" y1="375.63" x2="251.25" y2="375.63" stroke="#d97706" stroke-width="1.4"/>
+<text x="247.25" y="373.63" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">德国 Germany</text>
+<text x="247.25" y="387.63" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$297.0M  (15.7%)</text>
+<line x1="174.79" y1="318.11" x2="158.79" y2="318.11" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="154.79" y="316.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">韩国 S.Korea</text>
+<text x="154.79" y="330.11" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$192.0M  (10.1%)</text>
+<line x1="150.64" y1="252.46" x2="134.64" y2="252.46" stroke="#dc2626" stroke-width="1.4"/>
+<text x="130.64" y="250.46" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">英国 UK</text>
+<text x="130.64" y="264.46" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$117.0M  (6.2%)</text>
+<line x1="155.39" y1="201.02" x2="139.39" y2="201.02" stroke="#0891b2" stroke-width="1.4"/>
+<text x="135.39" y="199.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">波兰 Poland</text>
+<text x="135.39" y="213.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$110.0M  (5.8%)</text>
+<line x1="215.40" y1="121.84" x2="199.40" y2="121.84" stroke="#db2777" stroke-width="1.4"/>
+<text x="195.40" y="119.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">其他 RoW</text>
+<text x="195.40" y="133.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$334.0M  (17.6%)</text>
+<text x="360.00" y="430.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">中国 23%、美国 22% —— 中国敞口是最大的地缘/竞争风险</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Mobileye FY2025 10-K, Note — Revenue by ship-to country (中国 428 / 美国 416 / 德国 297 / 韩国 192)</text>
+</svg>
+
+**收入历史（按出货地，FY2023–2025）.** FY2024 是库存去化低谷（全年收入同比 -20% 至 $1,654M，从 FY2023 的 $2,079M 回落），FY2025 恢复 +14.5% 至 $1,894M —— 这条"V 型"清楚展示了 Tier 1 库存周期对 MBLY 收入的支配作用（[Mobileye FY2025 10-K, Revenue by ship-to country](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Mobileye 收入历史（按出货地，US$M）</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">中国 China</text>
+<rect x="102.80" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="118.80" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">美国 USA</text>
+<rect x="172.40" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="188.40" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">德国 Germany</text>
+<rect x="268.40" y="44" width="11" height="11" rx="2" fill="#7c3aed"/>
+<text x="284.40" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">韩国 S.Korea</text>
+<rect x="364.40" y="44" width="11" height="11" rx="2" fill="#dc2626"/>
+<text x="380.40" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">其他 Other</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$449.1M</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$898.1M</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$1.3B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$1.8B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">$2.2B</text>
+<rect x="123.48" y="316.80" width="147.71" height="95.20" fill="#2563eb"/>
+<rect x="123.48" y="251.79" width="147.71" height="65.01" fill="#15803d"/>
+<rect x="123.48" y="199.28" width="147.71" height="52.51" fill="#d97706"/>
+<rect x="123.48" y="174.89" width="147.71" height="24.40" fill="#7c3aed"/>
+<rect x="123.48" y="102.74" width="147.71" height="72.15" fill="#dc2626"/>
+<text x="197.33" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2023</text>
+<rect x="378.15" y="348.93" width="147.71" height="63.07" fill="#2563eb"/>
+<rect x="378.15" y="303.71" width="147.71" height="45.22" fill="#15803d"/>
+<rect x="378.15" y="263.69" width="147.71" height="40.01" fill="#d97706"/>
+<rect x="378.15" y="231.12" width="147.71" height="32.58" fill="#7c3aed"/>
+<rect x="378.15" y="165.96" width="147.71" height="65.15" fill="#dc2626"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2024</text>
+<rect x="632.81" y="348.33" width="147.71" height="63.67" fill="#2563eb"/>
+<rect x="632.81" y="286.45" width="147.71" height="61.88" fill="#15803d"/>
+<rect x="632.81" y="242.27" width="147.71" height="44.18" fill="#d97706"/>
+<rect x="632.81" y="213.71" width="147.71" height="28.56" fill="#7c3aed"/>
+<rect x="632.81" y="130.26" width="147.71" height="83.45" fill="#dc2626"/>
+<text x="706.67" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2025</text>
+<text x="430.00" y="440.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">FY2024 为库存去化低谷（-20% YoY）；FY2025 恢复 +14.5%</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Mobileye FY2025 10-K, Revenue by ship-to country (总收入 2,079→1,654→1,894)</text>
+</svg>
+
+---
+
+## 1B. GF Score（GuruFocus 风格）基本面打分 — *分析师观点（Analyst view），非 filing 数据*
+
+下面这张五维雷达（Financial Strength / Profitability / Growth / GF Value / Momentum，各 0–10）是本报告基于前文已引用指标自建的评分框架（GuruFocus GF Score 风格），**不是 GuruFocus 发布的数值，也不附 filing 引用**；每个维度的支撑指标在前文各有出处。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="GF Score radar">
+<rect x="0" y="0" width="500" height="500" fill="#ffffff"/>
+<text x="20" y="24" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">GF Score (GuruFocus-style): 48/100</text>
+<text x="20" y="41" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#52606d">0–50 Worst future performance potential / insufficient data</text>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="#e9f5ec" stroke="none"/>
+<polygon points="250.0,208.0 278.5,228.7 267.6,262.3 232.4,262.3 221.5,228.7" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,178.0 307.1,219.5 285.3,286.5 214.7,286.5 192.9,219.5" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,148.0 335.6,210.2 302.9,310.8 197.1,310.8 164.4,210.2" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,118.0 364.1,200.9 320.5,335.1 179.5,335.1 135.9,200.9" fill="none" stroke="#c5d3cb" stroke-width="1"/>
+<polygon points="250.0,88.0 392.7,191.6 338.2,359.4 161.8,359.4 107.3,191.6" fill="none" stroke="#c5d3cb" stroke-width="1.3"/>
+<line x1="250" y1="238" x2="161.8" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="146.5" y="392.4" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Financial Strength</text>
+<text x="146.5" y="405.4" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">财务实力</text>
+<text x="179.5" y="329.1" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">8</text>
+<line x1="250" y1="238" x2="250.0" y2="88.0" stroke="#cfdad3" stroke-width="1"/>
+<text x="250.0" y="58.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Profitability</text>
+<text x="250.0" y="71.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">盈利能力</text>
+<text x="250.0" y="187.0" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">3</text>
+<line x1="250" y1="238" x2="107.3" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="82.6" y="183.6" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Growth</text>
+<text x="82.6" y="196.6" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">成长性</text>
+<text x="178.7" y="208.8" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">5</text>
+<line x1="250" y1="238" x2="392.7" y2="191.6" stroke="#cfdad3" stroke-width="1"/>
+<text x="417.4" y="183.6" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">GF Value</text>
+<text x="417.4" y="196.6" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">估值</text>
+<text x="335.6" y="204.2" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">6</text>
+<line x1="250" y1="238" x2="338.2" y2="359.4" stroke="#cfdad3" stroke-width="1"/>
+<text x="353.5" y="392.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="600" fill="#1f2933">Momentum</text>
+<text x="353.5" y="405.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">动量</text>
+<text x="267.6" y="256.3" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="700" fill="#1f2933">2</text>
+<polygon points="250.0,193.0 335.6,210.2 267.6,262.3 179.5,335.1 178.7,214.8" fill="#2e8b57" fill-opacity="0.34" stroke="#2e8b57" stroke-width="2"/>
+<circle cx="179.5" cy="335.1" r="2.6" fill="#2e8b57"/>
+<circle cx="250.0" cy="193.0" r="2.6" fill="#2e8b57"/>
+<circle cx="178.7" cy="214.8" r="2.6" fill="#2e8b57"/>
+<circle cx="335.6" cy="210.2" r="2.6" fill="#2e8b57"/>
+<circle cx="267.6" cy="262.3" r="2.6" fill="#2e8b57"/>
+<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: MBLY FY2025 10-K · Q1 2026 10-Q · yfinance, as of 2026-06-15</text>
+<text x="250" y="485" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#52606d">GF Score = independent analyst rubric (*Analyst view:*) — not GuruFocus™ official number</text>
+</svg>
+
+| 维度 / Dimension | 评分 / Score (0–10) | |
+|---|---|---|
+| Financial Strength (财务实力) | 8 | `████████░░` |
+| Profitability (盈利能力) | 3 | `███░░░░░░░` |
+| Growth (成长性) | 5 | `█████░░░░░` |
+| GF Value (估值) | 6 | `██████░░░░` |
+| Momentum (动量) | 2 | `██░░░░░░░░` |
+| **GF Score (composite, *Analyst view:*)** | **48 / 100** | **0–50 Worst future performance potential / insufficient data** |
+
+*Composite weights (*Analyst view:*): Financial Strength 20% · Profitability 25% · Growth 25% · GF Value 15% · Momentum 15% (transparent reproduction — not GuruFocus's proprietary weighting).*
+
+**各维度评分理由（*分析师观点*）：**
+
+- **Financial Strength 8/10（强）。** 期末现金约 $1,836M、几乎零有息债务、Net Cash 为正；CFO $602M 覆盖 capex 6.6×。这是 MBLY 最强的一维 —— 即便长期烧钱投 AV，资产负债表也"烧不死"（[FY2025 10-K, Balance Sheets & Cash Flow](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。
+- **Profitability 3/10（弱）。** GAAP 营业利润率 -23%、净利率 -21%（含 $377M 摊销 + Q1 2026 的 $3,788M 减值）；剔除后 Adjusted Operating Margin 仅 +15%、ROE 受减值拖累为负。现金口径勉强盈利、会计口径深亏，故给低分（[FY2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。
+- **Growth 5/10（中性）。** FY2025 收入 +14.5%，但这是从 FY2024 库存低谷的反弹；三年收入实际为 $2,079M→$1,654M→$1,894M（净下降），增长被库存周期主导，故只给中性分（[FY2025 10-K, Revenue Note](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。
+- **GF Value 6/10（略偏便宜）。** P/B 0.96× 已跌破账面、EV/Sales 3.3× 较传统 Tier 1 溢价但较纯视觉 silicon 同业折价；但因 GAAP 无盈利，"便宜"建立在资产与现金而非盈利上，给中性偏高（[yfinance MBLY key-statistics, as of 2026-06-15](https://finance.yahoo.com/quote/MBLY/key-statistics)）。
+- **Momentum 2/10（弱）。** 过去 12 个月约 -54%、远低于 200 日均线、显著跑输大盘与半导体板块 —— 动能是五维中最差的一项（[yfinance MBLY 价格与 52 周区间, as of 2026-06-15](https://finance.yahoo.com/quote/MBLY/)）。
+
+**综合（加权）≈ 45/100（GuruFocus 谱系中偏低区间）** —— 与"强资产负债表 + 弱盈利/动能 + 估值期权悬置"的画像一致，呼应本报告 Hold/Neutral 评级。*分析师观点，非 GuruFocus 发布值。*
+
 
 ---
 
@@ -85,6 +486,68 @@ timeline
 3. **二次上市 + Physical AI 转型（2022–2026）.** 2022 年 10 月，Intel 将 Mobileye 分拆回公开市场，IPO 定价 $21（低于市场预期的 $26–28 区间），募集约 $861M；Intel 至今仍持有约 77% / 96.9% 投票权。2026 年 2 月的 Mentee Robotics 收购（$900M 总价、$612M 现金 + 约 $288M 股份）正式把 Mobileye 重新定位为"Physical AI 综合提供商" —— 把同一套 EyeQ silicon + 感知栈应用到 humanoid robots（人形机器人），瞄准仓储 / 工业自动化部署（[Mobileye Mentee 收购新闻稿](https://www.mobileye.com/news/mobileye-to-acquire-mentee-robotics-to-accelerate-physical-ai-leadership/)；[Globes 报道, 2026-01-06](https://en.globes.co.il/en/article-mobileye-buys-amnon-shashuas-mentee-robotics-for-900m-1001531330)）。
 
 **近 18 个月的关键进展.** FY2024 是低谷年 —— Tier 1 库存去化压低全年收入至 $1.65B，且管理层在 Q4 2024 计提 $2.7B 商誉减值（独立于 Q1 2026 的 $3.79B 减值）—— 但 FY2025 在收入 +15% YoY 企稳，叠加 Volkswagen Group SuperVision 与 Chauffeur 设计中标（Porsche、Audi 整车项目，目标 2027 量产，搭载 EyeQ6 High）锚定中期 pipeline。在 CES 2026（Las Vegas，2026-01-06 至 07），Shashua 宣布两件事:(a) Mentee Robotics 收购；(b) Volkswagen ID.Buzz 机器人出租车商用路线图 —— "VW Autonomous Mobility 在 CES 2026 上详述了其机器人出租车商用扩展，目标到 2026 年末在 6 个城市开通商业服务 "（[FY2025 earnings press release, 第 3 页](https://www.sec.gov/Archives/edgar/data/1910139/000110465926005578/tm263599d1_ex99-1.htm)；[Mobileye blog: CES 2026 takeaways](https://www.mobileye.com/blog/takeaways-from-the-mobileye-press-conference-with-ceo-prof-amnon-shashua-at-ces-2026/)）。截至 2026 年 4 月（Q1 26），逾 100 辆搭载 Drive 的 ID.Buzz 已在 6 个城市（洛杉矶、奥斯汀、奥兰多、慕尼黑、柏林、汉堡）测试（[Q1 2026 press release, 第 2 页](https://www.sec.gov/Archives/edgar/data/1910139/000110465926047231/tm2612233d1_ex99-1.htm)）。Q1 26 还公布了 Mahindra（印度市场领头 OEM）SuperVision + Surround ADAS 中标 —— " 我们获得了 Mahindra 的 SuperVision 与 Surround ADAS 设计中标。我们仍看好印度市场中 ADAS 与 AV 的成长空间 " —— 同步董事会授权了一项最高 $250M 的股票回购，部分对冲 Mentee 股票对价导致的稀释（[Q1 2026 press release, 第 1-2 页](https://www.sec.gov/Archives/edgar/data/1910139/000110465926047231/tm2612233d1_ex99-1.htm)）。
+
+---
+
+## 2A. 估值与目标价（Valuation & Price Target）
+
+> 本章的所有前瞻数字（收入 / 利润率 / EPS 估计、目标价、bull/base/bear 情景）均为**分析师观点（Analyst view）**，不附 filing 引用 —— 10-K 不含目标价。每个驱动假设的外部依据（filing 分部数据 + 管理层指引 + 行业预测）在文内分别引用。
+
+### 2A.1 前瞻财务模型（forward model，*分析师观点*）
+
+模型搭建在三块已引用的事实之上：(a) FY2025 10-K 的分部 / 地域收入；(b) 管理层 2026-04-23 上调后的 FY2026 指引（收入 $1,935–2,015M、Adjusted Operating Income $185–235M）；(c) Mobileye 自述的 $24.5B 8 年 pipeline。GAAP EPS 因收购无形资产摊销 (acquired-intangible amortization) 结构性为负，故同时给出 Adjusted EPS（剔除摊销与 SBC）。
+
+| 财年 | 收入 (US$M) | YoY | Adj. 营业利润率 | Adj. 营业利润 (US$M) | Adj. EPS (US$) | GAAP EPS (US$) |
+|---|---|---|---|---|---|---|
+| FY2025A | 1,894 | +14.5% | 15% | 280 | ~0.30 | (0.45) |
+| FY2026E | 1,975 | +4.3% | 11% | 215 | ~0.34 | NM（含减值） |
+| FY2027E | 2,110 | +6.8% | 13% | 270 | ~0.40 | (0.15) |
+| FY2028E | 2,310 | +9.5% | 17% | 390 | ~0.55 | (0.05) |
+
+- FY2026E 收入取管理层指引中值 $1,975M（[Q1 2026 press release, 2026-04-23, 指引表](https://www.sec.gov/Archives/edgar/data/1910139/000110465926047231/tm2612233d1_ex99-1.htm)）；FY2027–28E 增速假设 SuperVision/Surround ADAS 项目在 2027–2028+ 放量（Porsche 预计 2H27 起量），与 *分析师观点*（GS）一致 —— "收入增长在 2028 年起加速 (we expect revenue growth to accelerate especially from 2028 on)"。
+- FY2026E Adjusted 营业利润 $215M 取指引中值 [$185–235M]（[Q1 2026 press release, 指引表](https://www.sec.gov/Archives/edgar/data/1910139/000110465926047231/tm2612233d1_ex99-1.htm)）；利润率随高 ASP 产品 mix 与运营杠杆改善。
+- *最该盯紧的变量（swing variables）：* (1) 西方 OEM 的 SuperVision/Chauffeur 新中标节奏 —— 决定 2027+ 高 ASP 收入能否兑现；(2) 中国基础 ADAS 单位 / ASP 是否被本土自研芯片侵蚀。
+
+### 2A.2 目标价推导（PT derivation，*分析师观点*）
+
+GAAP 无盈利、Adjusted 盈利尚薄，故以 **EV/Sales 为主、Adjusted P/E 与现金支撑为辅** 的混合法：
+
+- **基础情景 (base)：** FY2027E 收入 $2,110M × **2.5× EV/Sales** = EV $5,275M；加期末净现金约 $1.8B、除以约 2.45 亿股 ≈ **PT $11**（隐含较现价 $9.34 上行 +17.8%）。2.5× EV/Sales 的依据：较传统 Tier 1 ADAS 供应商（Aptiv P/S 0.9×、Continental P/S 0.3×）有视觉 silicon 溢价，较纯 ADAS 视觉 silicon 同业 Ambarella（P/S ~6×）有折价，反映 MBLY 的中国/in-house 逆风（[Stockanalysis MBLY peer overview, as of 2026-06-15](https://stockanalysis.com/stocks/mbly/statistics/)）。
+- 该 PT 与卖方共识中位数 $11.00 一致、略高于现价 —— 是诚实反映"现金有底、上行需兑现"的中性结论。
+
+### 2A.3 Bull / Base / Bear 情景（*分析师观点*）
+
+| 情景 | 12 个月 PT | 较现价 $9.34 | 核心摆动假设 |
+|---|---|---|---|
+| **Bull** | $16 | **+71%** | 西方 OEM 新增 ≥2 个 SuperVision/Chauffeur 中标；EV/Sales 重估至 ~3.5×；Drive driver-out 2026 末按期兑现 |
+| **Base** | $11 | **+18%** | FY2027E 收入 $2.1B × 2.5× EV/Sales + 净现金；pipeline 按稳态分摊 |
+| **Bear** | $7 | **-25%** | 中国 ADAS 收入进一步重置、in-house 芯片加速侵蚀；Tier 1 再度去库存；EV/Sales 压缩至 ~1.8×（接近 GS 的 Neutral 隐含） |
+
+风险回报大致对称偏正（上行 +71% vs 下行 -25%），但 bull 情景高度依赖尚未发生的西方 OEM 中标 —— 这正是卖方维持中性 / 谨慎的核心分歧（见 2A.4）。
+
+### 2A.4 卖方观点演变（Sell-side view evolution）— *分析师观点*
+
+**机械预读（来自 `db/stock_price_target.db`，只读）：** MBLY 现存 3 条 PT 记录 —— GS Neutral $9（2026-04-23，报告日价 $7.90，隐含 +13.9%）、MS Equal-Weight $10（2026-04-26，报告日价 $9.23）、GS（robotaxi tracker，2026-06-01，Buy 系本地标签噪声，正文实为 Neutral）。**PT 离散：$9–10（直接覆盖）vs 卖方共识均值 $13.29 / 中位 $11.00** —— 直接覆盖的两家大行都明显低于共识均值，说明均值被少数高 PT（高至 $27）拉高，中位数 $11 更具代表性。
+
+**按机构的观点时间线（per-institute timeline）：**
+
+| 机构 | 日期 | 评级 / 目标价 | 报告日价 / 隐含 | 一句话论点 |
+|---|---|---|---|---|
+| **Goldman Sachs** | 2026-04-23 | **Neutral / $9** | $7.90 / +13.9% | 业绩与指引超预期，但"近期缺乏与西方 OEM 的 L2++/L3 (SuperVision/Chauffeur) 新中标"，AV 与 ADAS 竞争格局艰难；上调 FY26 收入预测、却**下调 EPS**（含 Mentee 摊薄） |
+| **Morgan Stanley** | 2026-04-26 | **Equal-Weight / $10（自 $12 下调）** | $9.23 | 强劲开局但上行主要限于 Q1；管理层对 2H26 维持保守、中国需求能见度低；等待更多 Surround ADAS 中标 (ASP ~$100–150) 才有上修催化 |
+| **Goldman Sachs** | 2026-06-01 | Neutral（robotaxi tracker） | $10.68 | 在"美国 AV/robotaxi 追踪"中，Mobileye 列于"开发中 (in development)"伙伴层级，尚非已商用 active robotaxi —— 印证 Drive 距规模化尚远 |
+
+**自我修正与触发点：** MS 在 2026-04-26 把 PT 从 **$12 下调至 $10**（评级维持 Equal-Weight），触发因素是"上行主要限于 Q1、2H26 假设基本未变"——即不认为这次指引上调可外推到全年（[Morgan Stanley — Mobileye Conservative Guidance, 2026-04-26, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812218144282522/Morgan%20Stanley-Mobileye%20Global%20Inc%20%EF%BC%88MBLY.US%EF%BC%89Conservative%20Guidance%20-%20Waiting%20for%20Additional%20Surround%20Wins%20to%20Drive%20Upside-260426.pdf)）。GS 同期"上调收入、下调 EPS"——收入受出口/补库提振，但 Mentee 收购摊薄 + 项目放量后移压低盈利（[Goldman Sachs — Mobileye 1Q26 EPS wrap, 2026-04-23, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585581521152524/Goldman%20Sachs-Mobileye%20Global%20Inc.%20%EF%BC%88MBLY.US%EF%BC%89%20Better%20results%20and%20guidance%EF%BC%9B%20bookings%20and%20pace%20of%20program%20ramps%20in%20focus%20from%20here%EF%BC%9B%201Q26%20EPS%20wrap-260423.pdf)）。
+
+**机构间分歧（cross-institute disagreement）—— 不混为虚假共识：**
+
+| 机构 | 日期 | 评级 / PT | 核心论点 | 什么证据能证明其正确 |
+|---|---|---|---|---|
+| GS | 2026-04-23 | Neutral / $9 | AV+ADAS 竞争格局艰难、西方 OEM 高阶中标缺位；Mentee 今年对 EBITDA 轻度摊薄 | 连续两季无新西方 OEM SuperVision/Chauffeur 中标；中国份额继续流失 |
+| MS | 2026-04-26 | EW / $10 | 上行限于 Q1、2H26 能见度低；Surround ADAS (3 个中标、含 2 家 top-10 OEM) 是中期可信路径但放量在 2027–2028+ | 出现增量 Surround ADAS 中标（MS 称这是"未来 12 个月最可执行的上修催化"） |
+| 共识高 PT 阵营 | — | 高至 $27 | Drive robotaxi + Physical AI 期权价值；EyeQ6 放量 | Drive 2026 末 driver-out 按期、且 2027 起量；西方 OEM L3 中标落地 |
+
+**对本报告评级的意义：** 直接覆盖的两家大行 PT（$9–10）落在本报告 base PT $11 下方一点，确认 **Hold/Neutral** 是当下与街面主流一致的结论；要转向 bull（$16），需要的恰是 GS/MS 都点名缺失的"西方 OEM 高阶 ADAS 新中标"。
 
 ---
 
@@ -190,6 +653,122 @@ REM™（Road Experience Management）是 Mobileye 的众包高精地图系统�
 ### 4.7 Mentee Robotics / Physical-AI 延伸
 
 2026 年的收购为公司添加了 humanoid robotics 平台，利用同一套 vision-AI + foundation-model 栈。FY2025 10-K（含已签订的并表事项）原文:" 2026 年 2 月 3 日，我们完成对 Mentee Robotics Ltd.（Mentee Robotics）的收购，一家 humanoid robotics 公司。本次收购将 Mobileye 在 AI 上的先进技术与全球量产能力，与 Mentee Robotics 的突破性 humanoid 平台和深厚 AI 人才相结合，打造横跨自动驾驶与 humanoid robotics 两大变革市场的 Physical AI 综合提供商 "（[FY2025 10-K, Item 1 — Mentee Acquisition](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。Mentee 首批商业机器人按 CES 2026 创始人发言预计 ~2 年内出货给物流 / 仓储客户；当前财务画像（零收入、不到 100 名工程师）说明这是一个多年周期的期权价值，而非近期收入贡献。
+
+### 4.8 供应链资金流图（"跟着钱走"）
+
+下面这张资金流图采用**需求/收入视角 (demand view)** —— 适用于像 Mobileye 这样的元器件 / 芯片供应商：左侧是付钱的需求端（50+ OEM 经 Tier 1 下单、中国/出口），中间是 Mobileye 与其产品线，右侧是 Mobileye 自身的关键供应商。它揭示了一个统计报表看不出的事实：**EyeQ 的设计制造由长期伙伴 STMicroelectronics (ST，意法半导体) 负责，ST 再外包给晶圆代工厂 TSMC（台积电）—— 真正的产能瓶颈落在台积电先进制程，而非 Mobileye 自身**；SuperVision 整套 ECU 还需 Quanta（广达）等代工组装。实线 = 直接付款，虚线 = 嵌入在成品件价格中的间接资金（[Mobileye FY2025 10-K, Item 1 Business — STMicroelectronics / TSMC / Quanta 合作；收入按出货地 Note](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 972" width="1180" height="972" role="img" aria-label="钱从哪来、到哪去 —— Mobileye 的 EyeQ 价值链" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="972" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">ADAS / 自动驾驶芯片资金流 · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱从哪来、到哪去 —— Mobileye 的 EyeQ 价值链</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求端：50+ 家 OEM 通过一级供应商（Tier 1）下单 EyeQ；收入端 FY2025 收入 1,894 百万美元。供给端：EyeQ 的设计制造由长期伙伴 ST（意法半导体）负责，ST 再外包给晶圆代工厂 TSMC ——</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">真正的产能瓶颈落在台积电先进制程上。</text>
+<ellipse cx="1031.00" cy="405.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="596.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="596.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱（需求端）</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Mobileye 与产品线</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终流向（自有供应商）</text>
+<path d="M 256.00 350.00 C 369.50 350.00, 369.50 289.86, 483.00 289.86" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 473.00 C 369.50 473.00, 369.50 307.00, 483.00 307.00" fill="none" stroke="url(#mfgold)" stroke-width="10.29" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 292.43 C 590.00 292.43, 590.00 433.00, 483.00 433.00" fill="none" stroke="url(#mfgold)" stroke-width="22.29" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 306.14 C 590.00 306.14, 590.00 543.00, 483.00 543.00" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 433.00 C 810.50 433.00, 810.50 303.50, 924.00 303.50" fill="none" stroke="url(#mfgold)" stroke-width="18.86" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 545.50 C 810.50 545.50, 810.50 533.00, 924.00 533.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 1138.00 303.50 C 1031.00 303.50, 1031.00 429.00, 924.00 429.00" fill="none" stroke="url(#mfgold)" stroke-width="13.71" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 540.50 C 810.50 540.50, 810.50 438.36, 924.00 438.36" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="313.93" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">EyeQ 采购付款</text>
+<text x="369.50" y="384.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$428M (23%)</text>
+<text x="810.50" y="362.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">EyeQ 制造</text>
+<text x="1031.00" y="360.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">外包代工</text>
+<text x="810.50" y="483.43" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">ECU 芯片</text>
+<text x="810.50" y="533.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">ECU 组装</text>
+<rect x="42.00" y="290.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="290.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="323.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">50+ OEM</text>
+<text x="60.00" y="344.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">全球车企</text>
+<text x="60.00" y="361.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">经 Tier 1 下单</text>
+<rect x="42.00" y="426.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="426.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="459.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">中国 / 出口</text>
+<text x="60.00" y="480.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">收入占比 23%</text>
+<text x="60.00" y="497.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">最大单一市场</text>
+<rect x="483.00" y="220.00" width="214" height="150.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="220.00" width="3" height="150.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MOBILEYE</text>
+<text x="501.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">EyeQ SoC + 软件</text>
+<text x="501.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY25 收入 $1,894M</text>
+<rect x="483.00" y="386.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="386.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="419.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">EyeQ SoC</text>
+<text x="501.00" y="440.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">占收入 ~91%</text>
+<text x="501.00" y="457.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">ASP ~$50/套</text>
+<rect x="483.00" y="496.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="496.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="529.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">SuperVision/Drive</text>
+<text x="501.00" y="550.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">整套 ECU</text>
+<text x="501.00" y="567.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">单车价值 10–20×</text>
+<rect x="924.00" y="238.50" width="214" height="130.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="238.50" width="3" height="130.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="271.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">STMicro (ST)</text>
+<text x="942.00" y="292.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">EyeQ 设计制造伙伴</text>
+<text x="942.00" y="309.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">再外包代工</text>
+<rect x="924.00" y="384.50" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="384.50" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="417.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">TSMC</text>
+<text x="942.00" y="438.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">先进制程代工</text>
+<text x="942.00" y="455.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">真正的产能瓶颈</text>
+<rect x="924.00" y="494.50" width="214" height="77.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="494.50" width="3" height="77.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="527.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">Quanta</text>
+<text x="942.00" y="548.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">SuperVision ECU 组装</text>
+<rect x="42.00" y="616.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="620.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="618.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="618.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="618.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="618.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="620.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="620.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="611.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="620.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="611.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="840.40" y="620.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="914.80" y="611.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="933.80" y="620.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="636.00" x2="1138" y2="636.00" stroke="#222a3a"/>
+<text x="42.00" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">跟着钱走</text>
+<rect x="42.00" y="672.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="672.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="696.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求端 · OEM</text>
+<text x="58.00" y="714.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">50+ 车企，但很集中</text>
+<text x="58.00" y="738.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入</tspan><tspan fill="#f4d58a" font-weight="700"> $1,894M</tspan><tspan fill="#9aa3b8" font-weight="400"> ，前述客户经</tspan><tspan fill="#9aa3b8" font-weight="400"> Tier</tspan><tspan fill="#9aa3b8" font-weight="400"> 1</tspan><tspan fill="#9aa3b8" font-weight="400"> 下单；</tspan><tspan fill="#f4d58a" font-weight="700"> 中国</tspan><tspan fill="#f4d58a" font-weight="700"> 23%</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#f4d58a" font-weight="700"> 美国</tspan><tspan fill="#f4d58a" font-weight="700"> 22%</tspan></text>
+<text x="58.00" y="754.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">两国占</tspan><tspan fill="#9aa3b8" font-weight="400"> 45%。中国敞口既是增长来源也是最大风险。</tspan></text>
+<rect x="412.00" y="672.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="672.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="696.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">产品 · EYEQ</text>
+<text x="428.00" y="714.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">EyeQ 仍是绝对主体</text>
+<text x="428.00" y="738.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">EyeQ</tspan><tspan fill="#9aa3b8" font-weight="400"> SoC</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 视觉软件占收入</tspan><tspan fill="#f4d58a" font-weight="700"> ~91%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；混合后整车系统</tspan><tspan fill="#9aa3b8" font-weight="400"> ASP</tspan><tspan fill="#9aa3b8" font-weight="400"> 约</tspan><tspan fill="#f4d58a" font-weight="700"> $50/套</tspan></text>
+<text x="428.00" y="754.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">。SuperVision/Drive</tspan><tspan fill="#9aa3b8" font-weight="400"> 单车价值</tspan><tspan fill="#f4d58a" font-weight="700"> 10–20×</tspan><tspan fill="#9aa3b8" font-weight="400"> ，但占比尚低。</tspan></text>
+<rect x="782.00" y="672.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="672.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="696.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">供给端 · 瓶颈</text>
+<text x="798.00" y="714.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">ST → TSMC 双层代工</text>
+<text x="798.00" y="738.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">EyeQ</tspan><tspan fill="#9aa3b8" font-weight="400"> 由长期伙伴</tspan><tspan fill="#f4d58a" font-weight="700"> ST（意法半导体）</tspan><tspan fill="#9aa3b8" font-weight="400"> 设计制造，ST</tspan><tspan fill="#9aa3b8" font-weight="400"> 再外包给</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan></text>
+<text x="798.00" y="754.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">先进制程。真正的产能瓶颈落在台积电，而非</tspan><tspan fill="#9aa3b8" font-weight="400"> Mobileye</tspan><tspan fill="#9aa3b8" font-weight="400"> 自身。</tspan></text>
+<rect x="42.00" y="802.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="802.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="826.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">供给端 · ECU</text>
+<text x="58.00" y="844.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">SuperVision 需整机组装</text>
+<text x="58.00" y="868.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">SuperVision</tspan><tspan fill="#9aa3b8" font-weight="400"> ECU</tspan><tspan fill="#9aa3b8" font-weight="400"> 含两颗</tspan><tspan fill="#9aa3b8" font-weight="400"> EyeQ</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 主板，由</tspan><tspan fill="#f4d58a" font-weight="700"> Quanta（广达）</tspan><tspan fill="#9aa3b8" font-weight="400"> 等代工组装</tspan><tspan fill="#9aa3b8" font-weight="400"> ——</tspan></text>
+<text x="58.00" y="884.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">把芯片公司的轻资产模式向系统集成延伸。</tspan></text>
+<text x="590.00" y="954.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Mobileye FY2025 10-K, Item 1 Business — STMicroelectronics / TSMC / Quanta 制造合作；收入按出货地 Note。资金流为示意相对规模，非守恒。</text>
+</svg>
 
 ---
 
@@ -374,6 +953,35 @@ xychart-beta
 
 **13. Intel 双层股权悬置.** Intel 持 ~77% 经济 + ~96.9% 投票 —— "Intel 能够决定公司事务"（[FY2025 10-K, Item 1A](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。限制资本配置（>$250M 支出需 Intel 批准）、M&A optionality、Intel 减持 timing（历史上 2023 与 2024 的两次 secondary offering 都引发数个百分点下跌）。*影响:* 每次 Intel 减持都对 MBLY 股价形成 float overhang 风险。
 
+### 9.5 关键分歧与催化剂（Key debates & catalysts）
+
+第 9 章是风险清单（taxonomy）；本节不同 —— 它列出**多空双方真正争论的 3 个核心分歧**并各自回应，再给出未来 12 个月的**带日期催化剂清单**。这是 Mobileye 作为 AI/半导体 + 自动驾驶标的最该被压力测试的部分。
+
+**分歧一：西方 OEM 的 L2++/L3 中标会不会来？（最关键）**
+- *空方（GS）：* "近期缺乏与西方 OEM 的 SuperVision / Chauffeur 新中标"是 GS 维持 Neutral 的首要理由 —— pipeline 里多是基础 ADAS 续标，真正高 ASP 的眼离手离 (eyes-off / hands-off) 项目锚点仍只有 VW 集团（Porsche/Audi）（[Goldman Sachs — Mobileye 1Q26 EPS wrap, 2026-04-23, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585581521152524/Goldman%20Sachs-Mobileye%20Global%20Inc.%20%EF%BC%88MBLY.US%EF%BC%89%20Better%20results%20and%20guidance%EF%BC%9B%20bookings%20and%20pace%20of%20program%20ramps%20in%20focus%20from%20here%EF%BC%9B%201Q26%20EPS%20wrap-260423.pdf)）。
+- *多方回应：* SuperVision 已有 3 个 Surround ADAS 设计中标（含 2 家 top-10 OEM），ASP ~$100–150，是基础 ADAS 的 2–3×；MS 认为这是"未来 12 个月最可执行的上修催化"，但放量在 2027–2028+（[Morgan Stanley — Mobileye Conservative Guidance, 2026-04-26, p.1-2](http://xs-macbook-air.local:5001/zsxq/pdf/812218144282522/Morgan%20Stanley-Mobileye%20Global%20Inc%20%EF%BC%88MBLY.US%EF%BC%89Conservative%20Guidance%20-%20Waiting%20for%20Additional%20Surround%20Wins%20to%20Drive%20Upside-260426.pdf)）。*本报告判断：* 这是 bull/base 的分水岭 —— 没有新西方中标，base PT $11 成立；出现 ≥2 个，则向 bull $16 移动。
+
+**分歧二：Drive (L4 robotaxi) 的商用化是真实里程碑还是远期期权？**
+- *现实检验：* 在 GS 2026-06-01 的"美国 AV/robotaxi 追踪"里，Mobileye 仍列于"开发中 (in development)"伙伴层级，尚未进入已商用的 active robotaxi 城市梯队（Waymo/Tesla 已在 active 列）（[Goldman Sachs — US AVs Robotaxi Tracker, 2026-06-01, Exhibit 5](http://xs-macbook-air.local:5001/zsxq/pdf/415284282585428/Goldman%20Sachs-US%20AVs%EF%BC%9A%20Robotaxi%20Tracker~Deployments%20update%20and%20key%20safety%20and%20usage%20metrics-260601.pdf)）。
+- *公司路线：* Drive 计划 2026 年末实现 driver-out 里程碑、与 VW MOIA 合作、2027 起量，目前逾 100 辆 ID.Buzz 在 6 城测试（[Q1 2026 press release, 第 2 页](https://www.sec.gov/Archives/edgar/data/1910139/000110465926047231/tm2612233d1_ex99-1.htm)）。*本报告判断：* Drive 是期权价值、非近期 P&L 驱动 —— 量与时间表 vs AV 炒作要打折扣；driver-out 按期是关键信号。
+
+**分歧三：中国 ADAS 收入重置 + 本土自研芯片侵蚀有多深？**
+- *逆风证据：* 中国占收入 23%、是最大单一市场；本土玩家 Horizon Robotics（地平线）4 月高阶智驾 SoC 出货同比 +33%，而前视一体机芯片整体同比 -34%/-40%，份额向本土头部集中；OEM（华为、小鹏、理想等）正自研或采用 Horizon/高通方案（[Deutsche Bank — Horizon Robotics Apr SoC tracker, 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/812488554215812/Deutsche%20Bank-Horizon%20Robotics%EF%BC%889660.HK%EF%BC%89Apr.%20autonomous~driving%20SoC%20up%2033%25%20YoY%EF%BC%9B%20front%20camera%20chip%20down%2040%25%20YoY-260602.pdf)）。10-K Competition 章节也明确把 Horizon、Huawei、Black Sesame 列为 silicon 竞争对手（[FY2025 10-K, Item 1 — Competition](https://www.sec.gov/Archives/edgar/data/1910139/000110465926014300/mbly-20251227x10k.htm)）。
+- *多方回应：* MBLY 通过中国 OEM 出口车型（销往新兴市场）保有增量，加上印度 Mahindra 中标与 ADAS 渗透率从 ~8% 向 70–90% 的监管拐点提供新增长向量（[Morgan Stanley — Conservative Guidance, 2026-04-26, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812218144282522/Morgan%20Stanley-Mobileye%20Global%20Inc%20%EF%BC%88MBLY.US%EF%BC%89Conservative%20Guidance%20-%20Waiting%20for%20Additional%20Surround%20Wins%20to%20Drive%20Upside-260426.pdf)）。*本报告判断：* 中国基础 ADAS 长期份额承压是结构性的，这是 bear $7 情景的核心驱动。
+
+**未来 12 个月催化剂清单（带日期，*分析师观点*）：**
+
+| 时间 | 催化剂 | 多空意义 |
+|---|---|---|
+| 2026 H2（每季） | 是否新增西方 OEM SuperVision/Chauffeur/Surround ADAS 中标 | 最大上修催化（MS 点名）；正向 |
+| 2026 Q2/Q3 财报 | FY26 指引是否再上调、2H26 中国能见度 | MS 称 2H26 假设未变，能见度是关键 |
+| 2026 年末 | Drive robotaxi "driver-out" 里程碑 + VW MOIA 商用 | 按期=正向；推迟=负向 |
+| 持续 | 中国月度高阶智驾 SoC 份额（NE Times / Horizon 出货） | 跟踪 in-house 侵蚀深度 |
+| 不定期 | Intel 二次发行 (secondary offering) | float overhang，负向供给冲击 |
+| 2027–2028 | Porsche SuperVision 放量、EyeQ6 High 量产 | 高 ASP 收入兑现窗口 |
+
+（持续跟踪可配合 catalyst-calendar skill。）
+
 ---
 
 ## 10. 投资视角打分
@@ -457,7 +1065,14 @@ PEG = forward P/E 48× / 3 年收入增长预测 14.24% = 3.4 —— 在 Lynch <
 - IR 站点（ir.mobileye.com）在 HTTP 探测时超时（anti-bot 防护）—— 季度 deck 的 slide-level 引用未在本构建中获取，用 8-K 附件作为 IR 代理。（Stale notice，第 13 节 verification log 中标注。）
 
 **市场数据**
-- TTM P/E、P/S、EV/Sales、EV/EBITDA、P/B、FCF yield、流通股数、ROIC、员工数、同业倍数、分析师共识目标价，截至 2026-06-02。来源:[stockanalysis.com/stocks/mbly/statistics/](https://stockanalysis.com/stocks/mbly/statistics/) 与 [yfinance MBLY info](https://finance.yahoo.com/quote/MBLY)。
+- 现价 $9.34、市值 $7.87B、EV $6.58B、Forward P/E 25.96×、P/S 3.91×、P/B 0.96×、52 周区间、流通股数、分析师共识目标价（均值 $13.29 / 中位 $11.00 / 高 $27 / 低 $8，29 家覆盖），**截至 2026-06-15**。来源:[yfinance MBLY key-statistics](https://finance.yahoo.com/quote/MBLY/key-statistics) 与 [stockanalysis.com/stocks/mbly/statistics/](https://stockanalysis.com/stocks/mbly/statistics/)。
+
+**卖方 / 机构研究（institute research，`db/zsxq.db`；*Analyst view*）**
+- [Goldman Sachs — Mobileye 1Q26 EPS wrap（Neutral / PT $9，2026-04-23，报告日价 $7.90 / +13.9%）](http://xs-macbook-air.local:5001/zsxq/pdf/585581521152524/Goldman%20Sachs-Mobileye%20Global%20Inc.%20%EF%BC%88MBLY.US%EF%BC%89%20Better%20results%20and%20guidance%EF%BC%9B%20bookings%20and%20pace%20of%20program%20ramps%20in%20focus%20from%20here%EF%BC%9B%201Q26%20EPS%20wrap-260423.pdf)（file_id 585581521152524）。
+- [Morgan Stanley — Mobileye Conservative Guidance（Equal-Weight / PT $10，自 $12 下调，2026-04-26，报告日价 $9.23）](http://xs-macbook-air.local:5001/zsxq/pdf/812218144282522/Morgan%20Stanley-Mobileye%20Global%20Inc%20%EF%BC%88MBLY.US%EF%BC%89Conservative%20Guidance%20-%20Waiting%20for%20Additional%20Surround%20Wins%20to%20Drive%20Upside-260426.pdf)（file_id 812218144282522）。
+- [Goldman Sachs — US AVs Robotaxi Tracker（2026-06-01，Mobileye 列于"开发中"伙伴层级）](http://xs-macbook-air.local:5001/zsxq/pdf/415284282585428/Goldman%20Sachs-US%20AVs%EF%BC%9A%20Robotaxi%20Tracker~Deployments%20update%20and%20key%20safety%20and%20usage%20metrics-260601.pdf)（file_id 415284282585428）。
+- [Deutsche Bank — Horizon Robotics Apr SoC tracker（2026-06-04，中国智驾 SoC 份额，竞争背景）](http://xs-macbook-air.local:5001/zsxq/pdf/812488554215812/Deutsche%20Bank-Horizon%20Robotics%EF%BC%889660.HK%EF%BC%89Apr.%20autonomous~driving%20SoC%20up%2033%25%20YoY%EF%BC%9B%20front%20camera%20chip%20down%2040%25%20YoY-260602.pdf)（file_id 812488554215812）。
+- PT 数据库交叉核对：`db/stock_price_target.db`（只读）—— MBLY 3 条记录（GS Neutral $9 / MS EW $10）。
 
 **第三方研究**
 - Grand View Research — ADAS Market 2024 → 2030（USD 34.65 → 66.56 B，CAGR 12.2%）。
@@ -571,5 +1186,43 @@ PEG = forward P/E 48× / 3 年收入增长预测 14.24% = 3.4 —— 在 Lynch <
 - 17/12/11/11% 聚合披露之外的 per-OEM 收入归属 —— 10-K 未命名 OEM；仅有媒体推断。
 - 具体 SuperVision 每套 ASP —— Mobileye 未单独披露 SuperVision-only ASP；Q4 2025 公布的 $50.8 ASP 是混合车队均价（90%+ 为 base ADAS）。
 - 2030 SAM/SOM 预测（第 8 章）—— 基于 Grand View Research + 分析师建模；未拉取 Yole 2026 ADAS 预测（付费墙）。
+
+</details>
+
+<details>
+<summary>Verification log (Step 10) — 2026-06-15</summary>
+
+**本次刷新 (refresh) 范围.** 在 2026-06-03 既有报告基础上：(a) 投资摘要 header（评级 Hold/Neutral + 12 个月 PT $11 + 上行 +17.8% + 前视估值矩阵 + 相对表现）— 新增；(b) 1A 财务画像图（7 张 financial_charts.py SVG）+ 1B GF Score 雷达 — 新增；(c) Section 2A 估值与目标价（前瞻模型 + PT 推导 + bull/base/bear + 卖方观点演变）— 新增；(d) Section 4.8 moneyflow 供应链资金流图 — 新增；(e) Section 9.5 关键分歧与催化剂 — 新增；(f) 估值快照与"截至日期"滚动至 2026-06-15。基础业务事实（FY2025 10-K / Q1 2026 10-Q）自上一版以来无新增 filing，故沿用并复核。
+
+**Step 0.5 sec-report-summary** — skipped（refresh，非首次 initiation；FY2025 10-K 与 Q1 2026 10-Q 自上版已读取并复核，重跑多 10-K pass 在 16 GB 机器上成本不划算）。
+
+**URL 检查（2026-06-15，curl + 真实浏览器 UA + 25s 超时）：**
+- SEC EDGAR（10-K / 10-Q / 8-K ex-99.1 ×2）：全部 **200**。
+- stockanalysis.com：**200**。finance.yahoo.com：**301**（正常重定向）。
+- grandviewresearch.com：**403**（anti-bot，内容真实，浏览器可达）。
+- zsxq 本地 PDF（4 个 file_id：585581521152524 / 812218144282522 / 415284282585428 / 812488554215812）：`find_pdf.py --file-id` 全部 `local_exists: true`，路由用 `/zsxq/pdf/<file_id>/<filename>`（用户机本地，他人 404 属预期）。
+
+**SEC 文件名（EDGAR submissions JSON，CIK 0001910139）复核：** 10-K FY25 `mbly-20251227x10k.htm`（acc 0001104659-26-014300）、10-Q Q1 FY26 `mbly-20260328x10q.htm`（acc 0001104659-26-047712）、8-K Q1 26 ex-99.1 `tm2612233d1_ex99-1.htm`（acc …-047231）、8-K FY25 ex-99.1 `tm263599d1_ex99-1.htm`（acc …-005578）— 全部 ✓。
+
+**财务图表数字 string-match（每个数字对照所引报表）：**
+- 利润表 Sankey：收入 1,894 / COGS 990 / 毛利 904 / R&D 1,151 / 收购无形摊销 377 / 营业亏损 440 / 净亏损 392 — 全部在 FY2025 10-K MD&A 字符串命中 ✓。
+- 资产负债表 Sankey：总资产 12,492 / 商誉 8,200 / 无形 1,166 / 现金 1,836 / 权益 11,881（= 12,492 − 611，10-K 中亦逐字出现）— ✓。
+- 现金流 Sankey：CFO 602 / 期初现金 1,426 / 期末现金 1,836 — ✓。
+- 地域 donut/revbars：中国 428 / 美国 416 / 德国 297 / 韩国 192；FY23/24/25 总收入 2,079 / 1,654 / 1,894 — ✓（Revenue by ship-to country Note）。
+- moneyflow：节点 ST / TSMC / Quanta 均为 10-K Item 1 Business 命名的真实制造伙伴；无虚构节点 ✓。
+- Q1 2026：收入 558 / 商誉减值 3,788 — 在 Q1 2026 10-Q 字符串命中 ✓。
+
+**卖方观点演变（≥2 zsxq 笔记，故强制）：** `db/stock_price_target.db` 只读预读先行（3 条 MBLY 记录）；按机构时间线（GS Neutral $9 @2026-04-23 报告日价 $7.90；MS EW $10 自 $12 下调 @2026-04-26 报告日价 $9.23）+ 自我修正与触发点 + 机构间分歧表（无虚假共识）均已建；每条 PT 配报告日价与隐含上行；每条引用至 `/zsxq/pdf/<file_id>/<filename>` 直链。共识均值 $13.29 / 中位 $11.00 已与直接覆盖的 $9–10 区分（中位更具代表性）。
+
+**分析师观点句（刻意未附 filing 引用）：** header 评级/PT/前视矩阵、1B GF 五维分数与综合、2A 前瞻模型/PT/bull-base-bear、9.5 多空判断 — 全部以 `*分析师观点*` / `*Analyst view*` 标注，且不附 10-K 引用。GF Score 未归因 GuruFocus。
+
+**图表 RENDER 检查（10.7）：** `lint_report_charts.py` 退出码 0（8 个 inline SVG 全部在各自 viewBox 内，无溢出 / 无负 Y；6 个 mermaid 块计数）。**注：本次为并发后台刷新，按编排方约束未启动 5002 服务器做浏览器截图**；亏损口径利润表 Sankey 已专门用"营业亏损作左侧来源"布局并通过 lint，规避了 Black Sesame 式 off-canvas 失败模式。mermaid 块沿用上一版已渲染语法（单 y 轴、无 % 与货币混轴）。
+
+**链接标题↔URL 一致性：** 扫描确认 zsxq 直链 host 均为 `xs-macbook-air.local`（初稿一处 host 笔误已修正）；SEC 链接 host 为 sec.gov；无 indicators.db 标签挂到 filing URL 的错配。
+
+**未解决 / 残留事项：**
+- IR 站点 deck 的 slide-level 引用仍未拉取（ir.mobileye.com anti-bot 超时）；用 8-K ex-99.1 作 IR 代理。
+- per-OEM 收入百分比仍未在 10-K 逐家披露；OEM 归属为卖方/媒体推断。
+- 未启动 5002 浏览器渲染截图（并发安全约束）；mermaid 视觉以 lint 计数 + 沿用既有语法为准，编排方合并后可在 5002 复核。
 
 </details>
