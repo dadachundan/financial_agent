@@ -1,0 +1,38 @@
+{
+  "eyebrow": "Fabless 半导体资金流 · GigaDevice 兆易创新 · FY2025→2026",
+  "title": "兆易创新的钱流向哪里：设计公司 → 代工/封测 → 产能与设备瓶颈",
+  "thesis": "兆易创新是纯 Fabless：自身只做设计，把 RMB 55 亿 COGS 里的绝大部分付给晶圆代工 (foundry) 与封测 (OSAT)。2025 年前五大供应商占采购 69.5%，其中关联方 (长鑫存储 DRAM 代工) 占 16.4%；2026 年长鑫关联交易指引飙升至 RMB 57 亿，是利基 DRAM 爆发的资金印证。",
+  "stages": ["谁付钱 (买方)", "买什么 (代工/封测)", "钱最终汇向哪里 (产能/设备瓶颈)"],
+  "nodes": [
+    {"id": "gd", "stage": 0, "label": "兆易创新 GigaDevice", "kind": "buyer", "sub": ["纯 Fabless 设计公司", "FY2025 营业成本 RMB 55.0 亿"], "h": 150},
+    {"id": "cxmt", "stage": 1, "label": "长鑫存储 CXMT", "kind": "foundry", "sub": ["利基 DRAM 独家代工至 2030", "关联方·朱一明任两家董事长"]},
+    {"id": "smic", "stage": 1, "label": "中芯国际 SMIC", "kind": "foundry", "sub": ["NOR Flash / MCU 成熟制程", "55–65nm"]},
+    {"id": "xmc", "stage": 1, "label": "武汉新芯 XMC", "kind": "foundry", "sub": ["NOR/NAND 代工", "YMTC 关联体系"]},
+    {"id": "hh", "stage": 1, "label": "华虹/力积电 等", "kind": "foundry", "sub": ["MCU / 模拟产品代工", "成熟制程"]},
+    {"id": "osat", "stage": 1, "label": "封装测试 OSAT", "kind": "supplier", "sub": ["长电/通富/华天 等", "Fabless 必需环节"]},
+    {"id": "equip", "stage": 2, "label": "晶圆厂设备/材料", "kind": "tool", "sub": ["ASML/AMAT/Lam/TEL", "长鑫扩产的设备瓶颈"]},
+    {"id": "ip", "stage": 2, "label": "ARM IP + EDA", "kind": "ip", "sub": ["GD32 用 Cortex-M 内核", "Cadence/Synopsys/Siemens EDA"]}
+  ],
+  "flows": [
+    {"from": "gd", "to": "cxmt", "weight": 16, "style": "direct", "label": "DRAM 代工·关联交易 2026E RMB 57 亿"},
+    {"from": "gd", "to": "smic", "weight": 18, "style": "direct", "label": "NOR/MCU 成熟制程"},
+    {"from": "gd", "to": "xmc", "weight": 10, "style": "direct", "label": "NOR/NAND"},
+    {"from": "gd", "to": "hh", "weight": 8, "style": "direct", "label": "MCU/模拟"},
+    {"from": "gd", "to": "osat", "weight": 10, "style": "direct", "label": "封测"},
+    {"from": "cxmt", "to": "equip", "weight": 12, "style": "embedded"},
+    {"from": "smic", "to": "equip", "weight": 10, "style": "embedded"},
+    {"from": "gd", "to": "ip", "weight": 4, "style": "direct", "label": "IP/EDA 授权"}
+  ],
+  "cards_title": "Follow the money — 资金流要点",
+  "cards": [
+    {"kind": "foundry", "tag": "关联方·核心瓶颈", "title": "长鑫存储 (CXMT) 独家代工",
+     "body": "DRAM 关联交易指引从 2025 年 *RMB 12 亿* 飙升至 2026E *RMB 57 亿* (高盛 2026-05)，朱一明同时任两家董事长——这是利基 DRAM 量价齐升的资金印证，也是毛利分配的最大变量。"},
+    {"kind": "supplier", "tag": "供应商集中度", "title": "前五大供应商 69.5%",
+     "body": "2025 年前五名供应商采购 *RMB 50.1 亿*、占采购总额 *69.5%*，其中关联方 (长鑫) 占 *16.4%*。Fabless 模式下产能配额谈判是命门。"},
+    {"kind": "buyer", "tag": "成本结构", "title": "COGS RMB 55.0 亿付给代工/封测",
+     "body": "FY2025 营业成本 *RMB 55.0 亿*，绝大部分流向 SMIC / 长鑫 / 武汉新芯 / 华虹 等代工厂与封测厂——兆易自身不持有 fab。"},
+    {"kind": "tool", "tag": "上游设备瓶颈", "title": "扩产依赖国产+境外设备",
+     "body": "长鑫/中芯扩产受美国出口管制 (Entity List/FDPR) 影响，但兆易用 *55–65nm* 成熟制程、*19nm* DDR4，不依赖 EUV/7nm 以下，直接冲击有限。"}
+  ],
+  "source": "兆易创新 2025 年年度报告 (营业成本/前五大供应商/关联交易), filed 2026-03-30 · 高盛 GigaDevice 2026-05-04 (CXMT 关联交易 RMB 57 亿)"
+}
