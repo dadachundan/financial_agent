@@ -1,0 +1,37 @@
+{
+  "eyebrow": "AI 连接芯片 资金流 · FY2025–FY2026",
+  "title": "钱怎么流过 Astera Labs：谁付钱 → 买什么 → 钱在哪里沉淀",
+  "thesis": "需求高度集中在 NVIDIA 与少数 hyperscaler（FY2025 单一终端客户 >70%、前三大约 86%）；ALAB 收取连接芯片营收（FY2025 $852.5M），再把 COGS 几乎全部支付给台湾的 TSMC（唯一晶圆厂）与 ASE / Amkor（封测）——单点制造链是结构性瓶颈。",
+  "stages": ["谁付钱（终端需求）", "买什么（ALAB 产品）", "钱沉淀在哪里（上游制造）"],
+  "nodes": [
+    {"id": "nvda", "stage": 0, "label": "NVIDIA", "kind": "compute", "sub": ["FY2025 单一终端客户 >70%", "GB200/GB300 参考平台内嵌 Aries+Scorpio"], "h": 130},
+    {"id": "hyper", "stage": 0, "label": "HYPERSCALERS", "kind": "buyer2", "sub": ["AWS / Microsoft / Google / Meta / Oracle", "直接采购 + 定制项目"], "h": 110},
+    {"id": "oem", "stage": 0, "label": "系统 OEM/ODM", "kind": "custom", "sub": ["富士康/纬创/广达/英业达", "亚洲代工取得法定所有权"], "h": 90},
+
+    {"id": "alab", "stage": 1, "label": "ASTERA LABS", "kind": "neutral", "sub": ["FY2025 营收 $852.5M (+115% YoY)", "GAAP 毛利率 75.7%", "Aries · Taurus · Leo · Scorpio · COSMOS"], "h": 150},
+
+    {"id": "tsmc", "stage": 2, "label": "TSMC", "kind": "foundry", "sub": ["所有 IC 唯一晶圆厂", "5nm/3nm 节点·台湾", "结构性瓶颈"], "h": 120},
+    {"id": "osat", "stage": 2, "label": "ASE / AMKOR", "kind": "memory", "sub": ["封装与测试 (OSAT)"], "h": 80},
+    {"id": "cogs", "stage": 2, "label": "其他 BOM/基板", "kind": "power", "sub": ["IC 基板·模块·PCB", "FY2025 COGS $207.3M"], "h": 80}
+  ],
+  "flows": [
+    {"from": "nvda", "to": "alab", "weight": 22, "style": "direct", "label": ">70% 终端营收"},
+    {"from": "hyper", "to": "alab", "weight": 12, "style": "direct"},
+    {"from": "oem", "to": "alab", "weight": 10, "style": "embedded", "label": "代工出货"},
+    {"from": "alab", "to": "tsmc", "weight": 16, "style": "direct", "label": "晶圆代工"},
+    {"from": "alab", "to": "osat", "weight": 8, "style": "direct"},
+    {"from": "alab", "to": "cogs", "weight": 7, "style": "direct", "label": "COGS $207M"}
+  ],
+  "cards_title": "Follow the money",
+  "cards": [
+    {"kind": "compute", "tag": "需求 · AI 加速器", "title": "NVIDIA 是 70%+ 的引擎",
+     "body": "FY2025 *单一终端客户占营收 >70%*、*前三大约 86%*；Aries 重定时器与 Scorpio 交换芯片被设计进 *GB200/GB300* 每一座机柜，单系统连接芯片价值量从 Aries *<$100* 升至含 Scorpio X *>$1000*。"},
+    {"kind": "buyer2", "tag": "需求 · 云厂商", "title": "Hyperscaler 直接采购 + 定制",
+     "body": "*AWS* 历史上贡献 ALAB *70%+* 营收（UBS）；已披露两项定制项目——与 NVIDIA 的 *NVLink Fusion*、某云厂商的 KV-cache 卸载 *Leo* 芯片。"},
+    {"kind": "foundry", "tag": "瓶颈 · 制造", "title": "钱沉淀在台湾 TSMC",
+     "body": "*所有 IC* 由 *TSMC* 在台湾 *5nm/3nm* 代工，*ASE/Amkor* 封测；FY2025 *COGS $207.3M*。单一晶圆厂、单一地区是最大的供应链单点风险。"},
+    {"kind": "neutral", "tag": "ALAB · 利润沉淀", "title": "高毛利的轻资产中间层",
+     "body": "ALAB 收 *$852.5M* 营收、付 *$207.3M* COGS，留下 *75.7%* 毛利率与 *$173.4M* GAAP 营业利润——无晶圆厂模式把资本开支留给 TSMC，自身只承担 *$37.5M* capex。"}
+  ],
+  "source": "Astera Labs FY2025 10-K (Note 14 customer/geo concentration · income statement · Manufacturing & Suppliers) · J.P. Morgan TMC note 2026-05-19 · UBS initiation 2026-04-21 · as of 2026-06-15"
+}

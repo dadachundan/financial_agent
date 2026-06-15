@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Astera Labs FY2025 利润表 Sankey (US$ thousands)</text>
+<path d="M 452.00,71.00 C 506.00,71.00 506.00,122.30 560.00,122.30 L 560.00,208.14 C 506.00,208.14 506.00,156.84 452.00,156.84 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,156.84 C 506.00,156.84 506.00,222.14 560.00,222.14 L 560.00,455.70 C 506.00,455.70 506.00,390.40 452.00,390.40 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,78.00 C 382.00,78.00 382.00,71.00 436.00,71.00 L 436.00,390.40 C 382.00,390.40 382.00,397.40 328.00,397.40 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,78.00 C 258.00,78.00 258.00,78.00 312.00,78.00 L 312.00,500.00 C 258.00,500.00 258.00,500.00 204.00,500.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 328.00,397.40 C 382.00,397.40 382.00,404.40 436.00,404.40 L 436.00,507.00 C 382.00,507.00 382.00,500.00 328.00,500.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,102.27 C 754.00,102.27 754.00,226.05 808.00,226.05 L 808.00,334.52 C 754.00,334.52 754.00,210.74 700.00,210.74 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,210.74 C 754.00,210.74 754.00,348.52 808.00,348.52 L 808.00,351.95 C 754.00,351.95 754.00,214.17 700.00,214.17 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,122.30 C 630.00,122.30 630.00,102.27 684.00,102.27 L 684.00,188.12 C 630.00,188.12 630.00,208.14 576.00,208.14 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,222.14 C 630.00,222.14 630.00,228.17 684.00,228.17 L 684.00,311.25 C 630.00,311.25 630.00,305.22 576.00,305.22 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,305.22 C 630.00,305.22 630.00,325.25 684.00,325.25 L 684.00,475.73 C 630.00,475.73 630.00,455.70 576.00,455.70 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="71.00" width="16" height="319.40" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="404.40" width="16" height="102.60" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="122.30" width="16" height="85.84" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="222.14" width="16" height="233.56" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="102.27" width="16" height="111.90" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="228.17" width="16" height="83.08" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="325.25" width="16" height="150.48" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="226.05" width="16" height="108.47" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="348.52" width="16" height="3.42" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="286.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Aries + Scorpio + Taurus + Leo</text>
+<text x="179.00" y="299.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$852.5M  (100.0%)</text>
+<rect x="331.00" y="60.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$852.5M  (100.0%)</text>
+<rect x="455.00" y="53.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$645.3M  (75.7%)</text>
+<rect x="455.00" y="386.40" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="398.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="411.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$207.3M  (24.3%)</text>
+<rect x="579.00" y="104.30" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="116.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="129.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$173.4M  (20.3%)</text>
+<rect x="579.00" y="204.14" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="216.14" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="229.14" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$471.8M  (55.3%)</text>
+<rect x="703.00" y="84.27" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="96.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="109.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$226.1M  (26.5%)</text>
+<rect x="703.00" y="210.17" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="222.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="235.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$167.8M  (19.7%)</text>
+<rect x="703.00" y="307.25" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="319.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="332.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$304.0M  (35.7%)</text>
+<text x="833.00" y="277.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="290.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$219.1M  (25.7%)</text>
+<text x="833.00" y="347.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="360.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$6.9M  (0.81%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Astera Labs FY2025 10-K (income statement) · as of 2026-06-15</text>
+</svg>

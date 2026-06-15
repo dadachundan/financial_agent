@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Astera Labs FY2025 营收按地域 (账单地址口径, US$ thousands)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 405.65,299.06 L 357.52,274.57 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 405.65,299.06 A 132 132 0 0 1 194.36,332.24 L 232.67,294.18 A 78 78 0 0 0 357.52,274.57 Z" fill="#15803d"/>
+<path d="M 194.36,332.24 A 132 132 0 0 1 221.35,125.26 L 248.62,171.87 A 78 78 0 0 0 232.67,294.18 Z" fill="#d97706"/>
+<path d="M 221.35,125.26 A 132 132 0 0 1 245.59,114.20 L 262.94,165.34 A 78 78 0 0 0 248.62,171.87 Z" fill="#7c3aed"/>
+<path d="M 245.59,114.20 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 262.94,165.34 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">FY2025\n地域</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$852.5M</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="405.64" y1="167.06" x2="421.64" y2="167.06" stroke="#2563eb" stroke-width="1.4"/>
+<text x="425.64" y="165.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Singapore</text>
+<text x="425.64" y="179.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$277.0M  (32.5%)</text>
+<line x1="309.41" y1="375.53" x2="325.41" y2="375.53" stroke="#15803d" stroke-width="1.4"/>
+<text x="329.41" y="373.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">China</text>
+<text x="329.41" y="387.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$256.3M  (30.1%)</text>
+<line x1="151.16" y1="221.35" x2="135.16" y2="221.35" stroke="#d97706" stroke-width="1.4"/>
+<text x="131.16" y="219.35" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Taiwan</text>
+<text x="131.16" y="233.35" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$247.4M  (29.0%)</text>
+<line x1="230.70" y1="113.66" x2="214.70" y2="113.66" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="210.70" y="111.66" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States</text>
+<text x="210.70" y="125.66" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$27.4M  (3.2%)</text>
+<line x1="265.53" y1="103.04" x2="249.53" y2="103.04" stroke="#dc2626" stroke-width="1.4"/>
+<text x="245.53" y="101.04" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Other</text>
+<text x="245.53" y="115.04" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$44.4M  (5.2%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Astera Labs FY2025 10-K, Note 14 — geographic disaggregation · as of 2026-06-15</text>
+</svg>

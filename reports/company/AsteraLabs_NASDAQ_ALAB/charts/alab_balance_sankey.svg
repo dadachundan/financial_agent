@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Astera Labs 资产负债表 Sankey (2025-12-31, US$ thousands)</text>
+<path d="M 204.00,64.00 C 262.00,64.00 262.00,92.00 320.00,92.00 L 320.00,417.95 C 262.00,417.95 262.00,389.95 204.00,389.95 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,85.00 C 790.00,85.00 790.00,85.00 848.00,85.00 L 848.00,121.48 C 790.00,121.48 790.00,121.48 732.00,121.48 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,92.00 C 658.00,92.00 658.00,85.00 716.00,85.00 L 716.00,121.48 C 658.00,121.48 658.00,128.48 600.00,128.48 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,92.00 C 394.00,92.00 394.00,99.00 452.00,99.00 L 452.00,472.45 C 394.00,472.45 394.00,465.45 336.00,465.45 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 600.00,128.48 C 658.00,128.48 658.00,135.48 716.00,135.48 L 716.00,145.11 C 658.00,145.11 658.00,138.11 600.00,138.11 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,99.00 C 526.00,99.00 526.00,92.00 584.00,92.00 L 584.00,138.11 C 526.00,138.11 526.00,145.11 468.00,145.11 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,145.11 C 526.00,145.11 526.00,152.11 584.00,152.11 L 584.00,526.00 C 526.00,526.00 526.00,519.00 468.00,519.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,135.48 C 790.00,135.48 790.00,135.48 848.00,135.48 L 848.00,145.11 C 790.00,145.11 790.00,145.11 732.00,145.11 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,152.11 C 658.00,152.11 658.00,159.11 716.00,159.11 L 716.00,533.00 C 658.00,533.00 658.00,526.00 600.00,526.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,159.11 C 790.00,159.11 790.00,159.11 848.00,159.11 L 848.00,533.00 C 790.00,533.00 790.00,533.00 732.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,403.95 C 262.00,403.95 262.00,417.95 320.00,417.95 L 320.00,440.77 C 262.00,440.77 262.00,426.77 204.00,426.77 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,440.77 C 262.00,440.77 262.00,440.77 320.00,440.77 L 320.00,456.94 C 262.00,456.94 262.00,456.94 204.00,456.94 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,470.94 C 262.00,470.94 262.00,456.94 320.00,456.94 L 320.00,465.45 C 262.00,465.45 262.00,479.45 204.00,479.45 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,479.45 C 394.00,479.45 394.00,472.45 452.00,472.45 L 452.00,519.00 C 394.00,519.00 394.00,526.00 336.00,526.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,493.45 C 262.00,493.45 262.00,479.45 320.00,479.45 L 320.00,504.68 C 262.00,504.68 262.00,518.68 204.00,518.68 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,532.68 C 262.00,532.68 262.00,504.68 320.00,504.68 L 320.00,526.00 C 262.00,526.00 262.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="325.95" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="403.95" width="16" height="22.81" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="440.77" width="16" height="16.17" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="470.94" width="16" height="8.51" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="493.45" width="16" height="25.24" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="532.68" width="16" height="21.32" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="92.00" width="16" height="373.45" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="479.45" width="16" height="46.55" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="99.00" width="16" height="420.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="92.00" width="16" height="46.11" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="152.11" width="16" height="373.89" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="85.00" width="16" height="36.48" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="135.48" width="16" height="9.64" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="159.11" width="16" height="373.89" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="85.00" width="16" height="36.48" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="135.48" width="16" height="9.64" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="159.11" width="16" height="373.89" rx="1.5" fill="#15803d"/>
+<line x1="188.00" y1="226.98" x2="182.00" y2="210.64" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="213.64" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash &amp; marketable securities</text>
+<text x="179.00" y="226.64" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.2B  (77.6%)</text>
+<line x1="188.00" y1="415.36" x2="182.00" y2="399.02" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="402.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Accounts receivable</text>
+<text x="179.00" y="415.02" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$83.2M  (5.4%)</text>
+<line x1="188.00" y1="448.85" x2="182.00" y2="432.51" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="435.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Inventory</text>
+<text x="179.00" y="448.51" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$59.0M  (3.9%)</text>
+<line x1="188.00" y1="475.19" x2="182.00" y2="458.85" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="461.85" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Prepaid &amp; other current</text>
+<text x="179.00" y="474.85" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$31.0M  (2.0%)</text>
+<line x1="188.00" y1="506.06" x2="182.00" y2="489.72" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="492.72" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Property &amp; equipment</text>
+<text x="179.00" y="505.72" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$92.0M  (6.0%)</text>
+<line x1="188.00" y1="543.34" x2="182.00" y2="527.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="530.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other long-term assets</text>
+<text x="179.00" y="543.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$77.8M  (5.1%)</text>
+<rect x="339.00" y="74.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.4B  (88.9%)</text>
+<rect x="339.00" y="461.45" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="473.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="486.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$169.8M  (11.1%)</text>
+<rect x="471.00" y="81.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="93.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="106.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.5B  (100.0%)</text>
+<rect x="603.00" y="74.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$168.2M  (11.0%)</text>
+<rect x="603.00" y="134.11" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="146.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="159.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.4B  (89.0%)</text>
+<rect x="735.00" y="67.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$133.0M  (8.7%)</text>
+<rect x="735.00" y="117.48" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="129.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="142.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$35.1M  (2.3%)</text>
+<rect x="735.00" y="142.48" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="154.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="167.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.4B  (89.0%)</text>
+<text x="873.00" y="100.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current liabilities</text>
+<text x="873.00" y="113.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$133.0M  (8.7%)</text>
+<text x="873.00" y="137.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other long-term liabilities</text>
+<text x="873.00" y="150.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$35.1M  (2.3%)</text>
+<text x="873.00" y="343.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Stockholders' equity</text>
+<text x="873.00" y="356.06" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.4B  (89.0%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Astera Labs FY2025 10-K (balance sheet) · as of 2026-06-15</text>
+</svg>

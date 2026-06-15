@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1016" width="1180" height="1016" role="img" aria-label="钱怎么流过 Astera Labs：谁付钱 → 买什么 → 钱在哪里沉淀" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1016" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">AI 连接芯片 资金流 · FY2025–FY2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱怎么流过 Astera Labs：谁付钱 → 买什么 → 钱在哪里沉淀</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求高度集中在 NVIDIA 与少数 hyperscaler（FY2025 单一终端客户 &gt;70%、前三大约 86%）；ALAB 收取连接芯片营收（FY2025 $852.5M），再把 COGS 几乎全部支付给台湾的 TSMC（唯一晶圆厂）与 ASE /</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">Amkor（封测）——单点制造链是结构性瓶颈。</text>
+<ellipse cx="1031.00" cy="401.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="588.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="588.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱（终端需求）</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买什么（ALAB 产品）</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱沉淀在哪里（上游制造）</text>
+<path d="M 256.00 285.00 C 369.50 285.00, 369.50 389.00, 483.00 389.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 421.00 C 369.50 421.00, 369.50 407.55, 483.00 407.55" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 392.82 C 810.50 392.82, 810.50 305.00, 924.00 305.00" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 405.91 C 810.50 405.91, 810.50 421.00, 924.00 421.00" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 414.09 C 810.50 414.09, 810.50 517.00, 924.00 517.00" fill="none" stroke="url(#mfgold)" stroke-width="7.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 537.00 C 369.50 537.00, 369.50 419.55, 483.00 419.55" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="331.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">&gt;70% 终端营收</text>
+<text x="369.50" y="472.27" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">代工出货</text>
+<text x="810.50" y="342.91" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">晶圆代工</text>
+<text x="810.50" y="459.55" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">COGS $207M</text>
+<rect x="42.00" y="220.00" width="214" height="130.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="42.00" y="220.00" width="3" height="130.00" rx="2" fill="#56c6e6"/>
+<text x="60.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">NVIDIA</text>
+<text x="60.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY2025 单一终端客户 &gt;70%</text>
+<text x="60.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">GB200/GB300 参考平台内嵌 Aries+Scorpio</text>
+<rect x="42.00" y="366.00" width="214" height="110.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="366.00" width="3" height="110.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="399.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">HYPERSCALERS</text>
+<text x="60.00" y="420.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">AWS / Microsoft / Google / Meta / Oracle</text>
+<text x="60.00" y="437.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">直接采购 + 定制项目</text>
+<rect x="42.00" y="492.00" width="214" height="90.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="492.00" width="3" height="90.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="525.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">系统 OEM/ODM</text>
+<text x="60.00" y="546.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">富士康/纬创/广达/英业达</text>
+<text x="60.00" y="563.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">亚洲代工取得法定所有权</text>
+<rect x="483.00" y="326.00" width="214" height="150.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="326.00" width="3" height="150.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="359.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ASTERA LABS</text>
+<text x="501.00" y="380.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY2025 营收 $852.5M (+115% YoY)</text>
+<text x="501.00" y="397.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">GAAP 毛利率 75.7%</text>
+<text x="501.00" y="414.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Aries · Taurus · Leo · Scorpio · COSMOS</text>
+<rect x="924.00" y="245.00" width="214" height="120.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="245.00" width="3" height="120.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="278.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">TSMC</text>
+<text x="942.00" y="299.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">所有 IC 唯一晶圆厂</text>
+<text x="942.00" y="316.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">5nm/3nm 节点·台湾</text>
+<text x="942.00" y="333.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">结构性瓶颈</text>
+<rect x="924.00" y="381.00" width="214" height="80.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="381.00" width="3" height="80.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="414.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ASE / AMKOR</text>
+<text x="942.00" y="435.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">封装与测试 (OSAT)</text>
+<rect x="924.00" y="477.00" width="214" height="80.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="477.00" width="3" height="80.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="510.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">其他 BOM/基板</text>
+<text x="942.00" y="531.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">IC 基板·模块·PCB</text>
+<text x="942.00" y="548.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">FY2025 COGS $207.3M</text>
+<rect x="42.00" y="608.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="612.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="610.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="610.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="610.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="610.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="612.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="612.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="603.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="612.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="603.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="847.60" y="612.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="922.00" y="603.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="941.00" y="612.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="1008.20" y="603.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="1027.20" y="612.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<line x1="42" y1="648.00" x2="1138" y2="648.00" stroke="#222a3a"/>
+<text x="42.00" y="664.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY</text>
+<rect x="42.00" y="684.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="684.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="708.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">需求 · AI 加速器</text>
+<text x="58.00" y="726.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">NVIDIA 是 70%+ 的引擎</text>
+<text x="58.00" y="750.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#f4d58a" font-weight="700"> 单一终端客户占营收</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;70%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> 前三大约</tspan><tspan fill="#f4d58a" font-weight="700"> 86%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；Aries</tspan><tspan fill="#9aa3b8" font-weight="400"> 重定时器与</tspan><tspan fill="#9aa3b8" font-weight="400"> Scorpio</tspan></text>
+<text x="58.00" y="766.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">交换芯片被设计进</tspan><tspan fill="#f4d58a" font-weight="700"> GB200/GB300</tspan><tspan fill="#9aa3b8" font-weight="400"> 每一座机柜，单系统连接芯片价值量从</tspan><tspan fill="#9aa3b8" font-weight="400"> Aries</tspan><tspan fill="#f4d58a" font-weight="700"> &lt;$100</tspan></text>
+<text x="58.00" y="782.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">升至含</tspan><tspan fill="#9aa3b8" font-weight="400"> Scorpio</tspan><tspan fill="#9aa3b8" font-weight="400"> X</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;$1000</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="412.00" y="684.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="684.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="708.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">需求 · 云厂商</text>
+<text x="428.00" y="726.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Hyperscaler 直接采购 + 定制</text>
+<text x="428.00" y="750.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">AWS</tspan><tspan fill="#9aa3b8" font-weight="400"> 历史上贡献</tspan><tspan fill="#9aa3b8" font-weight="400"> ALAB</tspan><tspan fill="#f4d58a" font-weight="700"> 70%+</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收（UBS）；已披露两项定制项目——与</tspan><tspan fill="#9aa3b8" font-weight="400"> NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan></text>
+<text x="428.00" y="766.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">NVLink</tspan><tspan fill="#f4d58a" font-weight="700"> Fusion</tspan><tspan fill="#9aa3b8" font-weight="400"> 、某云厂商的</tspan><tspan fill="#9aa3b8" font-weight="400"> KV-cache</tspan><tspan fill="#9aa3b8" font-weight="400"> 卸载</tspan><tspan fill="#f4d58a" font-weight="700"> Leo</tspan><tspan fill="#9aa3b8" font-weight="400"> 芯片。</tspan></text>
+<rect x="782.00" y="684.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="684.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="708.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">瓶颈 · 制造</text>
+<text x="798.00" y="726.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱沉淀在台湾 TSMC</text>
+<text x="798.00" y="750.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">所有</tspan><tspan fill="#f4d58a" font-weight="700"> IC</tspan><tspan fill="#9aa3b8" font-weight="400"> 由</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#9aa3b8" font-weight="400"> 在台湾</tspan><tspan fill="#f4d58a" font-weight="700"> 5nm/3nm</tspan><tspan fill="#9aa3b8" font-weight="400"> 代工，</tspan><tspan fill="#f4d58a" font-weight="700"> ASE/Amkor</tspan><tspan fill="#9aa3b8" font-weight="400"> 封测；FY2025</tspan><tspan fill="#f4d58a" font-weight="700"> COGS</tspan></text>
+<text x="798.00" y="766.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$207.3M</tspan><tspan fill="#9aa3b8" font-weight="400"> 。单一晶圆厂、单一地区是最大的供应链单点风险。</tspan></text>
+<rect x="42.00" y="830.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="830.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="854.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">ALAB · 利润沉淀</text>
+<text x="58.00" y="872.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">高毛利的轻资产中间层</text>
+<text x="58.00" y="896.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">ALAB</tspan><tspan fill="#9aa3b8" font-weight="400"> 收</tspan><tspan fill="#f4d58a" font-weight="700"> $852.5M</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收、付</tspan><tspan fill="#f4d58a" font-weight="700"> $207.3M</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS，留下</tspan><tspan fill="#f4d58a" font-weight="700"> 75.7%</tspan><tspan fill="#9aa3b8" font-weight="400"> 毛利率与</tspan></text>
+<text x="58.00" y="912.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$173.4M</tspan><tspan fill="#9aa3b8" font-weight="400"> GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> 营业利润——无晶圆厂模式把资本开支留给</tspan><tspan fill="#9aa3b8" font-weight="400"> TSMC，自身只承担</tspan><tspan fill="#f4d58a" font-weight="700"> $37.5M</tspan></text>
+<text x="58.00" y="928.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">capex。</tspan></text>
+<text x="590.00" y="998.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Astera Labs FY2025 10-K (Note 14 customer/geo concentration · income statement · Manufacturing &amp; Suppliers) · J.P. Morgan TMC note 2026-05-19 · UBS initiation 2026-04-21 · as of 2026-06-15</text>
+</svg>
