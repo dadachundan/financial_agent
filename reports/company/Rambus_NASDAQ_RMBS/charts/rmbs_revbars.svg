@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Rambus 收入构成历史 (2021-2025, 按业务条线)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Product 内存接口芯片</text>
+<rect x="142.40" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="158.40" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Royalties 专利授权</text>
+<rect x="264.80" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="280.80" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Contract &amp; other 硅 IP</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$152.8M</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$305.7M</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$458.5M</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$611.4M</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$764.2M</text>
+<rect x="102.09" y="349.11" width="88.62" height="62.89" fill="#2563eb"/>
+<rect x="102.09" y="289.36" width="88.62" height="59.75" fill="#15803d"/>
+<rect x="102.09" y="268.52" width="88.62" height="20.85" fill="#d97706"/>
+<text x="146.40" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2021</text>
+<rect x="254.89" y="312.75" width="88.62" height="99.25" fill="#2563eb"/>
+<rect x="254.89" y="251.64" width="88.62" height="61.10" fill="#15803d"/>
+<rect x="254.89" y="213.23" width="88.62" height="38.42" fill="#d97706"/>
+<text x="299.20" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2022</text>
+<rect x="407.69" y="313.84" width="88.62" height="98.16" fill="#2563eb"/>
+<rect x="407.69" y="248.24" width="88.62" height="65.60" fill="#15803d"/>
+<rect x="407.69" y="210.47" width="88.62" height="37.76" fill="#d97706"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2023</text>
+<rect x="560.49" y="304.14" width="88.62" height="107.86" fill="#2563eb"/>
+<rect x="560.49" y="205.27" width="88.62" height="98.86" fill="#15803d"/>
+<rect x="560.49" y="168.74" width="88.62" height="36.54" fill="#d97706"/>
+<text x="604.80" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2024</text>
+<rect x="713.29" y="259.99" width="88.62" height="152.01" fill="#2563eb"/>
+<rect x="713.29" y="137.88" width="88.62" height="122.11" fill="#15803d"/>
+<rect x="713.29" y="102.74" width="88.62" height="35.14" fill="#d97706"/>
+<text x="757.60" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2025</text>
+<text x="430.00" y="440.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">2022 产品收入含 2023-09 剥离的 SerDes/PHY IP 业务</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Rambus FY2023 10-K (rmbs-20231231.htm) &amp; FY2025 10-K (rmbs-20251231.htm), Results of Operations · SEC EDGAR</text>
+</svg>
