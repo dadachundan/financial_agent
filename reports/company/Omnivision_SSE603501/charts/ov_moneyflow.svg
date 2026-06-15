@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 998" width="1180" height="998" role="img" aria-label="豪威集团的钱从哪来、流向哪里：终端客户 → 豪威产品 → 上游代工/封测" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="998" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">CIS 价值链资金流 · 2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">豪威集团的钱从哪来、流向哪里：终端客户 → 豪威产品 → 上游代工/封测</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">豪威是 Fabless（无晶圆厂）CIS 设计商：营收来自手机/汽车/医疗等终端客户，营业成本（2025 年约 200 亿元）外包后汇聚到少数几家晶圆代工与封测厂——这些才是真正的产能瓶颈。</text>
+<ellipse cx="1031.00" cy="389.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="586.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="586.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱（终端客户）</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买什么（豪威产品）</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱汇聚到哪（上游代工/封测）</text>
+<path d="M 256.00 255.50 C 369.50 255.50, 369.50 259.20, 483.00 259.20" fill="none" stroke="url(#mfgold)" stroke-width="21.60" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 384.30 C 369.50 384.30, 369.50 282.00, 483.00 282.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 525.00 C 369.50 525.00, 369.50 301.80, 483.00 301.80" fill="none" stroke="url(#mfgold)" stroke-width="15.60" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 268.80 C 369.50 268.80, 369.50 386.50, 483.00 386.50" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 398.80 C 369.50 398.80, 369.50 391.50, 483.00 391.50" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 408.50 C 369.50 408.50, 369.50 499.00, 483.00 499.00" fill="none" stroke="url(#mfgold)" stroke-width="14.40" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 273.60 C 810.50 273.60, 810.50 276.50, 924.00 276.50" fill="none" stroke="url(#mfgold)" stroke-width="19.20" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 288.60 C 810.50 288.60, 810.50 389.00, 924.00 389.00" fill="none" stroke="url(#mfgold)" stroke-width="10.80" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 389.00 C 810.50 389.00, 810.50 288.60, 924.00 288.60" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 499.00 C 810.50 499.00, 810.50 499.00, 924.00 499.00" fill="none" stroke="url(#mfgold)" stroke-width="13.20" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="251.35" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">车用 CIS 75 亿</text>
+<text x="369.50" y="327.15" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">手机 CIS 83 亿</text>
+<text x="369.50" y="407.40" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">安防+医疗+新兴 54 亿</text>
+<text x="369.50" y="447.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">分销 49 亿</text>
+<text x="810.50" y="269.05" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">外包晶圆</text>
+<text x="810.50" y="332.80" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">外包封测</text>
+<text x="810.50" y="493.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">采购转售货源</text>
+<rect x="42.00" y="198.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">汽车 OEM/Tier-1</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">奔驰/宝马/特斯拉/理想/小鹏</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">经 NVIDIA DRIVE 平台</text>
+<rect x="42.00" y="334.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="334.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="367.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">手机 OEM/模组厂</text>
+<text x="60.00" y="388.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">小米/OPPO/荣耀/苹果</text>
+<text x="60.00" y="405.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">舜宇/欧菲光/丘钛</text>
+<rect x="42.00" y="470.00" width="214" height="110.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="470.00" width="3" height="110.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="503.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">安防/医疗/新兴</text>
+<text x="60.00" y="524.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">海康/大华 · 直觉外科</text>
+<text x="60.00" y="541.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">GoPro/影石/AR 眼镜</text>
+<rect x="483.00" y="232.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="232.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="265.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">CIS 图像传感器</text>
+<text x="501.00" y="286.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">212 亿元 · 占主营 74%</text>
+<text x="501.00" y="303.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">TheiaCel/Nyxel 像素 IP</text>
+<rect x="483.00" y="342.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="342.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="375.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">模拟+显示+设计服务</text>
+<text x="501.00" y="396.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">26 亿元</text>
+<text x="501.00" y="413.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">DDIC/SerDes/MCU</text>
+<rect x="483.00" y="452.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="452.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="485.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">代理分销</text>
+<text x="501.00" y="506.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">49 亿元 · 毛利 7.9%</text>
+<text x="501.00" y="523.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">松下/村田/国巨转售</text>
+<rect x="924.00" y="232.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="232.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="265.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">晶圆代工</text>
+<text x="942.00" y="286.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">台积电/中芯/华虹/世界先进/力积电</text>
+<text x="942.00" y="303.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">瓶颈：12寸堆叠 CIS 产能</text>
+<rect x="924.00" y="342.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="342.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="375.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">封测 OSAT</text>
+<text x="942.00" y="396.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">日月光/通富/长电/华天</text>
+<text x="942.00" y="413.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">晶圆级封装 CameraCubeChip</text>
+<rect x="924.00" y="452.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="452.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="485.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">被动/原厂供货</text>
+<text x="942.00" y="506.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">松下/村田/博世（分销货源）</text>
+<text x="942.00" y="523.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">存储器涨价传导成本</text>
+<rect x="42.00" y="606.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="610.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="608.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="608.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="608.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="608.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="610.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="610.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="601.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="610.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="601.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="840.40" y="610.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="922.00" y="601.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="941.00" y="610.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="1015.40" y="601.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="1034.40" y="610.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="646.00" x2="1138" y2="646.00" stroke="#222a3a"/>
+<text x="42.00" y="662.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">跟着钱走 — 四张要点卡</text>
+<rect x="42.00" y="682.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="682.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="706.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">现金牛 · 占主营 74%</text>
+<text x="58.00" y="724.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">CIS 是利润引擎</text>
+<text x="58.00" y="748.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">图像传感器</tspan><tspan fill="#9aa3b8" font-weight="400"> 2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 年收入</tspan><tspan fill="#f4d58a" font-weight="700"> 212</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> 、毛利率</tspan><tspan fill="#f4d58a" font-weight="700"> 35.98%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，远高于代理分销的</tspan><tspan fill="#f4d58a" font-weight="700"> 7.9%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；车用</tspan></text>
+<text x="58.00" y="764.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">CIS</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入</tspan><tspan fill="#f4d58a" font-weight="700"> 75</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> 、全球份额约</tspan><tspan fill="#f4d58a" font-weight="700"> 44%</tspan><tspan fill="#9aa3b8" font-weight="400"> 为最深护城河。</tspan></text>
+<rect x="412.00" y="682.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="682.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="706.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">瓶颈 · 上游产能</text>
+<text x="428.00" y="724.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">代工/封测是真正的瓶颈</text>
+<text x="428.00" y="748.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Fabless</tspan><tspan fill="#9aa3b8" font-weight="400"> 模式下营业成本</tspan><tspan fill="#f4d58a" font-weight="700"> 200</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan></text>
+<text x="428.00" y="764.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">外包，汇聚到台积电/中芯/华虹与日月光/长电等少数厂商；前五大供应商占采购</tspan><tspan fill="#f4d58a" font-weight="700"> 62.07%</tspan></text>
+<text x="428.00" y="780.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">，存储器涨价正传导成本。</tspan></text>
+<rect x="782.00" y="682.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="682.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="706.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求 · 客户集中</text>
+<text x="798.00" y="724.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">前五大客户占 49.58%</text>
+<text x="798.00" y="748.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">前五大客户合计</tspan><tspan fill="#f4d58a" font-weight="700"> 142.9</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> 、占营收</tspan><tspan fill="#f4d58a" font-weight="700"> 49.58%</tspan><tspan fill="#9aa3b8" font-weight="400"> （较</tspan><tspan fill="#9aa3b8" font-weight="400"> 2023</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 55.82%</tspan></text>
+<text x="798.00" y="764.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">下降）；手机端对小米/OPPO/荣耀/苹果集中度更高，汽车端为</tspan><tspan fill="#9aa3b8" font-weight="400"> 5–8</tspan><tspan fill="#9aa3b8" font-weight="400"> 年长协锁定。</tspan></text>
+<rect x="42.00" y="828.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="828.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="852.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">低毛利 · 摊薄</text>
+<text x="58.00" y="870.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">分销摊薄综合毛利</text>
+<text x="58.00" y="894.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">代理分销</tspan><tspan fill="#9aa3b8" font-weight="400"> 2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 年收入</tspan><tspan fill="#f4d58a" font-weight="700"> 49</tspan><tspan fill="#f4d58a" font-weight="700"> 亿元</tspan><tspan fill="#9aa3b8" font-weight="400"> 、同比</tspan><tspan fill="#f4d58a" font-weight="700"> +24.5%</tspan><tspan fill="#9aa3b8" font-weight="400"> 为增速最快板块，但毛利率仅</tspan><tspan fill="#f4d58a" font-weight="700"> 7.9%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，是</tspan></text>
+<text x="58.00" y="910.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 年一季度综合毛利率压缩</tspan><tspan fill="#f4d58a" font-weight="700"> 1.65pct</tspan><tspan fill="#9aa3b8" font-weight="400"> 的主因之一。</tspan></text>
+<text x="590.00" y="980.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: 豪威集团 2025 年年度报告 第37/41/127页；2026 年第一季度报告 第3页</text>
+</svg>

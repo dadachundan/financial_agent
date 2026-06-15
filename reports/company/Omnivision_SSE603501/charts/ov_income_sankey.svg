@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">豪威集团 2025 财年利润表 Sankey</text>
+<path d="M 359.00,78.00 C 428.50,78.00 428.50,212.10 498.00,212.10 L 498.00,277.23 C 428.50,277.23 428.50,143.13 359.00,143.13 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 359.00,143.13 C 428.50,143.13 428.50,291.23 498.00,291.23 L 498.00,349.90 C 428.50,349.90 428.50,201.80 359.00,201.80 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,85.00 C 273.50,85.00 273.50,78.00 343.00,78.00 L 343.00,202.99 C 273.50,202.99 273.50,209.99 204.00,209.99 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,209.99 C 273.50,209.99 273.50,216.99 343.00,216.99 L 343.00,500.00 C 273.50,500.00 273.50,493.00 204.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 669.00,205.46 C 738.50,205.46 738.50,241.38 808.00,241.38 L 808.00,298.58 C 738.50,298.58 738.50,262.66 669.00,262.66 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 669.00,262.66 C 738.50,262.66 738.50,312.58 808.00,312.58 L 808.00,320.62 C 738.50,320.62 738.50,270.71 669.00,270.71 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 669.00,270.71 C 738.50,270.71 738.50,334.62 808.00,334.62 L 808.00,336.62 C 738.50,336.62 738.50,272.71 669.00,272.71 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 514.00,212.10 C 583.50,212.10 583.50,205.46 653.00,205.46 L 653.00,270.59 C 583.50,270.59 583.50,277.23 514.00,277.23 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 514.00,291.23 C 583.50,291.23 583.50,284.52 653.00,284.52 L 653.00,302.34 C 583.50,302.34 583.50,309.06 514.00,309.06 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 514.00,309.06 C 583.50,309.06 583.50,316.34 653.00,316.34 L 653.00,356.54 C 583.50,356.54 583.50,349.25 514.00,349.25 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 514.00,349.25 C 583.50,349.25 583.50,370.54 653.00,370.54 L 653.00,372.54 C 583.50,372.54 583.50,351.25 514.00,351.25 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 514.00,363.90 C 583.50,363.90 583.50,270.59 653.00,270.59 L 653.00,272.59 C 583.50,272.59 583.50,365.90 514.00,365.90 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="343.00" y="78.00" width="16" height="124.99" rx="1.5" fill="#15803d"/>
+<rect x="343.00" y="216.99" width="16" height="283.01" rx="1.5" fill="#dc2626"/>
+<rect x="498.00" y="212.10" width="16" height="65.13" rx="1.5" fill="#15803d"/>
+<rect x="498.00" y="291.23" width="16" height="58.67" rx="1.5" fill="#dc2626"/>
+<rect x="498.00" y="363.90" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="653.00" y="205.46" width="16" height="65.05" rx="1.5" fill="#15803d"/>
+<rect x="653.00" y="284.52" width="16" height="17.83" rx="1.5" fill="#dc2626"/>
+<rect x="653.00" y="316.34" width="16" height="40.20" rx="1.5" fill="#dc2626"/>
+<rect x="653.00" y="370.54" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="241.38" width="16" height="57.20" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="312.58" width="16" height="8.05" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="334.62" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="207.00" y="67.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="210.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB28.9B  (100.0%)</text>
+<rect x="362.00" y="60.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="365.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="365.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB8.8B  (30.6%)</text>
+<rect x="362.00" y="198.99" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="365.00" y="210.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="365.00" y="223.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB20.0B  (69.4%)</text>
+<rect x="517.00" y="194.10" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="520.00" y="206.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="520.00" y="219.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB4.6B  (16.0%)</text>
+<rect x="517.00" y="273.23" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="520.00" y="285.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="520.00" y="298.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB4.1B  (14.4%)</text>
+<text x="489.00" y="361.90" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="489.00" y="374.90" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB73.7M  (0.26%)</text>
+<rect x="672.00" y="187.46" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="675.00" y="199.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="675.00" y="212.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB4.6B  (15.9%)</text>
+<rect x="672.00" y="266.52" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="675.00" y="278.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="675.00" y="291.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB1.3B  (4.4%)</text>
+<rect x="672.00" y="298.34" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="675.00" y="310.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="675.00" y="323.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB2.8B  (9.9%)</text>
+<rect x="672.00" y="352.54" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="675.00" y="364.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="675.00" y="377.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB45.9M  (0.16%)</text>
+<text x="833.00" y="266.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="279.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB4.0B  (14.0%)</text>
+<text x="833.00" y="313.60" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="326.60" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB569.1M  (2.0%)</text>
+<text x="833.00" y="338.60" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Minority Interest</text>
+<text x="833.00" y="351.60" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-RMB13.7M  (-0.05%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 豪威集团 2025 年年度报告, 第127页 合并利润表</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">2025 财年主营收入按地区</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 162.55,198.12 L 213.87,214.93 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 162.55,198.12 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 213.87,214.93 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">主营 288亿</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">RMB28.8B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="368.99" y1="350.94" x2="384.99" y2="350.94" stroke="#2563eb" stroke-width="1.4"/>
+<text x="388.99" y="348.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">境外(按客户所在地)</text>
+<text x="388.99" y="362.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB23.1B  (80.0%)</text>
+<line x1="207.01" y1="127.46" x2="191.01" y2="127.46" stroke="#15803d" stroke-width="1.4"/>
+<text x="187.01" y="125.46" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">境内</text>
+<text x="187.01" y="139.46" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB5.8B  (20.0%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 豪威集团 2025 年年度报告, 第37页 主营业务分地区</text>
+</svg>
