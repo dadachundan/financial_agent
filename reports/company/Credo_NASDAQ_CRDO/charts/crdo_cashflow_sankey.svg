@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Credo 2026 财年前九个月 现金流 Sankey (单位: 百万美元)</text>
+<path d="M 369.00,64.00 C 443.50,64.00 443.50,78.00 518.00,78.00 L 518.00,161.87 C 443.50,161.87 443.50,147.87 369.00,147.87 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 699.00,71.00 C 773.50,71.00 773.50,256.67 848.00,256.67 L 848.00,286.23 C 773.50,286.23 773.50,100.57 699.00,100.57 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,100.57 C 773.50,100.57 773.50,300.23 848.00,300.23 L 848.00,315.85 C 773.50,315.85 773.50,116.18 699.00,116.18 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 699.00,116.18 C 773.50,116.18 773.50,329.85 848.00,329.85 L 848.00,361.33 C 773.50,361.33 773.50,147.67 699.00,147.67 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,78.00 C 608.50,78.00 608.50,71.00 683.00,71.00 L 683.00,147.67 C 608.50,147.67 608.50,154.67 534.00,154.67 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,154.67 C 608.50,154.67 608.50,161.67 683.00,161.67 L 683.00,547.00 C 608.50,547.00 608.50,540.00 534.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 369.00,161.87 C 443.50,161.87 443.50,161.87 518.00,161.87 L 518.00,268.00 C 443.50,268.00 443.50,268.00 369.00,268.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,166.00 C 278.50,166.00 278.50,282.00 353.00,282.00 L 353.00,543.35 C 278.50,543.35 278.50,427.35 204.00,427.35 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 369.00,282.00 C 443.50,282.00 443.50,268.00 518.00,268.00 L 518.00,540.00 C 443.50,540.00 443.50,554.00 369.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,441.35 C 278.50,441.35 278.50,543.35 353.00,543.35 L 353.00,554.00 C 278.50,554.00 278.50,452.00 204.00,452.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="166.00" width="16" height="261.35" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="441.35" width="16" height="10.65" rx="1.5" fill="#2563eb"/>
+<rect x="353.00" y="64.00" width="16" height="83.87" rx="1.5" fill="#2563eb"/>
+<rect x="353.00" y="161.87" width="16" height="106.13" rx="1.5" fill="#2563eb"/>
+<rect x="353.00" y="282.00" width="16" height="272.00" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="683.00" y="71.00" width="16" height="76.67" rx="1.5" fill="#dc2626"/>
+<rect x="683.00" y="161.67" width="16" height="385.33" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="256.67" width="16" height="29.57" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="300.23" width="16" height="15.62" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="329.85" width="16" height="31.48" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="293.68" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">ATM 股权融资净额</text>
+<text x="179.00" y="306.68" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$736.3M  (56.6%)</text>
+<text x="179.00" y="443.67" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">员工持股计划</text>
+<text x="179.00" y="456.67" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$30.0M  (2.3%)</text>
+<rect x="372.00" y="46.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="375.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="375.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$236.3M  (18.2%)</text>
+<rect x="372.00" y="143.87" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="375.00" y="155.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="375.00" y="168.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$299.0M  (23.0%)</text>
+<rect x="372.00" y="264.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="375.00" y="276.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="375.00" y="289.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$766.3M  (58.9%)</text>
+<rect x="537.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (100.0%)</text>
+<rect x="702.00" y="53.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="705.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="705.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$216.0M  (16.6%)</text>
+<text x="708.00" y="351.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="708.00" y="364.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.1B  (83.4%)</text>
+<text x="873.00" y="268.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">短期投资净变动</text>
+<text x="873.00" y="281.45" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$83.3M  (6.4%)</text>
+<text x="873.00" y="305.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">资本开支</text>
+<text x="873.00" y="318.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$44.0M  (3.4%)</text>
+<text x="873.00" y="342.59" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Hyperlume 收购</text>
+<text x="873.00" y="355.59" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$88.7M  (6.8%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$255.0M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Credo Q3 FY26 10-Q (2026-03-12), 9M cash flow · as of 2026-06-15</text>
+</svg>

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 893" width="1180" height="893" role="img" aria-label="Credo 供应链资金流 — 谁付款 → 买什么 → 钱流向哪里" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="893" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="84.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">Credo 供应链资金流 — 谁付款 → 买什么 → 钱流向哪里</text>
+<ellipse cx="1031.00" cy="325.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="150.00" x2="369.50" y2="497.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="150.00" x2="810.50" y2="497.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁向 Credo 付款 (客户)</text>
+<text x="483.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">他们买什么 (Credo 产品)</text>
+<text x="924.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Credo 的钱流向哪里 (供应链)</text>
+<path d="M 256.00 234.50 C 369.50 234.50, 369.50 254.50, 483.00 254.50" fill="none" stroke="url(#mfgold)" stroke-width="18.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 320.50 C 369.50 320.50, 369.50 275.50, 483.00 275.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 337.50 C 369.50 337.50, 369.50 374.50, 483.00 374.50" fill="none" stroke="url(#mfgold)" stroke-width="10.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 420.50 C 369.50 420.50, 369.50 385.50, 483.00 385.50" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 410.50 C 369.50 410.50, 369.50 291.50, 483.00 291.50" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 261.50 C 810.50 261.50, 810.50 210.50, 924.00 210.50" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 378.00 C 810.50 378.00, 810.50 223.50, 924.00 223.50" fill="none" stroke="url(#mfgold)" stroke-width="10.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 275.50 C 810.50 275.50, 810.50 334.00, 924.00 334.00" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 284.50 C 810.50 284.50, 810.50 441.50, 924.00 441.50" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 385.50 C 810.50 385.50, 810.50 447.00, 924.00 447.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="238.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AEC 采购</text>
+<text x="369.50" y="292.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AEC 大批量</text>
+<text x="369.50" y="397.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">光 DSP</text>
+<text x="810.50" y="230.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">晶圆 (COGS)</text>
+<text x="810.50" y="298.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">电缆组装</text>
+<rect x="42.00" y="199.50" width="214" height="70.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="199.50" width="3" height="70.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="232.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">MICROSOFT</text>
+<text x="60.00" y="253.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">HiWire 双 ToR 架构</text>
+<text x="60.00" y="270.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">长期 AEC 客户</text>
+<rect x="42.00" y="285.50" width="214" height="80.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="285.50" width="3" height="80.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="318.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">近期爬坡超大规模云厂商</text>
+<text x="60.00" y="339.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Q3 FY26 终端客户约 39%</text>
+<text x="60.00" y="356.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">AWS / Meta / xAI 公开点名</text>
+<rect x="42.00" y="381.50" width="214" height="70.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="381.50" width="3" height="70.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="414.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ODM / 光模块厂</text>
+<text x="60.00" y="435.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">富士康/广达/纬颖</text>
+<text x="60.00" y="452.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Innolight/Coherent 集成 DSP</text>
+<rect x="483.00" y="223.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="223.50" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="256.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AEC 有源电缆</text>
+<text x="501.00" y="277.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">旗舰, FY26 约 80–85% 收入</text>
+<text x="501.00" y="294.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">HiWire / ZeroFlap</text>
+<rect x="483.00" y="333.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="333.50" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="366.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">IC (光 DSP / 重定时器)</text>
+<text x="501.00" y="387.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">光 PAM4 DSP</text>
+<text x="501.00" y="404.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">PCIe 重定时器 / 线卡 PHY</text>
+<rect x="924.00" y="160.00" width="214" height="111.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="160.00" width="3" height="111.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="193.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">TSMC</text>
+<text x="942.00" y="214.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">独家晶圆代工</text>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">n-1 节点 (5nm/12nm)</text>
+<text x="942.00" y="248.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">关键瓶颈</text>
+<rect x="924.00" y="287.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="287.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="320.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">BIZLINK</text>
+<text x="942.00" y="341.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">AEC 最终组装</text>
+<text x="942.00" y="358.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">台股 3665</text>
+<rect x="924.00" y="397.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="397.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="430.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Amkor / ASE / KYEC</text>
+<text x="942.00" y="451.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">封装 / 测试</text>
+<text x="942.00" y="468.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">台湾集中</text>
+<rect x="42.00" y="517.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="521.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="519.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="519.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="519.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="519.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="521.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="521.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="512.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="521.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="512.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="847.60" y="521.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="922.00" y="512.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="941.00" y="521.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="557.00" x2="1138" y2="557.00" stroke="#222a3a"/>
+<text x="42.00" y="573.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">顺着钱看 (FOLLOW THE MONEY)</text>
+<rect x="42.00" y="593.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="593.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="617.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">客户 · 极高集中度</text>
+<text x="58.00" y="635.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">一两家超大规模云厂商是收入引擎</text>
+<text x="58.00" y="659.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Q3</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 单一终端客户约</tspan><tspan fill="#f4d58a" font-weight="700"> 39%</tspan><tspan fill="#9aa3b8" font-weight="400"> ,</tspan><tspan fill="#9aa3b8" font-weight="400"> 前三大约</tspan><tspan fill="#f4d58a" font-weight="700"> 88%</tspan><tspan fill="#9aa3b8" font-weight="400"> ;</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 全年收入</tspan><tspan fill="#f4d58a" font-weight="700"> $1,335M</tspan></text>
+<text x="58.00" y="675.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">(同比</tspan><tspan fill="#9aa3b8" font-weight="400"> +206%)</tspan><tspan fill="#9aa3b8" font-weight="400"> 高度依赖</tspan><tspan fill="#f4d58a" font-weight="700"> Microsoft</tspan><tspan fill="#9aa3b8" font-weight="400"> 与一家近期爬坡的北美</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 云厂商。</tspan></text>
+<rect x="412.00" y="593.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="593.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="617.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">产品 · 旗舰</text>
+<text x="428.00" y="635.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AEC 有源电缆吃下绝大部分增量</text>
+<text x="428.00" y="659.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">管理层称</tspan><tspan fill="#9aa3b8" font-weight="400"> AEC</tspan><tspan fill="#9aa3b8" font-weight="400"> 贡献</tspan><tspan fill="#9aa3b8" font-weight="400"> FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 产品销售增量的</tspan><tspan fill="#f4d58a" font-weight="700"> 95%</tspan><tspan fill="#f4d58a" font-weight="700"> 以上</tspan><tspan fill="#9aa3b8" font-weight="400"> ;</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 产品销售</tspan><tspan fill="#f4d58a" font-weight="700"> $1,322.6M</tspan></text>
+<text x="428.00" y="675.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">,</tspan><tspan fill="#9aa3b8" font-weight="400"> AEC</tspan><tspan fill="#9aa3b8" font-weight="400"> 在机架内直接替代短距光通信。</tspan></text>
+<rect x="782.00" y="593.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="593.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="617.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">供应链 · 瓶颈</text>
+<text x="798.00" y="635.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱最终汇入 TSMC</text>
+<text x="798.00" y="659.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Credo</tspan><tspan fill="#9aa3b8" font-weight="400"> 全部晶圆由</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#9aa3b8" font-weight="400"> 独家代工</tspan><tspan fill="#9aa3b8" font-weight="400"> (n-1</tspan><tspan fill="#9aa3b8" font-weight="400"> 节点);</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS</tspan><tspan fill="#f4d58a" font-weight="700"> $426.8M</tspan></text>
+<text x="798.00" y="675.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">中芯片成本是主项,</tspan><tspan fill="#9aa3b8" font-weight="400"> 单点供应是最大供应链风险。</tspan></text>
+<rect x="42.00" y="723.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="723.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="747.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">供应链 · 组装</text>
+<text x="58.00" y="765.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">BizLink 把芯片变成电缆</text>
+<text x="58.00" y="789.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">BizLink</tspan><tspan fill="#9aa3b8" font-weight="400"> (台股</tspan><tspan fill="#9aa3b8" font-weight="400"> 3665)</tspan><tspan fill="#9aa3b8" font-weight="400"> 负责</tspan><tspan fill="#9aa3b8" font-weight="400"> AEC</tspan><tspan fill="#9aa3b8" font-weight="400"> 最终组装;</tspan><tspan fill="#9aa3b8" font-weight="400"> Amkor/ASE</tspan><tspan fill="#9aa3b8" font-weight="400"> 封装、KYEC</tspan><tspan fill="#9aa3b8" font-weight="400"> 测试</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan></text>
+<text x="58.00" y="805.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">组装环节高度集中于台湾,</tspan><tspan fill="#9aa3b8" font-weight="400"> 形成地理供应链风险。</tspan></text>
+<rect x="412.00" y="723.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="723.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="747.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">毛利 · 反直觉</text>
+<text x="428.00" y="765.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">出货高峰仍录 68% 毛利率</text>
+<text x="428.00" y="789.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> 毛利率</tspan><tspan fill="#f4d58a" font-weight="700"> 68.0%</tspan><tspan fill="#9aa3b8" font-weight="400"> (Q4</tspan><tspan fill="#f4d58a" font-weight="700"> 68.2%</tspan><tspan fill="#9aa3b8" font-weight="400"> );</tspan><tspan fill="#9aa3b8" font-weight="400"> n-1</tspan><tspan fill="#9aa3b8" font-weight="400"> 节点的单晶圆成本优势使</tspan><tspan fill="#9aa3b8" font-weight="400"> AEC</tspan></text>
+<text x="428.00" y="805.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">大批量出货并未压缩毛利率,</tspan><tspan fill="#9aa3b8" font-weight="400"> 与早期空头担忧相反。</tspan></text>
+<text x="590.00" y="875.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Credo FY2026 8-K (2026-06-01) + Q3 FY26 10-Q + 10-K FY2025 Item 1 · as of 2026-06-15</text>
+</svg>
