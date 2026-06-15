@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">GSI Technology FY2026 营收按主要终端客户 (US$M, 合并口径)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 389.78,155.14 L 348.14,189.53 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 389.78,155.14 A 132 132 0 0 1 419.74,247.45 L 365.85,244.07 A 78 78 0 0 0 348.14,189.53 Z" fill="#15803d"/>
+<path d="M 419.74,247.45 A 132 132 0 0 1 407.41,295.45 L 358.56,272.44 A 78 78 0 0 0 365.85,244.07 Z" fill="#d97706"/>
+<path d="M 407.41,295.45 A 132 132 0 1 1 288.00,107.20 L 288.00,161.20 A 78 78 0 1 0 358.56,272.44 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">FY2026 营收按终端客户 25.1M</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$25.1M</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="346.81" y1="114.36" x2="362.81" y2="114.36" stroke="#2563eb" stroke-width="1.4"/>
+<text x="366.81" y="112.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">KYEC (测试/ATE 终端)</text>
+<text x="366.81" y="126.36" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.5M  (14.0%)</text>
+<line x1="419.26" y1="196.59" x2="435.26" y2="196.59" stroke="#15803d" stroke-width="1.4"/>
+<text x="439.26" y="194.59" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Cadence (EDA 仿真)</text>
+<text x="439.26" y="208.59" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.0M  (12.0%)</text>
+<line x1="421.66" y1="273.53" x2="437.66" y2="273.53" stroke="#d97706" stroke-width="1.4"/>
+<text x="441.66" y="271.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Nokia (网络通信)</text>
+<text x="441.66" y="285.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.5M  (6.0%)</text>
+<line x1="171.47" y1="313.12" x2="155.47" y2="313.12" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="151.47" y="311.12" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">其他终端客户 (军用/航空航天/其他)</text>
+<text x="151.47" y="325.12" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$17.1M  (68.0%)</text>
+<text x="360.00" y="430.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">KYEC/Cadence/Nokia 为 10-K 披露的合并口径终端客户占比; 其余为推算余额</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: GSI Technology FY2026 10-K — Customer Concentration (KYEC ~14%, Cadence ~12%, Nokia ~6%)</text>
+</svg>

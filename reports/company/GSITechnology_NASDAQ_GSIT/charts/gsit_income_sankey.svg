@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 680" width="1040" height="680" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+<rect x="0.0" y="0.0" width="1040.0" height="680.0" rx="0" fill="#ffffff"/>
+<text x="520.0" y="30.0" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#1f2933" text-anchor="middle">GSI Technology FY2026 利润表 Sankey (US$M) — 亏损经营</text>
+<rect x="70.0" y="160.0" width="20.0" height="354.6" rx="3" fill="#1e3a8a"/>
+<text x="70.0" y="154.0" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#1f2933" text-anchor="start">Revenue 25.1</text>
+<rect x="300.0" y="110.0" width="20.0" height="193.3" rx="3" fill="#15803d"/>
+<text x="326.0" y="123.0" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#1f2933" text-anchor="start">Gross Profit 13.7 (GM 54.5%)</text>
+<rect x="300.0" y="327.3" width="20.0" height="161.3" rx="3" fill="#dc2626"/>
+<text x="326.0" y="340.3" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#1f2933" text-anchor="start">COGS 11.4</text>
+<path d="M 90.0 160.0 C 195.0 160.0 195.0 110.0 300.0 110.0 L 300.0 303.3 C 195.0 303.3 195.0 353.3 90.0 353.3 Z" fill="#86efac" opacity="0.45"/>
+<path d="M 90.0 353.3 C 195.0 353.3 195.0 327.3 300.0 327.3 L 300.0 488.6 C 195.0 488.6 195.0 514.6 90.0 514.6 Z" fill="#fca5a5" opacity="0.45"/>
+<rect x="540.0" y="110.0" width="20.0" height="440.0" rx="3" fill="#dc2626"/>
+<text x="566.0" y="123.0" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#1f2933" text-anchor="start">营业费用合计 31.2</text>
+<rect x="420.0" y="311.3" width="20.0" height="246.7" rx="3" fill="#64748b"/>
+<text x="420.0" y="305.3" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#52606d" text-anchor="middle">经营亏损补足 17.5</text>
+<path d="M 320.0 110.0 C 430.0 110.0 430.0 110.0 540.0 110.0 L 540.0 303.3 C 430.0 303.3 430.0 303.3 320.0 303.3 Z" fill="#86efac" opacity="0.45"/>
+<path d="M 440.0 311.3 C 490.0 311.3 490.0 303.3 540.0 303.3 L 540.0 550.0 C 490.0 550.0 490.0 558.0 440.0 558.0 Z" fill="#cbd5e1" opacity="0.4"/>
+<rect x="780.0" y="110.0" width="20.0" height="281.6" rx="3" fill="#dc2626"/>
+<text x="806.0" y="123.0" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#1f2933" text-anchor="start">R&amp;D 研发 19.9</text>
+<rect x="780.0" y="415.6" width="20.0" height="158.4" rx="3" fill="#dc2626"/>
+<text x="806.0" y="428.6" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#1f2933" text-anchor="start">SG&amp;A 销管 11.2</text>
+<path d="M 560.0 110.0 C 670.0 110.0 670.0 110.0 780.0 110.0 L 780.0 391.6 C 670.0 391.6 670.0 391.6 560.0 391.6 Z" fill="#fca5a5" opacity="0.45"/>
+<path d="M 560.0 391.6 C 670.0 391.6 670.0 415.6 780.0 415.6 L 780.0 574.0 C 670.0 574.0 670.0 550.0 560.0 550.0 Z" fill="#fca5a5" opacity="0.45"/>
+<text x="70.0" y="602.0" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#dc2626" text-anchor="start">经营亏损 (Loss from Operations) = 13.7 毛利 − 31.2 营业费用 = −17.5M</text>
+<text x="70.0" y="620.0" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="11" font-weight="600" fill="#52606d" text-anchor="start">净亏损 (Net Loss) = −17.5 经营亏损 + 0.9 利息净收入 + 3.2 其他(含 +6.2 认股权证公允价值非现金收益 − 2.8 发行成本) − 0.1 税 = −13.2M</text>
+<text x="70.0" y="642.0" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3" text-anchor="start" font-style="italic">来源: GSI Technology FY2026 10-K (filed 2026-06-05) — Consolidated Statements of Operations</text>
+</svg>

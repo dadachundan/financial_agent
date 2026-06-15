@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">GSI Technology FY2026 营收按发货地区 (US$M)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 296.81,370.91 L 293.20,317.03 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 296.81,370.91 A 132 132 0 0 1 171.37,301.01 L 219.08,275.73 A 78 78 0 0 0 293.20,317.03 Z" fill="#15803d"/>
+<path d="M 171.37,301.01 A 132 132 0 0 1 176.93,167.87 L 222.37,197.05 A 78 78 0 0 0 219.08,275.73 Z" fill="#d97706"/>
+<path d="M 176.93,167.87 A 132 132 0 0 1 231.51,119.90 L 254.62,168.70 A 78 78 0 0 0 222.37,197.05 Z" fill="#7c3aed"/>
+<path d="M 231.51,119.90 A 132 132 0 0 1 249.20,113.03 L 265.07,164.65 A 78 78 0 0 0 254.62,168.70 Z" fill="#dc2626"/>
+<path d="M 249.20,113.03 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 265.07,164.65 Z" fill="#0891b2"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">FY2026 营收按地区 25.1M</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$25.1M</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="425.92" y1="234.59" x2="441.92" y2="234.59" stroke="#2563eb" stroke-width="1.4"/>
+<text x="445.92" y="232.59" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States</text>
+<text x="445.92" y="246.59" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$12.3M  (48.9%)</text>
+<line x1="220.83" y1="359.75" x2="204.83" y2="359.75" stroke="#15803d" stroke-width="1.4"/>
+<text x="200.83" y="357.75" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Germany</text>
+<text x="200.83" y="371.75" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.6M  (18.3%)</text>
+<line x1="150.12" y1="233.44" x2="134.12" y2="233.44" stroke="#d97706" stroke-width="1.4"/>
+<text x="130.12" y="231.44" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">China</text>
+<text x="130.12" y="245.44" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.2M  (16.8%)</text>
+<line x1="196.90" y1="135.55" x2="180.90" y2="135.55" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="176.90" y="133.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Singapore</text>
+<text x="176.90" y="147.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.2M  (8.9%)</text>
+<line x1="238.06" y1="110.55" x2="222.06" y2="110.55" stroke="#dc2626" stroke-width="1.4"/>
+<text x="218.06" y="108.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Netherlands</text>
+<text x="218.06" y="122.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$575.0K  (2.3%)</text>
+<line x1="267.49" y1="102.73" x2="251.49" y2="102.73" stroke="#0891b2" stroke-width="1.4"/>
+<text x="247.49" y="100.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Rest of world</text>
+<text x="247.49" y="114.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2M  (4.7%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: GSI Technology FY2026 10-K (filed 2026-06-05) — Note: Geographic Information</text>
+</svg>
