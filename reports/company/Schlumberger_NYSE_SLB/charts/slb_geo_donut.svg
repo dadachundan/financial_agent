@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 营收按地区 / Revenue by Geography</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 406.34,297.67 L 357.93,273.75 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 406.34,297.67 A 132 132 0 0 1 213.46,348.14 L 243.95,303.57 A 78 78 0 0 0 357.93,273.75 Z" fill="#15803d"/>
+<path d="M 213.46,348.14 A 132 132 0 0 1 164.14,193.57 L 214.81,212.24 A 78 78 0 0 0 243.95,303.57 Z" fill="#d97706"/>
+<path d="M 164.14,193.57 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 214.81,212.24 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">SLB</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$35.6B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="405.22" y1="166.37" x2="421.22" y2="166.37" stroke="#2563eb" stroke-width="1.4"/>
+<text x="425.22" y="164.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Middle East &amp; Asia</text>
+<text x="425.22" y="178.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$11.5B  (32.3%)</text>
+<line x1="322.93" y1="372.71" x2="338.93" y2="372.71" stroke="#15803d" stroke-width="1.4"/>
+<text x="342.93" y="370.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Europe &amp; Africa</text>
+<text x="342.93" y="384.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$9.7B  (27.2%)</text>
+<line x1="156.53" y1="281.15" x2="140.53" y2="281.15" stroke="#d97706" stroke-width="1.4"/>
+<text x="136.53" y="279.15" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Latin America</text>
+<text x="136.53" y="293.15" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$7.5B  (21.1%)</text>
+<line x1="209.07" y1="126.00" x2="193.07" y2="126.00" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="189.07" y="124.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">North America</text>
+<text x="189.07" y="138.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$6.9B  (19.4%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: SLB FY2025 10-K, Item 7 MD&amp;A — Geographic revenue</text>
+</svg>
