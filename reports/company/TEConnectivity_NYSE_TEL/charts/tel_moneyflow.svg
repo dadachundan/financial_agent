@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 978" width="1180" height="978" role="img" aria-label="TE Connectivity — 谁付钱 → 买什么 → TEL 的成本流向哪里" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="978" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">TE CONNECTIVITY 资金流 · FY2025 · 需求视角</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">TE Connectivity — 谁付钱 → 买什么 → TEL 的成本流向哪里</text>
+<ellipse cx="1031.00" cy="394.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="166.00" x2="369.50" y2="618.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="166.00" x2="810.50" y2="618.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="166.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱给 TEL（终端需求）</text>
+<text x="483.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="166.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">TEL 卖的产品线</text>
+<text x="924.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="166.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">TEL 自己的关键投入（成本流向）</text>
+<path d="M 256.00 268.00 C 369.50 268.00, 369.50 370.00, 483.00 370.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 399.00 C 369.50 399.00, 369.50 394.00, 483.00 394.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 525.00 C 369.50 525.00, 369.50 418.00, 483.00 418.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 358.00 C 810.50 358.00, 810.50 223.00, 924.00 223.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 382.00 C 810.50 382.00, 810.50 336.00, 924.00 336.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 406.00 C 810.50 406.00, 810.50 449.00, 924.00 449.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 430.00 C 810.50 430.00, 810.50 562.00, 924.00 562.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<text x="369.50" y="313.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">US$7.1B 汽车连接/传感</text>
+<text x="369.50" y="390.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">US$2.2B 高速互联</text>
+<text x="369.50" y="465.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">US$5.7B 工业/能源/国防/医疗</text>
+<text x="810.50" y="284.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">COGS US$11.2B 主要原料</text>
+<text x="810.50" y="353.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">电镀贵金属</text>
+<text x="810.50" y="421.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">注塑树脂</text>
+<text x="810.50" y="490.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">自有产能交付</text>
+<rect x="42.00" y="208.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="208.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="241.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">汽车 OEM / Tier-1</text>
+<text x="60.00" y="262.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Automotive US$7,052M</text>
+<text x="60.00" y="279.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">占合并收入 41%</text>
+<rect x="42.00" y="344.00" width="214" height="110.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="344.00" width="3" height="110.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="377.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">AI 数据中心 hyperscaler</text>
+<text x="60.00" y="398.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Digital data networks US$2,208M</text>
+<text x="60.00" y="415.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY25 organic +72.6%</text>
+<rect x="42.00" y="470.00" width="214" height="110.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="470.00" width="3" height="110.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="503.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">工业 / 能源 / 国防 / 医疗 OEM</text>
+<text x="60.00" y="524.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Automation+A&amp;D+Energy+Medical</text>
+<text x="60.00" y="541.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">合计约 US$5.7B</text>
+<rect x="483.00" y="319.00" width="214" height="150.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="319.00" width="3" height="150.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="352.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">TE Connectivity</text>
+<text x="501.00" y="373.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY25 收入 US$17,262M</text>
+<text x="501.00" y="390.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">毛利率 35.2% · FCF US$3.2B</text>
+<rect x="924.00" y="176.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="176.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="209.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">铜 (copper)</text>
+<text x="942.00" y="230.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">导体核心原料</text>
+<text x="942.00" y="247.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">价格直接影响毛利</text>
+<rect x="924.00" y="286.00" width="214" height="100.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="286.00" width="3" height="100.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="319.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">贵金属 镀层 (Au/Ag/Pd)</text>
+<text x="942.00" y="340.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">金/银/钯电镀</text>
+<text x="942.00" y="357.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">少数国家/供应商集中</text>
+<rect x="924.00" y="402.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="402.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="435.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">塑料树脂 (resins)</text>
+<text x="942.00" y="456.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">连接器壳体注塑</text>
+<text x="942.00" y="473.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">油价敏感</text>
+<rect x="924.00" y="512.00" width="214" height="100.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="512.00" width="3" height="100.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="545.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">全球自有制造 + 合同工</text>
+<text x="942.00" y="566.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">~55,000 制造人员</text>
+<text x="942.00" y="583.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">~13,000 合同工</text>
+<rect x="42.00" y="638.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="642.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="640.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="640.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="640.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="640.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="642.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="642.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="633.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="642.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="633.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="847.60" y="642.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="929.20" y="633.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="948.20" y="642.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="678.00" x2="1138" y2="678.00" stroke="#222a3a"/>
+<text x="42.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY</text>
+<rect x="42.00" y="714.00" width="356.00" height="98.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="714.00" width="3" height="98.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="738.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">需求三驾马车</text>
+<text x="58.00" y="762.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Automotive</tspan><tspan fill="#f4d58a" font-weight="700"> US$7.1B</tspan><tspan fill="#9aa3b8" font-weight="400"> (41%)</tspan><tspan fill="#9aa3b8" font-weight="400"> 是基本盘；</tspan><tspan fill="#f4d58a" font-weight="700"> AI/data-center</tspan><tspan fill="#f4d58a" font-weight="700"> US$2.2B</tspan></text>
+<text x="58.00" y="778.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">增速最快</tspan><tspan fill="#9aa3b8" font-weight="400"> (</tspan><tspan fill="#f4d58a" font-weight="700"> +72.6%</tspan><tspan fill="#f4d58a" font-weight="700"> organic</tspan><tspan fill="#9aa3b8" font-weight="400"> )；工业/能源/国防/医疗合计</tspan><tspan fill="#f4d58a" font-weight="700"> US$5.7B</tspan><tspan fill="#9aa3b8" font-weight="400"> 提供多元化。</tspan></text>
+<rect x="412.00" y="714.00" width="356.00" height="98.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="714.00" width="3" height="98.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="738.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">成本的真正去向</text>
+<text x="428.00" y="762.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY25</tspan><tspan fill="#f4d58a" font-weight="700"> COGS</tspan><tspan fill="#f4d58a" font-weight="700"> US$11.2B</tspan><tspan fill="#9aa3b8" font-weight="400"> （占收入</tspan><tspan fill="#9aa3b8" font-weight="400"> 64.8%）主要流向</tspan><tspan fill="#f4d58a" font-weight="700"> 铜</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> 金银钯</tspan><tspan fill="#f4d58a" font-weight="700"> /</tspan><tspan fill="#f4d58a" font-weight="700"> 树脂</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan></text>
+<text x="428.00" y="778.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">这些是毛利率的杠杆点，10-K</tspan><tspan fill="#9aa3b8" font-weight="400"> 警示其</tspan><tspan fill="#f4d58a" font-weight="700"> 仅来自少数国家或供应商</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="782.00" y="714.00" width="356.00" height="98.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="714.00" width="3" height="98.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="738.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">毛利杠杆</text>
+<text x="798.00" y="762.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">原材料涨价时</tspan><tspan fill="#9aa3b8" font-weight="400"> TEL</tspan><tspan fill="#9aa3b8" font-weight="400"> 以</tspan><tspan fill="#f4d58a" font-weight="700"> 价格上调</tspan><tspan fill="#9aa3b8" font-weight="400"> 转嫁（10-K</tspan><tspan fill="#9aa3b8" font-weight="400"> 明示），但长期连接器</tspan><tspan fill="#9aa3b8" font-weight="400"> ASP</tspan><tspan fill="#9aa3b8" font-weight="400"> 仍受</tspan><tspan fill="#f4d58a" font-weight="700"> 下行压力</tspan><tspan fill="#9aa3b8" font-weight="400"> ；毛利率</tspan></text>
+<text x="798.00" y="778.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY25</tspan><tspan fill="#f4d58a" font-weight="700"> 35.2%</tspan><tspan fill="#9aa3b8" font-weight="400"> 已较</tspan><tspan fill="#9aa3b8" font-weight="400"> FY24</tspan><tspan fill="#9aa3b8" font-weight="400"> 改善。</tspan></text>
+<rect x="42.00" y="826.00" width="356.00" height="98.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="826.00" width="3" height="98.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="850.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">现金回收</text>
+<text x="58.00" y="874.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY25</tspan><tspan fill="#f4d58a" font-weight="700"> FCF</tspan><tspan fill="#f4d58a" font-weight="700"> US$3.2B</tspan><tspan fill="#9aa3b8" font-weight="400"> （FCF</tspan><tspan fill="#9aa3b8" font-weight="400"> margin</tspan><tspan fill="#f4d58a" font-weight="700"> 18.5%</tspan><tspan fill="#9aa3b8" font-weight="400"> ）回流，用于</tspan><tspan fill="#f4d58a" font-weight="700"> US$2.6B</tspan><tspan fill="#f4d58a" font-weight="700"> 并购</tspan></text>
+<text x="58.00" y="890.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">+</tspan><tspan fill="#9aa3b8" font-weight="400"> 股息</tspan><tspan fill="#9aa3b8" font-weight="400"> US$0.8B</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 回购</tspan><tspan fill="#9aa3b8" font-weight="400"> US$1.3B。</tspan></text>
+<text x="590.00" y="960.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: TE Connectivity FY2025 Form 10-K (Net sales by end-market · Cost of sales · Raw Materials) · FY25 8-K (2025-10-29)</text>
+</svg>

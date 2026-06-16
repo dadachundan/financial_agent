@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">TE Connectivity — FY2025 收入按终端市场 (US$M)</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 359.76,349.99 L 330.40,304.67 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 359.76,349.99 A 132 132 0 0 1 258.04,367.76 L 270.30,315.16 A 78 78 0 0 0 330.40,304.67 Z" fill="#15803d"/>
+<path d="M 258.04,367.76 A 132 132 0 0 1 176.19,309.36 L 221.93,280.66 A 78 78 0 0 0 270.30,315.16 Z" fill="#d97706"/>
+<path d="M 176.19,309.36 A 132 132 0 0 1 156.03,241.91 L 210.02,240.80 A 78 78 0 0 0 221.93,280.66 Z" fill="#7c3aed"/>
+<path d="M 156.03,241.91 A 132 132 0 0 1 172.04,176.13 L 219.48,201.93 A 78 78 0 0 0 210.02,240.80 Z" fill="#dc2626"/>
+<path d="M 172.04,176.13 A 132 132 0 0 1 215.28,129.04 L 245.03,174.10 A 78 78 0 0 0 219.48,201.93 Z" fill="#0891b2"/>
+<path d="M 215.28,129.04 A 132 132 0 0 1 255.10,111.37 L 268.56,163.66 A 78 78 0 0 0 245.03,174.10 Z" fill="#db2777"/>
+<path d="M 255.10,111.37 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 268.56,163.66 Z" fill="#65a30d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">TEL FY25 US$17.3B</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$17.3B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="420.34" y1="200.09" x2="436.34" y2="200.09" stroke="#2563eb" stroke-width="1.4"/>
+<text x="440.34" y="198.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Automotive</text>
+<text x="440.34" y="212.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$7.1B  (40.9%)</text>
+<line x1="311.74" y1="375.14" x2="327.74" y2="375.14" stroke="#15803d" stroke-width="1.4"/>
+<text x="331.74" y="373.14" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Digital data networks (AI)</text>
+<text x="331.74" y="387.14" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.2B  (12.8%)</text>
+<line x1="207.85" y1="351.54" x2="191.85" y2="351.54" stroke="#d97706" stroke-width="1.4"/>
+<text x="187.85" y="349.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Automation &amp; connected living</text>
+<text x="187.85" y="363.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.1B  (12.4%)</text>
+<line x1="155.78" y1="278.72" x2="139.78" y2="278.72" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="135.78" y="276.72" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Aerospace, defense &amp; marine</text>
+<text x="135.78" y="290.72" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.5B  (8.6%)</text>
+<line x1="153.92" y1="206.56" x2="137.92" y2="206.56" stroke="#dc2626" stroke-width="1.4"/>
+<text x="133.92" y="204.56" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Commercial transportation</text>
+<text x="133.92" y="218.56" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.4B  (8.3%)</text>
+<line x1="186.34" y1="145.87" x2="170.34" y2="145.87" stroke="#0891b2" stroke-width="1.4"/>
+<text x="166.34" y="143.87" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Energy</text>
+<text x="166.34" y="157.87" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (7.8%)</text>
+<line x1="232.02" y1="113.06" x2="216.02" y2="113.06" stroke="#db2777" stroke-width="1.4"/>
+<text x="212.02" y="111.06" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Sensors</text>
+<text x="212.02" y="125.06" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$911.0M  (5.3%)</text>
+<line x1="270.67" y1="102.29" x2="254.67" y2="102.29" stroke="#65a30d" stroke-width="1.4"/>
+<text x="250.67" y="100.29" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Medical</text>
+<text x="250.67" y="114.29" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$692.0M  (4.0%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: TE Connectivity FY2025 Form 10-K, Note 20 Segment Information (end-market net sales)</text>
+</svg>
