@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Coherent 营收结构 (按地区, FY2025)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 201.60,339.00 L 236.95,298.17 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 201.60,339.00 A 132 132 0 0 1 156.98,255.23 L 210.58,248.67 A 78 78 0 0 0 236.95,298.17 Z" fill="#15803d"/>
+<path d="M 156.98,255.23 A 132 132 0 0 1 181.65,161.01 L 225.16,193.00 A 78 78 0 0 0 210.58,248.67 Z" fill="#d97706"/>
+<path d="M 181.65,161.01 A 132 132 0 0 1 223.05,124.29 L 249.62,171.30 A 78 78 0 0 0 225.16,193.00 Z" fill="#7c3aed"/>
+<path d="M 223.05,124.29 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 249.62,171.30 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">COHR</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$5.8B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="417.31" y1="287.40" x2="433.31" y2="287.40" stroke="#2563eb" stroke-width="1.4"/>
+<text x="437.31" y="285.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">North America 北美</text>
+<text x="437.31" y="299.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.6B  (61.4%)</text>
+<line x1="166.21" y1="304.09" x2="150.21" y2="304.09" stroke="#15803d" stroke-width="1.4"/>
+<text x="146.21" y="302.09" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">China 中国</text>
+<text x="146.21" y="316.09" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$680.1M  (11.7%)</text>
+<line x1="154.50" y1="204.25" x2="138.50" y2="204.25" stroke="#d97706" stroke-width="1.4"/>
+<text x="134.50" y="202.25" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Europe 欧洲</text>
+<text x="134.50" y="216.25" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$698.8M  (12.0%)</text>
+<line x1="196.42" y1="135.97" x2="180.42" y2="135.97" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="176.42" y="133.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Japan 日本</text>
+<text x="176.42" y="147.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$390.6M  (6.7%)</text>
+<line x1="252.89" y1="105.74" x2="236.89" y2="105.74" stroke="#dc2626" stroke-width="1.4"/>
+<text x="232.89" y="103.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Rest of World 其他</text>
+<text x="232.89" y="117.74" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$475.7M  (8.2%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: COHR FY2025 10-K Note 14 Geographic Revenue · sec.gov</text>
+</svg>
