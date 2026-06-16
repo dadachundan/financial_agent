@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 收入构成（按金属）/ Revenue by Metal</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 156.07,243.36 L 210.04,241.66 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 156.07,243.36 A 132 132 0 0 1 207.32,134.73 L 240.32,177.47 A 78 78 0 0 0 210.04,241.66 Z" fill="#15803d"/>
+<path d="M 207.32,134.73 A 132 132 0 0 1 264.18,109.37 L 273.93,162.48 A 78 78 0 0 0 240.32,177.47 Z" fill="#d97706"/>
+<path d="M 264.18,109.37 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 273.93,162.48 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">FCX</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$25.9B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="387.10" y1="335.23" x2="403.10" y2="335.23" stroke="#2563eb" stroke-width="1.4"/>
+<text x="407.10" y="333.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">铜 Copper</text>
+<text x="407.10" y="347.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$19.3B  (74.5%)</text>
+<line x1="163.19" y1="180.32" x2="147.19" y2="180.32" stroke="#15803d" stroke-width="1.4"/>
+<text x="143.19" y="178.32" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">金 Gold</text>
+<text x="143.19" y="192.32" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.9B  (15.0%)</text>
+<line x1="231.79" y1="113.17" x2="215.79" y2="113.17" stroke="#d97706" stroke-width="1.4"/>
+<text x="211.79" y="111.17" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">钼 Molybdenum</text>
+<text x="211.79" y="125.17" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.0B  (7.6%)</text>
+<line x1="275.50" y1="101.77" x2="259.50" y2="101.77" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="255.50" y="99.77" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">银及其他 Silver/Other</text>
+<text x="255.50" y="113.77" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$749.0M  (2.9%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: FCX FY2025 10-K, revenue-by-product disaggregation</text>
+</svg>
