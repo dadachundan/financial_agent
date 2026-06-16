@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1182" width="1180" height="1182" role="img" aria-label="3M 的资金流：终端需求 → 三大业务部门 → 上游原料与渠道" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1182" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">DIVERSIFIED-INDUSTRIALS MONEY FLOW · 3M FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">3M 的资金流：终端需求 → 三大业务部门 → 上游原料与渠道</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">3M 是材料科学供应商:需求方(工业/汽车/数据中心/半导体晶圆厂/零售)付钱买 3M 的耗材与组件,3M 的 249.5 亿美元营收沿三大部门汇集,再把约 150 亿美元 COGS 支付给石化原料、氟聚合物与磨料矿物等上游环节。</text>
+<ellipse cx="1031.00" cy="473.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="754.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="754.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱给 3M (终端需求)</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">3M 三大业务部门</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">3M 的成本流向 (上游/渠道)</text>
+<path d="M 256.00 253.00 C 369.50 253.00, 369.50 342.00, 483.00 342.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 371.00 C 369.50 371.00, 369.50 472.00, 483.00 472.00" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 481.00 C 369.50 481.00, 369.50 482.91, 483.00 482.91" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 591.00 C 369.50 591.00, 369.50 488.91, 483.00 488.91" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 701.00 C 369.50 701.00, 369.50 609.00, 483.00 609.00" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 333.27 C 810.50 333.27, 810.50 299.82, 924.00 299.82" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 343.64 C 810.50 343.64, 810.50 528.00, 924.00 528.00" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 474.18 C 810.50 474.18, 810.50 310.18, 924.00 310.18" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 482.91 C 810.50 482.91, 810.50 418.00, 924.00 418.00" fill="none" stroke="url(#mfgold)" stroke-width="7.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 604.64 C 810.50 604.64, 810.50 318.36, 924.00 318.36" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 612.27 C 810.50 612.27, 810.50 641.82, 924.00 641.82" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 352.36 C 810.50 352.36, 810.50 633.64, 924.00 633.64" fill="none" stroke="url(#mfgold)" stroke-width="7.64" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="475.95" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">DC ~$600M</text>
+<rect x="42.00" y="198.00" width="214" height="110.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="110.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">工业 &amp; 安全终端</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">磨料/胶粘/PPE/过滤</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">S&amp;I 部门最大需求</text>
+<rect x="42.00" y="324.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="324.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="357.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">汽车 &amp; 航空 OEM</text>
+<text x="60.00" y="378.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">车身薄膜/胶粘/隔音</text>
+<text x="60.00" y="395.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">T&amp;E 需求</text>
+<rect x="42.00" y="434.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="42.00" y="434.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="60.00" y="467.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">数据中心 &amp; 电子</text>
+<text x="60.00" y="488.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Twinax 铜缆/扩展光</text>
+<text x="60.00" y="505.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">~6 亿美元, 内部&gt;50% YoY</text>
+<rect x="42.00" y="544.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="42.00" y="544.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="60.00" y="577.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">半导体晶圆厂</text>
+<text x="60.00" y="598.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">CMP 垫修整器/防尘膜</text>
+<text x="60.00" y="615.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">台/韩/中大陆集中</text>
+<rect x="42.00" y="654.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="654.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="687.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">零售 &amp; 消费者</text>
+<text x="60.00" y="708.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Post-it/Scotch/Command</text>
+<text x="60.00" y="725.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Consumer 部门</text>
+<rect x="483.00" y="282.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="282.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="315.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Safety &amp; Industrial</text>
+<text x="501.00" y="336.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY25 营收 113.8 亿</text>
+<text x="501.00" y="353.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">占 45.6%</text>
+<rect x="483.00" y="418.00" width="214" height="120.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="418.00" width="3" height="120.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="451.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Transportation &amp; Electronics</text>
+<text x="501.00" y="472.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">FY25 营收 82.7 亿</text>
+<text x="501.00" y="489.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">占 33.2%</text>
+<rect x="483.00" y="554.00" width="214" height="110.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="554.00" width="3" height="110.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="587.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Consumer</text>
+<text x="501.00" y="608.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY25 营收 49.2 亿</text>
+<text x="501.00" y="625.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">占 19.7%</text>
+<rect x="924.00" y="261.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="261.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="294.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">石化原料 &amp; 树脂</text>
+<text x="942.00" y="315.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">薄膜/胶粘/无纺布基础</text>
+<text x="942.00" y="332.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">油价敏感</text>
+<rect x="924.00" y="371.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="371.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="404.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">氟聚合物 (自产)</text>
+<text x="942.00" y="425.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">PFAS 制造已于 2025 退出</text>
+<text x="942.00" y="442.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">光罩防尘膜/特种化学</text>
+<rect x="924.00" y="481.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="481.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="514.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">磨料矿物 &amp; 陶瓷</text>
+<text x="942.00" y="535.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">氧化铝/陶瓷微球</text>
+<text x="942.00" y="552.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">磨料平台核心</text>
+<rect x="924.00" y="591.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="591.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="624.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">分销渠道 &amp; 零售商</text>
+<text x="942.00" y="645.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">批发/电商/经销商</text>
+<text x="942.00" y="662.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Distribution 网络</text>
+<rect x="42.00" y="774.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="778.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="776.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="776.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="776.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="776.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="778.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="778.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="769.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="747.00" y="778.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<rect x="807.00" y="769.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="826.00" y="778.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<rect x="886.00" y="769.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="905.00" y="778.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="986.60" y="769.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="1005.60" y="778.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="42.00" y="789.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="61.00" y="798.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="200.20" y="789.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="219.20" y="798.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<line x1="42" y1="814.00" x2="1138" y2="814.00" stroke="#222a3a"/>
+<text x="42.00" y="830.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 3M 的现金从哪来、到哪去</text>
+<rect x="42.00" y="850.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="850.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="874.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">最大需求池 · S&amp;I</text>
+<text x="58.00" y="892.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">工业耗材占近半营收</text>
+<text x="58.00" y="916.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Safety</tspan><tspan fill="#9aa3b8" font-weight="400"> &amp;</tspan><tspan fill="#9aa3b8" font-weight="400"> Industrial</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收</tspan><tspan fill="#f4d58a" font-weight="700"> 113.8</tspan><tspan fill="#f4d58a" font-weight="700"> 亿美元</tspan><tspan fill="#9aa3b8" font-weight="400"> (占</tspan><tspan fill="#f4d58a" font-weight="700"> 45.6%</tspan></text>
+<text x="58.00" y="932.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">)、部门经营利润</tspan><tspan fill="#f4d58a" font-weight="700"> 28.4</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> (利润率</tspan><tspan fill="#9aa3b8" font-weight="400"> 22.7%),是</tspan><tspan fill="#9aa3b8" font-weight="400"> 3M</tspan></text>
+<text x="58.00" y="948.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">现金生成的核心引擎,需求来自工业胶粘、磨料、PPE</tspan><tspan fill="#9aa3b8" font-weight="400"> 与过滤。</tspan></text>
+<rect x="412.00" y="850.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="850.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="874.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">新增长引擎 · 数据中心</text>
+<text x="428.00" y="892.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">数据中心是中期拐点</text>
+<text x="428.00" y="916.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">数据中心相关收入约</tspan><tspan fill="#f4d58a" font-weight="700"> 6</tspan><tspan fill="#f4d58a" font-weight="700"> 亿美元</tspan><tspan fill="#9aa3b8" font-weight="400"> (占</tspan><tspan fill="#9aa3b8" font-weight="400"> ~2.5%</tspan><tspan fill="#9aa3b8" font-weight="400"> 销售),其中</tspan><tspan fill="#9aa3b8" font-weight="400"> DC</tspan><tspan fill="#9aa3b8" font-weight="400"> 内部产品(</tspan><tspan fill="#f4d58a" font-weight="700"> Twinax</tspan><tspan fill="#f4d58a" font-weight="700"> 铜缆</tspan></text>
+<text x="428.00" y="932.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">、扩展光器件)近季</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;50%</tspan><tspan fill="#f4d58a" font-weight="700"> YoY</tspan><tspan fill="#9aa3b8" font-weight="400"> 增长;高盛视其为内生增长新引擎。</tspan></text>
+<rect x="782.00" y="850.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="850.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="874.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">战略高地 · 半导体</text>
+<text x="798.00" y="892.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">半导体材料体量小、杠杆大</text>
+<text x="798.00" y="916.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">CMP</tspan><tspan fill="#9aa3b8" font-weight="400"> 抛光垫修整器、光罩防尘膜等半导体耗材隐于</tspan><tspan fill="#9aa3b8" font-weight="400"> T&amp;E</tspan></text>
+<text x="798.00" y="932.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">内,体量远小于汽车/磨料,但触及野村《大中华半导体复兴》主线</tspan><tspan fill="#f4d58a" font-weight="700"> CMP</tspan></text>
+<text x="798.00" y="948.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">与先进封装赛道,是卖方倍数定价的关键锚点。</tspan></text>
+<rect x="42.00" y="996.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="42.00" y="996.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="58.00" y="1020.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">成本侧 · 油价敏感</text>
+<text x="58.00" y="1038.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">约 150 亿 COGS 流向石化原料</text>
+<text x="58.00" y="1062.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS</tspan><tspan fill="#9aa3b8" font-weight="400"> 为</tspan><tspan fill="#f4d58a" font-weight="700"> 149.9</tspan><tspan fill="#f4d58a" font-weight="700"> 亿美元</tspan><tspan fill="#9aa3b8" font-weight="400"> (占销售</tspan></text>
+<text x="58.00" y="1078.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">60.1%),薄膜/胶粘/无纺布大量依赖石化树脂,油价与关税是毛利率(GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> ~40%、目标重返近</tspan></text>
+<text x="58.00" y="1094.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">50%)的最大外部变量。</tspan></text>
+<rect x="412.00" y="996.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="996.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="1020.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">已退出 · PFAS</text>
+<text x="428.00" y="1038.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">氟聚合物从自产到退出</text>
+<text x="428.00" y="1062.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">3M</tspan><tspan fill="#9aa3b8" font-weight="400"> 已于</tspan><tspan fill="#f4d58a" font-weight="700"> 2025</tspan><tspan fill="#f4d58a" font-weight="700"> 年底</tspan><tspan fill="#9aa3b8" font-weight="400"> 完成</tspan></text>
+<text x="428.00" y="1078.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">PFAS/全氟化合物制造退出;氟化学历史上自产用于光罩防尘膜与特种产品,退出在消除诉讼悬顶的同时也带来短期收入与利润率拖累。</tspan></text>
+<rect x="782.00" y="996.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="996.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="1020.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">渠道 · 分销</text>
+<text x="798.00" y="1038.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">通过广泛分销触达 200+ 国家</text>
+<text x="798.00" y="1062.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">3M</tspan><tspan fill="#9aa3b8" font-weight="400"> 经由批发商、电商、零售商、经销商等多元渠道销售约</tspan><tspan fill="#f4d58a" font-weight="700"> 6</tspan><tspan fill="#f4d58a" font-weight="700"> 万个</tspan><tspan fill="#f4d58a" font-weight="700"> SKU</tspan><tspan fill="#9aa3b8" font-weight="400"> 至</tspan><tspan fill="#f4d58a" font-weight="700"> 200</tspan><tspan fill="#f4d58a" font-weight="700"> 多个国家</tspan></text>
+<text x="798.00" y="1078.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">;Consumer</tspan><tspan fill="#9aa3b8" font-weight="400"> 部门(Post-it/Scotch/Command)对零售渠道与终端消费依赖度最高。</tspan></text>
+<text x="590.00" y="1164.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: 3M FY2025 10-K (Note 19 Segment &amp; Geographic; Item 1 Business/Distribution; Income Statement) · Goldman Sachs MMM note 2026-06-15 (data-center ~$600M, optical interconnect) · Nomura Greater China Semi 2026-05-21 (CMP)</text>
+</svg>

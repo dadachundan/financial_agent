@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">3M FY2025 利润表 Sankey (GAAP, continuing ops, US$m)</text>
+<path d="M 204.00,64.00 C 258.00,64.00 258.00,85.00 312.00,85.00 L 312.00,271.17 C 258.00,271.17 258.00,250.17 204.00,250.17 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,190.18 560.00,190.18 L 560.00,265.88 C 506.00,265.88 506.00,153.70 452.00,153.70 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,153.70 C 506.00,153.70 506.00,279.88 560.00,279.88 L 560.00,367.02 C 506.00,367.02 506.00,240.84 452.00,240.84 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,240.84 C 382.00,240.84 382.00,247.84 328.00,247.84 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,247.84 C 382.00,247.84 382.00,254.84 436.00,254.84 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,189.98 C 754.00,189.98 754.00,247.55 808.00,247.55 L 808.00,300.05 C 754.00,300.05 754.00,242.48 700.00,242.48 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,242.48 C 754.00,242.48 754.00,314.05 808.00,314.05 L 808.00,330.45 C 754.00,330.45 754.00,258.88 700.00,258.88 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,190.18 C 630.00,190.18 630.00,189.98 684.00,189.98 L 684.00,265.69 C 630.00,265.69 630.00,265.88 576.00,265.88 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,264.17 C 258.00,264.17 258.00,271.17 312.00,271.17 L 312.00,406.45 C 258.00,406.45 258.00,399.45 204.00,399.45 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,279.88 C 630.00,279.88 630.00,272.88 684.00,272.88 L 684.00,338.25 C 630.00,338.25 630.00,345.25 576.00,345.25 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,345.25 C 630.00,345.25 630.00,352.25 684.00,352.25 L 684.00,371.37 C 630.00,371.37 630.00,364.37 576.00,364.37 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,364.37 C 630.00,364.37 630.00,385.37 684.00,385.37 L 684.00,388.02 C 630.00,388.02 630.00,367.02 576.00,367.02 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,381.02 C 630.00,381.02 630.00,265.69 684.00,265.69 L 684.00,272.49 C 630.00,272.49 630.00,387.82 576.00,387.82 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,413.45 C 258.00,413.45 258.00,406.45 312.00,406.45 L 312.00,486.92 C 258.00,486.92 258.00,493.92 204.00,493.92 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,507.92 C 258.00,507.92 258.00,486.92 312.00,486.92 L 312.00,493.00 C 258.00,493.00 258.00,514.00 204.00,514.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="186.17" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="264.17" width="16" height="135.28" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="413.45" width="16" height="80.46" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="507.92" width="16" height="6.08" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="162.84" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="254.84" width="16" height="245.16" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="190.18" width="16" height="75.70" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="279.88" width="16" height="87.13" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="381.02" width="16" height="6.80" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="189.98" width="16" height="68.90" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="272.88" width="16" height="65.37" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="352.25" width="16" height="19.12" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="385.37" width="16" height="2.65" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="247.55" width="16" height="52.50" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="314.05" width="16" height="16.40" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="157.09" x2="182.00" y2="133.13" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="136.13" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Safety &amp; Industrial</text>
+<text x="179.00" y="149.13" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$11.4B  (45.6%)</text>
+<line x1="188.00" y1="331.81" x2="182.00" y2="307.86" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="310.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Transportation &amp; Electronics</text>
+<text x="179.00" y="323.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.3B  (33.2%)</text>
+<line x1="188.00" y1="453.69" x2="182.00" y2="429.73" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="432.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Consumer</text>
+<text x="179.00" y="445.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.9B  (19.7%)</text>
+<line x1="188.00" y1="510.96" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Corporate &amp; Other</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$372.0M  (1.5%)</text>
+<rect x="331.00" y="67.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$24.9B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$10.0B  (39.9%)</text>
+<rect x="455.00" y="236.84" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="248.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="261.84" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$15.0B  (60.1%)</text>
+<rect x="579.00" y="172.18" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="184.18" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="197.18" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.6B  (18.6%)</text>
+<rect x="579.00" y="261.88" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="273.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="286.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.3B  (21.4%)</text>
+<text x="551.00" y="381.42" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="394.42" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$416.0M  (1.7%)</text>
+<rect x="703.00" y="171.98" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="183.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="196.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.2B  (16.9%)</text>
+<rect x="703.00" y="254.88" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="266.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="279.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.0B  (16.0%)</text>
+<rect x="703.00" y="334.25" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="346.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="359.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (4.7%)</text>
+<rect x="703.00" y="367.37" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="379.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="392.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$162.0M  (0.65%)</text>
+<text x="833.00" y="270.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="283.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.2B  (12.9%)</text>
+<text x="833.00" y="319.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="332.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.0B  (4.0%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">GAAP 持续经营口径;经营利润 4,629 (GAAP 利润率 18.6%);Net income from continuing ops 3,210。调整后经营利润率 23.4%。</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: 3M FY2025 10-K (period 2025-12-31) — Consolidated Statement of Income &amp; Note 19 Segment Information</text>
+</svg>
