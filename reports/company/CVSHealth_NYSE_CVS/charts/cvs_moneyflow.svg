@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1079" width="1180" height="1079" role="img" aria-label="CVS Health 的 ~$397B 营运成本流向了谁" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1079" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">CVS HEALTH 美元流向图 · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">CVS Health 的 ~$397B 营运成本流向了谁</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">CVS 收取的保费、处方与零售收入，在内部三大板块周转后，最终以两条大动脉流出：一条经 PBM/药房采购流向药品制造商与药品批发商（COGS $221.2B），另一条经 Aetna 理赔流向医院与医生网络（health care costs</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">$125.5B）。钱最终汇聚到 Big Pharma、批发三巨头与 Red Oak GPO 这几个上游节点。</text>
+<ellipse cx="1031.00" cy="440.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="667.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="667.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱给 CVS</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">CVS 三大板块如何花钱</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终汇向哪里</text>
+<path d="M 256.00 425.23 C 369.50 425.23, 369.50 330.50, 483.00 330.50" fill="none" stroke="url(#mfgold)" stroke-width="19.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 447.05 C 369.50 447.05, 369.50 440.50, 483.00 440.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 462.32 C 369.50 462.32, 369.50 550.50, 483.00 550.50" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 330.50 C 810.50 330.50, 810.50 267.00, 924.00 267.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 432.86 C 810.50 432.86, 810.50 380.05, 924.00 380.05" fill="none" stroke="url(#mfgold)" stroke-width="21.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 451.41 C 810.50 451.41, 810.50 504.00, 924.00 504.00" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 550.50 C 810.50 550.50, 810.50 614.00, 924.00 614.00" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 1138.00 504.00 C 1031.00 504.00, 1031.00 396.41, 924.00 396.41" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="371.86" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">保费</text>
+<text x="369.50" y="437.77" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">处方+零售</text>
+<text x="810.50" y="292.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$125.5B 理赔</text>
+<text x="810.50" y="400.45" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">品牌药采购</text>
+<text x="810.50" y="471.70" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$221.2B COGS</text>
+<rect x="42.00" y="365.50" width="214" height="150.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="365.50" width="3" height="150.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="398.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">付费方</text>
+<text x="60.00" y="419.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">CMS / 雇主 / 各州 Medicaid</text>
+<text x="60.00" y="436.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">个人 + PBM 客户</text>
+<text x="60.00" y="453.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">FY2025 总营收 $402.1B</text>
+<rect x="483.00" y="283.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="283.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="316.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AETNA (HCB)</text>
+<text x="501.00" y="337.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">承保理赔</text>
+<text x="501.00" y="354.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">health care costs $125.5B</text>
+<rect x="483.00" y="393.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="393.50" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="426.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">CVS CAREMARK + 药房</text>
+<text x="501.00" y="447.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">药品采购 / 调剂</text>
+<text x="501.00" y="464.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">cost of products $221.2B</text>
+<rect x="483.00" y="503.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="503.50" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="536.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">运营 + 资本</text>
+<text x="501.00" y="557.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">operating expenses $45.0B</text>
+<text x="501.00" y="574.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">CapEx $2.8B</text>
+<rect x="924.00" y="220.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="220.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">医院 &amp; 医生网络</text>
+<text x="942.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">签约医疗服务提供方</text>
+<text x="942.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Medicare/Medicaid 利用率敏感</text>
+<rect x="924.00" y="330.00" width="214" height="111.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="330.00" width="3" height="111.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="363.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">BIG PHARMA</text>
+<text x="942.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">品牌药制造商</text>
+<text x="942.00" y="401.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">GLP-1（Ozempic/Mounjaro）</text>
+<text x="942.00" y="418.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">返利 rebate 来源</text>
+<rect x="924.00" y="457.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="457.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="490.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">药品批发三巨头</text>
+<text x="942.00" y="511.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">McKesson / Cencora / Cardinal</text>
+<text x="942.00" y="528.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">仿制药经 Red Oak GPO 采购</text>
+<rect x="924.00" y="567.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="567.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="600.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">员工 &amp; 门店网络</text>
+<text x="942.00" y="621.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">30 万+ 员工</text>
+<text x="942.00" y="638.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">~9,000 家门店租金/折旧</text>
+<rect x="42.00" y="687.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="689.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="689.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="689.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="689.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="682.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="747.00" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="871.80" y="682.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="890.80" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="965.20" y="682.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="984.20" y="691.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="42.00" y="702.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="61.00" y="711.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="185.80" y="702.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="204.80" y="711.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="272.00" y="702.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="291.00" y="711.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<line x1="42" y1="727.00" x2="1138" y2="727.00" stroke="#222a3a"/>
+<text x="42.00" y="743.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 三条主动脉</text>
+<rect x="42.00" y="763.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="763.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="787.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">理赔 · 最大单一流出</text>
+<text x="58.00" y="805.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">医院 &amp; 医生网络</text>
+<text x="58.00" y="829.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> Aetna</tspan><tspan fill="#9aa3b8" font-weight="400"> 向医疗服务提供方支付</tspan><tspan fill="#f4d58a" font-weight="700"> health</tspan><tspan fill="#f4d58a" font-weight="700"> care</tspan><tspan fill="#f4d58a" font-weight="700"> costs</tspan><tspan fill="#f4d58a" font-weight="700"> $125.5B</tspan><tspan fill="#9aa3b8" font-weight="400"> ，同比</tspan></text>
+<text x="58.00" y="845.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">+9.0%；这是</tspan><tspan fill="#9aa3b8" font-weight="400"> CVS</tspan><tspan fill="#9aa3b8" font-weight="400"> 唯一承担承保风险的现金流，</tspan><tspan fill="#f4d58a" font-weight="700"> MBR</tspan><tspan fill="#f4d58a" font-weight="700"> 84.6%</tspan><tspan fill="#9aa3b8" font-weight="400"> （Q1-26）意味着每</tspan><tspan fill="#9aa3b8" font-weight="400"> $1</tspan></text>
+<text x="58.00" y="861.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">保费中约</tspan><tspan fill="#9aa3b8" font-weight="400"> 85</tspan><tspan fill="#9aa3b8" font-weight="400"> 美分流向医院/医生。</tspan></text>
+<rect x="412.00" y="763.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="763.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="787.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">采购 · 第二大流出</text>
+<text x="428.00" y="805.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">药品制造商 &amp; 批发商</text>
+<text x="428.00" y="829.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">cost</tspan><tspan fill="#f4d58a" font-weight="700"> of</tspan><tspan fill="#f4d58a" font-weight="700"> products</tspan><tspan fill="#f4d58a" font-weight="700"> sold</tspan><tspan fill="#f4d58a" font-weight="700"> $221.2B</tspan><tspan fill="#9aa3b8" font-weight="400"> 经</tspan><tspan fill="#9aa3b8" font-weight="400"> CVS</tspan><tspan fill="#9aa3b8" font-weight="400"> Caremark</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> 零售药房流向</tspan></text>
+<text x="428.00" y="845.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Big</tspan><tspan fill="#9aa3b8" font-weight="400"> Pharma</tspan><tspan fill="#9aa3b8" font-weight="400"> 与批发三巨头；仿制药通过与</tspan><tspan fill="#9aa3b8" font-weight="400"> Cardinal</tspan><tspan fill="#9aa3b8" font-weight="400"> Health</tspan><tspan fill="#9aa3b8" font-weight="400"> 50/50</tspan><tspan fill="#9aa3b8" font-weight="400"> 合资的</tspan></text>
+<text x="428.00" y="861.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Red</tspan><tspan fill="#f4d58a" font-weight="700"> Oak</tspan><tspan fill="#f4d58a" font-weight="700"> Sourcing</tspan><tspan fill="#9aa3b8" font-weight="400"> GPO</tspan><tspan fill="#9aa3b8" font-weight="400"> 集采，是</tspan><tspan fill="#9aa3b8" font-weight="400"> CVS</tspan><tspan fill="#9aa3b8" font-weight="400"> 成本效率的结构性来源。</tspan></text>
+<rect x="782.00" y="763.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="782.00" y="763.00" width="3" height="132.00" rx="2" fill="#a78bfa"/>
+<text x="798.00" y="787.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">返利 · 利润枢纽</text>
+<text x="798.00" y="805.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">GLP-1 与品牌药返利</text>
+<text x="798.00" y="829.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">品牌药（含</tspan><tspan fill="#f4d58a" font-weight="700"> GLP-1</tspan><tspan fill="#9aa3b8" font-weight="400"> ：Ozempic、Mounjaro）既推高</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 药房同店销售</tspan></text>
+<text x="798.00" y="845.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">+18.0%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，又是</tspan><tspan fill="#9aa3b8" font-weight="400"> PBM</tspan><tspan fill="#9aa3b8" font-weight="400"> 向制造商收取</tspan><tspan fill="#f4d58a" font-weight="700"> rebate</tspan><tspan fill="#9aa3b8" font-weight="400"> 的来源——返利经济正是</tspan></text>
+<text x="798.00" y="861.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FTC/国会监管审查的焦点。</tspan></text>
+<rect x="42.00" y="909.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="909.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="933.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">批发三巨头 · 上游汇聚点</text>
+<text x="58.00" y="951.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">McKesson / Cencora / Cardinal</text>
+<text x="58.00" y="975.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">美国药品分销由三家批发商主导；CVS</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> $221.2B</tspan></text>
+<text x="58.00" y="991.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">药品成本大部分经它们或直采流向制造商。批发环节是整条链路的隐形</tspan><tspan fill="#f4d58a" font-weight="700"> chokepoint</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<text x="590.00" y="1061.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: CVS FY2025 10-K — Consolidated Statements of Operations（cost of products sold $221,167M；health care costs $125,538M；operating expenses $44,977M）+ PCW MD&amp;A（GLP-1 同店 +18.0%）+ Note 关于 Red Oak Sourcing GPO 的披露（filed 2026-02-10）</text>
+</svg>
