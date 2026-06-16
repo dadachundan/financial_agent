@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">辉瑞 Pfizer (PFE) 如何赚钱 — FY2025 利润表 Sankey</text>
+<path d="M 204.00,70.14 C 258.00,70.14 258.00,85.00 312.00,85.00 L 312.00,484.00 C 258.00,484.00 258.00,469.14 204.00,469.14 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,130.38 560.00,130.38 L 560.00,223.24 C 506.00,223.24 506.00,170.87 452.00,170.87 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,170.87 C 506.00,170.87 506.00,237.24 560.00,237.24 L 560.00,447.62 C 506.00,447.62 506.00,381.25 452.00,381.25 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,381.25 C 382.00,381.25 382.00,388.25 328.00,388.25 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,388.25 C 382.00,388.25 382.00,395.25 436.00,395.25 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,130.38 C 630.00,130.38 630.00,138.30 684.00,138.30 L 684.00,231.16 C 630.00,231.16 630.00,223.24 576.00,223.24 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,138.30 C 754.00,138.30 754.00,247.67 808.00,247.67 L 808.00,298.33 C 754.00,298.33 754.00,188.96 700.00,188.96 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,188.96 C 754.00,188.96 754.00,312.33 808.00,312.33 L 808.00,314.33 C 754.00,314.33 754.00,190.96 700.00,190.96 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,190.96 C 754.00,190.96 754.00,328.33 808.00,328.33 L 808.00,330.33 C 754.00,330.33 754.00,192.96 700.00,192.96 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,237.24 C 630.00,237.24 630.00,201.32 684.00,201.32 L 684.00,291.26 C 630.00,291.26 630.00,327.18 576.00,327.18 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,327.18 C 630.00,327.18 630.00,305.26 684.00,305.26 L 684.00,373.30 C 630.00,373.30 630.00,395.22 576.00,395.22 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,395.22 C 630.00,395.22 630.00,387.30 684.00,387.30 L 684.00,439.70 C 630.00,439.70 630.00,447.62 576.00,447.62 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,483.14 C 258.00,483.14 258.00,484.00 312.00,484.00 L 312.00,492.73 C 258.00,492.73 258.00,491.86 204.00,491.86 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,505.86 C 258.00,505.86 258.00,492.73 312.00,492.73 L 312.00,494.73 C 258.00,494.73 258.00,507.86 204.00,507.86 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="70.14" width="16" height="399.00" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="483.14" width="16" height="8.72" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="505.86" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="303.25" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="395.25" width="16" height="104.75" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="130.38" width="16" height="92.87" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="237.24" width="16" height="210.38" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="138.30" width="16" height="49.03" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="201.32" width="16" height="89.93" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="305.26" width="16" height="68.05" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="387.30" width="16" height="52.40" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="247.67" width="16" height="50.67" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="312.33" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="328.33" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="269.64" x2="182.00" y2="244.14" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="247.14" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Biopharma</text>
+<text x="179.00" y="260.14" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$61.2B  (97.8%)</text>
+<line x1="188.00" y1="487.50" x2="182.00" y2="462.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="465.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pfizer CentreOne (CDMO)</text>
+<text x="179.00" y="478.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.3B  (2.1%)</text>
+<line x1="188.00" y1="506.86" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pfizer Ignite</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$41.0M  (0.07%)</text>
+<rect x="331.00" y="67.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$62.6B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$46.5B  (74.3%)</text>
+<rect x="455.00" y="377.25" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="389.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="402.25" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$16.1B  (25.7%)</text>
+<rect x="579.00" y="112.38" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="124.38" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="137.38" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$14.2B  (22.8%)</text>
+<rect x="579.00" y="219.24" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="231.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="244.24" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$32.3B  (51.6%)</text>
+<rect x="703.00" y="120.30" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="132.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="145.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$7.5B  (12.0%)</text>
+<rect x="703.00" y="183.32" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="195.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="208.32" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13.8B  (22.0%)</text>
+<rect x="703.00" y="287.26" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="299.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="312.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$10.4B  (16.7%)</text>
+<rect x="703.00" y="369.30" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="381.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="394.30" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$8.0B  (12.8%)</text>
+<text x="833.00" y="270.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="283.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$7.8B  (12.4%)</text>
+<text x="833.00" y="310.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="323.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$266.0M  (-0.43%)</text>
+<text x="833.00" y="335.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Minority Interest</text>
+<text x="833.00" y="348.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$41.0M  (0.07%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Pfizer FY2025 10-K, Consolidated Statements of Operations + Segment note (Biopharma / CentreOne / Ignite)</text>
+</svg>

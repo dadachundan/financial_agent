@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1078" width="1180" height="1078" role="img" aria-label="辉瑞的钱流向何处 — How Pfizer's R&amp;D + BD dollars are deployed" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1078" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">PHARMA MONEY FLOW · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">辉瑞的钱流向何处 — How Pfizer's R&amp;D + BD dollars are deployed</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">FY2025 Pfizer 把 ~$62.6bn 收入中的 R&amp;D ($10.4bn) + 收购的 in-process R&amp;D ($1.6bn) + 收购/许可现金 (Metsera $6.9bn) 投向外部管线，越来越多地汇集到中国创新药企 (3SBio /</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">YaoPharma / Innovent) 与 ADC/GLP-1 平台。</text>
+<ellipse cx="1031.00" cy="432.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="650.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="650.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">收入与现金来源 / Cash in</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱买什么 / What it funds</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终汇集到哪 / Where it pools</text>
+<path d="M 256.00 515.00 C 149.00 515.00, 149.00 369.00, 42.00 369.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 351.55 C 369.50 351.55, 369.50 267.00, 483.00 267.00" fill="none" stroke="url(#mfgold)" stroke-width="19.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 364.64 C 369.50 364.64, 369.50 377.00, 483.00 377.00" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 373.36 C 369.50 373.36, 369.50 487.00, 483.00 487.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 387.55 C 369.50 387.55, 369.50 597.00, 483.00 597.00" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 377.00 C 810.50 377.00, 810.50 267.00, 924.00 267.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 487.00 C 810.50 487.00, 810.50 487.00, 924.00 487.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 267.00 C 810.50 267.00, 810.50 377.00, 924.00 377.00" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 597.00 C 810.50 597.00, 810.50 597.00, 924.00 597.00" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="149.00" y="436.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">处方药采购</text>
+<text x="369.50" y="303.27" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$10.4B</text>
+<text x="369.50" y="364.82" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$1.6B IPR&amp;D</text>
+<text x="369.50" y="424.18" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$6.9B</text>
+<text x="369.50" y="486.27" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$16.1B</text>
+<text x="810.50" y="316.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">首付+里程碑</text>
+<text x="810.50" y="591.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">50% 毛利分成</text>
+<rect x="42.00" y="294.00" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="294.00" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="327.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">PFIZER</text>
+<text x="60.00" y="348.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY2025 收入 $62.6B</text>
+<text x="60.00" y="365.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">经营现金流 $11.7B</text>
+<rect x="42.00" y="460.00" width="214" height="110.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="460.00" width="3" height="110.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="493.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">US 分销三巨头</text>
+<text x="60.00" y="514.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">McKesson 25% · Cencora 16%</text>
+<text x="60.00" y="531.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Cardinal 13% — 付款方</text>
+<rect x="483.00" y="220.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="220.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">内部 R&amp;D</text>
+<text x="501.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$10.4B 研发费用</text>
+<text x="501.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">肿瘤/疫苗/代谢</text>
+<rect x="483.00" y="330.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="330.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="363.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">BD / In-license</text>
+<text x="501.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Acquired IPR&amp;D $1.6B</text>
+<text x="501.00" y="401.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">3SBio + YaoPharma 首付</text>
+<rect x="483.00" y="440.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="440.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="473.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">并购 M&amp;A</text>
+<text x="501.00" y="494.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Metsera 现金 $6.9B</text>
+<text x="501.00" y="511.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">GLP-1 平台</text>
+<rect x="483.00" y="550.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="550.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="583.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">生产 / COGS</text>
+<text x="501.00" y="604.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$16.1B 销售成本</text>
+<text x="501.00" y="621.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">CentreOne CDMO 自有产能</text>
+<rect x="924.00" y="220.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="220.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">中国创新药企</text>
+<text x="942.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">3SBio · YaoPharma</text>
+<text x="942.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">Innovent (12 资产 $10.5B)</text>
+<rect x="924.00" y="330.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="330.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="363.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ADC 平台 (Seagen)</text>
+<text x="942.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Padcev · Adcetris</text>
+<text x="942.00" y="401.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">$43B 收购遗产</text>
+<rect x="924.00" y="440.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="440.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="473.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">GLP-1 (Metsera)</text>
+<text x="942.00" y="494.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">MET-097i 月制剂</text>
+<text x="942.00" y="511.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">amylin 类似物</text>
+<rect x="924.00" y="550.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="550.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="583.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">BioNTech (mRNA)</text>
+<text x="942.00" y="604.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Comirnaty 50/50 利润分成</text>
+<text x="942.00" y="621.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">新冠疫苗合作</text>
+<rect x="42.00" y="670.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="672.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="672.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="672.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="672.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="665.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="665.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="840.40" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="965.20" y="665.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="984.20" y="674.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="42.00" y="685.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="61.00" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="142.60" y="685.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="161.60" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="228.80" y="685.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="247.80" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="322.20" y="685.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="341.20" y="694.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<line x1="42" y1="710.00" x2="1138" y2="710.00" stroke="#222a3a"/>
+<text x="42.00" y="726.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 钱流向何处</text>
+<rect x="42.00" y="746.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="42.00" y="746.00" width="3" height="148.00" rx="2" fill="#a78bfa"/>
+<text x="58.00" y="770.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">BD · 中国创新药出海</text>
+<text x="58.00" y="788.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">中国成为新管线主源</text>
+<text x="58.00" y="812.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025-26</tspan><tspan fill="#9aa3b8" font-weight="400"> Pfizer</tspan><tspan fill="#9aa3b8" font-weight="400"> 向中国药企承诺</tspan><tspan fill="#f4d58a" font-weight="700"> $16.6B+</tspan><tspan fill="#9aa3b8" font-weight="400"> (3SBio</tspan><tspan fill="#9aa3b8" font-weight="400"> 首付</tspan><tspan fill="#f4d58a" font-weight="700"> $1.25B</tspan></text>
+<text x="58.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">+里程碑</tspan><tspan fill="#f4d58a" font-weight="700"> $4.8B</tspan><tspan fill="#9aa3b8" font-weight="400"> ；YaoPharma</tspan><tspan fill="#f4d58a" font-weight="700"> $150M</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#f4d58a" font-weight="700"> $1.935B</tspan><tspan fill="#9aa3b8" font-weight="400"> ；Innovent</tspan></text>
+<text x="58.00" y="844.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$10.5B</tspan><tspan fill="#9aa3b8" font-weight="400"> )，以约</tspan><tspan fill="#9aa3b8" font-weight="400"> Seagen</tspan><tspan fill="#9aa3b8" font-weight="400"> 单笔</tspan><tspan fill="#f4d58a" font-weight="700"> $43B</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> 1/5–1/10</tspan><tspan fill="#9aa3b8" font-weight="400"> 成本获取</tspan><tspan fill="#9aa3b8" font-weight="400"> Phase</tspan><tspan fill="#9aa3b8" font-weight="400"> 1-2</tspan></text>
+<text x="58.00" y="860.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">资产。</tspan></text>
+<rect x="412.00" y="746.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="412.00" y="746.00" width="3" height="148.00" rx="2" fill="#d9a05b"/>
+<text x="428.00" y="770.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">M&amp;A · GLP-1 补课</text>
+<text x="428.00" y="788.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Metsera 现金 $6.9B</text>
+<text x="428.00" y="812.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 投资活动现金流里</tspan><tspan fill="#f4d58a" font-weight="700"> $6.9B</tspan><tspan fill="#9aa3b8" font-weight="400"> 收购</tspan><tspan fill="#9aa3b8" font-weight="400"> Metsera，买入</tspan><tspan fill="#f4d58a" font-weight="700"> MET-097i</tspan><tspan fill="#9aa3b8" font-weight="400"> 月制剂</tspan></text>
+<text x="428.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GLP-1</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#9aa3b8" font-weight="400"> amylin</tspan><tspan fill="#9aa3b8" font-weight="400"> 平台——Pfizer</tspan><tspan fill="#9aa3b8" font-weight="400"> 自研</tspan><tspan fill="#9aa3b8" font-weight="400"> danuglipron</tspan><tspan fill="#9aa3b8" font-weight="400"> 失败后的代价。</tspan></text>
+<rect x="782.00" y="746.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="782.00" y="746.00" width="3" height="148.00" rx="2" fill="#56c6e6"/>
+<text x="798.00" y="770.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">R&amp;D · 内部引擎</text>
+<text x="798.00" y="788.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">$10.4B 自有研发</text>
+<text x="798.00" y="812.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">研发费用</tspan><tspan fill="#f4d58a" font-weight="700"> $10.4B</tspan><tspan fill="#9aa3b8" font-weight="400"> 仍是最大单一去向，但同比</tspan><tspan fill="#f4d58a" font-weight="700"> -4%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；管线聚焦化使</tspan><tspan fill="#9aa3b8" font-weight="400"> SV</tspan><tspan fill="#9aa3b8" font-weight="400"> ADC、PD-1×VEGF</tspan></text>
+<text x="798.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">双抗</tspan><tspan fill="#f4d58a" font-weight="700"> 4404</tspan><tspan fill="#9aa3b8" font-weight="400"> 成为近期核心临床催化剂。</tspan></text>
+<rect x="42.00" y="908.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="908.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="932.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">LEGACY · ADC 旗舰</text>
+<text x="58.00" y="950.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Seagen 遗产</text>
+<text x="58.00" y="974.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$43B</tspan><tspan fill="#9aa3b8" font-weight="400"> 收购的</tspan><tspan fill="#9aa3b8" font-weight="400"> Padcev</tspan><tspan fill="#9aa3b8" font-weight="400"> (FY2025</tspan><tspan fill="#f4d58a" font-weight="700"> $1.94B</tspan><tspan fill="#9aa3b8" font-weight="400"> ,</tspan><tspan fill="#f4d58a" font-weight="700"> +22%</tspan><tspan fill="#9aa3b8" font-weight="400"> )</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#9aa3b8" font-weight="400"> Adcetris</tspan><tspan fill="#9aa3b8" font-weight="400"> (</tspan></text>
+<text x="58.00" y="990.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$907M</tspan><tspan fill="#9aa3b8" font-weight="400"> )</tspan><tspan fill="#9aa3b8" font-weight="400"> 是</tspan><tspan fill="#9aa3b8" font-weight="400"> ADC</tspan><tspan fill="#9aa3b8" font-weight="400"> 现金流支柱，但</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2024-25</tspan><tspan fill="#9aa3b8" font-weight="400"> 已累计减值</tspan><tspan fill="#f4d58a" font-weight="700"> $7.9B</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="412.00" y="908.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="908.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="932.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">PARTNER · MRNA</text>
+<text x="428.00" y="950.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">BioNTech 50/50</text>
+<text x="428.00" y="974.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Comirnaty</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#9aa3b8" font-weight="400"> BioNTech</tspan><tspan fill="#9aa3b8" font-weight="400"> 按</tspan><tspan fill="#f4d58a" font-weight="700"> 50%</tspan><tspan fill="#9aa3b8" font-weight="400"> 毛利分成；新冠业务</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 预计降至</tspan><tspan fill="#9aa3b8" font-weight="400"> ~</tspan></text>
+<text x="428.00" y="990.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$5B</tspan><tspan fill="#9aa3b8" font-weight="400"> (2024</tspan><tspan fill="#f4d58a" font-weight="700"> $11B</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> 2025</tspan><tspan fill="#f4d58a" font-weight="700"> $6.5B</tspan><tspan fill="#9aa3b8" font-weight="400"> )。</tspan></text>
+<rect x="782.00" y="908.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="782.00" y="908.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="798.00" y="932.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">DEMAND · 付款方</text>
+<text x="798.00" y="950.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">三大分销商 54%</text>
+<text x="798.00" y="974.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">McKesson</tspan><tspan fill="#f4d58a" font-weight="700"> 25%</tspan><tspan fill="#9aa3b8" font-weight="400"> ·</tspan><tspan fill="#9aa3b8" font-weight="400"> Cencora</tspan><tspan fill="#f4d58a" font-weight="700"> 16%</tspan><tspan fill="#9aa3b8" font-weight="400"> ·</tspan><tspan fill="#9aa3b8" font-weight="400"> Cardinal</tspan><tspan fill="#9aa3b8" font-weight="400"> Health</tspan><tspan fill="#f4d58a" font-weight="700"> 13%</tspan></text>
+<text x="798.00" y="990.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">——美国处方药现金的入口；真正的定价权握在</tspan><tspan fill="#9aa3b8" font-weight="400"> CVS/ESI/OptumRx</tspan><tspan fill="#9aa3b8" font-weight="400"> 三大</tspan><tspan fill="#9aa3b8" font-weight="400"> PBM。</tspan></text>
+<text x="590.00" y="1060.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Pfizer FY2025 10-K (Cash Flows, MD&amp;A, Note 2F In-licensing, Note 17C Customers); Pfizer–Innovent 联合新闻稿 2026-05-28</text>
+</svg>
