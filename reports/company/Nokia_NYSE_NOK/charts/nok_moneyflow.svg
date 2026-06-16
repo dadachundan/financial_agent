@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1044" width="1180" height="1044" role="img" aria-label="Nokia 资金流向图 — 谁付钱 → 买什么 → 钱沉淀在哪 (Q1 2026 run-rate)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1044" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="84.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">Nokia 资金流向图 — 谁付钱 → 买什么 → 钱沉淀在哪 (Q1 2026 run-rate)</text>
+<ellipse cx="1031.00" cy="385.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="150.00" x2="369.50" y2="616.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="150.00" x2="810.50" y2="616.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱给 Nokia</text>
+<text x="483.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">他们买什么</text>
+<text x="924.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Nokia 的成本/资本开支落到哪</text>
+<path d="M 256.00 200.29 C 369.50 200.29, 369.50 214.00, 483.00 214.00" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 208.86 C 369.50 208.86, 369.50 324.93, 483.00 324.93" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 225.14 C 369.50 225.14, 369.50 437.43, 483.00 437.43" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 240.57 C 369.50 240.57, 369.50 546.57, 483.00 546.57" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 340.43 C 369.50 340.43, 369.50 224.29, 483.00 224.29" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 349.00 C 369.50 349.00, 369.50 331.79, 483.00 331.79" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 455.50 C 369.50 455.50, 369.50 452.00, 483.00 452.00" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 450.43 C 369.50 450.43, 369.50 336.86, 483.00 336.86" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 563.00 C 369.50 563.00, 369.50 553.43, 483.00 553.43" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 214.00 C 810.50 214.00, 810.50 220.00, 924.00 220.00" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 221.71 C 810.50 221.71, 810.50 322.29, 924.00 322.29" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 330.00 C 810.50 330.00, 810.50 329.14, 924.00 329.14" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 432.29 C 810.50 432.29, 810.50 336.86, 924.00 336.86" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 439.14 C 810.50 439.14, 810.50 440.00, 924.00 440.00" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 446.86 C 810.50 446.86, 810.50 552.57, 924.00 552.57" fill="none" stroke="url(#mfgold)" stroke-width="10.29" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 227.71 C 810.50 227.71, 810.50 544.86, 924.00 544.86" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="325.29" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">RAN 主体</text>
+<text x="369.50" y="276.36" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">光网络 AI 订单</text>
+<text x="369.50" y="552.21" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">IPR 授权金</text>
+<text x="810.50" y="211.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">自产光子</text>
+<text x="810.50" y="323.57" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">DSP/路由芯片</text>
+<text x="810.50" y="433.57" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AI-RAN GPU</text>
+<rect x="42.00" y="160.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="160.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="193.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">TELECOM PROVIDERS</text>
+<text x="60.00" y="214.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Q1'26 EUR 3,267M / 73% 集团收入</text>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">AT&amp;T·DT·Vodafone·Bharti 等</text>
+<rect x="42.00" y="296.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="296.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="329.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AI &amp; CLOUD</text>
+<text x="60.00" y="350.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Q1'26 EUR 350M (+49% YoY)</text>
+<text x="60.00" y="367.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">约 8% 集团收入·1Q EUR 1B 订单</text>
+<rect x="42.00" y="406.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="406.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="439.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">MISSION-CRITICAL ENT &amp; DEFENSE</text>
+<text x="60.00" y="460.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Q1'26 EUR 498M (+19% YoY)</text>
+<text x="60.00" y="477.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">电网·铁路·港口·国防</text>
+<rect x="42.00" y="516.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="516.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="549.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">TECHNOLOGY LICENSEES</text>
+<text x="60.00" y="570.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Q1'26 EUR 385M (+10%)</text>
+<text x="60.00" y="587.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">智能手机·消费电子·汽车</text>
+<rect x="483.00" y="173.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="173.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="206.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">OPTICAL NETWORKS</text>
+<text x="501.00" y="227.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Q1'26 EUR 821M (+20% cc)</text>
+<text x="501.00" y="244.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">1.6T/3.2T 相干可插拔·DCI</text>
+<rect x="483.00" y="283.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="283.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="316.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">IP NETWORKS</text>
+<text x="501.00" y="337.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Q1'26 EUR 626M (+3% cc)</text>
+<text x="501.00" y="354.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FP 路由芯片·DC 交换机</text>
+<rect x="483.00" y="393.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="393.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="426.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">MOBILE RAN + CORE</text>
+<text x="501.00" y="447.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Q1'26 EUR 2,110M</text>
+<text x="501.00" y="464.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">AirScale·Core Software</text>
+<rect x="483.00" y="503.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="503.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="536.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">FIXED + IPR</text>
+<text x="501.00" y="557.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Fixed EUR 383M·IPR EUR 385M</text>
+<text x="501.00" y="574.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">光纤 OLT·5G SEP 授权</text>
+<rect x="924.00" y="173.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="173.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="206.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">OWN InP FAB (San Jose)</text>
+<text x="942.00" y="227.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">自有磷化铟光子晶圆厂</text>
+<text x="942.00" y="244.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">垂直整合·壁垒·2026 爬产</text>
+<rect x="924.00" y="283.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="283.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="316.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">MERCHANT SILICON / DSP</text>
+<text x="942.00" y="337.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">PSE-6s 相干 DSP·FP 芯片</text>
+<text x="942.00" y="354.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">外购晶圆代工 (TSMC 等)</text>
+<rect x="924.00" y="393.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="924.00" y="393.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="942.00" y="426.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">NVIDIA (AI-RAN)</text>
+<text x="942.00" y="447.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">ARC-Pro GPU 基带·USD 1B 入股</text>
+<text x="942.00" y="464.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">6G AI-RAN 合作</text>
+<rect x="924.00" y="503.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="503.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="536.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">EMS / CONTRACT MFG</text>
+<text x="942.00" y="557.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">组装·机电·线缆</text>
+<text x="942.00" y="574.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Foxconn/Sanmina 类代工</text>
+<rect x="42.00" y="636.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="640.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="638.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="638.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="638.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="638.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="640.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="640.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="631.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="640.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="631.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="847.60" y="640.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="929.20" y="631.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="948.20" y="640.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="42.00" y="651.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="61.00" y="660.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="142.60" y="651.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="161.60" y="660.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="236.00" y="651.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="255.00" y="660.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="676.00" x2="1138" y2="676.00" stroke="#222a3a"/>
+<text x="42.00" y="692.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — NOKIA 的资金链条</text>
+<rect x="42.00" y="712.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="712.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="736.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">需求侧 · 增量引擎</text>
+<text x="58.00" y="754.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AI &amp; Cloud 是边际买家</text>
+<text x="58.00" y="778.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">AI</tspan><tspan fill="#9aa3b8" font-weight="400"> &amp;</tspan><tspan fill="#9aa3b8" font-weight="400"> Cloud</tspan><tspan fill="#9aa3b8" font-weight="400"> 客户</tspan><tspan fill="#9aa3b8" font-weight="400"> Q1'26</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入</tspan><tspan fill="#f4d58a" font-weight="700"> EUR</tspan><tspan fill="#f4d58a" font-weight="700"> 350M</tspan><tspan fill="#9aa3b8" font-weight="400"> 、同比</tspan><tspan fill="#f4d58a" font-weight="700"> +49%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，占集团约</tspan><tspan fill="#f4d58a" font-weight="700"> 8%</tspan></text>
+<text x="58.00" y="794.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">；当季新签</tspan><tspan fill="#f4d58a" font-weight="700"> EUR</tspan><tspan fill="#f4d58a" font-weight="700"> 1B</tspan><tspan fill="#9aa3b8" font-weight="400"> 订单，主要流向</tspan><tspan fill="#f4d58a" font-weight="700"> Optical</tspan><tspan fill="#f4d58a" font-weight="700"> Networks</tspan><tspan fill="#9aa3b8" font-weight="400"> （光网络同比</tspan><tspan fill="#f4d58a" font-weight="700"> +20%</tspan></text>
+<text x="58.00" y="810.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">）。这是把</tspan><tspan fill="#9aa3b8" font-weight="400"> Nokia</tspan><tspan fill="#9aa3b8" font-weight="400"> 重估为</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 网络股的核心。</tspan></text>
+<rect x="412.00" y="712.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="712.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="736.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">产品侧 · 护城河</text>
+<text x="428.00" y="754.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Optical 垂直整合</text>
+<text x="428.00" y="778.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">光网络靠自有</tspan><tspan fill="#f4d58a" font-weight="700"> 磷化铟</tspan><tspan fill="#f4d58a" font-weight="700"> (InP)</tspan><tspan fill="#9aa3b8" font-weight="400"> 光子晶圆厂</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 封装能力构筑壁垒；San</tspan><tspan fill="#9aa3b8" font-weight="400"> Jose</tspan><tspan fill="#9aa3b8" font-weight="400"> 新厂</tspan><tspan fill="#f4d58a" font-weight="700"> 2026</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan></text>
+<text x="428.00" y="794.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">爬产。JPM</tspan><tspan fill="#9aa3b8" font-weight="400"> 预测光网络</tspan><tspan fill="#9aa3b8" font-weight="400"> AI&amp;Cloud</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入</tspan><tspan fill="#f4d58a" font-weight="700"> 2028E</tspan><tspan fill="#f4d58a" font-weight="700"> EUR</tspan><tspan fill="#f4d58a" font-weight="700"> 4.5B</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="782.00" y="712.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="782.00" y="712.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="798.00" y="736.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">供给侧 · 算力依赖</text>
+<text x="798.00" y="754.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">NVIDIA 的双重角色</text>
+<text x="798.00" y="778.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> 既以</tspan><tspan fill="#f4d58a" font-weight="700"> USD</tspan><tspan fill="#f4d58a" font-weight="700"> 1B</tspan><tspan fill="#9aa3b8" font-weight="400"> 入股（约</tspan><tspan fill="#9aa3b8" font-weight="400"> 2.9%），又是</tspan><tspan fill="#9aa3b8" font-weight="400"> AI-RAN</tspan><tspan fill="#9aa3b8" font-weight="400"> 合作方——其</tspan><tspan fill="#f4d58a" font-weight="700"> ARC-Pro</tspan></text>
+<text x="798.00" y="794.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 基带是</tspan><tspan fill="#9aa3b8" font-weight="400"> 6G</tspan><tspan fill="#9aa3b8" font-weight="400"> AI-RAN</tspan><tspan fill="#9aa3b8" font-weight="400"> 的算力底座，首发运营商</tspan><tspan fill="#9aa3b8" font-weight="400"> T-Mobile</tspan><tspan fill="#9aa3b8" font-weight="400"> US。算力供给落到</tspan></text>
+<text x="798.00" y="810.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">NVIDIA。</tspan></text>
+<rect x="42.00" y="858.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="858.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="882.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">供给侧 · 芯片</text>
+<text x="58.00" y="900.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">DSP 与外购代工</text>
+<text x="58.00" y="924.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">相干</tspan><tspan fill="#f4d58a" font-weight="700"> DSP</tspan><tspan fill="#f4d58a" font-weight="700"> (PSE-6s)</tspan><tspan fill="#9aa3b8" font-weight="400"> 、FP</tspan><tspan fill="#9aa3b8" font-weight="400"> 路由芯片仍依赖外购晶圆代工（</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#9aa3b8" font-weight="400"> 类）；这是</tspan><tspan fill="#9aa3b8" font-weight="400"> Nokia</tspan></text>
+<text x="58.00" y="940.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">在自有</tspan><tspan fill="#9aa3b8" font-weight="400"> InP</tspan><tspan fill="#9aa3b8" font-weight="400"> 之外的硅供给链，也是产能瓶颈所在。</tspan></text>
+<rect x="412.00" y="858.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="858.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="882.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求侧 · 基本盘</text>
+<text x="428.00" y="900.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">电信运营商仍占 73%</text>
+<text x="428.00" y="924.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Telecom</tspan><tspan fill="#9aa3b8" font-weight="400"> Providers</tspan><tspan fill="#9aa3b8" font-weight="400"> Q1'26</tspan><tspan fill="#f4d58a" font-weight="700"> EUR</tspan><tspan fill="#f4d58a" font-weight="700"> 3,267M</tspan><tspan fill="#9aa3b8" font-weight="400"> 、占</tspan><tspan fill="#f4d58a" font-weight="700"> 73%</tspan><tspan fill="#9aa3b8" font-weight="400"> 集团收入，但同比</tspan></text>
+<text x="428.00" y="940.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">-2%</tspan><tspan fill="#9aa3b8" font-weight="400"> （恒定汇率）——这块基本盘平台化，UBS</tspan><tspan fill="#9aa3b8" font-weight="400"> 估</tspan><tspan fill="#f4d58a" font-weight="700"> 85-90%</tspan><tspan fill="#9aa3b8" font-weight="400"> 集团收入与电信周期挂钩。</tspan></text>
+<rect x="782.00" y="858.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="858.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="882.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">现金牛 · 高毛利</text>
+<text x="798.00" y="900.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">IPR 授权近乎纯利</text>
+<text x="798.00" y="924.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Technology</tspan><tspan fill="#9aa3b8" font-weight="400"> Licensees</tspan><tspan fill="#9aa3b8" font-weight="400"> Q1'26</tspan><tspan fill="#f4d58a" font-weight="700"> EUR</tspan><tspan fill="#f4d58a" font-weight="700"> 385M</tspan><tspan fill="#9aa3b8" font-weight="400"> 、同比</tspan><tspan fill="#f4d58a" font-weight="700"> +10%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，5G</tspan><tspan fill="#9aa3b8" font-weight="400"> SEP</tspan></text>
+<text x="798.00" y="940.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">组合贡献近乎纯利润的现金流——是</tspan><tspan fill="#9aa3b8" font-weight="400"> Mobile</tspan><tspan fill="#9aa3b8" font-weight="400"> Infrastructure</tspan><tspan fill="#9aa3b8" font-weight="400"> 利润率（Q1'26</tspan><tspan fill="#f4d58a" font-weight="700"> 8.9%</tspan></text>
+<text x="798.00" y="956.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">）的关键支撑。</tspan></text>
+<text x="590.00" y="1026.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Nokia Q1 2026 interim report (2026-04-23), Segment Details + net sales by customer type · NVIDIA 6-K 2025-10-28 · JPM AI revenue model 2026-06-12 · as of 2026-06-16</text>
+</svg>

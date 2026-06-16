@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Nokia FY2025 利润表桑基图 (Income Statement, EUR millions)</text>
+<path d="M 204.00,64.00 C 258.00,64.00 258.00,85.10 312.00,85.10 L 312.00,248.84 C 258.00,248.84 258.00,227.74 204.00,227.74 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.10 C 506.00,78.10 506.00,182.93 560.00,182.93 L 560.00,201.08 C 506.00,201.08 506.00,96.25 452.00,96.25 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,96.25 C 506.00,96.25 506.00,215.08 560.00,215.08 L 560.00,379.07 C 506.00,379.07 506.00,260.24 452.00,260.24 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.10 C 382.00,85.10 382.00,78.10 436.00,78.10 L 436.00,255.64 C 382.00,255.64 382.00,262.64 328.00,262.64 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,262.64 C 382.00,262.64 382.00,269.64 436.00,269.64 L 436.00,499.90 C 382.00,499.90 382.00,492.90 328.00,492.90 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,176.34 C 754.00,176.34 754.00,264.49 808.00,264.49 L 808.00,277.83 C 754.00,277.83 754.00,189.69 700.00,189.69 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,189.69 C 754.00,189.69 754.00,291.83 808.00,291.83 L 808.00,297.51 C 754.00,297.51 754.00,195.37 700.00,195.37 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,195.37 C 754.00,195.37 754.00,311.51 808.00,311.51 L 808.00,313.51 C 754.00,313.51 754.00,197.37 700.00,197.37 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,182.93 C 630.00,182.93 630.00,176.34 684.00,176.34 L 684.00,194.49 C 630.00,194.49 630.00,201.08 576.00,201.08 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,215.08 C 630.00,215.08 630.00,209.10 684.00,209.10 L 684.00,272.11 C 630.00,272.11 630.00,278.09 576.00,278.09 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,278.09 C 630.00,278.09 630.00,286.11 684.00,286.11 L 684.00,385.66 C 630.00,385.66 630.00,377.63 576.00,377.63 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,377.63 C 630.00,377.63 630.00,399.66 684.00,399.66 L 684.00,401.66 C 630.00,401.66 630.00,379.63 576.00,379.63 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,241.74 C 258.00,241.74 258.00,248.84 312.00,248.84 L 312.00,408.89 C 258.00,408.89 258.00,401.79 204.00,401.79 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,393.07 C 630.00,393.07 630.00,194.49 684.00,194.49 L 684.00,196.49 C 630.00,196.49 630.00,395.07 576.00,395.07 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,415.79 C 258.00,415.79 258.00,408.89 312.00,408.89 L 312.00,462.33 C 258.00,462.33 258.00,469.22 204.00,469.22 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,483.22 C 258.00,483.22 258.00,462.33 312.00,462.33 L 312.00,493.10 C 258.00,493.10 258.00,514.00 204.00,514.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="163.74" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="241.74" width="16" height="160.05" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="415.79" width="16" height="53.43" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="483.22" width="16" height="30.78" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.10" width="16" height="407.79" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.10" width="16" height="177.54" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="269.64" width="16" height="230.25" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="182.93" width="16" height="18.15" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="215.08" width="16" height="163.99" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="393.07" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="176.34" width="16" height="18.76" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="209.10" width="16" height="63.01" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="286.11" width="16" height="99.54" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="399.66" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="264.49" width="16" height="13.35" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="291.83" width="16" height="5.68" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="311.51" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="145.87" x2="182.00" y2="134.26" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="137.26" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Network Infrastructure</text>
+<text x="179.00" y="150.26" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR8.0B  (40.2%)</text>
+<line x1="188.00" y1="321.77" x2="182.00" y2="310.15" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="313.15" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Mobile Networks</text>
+<text x="179.00" y="326.15" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR7.8B  (39.2%)</text>
+<line x1="188.00" y1="442.51" x2="182.00" y2="430.90" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="433.90" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cloud &amp; Network Services</text>
+<text x="179.00" y="446.90" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR2.6B  (13.1%)</text>
+<line x1="188.00" y1="498.61" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Nokia Technologies (IPR)</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR1.5B  (7.5%)</text>
+<rect x="331.00" y="67.10" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR19.9B  (100.0%)</text>
+<rect x="455.00" y="60.10" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR8.7B  (43.5%)</text>
+<rect x="455.00" y="251.64" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="263.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="276.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR11.2B  (56.5%)</text>
+<rect x="579.00" y="164.93" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="176.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="189.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR885.0M  (4.4%)</text>
+<rect x="579.00" y="197.08" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="209.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="222.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR8.0B  (40.2%)</text>
+<text x="551.00" y="391.07" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="404.07" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR30.0M  (0.15%)</text>
+<rect x="703.00" y="158.34" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="170.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="183.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR915.0M  (4.6%)</text>
+<rect x="703.00" y="191.10" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="203.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="216.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR3.1B  (15.5%)</text>
+<rect x="703.00" y="268.11" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="280.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="293.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR4.9B  (24.4%)</text>
+<rect x="703.00" y="381.66" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="393.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="406.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR70.0M  (0.35%)</text>
+<text x="833.00" y="268.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="281.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR651.0M  (3.3%)</text>
+<text x="833.00" y="293.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="306.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR277.0M  (1.4%)</text>
+<text x="833.00" y="318.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Minority Interest</text>
+<text x="833.00" y="331.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">EUR9.0M  (0.05%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">旧版四分部口径净销售 (FY2025)；NI/MN/CNS/NT 含分部间抵销约 EUR -11M。报告经营利润 EUR 885M (含 Infinera 摊销/重组/一次性约 EUR 1,085M)。</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Nokia FY2025 Form 20-F (filed 2026-03-05), consolidated income statement (p.126) · as of 2026-06-16</text>
+</svg>
