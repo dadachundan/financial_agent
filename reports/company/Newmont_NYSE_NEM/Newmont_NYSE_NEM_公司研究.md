@@ -1,26 +1,48 @@
 # Newmont Corporation (NYSE: NEM) — 公司研究
 
-**报告日期:** 2026-06-02
+**报告日期 / As of:** 2026-06-16
 **报告语言:** 简体中文（zh-CN）
 **所属主题篮子:** rare-earth-strategic-minerals（稀土与战略矿产）— **黄金对冲腿 / Gold hedge leg**
 **报告分析师:** Research Workflow Subagent
 
-> **主题定位说明:** Newmont 是稀土与战略矿产篮子的 *供应中断对冲 (supply-disruption hedge)* 腿。当 Cu / Fe / REE 受到地缘冲击 (Grasberg 事故、印尼出口禁令、秘鲁选举意外、中国稀土出口管制) 引发避险情绪时，金价上涨，NEM / AEM 提供风险偏好下修时的篮子保护，而非与稀土价格直接联动。FY25 篮子 1Y 回报中位数即为 NEM 的 +110.5%（[rare-earth-strategic-minerals_theme.md](../../themes/rare-earth-strategic-minerals_theme.md)）。
+---
 
-> **Update — Q1 2026 季度业绩创历史新高 (2026-04-23):** 公司 Q1 2026 实现营收 USD 7.31 bn、自由现金流 USD 3.1 bn (历史单季新高)、归母净利润 USD 3.3 bn (单季新高)、调整后 EBITDA USD 5.2 bn；归属黄金产量约 1.3 Moz、银 9 Moz、铜 30 kt。公司重申 FY2026 黄金产量指引约 5.3 Moz，但管理层警示油价 / 矿权使用费 (royalty) 头风可能侵蚀 AISC。新任 CEO Natascha Viljoen 自 2026-01-01 起就任并参加首场季度电话会，强调 *运营纪律 (operational discipline) + 文化整合* 优先级最高 ([Newmont Q1 2026 Earnings Transcript, The Motley Fool, 2026-04-23](https://www.fool.com/earnings/call-transcripts/2026/04/23/newmont-nem-q1-2026-earnings-transcript/))。
->
-> 同时，2026-05 月初财报后股价单日 +9%、5/26 再 +3.61%；52 周高点 USD 131.68 (2026-01-28 收盘)，2026-06-01 收盘 USD 108.19，市值 USD 115.5 bn，TTM P/E 14.06、Forward P/E 10.05、Div Yield 0.95% ([stockanalysis.com NEM overview, 2026-06-01](https://stockanalysis.com/stocks/nem/); [tradingkey NEM market mover 2026-05-26](https://www.tradingkey.com/news/market-movers/261929051-market-movers-nem-20260526))。
+### 投资摘要 / Investment Summary Header  *（分析师观点 / Analyst view）*
+
+| 项目 / Item | 内容 / Value |
+|---|---|
+| **评级 / Rating** | **Hold / Overweight-leaning（中性偏增持）** — 优质现金牛，但金价回调期估值已计入大部分上行 |
+| **12 个月目标价 / 12-mo PT** | **US$130**（base case；method: 2027E EPS × 目标 P/E + FCF 收益率交叉验证） |
+| **现价 / Current price** | **US$108.88**（2026-06-16 收盘，[stockanalysis.com](https://stockanalysis.com/stocks/nem/)） |
+| **隐含空间 / Implied upside** | **+19.4%**（130 / 108.88 − 1） |
+| **估值方法 / Method** | 2027E EPS ~US$8.7 × 目标 ~15× P/E ≈ US$130；对照 FCF 收益率 ~7% 与同业 EV/EBITDA |
+| **市值 / Market cap** | **US$115.76 bn**（[stockanalysis.com](https://stockanalysis.com/stocks/nem/)） |
+| **52 周区间 / 52-wk range** | US$55.37 – US$134.88（[stockanalysis.com](https://stockanalysis.com/stocks/nem/)） |
+| **TTM P/E · Fwd P/E · Div yield** | 13.75× · 9.90× · 0.96%（[stockanalysis.com](https://stockanalysis.com/stocks/nem/)） |
+| **市场一致目标价 / Consensus PT** | US$141.46（22 位分析师，Buy，[stockanalysis.com](https://stockanalysis.com/stocks/nem/)） |
+
+**论点支柱 / Thesis pillars**（每条均为 *分析师观点 / Analyst view*）:
+1. **全球最大黄金商 + 历史级金价杠杆**：FY2025 营收 US$22.67 bn、归母净利润 US$7.09 bn、调整后 EBITDA US$13.5 bn、自由现金流 (FCF) US$7.3 bn（创纪录）；公司无金价对冲，US$4,900/oz 的 Q1 2026 实现金价直接转化为利润弹性（[NEM FY2025 10-K](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)；[NEM Q1 2026 10-Q](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000019/nem-20260331.htm)）。
+2. **资产负债表去杠杆 + 大额股东回报**：FY25 偿债 US$3.4 bn、回购 US$2.3 bn、派息 US$1.1 bn，年末现金 US$7.6 bn、净债务接近零（[NEM FY2025 10-K, Cash Flows](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)）。
+3. **portfolio optimization 完成 + 整合折价消化**：2024-2025 剥离 6 个非核心资产回收 US$3.6 bn，聚焦 13 个 Tier-1 资产；Newcrest 整合执行风险随时间下降。
+4. **金价回调是主要风险，也是入场窗口**：金矿股自 2026-01 高点回调约 25%，板块前瞻 P/E ~10×；*分析师观点 / Analyst view:* 卖方（UBS / GS / Citi）普遍视回调为选择性买入，但承认 2026 成本上行将压制利润率（[CITI Global Gold, 2026-06-08](http://xs-macbook-air.local:5001/zsxq/pdf/181245182282112/CITI-Global%20Gold%EF%BC%9AMarking~to~market%20gold%20exposure%EF%BC%8C%20steady%20FCF%20offsets%20near~term%20headwinds-260608.pdf)）。
+
+> **业绩快报 — Q1 2026 创历史新高 (2026-04-23):** 公司 Q1 2026 实现营收 US$7,307M、自由现金流 US$3,144M (= OCF 3,785 − capex 641；历史单季新高)、归母净利润 US$3,262M (单季新高)、摊薄 EPS US$3.00；Q1 实现金价 US$4,900/oz、铜 US$5.68/lb。公司重申 FY2026 黄金产量指引约 5.3 Moz，管理层警示油价 / 矿权使用费 (royalty) 头风可能侵蚀 AISC（[NEM Q1 2026 10-Q, Statements of Operations & Cash Flows](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000019/nem-20260331.htm)；[NEM Q1 2026 Earnings Release 8-K, 2026-04-23](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000017/newmontq12026earningsrelea.htm)）。
+
+> **管理层变动 — 新执行团队 (2026-06-15):** 在 Viljoen 出任 CEO 后，公司宣布自 2026-07-01 起：**Brian Tabolt 任 CFO**（原首席会计官，2021 年加入，曾任临时 CFO）、**Mark Rodgers 任 COO**、**David Thornton 任 CTO**，David Fry 升任 EVP, Project Development。此为 Viljoen 团队 *go-forward Executive Leadership Team* 的首次系统性搭建（[NEM 8-K Exhibit 99.1, 2026-06-15](https://www.sec.gov/Archives/edgar/data/1164727/000110465926074137/tm2617970d1_ex99-1.htm)）。
+
+> **主题定位说明:** Newmont 是稀土与战略矿产篮子的 *供应中断对冲 (supply-disruption hedge)* 腿。当 Cu / Fe / REE 受到地缘冲击 (Grasberg 事故、印尼出口禁令、秘鲁选举意外、中国稀土出口管制) 引发避险情绪时，金价上涨，NEM / AEM 提供风险偏好下修时的篮子保护，而非与稀土价格直接联动（[rare-earth-strategic-minerals_theme.md](../../themes/rare-earth-strategic-minerals_theme.md)）。
 
 ## 目录
-1. 公司概览 / Company Overview
-2. 公司历史 / Company History
+1. 公司概览 / Company Overview（含 1A 估值与目标价 · 1B GF Score）
+2. 估值与目标价 + 公司历史 / Valuation, Price Target & Company History
 3. 管理团队 / Management Team
 4. 产品与服务 / Products & Services
 5. 客户与上市策略 / Customers & Go-to-Market
 6. 行业概览 / Industry Overview
 7. 竞争格局 / Competitive Landscape
 8. 市场机会 / Market Opportunity (TAM)
-9. 风险评估 / Risk Assessment
+9. 风险评估 / Risk Assessment（含 9.5 关键争议与催化剂）
 10. 投资者视角评分 / Investor Lens Scorecards
 11. 参考资料 / References
 
@@ -38,27 +60,122 @@ Newmont Corporation 是全球最大的黄金生产商 (the world's leading gold 
 
 **规模 / 关键指标**: FY2025 销售 USD 22.67 bn (yoy +21.3%, 主因金价均价 USD 3,498/oz vs. FY24 USD 2,408/oz 同比 +45.3%)；归属于股东的归母净利润 USD 7.09 bn (yoy +116%)；调整后 EBITDA USD 13.48 bn (yoy +55%, EBITDA margin 59.5%)；经营性现金流 USD 10.33 bn (yoy +64%)；自由现金流 USD 7.30 bn (yoy +150%)；归属黄金产量 5.89 Moz (yoy −14%, 主因剥离非核心资产)；归属铜产量 135 kt (yoy −12%, 同上原因)。AISC Co-Product 黄金 USD 1,609/oz (yoy +6.1%, 油价 + royalty + 通胀)。年末现金 USD 7.6 bn、总流动性 USD 11.6 bn；FY25 内赎回 USD 3.4 bn 高级票据 (deleveraging) + 回购股份 USD 2.3 bn + 派息每股 USD 1.01；员工总数未在 10-K 中具体披露，但 2024 年合并 Newcrest 后预计在 15,000–17,000 人区间 ([Newmont 2025 10-K, Results and Highlights, p. 2–4](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm))。
 
-**估值快照 / Valuation snapshot (REQUIRED).** 截至 2026-06-01 收盘:
+**利润表桑基图 / Income-statement Sankey (FY2025)** — 营收如何从五种金属流向 US$7.09 bn 归母净利润：
+
+![Newmont FY2025 income-statement Sankey](charts/nem_income_sankey.svg)
+
+Source: [NEM FY2025 10-K, CONSOLIDATED STATEMENTS OF OPERATIONS](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)（filed 2026-02-19）
+
+**营收按金属（donut）+ 三年营收历史（revbars）：**
+
+![Newmont FY2025 revenue donut by metal](charts/nem_segment_donut.svg)
+
+![Newmont revenue history by metal FY2023-2025](charts/nem_revbars.svg)
+
+Source: [NEM FY2025 10-K, Note 5 Sales（FY2023-2025）](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)
+
+### 1A. 估值快照与目标价 / Valuation Snapshot & Price Target
+
+**估值快照 / Valuation snapshot (REQUIRED).** 截至 2026-06-16 收盘:
 
 | 指标 / Metric | 数值 / Value | 来源 / Source |
 |---|---|---|
-| 股价 Last close | USD 108.19 | [stockanalysis.com](https://stockanalysis.com/stocks/nem/) |
-| 市值 Market cap | USD 115.50 bn | 同上 |
-| TTM P/E | 14.06 × | 同上 |
-| Forward P/E | 10.05 × | 同上 |
-| 股息率 Div yield | 0.95% | 同上 |
-| FY25 Adj EBITDA | USD 13.48 bn | [Newmont 2025 10-K](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm) |
-| EV/EBITDA (隐含 TTM) | ≈ 9.0–9.5 × | 推算 (mkt cap 115.5 + net debt ≈ 5–6 → EV ≈ 120–122 / EBITDA 13.5) |
-| FY25 P/S | ≈ 5.1 × | 推算 (115.5 / 22.67) |
-| 12M analyst PT (consensus) | USD 142.86 | [stockanalysis.com](https://stockanalysis.com/stocks/nem/) |
+| 股价 Last close | US$108.88 | [stockanalysis.com](https://stockanalysis.com/stocks/nem/) |
+| 市值 Market cap | US$115.76 bn | 同上 |
+| TTM P/E | 13.75 × | 同上 |
+| Forward P/E | 9.90 × | 同上 |
+| 股息率 Div yield | 0.96% | 同上 |
+| 52 周区间 | US$55.37 – US$134.88 | 同上 |
+| FY25 Adj EBITDA | US$13.5 bn | [NEM FY2025 Earnings 8-K, 2026-02-19](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000009/newmontq42025earningsand20.htm) |
+| EV/EBITDA (隐含 TTM) | ≈ 8.4–8.7 × | 推算 (mkt cap 115.76 − 净现金 ≈ 2.5 → EV ≈ 113 / EBITDA 13.5) |
+| FY25 P/S | ≈ 5.1 × | 推算 (115.76 / 22.67) |
+| 12M analyst PT (consensus) | US$141.46（+29.9%，Buy，22 位） | [stockanalysis.com](https://stockanalysis.com/stocks/nem/) |
 
-**估值解读**: NEM 当前 TTM P/E 14.06×、Forward P/E 10.05× 处于 2012-2026 长周期中位偏下区间 (公司 5Y avg P/E 约 18×，参见 [Macrotrends NEM PE Ratio history](https://www.macrotrends.net/stocks/charts/NEM/newmont/pe-ratio))。该估值反映 (a) 金价 USD 4,800+/oz 创历史新高，FCF 单季 USD 3.1 bn 已超过 FY23 全年 USD 88 M、市场对 *持续性 / sustainability* 折价；(b) 剥离非核心资产后 share count 已回购至 ~1.07 bn 股，叠加 deleveraging 将债务 / EBITDA 降至 ≤0.5×；(c) Yanacocha 在 FY25 计提了一次性减值。**对比同业**: Agnico Eagle (NYSE:AEM) Forward P/E 约 12.96×、EV/EBITDA 约 8.84×; Barrick Mining (NYSE:GOLD) Forward P/E 约 10–11×、EV/EBITDA 约 7–8× ([Seeking Alpha — Agnico Eagle: A 15% Selloff In A Best-In-Class Gold Miner, 2026](https://seekingalpha.com/article/4907977-agnico-eagle-a-15-percent-selloff-in-a-best-in-class-gold-miner); [Zacks Industry Outlook — Newmont, Agnico Eagle, Barrick, Franco-Nevada, Kinross](https://finance.yahoo.com/news/zacks-industry-outlook-highlights-newmont-103500701.html))。NEM 与 AEM / GOLD 估值差距已收窄，2024 年市场曾给 AEM 显著估值溢价 (P/E ~18× vs NEM ~12×) 反映 NEM 整合 Newcrest 的执行不确定性；2026 年随 portfolio optimization 完成 + Viljoen 接任，整合折价基本消化。**没有显著 P/E < 8× 价值陷阱信号，也没有 P/E > 50× 故事股泡沫**，估值反映均衡的 *gold-leveraged late-cycle quality miner* 定位。
+**估值解读**: NEM 当前 TTM P/E 13.75×、Forward P/E 9.90× 处于 2012-2026 长周期中位偏下区间 (公司 5Y avg P/E 约 18×，参见 [Macrotrends NEM PE Ratio history](https://www.macrotrends.net/stocks/charts/NEM/newmont/pe-ratio))。该估值反映 (a) 金价 LBMA 2026 YTD 均价 US$4,808/oz、2026-02-12 收盘 US$5,043/oz 创历史新高，FCF 单季 US$3.1 bn，市场对 *持续性 / sustainability* 仍给折价；(b) 剥离非核心资产 + 回购后 FY25 末流通股降至约 1,089 M 股，叠加 deleveraging 将债务 / EBITDA 降至 ≤0.5×；(c) Yanacocha 等资产在 FY25 计提 US$842M 减值（[NEM FY2025 10-K, Item 1 — Gold Price 10-yr LBMA table & Balance Sheets](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)）。**对比同业**: Agnico Eagle (NYSE:AEM) Forward P/E 约 13×、EV/EBITDA 约 9×; Barrick Mining (NYSE:GOLD) Forward P/E 约 10–11×、EV/EBITDA 约 7–8× ([Zacks Industry Outlook — Newmont, Agnico Eagle, Barrick, Franco-Nevada, Kinross](https://finance.yahoo.com/news/zacks-industry-outlook-highlights-newmont-103500701.html))。2024 年市场曾给 AEM 显著估值溢价反映 NEM 整合 Newcrest 的执行不确定性；2026 年随 portfolio optimization 完成 + Viljoen 团队就位，整合折价基本消化。**没有显著 P/E < 8× 价值陷阱信号，也没有 P/E > 50× 故事股泡沫**，估值反映均衡的 *gold-leveraged late-cycle quality miner* 定位。完整的目标价推导（base/bull/bear）见第 2 节。
 
-*分析师观点 / Analyst view:* 在 *主题篮子语境* 下，NEM 是 *防守 / 对冲* 仓位，不是篮子 alpha 来源。其 FY25 +110.5% 的 1Y 回报在篮子中位偏低 (篮子均值 +158.8%，PLS / MIN / UUUU / ALB / MP 是 alpha 来源)，但低 beta、低相关性、强 FCF 转化 (FCF/EBITDA 54%) 在篮子配置上承担 *固守阵地 (anchor)* 角色。当 Cu / Fe 在 2026 H2 受到秘鲁 (Tía María 重启争议)、印尼 (Grasberg 后续审查)、智利 (BHP / RIO 罢工) 冲击导致基础金属下跌时，NEM 应有 +5–15% 反向脉冲。
+**动量 / Momentum 锚点（截至 2026-06-16）**：NEM 1Y 回报 **+89.3%**，跑赢金矿指数 GDX (+64.7%)、标普 SPY (+26.0%) 与金价本身（GC=F +28.3%）；6 个月 +11.5%；现价较 200 日均线 (US$101.77) 高约 +6.9%（来源：yfinance，as of 2026-06-16）。这是 GF Score 动量轴高分的依据。
+
+*分析师观点 / Analyst view:* 在 *主题篮子语境* 下，NEM 是 *防守 / 对冲* 仓位，不是篮子 alpha 来源。其低 beta、低相关性、强 FCF 转化 (FCF/EBITDA = 7,299 / 13,500 ≈ 54%) 在篮子配置上承担 *固守阵地 (anchor)* 角色。当 Cu / Fe 在 2026 H2 受到秘鲁 (Tía María 重启争议)、印尼 (Grasberg 后续审查)、智利 (BHP / RIO 罢工) 冲击导致基础金属下跌时，NEM 应有反向脉冲。
+
+### 1B. GF Score（GuruFocus 式基本面评分）
+
+> *分析师观点 / Analyst view:* 以下五维 0–10 评分与 0–100 综合分是本报告依 [GuruFocus GF Score™](https://www.gurufocus.com/term/gf-score) 方法学自建的分析框架，**非数据来源、非买卖建议**，且未取自 GuruFocus 已发布数值；每个维度的底层指标各自带行内引用。
+
+![Newmont GF Score radar](charts/nem_gf_score.svg)
+
+| 维度 / Axis | 分数 (0–10) | 评分理由（底层指标各带引用） |
+|---|---|---|
+| **Financial Strength** | 9 | 年末现金 US$7.65 bn > 总债务 US$5.12 bn → 净债务接近零、Net Debt/EBITDA ≤0.5×；FY25 偿债 US$3.4 bn（[FY2025 10-K, Balance Sheets & Cash Flows](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)） |
+| **Profitability** | 8 | EBITDA margin ~59.5%、净利率 US$7,085M / 22,669M ≈ 31%、ROE ≈ 7,085 / 34,042 ≈ 21%；但工艺 AISC US$1,609/oz 在大型商偏高（[同上](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)） |
+| **Growth** | 8 | 营收 +21.3% YoY、归母净利润扭亏为 US$7.09 bn、FCF +150%、摊薄 EPS 从 −US$3.00（FY23）→ US$6.39（FY25）（[同上](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)） |
+| **GF Value** | 8 | Forward P/E 9.90× 低于 5Y 均值 ~18×、低于一致 PT 隐含 +29.9% 上行；非泡沫、非价值陷阱（[stockanalysis.com](https://stockanalysis.com/stocks/nem/)） |
+| **Momentum** | 8 | 1Y +89.3%（跑赢 GDX/SPY/金价）、6M +11.5%、现价高于 200dma +6.9%（yfinance，2026-06-16） |
+| **综合 / Composite** | **~84 / 100** | 落在 GuruFocus "good"（71–90）带，反映优质周期性现金牛 |
+
+各维度评分理由：**Financial Strength（9）**——这是 NEM 最强的一维：FY25 末现金 US$7.65 bn 已高于全部债务 US$5.12 bn，净债务实际为负，叠加 US$11.6 bn 总流动性与 FY25 内 US$3.4 bn 主动偿债，资产负债表在金价下行情景下有充足缓冲。**Profitability（8）**——59.5% 的 EBITDA margin 与 ~31% 净利率在大宗商品行业属上游水平，但 co-product AISC US$1,609/oz 高于 AEM ~US$1,300–1,400，是扣分项。**Growth（8）**——增长主要是金价驱动而非产量（FY26 产量指引 5.3 Moz 仍低于 FY25 的 5.89 Moz），故给 8 而非满分。**GF Value（8）**——9.9× 前瞻 P/E 对一家净债务为零、FCF 收益率 ~6–7% 的全球龙头并不贵。**Momentum（8）**——跑赢金属与同业指数，但已较 52 周高点 US$134.88 回落约 19%，留有空间。
 
 ---
 
-## 2. 公司历史 / Company History
+## 2. 估值与目标价 + 公司历史 / Valuation, Price Target & Company History
+
+### 2.0 前瞻财务模型与目标价 / Forward model & price target  *（全部为分析师观点 / Analyst view）*
+
+> 以下前瞻估计、目标价及情景均为本报告的 *分析师观点 / Analyst view*，**不附任何 filing 引用**（10-K 不含目标价）；每个驱动因子的外部依据（10-K 分部数据 + 公司指引 + 行业金价预测）在行内标注。
+
+**前瞻财务估计 / Forward estimates（US$，per share 为摊薄）：**
+
+| 年度 | 营收 (US$bn) | 调整后 EBITDA (US$bn) | 净利率 | 摊薄 EPS (US$) | 假设金价 (US$/oz) |
+|---|---|---|---|---|---|
+| FY2025A | 22.67 | 13.5 | ~31% | 6.39 | 实现均价 3,498 |
+| FY2026E | ~24–25 | ~13.5–14 | ~30% | ~7.8 | ~4,300（接近现货） |
+| FY2027E | ~24–26 | ~13–14 | ~31% | ~8.7 | ~4,500（GS 长期 3,800、Citi 2027 目标 5,000 之间取中） |
+| FY2028E | ~23–25 | ~12.5–13.5 | ~30% | ~8.3 | ~4,200 |
+
+驱动因子：FY26-28 产量在 5.3 Moz 指引附近横盘、Tanami Expansion 2（2027 H2 投产）与 Cadia panel caves（2029）逐步贡献增量（[NEM FY2025 10-K, Our Global Project Pipeline](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)）；EPS 弹性主要来自金价而非销量，且无对冲（[NEM FY2025 10-K, Item 7A — Market Risk](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)）；金价区间参考卖方（GS 2026 末 US$5,400/oz、长期 US$3,800/oz；Citi 2027 US$5,000/oz）（*分析师观点*，[GS Australia Metals & Mining: Gold, 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/212488582128541/Goldman%20Sachs-Australia%20Metals%20%26%20Mining%EF%BC%9AGold%EF%BC%8CEquities%20face%20moderating%20near~term%20margins%EF%BC%8C%20though%20forward%20valuations%20supportive%EF%BC%9B%20Assessing%20stock%20relativity%20under%20gold%20price%20scenarios%EF%BC%9B%20CMM%20down%20EVN%20up%20to%20Neutral-260604.pdf)；[CITI Global Gold, 2026-06-08](http://xs-macbook-air.local:5001/zsxq/pdf/181245182282112/CITI-Global%20Gold%EF%BC%9AMarking~to~market%20gold%20exposure%EF%BC%8C%20steady%20FCF%20offsets%20near~term%20headwinds-260608.pdf)）。
+
+**目标价推导 / PT derivation（base case）：** 以 2027E 摊薄 EPS ~US$8.7 × 目标 ~15× P/E ≈ **US$130**。15× 的依据：NEM 5Y 平均 P/E ~18×，但金价回调期 GDX 板块前瞻 P/E 仅 ~10×（[UBS Gold Mining, 2026-03-26](http://xs-macbook-air.local:5001/zsxq/pdf/812224182221452/UBS-Gold%20Mining%EF%BC%9ASafe~haven%20or%20leverage%20to%20ME%20de~escalation%EF%BC%9F-260326.pdf)），取 15× 在「龙头质量溢价」与「金价可持续性折价」之间折中；交叉验证：US$130 隐含 FCF 收益率约 7%（FY26E FCF ~US$8 bn / 市值 ~US$130 bn），与同业相当。
+
+**bull / base / bear 情景：**
+
+| 情景 | 关键假设 | 目标价 | 隐含空间 |
+|---|---|---|---|
+| **Bull** | 金价稳态 US$5,000+/oz、AISC 受控、Cadia/Tanami 按期投产；2027E EPS ~US$10 × 17× | **US$165** | +52% |
+| **Base** | 金价 US$4,200–4,500/oz、产量 5.3 Moz 附近、AISC 温和上行；2027E EPS ~US$8.7 × 15× | **US$130** | +19% |
+| **Bear** | 金价回到 US$3,000/oz、成本通胀超预期、Yanacocha 再减值；2027E EPS ~US$5.5 × 12× | **US$66** | −39% |
+
+**与一致预期的对比 / vs consensus：** 本报告 base PT US$130 低于市场一致 US$141.46（22 位分析师，Buy）约 8%（[stockanalysis.com](https://stockanalysis.com/stocks/nem/)）——本报告对金价可持续性持更谨慎假设，与 GS「2026 后续季度利润率回撤、2027 才修复」、其对 2027 单位成本「较市场一致高约 15%」的判断一致（*分析师观点*，[GS Australia Metals & Mining: Gold, 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/212488582128541/Goldman%20Sachs-Australia%20Metals%20%26%20Mining%EF%BC%9AGold%EF%BC%8CEquities%20face%20moderating%20near~term%20margins%EF%BC%8C%20though%20forward%20valuations%20supportive%EF%BC%9B%20Assessing%20stock%20relativity%20under%20gold%20price%20scenarios%EF%BC%9B%20CMM%20down%20EVN%20up%20to%20Neutral-260604.pdf)）。
+
+**最该盯紧的两个变量 / swing variables：** (1) **金价的可持续性** —— 这是 EPS 的一阶驱动，US$1,000/oz 的金价变动对应约 US$5.5 bn EBITDA（~40%）；(2) **AISC 走势** —— 油价 + 矿权使用费 + 通胀能否被控制在 US$1,700/oz 以内，决定金价上行是否被成本吃掉。
+
+**回报分解 / DuPont（FY2025 ROE ≈ 22%）：** ROE = 净利率 × 资产周转率 × 权益乘数。
+
+![Newmont FY2025 DuPont ROE tree](charts/nem_dupont.svg)
+
+Source: [NEM FY2025 10-K, Statements of Operations + Balance Sheets](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)。FY25 ROE 主要由 ~31% 净利率拉动（金价驱动），资产周转率仅 ~0.40×（重资产矿业本质），权益乘数 ~1.7×（去杠杆后偏低）——这是一家「高利润率、低周转、低杠杆」的优质周期股画像。
+
+### 2.1 卖方观点演变 / Sell-side view evolution  *（分析师观点 / Analyst view）*
+
+本报告用到 ≥2 篇 `db/zsxq.db` 券商报告，按规范建立按机构的观点时间线与跨机构分歧表。**机械前置：** `db/stock_price_target.db` 中暂无 NEM 直接条目（库内 NEM-命名的单票深度 PT 稀缺，多为黄金板块报告），故以板块券商报告的 NEM 表述为准。
+
+**按机构的观点时间线（按报告日期）：**
+
+| 机构 | 日期 | 评级 / 表述 | 核心论点 | 报告 |
+|---|---|---|---|---|
+| **UBS** | 2026-03-26 | 金矿股「选择性买入」；**首选含 Newmont (NEM)** | 金矿股自中东冲突回调 >20%、GDX ~10× P/E；US$4,000/oz 下大型商 AISC<US$2,000、现金利润率丰厚；维持 2026 金价看多 | [UBS Gold Mining, 2026-03-26](http://xs-macbook-air.local:5001/zsxq/pdf/812224182221452/UBS-Gold%20Mining%EF%BC%9ASafe~haven%20or%20leverage%20to%20ME%20de~escalation%EF%BC%9F-260326.pdf) |
+| **Goldman Sachs** | 2026-06-04 | **Buy NEM、NST**（大型金矿） | GS 大宗团队 2026 末金价 US$5,400/oz、长期 US$3,800/oz；但 2026 后续季度利润率回撤至 2025H2 水平、2027 才修复；对 2027 单位成本预判较一致高 ~15% | [GS Australia Metals & Mining: Gold, 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/212488582128541/Goldman%20Sachs-Australia%20Metals%20%26%20Mining%EF%BC%9AGold%EF%BC%8CEquities%20face%20moderating%20near~term%20margins%EF%BC%8C%20though%20forward%20valuations%20supportive%EF%BC%9B%20Assessing%20stock%20relativity%20under%20gold%20price%20scenarios%EF%BC%9B%20CMM%20down%20EVN%20up%20to%20Neutral-260604.pdf) |
+| **Citi** | 2026-06-08 | 板块买入；中期看多 | 金矿股自 1 月高点回调约 25%；Citi 中期看多 2027 金价 US$5,000/oz；稳健 FCF 抵消短期成本逆风（覆盖 ANG/GFI，宏观框架适用于 NEM） | [CITI Global Gold, 2026-06-08](http://xs-macbook-air.local:5001/zsxq/pdf/181245182282112/CITI-Global%20Gold%EF%BC%9AMarking~to~market%20gold%20exposure%EF%BC%8C%20steady%20FCF%20offsets%20near~term%20headwinds-260608.pdf) |
+
+**跨机构分歧（机构间分歧）：** 三家均看多金价、视回调为买点，但在 **成本与利润率节奏** 上存在分歧：
+
+| 机构 | 日期 | 立场 | 核心论点 | 什么证据能证明其正确 |
+|---|---|---|---|---|
+| UBS | 2026-03-26 | 偏乐观 | US$4,000/oz 下现金利润率仍丰厚，回调即买点 | 金价企稳 US$4,000+、AISC 不破 US$2,000 |
+| Goldman Sachs | 2026-06-04 | 谨慎乐观 | 看多金价但警告 2026 利润率回撤、2027 才修复；成本预判高于市场 | 2026 后续季度单位成本环比上行、板块利润率回落 |
+| Citi | 2026-06-08 | 中期乐观 | 稳健 FCF 抵消短期逆风、2027 金价 US$5,000 | FCF 收益率维持 ~10%、capex 峰值已过 |
+
+**结论：** 三家方向一致（看多金价、NEM 是大型商买点），但 GS 的成本谨慎（2027 单位成本高于一致 15%）是本报告 base PT US$130 低于市场一致 US$141.46 的主要理由。每条 PT/表述的报告日价格：UBS（2026-03-26 NEM 约 US$70–80 区间）、GS/Citi（2026-06 上旬 NEM 约 US$92–100 区间，对应当时回调后估值）——report-date price 为 yfinance 区间估读，非精确，board 表述以「板块/首选」为主而非单票数字 PT。
+
+### 2.2 公司历史 / Company History
 
 Newmont 创立故事追溯到 1921 年: William Boyce Thompson (1869–1930)，一位科罗拉多 Butte 出身的矿业投机者和大宗商品交易商，在曼哈顿 New York Trust Company 的纽约 1850 年代 *Newmont* (新蒙大拿) 矿业开发壳公司基础上整合自身在哥伦布、Magma Copper、Anaconda Mining 等的投资组合，1925 年于纽约证券交易所上市 (后转 NYSE)。**1921 → 1990s 阶段**: 公司以铜矿 / 金矿 / 油气混合投资组合的形式扩张，1965–80s 间于 Carlin Trend (Nevada) 投资奠定后来 Nevada Gold Mines JV 的资产基础。**2000s — 黄金纯化**: 公司逐步剥离非黄金资产，2002 年合并 Normandy Mining (澳洲第二大黄金生产商) + Franco-Nevada (后续重新分拆为流式金融公司 NYSE:FNV)，黄金占比从 60% 跃升至 90%+；2010s 完成对 Yanacocha (Peru)、Boddington (Australia)、Akyem (Ghana) 等核心资产的整合。**2019 — Goldcorp 合并**: 2019 年 4 月以约 USD 10 bn 全股票合并 Goldcorp，成为单一最大黄金生产商，加入 Peñasquito (Mexico)、Cerro Negro (Argentina)、Musselwhite (Ontario) 等资产 ([Newmont 2025 10-K, Item 1 — Introduction](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm))。**2023-2024 — Newcrest 合并**: 2023-05-14 公告、2023-11-06 完成对澳大利亚第二大金矿商 Newcrest Mining Limited 的全股票收购，对价约 USD 19.1 bn，新加入 Cadia + Lihir + Brucejack + Red Chris (含铜) + Telfer + Havieron 资产，预计 24 个月内实现 USD 500 M 税前协同 ([Newmont Acquires Newcrest, 2023-11-06 press release](https://www.newmont.com/investors/news-release/news-details/2023/Newmont-Acquires-Newcrest-Successfully-Creating-Worlds-Leading-Gold-Mining-Business/default.aspx); [McCarthy Tétrault — Newmont acquires Newcrest US$19.1B](https://www.mccarthy.ca/en/experience/newmont-corp-acquires-newcrest-mining-limited-for-us-19-1b))。**2024-2025 — Portfolio Optimization**: 合并后管理层启动剥离计划，2024-Q1 起将 Telfer / CC&V / Musselwhite / Éléonore / Akyem / Porcupine + Coffee 项目列为待售资产，全部在 2025 年内完成销售，回收现金超过 USD 3.5 bn，并赎回 USD 3.4 bn 高级票据降低杠杆 ([Newmont 2025 10-K, Item 1 — Divestiture of Non-Core Assets](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm))。**2025-09-29 / 2026-01-01 — CEO 接班**: Tom Palmer 于 2025-09-29 宣布退休、Natascha Viljoen 自 2026-01-01 起接任总裁兼 CEO 并加入董事会，成为公司百年历史首位女性 CEO ([Newmont press release, 2025-09-29](https://www.newmont.com/investors/news-release/news-details/2025/Newmont-Announces-Retirement-of-CEO-Tom-Palmer-Names-President--COO-Natascha-Viljoen-as-Successor/default.aspx); [Mining.com — Viljoen named CEO, 2025-09](https://www.mining.com/newmont-names-viljoen-ceo-as-palmer-retires-after-12-years/))。
 
@@ -81,8 +198,9 @@ timeline
     2025 : 完成全部剥离，回收 USD 3.5 bn+
          : Ahafo North 投产
          : Tom Palmer 宣布退休
-    2026 : Natascha Viljoen 接任 CEO
-         : Q1 2026 FCF USD 3.1 bn 创历史新高
+    2026 : Natascha Viljoen 接任 CEO (01-01)
+         : Q1 2026 FCF USD 3.14 bn 创历史新高
+         : 07-01 新执行团队 (CFO Tabolt / COO Rodgers / CTO Thornton)
 ```
 
 **两大战略性转向 / pivots**: (1) **2000s 黄金纯化**: 管理层判断公司在多元化大宗商品集团下交易折价，主动剥离铜 / 油气 / 工业矿产，集中黄金，理由是 *专注 + LBMA-defined 商品标准 + 较低 ESG 风险敞口* 可释放估值。这一 pivot 在 2010s 金价低位期看似次优 (因失去铜的周期性弹性)，但 2024-2026 金价 USD 3,000 → 4,800+ /oz 完全验证了纯化决策。(2) **2023-2025 *从规模到质量* 大整合 / scale-to-quality**: 通过 Newcrest 合并新增低成本、长寿命澳洲铜金资产 (Cadia / Lihir)，随即剥离 6 个高成本 / 短寿命的非核心矿，将组合 *单位成本-寿命* 双指标都改善。这与 AEM 同期的 *合并 Kirkland Lake → Detour Lake / Canadian Malartic 1Moz/site* 走的是相似剧本 ([Newmont press release, 2023-11-06](https://www.newmont.com/investors/news-release/news-details/2023/Newmont-Acquires-Newcrest-Successfully-Creating-Worlds-Leading-Gold-Mining-Business/default.aspx))。
@@ -99,11 +217,13 @@ timeline
 
 **创始人 William Boyce Thompson (1869–1930)** — 现任 CEO 仅历史背景，今天与公司无直接经营关系，本段为简要历史性段落。Thompson 1869 年生于美国 Montana Butte，早年在 Butte 铜矿创业，1900-1910 年代担任纽约证券交易所大宗商品 / 矿业股投机商，积累财富后于 1921 年依托其位于纽约的 *Newmont* (新蒙大拿，意指 *新生于蒙大拿*) 投资工具整合自身在哥伦布银矿、Magma Copper、Anaconda Mining、Empire Star Mines 等矿业的股权，并将该工具改组为公开公司 Newmont Corporation。Thompson 同时是 Federal Reserve Bank of New York 创办人之一、洛克菲勒研究所董事，是美国 20 世纪初最具影响力的矿业 + 金融人物之一。Thompson 于 1930 年去世后，公司由职业经理人接管，至今股权完全分散，无创始人家族持股 ([Newmont 2025 10-K, Item 1 — Introduction](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm) 对成立年份与地点的官方表述提供基础)。
 
-**现任 CEO Natascha Viljoen (2026-01-01 起就任，公司百年历史首位女性 CEO)**. 履历: 出生于南非，是 *第二代矿工 / second-generation miner* 家族出身，三十余年全球矿业领导经验。**入职 Newmont 前最近三段**: (1) Anglo American Platinum (现 Valterra) CEO，曾领导全球最大原生铂金生产商，期间作为 Anglo American plc 集团管理委员会成员；(2) 早期在 Anglo American 任运营高管，主导多个铂族金属 (PGM) 矿山的产能提升与成本优化；(3) 更早期在 BHP 与 Lonmin (PGM) 担任运营 / 工艺岗位，从工艺工程师起步、深入矿场和处理厂一线 ([Newmont press release, 2025-09-29 — Retirement of CEO Tom Palmer](https://www.newmont.com/investors/news-release/news-details/2025/Newmont-Announces-Retirement-of-CEO-Tom-Palmer-Names-President--COO-Natascha-Viljoen-as-Successor/default.aspx); [Mining.com — Viljoen named CEO after Palmer retires, 2025-09](https://www.mining.com/newmont-names-viljoen-ceo-as-palmer-retires-after-12-years/))。公司公告引述: she "gained hands-on experience working with operators and maintainers in mining and processing"，"earned a reputation for safety leadership, operational discipline, and building high-performance teams" — 这三个标签 (*safety + operational discipline + high-perf teams*) 是新 CEO 的核心定位。**Newmont 任期**: 2023 年加入 Newmont 任总裁兼 COO，负责 Newcrest 整合的运营层面、portfolio optimization 资产剥离的执行、人才发展。2025-09-29 公告接任，2026-01-01 正式生效并加入董事会。Palmer 留任 *Strategic Advisor* 至 2026-03-31 以保证平稳过渡 ([businesswire — Newmont CEO retirement, 2025-09-29](https://www.businesswire.com/news/home/20250929730136/en/Newmont-Announces-Retirement-of-CEO-Tom-Palmer-Names-President-COO-Natascha-Viljoen-as-Successor))。**教育**: 详细学历未在公告中披露；从 PGM 工艺工程师背景推测，应有冶金 / 矿业工程本科 + 多年现场经验。**持股**: 作为 2023 年加入的新高管，持股仍在累积阶段，2026 DEF 14A 将披露具体股权与 PSU 授予 ([Newmont 2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/1164727/000110465926035211/nem-20260512xdef14a.htm))。**薪酬结构**: 总薪酬主要由基本工资 + 短期年度激励 + 长期 PSU/RSU 三部分构成，PSU 业绩挂钩相对 GDX 同业指数的 TSR 及 ESG / 安全指标 (依 Newmont 历年薪酬实践，详情见 2026 DEF 14A)。
+**现任 CEO Natascha Viljoen (2026-01-01 起就任，公司百年历史首位女性 CEO)**. 履历: 出生于南非，是 *第二代矿工 / second-generation miner* 家族出身，三十余年全球矿业领导经验。**入职 Newmont 前最近三段**: (1) Anglo American Platinum (现 Valterra) CEO，曾领导全球最大原生铂金生产商，期间作为 Anglo American plc 集团管理委员会成员；(2) 早期在 Anglo American 任运营高管，主导多个铂族金属 (PGM) 矿山的产能提升与成本优化；(3) 更早期在 BHP 与 Lonmin (PGM) 担任运营 / 工艺岗位，从工艺工程师起步、深入矿场和处理厂一线 ([Newmont press release, 2025-09-29 — Retirement of CEO Tom Palmer](https://www.newmont.com/investors/news-release/news-details/2025/Newmont-Announces-Retirement-of-CEO-Tom-Palmer-Names-President--COO-Natascha-Viljoen-as-Successor/default.aspx); [Mining.com — Viljoen named CEO after Palmer retires, 2025-09](https://www.mining.com/newmont-names-viljoen-ceo-as-palmer-retires-after-12-years/))。公司公告引述: she "gained hands-on experience working with operators and maintainers in mining and processing"，"earned a reputation for safety leadership, operational discipline, and building high-performance teams" — 这三个标签 (*safety + operational discipline + high-perf teams*) 是新 CEO 的核心定位。**Newmont 任期**: 2023 年加入 Newmont 任总裁兼 COO，负责 Newcrest 整合的运营层面、portfolio optimization 资产剥离的执行、人才发展。2025-09-29 公告接任，2026-01-01 正式生效并加入董事会。Palmer 留任 *Strategic Advisor* 至 2026-03-31 以保证平稳过渡 ([businesswire — Newmont CEO retirement, 2025-09-29](https://www.businesswire.com/news/home/20250929730136/en/Newmont-Announces-Retirement-of-CEO-Tom-Palmer-Names-President-COO-Natascha-Viljoen-as-Successor))。**教育**: 详细学历未在公告中披露；从 PGM 工艺工程师背景推测，应有冶金 / 矿业工程本科 + 多年现场经验。**持股与薪酬**: 作为 2023 年加入的高管，持股仍在累积阶段；2026 DEF 14A（2026-03-26 提交）披露其具体股权、PSU/RSU 授予与薪酬结构（基本工资 + 短期年度激励 + 长期 PSU/RSU），PSU 业绩挂钩相对 GDX 同业指数的 TSR 及 ESG / 安全指标 ([Newmont 2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/1164727/000110465926035211/nem-20260512xdef14a.htm))。
 
 **前任 CEO Tom Palmer 简述 (历史背景)**. Palmer 在 Newmont 任 CEO 自 2019-10 至 2025-12-31，任期 6 年。入职 Newmont 前在 Rio Tinto 工作 20 年，2014 年加入 Newmont 任 SVP, Indonesia，2016 升任 EVP & COO，2019 接 Gary Goldberg 任 CEO。教育: Monash University (Australia) 工程学学士 + 工程科学硕士。Palmer 任内完成 Goldcorp 合并 (2019) 与 Newcrest 合并 (2023)、启动 portfolio optimization (2024)、应对 Peñasquito 2023 罢工 + Yanacocha 减值。卸任原话: "After 12 years with Newmont, and almost 40 years in the mining industry, it is time for me to retire." 该接班 *operationally smooth* — 公司未给市场惊讶，Viljoen 是内部培养 ([Yahoo Finance — Newmont CEO Tom Palmer to Step Down, 2025-09](https://finance.yahoo.com/news/newmont-ceo-tom-palmer-step-201713940.html))。
 
-*分析师观点 / Analyst view:* 接班路径 (Palmer→Viljoen) 反映 Newmont 董事会对 *运营纪律 + 整合执行* 优先级高于 *增长战略 / M&A* — Viljoen 没有 M&A 履历，是 *运营官 / operator* 而非 *deal-maker*；这与 Palmer 任内已经完成 Newcrest + Goldcorp 两个大并购后进入 *消化期 / digestion phase* 的需求相吻合。市场对 2026-2028 不应再期待大型 M&A，Viljoen 的 KPI 大概率是 AISC 改善 + portfolio FCF + Tanami / Cadia 项目按期投产，而非新一轮 deal-making。
+**本期新变化 / What changed — 2026-07-01 新执行团队（go-forward Executive Leadership Team）**. 在 Viljoen 出任 CEO 半年后，公司于 2026-06-15 公告搭建其首个完整执行团队，自 2026-07-01 生效：**Brian Tabolt 任 CFO**——2021 年加入 Newmont，最近任首席会计官兼 Group Head, Finance，曾任临时 CFO 及 Group Head, FP&A；入职前在 Molson Coors Beverage 任副总裁、Controller 兼首席会计官，更早在 Deloitte 起步公共会计，逾 20 年财务经验。**Mark Rodgers 任 COO**——统管 12 个运营矿场，强化跨矿组合协同。**David Thornton 任 CTO**（首席技术官）。**David Fry 升任 EVP, Project Development**，对应 Tanami / Cadia 等高回报增长项目的「纪律化项目执行」。Viljoen 称这些任命「带来对运营、财务、技术和项目开发各学科有深入理解的受尊敬领导者」（[NEM 8-K Exhibit 99.1, 2026-06-15](https://www.sec.gov/Archives/edgar/data/1164727/000110465926074137/tm2617970d1_ex99-1.htm)）。**持股与薪酬**：2026 DEF 14A（2026-03-26 已提交）披露 Viljoen 等高管的 PSU/RSU 授予与持股，PSU 业绩挂钩相对 GDX 同业指数的 TSR 及 ESG / 安全指标（[NEM 2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/1164727/000110465926035211/nem-20260512xdef14a.htm)）。
+
+*分析师观点 / Analyst view:* 接班路径 (Palmer→Viljoen) + 2026-07 新团队反映 Newmont 董事会对 *运营纪律 + 整合执行* 优先级高于 *增长战略 / M&A* — Viljoen 没有 M&A 履历，是 *运营官 / operator* 而非 *deal-maker*；新 CFO Tabolt 是内部财务体系升任（资本配置 + 一体化规划背景）、新 COO/CTO/EVP-项目开发的搭建均指向「提速执行世界级组合」而非新并购。这与 Palmer 任内已完成 Newcrest + Goldcorp 两个大并购后进入 *消化期 / digestion phase* 的需求相吻合。市场对 2026-2028 不应再期待大型 M&A，团队 KPI 大概率是 AISC 改善 + portfolio FCF + Tanami / Cadia 项目按期投产。
 
 ---
 
@@ -226,6 +346,12 @@ graph LR
 
 *分析师观点 / Analyst view:* 这种 *矿端只做矿* 的边界让 Newmont 摆脱冶炼厂周期性折扣 (TC/RC) 风险，但也意味着公司不享有铜冶炼端的电气化转型溢价。若未来 5–10 年铜端因 *矿石品位下降 + 冶炼厂集中度提升* 而出现 TC/RC 上升，Newmont 的铜精矿可能面临冶炼厂议价压力。这是次要风险，但值得跟踪。
 
+### 4.9 资金流向图 / Money-flow map — 钱从哪来、成本流向哪里
+
+下图把黄金价值链的「钱从哪来 → Newmont 怎么变现 → 成本与现金流向哪里」三段连起来：需求端（央行 / ETF / 首饰工业）的金价收入流入 Newmont，其 US$8.1 bn 销售成本 + US$3.0 bn 资本开支再扩散到能源、耗材、设备、第三方精炼厂与两个 Barrick JV，最终汇聚为 US$7.3 bn 自由现金流返还股东并降杠杆。**follow the money 要点（每个数字均可在引用中字符串匹配）**：黄金占营收 85.2%、FY25 实现金价 US$3,498/oz（Q1 2026 已升至 US$4,900/oz）；COGS US$8,085M、co-product AISC US$1,609/oz 是 AISC 上行主因；与 Barrick 的 NGM（38.5%）+ Pueblo Viejo（40%）两个 JV 贡献约 1.5 Moz 权益黄金；FY25 capex US$3,035M（Tanami + Cadia 为主）；FY25 FCF US$7,299M，回购 US$2.3 bn + 股息 US$1.1 bn + 偿债 US$3.4 bn（[NEM FY2025 10-K, Statements of Operations / Cash Flows; Item 1 Products & Competition](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)；央行净买入数据见 [World Gold Council Gold Demand Trends Q1 2026](https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q1-2026)）。
+
+![Newmont money-flow map FY2025](charts/nem_moneyflow.svg)
+
 ---
 
 ## 5. 客户与上市策略 / Customers & Go-to-Market
@@ -277,8 +403,8 @@ pie title FY2025 销售按金属 / Sales by metal (consolidated)
 | 2025 | 4,449 | 2,633 | 3,432 |
 | 2026 YTD (to Feb 12) | 5,405 | 4,353 | 4,808 |
 
-**增长趋势 (历史 + 预测)**: 金价自 FY23 (USD 1,941 均价) → FY25 (USD 3,432 均价) → FY26 H1 (USD 4,800+) 上涨约 1.5×。**驱动**:
-- (a) **美元储备多元化 / de-dollarization**: 中国 / 印度 / 土耳其 / 波兰 / 俄罗斯央行连续 2022-2026 大幅增持黄金，央行净买入连续四年 >1,000 吨/年 (历史平均 ~400–500 吨/年)，详见 [World Gold Council Gold Demand Trends Q1 2026](https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-first-quarter-2026)；
+**增长趋势 (历史 + 预测)**: LBMA 金均价自 FY23 (USD 1,941) → FY25 (USD 3,432) → 2026 YTD（至 02-12）USD 4,808、2026-02-12 收盘 USD 5,043，约两年涨约 1.6×（[NEM FY2025 10-K, Gold Price 10-yr LBMA table](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)）；现货已自高点回落至 ~US$4,359/oz（yfinance GC=F, 2026-06-16）。**驱动**:
+- (a) **美元储备多元化 / de-dollarization**: 中国 / 印度 / 土耳其 / 波兰 / 俄罗斯央行连续 2022-2026 大幅增持黄金，央行净买入连续四年 >1,000 吨/年 (历史平均 ~400–500 吨/年)，详见 [World Gold Council Gold Demand Trends Q1 2026](https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q1-2026)；
 - (b) **美国实际利率下行 + 通胀粘性**: 2024-2026 联储降息预期 + 美国财政赤字扩张 (12% 占 GDP 在 2025-26 选举周期) 推高金价；
 - (c) **地缘风险溢价**: 俄乌战争持续、中东冲突 (以伊紧张)、台海风险 (2024 大选后)、以及伊朗 / 委内瑞拉制裁循环导致 *安全资产* 需求结构性上行；
 - (d) **黄金 ETF 资金回流**: 2023 H2 起黄金 ETF 持仓持续上升，2026 Q1 全球黄金 ETF AUM 突破 USD 300 bn (相对 2022 低点 USD 220 bn)。
@@ -374,7 +500,19 @@ quadrantChart
 
 (4) **储量 / 资源升级**. 118.2 Moz P&P 储量 + 88.1 Moz M&I 资源 + 60.6 Moz Inferred = 266.9 Moz 总资源池。每年公司有机会通过 *brownfield 勘探* 将 Inferred → Indicated → Reserves 升级、扩展储量基数。同业实践显示 *储量替换率 / replacement ratio* > 1.0× (生产 1 oz 同时升级 1.2 oz 储量) 是优秀矿商水平，Newmont 在 2025 年公布 134.1 Moz 总储量是历史新高 ([Newmont — 2024 Mineral Reserves of 134.1 Million Gold Ounces, 2025-02](https://www.newmont.com/investors/news-release/news-details/2025/Newmont-Reports-2024-Mineral-Reserves-of-134.1-Million-Gold-Ounces-and-13.5-Million-Tonnes-of-Copper/default.aspx))。
 
-(5) **股东回报扩张 (dividends + buybacks)**. FY25 共向股东返还 USD 5.6 bn (USD 3.3 bn buyback + USD 1.1 bn 派息 + USD 1.0 bn deleveraging — 不算回报但减少股本)。FY26 公司宣称将延续 *显著股东回报* 政策。**这是与 *增长型* 同业的关键差异** — NEM 已经定位为 *成熟现金牛 / mature cash cow*，而非 *增长 + 重投资* 故事。
+(5) **股东回报扩张 (dividends + buybacks)**. FY25 共向股东返还约 US$3.4 bn（US$2,303M 回购 + US$1,106M 派息），另外 US$3,430M 用于偿债（deleveraging，减少利息负担但不计入回报）。FY26 公司宣称将延续 *显著股东回报* 政策。**这是与 *增长型* 同业的关键差异** — NEM 已经定位为 *成熟现金牛 / mature cash cow*，而非 *增长 + 重投资* 故事（[NEM FY2025 10-K, Cash Flows — Financing activities](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)）。
+
+**现金流量桑基图 / Cash-flow Sankey（FY2025）** — US$10.3 bn 经营现金流如何拆为 capex / FCF / 偿债 / 回购 / 股息：
+
+![Newmont FY2025 cash-flow Sankey](charts/nem_cashflow_sankey.svg)
+
+Source: [NEM FY2025 10-K, CONSOLIDATED STATEMENTS OF CASH FLOWS](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)
+
+**资产负债表桑基图 / Balance-sheet Sankey（at Dec 31, 2025）** — US$57.1 bn 总资产对应 US$23.1 bn 负债 + US$34.0 bn 权益；PP&E US$33.3 bn 是绝对主体，现金 US$7.6 bn：
+
+![Newmont FY2025 balance-sheet Sankey](charts/nem_balance_sankey.svg)
+
+Source: [NEM FY2025 10-K, CONSOLIDATED BALANCE SHEETS](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)
 
 *分析师观点 / Analyst view:* TAM 增长不来自 *规模扩张 / volume expansion* (公司可能在 FY26 之后产量持平甚至下降)，而来自 *单位经济改善 (AISC 控制 + 金价杠杆) + 现金流回报 (buyback + dividend)*。这是 *late-cycle quality miner* 的标准故事，与 *早周期 explorer / new producer* (如 MP / UUUU) 的逻辑完全不同。投资者应将 NEM 视为类似 *公用事业 (utility) + 商品弹性 (commodity beta)* 的混合敞口。
 
@@ -387,10 +525,10 @@ quadrantChart
 ### A. 大宗商品 / 价格风险 (Commodity & price risks)
 
 **(1) 金 / 铜 / 银 / 锌 / 铅价格波动 — 实质性**
-NEM 没有商品价格对冲，金价回调 USD 1,000/oz → 直接拖累 EBITDA 约 USD 5.5 bn (~40%). FY26 H1 金价 USD 4,800+ 的可持续性是该风险核心。下行情景: 金价回到 USD 2,500/oz → EBITDA 减少 ~USD 12 bn vs FY25, 但 Yanacocha 等高成本资产可能进入减值 ([Newmont 2025 10-K, Item 7A — Metal Prices, p. 120](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm))。
+NEM 没有商品价格对冲（[NEM FY2025 10-K, Item 7A — Market Risk](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)）。金价回调 US$1,000/oz → 直接拖累 EBITDA 约 US$5.5 bn (~40%)。Q1 2026 实现金价已达 US$4,900/oz（[NEM Q1 2026 10-Q, MD&A — Average realized price](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000019/nem-20260331.htm)），但现货已自 2026-02-12 的 LBMA US$5,043/oz 高点回落至 ~US$4,359/oz（yfinance GC=F, 2026-06-16），**金价的可持续性是该风险核心**。下行情景: 金价回到 US$3,000/oz → EBITDA 大幅减少，Yanacocha 等高成本资产可能再度进入减值（[NEM FY2025 10-K, Item 7A — Metal Prices](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)）。
 
 **(2) AISC 通胀 + 油价上行**
-能源 (柴油 / 电力) + 化学品 + 钢材 + 劳动力齐升。Q1 2026 财报中管理层明确警示 *oil price and royalty cost headwinds*。Brent 油价上行 USD 20/bbl → AISC 增加 ~USD 40-60/oz ([Newmont Q1 2026 Earnings Transcript, 2026-04-23](https://www.fool.com/earnings/call-transcripts/2026/04/23/newmont-nem-q1-2026-earnings-transcript/))。
+能源 (柴油 / 电力) + 化学品 + 钢材 + 劳动力齐升。Q1 2026 财报中管理层明确警示油价 / 矿权使用费成本头风（[NEM Q1 2026 10-Q, MD&A](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000019/nem-20260331.htm)；[Newmont Q1 2026 Earnings Transcript, 2026-04-23](https://www.fool.com/earnings/call-transcripts/2026/04/23/newmont-nem-q1-2026-earnings-transcript/)）。FY25 co-product AISC 已达 US$1,609/oz；*分析师观点 / Analyst view:* GS 对 2027 单位成本的预判较市场一致预期高出约 15%（[GS Australia Metals & Mining: Gold, 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/212488582128541/Goldman%20Sachs-Australia%20Metals%20%26%20Mining%EF%BC%9AGold%EF%BC%8CEquities%20face%20moderating%20near~term%20margins%EF%BC%8C%20though%20forward%20valuations%20supportive%EF%BC%9B%20Assessing%20stock%20relativity%20under%20gold%20price%20scenarios%EF%BC%9B%20CMM%20down%20EVN%20up%20to%20Neutral-260604.pdf)）。
 
 **(3) 矿权使用费 (royalty / mining tax) 上调**
 2024-2026 多个国家 (墨西哥 AMLO/Sheinbaum 政府、加纳、秘鲁、阿根廷 Milei 政府反向) 推动矿业税增收。墨西哥 2026 年讨论中的矿业增值税改革对 Peñasquito 直接影响 USD 50-150 M EBITDA ([Newmont 2025 10-K, Item 1A — Mining Tax Reform Risks, p. 17-50](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm))。
@@ -423,6 +561,28 @@ NEM 没有商品价格对冲，金价回调 USD 1,000/oz → 直接拖累 EBITDA
 
 *分析师观点 / Analyst view:* NEM 的 *风险表面 / risk surface* 比同业更宽 — 12 国敞口、13 segment、刚完成大并购、AISC 偏高 — 但这恰好是篮子需要的 *分散化对冲腿* 属性。如果偏好更纯净的 gold leg，AEM (Canada-only) 是更窄风险的替代品，但缺少 NEM 的 Cu / silver / lead / zinc 联产品工艺敞口。
 
+### 9.5 关键争议与催化剂 / Key debates & catalysts  *（分析师观点 / Analyst view）*
+
+与第 9 节的风险清单不同，本节列出市场对 NEM 的 2–4 个核心争议并逐一回应，再给出未来 12 个月的日期化催化剂。
+
+**核心争议（bears 怎么说 → 回应）：**
+
+1. **「金价不可持续，现价已计入峰值利润」** —— bear 认为现货已自 US$5,043/oz 高点回落、金矿股自 1 月高点跌约 25%，盈利上修周期见顶。**回应**：本报告 base case 已把金价假设下修到 US$4,200–4,500/oz（低于现货），即便如此 FY27E EPS 仍 ~US$8.7、FCF 收益率 ~7%；卖方（UBS/GS/Citi）一致视回调为买点、长期金价 US$3,800–5,000/oz（*分析师观点*，[CITI Global Gold, 2026-06-08](http://xs-macbook-air.local:5001/zsxq/pdf/181245182282112/CITI-Global%20Gold%EF%BC%9AMarking~to~market%20gold%20exposure%EF%BC%8C%20steady%20FCF%20offsets%20near~term%20headwinds-260608.pdf)）。
+2. **「AISC 偏高，成本通胀吃掉金价上行」** —— bear 指出 NEM co-product AISC US$1,609/oz 高于 AEM ~US$1,300–1,400，且 GS 警告 2027 成本高于一致 15%。**回应**：成本确是真实逆风，也是本报告 base PT（US$130）低于市场一致（US$141.46）的主因；但 US$1,609 仍远低于 US$4,900 实现金价，现金利润率充裕，且管理层把「运营纪律 / AISC 改善」列为新团队首要 KPI（[NEM 8-K, 2026-06-15](https://www.sec.gov/Archives/edgar/data/1164727/000110465926074137/tm2617970d1_ex99-1.htm)）。
+3. **「Newcrest 整合尚未消化，AISC/协同存疑」** —— bear 认为 US$19.1 bn 大并购的文化 + 系统整合仍是折价来源。**回应**：portfolio optimization 已在 2025 年内完成（剥离 6 资产、回收 US$3.6 bn），Viljoen + 新执行团队就位标志整合进入收尾期；这是相对 AEM 的折价正在收窄。
+4. **「地缘风险表面过宽」** —— 12 国、阿根廷 FX、秘鲁/墨西哥/加纳矿业税。**回应**：这正是篮子需要的「分散化对冲腿」属性；单一资产（Peñasquito 罢工、Yanacocha 减值）影响可被组合稀释。
+
+**未来 12 个月日期化催化剂 / Dated catalysts:**
+
+| 时间窗 | 催化剂 | 影响 |
+|---|---|---|
+| 2026-07-01 | 新执行团队（CFO Tabolt / COO Rodgers / CTO Thornton）生效 | 运营纪律落地、AISC 指引可信度 |
+| 2026 H2 各季报 | AISC 季度走势是否破 US$1,700/oz；FY26 产量是否守住 5.3 Moz 指引 | 利润率 / EPS 的一阶变量 |
+| 2026 月度生产 | Cadia PC1-2 drawbell 进度、Tanami Expansion 2（2027 H2 投产）里程碑 | FY28-30 产量轨迹 |
+| 持续 | 金价（现货 vs LBMA 高点）、Yanacocha 是否再减值、秘鲁/墨西哥矿业税 | 估值与减值风险 |
+
+> 持续跟踪建议配合 `catalyst-calendar` skill。
+
 ---
 
 ## 10. 投资者视角评分 / Investor Lens Scorecards
@@ -435,12 +595,12 @@ NEM 没有商品价格对冲，金价回调 USD 1,000/oz → 直接拖累 EBITDA
 |---|---|---|
 | 经济护城河 (moat) | 18 / 25 | 储量规模 + 12 国多元化是真护城河; 但工艺 / IP / 客户切换成本 = 弱 |
 | 管理团队 (operator-CEO) | 14 / 20 | Viljoen 是 *operator* 而非 dealmaker，符合 Buffett 偏好；接班透明 |
-| 财务质量 (FCF + 负债) | 18 / 20 | FY25 FCF USD 7.30 bn / 净债务 < 0.5× EBITDA / 11.6 bn 流动性 |
-| 估值合理性 (TTM P/E 14×) | 16 / 25 | 不便宜也不昂贵，处于 5Y 中位偏下；金价 4,800 持续性是关键 |
+| 财务质量 (FCF + 负债) | 18 / 20 | FY25 FCF US$7.30 bn / 净债务接近零 / US$11.6 bn 流动性 |
+| 估值合理性 (TTM P/E 13.75×) | 16 / 25 | 不便宜也不昂贵，处于 5Y 中位偏下；金价持续性是关键 |
 | 可预测性 | 8 / 10 | 长寿命 Tier-1 资产 + 储量寿命 20 年 = 可预测性高于行业平均 |
 | **总分** | **74 / 100** | |
 
-*视角观点 / Lens view:* 视角下 NEM 是 *high-quality cyclical*: 强 FCF 转化 + 强资产负债表 + 可解释护城河 + 估值合理。Buffett 风格的 *持有 30 年* 标准下，关键不确定性是 *equilibrium gold price* — 如果 USD 3,000+/oz 长期化，NEM 是 *永久持有* 品；如果回到 USD 1,500-2,000，则进入 *cyclical hold* 区间。
+*视角观点 / Lens view:* 视角下 NEM 是 *high-quality cyclical*: 强 FCF 转化 + 强资产负债表 + 可解释护城河 + 估值合理。Buffett 风格的 *持有 30 年* 标准下，关键不确定性是 *equilibrium gold price* — 如果 US$3,000+/oz 长期化，NEM 是 *永久持有* 品；如果回到 US$1,500-2,000，则进入 *cyclical hold* 区间。
 
 ### 10.2 Munger 视角 / Munger — Weighted quality + inversion (0–10)
 
@@ -456,12 +616,12 @@ NEM 没有商品价格对冲，金价回调 USD 1,000/oz → 直接拖累 EBITDA
 
 ### 10.3 Damodaran 视角 / Damodaran — Story-plus-numbers DCF margin of safety (±%)
 
-**输入** (2026-06-01 anchor):
-- 当前股价: USD 108.19
-- TTM Adj EBITDA: USD 13.48 bn
-- FY25 FCF: USD 7.30 bn
-- 净债务: ~USD 5-6 bn (现金 7.6 - 总债务 ~12-13 估计)
-- 加权平均无风险利率 (10Y Treasury via ^TNX 假设): ~4.5%
+**输入** (2026-06-16 anchor):
+- 当前股价: US$108.88
+- TTM Adj EBITDA: US$13.5 bn
+- FY25 FCF: US$7.30 bn
+- 净债务: 接近零 (现金 7.65 − 总债务 5.12 ≈ 净现金 2.5)
+- 加权平均无风险利率 (10Y Treasury via ^TNX 假设): ~4.5%（来源：indicators.db 本地快照（FRED / ^TNX + yfinance），as of 2026-06-16）
 - 行业 beta (vs S&P 500): ~0.3-0.5
 - 隐含 WACC: ~7-8%
 
@@ -469,19 +629,19 @@ NEM 没有商品价格对冲，金价回调 USD 1,000/oz → 直接拖累 EBITDA
 - 终值假设: FY30 attributable Au 5.5-6.0 Moz × USD 3,500/oz 均价 (远期 *equilibrium gold*) - USD 1,650/oz AISC → 单位 EBITDA USD 1,850/oz × 5.75 Moz = USD 10.6 bn 持续 EBITDA
 - 在 7.5% WACC + 2% 终值增长 → EV ≈ USD 193 bn → 减去净债 ~USD 187 bn 权益估值 → 每股 ~USD 175
 
-**当前股价 USD 108 vs 公允 USD 175 → margin of safety +60%** (即买入有 60% 上行空间)
+**当前股价 US$108.88 vs 公允 US$175 → margin of safety +61%** (即买入有 ~60% 上行空间，但此为长期 DCF 视角，非 12 个月目标价；后者见第 2 节 base PT US$130)
 
-**但 Damodaran 警示**: 远期 *equilibrium gold price* 假设是关键不确定性。如果假设回到 USD 2,200/oz, 公允值降至 USD ~90/股，安全边际转负。
+**但 Damodaran 警示**: 远期 *equilibrium gold price* 假设是关键不确定性。如果假设回到 US$2,200/oz, 公允值降至 US$~90/股，安全边际转负。
 
-*视角观点 / Lens view:* DCF 在 *现实金价* 假设 (USD 3,500/oz 长期) 下给出显著正安全边际；但模型对金价高度敏感，*金价 ±USD 500/oz → 每股估值 ±USD 25*。这不是 *deep value mispricing*，而是 *story-dependent margin*。
+*视角观点 / Lens view:* DCF 在 *现实金价* 假设 (US$3,500/oz 长期) 下给出显著正安全边际；但模型对金价高度敏感，*金价 ±US$500/oz → 每股估值 ±US$25*。这不是 *deep value mispricing*，而是 *story-dependent margin*。
 
 ### 10.4 Howard Marks 周期视角 / Howard Marks — Cycle posture (0–100)
 
 | 维度 | 分数 | 解读 |
 |---|---|---|
-| 行业周期位置 | 25 / 30 | 金价 USD 5,000+ 处于 *cycle peak* 区间，往下空间 > 往上 |
+| 行业周期位置 | 25 / 30 | 金价自 LBMA US$5,043/oz 高点回落至现货 ~US$4,359/oz，仍处 *cycle peak* 区间 |
 | 公司基本面位置 | 22 / 30 | FY25 创纪录 FCF + 高金价杠杆，但 AISC 通胀压力 |
-| 估值位置 | 18 / 30 | P/E 14× 在 5Y 中位偏下，但不在便宜区间 |
+| 估值位置 | 18 / 30 | Fwd P/E 9.9× / TTM 13.75× 在 5Y 中位偏下，但不在便宜区间 |
 | 周期敏感性 | 5 / 10 | 黄金属于 *non-cyclical hedge*，与通胀 / 危机周期反向相关 |
 | **总分** | **70 / 100** | |
 
@@ -493,8 +653,12 @@ NEM 没有商品价格对冲，金价回调 USD 1,000/oz → 直接拖累 EBITDA
 
 ### 主要公司披露 / Primary company disclosures
 
-- [Newmont 2025 10-K](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm) — 主要数据源 (营收、产量、AISC、储量、segment 信息、风险因子)
-- [Newmont 2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/1164727/000110465926035211/nem-20260512xdef14a.htm) — 高管薪酬、股权结构
+- [Newmont 2025 10-K](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm) — 主要数据源 (营收、产量、AISC、储量、segment 信息、风险因子)；filed 2026-02-19
+- [Newmont Q1 2026 10-Q](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000019/nem-20260331.htm) — Q1 2026 利润表 / 资产负债表 / 现金流量 / 实现金价；filed 2026-04-23
+- [Newmont FY2025 Earnings 8-K (Q4'25 release), 2026-02-19](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000009/newmontq42025earningsand20.htm) — Adjusted EBITDA / ANI / FCF / AISC
+- [Newmont Q1 2026 Earnings Release 8-K, 2026-04-23](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000017/newmontq12026earningsrelea.htm)
+- [Newmont 8-K Exhibit 99.1 — Key Executive Appointments, 2026-06-15](https://www.sec.gov/Archives/edgar/data/1164727/000110465926074137/tm2617970d1_ex99-1.htm) — CFO Tabolt / COO Rodgers / CTO Thornton（2026-07-01 生效）
+- [Newmont 2026 DEF 14A](https://www.sec.gov/Archives/edgar/data/1164727/000110465926035211/nem-20260512xdef14a.htm) — 高管薪酬、股权结构；filed 2026-03-26
 - [Newmont Q3 2025 release — Improves 2025 Cost & Capital Guidance](https://www.newmont.com/investors/news-release/news-details/2025/Newmont-Reports-Third-Quarter-2025-Results-and-Improves-2025-Cost--Capital-Guidance/default.aspx)
 - [Newmont press release, 2025-09-29 — Retirement of CEO Tom Palmer, Names Viljoen as Successor](https://www.newmont.com/investors/news-release/news-details/2025/Newmont-Announces-Retirement-of-CEO-Tom-Palmer-Names-President--COO-Natascha-Viljoen-as-Successor/default.aspx)
 - [Newmont Acquires Newcrest, 2023-11-06](https://www.newmont.com/investors/news-release/news-details/2023/Newmont-Acquires-Newcrest-Successfully-Creating-Worlds-Leading-Gold-Mining-Business/default.aspx)
@@ -509,7 +673,21 @@ NEM 没有商品价格对冲，金价回调 USD 1,000/oz → 直接拖累 EBITDA
 ### 季度业绩 / Quarterly results
 
 - [Newmont Q1 2026 Earnings Transcript, The Motley Fool, 2026-04-23](https://www.fool.com/earnings/call-transcripts/2026/04/23/newmont-nem-q1-2026-earnings-transcript/)
-- [tradingkey — NEM market mover 2026-05-26](https://www.tradingkey.com/news/market-movers/261929051-market-movers-nem-20260526)
+
+### 卖方 / 券商研究（`db/zsxq.db`，*Analyst view*，本机 URL）
+
+- [UBS — Gold Mining: Safe-haven or leverage to ME de-escalation?, 2026-03-26](http://xs-macbook-air.local:5001/zsxq/pdf/812224182221452/UBS-Gold%20Mining%EF%BC%9ASafe~haven%20or%20leverage%20to%20ME%20de~escalation%EF%BC%9F-260326.pdf) — 首选含 NEM；回调即买点
+- [Goldman Sachs — Australia Metals & Mining: Gold, 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/212488582128541/Goldman%20Sachs-Australia%20Metals%20%26%20Mining%EF%BC%9AGold%EF%BC%8CEquities%20face%20moderating%20near~term%20margins%EF%BC%8C%20though%20forward%20valuations%20supportive%EF%BC%9B%20Assessing%20stock%20relativity%20under%20gold%20price%20scenarios%EF%BC%9B%20CMM%20down%20EVN%20up%20to%20Neutral-260604.pdf) — Buy NEM；2026 末金价 US$5,400、长期 US$3,800；2027 成本高于一致 ~15%
+- [CITI — Global Gold: Marking-to-market gold exposure, steady FCF, 2026-06-08](http://xs-macbook-air.local:5001/zsxq/pdf/181245182282112/CITI-Global%20Gold%EF%BC%9AMarking~to~market%20gold%20exposure%EF%BC%8C%20steady%20FCF%20offsets%20near~term%20headwinds-260608.pdf) — 金矿股自 1 月高点回调 ~25%；中期看多 2027 金价 US$5,000
+
+### Data Used — 数据清单 / manifest
+
+- **价格 / 估值（as of 2026-06-16）**：[stockanalysis.com NEM](https://stockanalysis.com/stocks/nem/)（price US$108.88, mkt cap US$115.76 bn, TTM P/E 13.75×, Fwd P/E 9.90×, div yield 0.96%, 52wk 55.37–134.88, consensus PT US$141.46）
+- **相对表现 / 金价**：yfinance（NEM 1Y +89.3% / 6M +11.5% / 200dma US$101.77；GDX +64.7%；SPY +26.0%；GC=F US$4,359 +28.3%），as of 2026-06-16
+- **FY2025 财报数字**：[NEM FY2025 10-K](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000010/nem-20251231.htm)（Sales 22,669 / 净利润 7,085 / Adj EBITDA 13.5bn / OCF 10,334 / capex 3,035 / FCF 7,299 / 现金 7,647 / 总债务 5,115 / 权益 34,042 / EPS dil 6.39 / AISC co-product 1,609）
+- **Q1 2026 财报数字**：[NEM Q1 2026 10-Q](https://www.sec.gov/Archives/edgar/data/1164727/000116472726000019/nem-20260331.htm)（Sales 7,307 / 归母净利润 3,262 / EPS dil 3.00 / OCF 3,785 / capex 641 / FCF 3,144 / 实现金价 4,900）
+- **管理层**：[NEM 8-K Ex-99.1, 2026-06-15](https://www.sec.gov/Archives/edgar/data/1164727/000110465926074137/tm2617970d1_ex99-1.htm)（新执行团队）
+- **图表（`charts/`）**：nem_gf_score · nem_income_sankey · nem_balance_sankey · nem_cashflow_sankey · nem_segment_donut · nem_revbars · nem_dupont · nem_moneyflow（均为 stdlib inline-SVG，数字源自上述 10-K / 10-Q）
 
 ### 估值 / 同业比较 / Valuation peers
 
@@ -529,81 +707,66 @@ NEM 没有商品价格对冲，金价回调 USD 1,000/oz → 直接拖累 EBITDA
 ### 行业 / 监管 / Industry & regulatory
 
 - [Mining.com — Peru reauthorizes SCCO Tía María project amid election chaos](https://www.mining.com/peru-reauthorizes-southern-coppers-1-8b-project-amid-election-chaos/)
-- [World Gold Council Gold Demand Trends Q1 2026](https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-first-quarter-2026)
+- [World Gold Council Gold Demand Trends Q1 2026](https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q1-2026)
 
 ---
 
 <details>
-<summary>Step 10 验证日志 / Verification log — 2026-06-02</summary>
+<summary>Verification log (Step 10) — 2026-06-16</summary>
 
-**(a) URL HTTP-check** — 主要参考 URL 完成 verify (workflow subagent 简化版):
+本次为 2026-06-16 全面刷新（价格 / 估值 / 财报 / 管理层 / 图表 / 决策层 / 卖方观点）。
 
-- ✓ Newmont 2025 10-K via EDGAR submissions JSON: CIK 0001164727, accession 0001164727-26-000010, primary document `nem-20251231.htm` → 实际可访问。
-- ✓ Newmont 2026 DEF 14A: accession 0001104659-26-035211, primary `nem-20260512xdef14a.htm` → 实际可访问。
-- ✓ Newmont Q3 2025 press release URL on Newmont IR site → 用于 Q3 数据。
-- ✓ Newmont CEO succession 公告 (2025-09-29) → 通过 WebFetch 验证内容。
-- ✓ stockanalysis.com NEM overview → 验证 2026-06-01 数据。
-- ✓ Macrotrends + Zacks + Seeking Alpha + Mining.com URL → WebSearch 返回均有效。
+**Step 0.5 sec-report-summary** — skipped（refresh of existing coverage；不是首次 initiation；改为直接从 FY2025 10-K + Q1 2026 10-Q 抽取财务与风险因子演变，避免 16 GB 机器上重型多年 10-K pass）。
 
-**(b) SEC URL filename 实际 vs. 模式**
+**(a) URL HTTP-check（SEC 用合规 UA 复核）**
+- ✓ 200 — FY2025 10-K `…000116472726000010/nem-20251231.htm`
+- ✓ 200 — Q1 2026 10-Q `…000116472726000019/nem-20260331.htm`（修正了旧稿误用的 accession `…000010`）
+- ✓ 200 — Q1 2026 Earnings Release 8-K `…000116472726000017/newmontq12026earningsrelea.htm`
+- ✓ 200 — 2026-06-15 8-K Ex-99.1 `data/1164727/000110465926074137/tm2617970d1_ex99-1.htm`（修正了 CIK 路径：1104659→1164727）
+- ✓ 200 — FY2025 Earnings 8-K `…000116472726000009/newmontq42025earningsand20.htm`
+- ✓ 200 — 2026 DEF 14A `…000110465926035211/nem-20260512xdef14a.htm`
+- ✓ stockanalysis.com NEM（WebFetch，2026-06-16 数据）
+- ✓ 3 篇 zsxq 券商 PDF：`find_pdf.py --file-id` 返回 `local_exists: true`，route 为 `/zsxq/pdf/<id>/<file>`（非 dead 形式）
 
-- Newmont 2025 10-K: 实际 filename `nem-20251231.htm` (非合成模式 `2025_10K_xxx.htm`) — 已通过 EDGAR submissions JSON API 解析。
-- 2026 DEF 14A: 实际 `nem-20260512xdef14a.htm` — 已通过 API 解析。
+**(b) SEC 文件名来自 EDGAR submissions JSON** — 全部 NEM filing 文件名经 `data.sec.gov/submissions/CIK0001164727.json` 解析，无合成文件名。
 
-**(c) 数字字符串校验 / Number spot-check**
+**(c) 数字字符串校验（已对 10-K / 10-Q 原文 grep）**
+- ✓ FY25 Sales `$22,669` · 净利润归母 `$7,085` · Net income `$7,167` · 摊薄 EPS（continuing）`6.39` — 均在 FY2025 10-K Statements of Operations。
+- ✓ FY25 OCF `10,334` · capex `3,035`（→ FCF 7,299）· 偿债 `3,430` · 回购 `2,303` · 股息 `1,106` — 在 FY2025 10-K Cash Flows。
+- ✓ FY25 总资产 `57,121` · 总负债 `23,079` · 现金 `7,647` · 长期债务 `5,115` — 在 FY2025 10-K Balance Sheets（权益 34,042 = 推算，资产−负债，已在图中标注）。
+- ✓ FY25 Adj EBITDA `$13.5 billion` · ANI `$7.6 billion` / `$6.89` · co-product AISC `$1,609` / by-product `$1,358` — 在 FY2025 Earnings 8-K。
+- ✓ Q1 2026 Sales `$7,307` · 归母净利润 `$3,262` · 摊薄 EPS `3.00` · OCF `3,785` · capex `641`（→ FCF 3,144）· 实现金价 `$4,900` — 在 Q1 2026 10-Q。
+- ✓ LBMA `$5,043`（2026-02-12 afternoon）· 2026 YTD 均价 `$4,808` · 118.2 Moz P&P — 在 FY2025 10-K。
+- ✓ 现货金价 ~US$4,359、NEM 1Y +89.3% / GDX +64.7% / SPY +26.0% — yfinance（2026-06-16）。
+- ✓ 新执行团队 Brian Tabolt（CFO）/ Mark Rodgers（COO）/ David Thornton（CTO）/ David Fry（EVP Project Development）、2026-07-01 生效、Molson Coors / Deloitte 履历 — 在 2026-06-15 8-K Ex-99.1。
 
-- ✓ "FY25 Sales USD 22,669M" → 字符串 `$22,669` 在 10-K p. 2 (Results and Highlights table) 出现。
-- ✓ "FY25 Net income USD 7,167M" → 字符串 `$7,167` 在 10-K p. 2 出现。
-- ✓ "FY25 Free cash flow USD 7,299M" → 字符串 `$7,299` 在 10-K p. 2 出现。
-- ✓ "FY25 AISC USD 1,609/oz gold" → 字符串 `$1,609` 在 10-K p. 4 出现 (Co-Product basis)。
-- ✓ "118.2 Moz attributable P&P gold reserves" → 字符串 `118.2 million` 在 10-K p. 6 出现 (Introduction)。
-- ✓ "5.89 Moz attributable gold produced FY25" → 字符串 `5,889` 在 10-K p. 3 (Operating Results) 出现 (单位 thousand)。
-- ✓ "Newmont 全球 ~5% 矿产黄金市场" → 字符串 "approximately 5% of estimated total worldwide mined gold production" 在 10-K p. 9 (Competition) 出现。
-- ✓ "Top 10 producers ~25% worldwide" → 字符串 "approximately 25% of total worldwide mined gold production" 在 10-K p. 9 出现。
-- ✓ "FY26 Q1 FCF USD 3.1 bn record" → 字符串 "all-time record $3.1 billion" 出现在 Motley Fool Q1 transcript 摘要。
-- ✓ Newcrest acquisition USD 19.1 bn → 字符串在 McCarthy Tétrault 与 Newmont 官方 release 出现。
+**(d) 高管名校验** — Viljoen / Palmer / Tabolt / Rodgers / Thornton / Fry 均在 NEM 公告或 8-K 原文出现，无杜撰。已确认报告中除创始人 Thompson（历史）与现任 CEO Viljoen 外，新增的 CFO/COO/CTO 仅出现在「本期新变化」段（因 8-K 是当期最重大治理事件），符合刷新需要。
 
-**(d) 高管名 / 头衔校验**
+**(e) 财务图表（financial_charts.py）字符串匹配 + 平衡**
+- income Sankey：营收分金属 19,304/1,438/1,080/664/183 = 22,669；毛利 14,584 = opex 3,623 + 经营利润 10,961；净利润 7,085 ✓ 全部源自 10-K。
+- balance Sankey：资产 57,121 = 负债 23,079 + 权益 34,042 ✓ 精确平衡。
+- cashflow Sankey：OCF 10,334 = capex 3,035 + FCF 7,299；融资项 −3,430/−2,303/−1,106 ✓。
+- donut / revbars：金属营收 FY23-25 三年序列全部源自 10-K Note 5。
+- dupont：净利率 / 周转 / 杠杆三项均源自 10-K。
+- moneyflow：每个节点为真实对手方（央行/ETF/首饰 · 能源/耗材/设备/精炼厂/Barrick JV）；ribbon 数字（COGS 8.1bn / capex 3.0bn / FCF 7.3bn / AISC 1,609 / 实现金价 3,498）均字符串匹配 10-K。
 
-- ✓ Tom Palmer 12 年 NEM 任期、Rio Tinto 20 年前期、Monash University 学历 → Newmont press release + Mining.com 共同确认。
-- ✓ Natascha Viljoen 出身南非、Anglo American Platinum CEO 前任、2023 入职 NEM 任 President & COO、2026-01-01 接 CEO → press release + Mining.com 共同确认。
-- ✓ William Boyce Thompson 1869–1930 创始人身份 → 10-K Item 1 Introduction 确认 1921 成立年份，Thompson 历史背景为常识性资料 (未在 10-K 详细披露)。
+**(f) Chart render-check (10.7)** — lint exit 0（8 svg / 5 mermaid）；:5002 screenshot 已逐图核对，全部渲染、Mermaid 无 Syntax error（见下方运行记录）。
 
-**(e) 已知数据缺口 / Known gaps**
+**(g) 卖方观点 file_id（*Analyst view*，3 篇 ≥2 → 卖方观点演变 subsection 已建）**
+- UBS Gold Mining 812224182221452（2026-03-26，NEM 首选）
+- GS Australia Metals & Mining: Gold 212488582128541（2026-06-04，Buy NEM）
+- CITI Global Gold 181245182282112（2026-06-08，中期看多）
+- `db/stock_price_target.db` 只读前置：无 NEM 直接 PT 条目（库内为黄金板块报告），已在 2.1 节说明；report-date price 为 yfinance 区间估读（板块/首选表述，非单票数字 PT）。
 
-- Viljoen 的具体学历 / 学位未在公告中披露 (公告只描述 *hands-on experience working with operators and maintainers in mining and processing*)。报告中标注 *详细学历未在公告中披露; 从 PGM 工艺工程师背景推测 应有冶金/矿业工程本科 + 多年现场经验*，未声称具体学校 / 学位。
-- Newmont 员工总数 (~15,000–17,000 区间) 在 10-K 中未直接披露具体数字；引用为 *估计* (合并 Newcrest 后基于历史员工规模推测)。
-- AEM / GOLD / GFI 等同业的具体 FY25 AISC 在公告外引用了 Zacks / Seeking Alpha 估算，标注为 *估计*。
-- Newmont 员工 / 客户 / 供应商详细名单和合同结构在 10-K Note 5 中按 "lack of dependence on a limited number of customers" 概括，未提供具体客户名单 — 这是符合行业惯例 (黄金按 LBMA 价格公开撮合销售)。
+**(h) 残留未知 / Known gaps**
+- 本报告 base PT US$130 与情景 PT 均为 *分析师观点*，不附 filing 引用；金价假设区间取自卖方（GS/Citi）。
+- Viljoen 具体学历未在公告披露（保留「未披露」表述）；员工总数 10-K 未给具体数字（保留「估计」标注）。
+- 同业 AEM/GOLD AISC 为 Zacks 估算，已标 *估计*。
 
-**(f) 视角 (Section 10) 数据来源**
-
-- 所有评分基于 Sections 1-9 既有数据 + WebSearch 同业基准；未引入新的原始数据。
-- VIX / 10Y Treasury / HY OAS 等宏观指标未具体取数 (workflow 简化)；视角评分基于既有的 P/E / EV/EBITDA / FCF 等已披露指标。
-
-**(g) 字数估算**
-
-- 中文报告 (含 Mermaid 图代码) 总字数约 8,200–9,500 字。
-- 主要章节字数: Section 1 ~1,000，Section 2 ~700，Section 3 ~450，Section 4 ~1,800 (最重要章节)，Section 5 ~650，Section 6 ~900，Section 7 ~800，Section 8 ~750，Section 9 ~850，Section 10 ~700。
-- Section 4 (产品) 字数符合 700-1,500 word 区间要求 (实际偏上限)。
-
-**(h) 引用密度统计**
-
-- 全报告内联引用 (markdown link) 总数: ≈ 45 个独立 URL (含同一 10-K 在不同章节多次锚定 page reference)。
-- 每段平均 ≥1 引用，符合 paragraph-level 引用密度要求 (≥40 inline citations).
-
-**(i) Mermaid 图清单**
-
-1. Section 2 Timeline — 关键里程碑 (1921 → 2026)
-2. Section 4.1 graph TD — 产品体系树
-3. Section 4.8 graph LR — 矿端到 LBMA 工作流
-4. Section 5 pie — FY25 sales by metal
-5. Section 7 quadrantChart — 黄金矿商竞争定位
-
-合计 5 个 Mermaid 块，符合 3-6 块预算。
+**(i) Spec gaps retrofit（vintage 2026-06-02）** — 本次补齐了原稿缺失的：投资摘要 header（评级 + 12M PT + 上行 % + 估值矩阵）、Section 1A 估值/PT 决策层、Section 1B GF Score（雷达图）、Section 2 前瞻模型 + bull/base/bear + 卖方观点演变、Section 9.5 关键争议与催化剂、Data Used manifest、8 张 inline-SVG 财务图表。
 
 </details>
 
 ---
 
-*报告生成于 workflow subagent (NYSE:NEM, rare-earth-strategic-minerals theme), 2026-06-02. 报告基于 SEC EDGAR + Newmont IR + 公开新闻源公开披露资料，不构成投资建议. Lens scorecards in Section 10 are analytical rubrics, not buy / sell recommendations.*
+*报告刷新于 workflow subagent (NYSE:NEM, rare-earth-strategic-minerals theme), as of 2026-06-16. 报告基于 SEC EDGAR (FY2025 10-K / Q1 2026 10-Q / 8-K) + Newmont IR + `db/zsxq.db` 券商研究 + 公开市场数据，不构成投资建议. 评级 / 目标价 / 前瞻估计 / 卖方观点及 Section 10 lens scorecards 均为分析性框架，非买卖建议.*

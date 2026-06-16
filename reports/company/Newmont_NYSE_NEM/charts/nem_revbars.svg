@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 470" width="860" height="470" role="img" aria-label="historical revenue bars"><rect x="0" y="0" width="860" height="470" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Newmont 营收历史按金属 / Revenue history by metal (US$ mn)</text>
+<rect x="20.00" y="44" width="11" height="11" rx="2" fill="#2563eb"/>
+<text x="36.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Gold 黄金</text>
+<rect x="96.20" y="44" width="11" height="11" rx="2" fill="#15803d"/>
+<text x="112.20" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Copper 铜</text>
+<rect x="179.00" y="44" width="11" height="11" rx="2" fill="#d97706"/>
+<text x="195.00" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Silver 银</text>
+<rect x="261.80" y="44" width="11" height="11" rx="2" fill="#7c3aed"/>
+<text x="277.80" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Zinc 锌</text>
+<rect x="331.40" y="44" width="11" height="11" rx="2" fill="#dc2626"/>
+<text x="347.40" y="53.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" font-weight="400" fill="#1f2933">Lead 铅</text>
+<line x1="70" y1="412.00" x2="834" y2="412.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="415.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$0</text>
+<line x1="70" y1="345.20" x2="834" y2="345.20" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="348.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$4.9B</text>
+<line x1="70" y1="278.40" x2="834" y2="278.40" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="281.40" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$9.8B</text>
+<line x1="70" y1="211.60" x2="834" y2="211.60" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="214.60" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$14.7B</text>
+<line x1="70" y1="144.80" x2="834" y2="144.80" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="147.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$19.6B</text>
+<line x1="70" y1="78.00" x2="834" y2="78.00" stroke="#eceff2" stroke-width="1"/>
+<text x="64.00" y="81.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="9.5" font-weight="400" fill="#52606d">US$24.5B</text>
+<rect x="123.48" y="267.49" width="147.71" height="144.51" fill="#2563eb"/>
+<rect x="123.48" y="259.64" width="147.71" height="7.84" fill="#15803d"/>
+<rect x="123.48" y="255.07" width="147.71" height="4.57" fill="#d97706"/>
+<rect x="123.48" y="252.17" width="147.71" height="2.91" fill="#7c3aed"/>
+<rect x="123.48" y="250.86" width="147.71" height="1.31" fill="#dc2626"/>
+<text x="197.33" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2023</text>
+<rect x="378.15" y="197.19" width="147.71" height="214.81" fill="#2563eb"/>
+<rect x="378.15" y="179.08" width="147.71" height="18.10" fill="#15803d"/>
+<rect x="378.15" y="168.28" width="147.71" height="10.80" fill="#d97706"/>
+<rect x="378.15" y="159.79" width="147.71" height="8.49" fill="#7c3aed"/>
+<rect x="378.15" y="157.13" width="147.71" height="2.66" fill="#dc2626"/>
+<text x="452.00" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2024</text>
+<rect x="632.81" y="148.65" width="147.71" height="263.35" fill="#2563eb"/>
+<rect x="632.81" y="129.03" width="147.71" height="19.62" fill="#15803d"/>
+<rect x="632.81" y="114.30" width="147.71" height="14.73" fill="#d97706"/>
+<rect x="632.81" y="105.24" width="147.71" height="9.06" fill="#7c3aed"/>
+<rect x="632.81" y="102.74" width="147.71" height="2.50" fill="#dc2626"/>
+<text x="706.67" y="428.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">2025</text>
+<text x="430.00" y="454.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: NEM FY2025 10-K, Note 5 Sales (FY2023-2025) (filed 2026-02-19)</text>
+</svg>
