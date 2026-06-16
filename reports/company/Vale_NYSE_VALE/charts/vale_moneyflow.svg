@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1205" width="1180" height="1205" role="img" aria-label="谁付钱给 Vale → 卖什么 → 钱流向哪里 / How Vale earns and where its US$38.4bn revenue pools" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1205" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">IRON-ORE &amp; BASE-METALS MONEY FLOW · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">谁付钱给 Vale → 卖什么 → 钱流向哪里 / How Vale earns and where its US$38.4bn</text>
+<text x="42.00" y="138.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">revenue pools</text>
+<text x="42.00" y="180.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求端由中国钢厂主导（China Mainland 收入 US$19.0bn ≈ 50% of US$38.4bn 合并收入）；Vale 把矿石变现后，钱主要流向自有铁路/港口物流、能源与设备采购，再以股利+利息资本（FY25 US$5.92bn）回流股东。</text>
+<ellipse cx="1031.00" cy="511.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="226.00" x2="369.50" y2="793.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="226.00" x2="810.50" y2="793.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 / Who pays in</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Vale 及产品线 / Vale &amp; product lines</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱流向哪里 / Where the money pools</text>
+<path d="M 256.00 346.50 C 369.50 346.50, 369.50 450.50, 483.00 450.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 469.50 C 369.50 469.50, 369.50 468.50, 483.00 468.50" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 579.50 C 369.50 579.50, 369.50 580.64, 483.00 580.64" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 689.50 C 369.50 689.50, 369.50 588.79, 483.00 588.79" fill="none" stroke="url(#mfgold)" stroke-width="7.71" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 438.50 C 810.50 438.50, 810.50 291.50, 924.00 291.50" fill="none" stroke="url(#mfgold)" stroke-width="13.71" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 449.64 C 810.50 449.64, 810.50 407.50, 924.00 407.50" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 459.07 C 810.50 459.07, 810.50 516.57, 924.00 516.57" fill="none" stroke="url(#mfgold)" stroke-width="10.29" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 475.36 C 810.50 475.36, 810.50 737.50, 924.00 737.50" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 584.50 C 810.50 584.50, 810.50 525.14, 924.00 525.14" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 578.57 C 810.50 578.57, 810.50 414.29, 924.00 414.29" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 590.43 C 810.50 590.43, 810.50 746.00, 924.00 746.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 466.79 C 810.50 466.79, 810.50 630.00, 924.00 630.00" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="392.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">US$19.0bn China</text>
+<text x="369.50" y="574.07" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">nickel</text>
+<text x="369.50" y="633.14" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">copper</text>
+<text x="810.50" y="359.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">rail+port</text>
+<rect x="42.00" y="286.50" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="286.50" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="319.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">CHINA STEEL MILLS</text>
+<text x="60.00" y="340.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">China Mainland rev US$19.0bn</text>
+<text x="60.00" y="357.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Baowu/HBIS/Ansteel et al</text>
+<rect x="42.00" y="422.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="422.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="455.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">JP/KR/EU/MENA STEEL</text>
+<text x="60.00" y="476.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Nippon Steel/POSCO/</text>
+<text x="60.00" y="493.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">ArcelorMittal/Emirates Steel</text>
+<rect x="42.00" y="532.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="532.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="565.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">EV BATTERY &amp; STAINLESS</text>
+<text x="60.00" y="586.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">LGES/Panasonic/CATL</text>
+<text x="60.00" y="603.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Class-I nickel buyers</text>
+<rect x="42.00" y="642.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="642.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="675.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">GRID &amp; ELECTRICAL</text>
+<text x="60.00" y="696.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">copper cable/transformer</text>
+<text x="60.00" y="713.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">data-center electrification</text>
+<rect x="483.00" y="391.50" width="214" height="130.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="391.50" width="3" height="130.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="424.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">IRON ORE SOLUTIONS</text>
+<text x="501.00" y="445.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">US$30.1bn / 78.5%</text>
+<text x="501.00" y="462.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">fines+pellets+briquettes</text>
+<rect x="483.00" y="537.50" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="537.50" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="570.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">VALE BASE METALS</text>
+<text x="501.00" y="591.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">US$8.27bn / 21.5%</text>
+<text x="501.00" y="608.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">nickel US$4.29bn + copper US$3.75bn</text>
+<rect x="924.00" y="236.00" width="214" height="111.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="236.00" width="3" height="111.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">RAIL + PORT LOGISTICS</text>
+<text x="942.00" y="290.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">EFC 892km + EFVM 905km</text>
+<text x="942.00" y="307.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Ponta da Madeira / Tubarão</text>
+<text x="942.00" y="324.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">concession renegotiation</text>
+<rect x="924.00" y="363.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="363.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="396.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">ENERGY &amp; DIESEL</text>
+<text x="942.00" y="417.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">bunker oil hedged &gt;US$80/bbl</text>
+<text x="942.00" y="434.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">freight Brazil→China +US$13/t</text>
+<rect x="924.00" y="473.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="473.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="506.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">CAPEX &amp; EQUIPMENT</text>
+<text x="942.00" y="527.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY25 capex US$6.0bn</text>
+<text x="942.00" y="544.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY26 guide US$5.4-5.7bn</text>
+<rect x="924.00" y="583.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="583.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="616.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">MARIANA/BRUMADINHO</text>
+<text x="942.00" y="637.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Samarco payments US$2.3bn</text>
+<text x="942.00" y="654.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">R$170bn / 20-yr settlement</text>
+<rect x="924.00" y="693.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="693.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="726.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">SHAREHOLDERS &amp; GOV'T</text>
+<text x="942.00" y="747.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">dividends+IoC US$5.92bn</text>
+<text x="942.00" y="764.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Brazil royalties/CFEM + taxes US$2.7bn</text>
+<rect x="42.00" y="813.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="817.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="815.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="815.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="815.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="815.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="817.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="817.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="808.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="817.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="808.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="847.60" y="817.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="914.80" y="808.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="933.80" y="817.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="1008.20" y="808.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="1027.20" y="817.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="42.00" y="828.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="61.00" y="837.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="200.20" y="828.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="219.20" y="837.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<line x1="42" y1="853.00" x2="1138" y2="853.00" stroke="#222a3a"/>
+<text x="42.00" y="869.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY / 跟着钱走</text>
+<rect x="42.00" y="889.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="889.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="913.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">WHO PAYS · 需求端</text>
+<text x="58.00" y="931.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">中国钢厂是命脉</text>
+<text x="58.00" y="955.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">China</tspan><tspan fill="#9aa3b8" font-weight="400"> Mainland</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入</tspan><tspan fill="#f4d58a" font-weight="700"> US$19.0bn</tspan><tspan fill="#9aa3b8" font-weight="400"> （FY25），约占</tspan><tspan fill="#f4d58a" font-weight="700"> US$38.4bn</tspan><tspan fill="#9aa3b8" font-weight="400"> 合并收入的</tspan></text>
+<text x="58.00" y="971.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">50%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；任何中国房地产/钢需求的边际变化直接传导到</tspan><tspan fill="#9aa3b8" font-weight="400"> Vale</tspan><tspan fill="#9aa3b8" font-weight="400"> 的铁矿石现金流。</tspan></text>
+<rect x="412.00" y="889.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="889.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="913.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">PRODUCT · 78.5%</text>
+<text x="428.00" y="931.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">铁矿石仍是主引擎</text>
+<text x="428.00" y="955.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Iron</tspan><tspan fill="#9aa3b8" font-weight="400"> Ore</tspan><tspan fill="#9aa3b8" font-weight="400"> Solutions</tspan><tspan fill="#f4d58a" font-weight="700"> US$30.1bn</tspan><tspan fill="#9aa3b8" font-weight="400"> ；FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 实现细粉价格</tspan><tspan fill="#f4d58a" font-weight="700"> US$95.8/t</tspan></text>
+<text x="428.00" y="971.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">，Carajás</tspan><tspan fill="#f4d58a" font-weight="700"> 65%</tspan><tspan fill="#f4d58a" font-weight="700"> Fe</tspan><tspan fill="#9aa3b8" font-weight="400"> 高品位矿对接</tspan><tspan fill="#9aa3b8" font-weight="400"> DRI/绿钢需求。</tspan></text>
+<rect x="782.00" y="889.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="782.00" y="889.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="798.00" y="913.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">PRODUCT · 21.5%</text>
+<text x="798.00" y="931.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">VBM 提供逆周期对冲</text>
+<text x="798.00" y="955.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Vale</tspan><tspan fill="#9aa3b8" font-weight="400"> Base</tspan><tspan fill="#9aa3b8" font-weight="400"> Metals</tspan><tspan fill="#f4d58a" font-weight="700"> US$8.27bn</tspan><tspan fill="#9aa3b8" font-weight="400"> ，铜收入</tspan><tspan fill="#f4d58a" font-weight="700"> +34%</tspan><tspan fill="#f4d58a" font-weight="700"> YoY</tspan><tspan fill="#9aa3b8" font-weight="400"> ；铜长期目标</tspan><tspan fill="#f4d58a" font-weight="700"> 700</tspan></text>
+<text x="798.00" y="971.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">ktpa（2035）</tspan><tspan fill="#9aa3b8" font-weight="400"> ，是铁矿石下行时的能源转型对冲。</tspan></text>
+<rect x="42.00" y="1019.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="42.00" y="1019.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="58.00" y="1043.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">WHERE IT POOLS · 护城河</text>
+<text x="58.00" y="1061.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">铁路+港口是真护城河</text>
+<text x="58.00" y="1085.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">EFC</tspan><tspan fill="#f4d58a" font-weight="700"> 892km</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#f4d58a" font-weight="700"> EFVM</tspan><tspan fill="#f4d58a" font-weight="700"> 905km</tspan><tspan fill="#9aa3b8" font-weight="400"> 专用铁路直连</tspan><tspan fill="#9aa3b8" font-weight="400"> Ponta</tspan><tspan fill="#9aa3b8" font-weight="400"> da</tspan><tspan fill="#9aa3b8" font-weight="400"> Madeira</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan></text>
+<text x="58.00" y="1101.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Tubarão</tspan><tspan fill="#9aa3b8" font-weight="400"> 港；新供给（几内亚</tspan><tspan fill="#9aa3b8" font-weight="400"> Simandou）需</tspan><tspan fill="#f4d58a" font-weight="700"> 7-10</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 重建物流，这是</tspan><tspan fill="#9aa3b8" font-weight="400"> Vale</tspan><tspan fill="#9aa3b8" font-weight="400"> 50</tspan></text>
+<text x="58.00" y="1117.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">年积累的资本壁垒。</tspan></text>
+<rect x="412.00" y="1019.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="1019.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="1043.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">WHERE IT POOLS · 法律负债</text>
+<text x="428.00" y="1061.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">司法和解仍在抽血</text>
+<text x="428.00" y="1085.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> Samarco</tspan><tspan fill="#9aa3b8" font-weight="400"> 溃坝相关现金支付</tspan><tspan fill="#f4d58a" font-weight="700"> US$2.3bn</tspan><tspan fill="#9aa3b8" font-weight="400"> ；Mariana</tspan><tspan fill="#9aa3b8" font-weight="400"> Definitive</tspan></text>
+<text x="428.00" y="1101.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Settlement</tspan><tspan fill="#f4d58a" font-weight="700"> R$170bn</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#f4d58a" font-weight="700"> 20</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 分期，是把</tspan><tspan fill="#9aa3b8" font-weight="400"> P/E</tspan></text>
+<text x="428.00" y="1117.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">推高、压低账面净利的核心非现金/现金负担。</tspan></text>
+<rect x="782.00" y="1019.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="1019.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="1043.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">WHERE IT POOLS · 回流</text>
+<text x="798.00" y="1061.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">高股东回报 + 巴西税负</text>
+<text x="798.00" y="1085.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 股利+利息资本</tspan><tspan fill="#f4d58a" font-weight="700"> US$5.92bn</tspan><tspan fill="#9aa3b8" font-weight="400"> ，股息率约</tspan><tspan fill="#f4d58a" font-weight="700"> 6-8%</tspan><tspan fill="#9aa3b8" font-weight="400"> ；同时缴纳所得税</tspan><tspan fill="#f4d58a" font-weight="700"> US$2.67bn</tspan></text>
+<text x="798.00" y="1101.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">+</tspan><tspan fill="#9aa3b8" font-weight="400"> CFEM</tspan><tspan fill="#9aa3b8" font-weight="400"> 矿权特许金，是</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 大选税改的直接风险敞口。</tspan></text>
+<text x="590.00" y="1187.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Vale 2025 20-F (FY2025) · Vale 1Q26 Performance 6-K · JPM Iron Ore 2026-05-27 · SEC EDGAR</text>
+</svg>
