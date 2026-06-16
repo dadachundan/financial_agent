@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Wheaton FY2025 营收结构 by metal / Revenue by Metal</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 197.34,335.14 L 234.43,295.89 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 197.34,335.14 A 132 132 0 0 1 273.09,108.04 L 279.19,161.70 A 78 78 0 0 0 234.43,295.89 Z" fill="#15803d"/>
+<path d="M 273.09,108.04 A 132 132 0 0 1 284.24,107.25 L 285.78,161.23 A 78 78 0 0 0 279.19,161.70 Z" fill="#d97706"/>
+<path d="M 284.24,107.25 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 285.78,161.23 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">FY2025</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$2.3B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="416.23" y1="290.20" x2="432.23" y2="290.20" stroke="#2563eb" stroke-width="1.4"/>
+<text x="436.23" y="288.20" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Gold 黄金</text>
+<text x="436.23" y="302.20" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.4B  (62.0%)</text>
+<line x1="157.09" y1="195.53" x2="141.09" y2="195.53" stroke="#15803d" stroke-width="1.4"/>
+<text x="137.09" y="193.53" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Silver 白银</text>
+<text x="137.09" y="207.53" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$836.7M  (36.1%)</text>
+<line x1="278.23" y1="101.55" x2="262.23" y2="101.55" stroke="#d97706" stroke-width="1.4"/>
+<text x="258.23" y="99.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Cobalt 钴</text>
+<text x="258.23" y="113.55" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$31.2M  (1.3%)</text>
+<line x1="286.03" y1="101.21" x2="270.03" y2="101.21" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="266.03" y="99.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Palladium 钯</text>
+<text x="266.03" y="113.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$10.5M  (0.5%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Wheaton 40-F FY2025 Note — Revenue (Summary of Revenue)</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Wheaton FY2025 现金流向 / Cash-Flow Sankey</text>
+<path d="M 204.00,63.01 C 361.00,63.01 361.00,78.00 518.00,78.00 L 518.00,216.81 C 361.00,216.81 361.00,201.81 204.00,201.81 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,78.00 C 691.00,78.00 691.00,64.00 848.00,64.00 L 848.00,281.00 C 691.00,281.00 691.00,295.00 534.00,295.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,295.00 C 691.00,295.00 691.00,295.00 848.00,295.00 L 848.00,344.30 C 691.00,344.30 691.00,344.30 534.00,344.30 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,344.30 C 691.00,344.30 691.00,358.30 848.00,358.30 L 848.00,554.00 C 691.00,554.00 691.00,540.00 534.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,215.81 C 361.00,215.81 361.00,216.81 518.00,216.81 L 518.00,539.98 C 361.00,539.98 361.00,538.99 204.00,538.99 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,552.99 C 361.00,552.99 361.00,539.98 518.00,539.98 L 518.00,541.98 C 361.00,541.98 361.00,554.99 204.00,554.99 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="63.01" width="16" height="138.81" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="215.81" width="16" height="323.18" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="552.99" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="217.00" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="295.00" width="16" height="49.30" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="358.30" width="16" height="195.70" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="129.41" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="142.41" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$818.2M  (30.0%)</text>
+<rect x="207.00" y="180.82" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="192.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="205.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.9B  (70.0%)</text>
+<rect x="207.00" y="518.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$100.0K  (0.00%)</text>
+<rect x="537.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.7B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (47.0%)</text>
+<rect x="867.00" y="277.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="289.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="302.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$290.6M  (10.7%)</text>
+<text x="873.00" y="453.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="466.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (42.4%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Wheaton 40-F FY2025 Consolidated Statements of Cash Flows</text>
+</svg>
