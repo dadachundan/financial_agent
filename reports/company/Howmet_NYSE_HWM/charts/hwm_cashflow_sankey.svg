@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Howmet 现金流分配 Sankey · FY2025 (US$m)</text>
+<path d="M 204.00,78.00 C 306.00,78.00 306.00,92.00 408.00,92.00 L 408.00,190.11 C 306.00,190.11 306.00,176.11 204.00,176.11 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,85.00 C 746.00,85.00 746.00,170.63 848.00,170.63 L 848.00,292.39 C 746.00,292.39 746.00,206.76 644.00,206.76 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,206.76 C 746.00,206.76 746.00,306.39 848.00,306.39 L 848.00,337.88 C 746.00,337.88 746.00,238.25 644.00,238.25 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,238.25 C 746.00,238.25 746.00,351.88 848.00,351.88 L 848.00,397.97 C 746.00,397.97 746.00,284.34 644.00,284.34 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,284.34 C 746.00,284.34 746.00,411.97 848.00,411.97 L 848.00,421.54 C 746.00,421.54 746.00,293.91 644.00,293.91 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,293.91 C 746.00,293.91 746.00,435.54 848.00,435.54 L 848.00,447.37 C 746.00,447.37 746.00,305.74 644.00,305.74 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,92.00 C 526.00,92.00 526.00,85.00 628.00,85.00 L 628.00,305.74 C 526.00,305.74 526.00,312.74 424.00,312.74 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,312.74 C 526.00,312.74 526.00,319.74 628.00,319.74 L 628.00,533.00 C 526.00,533.00 526.00,526.00 424.00,526.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,190.11 C 306.00,190.11 306.00,190.11 408.00,190.11 L 408.00,517.82 C 306.00,517.82 306.00,517.82 204.00,517.82 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,531.82 C 306.00,531.82 306.00,517.82 408.00,517.82 L 408.00,526.00 C 306.00,526.00 306.00,540.00 204.00,540.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="98.11" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="190.11" width="16" height="327.72" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="531.82" width="16" height="8.18" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="92.00" width="16" height="434.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="85.00" width="16" height="220.74" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="319.74" width="16" height="213.26" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="170.63" width="16" height="121.76" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="306.39" width="16" height="31.48" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="351.88" width="16" height="46.10" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="411.97" width="16" height="9.57" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="435.54" width="16" height="11.83" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="124.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="137.05" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$564.0M  (22.6%)</text>
+<rect x="207.00" y="172.11" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="184.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="197.11" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.9B  (75.5%)</text>
+<rect x="207.00" y="513.82" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="525.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="538.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$47.0M  (1.9%)</text>
+<rect x="427.00" y="74.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.5B  (100.0%)</text>
+<rect x="647.00" y="67.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (50.9%)</text>
+<text x="653.00" y="423.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="436.37" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (49.1%)</text>
+<text x="873.00" y="228.51" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股票回购 Buybacks</text>
+<text x="873.00" y="241.51" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$700.0M  (28.1%)</text>
+<text x="873.00" y="319.14" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股息 Dividends</text>
+<text x="873.00" y="332.14" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$181.0M  (7.3%)</text>
+<text x="873.00" y="371.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">净偿债 Net debt repay</text>
+<text x="873.00" y="384.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$265.0M  (10.6%)</text>
+<text x="873.00" y="413.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">优先股赎回 Pref redemption</text>
+<text x="873.00" y="426.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$55.0M  (2.2%)</text>
+<text x="873.00" y="438.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他融资 Other financing</text>
+<text x="873.00" y="451.76" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$68.0M  (2.7%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = US$1.4B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Howmet 2025 Form 10-K, cash-flow statement · SEC EDGAR</text>
+</svg>

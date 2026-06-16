@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1028" width="1180" height="1028" role="img" aria-label="钱从哪来、流向何方 — Howmet 航空航天价值链" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1028" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">HOWMET 资金流 · FY2025 (US$M)</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱从哪来、流向何方 — Howmet 航空航天价值链</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求侧由发动机 OEM 与机身制造商付款驱动；Howmet 四大分部加工成型后，钱再向上游汇集到稀缺的钛海绵、镍基高温合金与铝供应这几个咽喉点。</text>
+<ellipse cx="1031.00" cy="412.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="632.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="632.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁在付款 (终端需求)</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Howmet 分部</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱汇向何处 (上游)</text>
+<path d="M 256.00 243.64 C 369.50 243.64, 369.50 233.36, 483.00 233.36" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 260.00 C 369.50 260.00, 369.50 358.09, 483.00 358.09" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 360.73 C 369.50 360.73, 369.50 257.36, 483.00 257.36" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 376.00 C 369.50 376.00, 369.50 365.73, 483.00 365.73" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 468.45 C 369.50 468.45, 369.50 376.64, 483.00 376.64" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 482.64 C 369.50 482.64, 369.50 475.00, 483.00 475.00" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 574.45 C 369.50 574.45, 369.50 277.00, 483.00 277.00" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 588.64 C 369.50 588.64, 369.50 581.00, 483.00 581.00" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 258.45 C 810.50 258.45, 810.50 417.64, 924.00 417.64" fill="none" stroke="url(#mfgold)" stroke-width="21.82" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 242.09 C 810.50 242.09, 810.50 298.36, 924.00 298.36" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 475.00 C 810.50 475.00, 810.50 311.45, 924.00 311.45" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 369.00 C 810.50 369.00, 810.50 432.91, 924.00 432.91" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 581.00 C 810.50 581.00, 810.50 528.00, 924.00 528.00" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="232.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">叶片+环</text>
+<text x="369.50" y="303.05" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">LEAP/GE9X</text>
+<text x="369.50" y="416.55" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">紧固件</text>
+<text x="369.50" y="472.82" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">锻件</text>
+<text x="369.50" y="419.73" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">IGT 叶片 +39% YoY</text>
+<text x="369.50" y="578.82" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">车轮</text>
+<text x="810.50" y="332.05" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Ni 合金</text>
+<text x="810.50" y="387.23" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Ti 锭</text>
+<text x="810.50" y="548.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Al</text>
+<rect x="42.00" y="198.00" width="214" height="100.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="198.00" width="3" height="100.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">RTX / P&amp;W + Collins</text>
+<text x="60.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">~11% 合并营收</text>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">GTF/LEAP 叶片+紧固件</text>
+<rect x="42.00" y="314.00" width="214" height="100.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="314.00" width="3" height="100.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="347.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">GE Aerospace</text>
+<text x="60.00" y="368.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">~11% 合并营收</text>
+<text x="60.00" y="385.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">LEAP/GE9X/GEnx</text>
+<rect x="42.00" y="430.00" width="214" height="90.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="430.00" width="3" height="90.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="463.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Boeing / Airbus</text>
+<text x="60.00" y="484.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">机身+起落架</text>
+<text x="60.00" y="501.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">紧固件</text>
+<rect x="42.00" y="536.00" width="214" height="90.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="42.00" y="536.00" width="3" height="90.00" rx="2" fill="#d9a05b"/>
+<text x="60.00" y="569.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">IGT + 卡车 OEM</text>
+<text x="60.00" y="590.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">GE Vernova/Siemens/MHI</text>
+<text x="60.00" y="607.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">PACCAR/Daimler/Volvo</text>
+<rect x="483.00" y="198.00" width="214" height="110.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="198.00" width="3" height="110.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Engine Products</text>
+<text x="501.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">单晶叶片/轧制环</text>
+<text x="501.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">$4,320m (52%)</text>
+<rect x="483.00" y="324.00" width="214" height="90.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="324.00" width="3" height="90.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="357.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Fastening Systems</text>
+<text x="501.00" y="378.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">航空+工业紧固件</text>
+<text x="501.00" y="395.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$1,745m (21%)</text>
+<rect x="483.00" y="430.00" width="214" height="90.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="430.00" width="3" height="90.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="463.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Engineered Structures</text>
+<text x="501.00" y="484.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">钛/铝/镍锻件</text>
+<text x="501.00" y="501.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$1,148m (14%)</text>
+<rect x="483.00" y="536.00" width="214" height="90.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="536.00" width="3" height="90.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="569.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Forged Wheels</text>
+<text x="501.00" y="590.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Alcoa® 锻造铝车轮</text>
+<text x="501.00" y="607.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">$1,039m (13%)</text>
+<rect x="924.00" y="256.00" width="214" height="100.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="256.00" width="3" height="100.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="289.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">钛海绵 Titanium</text>
+<text x="942.00" y="310.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">自有 Ti 熔炼 + VSMPO/Toho/ATI</text>
+<text x="942.00" y="327.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">非俄供应=咽喉点</text>
+<rect x="924.00" y="372.00" width="214" height="100.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="372.00" width="3" height="100.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="405.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">镍基高温合金 Ni-superalloy</text>
+<text x="942.00" y="426.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">叶片/环关键原料</text>
+<text x="942.00" y="443.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">回炉返还依赖</text>
+<rect x="924.00" y="488.00" width="214" height="80.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="488.00" width="3" height="80.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="521.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">铝/钴 Al &amp; Co</text>
+<text x="942.00" y="542.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">车轮+成本传导</text>
+<text x="942.00" y="559.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">公式联动定价</text>
+<rect x="42.00" y="652.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="656.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="654.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="654.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="654.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="654.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="656.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="656.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="647.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="747.00" y="656.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="886.20" y="647.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="905.20" y="656.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="986.80" y="647.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="1005.80" y="656.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="42.00" y="667.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="61.00" y="676.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<line x1="42" y1="692.00" x2="1138" y2="692.00" stroke="#222a3a"/>
+<text x="42.00" y="708.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 资金链关键点</text>
+<rect x="42.00" y="728.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="728.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="752.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求 · 双客户集中</text>
+<text x="58.00" y="770.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">两大发动机 OEM</text>
+<text x="58.00" y="794.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">RTX</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> GE</tspan><tspan fill="#f4d58a" font-weight="700"> Aerospace</tspan><tspan fill="#9aa3b8" font-weight="400"> 各约</tspan><tspan fill="#f4d58a" font-weight="700"> 11%</tspan><tspan fill="#9aa3b8" font-weight="400"> 合并营收，合计</tspan><tspan fill="#f4d58a" font-weight="700"> ~22%</tspan></text>
+<text x="58.00" y="810.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">；它们同时拥有自给叶片产能，是客户也是潜在竞争者。</tspan></text>
+<rect x="412.00" y="728.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="728.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="752.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">成型 · 护城河</text>
+<text x="428.00" y="770.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Engine Products</text>
+<text x="428.00" y="794.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">单晶投资铸造叶片是</tspan><tspan fill="#f4d58a" font-weight="700"> Howmet+PCC</tspan><tspan fill="#9aa3b8" font-weight="400"> 双寡头；分部</tspan><tspan fill="#9aa3b8" font-weight="400"> EBITDA</tspan><tspan fill="#9aa3b8" font-weight="400"> 利润率</tspan><tspan fill="#f4d58a" font-weight="700"> 33.3%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，2025</tspan></text>
+<text x="428.00" y="810.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">营收占比</tspan><tspan fill="#f4d58a" font-weight="700"> 52%</tspan><tspan fill="#9aa3b8" font-weight="400"> ，IGT</tspan><tspan fill="#9aa3b8" font-weight="400"> 叶片</tspan><tspan fill="#9aa3b8" font-weight="400"> Q1</tspan><tspan fill="#9aa3b8" font-weight="400"> 同比</tspan><tspan fill="#f4d58a" font-weight="700"> +39%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="782.00" y="728.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="728.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="752.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">上游 · 咽喉点</text>
+<text x="798.00" y="770.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钛供应</text>
+<text x="798.00" y="794.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Howmet</tspan><tspan fill="#9aa3b8" font-weight="400"> 自有</tspan><tspan fill="#f4d58a" font-weight="700"> Ti</tspan><tspan fill="#f4d58a" font-weight="700"> 熔炼</tspan><tspan fill="#9aa3b8" font-weight="400"> 产能是少数非俄、非</tspan><tspan fill="#9aa3b8" font-weight="400"> VSMPO</tspan><tspan fill="#9aa3b8" font-weight="400"> 来源之一；俄乌战后</tspan><tspan fill="#9aa3b8" font-weight="400"> Boeing</tspan></text>
+<text x="798.00" y="810.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">停采俄钛，使其成结构性顺风。</tspan></text>
+<rect x="42.00" y="858.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="42.00" y="858.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="58.00" y="882.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">上游 · 原料联动</text>
+<text x="58.00" y="900.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">镍基高温合金</text>
+<text x="58.00" y="924.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">叶片/环的关键原料，</tspan><tspan fill="#f4d58a" font-weight="700"> Ni、Co</tspan><tspan fill="#9aa3b8" font-weight="400"> 价格通过合同公式</tspan><tspan fill="#f4d58a" font-weight="700"> 成本传导</tspan><tspan fill="#f4d58a" font-weight="700"> (cost</tspan><tspan fill="#f4d58a" font-weight="700"> pass-through)</tspan></text>
+<text x="58.00" y="940.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">，滞后一两个季度，快速波动期会压缩利润率。</tspan></text>
+<text x="590.00" y="1010.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Howmet 2025 Form 10-K (pp.5-9 供应链, p.56 客户/分部) · Bernstein 2026-06-15 · SEC EDGAR</text>
+</svg>
