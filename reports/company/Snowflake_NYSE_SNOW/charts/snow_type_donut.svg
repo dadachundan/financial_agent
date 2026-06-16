@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2026 营业收入按类别 / Revenue by Type</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 251.03,112.48 L 266.16,164.32 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 251.03,112.48 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 266.16,164.32 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">SNOW</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$4.7B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="307.52" y1="375.81" x2="323.52" y2="375.81" stroke="#2563eb" stroke-width="1.4"/>
+<text x="327.52" y="373.81" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Product revenue</text>
+<text x="327.52" y="387.81" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.5B  (95.5%)</text>
+<line x1="268.48" y1="102.59" x2="252.48" y2="102.59" stroke="#15803d" stroke-width="1.4"/>
+<text x="248.48" y="100.59" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Professional services &amp; other</text>
+<text x="248.48" y="114.59" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$211.6M  (4.5%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: SNOW FY2026 10-K (snow-20260131), Consolidated Statements of Operations</text>
+</svg>

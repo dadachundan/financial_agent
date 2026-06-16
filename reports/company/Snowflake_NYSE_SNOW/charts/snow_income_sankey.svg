@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">How Snowflake (SNOW) Spends Its Revenue — FY2026 (截至 2026-01-31)</text>
+<path d="M 700.00,67.47 C 754.00,67.47 754.00,288.00 808.00,288.00 L 808.00,290.00 C 754.00,290.00 754.00,69.47 700.00,69.47 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,81.47 560.00,81.47 L 560.00,83.47 C 506.00,83.47 506.00,80.00 452.00,80.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,78.00 C 258.00,78.00 258.00,85.00 312.00,85.00 L 312.00,474.57 C 258.00,474.57 258.00,467.57 204.00,467.57 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,80.00 C 506.00,80.00 506.00,97.47 560.00,97.47 L 560.00,496.53 C 506.00,496.53 506.00,479.06 452.00,479.06 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,81.47 C 630.00,81.47 630.00,67.47 684.00,67.47 L 684.00,69.47 C 630.00,69.47 630.00,83.47 576.00,83.47 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,352.05 C 382.00,352.05 382.00,359.05 328.00,359.05 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,359.05 C 382.00,359.05 382.00,366.05 436.00,366.05 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,97.47 C 630.00,97.47 630.00,83.47 684.00,83.47 L 684.00,263.09 C 630.00,263.09 630.00,277.09 576.00,277.09 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,277.09 C 630.00,277.09 630.00,277.09 684.00,277.09 L 684.00,448.65 C 630.00,448.65 630.00,448.65 576.00,448.65 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,448.65 C 630.00,448.65 630.00,462.65 684.00,462.65 L 684.00,510.53 C 630.00,510.53 630.00,496.53 576.00,496.53 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,481.57 C 258.00,481.57 258.00,474.57 312.00,474.57 L 312.00,493.00 C 258.00,493.00 258.00,500.00 204.00,500.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="389.57" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="481.57" width="16" height="18.43" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="274.05" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="366.05" width="16" height="133.95" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="81.47" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="97.47" width="16" height="399.06" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="67.47" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="83.47" width="16" height="179.62" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="277.09" width="16" height="171.56" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="462.65" width="16" height="47.88" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="288.00" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="269.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Product revenue</text>
+<text x="179.00" y="282.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.5B  (95.5%)</text>
+<text x="179.00" y="487.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Professional services</text>
+<text x="179.00" y="500.78" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$211.6M  (4.5%)</text>
+<rect x="331.00" y="67.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.7B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.1B  (67.2%)</text>
+<rect x="455.00" y="348.05" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="360.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="373.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.5B  (32.8%)</text>
+<rect x="579.00" y="63.47" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="75.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="88.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$1.4B  (-30.6%)</text>
+<rect x="579.00" y="88.47" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="100.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="113.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.6B  (97.8%)</text>
+<rect x="703.00" y="49.47" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="61.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="74.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$1.4B  (-30.6%)</text>
+<rect x="703.00" y="74.47" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="86.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="99.47" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.1B  (44.0%)</text>
+<rect x="703.00" y="259.09" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="271.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="284.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.0B  (42.0%)</text>
+<rect x="703.00" y="444.65" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="456.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="469.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$549.7M  (11.7%)</text>
+<text x="833.00" y="286.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="299.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$1.4B  (-30.6%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: SNOW FY2026 10-K (snow-20260131), Consolidated Statements of Operations + Note 3 Revenue</text>
+</svg>
