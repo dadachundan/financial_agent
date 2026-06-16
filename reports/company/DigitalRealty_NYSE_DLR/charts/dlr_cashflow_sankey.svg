@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Digital Realty FY2025 现金流量表 Sankey (cash flow)</text>
+<path d="M 204.00,78.00 C 361.00,78.00 361.00,85.00 518.00,85.00 L 518.00,361.01 C 361.00,361.01 361.00,354.01 204.00,354.01 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,85.00 C 691.00,85.00 691.00,64.00 848.00,64.00 L 848.00,223.13 C 691.00,223.13 691.00,244.13 534.00,244.13 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,244.13 C 691.00,244.13 691.00,237.13 848.00,237.13 L 848.00,271.83 C 691.00,271.83 691.00,278.83 534.00,278.83 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,278.83 C 691.00,278.83 691.00,285.83 848.00,285.83 L 848.00,294.15 C 691.00,294.15 691.00,287.15 534.00,287.15 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,287.15 C 691.00,287.15 691.00,308.15 848.00,308.15 L 848.00,554.00 C 691.00,554.00 691.00,533.00 534.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,368.01 C 361.00,368.01 361.00,361.01 518.00,361.01 L 518.00,533.00 C 361.00,533.00 361.00,540.00 204.00,540.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="276.01" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="368.01" width="16" height="171.99" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="159.13" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="237.13" width="16" height="34.70" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="285.83" width="16" height="8.32" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="308.15" width="16" height="245.85" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="213.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="226.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.9B  (61.6%)</text>
+<rect x="207.00" y="350.01" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="362.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="375.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.4B  (38.4%)</text>
+<rect x="537.00" y="67.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.3B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.2B  (35.5%)</text>
+<rect x="867.00" y="219.13" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="231.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="244.13" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$486.7M  (7.7%)</text>
+<rect x="867.00" y="267.83" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="279.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="870.00" y="292.83" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$116.7M  (1.9%)</text>
+<text x="873.00" y="428.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="441.08" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.4B  (54.9%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">投资活动含资产处置回款部分净额; 融资活动含 11 亿美元 ATM 增发 + 净债务变动 - 分红</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Digital Realty FY2025 10-K (Consolidated Statements of Cash Flows)</text>
+</svg>

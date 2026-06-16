@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1074" width="1180" height="1074" role="img" aria-label="钱往哪走：Digital Realty 的资本如何流向供应链 (how DLR's capital flows out)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1074" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">DATA-CENTER REIT MONEY FLOW · FY2025 / Q1 2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱往哪走：Digital Realty 的资本如何流向供应链 (how DLR's capital flows out)</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">客户租金 + JV 资本 → DLR 的开发资本开支与物业运营 → 钱最终汇聚到电力、施工人力、冷却/电气设备 (变压器/开关柜/发电机) 三大瓶颈。Jefferies: 2026 北美机房供给瓶颈先是施工人力, 2028 起冷却设备成为最大短板。</text>
+<ellipse cx="1031.00" cy="427.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="662.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="662.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 (who pays in)</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">DLR 把钱花在哪 (what it buys)</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终汇聚处 / 瓶颈 (where it pools)</text>
+<path d="M 256.00 308.27 C 369.50 308.27, 369.50 303.09, 483.00 303.09" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 325.73 C 369.50 325.73, 369.50 430.64, 483.00 430.64" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 443.27 C 369.50 443.27, 369.50 440.45, 483.00 440.45" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 435.64 C 369.50 435.64, 369.50 318.36, 483.00 318.36" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 550.00 C 369.50 550.00, 369.50 329.27, 483.00 329.27" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 334.45 C 369.50 334.45, 369.50 548.00, 483.00 548.00" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 320.00 C 810.50 320.00, 810.50 490.50, 924.00 490.50" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 305.82 C 810.50 305.82, 810.50 372.00, 924.00 372.00" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 332.00 C 810.50 332.00, 810.50 609.00, 924.00 609.00" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 435.00 C 810.50 435.00, 810.50 257.32, 924.00 257.32" fill="none" stroke="url(#mfgold)" stroke-width="19.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 295.45 C 810.50 295.45, 810.50 243.68, 924.00 243.68" fill="none" stroke="url(#mfgold)" stroke-width="7.64" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="299.68" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">大单预租 + 租金</text>
+<text x="369.50" y="433.64" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">JV 权益资本</text>
+<text x="810.50" y="399.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">设备采购</text>
+<text x="810.50" y="340.16" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$1.4B 电费/yr</text>
+<text x="810.50" y="263.57" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">并网投资</text>
+<rect x="42.00" y="257.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="257.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="290.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">HYPERSCALERS</text>
+<text x="60.00" y="311.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">AWS/Azure/GCP/Meta/Oracle/IBM</text>
+<text x="60.00" y="328.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">最大客户 11.7% 年化经常性收入</text>
+<text x="60.00" y="345.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">backlog 创纪录 $1.8B</text>
+<rect x="42.00" y="393.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="393.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="426.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">企业 &amp; 网络客户</text>
+<text x="60.00" y="447.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">JPMorgan/AT&amp;T/Comcast/Lumen</text>
+<text x="60.00" y="464.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">0-1MW colocation + 互联</text>
+<rect x="42.00" y="503.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="503.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="536.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">BLACKSTONE &amp; JV LP</text>
+<text x="60.00" y="557.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">$70 亿 hyperscale JV</text>
+<text x="60.00" y="574.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">超算专项私募 &gt;$30 亿 (2026)</text>
+<rect x="483.00" y="259.00" width="214" height="110.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="259.00" width="3" height="110.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="292.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">开发资本开支</text>
+<text x="501.00" y="313.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY2025 $3,181M</text>
+<text x="501.00" y="330.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">在建 1.2 GW (预租 61%)</text>
+<rect x="483.00" y="385.00" width="214" height="100.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="385.00" width="3" height="100.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="418.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">物业运营 (property opex)</text>
+<text x="501.00" y="439.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">FY2025 $2,727M</text>
+<text x="501.00" y="456.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">其中电费 utilities $1,426M</text>
+<rect x="483.00" y="501.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="501.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="534.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">利息 + 分红</text>
+<text x="501.00" y="555.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">利息 $438M</text>
+<text x="501.00" y="572.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">分红 $1,728M</text>
+<rect x="924.00" y="198.00" width="214" height="111.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="198.00" width="3" height="111.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">电力 / 电网</text>
+<text x="942.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">电费 $1,426M/yr</text>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">核心 metro 并网排队 5-8 年</text>
+<text x="942.00" y="286.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">电力银行 = 核心护城河</text>
+<rect x="924.00" y="325.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="325.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="358.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">施工 &amp; 持证电工</text>
+<text x="942.00" y="379.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">2026 北美最强瓶颈</text>
+<text x="942.00" y="396.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Jefferies: 上限 10.4 GW</text>
+<rect x="924.00" y="435.00" width="214" height="111.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="435.00" width="3" height="111.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="468.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">电气 &amp; 冷却设备</text>
+<text x="942.00" y="489.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">变压器 24-36 月交期</text>
+<text x="942.00" y="506.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">开关柜 &gt;12 月</text>
+<text x="942.00" y="523.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Vertiv/Eaton/Caterpillar 等</text>
+<rect x="924.00" y="562.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="562.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="595.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">土地 &amp; 已批配额</text>
+<text x="942.00" y="616.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">&gt;5 GW 未来可开发</text>
+<text x="942.00" y="633.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">NoVA &gt;1 GW</text>
+<rect x="42.00" y="682.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="684.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="684.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="684.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="684.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="677.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="677.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="847.60" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="972.40" y="677.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="991.40" y="686.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="42.00" y="697.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="61.00" y="706.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="178.60" y="697.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="197.60" y="706.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<line x1="42" y1="722.00" x2="1138" y2="722.00" stroke="#222a3a"/>
+<text x="42.00" y="738.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 钱流向哪里</text>
+<rect x="42.00" y="758.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="758.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="782.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求端 · HYPERSCALER</text>
+<text x="58.00" y="800.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">大单回补 backlog</text>
+<text x="58.00" y="824.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 工作负载把</tspan><tspan fill="#9aa3b8" font-weight="400"> backlog</tspan><tspan fill="#9aa3b8" font-weight="400"> 推至创纪录</tspan><tspan fill="#f4d58a" font-weight="700"> $1.8B</tspan><tspan fill="#9aa3b8" font-weight="400"> (DLR</tspan><tspan fill="#9aa3b8" font-weight="400"> 权益</tspan><tspan fill="#f4d58a" font-weight="700"> $10</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> );</tspan></text>
+<text x="58.00" y="840.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">最大客户占年化经常性收入</tspan><tspan fill="#f4d58a" font-weight="700"> 11.7%</tspan><tspan fill="#9aa3b8" font-weight="400"> 。J.P.</tspan><tspan fill="#9aa3b8" font-weight="400"> Morgan:</tspan><tspan fill="#9aa3b8" font-weight="400"> 2027</tspan><tspan fill="#9aa3b8" font-weight="400"> 年前容量基本售罄,</tspan><tspan fill="#9aa3b8" font-weight="400"> 客户被导向</tspan></text>
+<text x="58.00" y="856.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">2028</tspan><tspan fill="#9aa3b8" font-weight="400"> 交付档位。</tspan></text>
+<rect x="412.00" y="758.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="758.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="782.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">资本端 · BLACKSTONE</text>
+<text x="428.00" y="800.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">轻资产 JV 杠杆</text>
+<text x="428.00" y="824.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">与</tspan><tspan fill="#9aa3b8" font-weight="400"> Blackstone</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> $70</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> hyperscale</tspan><tspan fill="#9aa3b8" font-weight="400"> JV</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> 5</tspan></text>
+<text x="428.00" y="840.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">月落地的超算专项私募</tspan><tspan fill="#9aa3b8" font-weight="400"> (&gt;</tspan><tspan fill="#f4d58a" font-weight="700"> $30</tspan><tspan fill="#f4d58a" font-weight="700"> 亿</tspan><tspan fill="#9aa3b8" font-weight="400"> )</tspan><tspan fill="#9aa3b8" font-weight="400"> 提供权益资本,</tspan><tspan fill="#9aa3b8" font-weight="400"> DLR</tspan><tspan fill="#9aa3b8" font-weight="400"> 收</tspan><tspan fill="#9aa3b8" font-weight="400"> fee</tspan><tspan fill="#9aa3b8" font-weight="400"> income</tspan><tspan fill="#9aa3b8" font-weight="400"> (FY25</tspan></text>
+<text x="428.00" y="856.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">+98.3%</tspan><tspan fill="#9aa3b8" font-weight="400"> )</tspan><tspan fill="#9aa3b8" font-weight="400"> 并保留高质量客户。</tspan></text>
+<rect x="782.00" y="758.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="782.00" y="758.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="798.00" y="782.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">瓶颈① · 电力</text>
+<text x="798.00" y="800.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">电费是最大现金去向</text>
+<text x="798.00" y="824.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">物业运营</tspan><tspan fill="#f4d58a" font-weight="700"> $2,727M</tspan><tspan fill="#9aa3b8" font-weight="400"> 中电费</tspan><tspan fill="#9aa3b8" font-weight="400"> utilities</tspan><tspan fill="#9aa3b8" font-weight="400"> 占</tspan><tspan fill="#f4d58a" font-weight="700"> $1,426M</tspan><tspan fill="#9aa3b8" font-weight="400"> ;</tspan><tspan fill="#9aa3b8" font-weight="400"> 核心</tspan><tspan fill="#9aa3b8" font-weight="400"> metro</tspan></text>
+<text x="798.00" y="840.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">并网排队长达</tspan><tspan fill="#f4d58a" font-weight="700"> 5-8</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> ,</tspan><tspan fill="#9aa3b8" font-weight="400"> 先发</tspan><tspan fill="#f4d58a" font-weight="700"> 电力银行</tspan><tspan fill="#9aa3b8" font-weight="400"> 是核心竞争壁垒。</tspan></text>
+<rect x="42.00" y="904.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="904.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="928.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">瓶颈② · 人力</text>
+<text x="58.00" y="946.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">2026 施工人力最紧</text>
+<text x="58.00" y="970.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Jefferies:</tspan><tspan fill="#9aa3b8" font-weight="400"> 2026</tspan><tspan fill="#9aa3b8" font-weight="400"> 北美机房供给的首要约束是持证电工与施工人力,</tspan><tspan fill="#9aa3b8" font-weight="400"> 产能上限仅</tspan><tspan fill="#f4d58a" font-weight="700"> 10.4</tspan><tspan fill="#f4d58a" font-weight="700"> GW</tspan></text>
+<text x="58.00" y="986.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">;</tspan><tspan fill="#9aa3b8" font-weight="400"> DLR</tspan><tspan fill="#9aa3b8" font-weight="400"> 提前锁定</tspan><tspan fill="#9aa3b8" font-weight="400"> 2028</tspan><tspan fill="#9aa3b8" font-weight="400"> 项目总包以对冲。</tspan></text>
+<rect x="412.00" y="904.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="904.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="928.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">瓶颈③ · 设备</text>
+<text x="428.00" y="946.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">变压器/冷却 2028 卡脖子</text>
+<text x="428.00" y="970.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">大型变压器交期</tspan><tspan fill="#f4d58a" font-weight="700"> 24-36</tspan><tspan fill="#f4d58a" font-weight="700"> 个月</tspan><tspan fill="#9aa3b8" font-weight="400"> ,</tspan><tspan fill="#9aa3b8" font-weight="400"> 高压开关柜</tspan><tspan fill="#9aa3b8" font-weight="400"> &gt;</tspan><tspan fill="#f4d58a" font-weight="700"> 12</tspan><tspan fill="#f4d58a" font-weight="700"> 个月</tspan><tspan fill="#9aa3b8" font-weight="400"> ;</tspan><tspan fill="#9aa3b8" font-weight="400"> Jefferies</tspan><tspan fill="#9aa3b8" font-weight="400"> 判断冷却设备</tspan></text>
+<text x="428.00" y="986.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">2028</tspan><tspan fill="#9aa3b8" font-weight="400"> 起取代人力成为全行业最大短板。DLR</tspan><tspan fill="#9aa3b8" font-weight="400"> 已为</tspan><tspan fill="#9aa3b8" font-weight="400"> 2028</tspan><tspan fill="#9aa3b8" font-weight="400"> 交付项目提前采购设备。</tspan></text>
+<rect x="782.00" y="904.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="904.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="928.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">资源 · 土地+配额</text>
+<text x="798.00" y="946.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">&gt;5 GW 未来可开发</text>
+<text x="798.00" y="970.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">DLR</tspan><tspan fill="#9aa3b8" font-weight="400"> 在</tspan><tspan fill="#9aa3b8" font-weight="400"> NoVA</tspan><tspan fill="#9aa3b8" font-weight="400"> 等核心</tspan><tspan fill="#9aa3b8" font-weight="400"> metro</tspan><tspan fill="#9aa3b8" font-weight="400"> 持有</tspan><tspan fill="#9aa3b8" font-weight="400"> &gt;</tspan><tspan fill="#f4d58a" font-weight="700"> 5</tspan><tspan fill="#f4d58a" font-weight="700"> GW</tspan><tspan fill="#9aa3b8" font-weight="400"> 未来可开发容量,</tspan><tspan fill="#9aa3b8" font-weight="400"> 其中</tspan><tspan fill="#f4d58a" font-weight="700"> 40-45%</tspan></text>
+<text x="798.00" y="986.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">已可经已签</tspan><tspan fill="#9aa3b8" font-weight="400"> ESA</tspan><tspan fill="#9aa3b8" font-weight="400"> (电力服务协议)</tspan><tspan fill="#9aa3b8" font-weight="400"> 接入电网</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> 稀缺的土地+电力组合是无法短期复制的护城河。</tspan></text>
+<text x="590.00" y="1056.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Digital Realty FY2025 10-K + Q1 2026 10-Q; Jefferies Digital Infrastructure 2026-06-05; J.P. Morgan REITweek 2026-06-03; Deutsche Bank NAREIT CFO meeting 2026-06-03 (zsxq library)</text>
+</svg>

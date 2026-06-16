@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Digital Realty FY2025 营业收入构成 (revenue by type)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 162.72,280.77 L 213.97,263.76 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 162.72,280.77 A 132 132 0 0 1 268.56,108.64 L 276.51,162.05 A 78 78 0 0 0 213.97,263.76 Z" fill="#15803d"/>
+<path d="M 268.56,108.64 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 276.51,162.05 Z" fill="#d97706"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">DLR\n$6,112.7M</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">US$6.1B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="399.90" y1="319.97" x2="415.90" y2="319.97" stroke="#2563eb" stroke-width="1.4"/>
+<text x="419.90" y="317.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Stabilized rental &amp; svc (稳定期租金)</text>
+<text x="419.90" y="331.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.3B  (69.9%)</text>
+<line x1="170.45" y1="166.92" x2="154.45" y2="166.92" stroke="#15803d" stroke-width="1.4"/>
+<text x="150.45" y="164.92" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Non-Stabilized rental (lease-up 期租金)</text>
+<text x="150.45" y="178.92" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.7B  (27.7%)</text>
+<line x1="277.81" y1="101.58" x2="261.81" y2="101.58" stroke="#d97706" stroke-width="1.4"/>
+<text x="257.81" y="99.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Fee income &amp; other (开发/管理费)</text>
+<text x="257.81" y="113.58" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$143.8M  (2.4%)</text>
+<text x="360.00" y="430.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">稳定期 + lease-up 期租金合计 = 租赁与服务收入 5968.9; Fee income 同比 +98.3%</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Digital Realty FY2025 10-K (MD&amp;A — Total Operating Revenues)</text>
+</svg>
