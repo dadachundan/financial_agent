@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">伊顿如何赚钱 / How Eaton (ETN) Makes Its Money — FY2025 (USD M)</text>
+<path d="M 204.00,64.00 C 258.00,64.00 258.00,92.01 312.00,92.01 L 312.00,282.57 C 258.00,282.57 258.00,254.56 204.00,254.56 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,85.01 C 506.00,85.01 506.00,207.96 560.00,207.96 L 560.00,282.72 C 506.00,282.72 506.00,159.78 452.00,159.78 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,159.78 C 506.00,159.78 506.00,296.72 560.00,296.72 L 560.00,370.04 C 506.00,370.04 506.00,233.10 452.00,233.10 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,92.01 C 382.00,92.01 382.00,85.01 436.00,85.01 L 436.00,233.10 C 382.00,233.10 382.00,240.10 328.00,240.10 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,240.10 C 382.00,240.10 382.00,247.10 436.00,247.10 L 436.00,492.99 C 382.00,492.99 382.00,485.99 328.00,485.99 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,202.94 C 754.00,202.94 754.00,238.63 808.00,238.63 L 808.00,297.30 C 754.00,297.30 754.00,261.61 700.00,261.61 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,261.61 C 754.00,261.61 754.00,311.30 808.00,311.30 L 808.00,323.37 C 754.00,323.37 754.00,273.68 700.00,273.68 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,273.68 C 754.00,273.68 754.00,337.37 808.00,337.37 L 808.00,339.37 C 754.00,339.37 754.00,275.68 700.00,275.68 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,207.96 C 630.00,207.96 630.00,202.94 684.00,202.94 L 684.00,277.71 C 630.00,277.71 630.00,282.72 576.00,282.72 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,268.56 C 258.00,268.56 258.00,282.57 312.00,282.57 L 312.00,380.39 C 258.00,380.39 258.00,366.38 204.00,366.38 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,296.72 C 630.00,296.72 630.00,287.74 684.00,287.74 L 684.00,349.62 C 630.00,349.62 630.00,358.60 576.00,358.60 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,358.60 C 630.00,358.60 630.00,363.62 684.00,363.62 L 684.00,375.06 C 630.00,375.06 630.00,370.04 576.00,370.04 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,380.38 C 258.00,380.38 258.00,380.39 312.00,380.39 L 312.00,441.38 C 258.00,441.38 258.00,441.37 204.00,441.37 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,455.37 C 258.00,455.37 258.00,441.38 312.00,441.38 L 312.00,477.34 C 258.00,477.34 258.00,491.33 204.00,491.33 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,505.33 C 258.00,505.33 258.00,477.34 312.00,477.34 L 312.00,486.01 C 258.00,486.01 258.00,514.00 204.00,514.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="190.56" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="268.56" width="16" height="97.82" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="380.38" width="16" height="60.99" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="455.37" width="16" height="35.96" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="505.33" width="16" height="8.67" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="92.01" width="16" height="393.99" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="85.01" width="16" height="148.09" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="247.10" width="16" height="245.90" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="207.96" width="16" height="74.77" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="296.72" width="16" height="73.32" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="202.94" width="16" height="70.79" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="287.74" width="16" height="61.88" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="363.62" width="16" height="11.44" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="238.63" width="16" height="58.66" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="311.30" width="16" height="12.07" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="337.37" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="159.28" x2="182.00" y2="136.62" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="139.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Electrical Americas</text>
+<text x="179.00" y="152.62" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$13.3B  (48.4%)</text>
+<line x1="188.00" y1="317.47" x2="182.00" y2="294.81" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="297.81" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Electrical Global</text>
+<text x="179.00" y="310.81" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$6.8B  (24.8%)</text>
+<line x1="188.00" y1="410.88" x2="182.00" y2="388.21" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="391.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Aerospace</text>
+<text x="179.00" y="404.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.2B  (15.5%)</text>
+<line x1="188.00" y1="473.35" x2="182.00" y2="450.69" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="453.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Vehicle</text>
+<text x="179.00" y="466.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.5B  (9.1%)</text>
+<line x1="188.00" y1="509.67" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">eMobility</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$604.0M  (2.2%)</text>
+<rect x="331.00" y="74.01" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="86.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="99.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$27.4B  (100.0%)</text>
+<rect x="455.00" y="67.01" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="79.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="92.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$10.3B  (37.6%)</text>
+<rect x="455.00" y="229.10" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="241.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="254.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$17.1B  (62.4%)</text>
+<rect x="579.00" y="189.96" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="201.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="214.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.2B  (19.0%)</text>
+<rect x="579.00" y="278.72" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="290.72" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="303.72" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.1B  (18.6%)</text>
+<rect x="703.00" y="184.94" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="196.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="209.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.9B  (18.0%)</text>
+<rect x="703.00" y="269.74" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="281.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="294.74" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.3B  (15.7%)</text>
+<rect x="703.00" y="345.62" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="357.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="370.62" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$797.0M  (2.9%)</text>
+<text x="833.00" y="264.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="277.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.1B  (14.9%)</text>
+<text x="833.00" y="314.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="327.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$841.0M  (3.1%)</text>
+<text x="833.00" y="339.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Minority Interest</text>
+<text x="833.00" y="352.33" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.0M  (0.01%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Eaton FY2025 10-K, Consolidated Statements of Income + Note 18 Segments</text>
+</svg>

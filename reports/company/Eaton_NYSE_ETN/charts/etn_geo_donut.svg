@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 净销售额按地区 / Net Sales by Geography</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 195.37,333.24 L 233.26,294.77 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 195.37,333.24 A 132 132 0 0 1 164.91,191.53 L 215.26,211.03 A 78 78 0 0 0 233.26,294.77 Z" fill="#15803d"/>
+<path d="M 164.91,191.53 A 132 132 0 0 1 215.40,128.96 L 245.10,174.06 A 78 78 0 0 0 215.26,211.03 Z" fill="#d97706"/>
+<path d="M 215.40,128.96 A 132 132 0 0 1 255.61,111.24 L 268.86,163.58 A 78 78 0 0 0 245.10,174.06 Z" fill="#7c3aed"/>
+<path d="M 255.61,111.24 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 268.86,163.58 Z" fill="#dc2626"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">ETN</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$27.4B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="415.69" y1="291.53" x2="431.69" y2="291.53" stroke="#2563eb" stroke-width="1.4"/>
+<text x="435.69" y="289.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States</text>
+<text x="435.69" y="303.53" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$17.1B  (62.4%)</text>
+<line x1="153.08" y1="268.20" x2="137.08" y2="268.20" stroke="#15803d" stroke-width="1.4"/>
+<text x="133.08" y="266.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Europe</text>
+<text x="133.08" y="280.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.1B  (18.5%)</text>
+<line x1="180.60" y1="152.54" x2="164.60" y2="152.54" stroke="#d97706" stroke-width="1.4"/>
+<text x="160.60" y="150.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Asia-Pacific</text>
+<text x="160.60" y="164.54" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.7B  (9.9%)</text>
+<line x1="232.34" y1="112.92" x2="216.34" y2="112.92" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="212.34" y="110.92" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Latin America</text>
+<text x="212.34" y="124.92" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.5B  (5.3%)</text>
+<line x1="270.94" y1="102.26" x2="254.94" y2="102.26" stroke="#dc2626" stroke-width="1.4"/>
+<text x="250.94" y="100.26" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Canada</text>
+<text x="250.94" y="114.26" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.1B  (3.9%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Eaton FY2025 10-K, Note 18 — Geographic Region Information</text>
+</svg>

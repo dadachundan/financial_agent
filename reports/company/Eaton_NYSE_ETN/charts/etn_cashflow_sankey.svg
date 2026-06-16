@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">伊顿现金流 / Eaton (ETN) Cash Flow — FY2025 (USD M)</text>
+<path d="M 204.00,78.00 C 361.00,78.00 361.00,85.00 518.00,85.00 L 518.00,134.46 C 361.00,134.46 361.00,127.46 204.00,127.46 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 534.00,85.00 C 691.00,85.00 691.00,64.00 848.00,64.00 L 848.00,162.12 C 691.00,162.12 691.00,183.12 534.00,183.12 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,183.12 C 691.00,183.12 691.00,176.12 848.00,176.12 L 848.00,458.89 C 691.00,458.89 691.00,465.89 534.00,465.89 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,465.89 C 691.00,465.89 691.00,472.89 848.00,472.89 L 848.00,484.57 C 691.00,484.57 691.00,477.57 534.00,477.57 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 534.00,477.57 C 691.00,477.57 691.00,498.57 848.00,498.57 L 848.00,554.00 C 691.00,554.00 691.00,533.00 534.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,141.46 C 361.00,141.46 361.00,134.46 518.00,134.46 L 518.00,533.00 C 361.00,533.00 361.00,540.00 204.00,540.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="49.46" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="141.46" width="16" height="398.54" rx="1.5" fill="#2563eb"/>
+<rect x="518.00" y="85.00" width="16" height="448.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="848.00" y="64.00" width="16" height="98.12" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="176.12" width="16" height="282.77" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="472.89" width="16" height="11.67" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="498.57" width="16" height="55.43" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="99.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="112.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$555.0M  (11.0%)</text>
+<rect x="207.00" y="123.46" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="135.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="148.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$4.5B  (89.0%)</text>
+<rect x="537.00" y="67.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="540.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="540.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.0B  (100.0%)</text>
+<rect x="867.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="870.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.1B  (21.9%)</text>
+<rect x="867.00" y="158.12" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="170.12" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="870.00" y="183.12" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.2B  (63.1%)</text>
+<rect x="867.00" y="454.89" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="870.00" y="466.89" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="870.00" y="479.89" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$131.0M  (2.6%)</text>
+<text x="873.00" y="523.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="873.00" y="536.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$622.0M  (12.4%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = $3.6B</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Eaton FY2025 10-K, Consolidated Statements of Cash Flows</text>
+</svg>
