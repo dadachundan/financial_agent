@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1188" width="1180" height="1188" role="img" aria-label="谁付钱给 Constellation，钱又流向哪里" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1188" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">AI-POWER-ELECTRIFICATION MONEY FLOW · FY2025–2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">谁付钱给 Constellation，钱又流向哪里</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">CEG 是&quot;卖电&quot;的一方——超大规模云厂商、Fortune 100 工商业客户、住宅账户与 RTO 批发市场把钱付给它，换取无碳基荷电力、容量、与逐小时 CFE 属性。顺着金色资金带往上游看，CEG 的成本与资本开支最终汇聚到核燃料、Calpine</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">天然气、Crane 重启与机组 uprate 的资本开支、以及 $7.25bn 长期债务的利息上。金色代表钱，追它真正的去向。</text>
+<ellipse cx="1031.00" cy="487.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="760.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="760.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱给 CEG</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">他们买的电力产品</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">CEG 的钱流向上游 / 资本</text>
+<path d="M 256.00 352.00 C 369.50 352.00, 369.50 322.00, 483.00 322.00" fill="none" stroke="url(#mfgold)" stroke-width="18.67" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 365.33 C 369.50 365.33, 369.50 655.17, 483.00 655.17" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 486.67 C 369.50 486.67, 369.50 539.83, 483.00 539.83" fill="none" stroke="url(#mfgold)" stroke-width="21.33" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 502.67 C 369.50 502.67, 369.50 664.50, 483.00 664.50" fill="none" stroke="url(#mfgold)" stroke-width="10.67" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 612.33 C 369.50 612.33, 369.50 440.50, 483.00 440.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 635.00 C 369.50 635.00, 369.50 561.17, 483.00 561.17" fill="none" stroke="url(#mfgold)" stroke-width="21.33" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 553.17 C 810.50 553.17, 810.50 377.00, 924.00 377.00" fill="none" stroke="url(#mfgold)" stroke-width="18.67" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 433.83 C 810.50 433.83, 810.50 492.33, 924.00 492.33" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 448.50 C 810.50 448.50, 810.50 594.33, 924.00 594.33" fill="none" stroke="url(#mfgold)" stroke-width="13.33" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 327.33 C 810.50 327.33, 810.50 479.00, 924.00 479.00" fill="none" stroke="url(#mfgold)" stroke-width="10.67" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 316.67 C 810.50 316.67, 810.50 259.00, 924.00 259.00" fill="none" stroke="url(#mfgold)" stroke-width="10.67" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 535.83 C 810.50 535.83, 810.50 272.33, 924.00 272.33" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 567.83 C 810.50 567.83, 810.50 707.00, 924.00 707.00" fill="none" stroke="url(#mfgold)" stroke-width="10.67" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 660.50 C 810.50 660.50, 810.50 603.67, 924.00 603.67" fill="none" stroke="url(#mfgold)" stroke-width="5.33" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="331.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">20 年 take-or-pay</text>
+<text x="369.50" y="520.42" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">容量拍卖</text>
+<text x="810.50" y="459.08" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">购电+燃料 $14,681M</text>
+<text x="810.50" y="397.17" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Crane 重启资本</text>
+<rect x="42.00" y="296.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="296.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="329.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">超大规模云厂商 HYPERSCALERS</text>
+<text x="60.00" y="350.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Microsoft · Meta</text>
+<text x="60.00" y="367.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">20 年核电 PPA</text>
+<rect x="42.00" y="432.00" width="214" height="120.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="432.00" width="3" height="120.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="465.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">工商业 C&amp;I 客户</text>
+<text x="60.00" y="486.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Fortune 100 中 ~75%</text>
+<text x="60.00" y="503.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">~2.5M 账户</text>
+<rect x="42.00" y="568.00" width="214" height="110.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="568.00" width="3" height="110.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="601.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">RTO 批发市场</text>
+<text x="60.00" y="622.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">PJM · NY ISO · ERCOT</text>
+<text x="60.00" y="639.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">容量+能量+辅助服务</text>
+<rect x="483.00" y="266.50" width="214" height="111.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="266.50" width="3" height="111.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="299.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">长期核电 PPA</text>
+<text x="501.00" y="320.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Crane 0.835 GW (Microsoft)</text>
+<text x="501.00" y="337.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Clinton 1.121 GW (Meta)</text>
+<text x="501.00" y="354.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">能量+容量+碳属性</text>
+<rect x="483.00" y="393.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="393.50" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="426.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">容量收入 CAPACITY</text>
+<text x="501.00" y="447.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">PJM 2025 出清 $269.92/MW-day</text>
+<text x="501.00" y="464.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Mid-Atlantic+Midwest 65% RNF</text>
+<rect x="483.00" y="503.50" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="503.50" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="536.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">能量+批发出清 ENERGY</text>
+<text x="501.00" y="557.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">~204 TWh 销售</text>
+<text x="501.00" y="574.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">核电 183 TWh 零碳出力</text>
+<rect x="483.00" y="613.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="613.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="646.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">CFE / 可持续性产品</text>
+<text x="501.00" y="667.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">CORe+ · Hourly CFE</text>
+<text x="501.00" y="684.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">REC / EFEC</text>
+<rect x="924.00" y="220.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="220.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">核燃料周期 NUCLEAR FUEL</text>
+<text x="942.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">浓缩铀 / 燃料组件</text>
+<text x="942.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">俄供应集中风险（chokepoint）</text>
+<rect x="924.00" y="330.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="330.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="363.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Calpine 天然气燃料</text>
+<text x="942.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">~21 GW CCGT 燃气采购</text>
+<text x="942.00" y="401.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">ERCOT / CAISO / 东北</text>
+<rect x="924.00" y="440.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="440.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="473.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">资本开支 CAPEX</text>
+<text x="942.00" y="494.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">FY2025 Capex $2,949M</text>
+<text x="942.00" y="511.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">Crane 重启 · 机组 uprate · SMR 监控</text>
+<rect x="924.00" y="550.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="550.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="583.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">债务与回报 DEBT/RETURN</text>
+<text x="942.00" y="604.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">LT debt $7,250M · 利息 $511M</text>
+<text x="942.00" y="621.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">股息 $486M · 回购 $400M</text>
+<rect x="924.00" y="660.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="660.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="693.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">核退役信托 NDT</text>
+<text x="942.00" y="714.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">NDT funds $19,336M</text>
+<text x="942.00" y="731.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">ARO $13,193M</text>
+<rect x="42.00" y="780.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="782.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="782.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="775.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="775.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="840.40" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="965.20" y="775.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="984.20" y="784.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<rect x="42.00" y="795.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="61.00" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="178.60" y="795.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="197.60" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="272.00" y="795.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="291.00" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="358.20" y="795.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="377.20" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="502.00" y="795.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="521.00" y="804.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="820.00" x2="1138" y2="820.00" stroke="#222a3a"/>
+<text x="42.00" y="836.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY / 追踪资金</text>
+<rect x="42.00" y="856.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="856.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">长期 PPA · 最稀缺</text>
+<text x="58.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Microsoft &amp; Meta 核电 PPA</text>
+<text x="58.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">两份各</tspan><tspan fill="#f4d58a" font-weight="700"> 20</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan><tspan fill="#9aa3b8" font-weight="400"> PPA</tspan><tspan fill="#9aa3b8" font-weight="400"> 锁定</tspan><tspan fill="#f4d58a" font-weight="700"> Crane</tspan><tspan fill="#f4d58a" font-weight="700"> 0.835</tspan><tspan fill="#f4d58a" font-weight="700"> GW</tspan><tspan fill="#9aa3b8" font-weight="400"> （Microsoft）与</tspan><tspan fill="#f4d58a" font-weight="700"> Clinton</tspan></text>
+<text x="58.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">1.121</tspan><tspan fill="#f4d58a" font-weight="700"> GW</tspan><tspan fill="#9aa3b8" font-weight="400"> （Meta）全输出，合计</tspan><tspan fill="#9aa3b8" font-weight="400"> ~</tspan><tspan fill="#f4d58a" font-weight="700"> 2.0</tspan><tspan fill="#f4d58a" font-weight="700"> GW</tspan><tspan fill="#9aa3b8" font-weight="400"> ≈</tspan><tspan fill="#9aa3b8" font-weight="400"> 在运核电</tspan><tspan fill="#f4d58a" font-weight="700"> 9%</tspan></text>
+<text x="58.00" y="954.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">。把核电从&quot;批发出清&quot;改造成&quot;准</tspan><tspan fill="#9aa3b8" font-weight="400"> take-or-pay&quot;长合约——这是</tspan><tspan fill="#9aa3b8" font-weight="400"> CEG</tspan><tspan fill="#9aa3b8" font-weight="400"> 估值溢价的逻辑底座。</tspan></text>
+<rect x="412.00" y="856.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="412.00" y="856.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="428.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">容量收入 · PJM</text>
+<text x="428.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">PJM 容量拍卖 $269.92/MW-day</text>
+<text x="428.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 出清价</tspan><tspan fill="#f4d58a" font-weight="700"> $269.92/MW-day</tspan><tspan fill="#9aa3b8" font-weight="400"> （历史峰值，较</tspan><tspan fill="#9aa3b8" font-weight="400"> 2023</tspan><tspan fill="#9aa3b8" font-weight="400"> 年</tspan><tspan fill="#f4d58a" font-weight="700"> $28.92</tspan><tspan fill="#9aa3b8" font-weight="400"> 暴涨</tspan></text>
+<text x="428.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">~9×）。Mid-Atlantic</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> Midwest</tspan><tspan fill="#9aa3b8" font-weight="400"> 合计</tspan><tspan fill="#f4d58a" font-weight="700"> $7,113M</tspan><tspan fill="#9aa3b8" font-weight="400"> RNF，占合并</tspan><tspan fill="#9aa3b8" font-weight="400"> RNF</tspan></text>
+<text x="428.00" y="954.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">65%</tspan><tspan fill="#9aa3b8" font-weight="400"> ——容量价回落是最大的行业风险点。</tspan></text>
+<rect x="782.00" y="856.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="782.00" y="856.00" width="3" height="132.00" rx="2" fill="#a78bfa"/>
+<text x="798.00" y="880.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">成本 · 上游燃料</text>
+<text x="798.00" y="898.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">购电+燃料 $14,681M</text>
+<text x="798.00" y="922.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#f4d58a" font-weight="700"> Purchased</tspan><tspan fill="#f4d58a" font-weight="700"> power</tspan><tspan fill="#f4d58a" font-weight="700"> and</tspan><tspan fill="#f4d58a" font-weight="700"> fuel</tspan><tspan fill="#9aa3b8" font-weight="400"> 高达</tspan><tspan fill="#f4d58a" font-weight="700"> $14,681M</tspan></text>
+<text x="798.00" y="938.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">，是利润表第一大支出。Calpine</tspan><tspan fill="#9aa3b8" font-weight="400"> 并表后</tspan><tspan fill="#9aa3b8" font-weight="400"> ~</tspan><tspan fill="#f4d58a" font-weight="700"> 21</tspan><tspan fill="#f4d58a" font-weight="700"> GW</tspan><tspan fill="#9aa3b8" font-weight="400"> CCGT</tspan></text>
+<text x="798.00" y="954.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">的天然气采购成为新的成本变量；核电侧浓缩铀仍对俄供应链有</tspan><tspan fill="#f4d58a" font-weight="700"> chokepoint</tspan><tspan fill="#9aa3b8" font-weight="400"> 暴露。</tspan></text>
+<rect x="42.00" y="1002.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="1002.00" width="3" height="132.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="1026.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">资本开支 · 增长</text>
+<text x="58.00" y="1044.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Capex $2,949M + Crane 重启</text>
+<text x="58.00" y="1068.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#f4d58a" font-weight="700"> Capex</tspan><tspan fill="#f4d58a" font-weight="700"> $2,949M</tspan><tspan fill="#9aa3b8" font-weight="400"> ，主投向</tspan><tspan fill="#f4d58a" font-weight="700"> Crane</tspan><tspan fill="#f4d58a" font-weight="700"> Clean</tspan><tspan fill="#f4d58a" font-weight="700"> Energy</tspan><tspan fill="#f4d58a" font-weight="700"> Center</tspan></text>
+<text x="58.00" y="1084.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">重启（DOE</tspan><tspan fill="#9aa3b8" font-weight="400"> 提供</tspan><tspan fill="#f4d58a" font-weight="700"> $1.0bn</tspan><tspan fill="#9aa3b8" font-weight="400"> 贷款担保）、机组</tspan><tspan fill="#f4d58a" font-weight="700"> uprate</tspan><tspan fill="#9aa3b8" font-weight="400"> 与可能的</tspan><tspan fill="#f4d58a" font-weight="700"> SMR</tspan><tspan fill="#9aa3b8" font-weight="400"> 。FCF</tspan><tspan fill="#9aa3b8" font-weight="400"> =</tspan><tspan fill="#9aa3b8" font-weight="400"> OCF</tspan></text>
+<text x="58.00" y="1100.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$4,237M</tspan><tspan fill="#9aa3b8" font-weight="400"> −</tspan><tspan fill="#9aa3b8" font-weight="400"> Capex</tspan><tspan fill="#f4d58a" font-weight="700"> $2,949M</tspan><tspan fill="#9aa3b8" font-weight="400"> =</tspan><tspan fill="#f4d58a" font-weight="700"> $1,288M</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<rect x="412.00" y="1002.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="412.00" y="1002.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="428.00" y="1026.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">资金沉淀 · 信托/债务</text>
+<text x="428.00" y="1044.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">NDT $19.3bn 与 LT debt $7.25bn</text>
+<text x="428.00" y="1068.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">核退役信托</tspan><tspan fill="#f4d58a" font-weight="700"> NDT</tspan><tspan fill="#f4d58a" font-weight="700"> funds</tspan><tspan fill="#f4d58a" font-weight="700"> $19,336M</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> ARO</tspan><tspan fill="#f4d58a" font-weight="700"> $13,193M</tspan></text>
+<text x="428.00" y="1084.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">是核电特有的巨额资金池——其公允价值波动是</tspan><tspan fill="#9aa3b8" font-weight="400"> GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> 净利的噪音源。长期债务</tspan><tspan fill="#f4d58a" font-weight="700"> $7,250M</tspan><tspan fill="#9aa3b8" font-weight="400"> 、利息</tspan></text>
+<text x="428.00" y="1100.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$511M</tspan><tspan fill="#9aa3b8" font-weight="400"> ；股息</tspan><tspan fill="#f4d58a" font-weight="700"> $486M</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#9aa3b8" font-weight="400"> 回购</tspan><tspan fill="#f4d58a" font-weight="700"> $400M</tspan><tspan fill="#9aa3b8" font-weight="400"> 回流股东。</tspan></text>
+<rect x="782.00" y="1002.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="1002.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="1026.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">钱在哪里汇聚</text>
+<text x="798.00" y="1044.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">稀缺的是&quot;24/7 无碳基荷&quot;</text>
+<text x="798.00" y="1068.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">钱最终汇聚到一个结论：在</tspan><tspan fill="#9aa3b8" font-weight="400"> PJM/ERCOT/CAISO/NY</tspan><tspan fill="#9aa3b8" font-weight="400"> ISO，</tspan><tspan fill="#f4d58a" font-weight="700"> 24/7</tspan><tspan fill="#f4d58a" font-weight="700"> 无碳基荷</tspan></text>
+<text x="798.00" y="1084.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">几乎是核电独占（水电不够、地热稀缺、电池不能全天候）。这把</tspan><tspan fill="#9aa3b8" font-weight="400"> CEG</tspan><tspan fill="#f4d58a" font-weight="700"> 22</tspan><tspan fill="#f4d58a" font-weight="700"> GW</tspan><tspan fill="#9aa3b8" font-weight="400"> 核电定位为&quot;AI</tspan></text>
+<text x="798.00" y="1100.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">时代最稀缺资产&quot;——付钱的是云厂商，护城河是不可复制的核电许可证。</tspan></text>
+<text x="590.00" y="1170.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: CEG FY2025 10-K（利润表/现金流/Note 5 Segment）· Microsoft/Meta PPA 8-K &amp; 新闻稿 · UBS US Power DCF 2026-05-04（PJM 容量价、EBITDA 假设）</text>
+</svg>
