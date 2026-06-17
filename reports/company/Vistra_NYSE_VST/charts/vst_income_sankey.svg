@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Vistra FY2025 利润表 Sankey (income statement, US$ M)</text>
+<path d="M 204.00,64.00 C 258.00,64.00 258.00,151.23 312.00,151.23 L 312.00,373.98 C 258.00,373.98 258.00,286.75 204.00,286.75 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,144.23 C 506.00,144.23 506.00,198.78 560.00,198.78 L 560.00,228.38 C 506.00,228.38 506.00,173.84 452.00,173.84 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,173.84 C 506.00,173.84 506.00,242.38 560.00,242.38 L 560.00,346.94 C 506.00,346.94 506.00,278.40 452.00,278.40 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,151.23 C 382.00,151.23 382.00,144.23 436.00,144.23 L 436.00,278.40 C 382.00,278.40 382.00,285.40 328.00,285.40 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,285.40 C 382.00,285.40 382.00,292.40 436.00,292.40 L 436.00,433.77 C 382.00,433.77 382.00,426.77 328.00,426.77 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,198.78 C 630.00,198.78 630.00,214.00 684.00,214.00 L 684.00,243.61 C 630.00,243.61 630.00,228.38 576.00,228.38 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,214.00 C 754.00,214.00 754.00,273.28 808.00,273.28 L 808.00,287.94 C 754.00,287.94 754.00,228.66 700.00,228.66 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,228.66 C 754.00,228.66 754.00,301.94 808.00,301.94 L 808.00,304.72 C 754.00,304.72 754.00,231.44 700.00,231.44 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,242.38 C 630.00,242.38 630.00,245.44 684.00,245.44 L 684.00,272.07 C 630.00,272.07 630.00,269.01 576.00,269.01 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,269.01 C 630.00,269.01 630.00,286.07 684.00,286.07 L 684.00,364.00 C 630.00,364.00 630.00,346.94 576.00,346.94 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,300.75 C 258.00,300.75 258.00,373.98 312.00,373.98 L 312.00,469.89 C 258.00,469.89 258.00,396.65 204.00,396.65 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,360.94 C 630.00,360.94 630.00,243.61 684.00,243.61 L 684.00,261.89 C 630.00,261.89 630.00,379.22 576.00,379.22 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,410.65 C 258.00,410.65 258.00,469.89 312.00,469.89 L 312.00,553.04 C 258.00,553.04 258.00,493.80 204.00,493.80 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,507.80 C 258.00,507.80 258.00,553.04 312.00,553.04 L 312.00,559.23 C 258.00,559.23 258.00,514.00 204.00,514.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="222.75" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="300.75" width="16" height="95.90" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="410.65" width="16" height="83.15" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="507.80" width="16" height="6.20" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="151.23" width="16" height="275.53" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="144.23" width="16" height="134.16" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="292.40" width="16" height="141.37" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="198.78" width="16" height="29.61" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="242.38" width="16" height="104.56" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="360.94" width="16" height="18.28" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="214.00" width="16" height="17.44" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="245.44" width="16" height="26.62" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="286.07" width="16" height="77.93" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="273.28" width="16" height="14.66" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="301.94" width="16" height="2.78" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="175.37" x2="182.00" y2="151.47" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="154.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Retail</text>
+<text x="179.00" y="167.47" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$14.3B  (80.8%)</text>
+<line x1="188.00" y1="348.70" x2="182.00" y2="324.80" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="327.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">East (PJM等)</text>
+<text x="179.00" y="340.80" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.2B  (34.8%)</text>
+<line x1="188.00" y1="452.23" x2="182.00" y2="428.33" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="431.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Texas (ERCOT)</text>
+<text x="179.00" y="444.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.4B  (30.2%)</text>
+<line x1="188.00" y1="510.90" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">West/其他</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$399.0M  (2.2%)</text>
+<rect x="331.00" y="133.23" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="145.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="158.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$17.7B  (100.0%)</text>
+<rect x="455.00" y="126.23" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="138.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="151.23" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$8.6B  (48.7%)</text>
+<rect x="455.00" y="274.40" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="286.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="299.40" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$9.1B  (51.3%)</text>
+<rect x="579.00" y="180.78" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="192.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="205.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.9B  (10.7%)</text>
+<rect x="579.00" y="224.38" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="236.38" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="249.38" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$6.7B  (37.9%)</text>
+<text x="551.00" y="367.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="380.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (6.6%)</text>
+<rect x="703.00" y="196.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="208.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="221.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.1B  (6.3%)</text>
+<rect x="703.00" y="227.44" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="239.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="252.44" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.7B  (9.7%)</text>
+<rect x="703.00" y="268.07" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="280.07" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="293.07" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.0B  (28.3%)</text>
+<text x="833.00" y="277.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="290.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$944.0M  (5.3%)</text>
+<text x="833.00" y="302.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="315.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$179.0M  (1.0%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Vistra FY2025 10-K, Consolidated Statements of Operations + Segment Note 21 (p.78, p.150)</text>
+</svg>
