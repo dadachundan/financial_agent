@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 Revenue by Geography (customer location, .8M)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 185.27,322.09 L 227.30,288.18 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 185.27,322.09 A 132 132 0 0 1 211.40,131.70 L 242.74,175.68 A 78 78 0 0 0 227.30,288.18 Z" fill="#15803d"/>
+<path d="M 211.40,131.70 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 242.74,175.68 Z" fill="#d97706"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">NBIS</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$529.8M</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="412.51" y1="298.72" x2="428.51" y2="298.72" stroke="#2563eb" stroke-width="1.4"/>
+<text x="432.51" y="296.72" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United States</text>
+<text x="432.51" y="310.72" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$340.1M  (64.2%)</text>
+<line x1="151.28" y1="220.44" x2="135.28" y2="220.44" stroke="#15803d" stroke-width="1.4"/>
+<text x="131.28" y="218.44" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">United Kingdom</text>
+<text x="131.28" y="232.44" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$137.5M  (26.0%)</text>
+<line x1="245.96" y1="107.76" x2="229.96" y2="107.76" stroke="#d97706" stroke-width="1.4"/>
+<text x="225.96" y="105.76" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Rest of world</text>
+<text x="225.96" y="119.76" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$52.2M  (9.9%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Nebius FY2025 20-F, Note 15 — Revenue by geographic area</text>
+</svg>

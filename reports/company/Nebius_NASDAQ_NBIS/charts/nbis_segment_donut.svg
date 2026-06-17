@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 Revenue by Reportable Segment (pre-elimination .7M)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 208.14,134.10 L 240.81,177.10 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 208.14,134.10 A 132 132 0 0 1 285.99,107.22 L 286.81,161.21 A 78 78 0 0 0 240.81,177.10 Z" fill="#15803d"/>
+<path d="M 285.99,107.22 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 286.81,161.21 Z" fill="#d97706"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">NBIS</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$535.7M</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="332.05" y1="369.98" x2="348.05" y2="369.98" stroke="#2563eb" stroke-width="1.4"/>
+<text x="352.05" y="367.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Nebius AI cloud</text>
+<text x="352.05" y="381.98" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$480.3M  (89.7%)</text>
+<line x1="242.95" y1="108.76" x2="226.95" y2="108.76" stroke="#15803d" stroke-width="1.4"/>
+<text x="222.95" y="106.76" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">TripleTen</text>
+<text x="222.95" y="120.76" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$54.1M  (10.1%)</text>
+<line x1="286.95" y1="101.20" x2="270.95" y2="101.20" stroke="#d97706" stroke-width="1.4"/>
+<text x="266.95" y="99.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Avride</text>
+<text x="266.95" y="113.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.3M  (0.2%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Nebius FY2025 20-F, Note 15 — Segment revenues</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="Nebius FY2025 income statement Sankey (operating level)"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Nebius 收入与经营开支流向 — FY2025（经营层面；亏损以左侧赤字源呈现，百万美元）</text>
+<path d="M 424.00,64.00 C 526.00,64.00 526.00,111.63 628.00,111.63 L 628.00,258.79 C 526.00,258.79 526.00,211.16 424.00,211.16 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,111.63 C 746.00,111.63 746.00,97.63 848.00,97.63 L 848.00,169.39 C 746.00,169.39 746.00,183.39 644.00,183.39 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,183.39 C 746.00,183.39 746.00,183.39 848.00,183.39 L 848.00,337.23 C 746.00,337.23 746.00,337.23 644.00,337.23 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,337.23 C 746.00,337.23 746.00,351.23 848.00,351.23 L 848.00,520.37 C 746.00,520.37 746.00,506.37 644.00,506.37 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,201.79 C 306.00,201.79 306.00,64.00 408.00,64.00 L 408.00,211.16 C 306.00,211.16 306.00,348.95 204.00,348.95 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,348.95 C 306.00,348.95 306.00,225.16 408.00,225.16 L 408.00,292.43 C 306.00,292.43 306.00,416.21 204.00,416.21 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,306.43 C 526.00,306.43 526.00,258.79 628.00,258.79 L 628.00,506.37 C 526.00,506.37 526.00,554.00 424.00,554.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<rect x="188.00" y="201.79" width="16" height="214.43" rx="1.5" fill="#1e3a8a"/>
+<rect x="408.00" y="64.00" width="16" height="147.16" rx="1.5" fill="#15803d"/>
+<rect x="408.00" y="225.16" width="16" height="67.27" rx="1.5" fill="#dc2626"/>
+<rect x="408.00" y="306.43" width="16" height="247.57" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="111.63" width="16" height="394.73" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="97.63" width="16" height="71.76" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="183.39" width="16" height="153.84" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="351.23" width="16" height="169.14" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="306.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue / 营收</text>
+<text x="179.00" y="319.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$529.8M  (100.0%)</text>
+<rect x="427.00" y="46.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit / 毛利</text>
+<text x="430.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$363.6M  (68.6%)</text>
+<rect x="427.00" y="207.16" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="219.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenues / 营业成本</text>
+<text x="430.00" y="232.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$166.2M  (31.4%)</text>
+<text x="399.00" y="427.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Loss deficit / 经营亏损缺口</text>
+<text x="399.00" y="440.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$611.7M  (115.5%)</text>
+<rect x="647.00" y="93.63" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="105.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total OpEx / 经营开支</text>
+<text x="650.00" y="118.63" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$975.3M  (184.1%)</text>
+<text x="873.00" y="130.51" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Product Dev / 研发</text>
+<text x="873.00" y="143.51" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$177.3M  (33.5%)</text>
+<text x="873.00" y="257.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A / 销管费用</text>
+<text x="873.00" y="270.31" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$380.1M  (71.7%)</text>
+<text x="873.00" y="432.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">D&amp;A / 折旧摊销</text>
+<text x="873.00" y="445.80" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$417.9M  (78.9%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">经营层面视图：经营亏损 -$611.7M 以左侧 deficit source 与毛利共同填充经营开支池；不含一次性 ClickHouse 重估收益</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Nebius FY2025 20-F, Consolidated Statements of Operations</text>
+</svg>
