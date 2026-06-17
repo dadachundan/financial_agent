@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">CoreWeave 收入与利润流向 — FY2025（亏损期，单位：百万美元）</text>
+<path d="M 204.00,78.00 C 258.00,78.00 258.00,85.00 312.00,85.00 L 312.00,358.38 C 258.00,358.38 258.00,351.38 204.00,351.38 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,132.94 560.00,132.94 L 560.00,134.94 C 506.00,134.94 506.00,80.00 452.00,80.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,80.00 C 506.00,80.00 506.00,148.94 560.00,148.94 L 560.00,445.06 C 506.00,445.06 506.00,376.12 452.00,376.12 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,370.46 C 382.00,370.46 382.00,377.46 328.00,377.46 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,377.46 C 382.00,377.46 382.00,384.46 436.00,384.46 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,118.94 C 754.00,118.94 754.00,280.00 808.00,280.00 L 808.00,282.00 C 754.00,282.00 754.00,120.94 700.00,120.94 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,120.94 C 754.00,120.94 754.00,296.00 808.00,296.00 L 808.00,298.00 C 754.00,298.00 754.00,122.94 700.00,122.94 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,132.94 C 630.00,132.94 630.00,118.94 684.00,118.94 L 684.00,120.94 C 630.00,120.94 630.00,134.94 576.00,134.94 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,148.94 C 630.00,148.94 630.00,134.94 684.00,134.94 L 684.00,146.39 C 630.00,146.39 630.00,160.39 576.00,160.39 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,160.39 C 630.00,160.39 630.00,160.39 684.00,160.39 L 684.00,393.29 C 630.00,393.29 630.00,393.29 576.00,393.29 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,393.29 C 630.00,393.29 630.00,407.29 684.00,407.29 L 684.00,459.06 C 630.00,459.06 630.00,445.06 576.00,445.06 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,365.38 C 258.00,365.38 258.00,358.38 312.00,358.38 L 312.00,493.00 C 258.00,493.00 258.00,500.00 204.00,500.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="273.38" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="365.38" width="16" height="134.62" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="292.46" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="384.46" width="16" height="115.54" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="132.94" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="148.94" width="16" height="296.12" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="118.94" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="134.94" width="16" height="11.45" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="160.39" width="16" height="232.90" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="407.29" width="16" height="51.77" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="280.00" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="296.00" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="211.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Microsoft 67%</text>
+<text x="179.00" y="224.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.4B  (67.0%)</text>
+<text x="179.00" y="429.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他客户 Other 33%</text>
+<text x="179.00" y="442.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.7B  (33.0%)</text>
+<rect x="331.00" y="67.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$5.1B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.7B  (71.7%)</text>
+<rect x="455.00" y="366.46" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="378.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="391.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.5B  (28.3%)</text>
+<rect x="579.00" y="114.94" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="126.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="139.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$46.0M  (-0.90%)</text>
+<rect x="579.00" y="139.94" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="151.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="164.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$3.7B  (72.6%)</text>
+<rect x="703.00" y="100.94" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="112.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="125.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$1.2B  (-23.7%)</text>
+<rect x="703.00" y="125.94" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="137.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">销售营销 S&amp;M</text>
+<text x="706.00" y="150.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$144.0M  (2.8%)</text>
+<rect x="703.00" y="150.94" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="162.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">技术与基础设施 Tech &amp; Infra</text>
+<text x="706.00" y="175.94" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.9B  (57.1%)</text>
+<rect x="703.00" y="389.29" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="401.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">管理费用 G&amp;A</text>
+<text x="706.00" y="414.29" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$651.0M  (12.7%)</text>
+<text x="833.00" y="278.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="291.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$1.2B  (-22.7%)</text>
+<text x="833.00" y="303.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="316.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$48.0M  (-0.94%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: CRWV FY2025 10-K, Consolidated Statements of Operations + Note 17 Concentrations</text>
+</svg>
