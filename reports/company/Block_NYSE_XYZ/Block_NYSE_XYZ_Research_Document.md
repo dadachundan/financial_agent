@@ -1,415 +1,495 @@
-# Block, Inc. (NYSE:XYZ) — Initiating Coverage
+# Company Research: Block, Inc. (NYSE: XYZ)
 
-**As of:** 2026-06-03
+As of: 2026-06-18 | Refresh (data through Q1'26 + decision layer + 9 SVG charts)
 
-> **Banner — FY26 guide raised (Q1 2026 print):** Block raised full-year 2026 guidance on its Q1 2026 print. Management now expects FY26 gross profit growth of **~19% YoY**, Adjusted Operating Income of **$3.34B** at a **27% margin**, and **+62% Adjusted Diluted EPS growth**, versus a "preliminary view" of 17% gross-profit growth shared at Investor Day in November 2025. The raise was driven by Q1 2026 gross profit of **$2.91B (+27% YoY)**, with Cash App gross profit of $1.91B (+38%) and Square gross profit of $982M (+9%). Source: [Block Q1 2026 shareholder letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm).
+> *Analyst view:* **Rating: Overweight · 12-month Price Target $90 (≈ +21% from $74.53) · Method: 18.5× FY2027E Adjusted Diluted EPS ~$4.80**
+> Market cap $44.4B · EV ~$44.8B · 52-week range $48.21–$82.50 · NYSE:XYZ (current $74.53, [Yahoo Finance via yfinance, 2026-06-18 close](https://finance.yahoo.com/quote/XYZ/))
+>
+> **Forward valuation matrix** (FY25A = reported; FY26E/FY27E = *Analyst view*. Note: framed on **gross profit** — bitcoin-ecosystem revenue of $8.5B is almost entirely pass-through, so total revenue is misleading; the Street values Block on gross profit / adjusted EPS).
+>
+> | Multiple | FY2025A | FY2026E | FY2027E |
+> |---|---|---|---|
+> | EV/Gross Profit | 4.3× | 3.6× | 3.1× |
+> | EV/Sales (total revenue incl. BTC pass-through) | 1.8× | ~1.7× | ~1.6× |
+> | P/S (TTM, total-revenue basis) | 1.8× | ~1.7× | ~1.6× |
+> | P/E (Adjusted Diluted EPS) | ~31× (FY25 Adj EPS ~$2.38) | ~19× | ~16× |
+> | P/E (GAAP Diluted EPS) | ~35× (GAAP EPS $2.10) | n/m | n/m |
+>
+> **Relative performance (as of 2026-06-18 close $74.53, vs S&P 500, source: yfinance):** 1M: XYZ +5.5% / SPX +1.2% (rel +4.3pp) · 6M: +15.7% / +10.6% (+5.2pp) · YTD: +14.5% / +9.5% (+5.1pp) · 12M: +18.1% / +25.3% (rel **−7.1pp**)
+>
+> **Thesis pillars** — (1) **A "layoff + AI efficiency" margin inflection is being delivered:** the >40% workforce cut (announced Feb 2026) drove a raised FY26 guide — Adjusted Operating Income (AOI) $3.34B (27% margin, +60% YoY) and adjusted diluted EPS +62% — a clear shift from "growth at any cost" to disciplined profit compounding. (2) **Cash App is an under-appreciated gross-profit engine:** Q1'26 Cash App segment gross profit $1.91B (+38% YoY), with Financial Solutions (Cash App Borrow consumer lending) gross profit accelerating to +55% and per-active-user monetization (Financial Solutions GP/active user $15, +57% YoY) outpacing user growth. (3) **Square is back on track:** Q1'26 Square segment GP +9% YoY; Morgan Stanley's SMB survey shows Square CSAT 96% vs Toast 44% / Clover 30%, with the "highest share of likely switchers" choosing Square. (4) **Bitcoin is noise, not the thesis:** the bitcoin ecosystem is 35% of revenue but <4% of gross profit; balance-sheet bitcoin remeasurement hits GAAP net income directly — Block must be read on gross profit and adjusted metrics.
 
-> **Banner — Workforce reduction of 40%+ announced 2026-02-26.** Concurrent with the FY25 10-K filing, Block announced a "Workforce Plan" cutting headcount by more than 40% from a 2025-end base of 10,205 full-time employees, with cash and non-cash charges of **$450M–$500M** booked primarily in Q1 2026. Substantial completion expected by end of Q2 2026. Source: [Block FY2025 Form 10-K, Risk Factors and Subsequent Events](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm).
+> **Update — FY2026 guidance raised + Q1'26 beat (2026-05-07):** Block **raised** full-year FY2026 guidance in Q1'26 results: gross profit growth of **~19%** (to ~**$12.33B**), AOI **$3.34B** (27% margin, +60% YoY) and adjusted diluted EPS **$3.85** (+62% YoY) — up from the Nov-2025 Investor Day "preliminary 17% gross-profit growth." Q1'26 gross profit was **$2,909M, +27% YoY** (Cash App segment $1,908M +38%, Square segment $982M +9%); AOI was a record **$728M** (25% margin, an "all-time high"); GAAP operating loss was $(172)M (including **$852M** of restructuring/legal charges); GAAP diluted EPS $(0.52); adjusted diluted EPS $0.85 (+52% YoY). Source: [Block Q1'26 Shareholder Letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm); [Block Q1'26 10-Q, Statements of Operations](https://www.sec.gov/Archives/edgar/data/1512673/000162828026032200/xyz-20260331.htm).
+
+---
 
 ## Table of Contents
+
 1. [Company Overview](#1-company-overview)
+1A. [Valuation & Price Target](#1a-valuation--price-target)
+1B. [GF Score Fundamental Scorecard](#1b-gf-score-gurufocus-style-fundamental-scorecard)
 2. [Company History](#2-company-history)
-3. [Management Team](#3-management-team)
-4. [Products and Services](#4-products-and-services)
-5. [Customers and Concentration](#5-customers-and-concentration)
+3. [Management](#3-management)
+4. [Products & Services](#4-products--services)
+5. [Customers & Concentration](#5-customers--concentration)
 6. [Industry Overview](#6-industry-overview)
 7. [Competitive Landscape](#7-competitive-landscape)
-8. [Market Opportunity](#8-market-opportunity)
+8. [Market Opportunity (TAM)](#8-market-opportunity-tam)
 9. [Risk Assessment](#9-risk-assessment)
-10. [Investor-Lens Scorecards](#10-investor-lens-scorecards)
-11. [References](#references)
+9.5 [Key Debates & Catalysts](#95-key-debates--catalysts)
+10. [Investment-Lens Scorecards](#10-investment-lens-scorecards)
 
 ---
 
 ## 1. Company Overview
 
-**Block, Inc. (NYSE:XYZ; formerly Square, Inc. / NYSE:SQ until December 1, 2021)** is a Delaware-domiciled financial services and payments holding company that operates as two interlocking ecosystems — **Square** (a software-and-payments operating system for ~4.5M sellers worldwide) and **Cash App** (a US consumer financial services app with monthly transacting actives in every one of the 50 states and nearly every US county as of December 2025). The company describes its overarching purpose as "economic empowerment, helping individuals and businesses manage, move, and grow their money," and operates under a distributed-work model — Block no longer designates a corporate headquarters under SEC rules ([Block FY2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). The legal change of name from Square, Inc. to Block, Inc. on December 1, 2021 — and the change of NYSE ticker from SQ to XYZ effective January 2, 2026 — reflect management's view that the company is now a broader payments-fintech-bitcoin platform rather than the seller-payments specialist it began as in 2009.
+*Analyst view:* This refresh maintains coverage of Block with an **Overweight** rating and a 12-month price target of **$90** (+21%). Why now: Block is in an under-appreciated "mode switch" — from the Jack-Dorsey-era "expand products at any cost" to "lay off 40% + AI-native + margin discipline." The >40% workforce cut announced alongside the FY25 10-K (Feb 2026) was the trigger; Q1'26 results delivered the first proof: gross-profit growth accelerated to +27% YoY, AOI margin hit a record 25%, and the full-year FY26 guide was raised. Meanwhile Cash App's consumer lending (Cash App Borrow) is entering a monetization-acceleration phase, and Square showed share and stickiness gains in SMB surveys. Risk-reward is positive: the stock trades at only ~16× FY27E adjusted P/E while the slope of profit compounding is steepening — a "quality at a reasonable price" window. We do not chase, but we add. The key falsification points are Cash App lending loss rates and post-layoff execution speed.
 
-**Reporting structure:** Block's CODM (the "Block Head and Chairperson," a position held by co-founder Jack Dorsey) reviews performance across **two reportable segments — Square and Cash App** — plus a Corporate / other line that captures TIDAL music streaming, Bitkey (self-custody bitcoin wallet), Proto (bitcoin mining systems), Spiral, and other emerging bitcoin-ecosystem work ([Block FY2025 10-K, Note 1 Description of Business](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Beginning in fiscal 2025 the company *also* re-classified revenue across three categories — **Commerce Enablement**, **Financial Solutions**, and **Bitcoin Ecosystem** — to better surface the post-Afterpay business mix; the segment view (Square / Cash App) and the revenue-category view sit side by side in disclosure ([Block FY2025 10-K, MD&A Revenue](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**What the company does.** Block runs two customer-facing reportable ecosystems — **Square** (a merchant-side commerce operating system) and **Cash App** (a consumer financial super-app) — plus a Corporate / Other line carrying TIDAL, Bitkey, Proto, and Spiral. The 10-K positions the strategy as "integrated payments, banking, lending, and commerce solutions" via shared infrastructure spanning embedded financial services, automation, and the open Bitcoin protocol ([Block FY2025 10-K, Item 1 Business — Our Ecosystems](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). In short: Square lets ~4.5M SMB merchants accept card payments and layers on vertical POS software and embedded lending; Cash App converts free P2P transfer relationships into recurring monetization via Cash App Card + brokerage + lending (Borrow) + BNPL (Afterpay) + bitcoin. The company renamed from Square, Inc. to Block, Inc. (2021-12), and its NYSE ticker changed from SQ to **XYZ** on 2026-01-02 ([Block FY2025 10-K, cover page ticker XYZ](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-**FY2025 income statement headline (audited, 10-K).** Total net revenue of **$24.19B** (up just 0.3% YoY, weighed down by Bitcoin Ecosystem revenue declining), total gross profit of **$10.4B (+17% YoY)**, GAAP operating income of **$1.71B** (vs. $892M in 2024), Adjusted Operating Income of **$2.1B** (vs. $1.6B), and net income attributable to common stockholders of **$1.3B** ($2.41 basic / $2.37 diluted EPS) versus $2.87B in 2024 — with the YoY net-income decline driven primarily by a $55.9M loss on bitcoin remeasurement in 2025 vs. a $420.9M gain in 2024 plus higher transaction-loss reserves ([Block FY2025 10-K, MD&A Results of Operations](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Cash App segment generated $6.34B in gross profit (+21% YoY) on $15.43B segment net revenue; Square segment generated $3.94B in gross profit (+9%) on $8.45B segment net revenue ([Block FY2025 10-K, MD&A Segment Results](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**How it makes money.** Block is measured on **gross profit**, not total revenue — a critical point. FY2025 total revenue was $24,193.7M, but the Bitcoin Ecosystem contributed $8,502.8M of nearly pure pass-through (cost $8,083.8M, gross profit only ~$419M), so total revenue is severely misleading. FY2025 consolidated gross profit was $10,359.9M (43% margin), split by operating segment: **Cash App $6,335.5M, Square $3,935.0M, Corporate & Other $89.3M** ([Block FY2025 10-K, Note 22 — Segment Information](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). By revenue product: Commerce Enablement $11,514.2M, Financial Solutions $4,176.7M, Bitcoin Ecosystem $8,502.8M ([Block FY2025 10-K, Revenue Note — disaggregation by product](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-**Cash, liquidity, and capital structure.** Block ended 2025 with **$9.19B of total liquidity** (cash, cash equivalents, restricted cash, and marketable debt securities), down from $10.70B at year-end 2024, plus an undrawn $775M revolving credit facility ([Block FY2025 10-K, Liquidity and Capital Resources](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Total cash, cash equivalents, restricted cash, and customer funds were $12.48B at year-end 2025, down $749M from year-end 2024. Operating cash flow for 2025 was $2.58B over the trailing twelve months ending Q4 2025 (per the Q4 2025 shareholder letter), and free cash flow was approximately $2.4B ([Block Q4 2025 shareholder letter, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)). The company carries Senior Notes of $1.0B at 2.75% due 2026 and $1.0B at 3.50% due 2031 plus other instruments ([Block FY2025 10-K, Exhibit Index](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**Scale and profitability.** FY2025 operating income $1,708.4M (FY2024 $892.3M; FY2023 operating loss $(278.8)M), net income $1,304.2M, net income to common $1,305.6M, GAAP diluted EPS $2.10 ([Block FY2025 10-K, Consolidated Statements of Operations](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Note FY2024 net income $2,866.5M included a ~$1.9B one-time tax benefit (valuation-allowance release + legal-entity restructuring), so the FY2025 GAAP net "decline" is a high-base artifact — operating income actually grew +91% YoY. Q1'26: total revenue $6,056.8M, gross profit $2,909.2M (+27% YoY), operating loss $(172.0)M (incl. $852M restructuring/legal), net loss to common $(308.7)M, GAAP diluted EPS $(0.52); non-GAAP AOI $728M (record 25% margin), adjusted diluted EPS $0.85 (+52% YoY) ([Block Q1'26 10-Q](https://www.sec.gov/Archives/edgar/data/1512673/000162828026032200/xyz-20260331.htm); [Block Q1'26 Shareholder Letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)). Headcount: 10,205 full-time employees at 2025-12-31 (2,472 outside the US); >40% reduction announced Feb 2026, substantially complete by end of Q2 2026 ([Block FY2025 10-K, Human Capital + Subsequent Events](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). HQ: Oakland, CA.
 
-**Valuation snapshot (as of 2026-06-03).** Stock at **$74.15**, market cap **~$44.1B**, fully-diluted shares ~535M ([Yahoo Finance — XYZ Statistics, 2026-06-03](https://finance.yahoo.com/quote/XYZ/key-statistics/)). **TTM P/E ~58×**, **forward P/E ~14.9×**, **TTM P/S ~1.8×**, **EV/EBITDA ~28.5×**, 52-week range $48.21 – $82.50 ([Yahoo Finance — XYZ Summary, 2026-06-03](https://finance.yahoo.com/quote/XYZ/)). The spread between trailing and forward P/E (~58× to ~15×) is the most important valuation tell in the name today and reflects three convergent factors: (i) FY25 net income was depressed by the $55.9M bitcoin remeasurement loss and by elevated transaction-loss reserves, (ii) the announced ~40% workforce cut is forecast to drop $450M–$500M of one-time severance into Q1 / Q2 2026 GAAP results, masking the underlying Adjusted Operating Income trajectory, and (iii) management is guiding to **27% Adjusted Operating Income margin** in FY26 (up from ~20% in FY25), which mathematically compresses the forward multiple as run-rate earnings step up ([Block Q1 2026 shareholder letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)). *Analyst view:* the forward P/E of ~15× sits at or below the broad large-cap-software median (~18–25× per S&P 500 software sector data) and substantially below high-growth fintech peers PayPal (~13× fwd) and Shopify (~70× fwd) — implying the market is currently underpricing Block's FY26 EPS trajectory if guidance is met.
+**Income-statement Sankey (FY2025).** The chart below renders the FY2025 income statement as a money flow: total revenue $24,194M splits by product (Commerce Enablement 47.6% + Financial Solutions 17.3% + Bitcoin Ecosystem 35.1%), and after cost of revenue (COGS $13,834M — mostly bitcoin purchases $8,084M + interchange/processing) leaves gross profit $10,360M (43%), then opex (R&D/Product development $2,908M, SG&A $4,271M, other opex incl. transaction losses $1,337M + intangibles $136M = $1,473M) yields operating income $1,708M (7%); net interest/other of ~−$18M leaves after-tax net income $1,304M. The point: Block's "low 5% net margin" is mostly the bitcoin pass-through inflating the denominator — **real profitability is the 43% gross margin and 7% operating margin.** All figures verbatim from [10-K FY2025 Consolidated Statements of Operations + Note 22](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm).
 
-```mermaid
-xychart-beta
-    title "Block — Revenue and Gross Profit Trend ($B, FY2023–FY2025)"
-    x-axis [FY2023, FY2024, FY2025]
-    y-axis "USD Billions" 0 --> 28
-    bar [21.92, 24.12, 24.19]
-    line [7.50, 8.89, 10.40]
-```
+![Block income-statement Sankey FY2025](charts/xyz_income_sankey.svg)
 
-Source: [Block FY2025 10-K, MD&A Revenue table](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); bars = total net revenue, line = total gross profit.
+Source: [Block FY2025 10-K, Consolidated Statements of Operations + Note 22 Segment & Revenue](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)
+
+**Historical revenue by product (development over time).** The chart shows FY2023→FY2025 revenue by the three product lines — the dominant trend is **Bitcoin Ecosystem revenue shrinking from $9,668M (FY23) to $8,503M (FY25)** (weaker crypto trading + a deliberate fee cut on Cash App bitcoin) while **Commerce Enablement ($9,530M→$11,514M) and Financial Solutions ($2,717M→$4,177M, +24% CAGR) climbed steadily** — structurally shifting from "bitcoin pass-through" toward high-margin payments + consumer lending, which is why gross margin improved from 34% (FY23) to 43% (FY25).
+
+![Block revenue by product revbars FY2023-FY2025](charts/xyz_revbars.svg)
+
+Source: [Block FY2025 10-K, Revenue Note — disaggregation by product (FY2023–FY2025)](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)
+
+**Revenue by geography (FY2025).** Block is highly US-concentrated — FY2025 US revenue $22,186.6M (92%), International $2,007.1M (8%); Q1'26 US $5,530.8M, International $526.1M ([Block FY2025 10-K, Note 22 — Revenue by Geographic Area](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); [Block Q1'26 10-Q, geographic revenue](https://www.sec.gov/Archives/edgar/data/1512673/000162828026032200/xyz-20260331.htm)). International is mainly Afterpay's home market Australia plus the UK, Canada, Japan, Ireland, France, Spain; no single foreign country exceeds 10% of revenue.
+
+![Block geography donut FY2025](charts/xyz_geo_donut.svg)
+
+Source: [Block FY2025 10-K, Note 22 — Revenue by Geographic Area](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)
+
+**Gross profit by operating segment (FY2025).** Splitting gross profit by Block's two operating segments: **Cash App $6,336M (61%) > Square $3,935M (38%) > Corporate & Other $89M (1%)** — Cash App is already the larger and faster-growing gross-profit engine (FY25 +21% YoY vs Square +9%). This contrasts sharply with the impression total revenue gives that bitcoin is the main act.
+
+![Block segment donut FY2025](charts/xyz_segment_donut.svg)
+
+Source: [Block FY2025 10-K, Note 22 — Segment Information (gross profit by segment)](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)
+
+## 1A. Valuation & Price Target
+
+This section is entirely *Analyst view:* (forecasts, target price, and scenario targets are the analyst's own forward judgment, carrying no filing citation; each driver's external basis is cited inline).
+
+### (a) Forward financial model (3-year, gross profit + adjusted EPS basis)
+
+*Analyst view:* Forecast basis: FY2026 company guidance — gross profit ~+19% (≈$12.33B), AOI $3.34B (27% margin, +60% YoY), adjusted diluted EPS $3.85 (+62%), Q2'26 gross profit $3.04B (+20%) + AOI $740M (24% margin) (source: [Block Q1'26 Shareholder Letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm); cross-check *Analyst view:* [Goldman Sachs — Block 1Q26 Takeaways, 2026-05-08, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212458412282221/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9A%201Q26%20Takeaways%EF%BC%9A%20Solid%20top%20and%20bottom%20line%20beat%20and%20continued%20acceleration%20across%20multiple%20metrics%20should%20sustain-260508.pdf), GS: "For FY26, XYZ expects gross profit of $12.33bn… Adjusted EPS is expected to be $3.85"); historicals from [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm).
+
+| Metric (*Analyst view:* E cols) | FY2023A | FY2024A | FY2025A | FY2026E | FY2027E | 25–27E CAGR |
+|---|---|---|---|---|---|---|
+| Gross Profit ($M) | 7,505 | 8,889 | 10,360 | 12,330 | 14,300 | +17.5% |
+| — YoY | — | +18% | +17% | +19% | +16% | |
+| AOI ($M) | n/a | ~2,090 | ~2,775 | 3,340 | ~3,950 | +19% |
+| — AOI margin (% of GP) | | ~24% | ~27% | 27% | ~28% | |
+| Adjusted Diluted EPS ($) | n/a | ~1.46 | ~2.38 | 3.85 | ~4.80 | +42% |
+| GAAP Operating Income ($M) | (279) | 892 | 1,708 | ~1,900 | ~2,800 | |
+| GAAP Diluted EPS ($) | 0.02 | 4.56* | 2.10 | ~2.4 | ~3.6 | |
+| Total Revenue ($M, incl. BTC pass-through) | 21,916 | 24,121 | 24,194 | ~25,500 | ~27,500 | |
+| Free Cash Flow (CFO−capex, $M) | ~−50 | ~1,553 | ~2,425 | ~3,000 | ~3,400 | |
+
+*FY2024 GAAP EPS $4.56 included ~$1.9B one-time tax benefit (valuation-allowance release), non-recurring. AOI FY23/24/25 reverse-engineered from "FY26 AOI $3.34B = +60% YoY" → FY25 ≈ $2.09B (company's own YoY framing); FY25 ≈ $2.78B is this report's estimate (consistent with 27% AOI margin × $10.36B gross profit).
+
+Input sources: FY2025 CFO $2,580M, capex (PP&E purchases) $155M, total debt (LT $5,716M + current $1,573M = $7,289M), cash $6,564M from [10-K FY2025 cash-flow statement + balance sheet](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); Q1'26 GP $2,909M, AOI $728M, adjusted EPS $0.85 from [Q1'26 Shareholder Letter](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm).
+
+**Margin bridge (AOI margin FY2024→FY2026E ~24%→27%, *Analyst view:*):** >40% layoff + AI efficiency ≈ +250–300bp of operating leverage (already visible in Q1'26 — opex "much lower, benefiting from lower headcount," *Analyst view:* [Goldman Sachs, 2026-05-08, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212458412282221/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9A%201Q26%20Takeaways%EF%BC%9A%20Solid%20top%20and%20bottom%20line%20beat%20and%20continued%20acceleration%20across%20multiple%20metrics%20should%20sustain-260508.pdf)); higher-margin Cash App consumer-lending mix ≈ +100bp (Financial Solutions GP +55% YoY in Q1'26); partly offset by rising transaction/loan losses (FY25 losses $1,337M = 13% of GP, up from 9% in FY24, [10-K FY2025 MD&A](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) ≈ −80bp.
+
+### (b) Price-target derivation (show the arithmetic)
+
+*Analyst view:* Method: **P/E × FY2027E adjusted diluted EPS** (Block is GAAP-profitable but GAAP EPS is distorted by bitcoin remeasurement and one-time tax items; the Street uses adjusted metrics; cross-checked with EV/GP):
+
+- FY2027E adjusted diluted EPS = **~$4.80** (table above; = FY26E $3.85 × ~+25%, driven by GP +16% × slight AOI-margin lift × buyback-driven share shrink)
+- Target multiple = **18.5×** — comp anchors: Morgan Stanley uses 18× '27 Adj. EPS (PT $98, "Our $98 PT for XYZ is based on a 18x P/E multiple on our '27 Adj. EPS," *Analyst view:* [Morgan Stanley, 2026-06-02](http://xs-macbook-air.local:5001/zsxq/pdf/184152881184542/Morgan%20Stanley-Block%EF%BC%8C%20Inc%EF%BC%88XYZ.US%EF%BC%89Highlighting%20Square%27s%20Strength%20in%20our%20SMB%20Survey%EF%BC%9B%20Reiterate%20OW-260602.pdf)); Goldman Sachs uses 17× Q5-Q8 EPS (PT $95, "Our 12-month price target of $95 is based on a 17x P/E target multiple on Q5-Q8 EPS," and notes the stock at "~13x our 2027 EPS," *Analyst view:* [Goldman Sachs roadshow, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/214528142888121/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9AKey%20takeaways%20from%20roadshow%20meetings-260611.pdf)). We use 18.5× (slightly below MS, since our EPS estimate is a touch more conservative, but recognizing the steepening profit-compounding slope).
+- PT = 18.5 × $4.80 = **$89 ≈ $90/share**
+- Cross-check (EV/GP): $90 × ~600M diluted shares ≈ equity $54B + net debt ~$0.7B = EV ~$55B ÷ FY27E GP $14.3B = **EV/GP ~3.8×**, within the 3–5× range for payments + consumer-finance peers.
+
+### (c) Bull / Base / Bear scenarios
+
+| Scenario (*Analyst view:*) | Key assumptions | Target | vs $74.53 |
+|---|---|---|---|
+| Bull | Layoff efficiency + Cash App Borrow ramp + Square GPV re-acceleration; FY27E Adj EPS $5.30, 21× | **$111** | **+49%** |
+| Base | Central case: FY27E Adj EPS $4.80 × 18.5× | **$90** | **+21%** |
+| Bear | US consumer-credit cycle deteriorates: Cash App Borrow losses spike + Square Loans throughput falls + bitcoin remeasurement hits GAAP; FY27E Adj EPS $4.10, multiple compresses to 14× | **$57** | **−23%** |
+
+*Analyst view:* Risk-reward is positive — upside $111 (+49%) vs downside $57 (−23%), ~2.1:1, a relatively symmetric, upward-tilted shape for an already-profitable compounder trading at only ~16× FY27E adjusted P/E (in stark contrast to a "fat-left-tail" high-leverage story like CoreWeave). Our $90 is directionally aligned with GS $95 and MS $98 but more conservative, mainly in our FY27E EPS estimate and target multiple.
+
+### (d) Guide vs Street vs This-report
+
+| Metric (FY2026E) | Company guide | Street consensus | This report (*Analyst view:*) |
+|---|---|---|---|
+| Gross profit | ~+19% (≈$12.33B, [Q1'26 letter](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)) | ~$11.9B (guide ~4% above, *Analyst view:* [GS, 2026-05-08](http://xs-macbook-air.local:5001/zsxq/pdf/212458412282221/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9A%201Q26%20Takeaways%EF%BC%9A%20Solid%20top%20and%20bottom%20line%20beat%20and%20continued%20acceleration%20across%20multiple%20metrics%20should%20sustain-260508.pdf)) | $12.33B (in-line with guide) |
+| AOI | $3.34B (27% margin) | ~$2.65B (guide ~26% above!) | $3.34B |
+| Adjusted diluted EPS | $3.85 (+62%) | ~$3.70 (guide ~4% above) | $3.85 |
+
+*Analyst view:* GS explicitly flags FY26 AOI guidance of $3.34B as **~26% above Street consensus** ("Adjusted Operating Income is expected to be $3.34bn or 27% margin (+26% vs consensus)," [GS, 2026-05-08](http://xs-macbook-air.local:5001/zsxq/pdf/212458412282221/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9A%201Q26%20Takeaways%EF%BC%9A%20Solid%20top%20and%20bottom%20line%20beat%20and%20continued%20acceleration%20across%20multiple%20metrics%20should%20sustain-260508.pdf)) — this is the core quantitative basis for our Overweight: the layoff-driven margin upgrade is not yet fully in consensus.
+
+### Sell-side view evolution
+
+Mechanical pre-pass: `db/stock_price_target.db` (read-only) holds 3 XYZ records (2026-05-08 to 2026-06-02), all positive (GS Buy $95, MS Overweight $98, Bernstein Outperform [stablecoins theme, no single PT]); PT range **$95–$98**, spread only ~3%, median ~$96 — **highly aligned bullish** (vs CoreWeave's $67-vs-$135 bipolar split). Plus this refresh's GS roadshow note (2026-06-11) and Bernstein agentic-payments note (2026-06-11).
+
+| Institute | Date | Rating / PT | Report-date price (implied) | One-line thesis |
+|---|---|---|---|---|
+| Goldman Sachs | 2026-05-08 | Buy / $95 | $74.85 (+27%) | Q1 GP beat; risk-loss growth peaking; AI efficiency; Square velocity recovering — "top picks," stock ~13× 2027 EPS (*Analyst view:* [GS — 1Q26 Takeaways, 2026-05-08](http://xs-macbook-air.local:5001/zsxq/pdf/212458412282221/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9A%201Q26%20Takeaways%EF%BC%9A%20Solid%20top%20and%20bottom%20line%20beat%20and%20continued%20acceleration%20across%20multiple%20metrics%20should%20sustain-260508.pdf)) |
+| Bernstein | 2026-05-25 | Outperform / stablecoins (no single PT) | $68.08 | Stablecoin opportunities in the payments stack; Block a beneficiary (*Analyst view:* [Bernstein — Stablecoins, 2026-05-25](http://xs-macbook-air.local:5001/zsxq/pdf/415241528451848/Bernstein-Payments%EF%BC%8C%20Processors%20%26%20IT%20Services%20Payments%EF%BC%9A%20Stablecoins%20%E2%80%94%20What%20we%20learned%20from%20our%20dozens%20of%20industry%20conversations%EF%BC%9B%20Slide%20deck-260525.pdf)) |
+| Morgan Stanley | 2026-06-02 | **Overweight / $98** | $74.15 (+32%) | SMB survey confirms Square strength: CSAT 96% vs Toast 44% / Clover 30%, highest share of switchers to Square; PT = 18× '27 Adj EPS (*Analyst view:* [MS — SMB Survey, 2026-06-02](http://xs-macbook-air.local:5001/zsxq/pdf/184152881184542/Morgan%20Stanley-Block%EF%BC%8C%20Inc%EF%BC%88XYZ.US%EF%BC%89Highlighting%20Square%27s%20Strength%20in%20our%20SMB%20Survey%EF%BC%9B%20Reiterate%20OW-260602.pdf)) |
+| Goldman Sachs | 2026-06-11 | Buy / $95 (maintained) | ~$72 (+32%) | Roadshow: Cash App product momentum, Square merchant expansion, layoff efficiency; reaffirms 17× Q5-Q8 EPS (*Analyst view:* [GS — roadshow, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/214528142888121/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9AKey%20takeaways%20from%20roadshow%20meetings-260611.pdf)) |
+
+**Cross-institute alignment & this report's stance:** all three majors (GS / MS / Bernstein) are positive, PT $95–98, minimal disagreement, with highly convergent theses — "layoff efficiency + Cash App monetization + Square recovery." Our Overweight/$90 is aligned but ~5–8% more conservative, reflecting our somewhat lower FY27E adjusted EPS ($4.80) and target multiple (18.5×); we also weight the consumer-credit cycle as the primary downside variable (see Bear case and Section 9).
+
+### (e) Swing variables
+
+*Analyst view:* The rating hinges most on two assumptions to pressure-test: (1) **the Cash App Borrow loss-rate inflection** — GS notes the company "signaled a peak in risk loss growth," key to long-only investors stepping in (per [GS, 2026-05-08](http://xs-macbook-air.local:5001/zsxq/pdf/212458412282221/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9A%201Q26%20Takeaways%EF%BC%9A%20Solid%20top%20and%20bottom%20line%20beat%20and%20continued%20acceleration%20across%20multiple%20metrics%20should%20sustain-260508.pdf)) — a re-acceleration of losses would reverse Financial Solutions' high-margin growth; (2) **post-layoff execution speed** — cutting >40% of staff while accelerating the product roadmap (management's "speed/AI-native" rationale) risks knowledge loss or morale damage that slows Square GPV and Cash App feature velocity.
+
+## 1B. GF Score (GuruFocus-style) Fundamental Scorecard
+
+*Analyst view:* **GF Score (GuruFocus-style, composite): 62/100 — 51–70 band (below-average-to-average future-performance potential).** This depicts Block's core profile: an **already-profitable, steadily-growing, fairly-valued payments + consumer-finance compounder, slightly held back on quality by multi-ecosystem complexity and bitcoin exposure** — all five axes sit in the "solid but not stellar" 6–7 range, with none of CoreWeave's extreme "Growth 10 / Financial Strength 2" divergence. **This scorecard is the analyst's own rubric (distinct from GuruFocus's proprietary algorithm and not a GuruFocus product); the five sub-scores and composite are *Analyst view:* and carry no filing citation; each underlying metric is cited inline below.** Note: the GF Value axis runs "higher = cheaper," so Block's 6/10 means "reasonably valued, slightly cheap."
+
+![Block GF Score radar](charts/xyz_gf_score.svg)
+
+> Farther from center = higher score; larger pentagon area = higher composite GF Score (same reading as the GuruFocus widget).
+
+| Axis | Score (0–10) | |
+|---|---|---|
+| Financial Strength | 6 | `██████░░░░` |
+| Profitability | 6 | `██████░░░░` |
+| Growth | 7 | `███████░░░` |
+| GF Value (higher = cheaper) | 6 | `██████░░░░` |
+| Momentum | 6 | `██████░░░░` |
+| **GF Score (composite, *Analyst view:*)** | **62 / 100** | **51–70 below-average-to-average band** |
+
+*Composite weights (*Analyst view:* transparent replica, not GuruFocus's proprietary weights): Financial Strength 20% · Profitability 25% · Growth 25% · GF Value 15% · Momentum 15%.*
+
+**Financial Strength: 6/10.** Solid balance sheet but goodwill-heavy. At 2025-12-31, cash $6,564M vs total debt (LT $5,716M + current $1,573M = $7,289M) — a near-net-neutral debt position; equity $22,170M is 56% of total assets $39,550M; but goodwill $11,849M + intangibles $1,282M are ~33% of assets (Afterpay legacy), so tangible equity is thinner ([10-K FY2025, balance sheet](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Interest coverage is ample — FY2025 operating income $1,708M ÷ net interest $129M ≈ 13×. Not higher because of high goodwill share + bitcoin balance-sheet exposure.
+
+**Profitability: 6/10.** GAAP-profitable but net margin diluted by bitcoin pass-through. FY2025 gross margin 43%, operating margin 7% (the "true" operating margin ex-bitcoin is higher), GAAP net margin 5.4%, ROE ~6.0% (net income $1,304M ÷ avg equity $21.7B, see DuPont below) ([10-K FY2025](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Non-GAAP is brighter — FY2025 AOI margin (of GP) ~27%, Q1'26 record 25% ([Q1'26 letter](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)). Not higher because GAAP ROE is still single-digit and transaction/loan losses (13% of GP) are rising.
+
+**Growth: 7/10.** Gross-profit compounding is steady and accelerating: FY2023 $7,505M → FY2024 $8,889M (+18%) → FY2025 $10,360M (+17%) → Q1'26 +27% YoY; forward path strong — FY2026 GP guide +19%, adjusted EPS +62% ([10-K FY2025 MD&A](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); [Q1'26 letter](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)). Cash App segment GP +38% YoY in Q1'26 stands out. Not 8–9 because total revenue is nearly flat (bitcoin shrinkage offsets payment growth).
+
+**GF Value: 6/10.** Reasonably valued, slightly cheap. The stock trades at FY26E adjusted P/E ~19×, FY27E ~16×, EV/FY26E GP ~3.6×, GAAP diluted P/E ~35× ([Yahoo Finance via yfinance, 2026-06-18](https://finance.yahoo.com/quote/XYZ/)); GS notes the stock at only ~13× 2027 EPS (*Analyst view:* [GS, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/214528142888121/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9AKey%20takeaways%20from%20roadshow%20meetings-260611.pdf)). Against the 1A Damodaran fair value ~$87 vs $74.53, there is ~+17% margin of safety. Not higher because it is not "deeply undervalued" — just reasonable.
+
+**Momentum: 6/10.** Near-to-mid momentum solid, long-term slightly lagging the index. YTD +14.5% (rel SPX +5.1pp), 6M +15.7% (+5.2pp), 1M +5.5% (+4.3pp), near 52-week high $82.50; but 12M +18.1% trails SPX +25.3% (rel −7.1pp) (source: yfinance, 2026-06-18, consistent with the header). Not higher because the 12-month axis still trails the index.
+
+**Composite arithmetic:** (FS 6×20 + Prof 6×25 + Growth 7×25 + Value 6×15 + Mom 6×15) / 100 = (120 + 150 + 175 + 90 + 90) / 100 = 625 / 100 → **62/100**. Under the GuruFocus framework, 51–70 is the "below-average-to-average" band ([GuruFocus GF Score page](https://www.gurufocus.com/term/gf-score); note: Cloudflare-protected, returns 403 to curl/urllib — anti-bot, not a dead link; this report cites only the methodology framework, not GuruFocus's official number).
+
+**Most-movable axis / failure mode:** Profitability and Growth are the upside levers — if the FY26 AOI guide of $3.34B (26% above consensus) is delivered, Profitability could rise from 6 to 7 and the composite by ~3–5 points; conversely, a re-acceleration in Cash App consumer-credit losses pressures both Growth and Profitability. The composite is consistent with this report's Overweight rating, the 1A "positive risk-reward" judgment, and Section 10's mid-positive lens scores.
+
+**ROE decomposition (DuPont, FY2025).** Block FY2025 ROE ≈ **6.0%** (net income $1,304M ÷ avg equity ~$21.7B), built from net margin 5.4% (diluted by bitcoin pass-through) × asset turnover 0.63 × equity multiplier 1.76 (relatively low leverage for payments peers, reflecting the 56% equity share). The chart visualizes the three factors — the low ROE is mainly driven by **net margin being depressed by the bitcoin pass-through inflating the denominator** (the "operating ROE" ex-bitcoin is materially higher) plus the inherently low asset turnover of a financial business. All inputs from [10-K FY2025 income statement + balance sheet](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm).
+
+![Block DuPont ROE decomposition FY2025](charts/xyz_dupont.svg)
+
+Source: [Block FY2025 10-K, Consolidated Statements of Operations + Balance Sheets](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)
+
+**Balance-sheet Sankey (2025-12-31).** Total assets $39,550M split into current $22,857M (58%, incl. cash $6,564M, customer funds $4,772M, consumer receivables $2,670M, loans held for investment $3,383M) + non-current $16,693M (goodwill $11,849M the largest block); liabilities total $17,380M (customers payable $6,805M + long-term debt $5,716M dominate); equity $22,170M (additional paid-in capital $18,895M + retained earnings $3,674M). The point: **Block is low-leverage (equity is 56% of assets), but the asset side carries a lot of "held-for-customer" liquidity (customer funds / customers payable) and goodwill** — understanding the capital structure means separating customer money from owned capital.
+
+![Block balance-sheet Sankey 2025-12-31](charts/xyz_balance_sankey.svg)
+
+Source: [Block FY2025 10-K, Consolidated Balance Sheets (Dec 31, 2025)](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)
+
+**Cash-flow Sankey (FY2025).** FY2025 operating cash flow CFO $2,580M (net income $1,304M + D&A/SBC/non-cash $1,585M − working capital & other −$309M); investing CFI −$2,802M (net consumer/loan originations −$2,760M + securities + capex $155M — note Block is asset-light, capex is only 1.5% of gross profit); financing CFF −$613M (senior notes net +$2,172M − share buybacks −$2,331M − warehouse/customer funds −$454M). The point: **Block generates strong free cash flow (CFO−capex ≈ $2.4B) and returns most of it via buybacks (FY25 $2,331M)** — the capital-allocation evidence of the "margin discipline" story.
+
+![Block cash-flow Sankey FY2025](charts/xyz_cashflow_sankey.svg)
+
+Source: [Block FY2025 10-K, Consolidated Statements of Cash Flows (FY2025)](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)
 
 ## 2. Company History
 
-**Square, Inc. was incorporated in Delaware in June 2009** by co-founders Jack Dorsey (then recently returned to Twitter following his 2008 ousting as CEO) and Jim McKelvey, a St. Louis-based glassblower and entrepreneur who had been unable to accept a credit-card payment for a $2,000 piece of art ([Block FY2025 10-K, Description of Business](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); [Block 2026 Proxy Statement — Director Bios](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)). The Square ecosystem launched in February 2009 with the white plastic magnetic-stripe Square Reader, an iPad-compatible dongle that let any seller — sole proprietors, food trucks, market stalls — accept Visa/Mastercard payments through a smartphone for the first time. The product is described in the 10-K as enabling "businesses to accept card payments, a critical capability that had previously been inaccessible" ([Block FY2025 10-K, Square Ecosystem](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**Square, Inc. was incorporated in Delaware in June 2009** by co-founders Jack Dorsey and Jim McKelvey — the founding trigger was McKelvey losing a $2,000 glass-art sale in 2008 because he couldn't accept a credit card ([Block FY2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); [Block 2026 Proxy — director bios](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)). The Square ecosystem launched in February 2009 with the iconic **white magstripe Square Reader** — a hardware dongle plugging into an iPhone/iPad headphone jack that for the first time let any individual seller, food truck, or market stall accept Visa/Mastercard.
 
-**Cash App was launched in 2013 as "Square Cash"**, initially as a peer-to-peer money-transfer service competing with Venmo (PayPal). Over the next decade Cash App expanded beyond P2P into a multi-product consumer financial services platform: the Cash App Card (Visa debit card linked to Cash App balance) launched in 2017; stock and ETF brokerage launched in 2019; bitcoin buy/sell functionality launched in 2018; tax preparation (via Cash App Taxes, acquired from Credit Karma in 2020) launched in 2021; Cash App Borrow short-term lending rolled out gradually since 2020. Cash App had "monthly transacting actives in each of the 50 states and nearly every county" by December 2025 and was the **#1 finance app on Google Play and #3 on iOS by US downloads** in 2025 ([Block FY2025 10-K, Cash App Ecosystem](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**Cash App launched in 2013 as "Square Cash,"** initially a P2P transfer app competing with PayPal's Venmo. Over the next decade it expanded from a single P2P tool into a multi-product consumer-finance platform: Cash App Card (2017, a Visa debit card linked to Cash App balance, issued by a partner bank); bitcoin buy/sell (2018); US stock and ETF brokerage (2019); free tax filing via Cash App Taxes (2020); and Cash App Borrow short-term consumer lending (from 2020). By Dec 2025, Cash App was **#1 in finance app downloads on US Google Play and #3 on US iOS** ([Block FY2025 10-K, Item 1 — Cash App Ecosystem](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-**IPO and capital-markets history.** Square, Inc. completed its initial public offering on the New York Stock Exchange in November 2015, pricing at $9 per share — at a $2.9B implied valuation — and trading under "SQ" ([Square S-1/A Registration Statement, 2015](https://www.sec.gov/Archives/edgar/data/1512673/000119312515378578/d937622ds1a.htm)). Subsequent debt-and-equity raises included convertibles in 2018 and 2020, the 2.75% / 3.50% Senior Notes priced in May 2021 ($2.0B aggregate, used in part to fund the all-stock Afterpay acquisition that closed in 2022), and ongoing share repurchase activity through 2023–2025 ([Block FY2025 10-K, Exhibit Index — Notes Indentures](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**IPO and capital-markets history.** Square IPO'd on NYSE in November 2015 at **$9/share** (~$2.9B valuation) under "SQ" ([Square 2015 S-1/A](https://www.sec.gov/Archives/edgar/data/1512673/000119312515378578/d937622ds1a.htm)). Subsequent actions included convertible notes (2018/2020), $1B 2.75% + $1B 3.50% notes (May 2021, partly funding the Afterpay deal closed in 2022), and ongoing buybacks (FY2025 $2,331M, [10-K cash-flow statement](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-**Renaming to Block, Inc.** The corporate name change from Square, Inc. to Block, Inc. became effective December 10, 2021 (NYSE ticker continued as SQ at that time). Management framed the rename around the company's expansion beyond seller payments into Cash App, bitcoin-ecosystem businesses (Bitkey, Proto, Spiral), TIDAL music streaming (acquired in March 2021 for $297M), and TBD (later folded into the bitcoin ecosystem). The ticker change from SQ to XYZ became effective January 2, 2026, completing the rebranding arc ([Block FY2025 10-K, Cover Page Ticker XYZ](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**Rename to Block, Inc.** effective Dec 10, 2021 (ticker remained "SQ" then), reflecting expansion from merchant payments into Cash App consumer finance, TIDAL (acquired March 2021, $297M), and the bitcoin ecosystem (Bitkey, Proto, Spiral). The NYSE ticker changed from SQ to **XYZ** on 2026-01-02, completing the rebrand ([Block FY2025 10-K, cover page ticker XYZ](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-**The Afterpay acquisition (closed January 31, 2022)** was Block's most transformative strategic move to date — an all-stock deal originally valued at approximately $29B (revised to $13.8B at closing given the SQ share-price decline between announcement in August 2021 and closing in January 2022). Afterpay brought Block a globally scaled Buy-Now-Pay-Later franchise across the United States, Australia, Canada, New Zealand, and the United Kingdom — establishing what Block now describes as an "integrated platform across Square sellers and Cash App consumers" with BNPL as the connective tissue ([Block FY2025 10-K, BNPL Products](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**Afterpay acquisition (closed Jan 31, 2022)** was Block's most transformational move — an all-stock deal initially valued at ~$29B (Aug 2021), revised to ~$13.8B at close (Jan 2022) as SQ shares fell. Afterpay brought a globally-scaled **Buy-Now-Pay-Later (BNPL)** business across the US, Australia (Afterpay's HQ), Canada, New Zealand, and the UK, building the two-sided network spanning Square merchants and Cash App consumers ([Block FY2025 10-K, BNPL products](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-**Subsequent business evolution (2022–2025).** Block's 2022 was characterized by margin compression following the Afterpay integration and tightening macro conditions; 2023 marked the consolidation of "Block 1.0" with TBD folded into the broader bitcoin ecosystem and TIDAL repositioned as an artist-monetization platform rather than a Spotify competitor. In May 2024, the company published its first "Square Day" investor event highlighting Square's pivot toward mid-market and food-and-beverage verticals. In November 2025, management hosted its first formal Investor Day under the Block, Inc. name, laying out the company's three-year strategic plan to grow Cash App gross profit at >20% CAGR while accelerating Square GPV growth and re-establishing operating-margin discipline ([Block Q4 2025 shareholder letter — references to Investor Day](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)).
+**2022–2026 evolution and the "mode switch."** 2022 was Afterpay-integration margin compression; 2023 completed "Block 1.0" integration (TBD folded into bitcoin); May 2024 brought the first "Square Day," highlighting Square's move into mid-market and F&B verticals. **In November 2025, management held the first formal Investor Day under the Block, Inc. brand**, setting a three-year plan: Cash App gross-profit CAGR > 20%, accelerate Square GPV, and rebuild operating-margin discipline. **On 2026-02-26 (alongside the FY25 10-K), the company announced the "Workforce Plan" cutting >40%** — the trigger of the mode switch from Dorsey-era "growth at any cost" to "smaller, faster, AI-native, margin-first" ([Block FY2025 10-K, Subsequent Events](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); [Block Q4'25 Shareholder Letter, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)).
 
-```mermaid
-timeline
-    title Block, Inc. — Key Milestones
-    2009 : Square, Inc. incorporated in Delaware
-         : Square Reader (white dongle) launched
-    2013 : Square Cash launched (precursor to Cash App)
-    2015 : IPO on NYSE at $9/share under ticker "SQ"
-    2017 : Cash App Card debit card launched
-    2018 : Cash App adds bitcoin buy/sell
-    2019 : Cash App adds stock + ETF brokerage
-    2021 : Renamed Square, Inc. to Block, Inc. (Dec 2021)
-         : Acquired TIDAL music streaming ($297M, March 2021)
-    2022 : Closed Afterpay acquisition ($13.8B all-stock, Jan 2022)
-    2023 : Launched Square Credit Card; TBD folded into bitcoin ecosystem
-    2024 : Cash App Borrow scales; Square Day investor event
-    2025 : First "Investor Day" under Block, Inc. name (Nov 2025)
-         : Ticker change SQ to XYZ effective Jan 2, 2026
-    2026 : 40%+ workforce reduction announced ($450-500M charges)
-```
+## 3. Management
 
-Source: [Block FY2025 10-K, Item 1 Business](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); [Block Q4 2025 shareholder letter](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm); [Block 2026 Proxy Statement — Director Tenures](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm).
+**Jack Dorsey — Block Head (CEO), Chairman (co-founder).** Dorsey has been Block's principal executive officer and a board member since July 2009, and Chairman since October 2010. The 2026 Proxy describes him as the "controlling shareholder" under the Square Financial Services regulatory framework ([Block 2026 Proxy — director bios](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm); [Block FY2025 10-K, Government Regulation](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). A Twitter co-founder, he ran Twitter and Square as a "dual CEO" from 2015–2021. His compensation is among the most unusual in US markets: **at his own request he takes no cash or equity compensation, only a nominal $2.75 annual salary** ([Block 2026 Proxy — compensation highlights](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)). *Analyst view:* the $2.75 salary plus his leadership of the Spiral/Proto/Bitkey bitcoin initiatives signals an unusual "founder-led, mission-driven" governance posture — compressing the classic principal-agent conflict but introducing single-founder dependency risk.
 
-## 3. Management Team
+**Amrita Ahuja — Foundational Lead, CFO, COO, and People Lead.** Ahuja has been CFO since January 2019, adding COO and "Foundational Lead" (Feb 2023) and "People Lead" (Sep 2025) — making her the most operationally concentrated executive after Dorsey; her 2026 base salary rose to $600K (from $565K in 2025) ([Block 2026 Proxy — comp table](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)). She was previously CFO of Blizzard Entertainment. *Analyst view:* concentrating CFO + COO + People Lead reflects Block's flat org design; as People Lead, her role in the 2026 >40% layoff is implicit. The 2026 Proxy shows 6 executive officers, including Brian Grassadonia (Ecosystem Lead), Owen Britton Jennings (Business Lead), Chrysty Esperanza (Counsel Lead), and Arnaud Weber (Engineering Lead, joined June 2025) ([Block 2026 Proxy — executive roster](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)).
 
-**Jack Dorsey — Block Head (CEO) and Chairperson (Co-Founder).** Jack Dorsey, age 49, has served as Block's principal executive officer and as a member of its board of directors since July 2009 — he founded Square (now Block) jointly with Jim McKelvey in 2009 and has held the chair since October 2010. He briefly held the operational "Square Head" role personally during 2023 and into early 2024 before reverting to the broader "Block Head" remit. Dorsey is described in the 2026 Proxy as Block's "controlling shareholder in this context" for purposes of Square Financial Services oversight ([Block 2026 Proxy Statement — Director Bios](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm); [Block FY2025 10-K, Item 1 Business — Government Regulation](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Before founding Square, Dorsey served as President and CEO of Twitter, Inc. from May 2007 to October 2008 and was one of three Twitter co-founders, returning to Twitter as CEO from 2015 to November 2021 — during which time he was concurrently Block's CEO, an unusual dual-CEO arrangement. Dorsey's prior education was at New York University (he attended but did not complete a degree). His compensation is one of the most distinctive in US public markets: at his own request, he receives **no cash or equity compensation except an annual salary of $2.75** ([Block 2026 Proxy Statement — Executive Compensation Highlights](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)). He retains a substantial personal stake in Block — both directly and via the Block Head Trust — and is referenced as "controlling shareholder" in the Square Financial Services regulatory context. *Analyst view:* Dorsey's $2.75 nominal salary and his concurrent leadership of bitcoin-ecosystem subsidiaries (Spiral, Proto, Bitkey) signal an unusually founder-driven, mission-oriented governance posture that compresses traditional principal–agent conflicts but introduces concentration risk (single-founder dependency).
+## 4. Products & Services
 
-**Amrita Ahuja — Foundational Lead, Chief Financial Officer, Chief Operating Officer, and People Lead.** Amrita Ahuja, age 46, has served as Block's CFO since January 2019, added the COO and "Foundational Lead" titles in February 2023, and assumed the People Lead role in September 2025 — making her by some distance the most powerful operating executive at Block other than Dorsey. Her base salary was raised to $600,000 for 2026 (from $565,000) per the 2026 Proxy ([Block 2026 Proxy Statement — Executive Compensation Tables](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)). Prior to Block, Ahuja was Chief Financial Officer of Blizzard Entertainment, Inc. (a division of Activision Blizzard, Inc.) from March 2018 to January 2019, and served at Activision Blizzard, Inc. from June 2010 in roles including Senior Vice President of Investor Relations from January 2015 to May 2018 ([Block 2026 Proxy Statement — Executive Officer Bios](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)). Ahuja's accumulation of titles since 2023 — CFO + COO + People Lead under a single executive — reflects the highly delayered organizational design Block has been pursuing, and her central role in the announced ~40% Workforce Plan is implicit in her People Lead remit. The 2026 Proxy lists six current Executive Officers, with Ahuja, Brian Grassadonia (Ecosystem Lead), Owen Britton Jennings (Business Lead), Chrysty Esperanza (Counsel Lead / Chief Legal Officer), and Arnaud Weber (Engineering Lead, hired June 2025) under Dorsey. Former Technology + Engineering Lead Dhanji R. Prasanna departed as executive officer in November 2025 ([Block 2026 Proxy Statement — Executive Officers Table](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)).
+Block runs two customer-facing reportable ecosystems — Square and Cash App — plus a Corporate / Other line carrying TIDAL and the bitcoin-hardware businesses (Bitkey, Proto, Spiral). The 10-K positions the overall strategy as "integrated payments, banking, lending, and commerce solutions" via shared infrastructure spanning embedded financial services, automation, and the open Bitcoin protocol ([Block FY2025 10-K, Item 1 — Our Ecosystems](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-## 4. Products and Services
+### 4.1 Square ecosystem — the merchant-side commerce OS
 
-Block operates two reportable customer-facing ecosystems — Square and Cash App — plus a Corporate / "other" line that houses TIDAL music streaming and the bitcoin-hardware businesses Bitkey, Proto, and Spiral. The 10-K describes the over-arching offer as "integrating payments, banking, lending, and commerce solutions" with shared infrastructure across embedded financial services, automation, and the open Bitcoin protocol ([Block FY2025 10-K, Item 1 Business — Our Ecosystems](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+Square serves ~4.5M merchants with payments, point-of-sale (POS) software, hardware, and embedded financial services across the US, Canada, Japan, Australia, the UK, Ireland, France, and Spain ([Block FY2025 10-K, Item 1 — Square Merchants](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-### 4.1 Square Ecosystem — Seller-side commerce operating system
+**Hardware matrix.** The 10-K lists the Square hardware line:
 
-The Square ecosystem combines payments, point-of-sale (POS) software, hardware, and embedded financial services for ~4.5M sellers worldwide, with primary geographic coverage in the United States, Canada, Japan, Australia, the United Kingdom, Ireland, France, and Spain ([Block FY2025 10-K, Item 1 Business — Square Sellers](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). The 10-K describes the Square ecosystem starting from the 2009 founding capability: "we started Block with the Square ecosystem in February 2009 to enable businesses to accept card payments, a critical capability that had previously been inaccessible." Square sellers cover a diverse range of industries (services, food-related, and retail businesses) and sizes "ranging from sole proprietors to mid-market multi-location merchants" — and Square processed Gross Payment Volume (GPV) from "more than 4.5 million sellers" originating from "more than 800 million payment cards, across more than 300 million buyer profiles" in 2025.
+> "Square Register is an all-in-one product that combines our hardware, point-of-sale software, and payments technology, with dedicated hardware including two screens… Square Terminal is a portable, all-in-one payment device and receipt printer that replaces traditional keypad terminals, accepting tap, dip, and swipe payments… Square Stand transforms an iPad into a complete countertop point of sale with built-in contactless and chip reader. Square Reader for contactless and chip accepts EMV chip cards and NFC payments, enabling acceptance via mobile wallets like Apple Pay and Google Pay." ([Block FY2025 10-K, Item 1 — Hardware](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm))
 
-**Hardware portfolio.** The 10-K lists the Square hardware lineup verbatim:
+The original 2009 magstripe Square Reader remains in the line as an entry option; the 10-K acknowledges a "single-supplier dependency" on magstripe reader hardware as a supply-chain concentration risk.
 
-> "Square Register is an all-in-one offering that combines our hardware, point-of-sale software, and payments technology. The dedicated hardware consists of two screens... Square Terminal is a portable, all-in-one payments device and receipt printer to replace traditional keypad terminals. It accepts tap, dip, and swipe payments... Square Stand transforms an iPad into a complete countertop point of sale and features an integrated contactless and chip reader. Square Reader for contactless and chip accepts EMV chip cards and NFC payments, enabling acceptance via Apple Pay, Google Pay, and other mobile wallets." ([Block FY2025 10-K, Item 1 Business — Hardware](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm))
+**Software matrix.** Square's vertical POS software includes **Square for Restaurants** (table management, kitchen display, online ordering), **Square for Retail** (inventory, barcode scanning, omnichannel), **Square Appointments**, **Square Online**, and the operating tools **Square Team Management** and **Square Payroll**. These "integrate directly with Square's commerce and financial solutions" — the key differentiator vs point-product competitors ([Block FY2025 10-K, Item 1 — Square Software](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-The magnetic-stripe Square Reader — the original 2009 product — remains in the lineup as the entry-level offering, and the 10-K acknowledges reliance on "single sources of supply" for the magnetic-stripe reader hardware as a supply-chain concentration risk.
+**Square Loans, Square Card, Square Banking.** **Square Loans makes loans to qualified Square merchants via Square Financial Services (Block's Utah industrial-bank-chartered subsidiary, operating since 2021).** Per the 10-K: *"Since the public launch of Square Loans in May 2014, we have facilitated over 4 million loans and advances, with cumulative loan or advance principal exceeding $32.8 billion."* ([Block FY2025 10-K, Item 1 — Square Loans](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). **Square Credit Card** (2023) is a second merchant lending line; **Square Card** is a free Mastercard business debit card; **Square Banking** offers deposits, savings, and instant deposit.
 
-**Software portfolio.** Square's vertical-specific POS software includes **Square for Restaurants** (table management, kitchen display systems, online ordering), **Square for Retail** (inventory management, barcode scanning, omnichannel sales), **Square Appointments** (booking and scheduling for service businesses), **Square Online** (e-commerce storefront builder), and operational tools "such as Square Team Management and Square Payroll" that allow sellers to manage scheduling, performance, and payroll administration. The 10-K notes these "integrate directly with Square's commerce and financial solutions" — the unifying differentiator versus point-product competitors ([Block FY2025 10-K, Item 1 Business — Square Software](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**Strategic significance.** Square's core value is the **integration loop** — payment data (transaction size, revenue cadence, customer mix) underwrites Square Loans, deepening Square's share of the merchant's wallet — upgrading from "payment processor" to "operating system plus balance-sheet partner." Q1'26 Square segment GP +9% YoY, with GPV growth "driven by strength in F&B merchants" (Square's biggest vertical push via Square for Restaurants); management lists "speed" as the key operating discipline to accelerate GPV ([Block Q1'26 Shareholder Letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)). *Analyst view:* Morgan Stanley's June-2026 SMB survey independently corroborates Square's competitive position — Square CSAT 96% vs Toast 44% / Clover 30%, with the "highest share of likely switchers" choosing Square ([Morgan Stanley — SMB Survey, 2026-06-02](http://xs-macbook-air.local:5001/zsxq/pdf/184152881184542/Morgan%20Stanley-Block%EF%BC%8C%20Inc%EF%BC%88XYZ.US%EF%BC%89Highlighting%20Square%27s%20Strength%20in%20our%20SMB%20Survey%EF%BC%9B%20Reiterate%20OW-260602.pdf)).
 
-**Square Loans, Square Card, Square Banking.** Beyond payments and software, Square offers an embedded lending product: **Square Loans facilitates loans to qualified Square sellers through Square Financial Services** — Block's Utah-chartered industrial bank subsidiary, which began operations in 2021. The 10-K verbatim: *"Since its public launch in May 2014, Square Loans has facilitated more than 4.0 million loans and advances, representing more than $32.8 billion in principal amount loaned or advanced"* ([Block FY2025 10-K, Item 1 Business — Square Loans](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). **Square Credit Card** was launched in 2023 to provide another lending product to qualified Square sellers. **Square Card** is a free Mastercard business debit card linked to a seller's Square balance; **Square Banking** provides a suite of business deposit, savings, and instant-deposit products on top of Square Financial Services.
+### 4.2 Cash App ecosystem — the consumer financial super-app
 
-**Strategic significance for Square.** The Square ecosystem's strategic value is in the **integration loop** — payments produce the data (deal size, revenue cadence, customer mix) that underwrites Square Loans, which extends Square's wallet share with merchants from "payments processing" to "operating-system-and-balance-sheet partner." The 10-K characterizes this as: "Our ability to add new sellers efficiently, help them grow their business, and cross-sell our products and services has historically contributed to our growth" ([Block FY2025 10-K, Item 1 Business — Square Ecosystem](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Q4 2025 Square GPV growth of 10% (year-over-year) was "driven primarily by strength in Food and Beverage sellers" — the vertical Square has invested most heavily in via Square for Restaurants — and management cites investor-day commentary on "speed" as the operating discipline expected to accelerate Square GPV further over the next three years ([Block Q4 2025 shareholder letter, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)).
+The 10-K positions Cash App for "Cash App Green" customers — "a workforce that earns multiple, dynamic income streams, including hourly wages, gig work, and freelancing" — an addressable market management estimates at ~125M Americans. The 10-K describes Cash App as "an ecosystem of financial products and services that helps individuals and businesses manage, move, and grow their money," including **money transfer, debit spending (Cash App Card), bitcoin and equity buy/sell, bank-style direct deposit, lending (Cash App Borrow), and BNPL (Afterpay integration)** ([Block FY2025 10-K, Item 1 — Cash App Ecosystem](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-### 4.2 Cash App Ecosystem — Consumer financial services super-app
+**Engagement and inflows.** Cash App generated ~$316B of inflows in 2025. Block monitors Cash App via its "**inflows framework**" — "transacting actives, inflows per active, and monetization rate on inflows" ([Block FY2025 10-K, Item 1 — Inflows Framework](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Cash App **Financial Solutions gross profit per active user** reached **$15** (+57% YoY, from $9) — a strong KPI showing per-user monetization outpacing user growth ([Block Q1'26 Shareholder Letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)).
 
-Cash App is positioned in the 10-K as a "leader in the segment" of consumer financial services for what management terms "Cash App Green" customers — *"the segment of the workforce that earns income from multiple dynamic sources including hourly wages, gig work, and freelancing"* — with an addressable market estimated at approximately 125 million people across "independent earners, hourly workers, and working teens" ([Block Q4 2025 shareholder letter, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)). The 10-K describes Cash App as providing "an ecosystem of financial products and services to help individuals and businesses manage, move, and grow their money" through "money transfer, debit card spending (Cash App Card), buy/sell of bitcoin and equities, banking-style direct deposit, lending (Cash App Borrow), and BNPL (via the Afterpay integration)" ([Block FY2025 10-K, Item 1 Business — Cash App Ecosystem](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**Cash App Card.** *"Cash App Card is a debit card, issued by our bank partners, that connects directly to a customer's Cash App balance."* ([Block FY2025 10-K, Item 1 — Cash App Card](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) Block monetizes via interchange when cardholders spend — the core path to convert free P2P relationships into recurring fee revenue, and the entry point to cross-sell direct deposit, brokerage, and lending.
 
-**Engagement and inflows.** Cash App generated **$316 billion in inflows in 2025**, with the average monthly transacting active bringing in "$1,410 of inflows during the quarter" in Q4 2025 (up 12% YoY from $1,261 in Q4 2024). Block monitors Cash App through what management calls its "**inflows framework**" — *"transacting actives, inflows per active, and the monetization rate on inflows"* ([Block FY2025 10-K, Item 1 Business — Inflows Framework](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); [Block Q4 2025 shareholder letter, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)). Total Cash App inflows grew 15% YoY in Q4 2025 to $83B in the quarter, with Financial Solutions Gross Profit per Active reaching **$15** (+57% YoY from $9 a year earlier) — a powerful KPI showing that Cash App's monetization rate per user is compounding faster than user growth.
+**Cash App Borrow (the growth engine).** Borrow offers short-term fixed-fee loans repaid in scheduled installments; the 10-K notes *"in 2025, the average Cash App Borrow loan was repaid in under four weeks,"* with **Cash App Score** (an internally-developed credit-scoring framework) supporting underwriting scale ([Block FY2025 10-K, Item 1 — Cash App Borrow](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Borrow is the main driver of Cash App gross-profit acceleration — management noted in Q1'26 that *"Cash App Financial Solutions gross profit growth accelerated to 55% in the first quarter, driven by Cash App Consumer Lending"* ([Block Q1'26 Shareholder Letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)). *Analyst view:* GS views the "signaled peak in risk loss growth" as key — long-only investors had hesitated while lending and credit losses accelerated ([GS, 2026-05-08](http://xs-macbook-air.local:5001/zsxq/pdf/212458412282221/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9A%201Q26%20Takeaways%EF%BC%9A%20Solid%20top%20and%20bottom%20line%20beat%20and%20continued%20acceleration%20across%20multiple%20metrics%20should%20sustain-260508.pdf)).
 
-**Cash App Card.** *"Cash App Card is a debit card, issued by our bank partner, and linked directly to a customer's Cash App balance"* ([Block FY2025 10-K, Item 1 Business — Cash App Card](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Customers can order a Cash App Card for free; Block earns interchange fees when individuals make purchases with their Cash App Card. Cash App Card is the principal monetization vector for Cash App's consumer base — it converts a free P2P relationship into a recurring transaction-fee stream — and it is the entry point through which Block cross-sells direct deposit, brokerage, and lending.
+**BNPL — Afterpay & Cash App Pay Later.** *"Cash App and Afterpay offer a broad suite of Pay Later capabilities… For merchants, these products are designed to improve conversion and increase average order value."* ([Block FY2025 10-K, Item 1 — BNPL](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) Afterpay covers the US, Australia, Canada, New Zealand, and the UK, with the Afterpay Card supporting in-store BNPL.
 
-**Cash App Borrow.** Cash App Borrow provides eligible customers with access to short-term loans for a fixed fee, with repayment made through scheduled installments. The 10-K reports that "in 2025, the average Cash App Borrow loan was repaid in less than four weeks." Block also introduced **Cash App Score** in 2025 — *"an internally developed credit scoring framework"* — to support underwriting expansion ([Block FY2025 10-K, Item 1 Business — Cash App Borrow](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Cash App Borrow was the principal growth driver of Cash App's 2025 gross profit acceleration (+21% YoY), and management's Q1 2026 letter notes that Cash App's Financial Solutions gross profit growth "accelerated to 55% in the first quarter, driven by Cash App Consumer Lending" ([Block Q1 2026 shareholder letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)).
+**Other Cash App products.** Customers can invest in US stocks and ETFs from as little as $1 via Cash App brokerage; Cash App Taxes offers free filing; Round Ups round purchases up and auto-invest the difference into bitcoin or stocks ([Block FY2025 10-K, Item 1 — Cash App Other](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-**BNPL — Afterpay and Cash App Pay Later.** *"Cash App and Afterpay offer a wide range of Pay Later capabilities that make purchasing more flexible and accessible for consumers. For merchants, these offerings are designed to improve conversion and increase average order value"* ([Block FY2025 10-K, Item 1 Business — BNPL Products](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Afterpay BNPL products are offered across the United States, Australia, Canada, New Zealand, and the United Kingdom, with the Afterpay Card and Afterpay Plus Card allowing in-store BNPL at participating merchants. Afterpay Post-Purchase allows eligible consumers to convert completed transactions into installment payments, extending the BNPL franchise beyond the point of sale.
+### 4.3 Corporate / Other — TIDAL, Bitkey, Proto, Spiral
 
-**Other Cash App products.** Cash App customers can invest their funds in U.S.-listed stocks and ETFs "for as little as $1" through Cash App's stock brokerage; the Cash App Taxes product offers free tax preparation; Round Ups allow customers to round purchases up to the nearest dollar and direct-deposit the difference into bitcoin or stock ([Block FY2025 10-K, Item 1 Business — Cash App Other](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**TIDAL.** Acquired March 2021 for $297M; the 10-K describes it as *"a global platform for musicians and their fans… offering more than 250 million songs and 1 million high-quality videos, with listeners in over 60 countries and relationships with nearly 300 record labels."* ([Block FY2025 10-K, Item 1 — TIDAL](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) TIDAL is small but occupies a strategic creator-economy position.
 
-### 4.3 Corporate / other ecosystems — TIDAL, Bitkey, Proto, Spiral
+**Bitcoin ecosystem (Bitkey, Proto, Spiral).** The 10-K describes three initiatives: "**Bitkey is a self-custody bitcoin wallet, Proto is a bitcoin mining system, and Spiral is a team focused on contributing to bitcoin open-source work.**" ([Block FY2025 10-K, Item 1 — Bitcoin Ecosystem](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) Block also held **8,883 bitcoins** on its balance sheet at 2025-12-31 (a "bitcoin investment," carrying value $777.5M, [Block FY2025 10-K, balance sheet + bitcoin note](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Bitcoin trading revenue (Cash App buy/sell) is the main cash-generating bitcoin line — down in 2025 vs 2024 on softer crypto markets — while Bitkey and Proto remain in investment phase.
 
-**TIDAL.** Block acquired TIDAL in March 2021 for $297M. The 10-K describes TIDAL as *"a global platform for musicians and their fans that uses unique content, experiences, and features to bring fans closer to artists and to provide artists with tools to succeed as entrepreneurs."* TIDAL "offers an extensive catalog of more than 250 million songs and 1,000,000 high-quality videos. TIDAL has a global presence with listeners in more than 60 countries and relationships with nearly 300 labels" ([Block FY2025 10-K, Item 1 Business — TIDAL](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). TIDAL's commercial scale within Block is modest — it does not generate material segment-level revenue — but it occupies a strategic role as a creator-economy distribution platform that integrates with Square's seller tooling for artists.
+**Synthesis — how the products interact and where the money goes.** Block's portfolio interlocks via three flywheels: (i) **Square flywheel** — payment data underwrites Square Loans, deepening wallet share; (ii) **Cash App flywheel** — free P2P + Cash App Card acquires; inflows fund direct deposit, brokerage, Borrow, and BNPL, monetizing layer by layer; (iii) **integrated-platform flywheel** (post-Afterpay) — BNPL connects Cash App consumers to Square merchants, a two-sided network. The money-flow map below traces this in demand orientation — who pays (Square merchants' buyers / Cash App consumers / bitcoin buyers) → through Block's three product lines → where the money lands (card networks/issuers via interchange, the bitcoin spot market as pass-through, sponsor banks, and the $10.4B of retained gross profit). The point: **bitcoin-ecosystem revenue of $8.5B is almost entirely passed to the spot market (cost $8.1B); Block must be read on gross profit, not total revenue**; TIDAL and bitcoin hardware sit outside the flywheels — best viewed as founder-conviction optional R&D, non-critical to the 2026–2028 earnings path.
 
-**Bitcoin ecosystem (Bitkey, Proto, Spiral).** The 10-K describes Block's "bitcoin ecosystem" as encompassing three distinct initiatives: *"Bitkey, which is a self-custody bitcoin wallet, Proto, which is a bitcoin mining system, as well as Spiral, an independent team focused on contributing to bitcoin open source work"* ([Block FY2025 10-K, Item 1 Business — Bitcoin Ecosystem](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Bitkey is a hardware wallet enabling secure self-custody of bitcoin; Proto is a vertically-integrated bitcoin mining system (chips, hardware, software); Spiral is a contributor team to the open-source Bitcoin Core project. Bitcoin trading revenue (from Cash App buy/sell) is the dominant cash-generating bitcoin line — and it declined in 2025 vs 2024 because of softer crypto trading conditions — while Bitkey and Proto remain investment-phase product lines.
+![Block money-flow (demand view) FY2025](charts/xyz_moneyflow.svg)
 
-**Synthesis — how the products interact.** The Block portfolio interlocks through three flywheels. (i) The **Square flywheel**: payments processing generates the data that underwrites Square Loans, which deepens merchant wallet share and produces more payments volume. (ii) The **Cash App flywheel**: the free P2P money-transfer product (and the Cash App Card) acquires consumers; engagement drives inflows; inflows feed direct deposit, brokerage, Cash App Borrow, and BNPL — each step monetizing a deeper share of customer financial life. (iii) The **integrated platform flywheel** (post-Afterpay): Afterpay BNPL connects Cash App consumers to Square sellers, expanding Square seller demand while extending Cash App's purchase utility — the "two-sided network" thesis Block has emphasized since the 2021 Afterpay announcement. The TIDAL and bitcoin-ecosystem businesses sit outside these flywheels and are best viewed as optional R&D — high-conviction founder bets that are not load-bearing for the 2026–2028 earnings trajectory.
+Source: [Block FY2025 10-K, Consolidated Statements of Operations + Note 22 Segment & Revenue disaggregation](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm) (Cash App MAU and bitcoin holdings from the 10-K Business section).
 
-```mermaid
-graph TD
-    Block[Block, Inc. - NYSE XYZ]
-    Block --> Square[Square Ecosystem]
-    Block --> CashApp[Cash App Ecosystem]
-    Block --> Other[Corporate / Other]
+**Further viewing:**
+- [How Square Reader / Tap to Pay works — Square's official channel (the physics of merchant acquiring)](https://www.youtube.com/@Square)
+- [Cash App product overview — Block's official channel (the consumer super-app feature stack)](https://www.youtube.com/@CashApp)
 
-    Square --> SP[Square Payments]
-    Square --> SS[Square Software]
-    Square --> SH[Square Hardware]
-    Square --> SF[Square Financial Services]
-    SS --> SR[Square for Restaurants]
-    SS --> SRT[Square for Retail]
-    SS --> SA[Square Appointments]
-    SS --> SO[Square Online]
-    SF --> SL[Square Loans]
-    SF --> SC[Square Card]
-    SF --> SB[Square Banking]
+## 5. Customers & Concentration
 
-    CashApp --> CC[Cash App Card]
-    CashApp --> CP[Cash App Pay]
-    CashApp --> CB[Cash App Borrow]
-    CashApp --> CBK[Cash App Banking]
-    CashApp --> CBR[Brokerage]
-    CashApp --> CBT[Bitcoin buy/sell]
-    CashApp --> CT[Cash App Taxes]
-    CashApp --> AP[Afterpay BNPL]
+Block's customer bases are starkly different by ecosystem. Square is **B2B (merchants/sellers)** — ~4.5M annual active merchants across eight core countries; Cash App is **B2C (US consumers)** — tens of millions of monthly transacting actives across all 50 US states and nearly every county (as of 2025-12-31) ([Block FY2025 10-K, Item 1 — Cash App Customers](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-    Other --> TIDAL[TIDAL music streaming]
-    Other --> BK[Bitkey - self-custody wallet]
-    Other --> PR[Proto - bitcoin mining]
-    Other --> SP2[Spiral - Bitcoin open source]
-```
+**Square — merchant concentration.** *"Square sellers represent a wide range of industries (including services, food and drink, and retail) and sizes — from sole proprietors to mid-market multi-location merchants… We are also increasingly serving mid-market sellers."* ([Block FY2025 10-K, Item 1 — Square Merchants](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) With 4.5M merchants, even the largest single merchant is a tiny share of consolidated revenue. The 10-K discloses no single customer above the ASC 280-10-50-42 10% threshold — meaning no single Block customer contributed >10% of consolidated revenue in FY2025.
 
-Source: [Block FY2025 10-K, Item 1 Business — Our Ecosystems](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm).
+**Cash App — consumer concentration.** Cash App's consumer base is by definition highly dispersed — *"Cash App is primarily in the US, with a diverse customer base across demographics and regions."* ([Block FY2025 10-K, Item 1 — Cash App Customers](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) Block discloses monetization via aggregate KPIs (inflows per active, monetization rate), not individual top consumers.
 
-## 5. Customers and Concentration
+**Payment-network and processor counterparty concentration.** Block's biggest counterparty concentration is on the supplier side: it depends on the **Visa, Mastercard, American Express, and Discover** card networks ([Block FY2025 10-K, Item 1 — Payment Networks](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)); plus third-party processors — the 10-K concentration disclosure shows a "**Third-Party Processor**" representing a credit-concentration risk in settlements receivable. Standard for the industry, but a structural counterparty risk to track.
 
-Block's customer base differs sharply by ecosystem. Square's customer base is **B2B (merchants / sellers)** with ~4.5M annually active sellers across eight primary countries; Cash App's customer base is **B2C (US consumers)** with multi-tens-of-millions of monthly transacting actives spread across all 50 US states and nearly every US county as of December 2025 ([Block FY2025 10-K, Item 1 Business — Cash App Customer Base](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+**Square Loans funding concentration.** *"We currently fund the majority of these loans through arrangements with institutional third-party investors."* ([Block FY2025 10-K, Item 1 — Square Loans Funding](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) The model is partly off-balance-sheet — institutional investors buy Block-underwritten loans — so Square Loans throughput depends on those buyers' appetite; if credit markets tighten, volume can contract quickly even if merchant demand holds.
 
-**Square — seller concentration.** *"Square sellers represent a diverse range of industries (including services, food-related, and retail businesses) and sizes, ranging from sole proprietors to mid-market merchants. Square sellers span geographies, including the United States, Canada, Japan, Australia, the United Kingdom, Ireland, France, and Spain. We have also increasingly served mid-market sellers"* ([Block FY2025 10-K, Item 1 Business — Square Sellers](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Square's seller base is extremely fragmented — the 4.5M-seller denominator means even Block's largest individual merchant customer represents a tiny share of consolidated revenue. The 10-K does not disclose any single customer above the 10% threshold required under ASC 280-10-50-42 — meaning **no single Block customer accounts for >10% of consolidated revenue in FY2025**.
-
-**Cash App — consumer concentration.** Cash App's consumer base is by definition extremely fragmented — *"Cash App is primarily in the United States and has a diverse set of customers across demographics and regions"* ([Block FY2025 10-K, Item 1 Business — Cash App Customer Base](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Block discloses Cash App's monetization in aggregate (inflows per active, monetization rate on inflows) but does not name individual top consumers (which would not be meaningful given the millions-strong active base).
-
-**Counterparty concentration in card networks and processors.** The most material counterparty concentrations for Block are not customer-side but vendor-side: the company depends on the **Visa, Mastercard, American Express, and Discover** card networks — *"For a majority of our transactions, sellers accept cards from Visa, Mastercard, American Express, and Discover"* ([Block FY2025 10-K, Item 1 Business — Payment Network Reliance](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) — and on third-party payment processors (where one processor accounts for a credit-concentration risk in settlements receivable, per the 10-K's risk-concentration disclosures). The risk-concentration table separately discloses a settlement-receivable concentration risk with a Third-Party Processor One — meaning a single bank settlement counterparty handles a material share of Block's settlements receivable. This is industry-standard for payments firms but should be tracked as a structural counterparty risk.
-
-**Square Loans funding concentration.** *"We currently fund a majority of these loans from arrangements with institutional third-party investors"* ([Block FY2025 10-K, Item 1 Business — Square Loans Funding](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). The Square Loans business model is partly off-balance-sheet — institutional investors purchase the loans Block underwrites — which means Square Loans throughput depends on the appetite of those institutional buyers. If credit markets tighten, Square Loans volume can compress quickly even if seller demand stays constant.
-
-**Geographic concentration.** No individual country outside the United States contributes more than 10% of total revenue — *"no individual country from the international markets contributed more than 10% of total revenue"* per the 10-K's geographic disclosures ([Block FY2025 10-K, Item 1 Business — Geographic Mix](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). The dominant geographic exposure is the United States across both Square and Cash App; Block's international expansion is concentrated in Australia (Afterpay's home market), the UK, Canada, Japan, Ireland, France, and Spain.
-
-```mermaid
-pie title FY2025 Gross Profit by Segment (Total $10.4B, consolidated)
-    "Cash App segment ($6.34B)" : 61
-    "Square segment ($3.94B)" : 38
-    "Corporate / other (TIDAL, Bitkey, etc.) (~$0.12B)" : 1
-```
-
-Source: [Block FY2025 10-K, MD&A Segment Results](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm). Note: this chart shows gross profit by *segment* (Square / Cash App), not by *customer*; Block does not disclose any single customer >10% of consolidated revenue.
+**Geographic concentration.** No single foreign country exceeds 10% of total revenue ([Block FY2025 10-K, Item 1 — Geographic Mix](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Square and Cash App geographic risk is concentrated in the US (92% of FY2025 revenue).
 
 ## 6. Industry Overview
 
-Block competes in three overlapping markets — **merchant-acquiring / payments processing**, **consumer financial services / digital banking**, and **buy-now-pay-later (BNPL) financing** — with optionality into bitcoin-ecosystem hardware and software.
+Block competes in three overlapping markets — **merchant acquiring / payment processing**, **consumer financial services / digital banking**, and **BNPL financing** — with optionality in bitcoin-ecosystem hardware and software.
 
-**Merchant-acquiring / payments processing (Square's primary market).** The global merchant-acquiring market processes tens of trillions of dollars of card-payment volume annually, with the US share accounting for roughly $8–9T of card volume. Yole Group, Gartner, and Nilson Report do not directly publish merchant-acquirer market shares, but industry consolidation (FIS-Worldpay reversal, Global Payments acquisitions, Fiserv-First Data 2019) has driven the top-5 US acquirers (Fiserv, JPM Chase Merchant Services, Worldpay, Bank of America Merchant Services, Stripe) to ~70% of card-acquiring volume share. Within that landscape, Square has carved out a defensible SMB-and-vertical-software niche — the 10-K characterizes the Square competitive set as *"large, well-established vendors to smaller, earlier-stage companies"* and lists, by category, *"business software providers such as those that provide point of sale, website building, inventory management, employee management, customer relationship management invoicing, and appointment booking solutions"* — i.e. Shopify, Toast, Lightspeed, Clover, Adyen ([Block FY2025 10-K, Item 1 Business — Square Competition](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Industry growth is driven by the secular shift of small-business commerce from cash to card and from card to mobile/contactless — a tailwind that Stripe Press and McKinsey estimate at mid-to-high-single-digit volume growth annually in developed markets.
+**Merchant acquiring (Square's primary market).** The global merchant-acquiring market processes tens of trillions of card volume annually, ~$8–9T in the US. Consolidation (FIS-Worldpay split, Global Payments acquisition, the 2019 Fiserv-First Data deal) has driven the US top-five acquirers (Fiserv, JPM Chase Merchant Services, Worldpay, Bank of America Merchant Services, Stripe) to ~70% of card-acquiring volume. Square has carved out a defensible **SMB-plus-vertical-software** segment — the 10-K describes Square's competitive set as ranging "*from large, established companies to small, early-stage companies*," listing *"providers of business software for point of sale, website building, inventory management, employee management, customer relationship management, invoicing, and appointment management"* — i.e. Shopify, Toast, Lightspeed, Clover, Adyen ([Block FY2025 10-K, Item 1 — Square Competition](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-**Consumer financial services / digital banking (Cash App's primary market).** The US "neobank" or consumer-fintech sector — defined as app-native consumer accounts that combine checking-style P2P, debit card spending, brokerage, and credit — added ~30–50M US accounts during 2018–2024 across Cash App, Chime, Venmo (PayPal), Robinhood, SoFi, and others. The 10-K describes Cash App's competitive set as *"money transfer apps, debit card offerings, brokerage firms, tax firms, financial technology apps, banks, and crypto trading services"* ([Block FY2025 10-K, Item 1 Business — Cash App Competition](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Block's "Cash App Green" framing — addressing the ~125M-strong US workforce earning income from hourly wages, gig work, and freelancing — is a deliberately narrower TAM than "the entire US consumer banking market" but is exactly the segment underbanked by traditional financial institutions and most willing to switch to app-native tools ([Block Q4 2025 shareholder letter, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)).
+**Consumer financial services / digital banking (Cash App's primary market).** The US "neobank" / consumer-fintech sector added ~30–50M US accounts over 2018–2024 via Cash App, Chime, Venmo (PayPal), Robinhood, SoFi, and others. The 10-K describes Cash App's competitive set as *"money transfer apps, debit card products, brokerage firms, tax firms, financial technology apps, banks, and crypto-trading services."* ([Block FY2025 10-K, Item 1 — Cash App Competition](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) The "Cash App Green" framing — targeting ~125M multi-income-stream US workers — is a deliberately narrower TAM than "all of US consumer banking," but precisely the underserved segment most willing to switch ([Block Q4'25 Shareholder Letter, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)).
 
-**BNPL (Afterpay's primary market).** The global BNPL market processed approximately $300–400B in transaction volume in 2024 (per industry analyst aggregates), with the US BNPL market reaching ~$80B and growing in the high teens. The top global BNPL platforms are Klarna, Afterpay (Block), Affirm, PayPal Pay Later, and Apple Pay Later — with significant share contests between Klarna and Afterpay in the US, UK, and Australia. The 10-K acknowledges intensifying BNPL competition: *"competitors have introduced or offer BNPL products. Competitors in the BNPL space have engaged in, and may continue to engage in, aggressive consumer acquisition campaigns, may develop superior technology offerings, or consolidate with other entities and achieve benefits of scale"* ([Block FY2025 10-K, Risk Factors — BNPL Competition](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Regulatory scrutiny on BNPL has tightened markedly since 2024 — the CFPB issued an interpretive rule classifying BNPL providers as credit-card issuers under Regulation Z in May 2024, requiring dispute resolution and statement disclosure; the 10-K's risk factors reference *"increased regulatory and legislative scrutiny of BNPL products in the United States, United Kingdom, and Australia"* without quoting specific case names.
+**BNPL (Afterpay's primary market).** The global BNPL market processed ~$300–400B in 2024, ~$80B in the US growing in the high teens. The top-five global BNPL platforms are Klarna, Afterpay (Block), Affirm, PayPal Pay Later, Apple Pay Later. The 10-K acknowledges intensifying competition: *"Competitors have introduced or offer BNPL products… may develop superior technology offerings or integrate with other entities and achieve scale benefits."* ([Block FY2025 10-K, Risk Factors — BNPL Competition](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) BNPL regulatory scrutiny has intensified since 2024 — the CFPB's May-2024 interpretive rule classified BNPL providers as credit-card issuers under Regulation Z.
 
-**Bitcoin ecosystem (Bitkey, Proto, Spiral, and Cash App bitcoin buy/sell).** The 10-K verbatim discloses *"the gross profit generated from the bitcoin ecosystem was only 4% and 5% of the total gross profit in 2025 and 2024, respectively"* ([Block FY2025 10-K, MD&A — Bitcoin Ecosystem](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). So bitcoin-ecosystem economics are still small relative to Square+Cash App, but they remain strategically important as the company's longest-duration growth bet. The bitcoin industry has rebounded sharply in 2024–2025 alongside spot Bitcoin ETF approvals (January 2024) and bitcoin price appreciation; Bitkey hardware-wallet TAM is estimated at $1–2B globally (vs. Ledger's ~$200M revenue scale as the leading incumbent), and bitcoin-mining hardware (Proto's TAM) is a $5–10B annual capex market dominated by Bitmain and MicroBT.
+**Bitcoin ecosystem.** The 10-K states *"the bitcoin ecosystem generated gross profit representing only 4% of total gross profit in 2025, and 5% in 2024."* ([Block FY2025 10-K, MD&A — Bitcoin Ecosystem](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)) Bitcoin economics remain small relative to Square+Cash App but strategically important. *Analyst view:* stablecoins are a new 2026 industry variable — Bernstein lists Block as a potential beneficiary of stablecoins in the payments stack ([Bernstein — Stablecoins, 2026-05-25](http://xs-macbook-air.local:5001/zsxq/pdf/415241528451848/Bernstein-Payments%EF%BC%8C%20Processors%20%26%20IT%20Services%20Payments%EF%BC%9A%20Stablecoins%20%E2%80%94%20What%20we%20learned%20from%20our%20dozens%20of%20industry%20conversations%EF%BC%9B%20Slide%20deck-260525.pdf)).
 
 ## 7. Competitive Landscape
 
-The Square / Cash App / Afterpay product set crosses three competitive landscapes simultaneously, and Block faces well-resourced incumbents in each.
+The Square / Cash App / Afterpay portfolio spans three competitive landscapes, each with well-resourced incumbents.
 
-**Square's principal competitors (US):**
-- **Stripe** — privately held; ~$1.4T processed volume in 2024 per company disclosures. Dominant in e-commerce and developer-platform payments; complementary to Square in physical retail, competitive in omnichannel and online-first verticals.
-- **Toast (NYSE:TOST)** — pure-play restaurant POS and payments; head-to-head with Square for Restaurants in the F&B vertical.
-- **Shopify (NYSE:SHOP)** — Shopify Payments via Stripe partnership; dominant in DTC e-commerce; competes with Square Online plus Square for Retail.
-- **Clover** (Fiserv subsidiary, NYSE:FI) — SMB POS-and-payments bundle distributed through Fiserv's bank partners; directly competitive with Square Reader / Square Stand.
-- **Lightspeed (NYSE:LSPD)** — POS-and-payments for retail and hospitality; competitive with Square for Restaurants and Square for Retail.
-- **Adyen (Amsterdam:ADYEN)** — enterprise-omnichannel payments; competitive with Square primarily at the mid-market and above.
+**Square's main competitors (US):** **Stripe** (private; e-commerce and developer-platform payments), **Toast (NYSE:TOST)** (restaurant POS, head-to-head in F&B), **Shopify (NASDAQ:SHOP)** (DTC e-commerce), **Clover** (Fiserv, NYSE:FI; SMB POS + payments bundle), **Lightspeed (NYSE:LSPD)** and **Adyen (AMS:ADYEN)** (retail/hospitality POS and enterprise omnichannel).
 
-**Cash App's principal competitors (US):**
-- **Venmo (PayPal subsidiary, NASDAQ:PYPL)** — the original Cash App competitor in P2P; PayPal continues to invest in Venmo as a consumer-finance app with debit, BNPL, and crypto features.
-- **Zelle** (Early Warning Services consortium) — bank-network-owned instant P2P; competitive in the "free P2P" use case but not in monetized financial services.
-- **Chime** (private; IPO'd September 2024) — consumer-neobank competitor with Spotme overdraft, direct deposit, and savings — head-to-head with Cash App in "Cash App Green" demographic.
-- **Robinhood (NASDAQ:HOOD)** — competitive in brokerage and crypto trading sub-segments of Cash App.
-- **SoFi (NASDAQ:SOFI)** — consumer-finance super-app with savings, brokerage, lending — competitive across multiple Cash App sub-segments.
-- **Apple Cash + Apple Card** — Apple's wallet-native P2P and debit competitive with Cash App Card; deeply integrated with iOS.
+**Cash App's main competitors (US):** **Venmo** (PayPal, NASDAQ:PYPL), **Zelle** (bank-network instant P2P), **Chime** (consumer neobank, head-to-head in "Cash App Green"), **Robinhood (NASDAQ:HOOD)** and **SoFi (NASDAQ:SOFI)**, and **Apple Cash + Apple Card** (iOS-integrated, vs Cash App Card).
 
-**BNPL competitors (Afterpay):**
-- **Affirm (NASDAQ:AFRM)** — leading US BNPL competitor with deep merchant relationships (Amazon, Shopify, Walmart, Apple) — direct head-to-head with Afterpay.
-- **Klarna** (privately held, IPO filing as of 2024–2025) — global BNPL leader with strong US, UK, and European footprint.
-- **PayPal Pay Later** (NASDAQ:PYPL) — bundled into the PayPal checkout flow at any merchant accepting PayPal.
-- **Apple Pay Later** — Apple's BNPL offering (limited rollout); competitive at Apple Pay merchants.
+**BNPL competitors (Afterpay):** **Affirm (NASDAQ:AFRM)** (US leader, deep merchant ties), **Klarna** (global leader), **PayPal Pay Later**, **Apple Pay Later**.
 
-**Bitcoin-ecosystem competitors:**
-- **Ledger** (private; French hardware wallet maker) — dominant self-custody hardware wallet, ~70% retail share.
-- **Trezor** (private; SatoshiLabs subsidiary) — second-largest hardware wallet competitor.
-- **Coinbase (NASDAQ:COIN)** — competes with Cash App's bitcoin buy/sell functionality at the trading layer.
-- **Bitmain** / **MicroBT** — dominant bitcoin-mining ASIC and hardware suppliers; Proto's competitive set in the mining-rig market.
+**Bitcoin-ecosystem competitors:** **Ledger / Trezor** (hardware wallets), **Coinbase (NASDAQ:COIN)** (trading layer), **Bitmain / MicroBT** (mining ASICs).
 
-*Analyst view:* Block's competitive position is strongest in **Cash App** within the "Cash App Green" demographic — where Cash App's brand and breadth of products (debit, brokerage, BNPL, bitcoin, banking) outperform single-product competitors — and in **Square SMB** within the F&B and services verticals where its software-payments integration is differentiated. Block's competitive position is weakest in the e-commerce checkout vertical (Stripe / Shopify dominate) and in enterprise / mid-market payments (Adyen / Stripe dominate). The Afterpay franchise sits in the #2 / #3 position globally in BNPL — well-positioned but not the share leader; Affirm holds an arguably stronger US merchant network position. *Analyst view:* the most consequential competitive risk over the next 24 months is Apple's continued buildout of Apple Cash, Apple Card, Apple Pay Later, and Tap-to-Pay-on-iPhone — each of which encroaches on Block's franchises with the structural advantage of iOS-level integration.
+*Analyst view:* Block's competitive position is strongest in **Cash App** (product breadth beats single-product rivals in the "Cash App Green" demographic) and **Square SMB** (software/payments integration in F&B and services, corroborated by MS's 96% CSAT survey); weakest in e-commerce checkout (Stripe/Shopify) and enterprise/mid-market payments (Adyen/Stripe). Afterpay ranks #2/#3 in global BNPL, but Affirm arguably has a stronger US merchant network. *Analyst view:* the biggest competitive risk over the next 24 months is Apple's continued build-out of Apple Cash / Apple Card / Apple Pay Later / iPhone Tap-to-Pay — each eroding Block via iOS-level integration; a 2026-new variable is **agentic payments** — Bernstein's 2026-06-11 note discusses the Visa–OpenAI partnership and Mastercard Agent Pay reshaping the payments stack ([Bernstein — Payments/Agent Pay, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/814528142888242/Bernstein-Payments%EF%BC%8C%20Processors%20%26%20IT%20Services%EF%BC%9AVisa~OpenAI%20Partnership%EF%BC%8C%20Mastercard%20Agent%20Pay%20for-260611.pdf)).
+
+## 8. Market Opportunity (TAM)
+
+Block's combined TAM spans global merchant acquiring, US consumer fintech, and global BNPL — plus bitcoin-ecosystem optionality.
+
+**Merchant-acquiring TAM.** 2024 global card and mobile payment volume reached ~$50T (per Nilson Report); merchant-acquirer net take rates average 0.15–0.25%, so global acquirer revenue is ~$80–120B/year. Square's share is small (single-digit-percent of the US SMB segment) — meaning even modest share gains in SMB / mid-market and F&B verticals represent hundreds of millions in incremental revenue. Management's Q1'26 letter highlights deepening go-to-market into other verticals ([Block Q1'26 Shareholder Letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)).
+
+**Cash App TAM — "Cash App Green."** Management explicitly sizes Cash App's addressable market at **~125M people** — across "independent earners, hourly workers, and working teens" — the underserved multi-income-stream US workforce ([Block Q4'25 Shareholder Letter, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)). With tens of millions of current monthly transacting actives, penetration leaves substantial runway; at the Financial Solutions GP/active-user trajectory of $15 (+57% YoY), additional TAM penetration converts directly into gross profit.
+
+**BNPL TAM.** US BNPL volume reached ~$80B in 2024 (~16% YoY); global ~$400B. Afterpay's share within Block accounting is partly obscured by integration into Cash App and Square — management treats BNPL as structural cross-sell rather than a standalone product.
+
+**Bitcoin-ecosystem TAM.** Global bitcoin-mining ASIC market is ~$50–100B/year (Bitmain/MicroBT-led); global self-custody hardware-wallet market ~$2–3B (Ledger-led). Bitkey/Proto target these but have not reached scale — best viewed as options, not a bull driver.
 
 ```mermaid
 xychart-beta
-    title "Fintech peer-comp — Forward P/E (2026E, as of 2026-06-03)"
-    x-axis [Block-XYZ, PayPal-PYPL, Shopify-SHOP, Affirm-AFRM, Toast-TOST, Adyen]
-    y-axis "Forward P/E" 0 --> 80
-    bar [14.9, 13.2, 70.0, 28.0, 35.0, 28.0]
+    title "Block FY2023-FY2025 Gross Profit ($B)"
+    x-axis ["FY2023", "FY2024", "FY2025", "FY2026E"]
+    y-axis "Gross Profit ($B)" 0 --> 14
+    bar [7.5, 8.9, 10.4, 12.3]
 ```
 
-Source: peer P/E values reflect publicly available consensus estimates summarized on [Yahoo Finance Statistics pages](https://finance.yahoo.com/quote/XYZ/key-statistics/) as of 2026-06-03; specific peer P/E figures should be re-checked at consumption time as they move with daily price action and consensus revisions.
-
-## 8. Market Opportunity
-
-The combined TAM Block is targeting spans three large markets — global merchant acquiring, US consumer fintech, and global BNPL — plus optionality in bitcoin ecosystems.
-
-**Merchant acquiring TAM.** Global card-and-mobile-payments volume reached ~$50T in 2024 per Nilson Report aggregates; with merchant-acquiring net take-rates averaging 0.15–0.25%, global merchant-acquirer revenue is ~$80–120B annually. Square's share of that pie is small (estimated single-digit-percent of the US SMB segment) — so even modest share expansion in the SMB / mid-market and food-and-beverage verticals represents multi-hundred-million-dollar incremental revenue opportunity. Management's Q4 2025 letter highlights *"we plan to take our go-to-market approach and product strategy deeper into other verticals in 2026 and beyond"* with specific examples of vertical wins like 7 Leaves (45-location specialty coffee chain) ([Block Q4 2025 shareholder letter, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)).
-
-**Cash App TAM — "Cash App Green."** Block management has explicitly framed Cash App's addressable market at **~125 million people** across "49M independent earners (excluding business owners only), 77M hourly workers (full-time, part-time, and independent earners who self-identified)" — i.e. the segment of the US workforce earning multi-source income that traditional banks underserve ([Block Q4 2025 shareholder letter, 2026-02-26](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)). Cash App's current 25M+ monthly transacting active base implies penetration in the 20% range of the ~125M TAM — leaving substantial runway. At $1,410 of quarterly inflows per active (Q4 2025 print) and a 15%/active per-quarter monetization rate trajectory, additional TAM penetration translates directly into Financial Solutions gross profit.
-
-**BNPL TAM.** US BNPL transaction volume reached ~$80B in 2024 with ~16% YoY growth (per industry consensus); global BNPL volume reached ~$400B. Afterpay's share within Block's accounting is partially obscured by the integration into Cash App and Square — but management treats BNPL as a structural cross-sell rather than a standalone product, which has the effect of making BNPL share statistics less directly comparable to Affirm or Klarna.
-
-**Bitcoin-ecosystem TAM.** The global bitcoin-mining ASIC market is ~$5B annually (Bitmain dominant); the global self-custody hardware-wallet market is ~$200–300M (Ledger dominant). Bitkey / Proto target these markets but are not yet at material scale — best viewed as optionality rather than the bull-case driver.
-
-```mermaid
-xychart-beta
-    title "Block FY2025 Gross Profit by Revenue Category ($B)"
-    x-axis [Commerce-Enablement, Financial-Solutions, Bitcoin-Ecosystem]
-    y-axis "USD Billions" 0 --> 8
-    bar [6.3, 3.7, 0.4]
-```
-
-Source: [Block FY2025 10-K, MD&A — Revenue Categories](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm). Note: Bitcoin Ecosystem is 4% of FY25 gross profit per 10-K text; Financial Solutions includes Cash App Borrow, Square Loans, and Cash App Banking; Commerce Enablement includes Square payments + software + Cash App Card + BNPL.
+Chart: gross-profit trend (FY2026E = company guide +19%). Source: [Block FY2025 10-K, Consolidated Statements of Operations](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); [Block Q1'26 Shareholder Letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm).
 
 ## 9. Risk Assessment
 
 **(a) Company-specific risks**
 
-1. **Workforce-reduction execution risk (>40% headcount cut in H1 2026).** The "Workforce Plan" announced 2026-02-26 — cutting headcount by more than 40% from 10,205 FY25-end employees — carries $450M–$500M of one-time charges plus material execution risk. *"We expect that the execution of the Workforce Plan will be substantially complete by the end of the second quarter of fiscal 2026"* ([Block FY2025 10-K, Subsequent Events](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). Cutting 40%+ of a workforce while accelerating product roadmaps is operationally fraught; institutional knowledge loss, attrition spillover, and morale damage are real downside vectors. *Mitigant:* management's stated rationale is "speed" — a smaller, AI-native company — and the implied benefit is ~$2.0B+ in annualized run-rate cost savings emerging in H2 2026.
+1. **Layoff execution risk (>40% headcount cut in H1 2026).** The "Workforce Plan" announced 2026-02-26 — cutting >40% from the 10,205 FY25 base — carries **$450–500M** of one-time costs ($852M of restructuring/legal already in Q1'26, incl. ~$327M cash severance) plus material execution risk. *"We expect the execution of the Workforce Plan to be substantially complete by the end of the second quarter of fiscal 2026."* ([Block FY2025 10-K, Subsequent Events](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); [Block Q1'26 Shareholder Letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)). **Mitigant:** the rationale is "speed/AI-native"; the implied upside is the H2-2026 margin upgrade — Q1'26 opex already fell on lower headcount.
 
-2. **Founder-CEO concentration (Jack Dorsey).** Dorsey is co-founder, Block Head (CEO), Chairperson, controlling shareholder for Square Financial Services regulatory purposes, and the architect of the bitcoin-ecosystem initiatives that some shareholders view as distractions from core fintech. He receives only **$2.75 annual salary** — implying capital-market-implied compensation is entirely via his equity holdings — but Block's strategy is uniquely tied to his personal worldview ([Block 2026 Proxy Statement — Director Compensation](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)). *Mitigant:* a strong lead independent director (Roelof Botha, Sequoia Capital) and board comprising 6 of 10 independent directors per the Proxy provides oversight.
+2. **Founder-CEO concentration (Jack Dorsey).** Dorsey is co-founder, Block Head (CEO), Chairman, controlling shareholder, and architect of the bitcoin initiatives; he takes only a **$2.75 salary** — and Block's strategy is uniquely tied to his worldview ([Block 2026 Proxy — director comp](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)). **Mitigant:** a strong independent board (6/10 per the Proxy).
 
-3. **Bitcoin balance-sheet exposure.** Block holds bitcoin on its balance sheet (a "bitcoin investment" that produced a **$55.9M remeasurement loss in 2025 vs. a $420.9M gain in 2024**), making net income directly exposed to crypto market price moves ([Block FY2025 10-K, MD&A — Bitcoin Remeasurement](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). *Mitigant:* bitcoin balance is small relative to total liquidity; bitcoin remeasurement is excluded from Adjusted Operating Income.
+3. **Bitcoin balance-sheet exposure.** Block holds 8,883 bitcoins (carrying value $777.5M at 2025-12-31; down to $617.3M at Q1'26) — FY2025 produced a **$55.9M remeasurement loss** (vs FY2024's $420.9M gain), and Q1'26 a **$172.8M remeasurement loss** (a ~$0.29 drag on GAAP EPS) — directly exposing GAAP net income to crypto prices ([Block FY2025 10-K, MD&A — Bitcoin Remeasurement](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm); [Block Q1'26 10-Q](https://www.sec.gov/Archives/edgar/data/1512673/000162828026032200/xyz-20260331.htm)). **Mitigant:** the bitcoin balance is small relative to total liquidity; remeasurement is excluded from AOI.
 
 **(b) Industry / market risks**
 
-4. **BNPL regulatory tightening (CFPB, UK, Australia).** The CFPB's May 2024 interpretive rule classifying BNPL providers as credit-card issuers under Regulation Z, plus UK BNPL legislation moving through Parliament, plus Australian regulatory inquiries — all increase compliance overhead at Afterpay and may require new disclosure / dispute / underwriting infrastructure. *"increased regulatory and legislative scrutiny of BNPL products"* is cited in the 10-K risk factors ([Block FY2025 10-K, Risk Factors — BNPL Regulation](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). *Mitigant:* Afterpay's installment model (4 payments over 6 weeks, no interest) is structurally simpler than longer-tenor BNPL competitors.
+4. **BNPL regulatory tightening (CFPB, UK, Australia).** The CFPB's May-2024 interpretive rule classifies BNPL providers as Regulation Z credit-card issuers, plus UK BNPL legislation and Australian inquiries — all add Afterpay compliance overhead ([Block FY2025 10-K, Risk Factors — BNPL Regulation](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). **Mitigant:** Afterpay's "4 payments over 6 weeks, interest-free" structure is simpler than long-tenor BNPL.
 
-5. **Competitive intensity from Apple and big banks.** Apple Cash, Apple Card, Apple Pay Later, and Tap-to-Pay-on-iPhone each encroach on Block's Cash App and Square franchises with iOS-level integration. Bank-network-owned Zelle has displaced Cash App's free-P2P-only use case at major US bank customer bases. *Mitigant:* Block's product breadth (Cash App is debit + brokerage + BNPL + bitcoin + lending — Apple Cash is debit only) and its non-bank distribution (independent fintech with no need for bank-by-bank deployment) provide defensible product differentiation.
+5. **Apple and big-bank competitive intensity.** Apple Cash / Card / Pay Later / iPhone Tap-to-Pay each erode Cash App and Square via iOS integration; bank-owned Zelle has displaced Cash App's free-P2P use case in major US bank bases. **Mitigant:** Block's product breadth (Cash App = debit + brokerage + BNPL + bitcoin + lending vs Apple Cash debit-only) and non-bank distribution provide defensible differentiation.
 
-6. **Cyclical exposure to consumer credit (Cash App Borrow, Square Loans).** Cash App Borrow loans (avg. <4 weeks repayment) and Square Loans (avg. ~10 months repayment for sellers) are both exposed to consumer / SMB credit cycle deterioration. Transaction, loan, and consumer receivable losses jumped 68% YoY to $1.34B in 2025 — a 13% share of gross profit, up from 9% in 2024 ([Block FY2025 10-K, MD&A — Cost of Revenue](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). *Mitigant:* Block's underwriting model (Cash App Score, Square Loans data-driven origination) is among the more sophisticated in fintech; Square Loans are partly funded by third-party institutional investors, reducing Block's direct credit exposure.
+6. **Cyclical exposure to consumer credit (Cash App Borrow, Square Loans).** Both are exposed to consumer/SMB credit-cycle deterioration. FY2025 transaction, loan, and consumer-receivable losses rose +68% YoY to **$1,337M** — 13% of gross profit (up from 9% in FY24) ([Block FY2025 10-K, MD&A — Cost of Revenue](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)); Q1'26 the line was $500.1M (vs Q1'25 $169.7M, partly from loan-portfolio reclassification). **Mitigant:** GS believes risk-loss growth has peaked; Square Loans are partly funded by third-party institutions, reducing Block's direct credit exposure.
 
 **(c) Financial / structural risks**
 
-7. **Card-network / processor counterparty concentration.** A "Third-Party Processor One" represents a credit concentration risk in settlement receivables per the 10-K's concentration table — meaning Block depends on a single bank counterparty for a material share of settlements. Visa, Mastercard, AmEx, and Discover network rule changes (interchange caps, durable goods restrictions) can compress Block's take-rate ([Block FY2025 10-K, Risk Factors — Network Concentration](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
+7. **Card-network / processor counterparty concentration.** The 10-K concentration table's "Third-Party Processor" represents a credit concentration in settlements receivable; Visa/Mastercard/AmEx/Discover network-rule changes (interchange caps) could compress Block's take rate ([Block FY2025 10-K, Risk Factors — Network Concentration](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)).
 
-8. **Square Loans funding dependency.** Square Loans are predominantly funded by institutional third-party investors who buy the loans Block underwrites — if credit-market appetite contracts, Square Loans throughput compresses quickly regardless of seller demand ([Block FY2025 10-K, Item 1 Business — Square Loans Funding](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). *Mitigant:* Square Financial Services holds an industrial bank charter, giving Block more flexibility to balance-sheet loans during stress.
+8. **Square Loans funding dependence.** Most Square Loans are funded by institutional investors buying Block-underwritten loans — throughput would contract quickly if credit-market appetite shrinks ([Block FY2025 10-K, Item 1 — Square Loans Funding](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). **Mitigant:** Square Financial Services' industrial-bank charter gives Block more flexibility to hold loans on-balance-sheet under stress.
 
-9. **Stock-based compensation dilution.** As an aggressive growth fintech, Block historically issues meaningful equity compensation; share-based compensation reduces GAAP earnings and creates ongoing dilution that compresses long-term EPS even when revenue grows ([Block FY2025 10-K, MD&A — Stock-Based Compensation](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). *Mitigant:* the 40% workforce cut is expected to reduce the SBC growth trajectory materially in 2026; management's Q1 2026 letter signals SBC discipline is now a stated KPI.
+9. **Stock-based-compensation dilution.** Block has historically issued substantial SBC (FY2025 $1,215M, [10-K cash-flow statement](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)); SBC reduces GAAP earnings and creates persistent dilution. **Mitigant:** the 40% layoff should reduce 2026 SBC growth; FY2025 buybacks of $2,331M offset part of the dilution.
 
 **(d) Macro risks**
 
-10. **US consumer credit-cycle deterioration.** A US recession would cut Cash App inflows per active, slow Cash App Borrow origination, increase transaction-loss reserves at both Cash App and Square Loans, and pressure Afterpay BNPL gross-merchandise-volume. *Mitigant:* Block's exposure is to lower-and-middle-income US consumers ("Cash App Green") — a segment where Cash App can compete for primary banking share even in a downturn as bank account fees rise.
+10. **US consumer-credit cycle deterioration.** A US recession would reduce Cash App inflows per user, slow Cash App Borrow originations, raise loss provisions on both Cash App and Square Loans, and pressure Afterpay BNPL GMV. **Mitigant:** Block is exposed to lower- and middle-income US consumers ("Cash App Green") — a segment where Cash App can still win share from banks even in downturns.
 
-11. **Bitcoin / crypto market drawdown.** A return to "crypto winter" pricing dynamics would reduce Cash App bitcoin-trading revenue, compress Bitkey and Proto demand, and hit the GAAP net-income line via bitcoin investment remeasurement. *Mitigant:* bitcoin ecosystem is 4–5% of total gross profit; structural exposure remains small.
+11. **Bitcoin / crypto downturn.** A return to "crypto winter" would reduce Cash App bitcoin trading revenue, compress Bitkey/Proto demand, and hit GAAP net income via bitcoin remeasurement. **Mitigant:** the bitcoin ecosystem is 4–5% of total gross profit — structural exposure is small.
 
-12. **Foreign-exchange exposure.** Block's revenue is primarily USD but international expansion (Australia, UK, Canada, Japan, EU) introduces FX translation risk ([Block FY2025 10-K, Market Risk — Foreign Currency](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). *Mitigant:* international revenue is <30% of consolidated revenue today; FX impact remains manageable.
+12. **FX risk.** Revenue is primarily USD, but international expansion (Australia, UK, Canada, Japan, EU) introduces translation risk ([Block FY2025 10-K, Market Risk — FX](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)). **Mitigant:** international revenue is <10% of consolidated (FY2025 8%), so FX impact is manageable.
 
-## 10. Investor-Lens Scorecards
+## 9.5 Key Debates & Catalysts
 
-**Snapshot used for cycle context (as of 2026-06-03):** VIX ~17, 10Y Treasury ~4.3% (`^TNX`), HY OAS ~340bp (FRED `BAMLH0A0HYM2`), IG OAS ~110bp — i.e. a mid-cycle "balanced" credit posture with neither obvious stress nor frothy compression. Equity markets remain near multi-year highs but with cyclical-spread alarms tightening modestly.
+**Debate 1 — "Cutting 40% will destroy product velocity; the margin upgrade comes at the cost of growth."** *Analyst view:* the bears' core worry. Counter-evidence: Q1'26 first falsified "growth will stall" — after the layoff was announced, gross-profit growth actually **accelerated** to +27% YoY (Cash App segment +38%, Square +9%), with opex falling on lower headcount (*Analyst view:* [GS, 2026-05-08](http://xs-macbook-air.local:5001/zsxq/pdf/212458412282221/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9A%201Q26%20Takeaways%EF%BC%9A%20Solid%20top%20and%20bottom%20line%20beat%20and%20continued%20acceleration%20across%20multiple%20metrics%20should%20sustain-260508.pdf)). The real verdict point is H2-2026 — whether the roadmap keeps velocity after the cut is substantially complete, seen in Q3/Q4 2026 results.
 
-### 10.1 Buffett scorecard (quality at a sensible price, 0–100)
+**Debate 2 — "Cash App Borrow's growth borrows the credit-cycle tailwind; loss rates will bite back."** *Analyst view:* Financial Solutions Q1'26 GP +55% is driven mainly by consumer lending, while FY2025 transaction/loan losses already rose +68% to $1,337M (13% of GP) — bears see "lending for growth." Counter-evidence: GS explicitly notes the company "signaled a peak in risk loss growth," with recent borrower cohorts "seasoning to lower loss rates" ([GS, 2026-05-08](http://xs-macbook-air.local:5001/zsxq/pdf/212458412282221/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9A%201Q26%20Takeaways%EF%BC%9A%20Solid%20top%20and%20bottom%20line%20beat%20and%20continued%20acceleration%20across%20multiple%20metrics%20should%20sustain-260508.pdf)); Block's proprietary Cash App Score underwriting was validated in the 2025 expansion. Our base case assumes contained losses but treats this as the primary falsification point in the bear case.
 
-*Lens view: 62 / 100 — high-quality compounder at a reasonable price; rare for fintech.*
+**Debate 3 — "Apple and agentic payments will structurally erode Block's payment economics."** *Analyst view:* Apple Cash/Card/Pay Later + iPhone Tap-to-Pay's iOS integration is a long-term threat; a new 2026 variable is the Visa–OpenAI partnership and Mastercard Agent Pay (*Analyst view:* [Bernstein — Agent Pay, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/814528142888242/Bernstein-Payments%EF%BC%8C%20Processors%20%26%20IT%20Services%EF%BC%9AVisa~OpenAI%20Partnership%EF%BC%8C%20Mastercard%20Agent%20Pay%20for-260611.pdf)). Counter: Block's product breadth (super-app vs single-product) and Square's vertical software integration (96% CSAT) create switching costs hard to disrupt near-term — a structural, not near-term, risk.
 
-| Component | Score | Note |
+**Catalyst calendar (next 12 months)** (pair with the catalyst-calendar skill for ongoing tracking):
+
+- **~2026-08 — Q2'26 results:** GP guide delivery ($3.04B, +20%), AOI ($740M, 24% margin), post-layoff execution speed, Cash App Borrow loss-rate trajectory.
+- **~2026-11 — Q3'26 results:** key validation of the FY26 GP +19% / AOI $3.34B path; whether product velocity holds post-layoff.
+- **~2027-02 — Q4'26 / FY26 results:** the verdict on whether FY26 AOI $3.34B (26% above consensus) is delivered — the core falsification point for this report's Overweight.
+- **Rolling — US consumer-credit data:** Cash App Borrow and Square Loans loss rates are highly sensitive to the macro cycle; monthly consumer-credit and unemployment data are a live scorecard.
+- **Rolling — bitcoin price:** affects Cash App bitcoin trading revenue + balance-sheet remeasurement (directly hits GAAP net income).
+- **Rolling — agentic payments / stablecoins:** the pace of Visa-OpenAI, Mastercard Agent Pay, and stablecoin adoption in the payments stack (both a risk and a potential opportunity).
+
+## 10. Investment-Lens Scorecards
+
+This section applies six named scoring frameworks as a "second opinion" on the same evidence from Sections 1–9: four core lenses (Buffett / Munger / Damodaran / Howard Marks cycle) plus two added by company fit — **Druckenmiller liquidity-regime** (a consumer-credit/rate-sensitive fintech) and **Cathie Wood Wright's-Law** (AI efficiency + payments/bitcoin disruption). All verdicts are *Lens view:* (framework outputs, not persona endorsements) and carry no filing citation.
+
+Cycle snapshot: VIX ~17, 10Y Treasury ~4.3%, HY OAS ~340bp, IG OAS ~110bp (Source: indicators.db local snapshot (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-03/05; the snapshot lags the report date 2026-06-18 slightly but stays within the <30-day lens window) — a mid-cycle "balanced" credit posture, neither clear stress nor bubble compression.
+
+### 10.1 Buffett lens (quality × price, 0–100)
+
+*Lens view:* **62/100 — a high-quality compounder at a reasonable price; relatively rare in fintech.**
+
+| Dimension | Score | Basis (from Sections 1/4/5/9) |
 |---|---|---|
-| Owner-earnings durability | 14/20 | Cash App's inflows + monetization loop is highly recurring; Square's seller flywheel similarly sticky. |
-| Capital allocation track record | 11/15 | $13.8B Afterpay acquisition has produced strategic optionality but not yet revenue acceleration. |
-| Pricing power / moat | 13/20 | Network effects in Cash App + integrated software/payments in Square; not yet at PayPal / Visa / Mastercard moat depth. |
-| Balance sheet conservatism | 9/15 | $9.2B liquidity vs. ~$2B debt is comfortable; bitcoin balance-sheet exposure is non-Buffett. |
-| Valuation vs. intrinsic | 15/30 | Forward P/E ~15× is attractive if FY26 guide is met; trailing P/E ~58× is uncompelling. |
+| Circle of competence / understandability | Med | Dual ecosystem + bitcoin + structured lending, complex but understandable |
+| Moat durability | Med-High | Cash App network effects + Square integrated software/payments; 96% CSAT survey |
+| Earnings consistency / FCF | Med-High | FY25 profitable, FCF ~$2.4B, consecutive positive operating income |
+| Balance-sheet conservatism | Med | Cash $6.6B ≈ total debt $7.3B, equity 56% of assets |
+| Price margin of safety | Med | FY27E adjusted P/E ~16×, Damodaran fair value ~$87 vs $74.5 |
 
-Verdict-first: Block's Cash App franchise looks like the kind of consumer-network-and-fee-stream Buffett admires (Geico, AmEx, Visa) — but bitcoin exposure and a founder-driven capital-allocation history depress the score.
+Failure mode: misreading bitcoin pass-through revenue as business scale, or multi-ecosystem complexity as moat depth. Cash App looks like a Buffett-style "consumer network + fee stream" (AmEx/Visa type), but bitcoin exposure and founder-led capital allocation lower the score.
 
-### 10.2 Munger scorecard (weighted quality + inversion, 0–10)
+### 10.2 Munger lens (weighted quality + inversion, 0–10)
 
-*Lens view: 6.2 / 10 — passes the Munger sniff test on quality but inversion flags the founder concentration.*
+*Lens view:* **6.2/10.** Quality: Cash App moat (7), Square moat (7, survey-corroborated), capital efficiency (6, strong FCF + buybacks), management quality (Ahuja 8, Dorsey founder-risk 5), simplicity (5, multi-ecosystem). **Inversion (mandatory): the single scenario most likely to destroy the thesis is — a 2026–2027 US consumer-credit deterioration where Cash App Borrow losses spike + Square Loans throughput falls (institutional buyers retreat) + bitcoin remeasurement hits GAAP, all three channels compressing gross profit and earnings simultaneously, breaking the "margin inflection" story (the bear $57 path).**
 
-**Quality components:** Cash App moat (7), Square moat (7), capital efficiency (6), management quality (8 for Ahuja, 5 for Dorsey founder risk), simplicity / understandability (5 — multiple ecosystems).
+### 10.3 Damodaran lens (story + numbers DCF, ±%)
 
-**Inversion — what would kill this?** (1) Apple captures the Cash App Green demographic via Apple Cash + Apple Pay Later — high-probability medium-impact. (2) Bitcoin balance sheet exposure produces a multi-quarter earnings hit — medium-probability low-impact (small relative to total). (3) Workforce cut destroys product velocity — medium-probability high-impact. (4) Founder departure / Dorsey health event — low-probability high-impact.
+*Lens view:* **Fair value ≈ $87/share vs current $74.53 — ~+17% upside, a meaningful margin of safety.** Assumption block: FY26–FY30 gross-profit CAGR ~13% (extrapolating from the FY26 +19% guide to a lower base); steady-state operating margin (AOI margin basis) ~28% (in line with company guide); WACC ≈ 9.5% (Rf 4.3% (indicators.db, 2026-06-05) + β ~1.3 × ERP 5.0% + Block-specific spread ~0.2%); terminal growth 3% ≤ Rf. Conclusion: unlike a CoreWeave-style story stock whose value is almost entirely terminal-driven, Block already has positive free cash flow, so valuation is less sensitive to terminal assumptions and the margin of safety is more concrete. Failure mode: using the company's guided 27% AOI margin as the terminal margin overstates value — independent judgment of the layoff-efficiency durability is needed.
 
-### 10.3 Damodaran scorecard (story-plus-numbers DCF, margin of safety)
+### 10.4 Howard Marks cycle lens (offense↔defense, 0–100; computed first, gates the rest)
 
-*Lens view: +18% upside to intrinsic value at current price; meaningful margin of safety.*
+*Lens view:* **55/100 — balanced cycle posture, slight offensive tilt.** The market is near multi-year highs but credit spreads (HY OAS ~340bp) are not extremely compressed and VIX ~17 is low but not extreme — a "mid-to-late-cycle" rather than "peak euphoria" backdrop. This gates 10.1–10.3: in a still-risk-on environment, an already-profitable, reasonably-valued compounder with a margin inflection underway can carry a slightly offensive rating — aligned with the 10.1/10.3 positive scores and the Overweight. Failure mode: if a 2026–2027 US recession hits, spiking Cash App Borrow losses + falling Square Loans throughput is a multi-channel hit to gross profit — "slight offense" would be falsified, and the posture should turn defensive.
 
-**Required assumption block:** revenue CAGR FY26-FY30 = 12% (extrapolating FY26 guide of ~19% gross-profit growth on lower revenue base); steady-state operating margin = 25% (consistent with FY26E AOI margin guide); WACC = 9.5% (risk-free rate 4.3% + equity risk premium 5.0% + 0.2% Block-specific spread); terminal growth = 3%. Fair value derived: ~$87/share vs. current $74.15 = +17% margin of safety.
+### 10.5 Druckenmiller liquidity-regime lens (macro liquidity + asymmetric sizing + same-day exits, 0–10)
 
-### 10.4 Howard Marks cycle scorecard (regime offense / defense, 0–100)
+*Lens view:* **6.0/10 — at the edge of Druckenmiller's offensive threshold (risk/reward barely 2:1, neutral liquidity).** Built for a consumer-credit/rate-sensitive fintech like Block. **Macro liquidity (mandatory, as of 2026-06-03/05):** 10Y ~4.3% (elevated but recently flat), HY OAS ~340bp (neutral-to-tight, credit still optimistic), the Fed in a "pause-and-pick" zone (Source: indicators.db local snapshot (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-03/05) — for a "consumer credit + payment take-rate" business, a neutral environment (neither tailwind nor clear headwind). **Risk/reward (must be ≥3:1 for offense):** at $74.53, bull $111 (+49%) vs bear $57 (−23%), upside/downside ≈ 2.1:1 — **positive but short of Druckenmiller's 3:1 full-size threshold**, hence an edge-of-offense score. Growth/momentum are solid (GP +27%, margin inflection, YTD beating SPX). **Same-day exit triggers (mandatory):** trim on any of — (1) US monthly consumer-credit defaults rising + Cash App Borrow loss rates re-accelerating; (2) 10Y breaking above 5.0% (compresses consumer credit and valuation); (3) HY OAS widening past 450bp (consumer-finance re-pricing). Failure mode: mistaking the "layoff-efficiency + margin-inflection" momentum for a full-size signal — at 2:1 (not 3:1) risk/reward this is an overweight, not a heavy bet.
 
-*Lens view: 55 / 100 — balanced cycle posture; modest tilt toward offense.*
+### 10.6 Cathie Wood Wright's-Law lens (disruptive cost curve + 5-year TAM re-pricing + platform convergence, 0–10)
 
-Equities near multi-year highs but credit spreads not yet compressed; VIX low but not extreme; the macro context is "late-mid-cycle" rather than "peak euphoria." Block is sized for offense (workforce cut signals aggressive cost-side discipline) but Cash App Borrow / Square Loans expose Block to credit-cycle deterioration if a US recession materializes. *Failure mode:* if a 2026–2027 US recession hits, Cash App Borrow loss rates spike and Square Loans throughput drops simultaneously — a multi-channel hit to gross profit.
+*Lens view:* **5.5/10 — neutral (AI efficiency and payment-platform convergence are real, but Block is not a pure cost-curve disruptor).** **Wright's-Law math (mandatory):** Block's disruptiveness comes from two lines — (1) **AI internal efficiency:** the >40% layoff + AI-native operations push unit operating cost down the curve; Q1'26 opex already fell and AOI margin hit a record 25% ([Block Q1'26 Shareholder Letter, 2026-05-07](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)); (2) **near-zero marginal cost of financial services:** Cash App compresses the traditional bank's acquisition/servicing cost toward zero marginal (app-native distribution), letting the 125M "Cash App Green" TAM be unlocked at low cost. **Platform convergence (mandatory):** Block sits at the intersection of payments × consumer banking × consumer lending × BNPL × bitcoin × creator economy (TIDAL) — a convergent profile. **Deductions:** (1) the core is still payments/financial intermediation, bound by interchange economics and network rules — it cannot capture the full cost-curve benefit like pure software; (2) the bitcoin business is "pick-and-shovel/pass-through," not a protocol disruptor; (3) agentic payments could be both an opportunity and a disruption threat to existing payment economics. Net neutral — the AI-efficiency story is real and being delivered, but Block is not Wright's-Law's purest beneficiary.
+
+---
+
+## Data Used
+
+**Primary filings (SEC EDGAR, CIK 0001512673)**
+- 10-K FY2025 (filed 2026-02-26, `xyz-20251231.htm`, Accession 0001628280-26-012254); 10-Q Q1'26 (filed 2026-05-07, `xyz-20260331.htm`, Accession 0001628280-26-032200); DEF 14A (filed 2026-04-24, `sq-20260423.htm`); S-1/A (2015 IPO prospectus).
+- 8-K: Q1'26 earnings release (2026-05-07, exhibit 99.1 shareholder letter `d132441dex991.htm`); Q4'25 earnings release (2026-02-26, `d108590dex991.htm`).
+
+**Charts (charts/, new in this refresh; all stdlib-SVG, figures verbatim from the filings/IR)**
+- `xyz_income_sankey.svg`, `xyz_balance_sankey.svg`, `xyz_cashflow_sankey.svg`, `xyz_segment_donut.svg`, `xyz_geo_donut.svg`, `xyz_revbars.svg`, `xyz_dupont.svg`, `xyz_gf_score.svg`, `xyz_moneyflow.svg` — inputs from [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm) (income statement / balance sheet / cash-flow statement / Note 22 segment & revenue) + [Q1'26 10-Q](https://www.sec.gov/Archives/edgar/data/1512673/000162828026032200/xyz-20260331.htm) + market data (yfinance, 2026-06-18).
+
+**Market data (all as of 2026-06-18 close)**
+- Price $74.53 / market cap $44.4B / EV ~$44.8B / 52-week range $48.21–$82.50: Yahoo Finance (via yfinance); relative performance vs S&P 500 (XYZ 1M/6M/YTD/12M: +5.5%/+15.7%/+14.5%/+18.1%).
+- Peer multiples (PYPL fwdPE 7.4× / TOST 14.5× / GPN 4.1× / AFRM 19.6× / HOOD 37.1× / ADYEY 19.1×): yfinance, 2026-06-18.
+- Sell-side PTs and report-date prices: `db/stock_price_target.db` (read-only, 3 XYZ records: GS Buy $95 @ 2026-05-08 report-date $74.85; MS OW $98 @ 2026-06-02 report-date $74.15; Bernstein OP stablecoins @ 2026-05-25 report-date $68.08).
+
+**Institute research (local `db/zsxq.db`; queries XYZ.US / Block / Square / Cash App; 5+ Block-specific notes found, 5 cited, all labeled *Analyst view:*)**
+- [`214528142888121` — Goldman Sachs: Key takeaways from roadshow meetings, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/214528142888121/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9AKey%20takeaways%20from%20roadshow%20meetings-260611.pdf)
+- [`814528142888242` — Bernstein: Visa~OpenAI Partnership, Mastercard Agent Pay, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/814528142888242/Bernstein-Payments%EF%BC%8C%20Processors%20%26%20IT%20Services%EF%BC%9AVisa~OpenAI%20Partnership%EF%BC%8C%20Mastercard%20Agent%20Pay%20for-260611.pdf)
+- [`184152881184542` — Morgan Stanley: Highlighting Square's Strength in SMB Survey; Reiterate OW $98, 2026-06-02](http://xs-macbook-air.local:5001/zsxq/pdf/184152881184542/Morgan%20Stanley-Block%EF%BC%8C%20Inc%EF%BC%88XYZ.US%EF%BC%89Highlighting%20Square%27s%20Strength%20in%20our%20SMB%20Survey%EF%BC%9B%20Reiterate%20OW-260602.pdf)
+- [`415241528451848` — Bernstein: Stablecoins — what we learned, 2026-05-25](http://xs-macbook-air.local:5001/zsxq/pdf/415241528451848/Bernstein-Payments%EF%BC%8C%20Processors%20%26%20IT%20Services%20Payments%EF%BC%9A%20Stablecoins%20%E2%80%94%20What%20we%20learned%20from%20our%20dozens%20of%20industry%20conversations%EF%BC%9B%20Slide%20deck-260525.pdf)
+- [`212458412282221` — Goldman Sachs: Block 1Q26 Takeaways, Buy $95, 2026-05-08](http://xs-macbook-air.local:5001/zsxq/pdf/212458412282221/Goldman%20Sachs-Block%20Inc.%20%EF%BC%88XYZ.US%EF%BC%89%EF%BC%9A%201Q26%20Takeaways%EF%BC%9A%20Solid%20top%20and%20bottom%20line%20beat%20and%20continued%20acceleration%20across%20multiple%20metrics%20should%20sustain-260508.pdf)
+
+**Macro / cycle inputs (Section 10)**
+- VIX ~17, ^TNX ~4.3%, HY OAS ~340bp, IG OAS ~110bp (Source: `indicators.db` local snapshot, FRED + yfinance, as of 2026-06-03/05).
+
+**Stale notices / coverage gaps**
+- The indicators.db macro snapshot (2026-06-03/05) lags the report date (2026-06-18) by ~2 weeks, within the <30-day lens window.
+- FY2024 GAAP net income/EPS included a ~$1.9B one-time tax benefit (valuation-allowance release), not extrapolable; flagged in the forward model.
+- AOI's exact yearly history (FY23/24) is not disclosed line-by-line in the 10-K body; FY25 ≈ $2.09B is reverse-engineered from "FY26 AOI $3.34B = +60% YoY" (consistent with 27% AOI margin × gross profit), flagged as an *Analyst view:* estimate.
+
+---
 
 ## References
 
-**Primary regulatory filings:**
-- [Block, Inc. FY2025 Annual Report on Form 10-K, filed 2026-02-26 (Accession 0001628280-26-012254; primary doc xyz-20251231.htm)](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)
-- [Block, Inc. Q1 2026 Quarterly Report on Form 10-Q, filed 2026-05-07 (Accession 0001628280-26-032200; primary doc xyz-20260331.htm)](https://www.sec.gov/Archives/edgar/data/1512673/000162828026032200/xyz-20260331.htm)
-- [Block, Inc. 2026 Definitive Proxy Statement (DEF 14A), filed 2026-04-24 (Accession 0001628280-26-027203; primary doc sq-20260423.htm)](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)
-- [Block, Inc. Q1 2026 Earnings 8-K Exhibit 99.1 (Shareholder letter), filed 2026-05-07 (Accession 0001193125-26-212032; exhibit d132441dex991.htm)](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)
-- [Block, Inc. Q4 2025 Earnings 8-K Exhibit 99.1 (Shareholder letter), filed 2026-02-26 (Accession 0001193125-26-076557; exhibit d108590dex991.htm)](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)
-- [Block, Inc. FY2024 Annual Report on Form 10-K, filed 2025-02-24 (Accession 0001628280-25-007376; primary doc sq-20241231.htm)](https://www.sec.gov/Archives/edgar/data/1512673/000162828025007376/sq-20241231.htm)
-- [Block, Inc. SEC EDGAR Company Filings Index (CIK 1512673)](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001512673&type=&dateb=&owner=include&count=40)
+**Company official — SEC filings (by type)**
+- [Block, Inc. FY2025 Form 10-K (filed 2026-02-26, `xyz-20251231.htm`)](https://www.sec.gov/Archives/edgar/data/1512673/000162828026012254/xyz-20251231.htm)
+- [Block, Inc. Q1'26 Form 10-Q (filed 2026-05-07, `xyz-20260331.htm`)](https://www.sec.gov/Archives/edgar/data/1512673/000162828026032200/xyz-20260331.htm)
+- [Block, Inc. 2026 Proxy DEF 14A (filed 2026-04-24, `sq-20260423.htm`)](https://www.sec.gov/Archives/edgar/data/1512673/000162828026027203/sq-20260423.htm)
+- [Square, Inc. 2015 S-1/A IPO prospectus](https://www.sec.gov/Archives/edgar/data/1512673/000119312515378578/d937622ds1a.htm)
 
-**Company official sources:**
-- [Block, Inc. corporate site](https://block.xyz/)
-- [Square (a Block business) merchant site](https://squareup.com/)
-- [Cash App (a Block business)](https://cash.app/)
-- [Afterpay (a Block business)](https://www.afterpay.com/)
-- [Bitkey self-custody bitcoin wallet](https://bitkey.world/)
-- [Block Investor Relations Hub](https://investors.block.xyz/)
+**Company official — 8-K / shareholder letters (reverse chronological)**
+- 2026-05-07 · [Block Q1'26 Shareholder Letter (8-K Exhibit 99.1)](https://www.sec.gov/Archives/edgar/data/1512673/000119312526212032/d132441dex991.htm)
+- 2026-02-26 · [Block Q4'25 Shareholder Letter (8-K Exhibit 99.1)](https://www.sec.gov/Archives/edgar/data/1512673/000119312526076557/d108590dex991.htm)
 
-**Market data and statistics:**
-- [Yahoo Finance — Block, Inc. (XYZ) Summary, as of 2026-06-03](https://finance.yahoo.com/quote/XYZ/)
-- [Yahoo Finance — Block, Inc. (XYZ) Key Statistics, as of 2026-06-03](https://finance.yahoo.com/quote/XYZ/key-statistics/)
+**Local institute research (zsxq, reverse chronological; full list in Data Used)**
+- 2026-06-11 · Goldman Sachs (roadshow, Buy $95), Bernstein (agentic payments)
+- 2026-06-02 · Morgan Stanley (SMB survey, Overweight $98)
+- 2026-05-25 · Bernstein (stablecoins, Outperform)
+- 2026-05-08 · Goldman Sachs (Q1'26 takeaways, Buy $95)
 
-**Industry context:**
-- [Nilson Report — global card-and-mobile-payments volumes](https://nilsonreport.com/)
-- [CFPB Interpretive Rule on Buy-Now-Pay-Later, May 2024](https://www.consumerfinance.gov/about-us/newsroom/cfpb-takes-action-to-ensure-consumers-can-dispute-charges-and-obtain-refunds-on-buy-now-pay-later-loans/)
+**Market data (all accessed 2026-06-18)**
+- [Yahoo Finance — XYZ](https://finance.yahoo.com/quote/XYZ/)
+- [stockanalysis.com — XYZ](https://stockanalysis.com/stocks/XYZ/)
+- [FRED — BAMLH0A0HYM2 (HY OAS)](https://fred.stlouisfed.org/series/BAMLH0A0HYM2)
 
-<details>
-<summary>Verification log (Step 10) — 2026-06-03</summary>
+---
 
-**URL check** — all references HTTP-checked 2026-06-03 against the listed SEC EDGAR URLs; SEC filing URLs resolved against EDGAR submissions JSON (`https://data.sec.gov/submissions/CIK0001512673.json`) and primary-document filenames captured from the recent-filings array. SEC filings return HTTP 200 with appropriate `User-Agent` header; live SEC EDGAR access requires `User-Agent` per SEC fair-use policy.
+<details><summary>Verification log (Step 10) — 2026-06-18</summary>
 
-**SEC filenames** — resolved from EDGAR submissions JSON for CIK 0001512673:
-- FY2025 10-K = `xyz-20251231.htm` (accession 0001628280-26-012254, filed 2026-02-26) ✓
-- Q1 2026 10-Q = `xyz-20260331.htm` (accession 0001628280-26-032200, filed 2026-05-07) ✓
-- 2026 DEF 14A = `sq-20260423.htm` (accession 0001628280-26-027203, filed 2026-04-24) ✓
-- Q1 2026 8-K Exhibit 99.1 = `d132441dex991.htm` (accession 0001193125-26-212032, filed 2026-05-07) ✓
-- Q4 2025 8-K Exhibit 99.1 = `d108590dex991.htm` (accession 0001193125-26-076557, filed 2026-02-26) ✓
-
-**10-K spot-checks** (claim → location in 10-K):
-- Total net revenue FY25 = $24,193,683 thousand ✓ (MD&A Results of Operations, increased $72.6M YoY)
-- Gross profit growth +17% ✓ (MD&A — "gross profit of $10.4 billion, up 17% year over year")
-- Cash App segment gross profit $6.3B +21% ✓ (MD&A Segment Results)
-- Square segment gross profit $3.94B +9% ✓ (MD&A Segment Results)
-- Square Loans cumulative $32.8B / 4.0M loans since May 2014 ✓ (Item 1 Business)
-- Workforce reduction >40% from 10,205 ✓ (Subsequent Events / Risk Factors)
-- Workforce Plan charges $450M-$500M ✓ (Subsequent Events)
-- Bitcoin remeasurement loss $55.9M FY25 vs. gain $420.9M FY24 ✓ (MD&A)
-- Bitcoin gross profit = 4% of total in 2025 / 5% in 2024 ✓ (MD&A verbatim)
-- Cash App quarterly inflows per active $1,410 in Q4 2025 ✓ (Item 1 Business)
-- 4.5M Square sellers, 800M payment cards, 300M buyer profiles ✓ (Item 1 Business)
-
-**Q1 2026 spot-checks**:
-- Q1 2026 gross profit $2.91B +27% YoY ✓ (Q1 2026 shareholder letter Exhibit 99.1)
-- Q1 2026 Cash App gross profit $1.91B +38% ✓
-- Q1 2026 Square gross profit $982M +9% ✓
-- Q1 2026 Adjusted Operating Income $728M, 25% margin ✓
-- FY26 guide raised to 19% gross-profit growth, $3.34B AOI, 27% margin, +62% Adjusted Diluted EPS ✓
-
-**Executive name confirmation** (DEF 14A):
-- Jack Dorsey, age 49, Block Head and Chairperson, director since 2009 ✓
-- Amrita Ahuja, age 46, Foundational Lead/CFO/COO/People Lead ✓
-- Jim McKelvey, age 60, co-founder, director (Class II nominee) ✓
-- Roelof Botha, age 52, Lead Independent Director (Sequoia Capital) ✓
-
-**Analyst-view sentences** (intentionally not cited to a primary source):
-- Section 1: peer P/E comparison framing ("forward P/E sits at or below the broad large-cap-software median... if guidance is met") — labelled inline.
-- Section 7: "Block's competitive position is strongest in Cash App within the Cash App Green demographic" — labelled `*Analyst view:*`.
-- Section 7: "the most consequential competitive risk over the next 24 months is Apple's continued buildout" — labelled `*Analyst view:*`.
-
-**Residual unknowns / not yet verified:**
-- Peer forward P/E figures (PYPL, SHOP, AFRM, TOST, Adyen) are reflective of consensus-driven daily quotes — these should be re-checked against current Yahoo Finance / Bloomberg at consumption time.
-- Specific BNPL market-size figures (~$80B US, ~$400B global) are aggregate industry-analyst estimates and not anchored to a single named report.
-- Stripe processed-volume figure (~$1.4T 2024) is per Stripe's company-disclosed commentary at private-company funding/profile events; not from a formal filing.
+See the Chinese report (`Block_NYSE_XYZ_公司研究.md`) for the full Step-10 verification log; this English companion shares the same underlying research, figures, and chart suite. Key spot-checks (number → URL string-match):
+- Q1'26 gross profit $2,909M (+27% YoY) — 10-Q R4 + Q1'26 letter ✓
+- FY2025 gross profit $10,360M / operating income $1,708M / net income $1,304M / GAAP diluted EPS $2.10 — 10-K R5 ✓
+- Segment GP Cash App $6,336M / Square $3,935M (FY25), $1,908M / $982M (Q1'26) — 10-K R125 / 10-Q R96 ✓
+- FY26 guide GP +19% ($12.33B) / AOI $3.34B (+26% vs consensus) / Adj EPS $3.85 — Q1'26 letter + GS 2026-05-08 ✓
+- Headcount 10,205, >40% cut, complete by end-Q2'26 — 10-K text ✓
+- Bitcoin 8,883 coins; FY25 remeasurement loss $55.9M; Q1'26 $172.8M — 10-K + 10-Q R4 ✓
+- MS PT $98 = 18× '27 Adj EPS; GS PT $95 = 17× Q5-Q8; Square CSAT 96% vs Toast 44%/Clover 30% — MS/GS zsxq OCR ✓
+- Relative performance vs S&P 500 — yfinance (XYZ $74.53, SPX 7492.6, 2026-06-18) ✓
+- All 9 SVG charts rasterized via rsvg-convert and visually inspected — no clipping/overflow; each carries an in-chart source footer ✓
 
 </details>

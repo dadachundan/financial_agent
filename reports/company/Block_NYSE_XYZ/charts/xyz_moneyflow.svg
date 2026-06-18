@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1078" width="1180" height="1078" role="img" aria-label="钱从哪来、到哪去：Block 的双生态资金流（需求视角）" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1078" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">BLOCK 资金流向 · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱从哪来、到哪去：Block 的双生态资金流（需求视角）</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">Square 商户的刷卡交易与 Cash App 消费者的金融活动是两台收钱机；钱穿过 Block 的产品后，大头流向卡组织/发卡行 (interchange)、比特币现货市场 (pass-through) 与赞助银行，留在 Block 的是毛利润</text>
+<text x="42.00" y="164.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">$10.4B（占总收入 43%）。比特币生态收入 $8.5B 几乎全是过手——成本 $8.1B 直接付给现货市场。</text>
+<ellipse cx="1031.00" cy="440.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="210.00" x2="369.50" y2="666.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="210.00" x2="810.50" y2="666.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁在付钱（需求）</text>
+<text x="483.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Block 的产品</text>
+<text x="924.00" y="194.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终流向哪里</text>
+<path d="M 256.00 319.00 C 369.50 319.00, 369.50 326.25, 483.00 326.25" fill="none" stroke="url(#mfgold)" stroke-width="21.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 448.25 C 369.50 448.25, 369.50 340.50, 483.00 340.50" fill="none" stroke="url(#mfgold)" stroke-width="7.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 458.75 C 369.50 458.75, 369.50 440.00, 483.00 440.00" fill="none" stroke="url(#mfgold)" stroke-width="13.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 576.00 C 369.50 576.00, 369.50 550.00, 483.00 550.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 324.00 C 810.50 324.00, 810.50 267.00, 924.00 267.00" fill="none" stroke="url(#mfgold)" stroke-width="16.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 547.50 C 810.50 547.50, 810.50 377.00, 924.00 377.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 434.75 C 810.50 434.75, 810.50 487.00, 924.00 487.00" fill="none" stroke="url(#mfgold)" stroke-width="6.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 338.25 C 810.50 338.25, 810.50 597.25, 924.00 597.25" fill="none" stroke="url(#mfgold)" stroke-width="12.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 443.00 C 810.50 443.00, 810.50 608.50, 924.00 608.50" fill="none" stroke="url(#mfgold)" stroke-width="10.50" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 562.00 C 810.50 562.00, 810.50 616.25, 924.00 616.25" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="316.62" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">GPV x 交易费率</text>
+<text x="369.50" y="443.38" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$4.2B</text>
+<text x="369.50" y="557.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$8.5B（过手）</text>
+<text x="810.50" y="289.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">interchange/processing</text>
+<text x="810.50" y="456.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$8.1B BTC 采购</text>
+<text x="810.50" y="461.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">毛利</text>
+<text x="810.50" y="583.12" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$0.42B 薄毛利</text>
+<rect x="42.00" y="259.00" width="214" height="120.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="259.00" width="3" height="120.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="292.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">SQUARE 商户的买家</text>
+<text x="60.00" y="313.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">中小商户 (SMB) 的终端消费者</text>
+<text x="60.00" y="330.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">刷卡 GPV 驱动交易费</text>
+<rect x="42.00" y="395.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="395.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="428.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">CASH APP 消费者</text>
+<text x="60.00" y="449.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">~5,700 万月活</text>
+<text x="60.00" y="466.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">转账/Borrow/Cash App Card/比特币</text>
+<rect x="42.00" y="531.00" width="214" height="90.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="531.00" width="3" height="90.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="564.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">比特币买家</text>
+<text x="60.00" y="585.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Cash App 内购买 BTC</text>
+<text x="60.00" y="602.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">几乎全额过手</text>
+<rect x="483.00" y="283.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="283.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="316.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">COMMERCE ENABLEMENT</text>
+<text x="501.00" y="337.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">收入 $11.5B</text>
+<text x="501.00" y="354.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Square + Cash App 商务</text>
+<rect x="483.00" y="393.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="483.00" y="393.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="501.00" y="426.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">FINANCIAL SOLUTIONS</text>
+<text x="501.00" y="447.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">收入 $4.2B</text>
+<text x="501.00" y="464.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Borrow/Afterpay/Cash App Card/利息</text>
+<rect x="483.00" y="503.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="503.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="536.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">BITCOIN ECOSYSTEM</text>
+<text x="501.00" y="557.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">收入 $8.5B</text>
+<text x="501.00" y="574.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">毛利仅 $0.42B（过手）</text>
+<rect x="924.00" y="220.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="220.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="253.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">卡组织 / 发卡行</text>
+<text x="942.00" y="274.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Visa/Mastercard interchange</text>
+<text x="942.00" y="291.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">Block COGS 最大块</text>
+<rect x="924.00" y="330.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="330.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="363.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">比特币现货市场</text>
+<text x="942.00" y="384.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">BTC 采购成本 $8.1B</text>
+<text x="942.00" y="401.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">约比特币收入的 95%</text>
+<rect x="924.00" y="440.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="440.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="473.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">赞助银行 / FDIC</text>
+<text x="942.00" y="494.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">发卡赞助、存款托管</text>
+<text x="942.00" y="511.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">贷款资金/仓储融资</text>
+<rect x="924.00" y="550.00" width="214" height="110.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="550.00" width="3" height="110.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="583.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">BLOCK 留存毛利润</text>
+<text x="942.00" y="604.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Gross Profit $10.4B</text>
+<text x="942.00" y="621.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">= 总收入的 43%</text>
+<rect x="42.00" y="686.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="688.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="688.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="688.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="688.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="681.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="747.00" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="821.40" y="681.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="840.40" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<rect x="914.80" y="681.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="933.80" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="1001.00" y="681.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="1020.00" y="690.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="42.00" y="701.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="61.00" y="710.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<line x1="42" y1="726.00" x2="1138" y2="726.00" stroke="#222a3a"/>
+<text x="42.00" y="742.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 看懂 BLOCK 的钱</text>
+<rect x="42.00" y="762.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="42.00" y="762.00" width="3" height="132.00" rx="2" fill="#a78bfa"/>
+<text x="58.00" y="786.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">过手 · 比特币</text>
+<text x="58.00" y="804.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">比特币收入是会计噪音</text>
+<text x="58.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 比特币生态收入</tspan><tspan fill="#f4d58a" font-weight="700"> $8.5B</tspan><tspan fill="#9aa3b8" font-weight="400"> 、成本</tspan><tspan fill="#f4d58a" font-weight="700"> $8.1B</tspan><tspan fill="#9aa3b8" font-weight="400"> ，毛利仅</tspan><tspan fill="#f4d58a" font-weight="700"> $0.42B</tspan><tspan fill="#9aa3b8" font-weight="400"> ——比特币贡献</tspan></text>
+<text x="58.00" y="844.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">35%</tspan><tspan fill="#9aa3b8" font-weight="400"> 的收入但不到</tspan><tspan fill="#9aa3b8" font-weight="400"> 4%</tspan><tspan fill="#9aa3b8" font-weight="400"> 的毛利。看</tspan><tspan fill="#9aa3b8" font-weight="400"> Block</tspan><tspan fill="#9aa3b8" font-weight="400"> 要看</tspan><tspan fill="#f4d58a" font-weight="700"> gross</tspan><tspan fill="#f4d58a" font-weight="700"> profit</tspan></text>
+<text x="58.00" y="860.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">（$10.4B），不是总收入（$24.2B）。</tspan></text>
+<rect x="412.00" y="762.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="762.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="786.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">毛利引擎 · CASH APP</text>
+<text x="428.00" y="804.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Cash App 是更大的毛利发动机</text>
+<text x="428.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> Cash</tspan><tspan fill="#9aa3b8" font-weight="400"> App</tspan><tspan fill="#9aa3b8" font-weight="400"> 分部毛利润</tspan><tspan fill="#f4d58a" font-weight="700"> $6.34B</tspan><tspan fill="#9aa3b8" font-weight="400"> （+21%</tspan><tspan fill="#9aa3b8" font-weight="400"> YoY），Square</tspan><tspan fill="#9aa3b8" font-weight="400"> 分部</tspan></text>
+<text x="428.00" y="844.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$3.94B</tspan><tspan fill="#9aa3b8" font-weight="400"> （+9%）——Cash</tspan><tspan fill="#9aa3b8" font-weight="400"> App</tspan><tspan fill="#9aa3b8" font-weight="400"> 贡献全公司约</tspan><tspan fill="#f4d58a" font-weight="700"> 61%</tspan><tspan fill="#9aa3b8" font-weight="400"> 的分部毛利。</tspan></text>
+<rect x="782.00" y="762.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="782.00" y="762.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="798.00" y="786.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">成本 · INTERCHANGE</text>
+<text x="798.00" y="804.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">interchange 是最大的真实 COGS</text>
+<text x="798.00" y="828.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">剔除比特币过手后，Block</tspan><tspan fill="#9aa3b8" font-weight="400"> 最大成本是付给</tspan><tspan fill="#9aa3b8" font-weight="400"> Visa/Mastercard</tspan><tspan fill="#9aa3b8" font-weight="400"> 与发卡行的</tspan></text>
+<text x="798.00" y="844.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">interchange</tspan><tspan fill="#9aa3b8" font-weight="400"> 与处理费——支付公司毛利率的天花板。</tspan></text>
+<rect x="42.00" y="908.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="908.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="932.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">留存 · 43% TAKE</text>
+<text x="58.00" y="950.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">43% 的钱留在 Block</text>
+<text x="58.00" y="974.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">总收入</tspan><tspan fill="#f4d58a" font-weight="700"> $24.2B</tspan><tspan fill="#9aa3b8" font-weight="400"> 中留下毛利润</tspan><tspan fill="#f4d58a" font-weight="700"> $10.4B</tspan><tspan fill="#9aa3b8" font-weight="400"> （43%）；FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 经营利润</tspan><tspan fill="#f4d58a" font-weight="700"> $1.71B</tspan></text>
+<text x="58.00" y="990.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">、净利润</tspan><tspan fill="#f4d58a" font-weight="700"> $1.30B</tspan><tspan fill="#9aa3b8" font-weight="400"> 。</tspan></text>
+<text x="590.00" y="1060.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Block FY2025 10-K (filed 2026-02-26): Consolidated Statements of Operations; Note 22 Segment &amp; Revenue disaggregation. Cash App MAU from FY2025 10-K Business section.</text>
+</svg>
