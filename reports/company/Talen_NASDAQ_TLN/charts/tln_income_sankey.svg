@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Talen Energy FY2025 利润表 Sankey (Income Statement)</text>
+<path d="M 204.00,59.32 C 258.00,59.32 258.00,78.00 312.00,78.00 L 312.00,428.06 C 258.00,428.06 258.00,409.38 204.00,409.38 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,71.00 C 506.00,71.00 506.00,149.79 560.00,149.79 L 560.00,151.79 C 506.00,151.79 506.00,73.00 452.00,73.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,73.00 C 506.00,73.00 506.00,165.79 560.00,165.79 L 560.00,428.21 C 506.00,428.21 506.00,335.42 452.00,335.42 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,78.00 C 382.00,78.00 382.00,71.00 436.00,71.00 L 436.00,318.71 C 382.00,318.71 382.00,325.71 328.00,325.71 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,325.71 C 382.00,325.71 382.00,332.71 436.00,332.71 L 436.00,507.00 C 382.00,507.00 382.00,500.00 328.00,500.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,142.79 C 754.00,142.79 754.00,288.00 808.00,288.00 L 808.00,290.00 C 754.00,290.00 754.00,144.79 700.00,144.79 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,149.79 C 630.00,149.79 630.00,142.79 684.00,142.79 L 684.00,144.79 C 630.00,144.79 630.00,151.79 576.00,151.79 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,165.79 C 630.00,165.79 630.00,158.79 684.00,158.79 L 684.00,260.81 C 630.00,260.81 630.00,267.81 576.00,267.81 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,267.81 C 630.00,267.81 630.00,274.81 684.00,274.81 L 684.00,435.21 C 630.00,435.21 630.00,428.21 576.00,428.21 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,423.38 C 258.00,423.38 258.00,428.06 312.00,428.06 L 312.00,507.36 C 258.00,507.36 258.00,502.68 204.00,502.68 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,516.68 C 258.00,516.68 258.00,507.36 312.00,507.36 L 312.00,509.36 C 258.00,509.36 258.00,518.68 204.00,518.68 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="59.32" width="16" height="350.06" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="423.38" width="16" height="79.30" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="516.68" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="71.00" width="16" height="247.71" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="332.71" width="16" height="174.29" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="149.79" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="165.79" width="16" height="262.42" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="142.79" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="158.79" width="16" height="102.03" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="274.81" width="16" height="160.40" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="288.00" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<line x1="188.00" y1="234.35" x2="182.00" y2="203.67" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="206.67" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Energy &amp; other 电能及其他</text>
+<text x="179.00" y="219.67" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.1B  (83.0%)</text>
+<line x1="188.00" y1="463.03" x2="182.00" y2="432.35" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="435.35" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Capacity 容量</text>
+<text x="179.00" y="448.35" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$485.0M  (18.8%)</text>
+<line x1="188.00" y1="517.68" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Deriv. unrealized 衍生品未实现</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$45.0M  (-1.7%)</text>
+<rect x="331.00" y="60.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.6B  (100.0%)</text>
+<rect x="455.00" y="53.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.5B  (58.7%)</text>
+<rect x="455.00" y="314.71" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="326.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="339.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.1B  (41.3%)</text>
+<rect x="579.00" y="131.79" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="143.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="156.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$90.0M  (-3.5%)</text>
+<rect x="579.00" y="156.79" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="168.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="181.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.6B  (62.2%)</text>
+<rect x="703.00" y="124.79" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="136.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="149.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$90.0M  (-3.5%)</text>
+<rect x="703.00" y="149.79" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="161.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="174.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$624.0M  (24.2%)</text>
+<rect x="703.00" y="256.81" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="268.81" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="281.81" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$981.0M  (38.0%)</text>
+<text x="833.00" y="286.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="299.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$90.0M  (-3.5%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">能源费用 US$1,066M 含燃料采购+核燃料摊销+商品衍生品; 其他经营费用含 O&amp;M US$620M、D&amp;A US$279M、其他 US$82M; G&amp;A US$624M 内含非现金股权激励 SBC US$526M(IPO负债型奖励重估)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: TLN FY2025 10-K, Consolidated Statements of Operations (filed 2026-02-26)</text>
+</svg>

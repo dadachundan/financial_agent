@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Talen Energy FY2025 现金流量表 Sankey (Cash Flow)</text>
+<path d="M 204.00,64.00 C 306.00,64.00 306.00,78.00 408.00,78.00 L 408.00,113.46 C 306.00,113.46 306.00,99.46 204.00,99.46 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 644.00,71.00 C 746.00,71.00 746.00,99.73 848.00,99.73 L 848.00,468.26 C 746.00,468.26 746.00,439.53 644.00,439.53 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,439.53 C 746.00,439.53 746.00,482.26 848.00,482.26 L 848.00,502.27 C 746.00,502.27 746.00,459.55 644.00,459.55 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,459.55 C 746.00,459.55 746.00,516.27 848.00,516.27 L 848.00,518.27 C 746.00,518.27 746.00,461.55 644.00,461.55 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,71.00 628.00,71.00 L 628.00,460.91 C 526.00,460.91 526.00,467.91 424.00,467.91 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,467.91 C 526.00,467.91 526.00,474.91 628.00,474.91 L 628.00,547.00 C 526.00,547.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,113.46 C 306.00,113.46 306.00,113.46 408.00,113.46 L 408.00,181.86 C 306.00,181.86 306.00,181.86 204.00,181.86 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,195.86 C 306.00,195.86 306.00,181.86 408.00,181.86 L 408.00,540.00 C 306.00,540.00 306.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="35.46" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="113.46" width="16" height="68.40" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="195.86" width="16" height="358.14" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="71.00" width="16" height="389.91" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="474.91" width="16" height="72.09" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="99.73" width="16" height="368.53" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="482.26" width="16" height="20.02" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="516.27" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="78.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="91.73" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$365.0M  (7.7%)</text>
+<rect x="207.00" y="95.46" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="107.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="120.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$704.0M  (14.8%)</text>
+<rect x="207.00" y="177.86" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="189.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="210.00" y="202.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.7B  (77.5%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.8B  (100.0%)</text>
+<rect x="647.00" y="53.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$4.0B  (84.4%)</text>
+<text x="653.00" y="507.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="520.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$742.0M  (15.6%)</text>
+<text x="873.00" y="280.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Freedom/Guernsey acquisition 收购</text>
+<text x="873.00" y="293.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$3.8B  (79.8%)</text>
+<text x="873.00" y="489.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Nuclear fuel &amp; PP&amp;E capex 核燃料与厂房资本开支</text>
+<text x="873.00" y="502.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$206.0M  (4.3%)</text>
+<text x="873.00" y="514.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net trust &amp; asset sales 信托与资产处置净额</text>
+<text x="873.00" y="527.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$14.0M  (0.29%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">投资活动净额 US$(4,013)M 主要为 Freedom/Guernsey 收购 US$(3,793)M; 融资活动净额 US$3,686M 主要为债务发行 US$3,890M(为收购融资)  ·  Free Cash Flow = CFO − CapEx = US$498.0M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: TLN FY2025 10-K, Consolidated Statements of Cash Flows (FY ended 2025-12-31)</text>
+</svg>

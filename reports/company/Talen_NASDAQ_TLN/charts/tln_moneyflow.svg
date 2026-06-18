@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1142" width="1180" height="1142" role="img" aria-label="钱怎么流进 Talen，又流向谁 (Who pays Talen → what Talen runs → where its cash goes)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1142" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">TALEN ENERGY 资金流 · 2025–2026</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">钱怎么流进 Talen，又流向谁 (Who pays Talen → what Talen runs → where its</text>
+<text x="42.00" y="138.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">cash goes)</text>
+<text x="42.00" y="180.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">需求侧（AWS 长约 + PJM 容量/电能批发 + RMR 固定费用 + 联邦核能 PTC）付费给 Talen 的发电资产，资产产生的现金再流向核燃料链、天然气供应、债务持有人与并购对价——核燃料链与债务利息是两个真正的瓶颈。</text>
+<ellipse cx="1031.00" cy="472.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="226.00" x2="369.50" y2="714.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="226.00" x2="810.50" y2="714.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱给 Talen (需求)</text>
+<text x="483.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Talen 及其资产 (变现)</text>
+<text x="924.00" y="210.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="226.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Talen 的现金流向 (供应/资本)</text>
+<path d="M 256.00 299.00 C 369.50 299.00, 369.50 342.00, 483.00 342.00" fill="none" stroke="url(#mfgold)" stroke-width="19.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 413.00 C 369.50 413.00, 369.50 359.45, 483.00 359.45" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 432.64 C 369.50 432.64, 369.50 485.00, 483.00 485.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 543.00 C 369.50 543.00, 369.50 603.00, 483.00 603.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 653.00 C 369.50 653.00, 369.50 371.45, 483.00 371.45" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 347.45 C 810.50 347.45, 810.50 291.00, 924.00 291.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 467.55 C 810.50 467.55, 810.50 409.00, 924.00 409.00" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 501.36 C 810.50 501.36, 810.50 653.00, 924.00 653.00" fill="none" stroke="url(#mfgold)" stroke-width="19.64" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 359.45 C 810.50 359.45, 810.50 516.86, 924.00 516.86" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 483.91 C 810.50 483.91, 810.50 531.05, 924.00 531.05" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 603.00 C 810.50 603.00, 810.50 541.18, 924.00 541.18" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="314.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">长约现金流</text>
+<text x="369.50" y="452.82" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">容量+电能</text>
+<text x="369.50" y="567.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">US$1.8亿/年</text>
+<text x="369.50" y="506.23" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">Sec.45U PTC</text>
+<text x="810.50" y="313.23" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">核燃料采购</text>
+<text x="810.50" y="432.27" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">天然气采购</text>
+<text x="810.50" y="571.18" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">收购对价</text>
+<rect x="42.00" y="244.00" width="214" height="110.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="42.00" y="244.00" width="3" height="110.00" rx="2" fill="#56c6e6"/>
+<text x="60.00" y="277.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">AWS</text>
+<text x="60.00" y="298.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">1,920 MW 表前核电 PPA</text>
+<text x="60.00" y="315.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">至 2042 年, 固定价格</text>
+<rect x="42.00" y="370.00" width="214" height="110.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="370.00" width="3" height="110.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="403.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">PJM 批发市场</text>
+<text x="60.00" y="424.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">容量 + 电能 + 辅助服务</text>
+<text x="60.00" y="441.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">2026/27 容量上限 329.17 \$/MW-day</text>
+<rect x="42.00" y="496.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="496.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="529.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">PJM RMR 对手方</text>
+<text x="60.00" y="550.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Brandon Shores + Wagner</text>
+<text x="60.00" y="567.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">US$1.8亿/年固定费用至 2029</text>
+<rect x="42.00" y="606.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="606.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="639.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">美国财政部 / IRS</text>
+<text x="60.00" y="660.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">IRA Sec.45U 核能 PTC</text>
+<text x="60.00" y="677.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">电价走低时支付上升</text>
+<rect x="483.00" y="294.00" width="214" height="120.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="294.00" width="3" height="120.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="327.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Susquehanna 核电</text>
+<text x="501.00" y="348.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">2,245 净 MW · ~17 TWh</text>
+<text x="501.00" y="365.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">全成本 ~27 \$/MWh</text>
+<rect x="483.00" y="430.00" width="214" height="110.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="430.00" width="3" height="110.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="463.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">燃气机组 (CCGT+调峰)</text>
+<text x="501.00" y="484.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Guernsey/Freedom/Cornerstone</text>
+<text x="501.00" y="501.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">+Martins Creek/Montour/Brunner</text>
+<rect x="483.00" y="556.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="556.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="589.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">煤/油 RMR 机组</text>
+<text x="501.00" y="610.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Brandon Shores + H.A. Wagner</text>
+<text x="501.00" y="627.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">1,975 MW</text>
+<rect x="924.00" y="236.00" width="214" height="110.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="236.00" width="3" height="110.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">核燃料链 (铀+转化+浓缩)</text>
+<text x="942.00" y="290.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">至 2028 全合约化</text>
+<text x="942.00" y="307.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">西方铀供应集中—瓶颈</text>
+<rect x="924.00" y="362.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="362.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="395.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Marcellus/Utica 天然气</text>
+<text x="942.00" y="416.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">低成本气源</text>
+<text x="942.00" y="433.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">CCGT 边际成本</text>
+<rect x="924.00" y="472.00" width="214" height="110.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="472.00" width="3" height="110.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="505.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">债权人 / 利息</text>
+<text x="942.00" y="526.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">FY2025 长期债务 US$6,782M</text>
+<text x="942.00" y="543.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">利息 US$302M/年—瓶颈</text>
+<rect x="924.00" y="598.00" width="214" height="110.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="598.00" width="3" height="110.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="631.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">并购对价 (ECP/Caithness/BlackRock)</text>
+<text x="942.00" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Freedom/Guernsey US$3.8B</text>
+<text x="942.00" y="669.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">Cornerstone US$3.45B (已交割)</text>
+<rect x="42.00" y="734.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="738.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="736.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="736.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="736.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="736.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="738.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="738.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="729.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="738.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="729.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="847.60" y="738.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="929.20" y="729.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="948.20" y="738.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="774.00" x2="1138" y2="774.00" stroke="#222a3a"/>
+<text x="42.00" y="790.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">顺着钱看 (FOLLOW THE MONEY)</text>
+<rect x="42.00" y="810.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="810.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="834.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">需求 · AI 电力</text>
+<text x="58.00" y="852.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AWS 长约</text>
+<text x="58.00" y="876.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">AWS</tspan><tspan fill="#9aa3b8" font-weight="400"> 已锁定</tspan><tspan fill="#9aa3b8" font-weight="400"> Susquehanna</tspan><tspan fill="#9aa3b8" font-weight="400"> 至多</tspan><tspan fill="#f4d58a" font-weight="700"> 1,920</tspan><tspan fill="#f4d58a" font-weight="700"> MW</tspan><tspan fill="#9aa3b8" font-weight="400"> 表前核电至</tspan><tspan fill="#f4d58a" font-weight="700"> 2042</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan></text>
+<text x="58.00" y="892.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">，固定价格——这是美国</tspan><tspan fill="#9aa3b8" font-weight="400"> IPP</tspan><tspan fill="#9aa3b8" font-weight="400"> 与超大规模云之间首份已交付的核电</tspan><tspan fill="#9aa3b8" font-weight="400"> PPA。</tspan></text>
+<rect x="412.00" y="810.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="810.00" width="3" height="132.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="834.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求 · PJM 容量</text>
+<text x="428.00" y="852.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">容量价格 9 倍跳升</text>
+<text x="428.00" y="876.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">PJM</tspan><tspan fill="#9aa3b8" font-weight="400"> 容量价从上一轮</tspan><tspan fill="#f4d58a" font-weight="700"> 28.92</tspan><tspan fill="#f4d58a" font-weight="700"> \$/MW-day</tspan><tspan fill="#9aa3b8" font-weight="400"> 跳升至</tspan><tspan fill="#9aa3b8" font-weight="400"> 2025/26</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> 269.92</tspan></text>
+<text x="428.00" y="892.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">\$/MW-day</tspan><tspan fill="#9aa3b8" font-weight="400"> ，2026/27</tspan><tspan fill="#9aa3b8" font-weight="400"> 清算于</tspan><tspan fill="#9aa3b8" font-weight="400"> FERC</tspan><tspan fill="#9aa3b8" font-weight="400"> 上限</tspan><tspan fill="#f4d58a" font-weight="700"> 329.17</tspan><tspan fill="#f4d58a" font-weight="700"> \$/MW-day</tspan></text>
+<text x="428.00" y="908.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">——FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 容量收入</tspan><tspan fill="#f4d58a" font-weight="700"> US$485M</tspan><tspan fill="#9aa3b8" font-weight="400"> 同比</tspan><tspan fill="#9aa3b8" font-weight="400"> +153%。</tspan></text>
+<rect x="782.00" y="810.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="810.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="834.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">变现 · 现金引擎</text>
+<text x="798.00" y="852.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">核电全成本 ~27 \$/MWh</text>
+<text x="798.00" y="876.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Susquehanna</tspan><tspan fill="#9aa3b8" font-weight="400"> 以</tspan><tspan fill="#f4d58a" font-weight="700"> ~27</tspan><tspan fill="#f4d58a" font-weight="700"> \$/MWh</tspan><tspan fill="#9aa3b8" font-weight="400"> 全成本运行、PJM</tspan><tspan fill="#9aa3b8" font-weight="400"> West</tspan><tspan fill="#9aa3b8" font-weight="400"> Hub</tspan><tspan fill="#9aa3b8" font-weight="400"> 实现价</tspan><tspan fill="#f4d58a" font-weight="700"> 40–60</tspan></text>
+<text x="798.00" y="892.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">\$/MWh</tspan><tspan fill="#9aa3b8" font-weight="400"> ——核电分部的高利差是</tspan><tspan fill="#9aa3b8" font-weight="400"> PJM</tspan><tspan fill="#9aa3b8" font-weight="400"> 分部</tspan><tspan fill="#f4d58a" font-weight="700"> US$1,074M</tspan><tspan fill="#9aa3b8" font-weight="400"> 调整后</tspan><tspan fill="#9aa3b8" font-weight="400"> EBITDA</tspan><tspan fill="#9aa3b8" font-weight="400"> 的核心。</tspan></text>
+<rect x="42.00" y="956.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="956.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="980.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">供应 · 瓶颈</text>
+<text x="58.00" y="998.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">核燃料链已合约化</text>
+<text x="58.00" y="1022.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">核燃料供应至</tspan><tspan fill="#f4d58a" font-weight="700"> 2028</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan></text>
+<text x="58.00" y="1038.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">完全合约化覆盖、无俄罗斯敞口；但西方铀+转化+浓缩高度集中，HALEU/转化中断是结构性瓶颈。</tspan></text>
+<rect x="412.00" y="956.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="956.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="980.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">资本 · 瓶颈</text>
+<text x="428.00" y="998.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">杠杆与利息</text>
+<text x="428.00" y="1022.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">为收购融资，长期债务从</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2024</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> US$2,987M</tspan><tspan fill="#9aa3b8" font-weight="400"> 跳升至</tspan><tspan fill="#9aa3b8" font-weight="400"> FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> US$6,782M</tspan></text>
+<text x="428.00" y="1038.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">，年利息</tspan><tspan fill="#f4d58a" font-weight="700"> US$302M</tspan><tspan fill="#9aa3b8" font-weight="400"> ；Cornerstone</tspan><tspan fill="#9aa3b8" font-weight="400"> 再添</tspan><tspan fill="#f4d58a" font-weight="700"> US$2.55B</tspan><tspan fill="#9aa3b8" font-weight="400"> 现金对价——降杠杆是</tspan></text>
+<text x="428.00" y="1054.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">2027–28</tspan><tspan fill="#9aa3b8" font-weight="400"> 的关键。</tspan></text>
+<rect x="782.00" y="956.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="956.00" width="3" height="132.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="980.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">资本 · 飞轮</text>
+<text x="798.00" y="998.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Talen 飞轮</text>
+<text x="798.00" y="1022.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">把新购的</tspan><tspan fill="#9aa3b8" font-weight="400"> Freedom/Guernsey/Cornerstone</tspan><tspan fill="#f4d58a" font-weight="700"> ~5</tspan><tspan fill="#f4d58a" font-weight="700"> GW</tspan><tspan fill="#9aa3b8" font-weight="400"> 燃气机组逐步合约化（复制</tspan></text>
+<text x="798.00" y="1038.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">AWS</tspan><tspan fill="#9aa3b8" font-weight="400"> 模板），是把并购对价转化为长期合约现金流的核心战略。</tspan></text>
+<text x="590.00" y="1124.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: TLN FY2025 10-K (Item 1 Business; Statements of Operations; Note 10 Long-term Debt); TLN 8-K 2026-06-15 (Cornerstone close); PJM 2025/26 &amp; 2026/27 BRA reports</text>
+</svg>
