@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1057" width="1180" height="1057" role="img" aria-label="DigitalOcean 的 COGS / capex 流向哪里 — 谁拿走了这些钱" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1057" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">DIGITALOCEAN 资金流向 · FY2025–FY2027 CAPACITY BUILD</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">DigitalOcean 的 COGS / capex 流向哪里 — 谁拿走了这些钱</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">DOCN 的成本与资本开支主要流向数据中心租用容量、NVIDIA / AMD 的 GPU，以及网络带宽；这些支出最终汇集到少数几个上游瓶颈——TSMC 的晶圆代工、数据中心电力，以及 NVIDIA 的 GPU 定价权。</text>
+<ellipse cx="1031.00" cy="418.50" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="645.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="645.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">DOCN 付费 (who pays)</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">买什么 (what they buy)</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱最终汇集到哪 (where it pools)</text>
+<path d="M 256.00 399.95 C 369.50 399.95, 369.50 253.50, 483.00 253.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 420.68 C 369.50 420.68, 369.50 372.00, 483.00 372.00" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 433.77 C 369.50 433.77, 369.50 482.00, 483.00 482.00" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 443.59 C 369.50 443.59, 369.50 597.45, 483.00 597.45" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 368.73 C 810.50 368.73, 810.50 253.50, 924.00 253.50" fill="none" stroke="url(#mfgold)" stroke-width="15.27" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 379.64 C 810.50 379.64, 810.50 363.50, 924.00 363.50" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 253.50 C 590.00 253.50, 590.00 586.55, 483.00 586.55" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 592.00 C 810.50 592.00, 810.50 583.50, 924.00 583.50" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 1138.00 253.50 C 1031.00 253.50, 1031.00 470.23, 924.00 470.23" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 1138.00 363.50 C 1031.00 363.50, 1031.00 480.05, 924.00 480.05" fill="none" stroke="url(#mfgold)" stroke-width="6.55" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="320.73" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">COGS 主体</text>
+<text x="369.50" y="390.34" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AI capex</text>
+<rect x="42.00" y="343.50" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="343.50" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="376.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">DIGITALOCEAN</text>
+<text x="60.00" y="397.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY2025 COGS $361.8M</text>
+<text x="60.00" y="414.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">Capex $139.9M</text>
+<text x="60.00" y="431.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">135 MW 承诺容量</text>
+<rect x="483.00" y="198.00" width="214" height="111.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="198.00" width="3" height="111.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">数据中心容量</text>
+<text x="501.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">托管/租用 colo</text>
+<text x="501.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">数据中心租金 +$28.6M YoY</text>
+<text x="501.00" y="286.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">60 MW 新增 → 2027</text>
+<rect x="483.00" y="325.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="325.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="358.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">GPU 采购</text>
+<text x="501.00" y="379.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">NVIDIA H100/H200/B200/B300</text>
+<text x="501.00" y="396.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">AMD MI300X/MI350X/MI355X</text>
+<rect x="483.00" y="435.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="435.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="468.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">网络与带宽</text>
+<text x="501.00" y="489.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">传输/对等互联</text>
+<text x="501.00" y="506.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">出口流量 / CDN</text>
+<rect x="483.00" y="545.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="483.00" y="545.00" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="501.00" y="578.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">电力</text>
+<text x="501.00" y="599.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">AI 推理的最大边际成本</text>
+<text x="501.00" y="616.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">新瓶颈资源</text>
+<rect x="924.00" y="206.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="924.00" y="206.50" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="942.00" y="239.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">NVIDIA</text>
+<text x="942.00" y="260.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">训练级 GPU 近垄断</text>
+<text x="942.00" y="277.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">GPU 定价权</text>
+<rect x="924.00" y="316.50" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="316.50" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="349.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">AMD</text>
+<text x="942.00" y="370.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">第二货源</text>
+<text x="942.00" y="387.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">MI 系列缓解 NVIDIA 议价</text>
+<rect x="924.00" y="426.50" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="426.50" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="459.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">TSMC</text>
+<text x="942.00" y="480.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">NVIDIA 与 AMD 都在台积电流片</text>
+<text x="942.00" y="497.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">最终瓶颈 chokepoint</text>
+<rect x="924.00" y="536.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#d9a05b" stroke-opacity="0.5"/>
+<rect x="924.00" y="536.50" width="3" height="94.00" rx="2" fill="#d9a05b"/>
+<text x="942.00" y="569.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">电网 / 公用事业</text>
+<text x="942.00" y="590.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">数据中心电力供应</text>
+<text x="942.00" y="607.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#bcae98">稀缺资源</text>
+<rect x="42.00" y="665.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="669.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="667.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="667.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="667.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="667.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="669.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="669.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="660.00" width="11" height="11" rx="3" fill="#d9a05b"/>
+<text x="747.00" y="669.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">power / analog</text>
+<rect x="871.80" y="660.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="890.80" y="669.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="965.20" y="660.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="984.20" y="669.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">RF / wireless</text>
+<rect x="42.00" y="680.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="61.00" y="689.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="185.80" y="680.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="204.80" y="689.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<line x1="42" y1="705.00" x2="1138" y2="705.00" stroke="#222a3a"/>
+<text x="42.00" y="721.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — DOCN 的钱最终去了哪</text>
+<rect x="42.00" y="741.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="42.00" y="741.00" width="3" height="132.00" rx="2" fill="#d9a05b"/>
+<text x="58.00" y="765.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">直接付款 · 数据中心</text>
+<text x="58.00" y="783.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">租用容量是 COGS 的主体</text>
+<text x="58.00" y="807.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">DOCN</tspan><tspan fill="#9aa3b8" font-weight="400"> 不自建大型数据中心，而是租用</tspan><tspan fill="#9aa3b8" font-weight="400"> colo</tspan><tspan fill="#9aa3b8" font-weight="400"> 容量；FY2025</tspan><tspan fill="#9aa3b8" font-weight="400"> 数据中心租金成本同比增加</tspan></text>
+<text x="58.00" y="823.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$28.6M</tspan><tspan fill="#9aa3b8" font-weight="400"> ，折旧增加</tspan><tspan fill="#f4d58a" font-weight="700"> $7.8M</tspan><tspan fill="#9aa3b8" font-weight="400"> 。新增</tspan><tspan fill="#f4d58a" font-weight="700"> 60</tspan><tspan fill="#f4d58a" font-weight="700"> MW</tspan><tspan fill="#9aa3b8" font-weight="400"> 承诺容量于</tspan><tspan fill="#9aa3b8" font-weight="400"> 2027</tspan><tspan fill="#9aa3b8" font-weight="400"> 年爬坡，带来高达</tspan></text>
+<text x="58.00" y="839.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$100M</tspan><tspan fill="#9aa3b8" font-weight="400"> 的一次性启动成本。</tspan></text>
+<rect x="412.00" y="741.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="741.00" width="3" height="132.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="765.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">直接付款 · AI 算力</text>
+<text x="428.00" y="783.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">GPU：NVIDIA 为主、AMD 为辅</text>
+<text x="428.00" y="807.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Gradient</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 栈采购</tspan><tspan fill="#f4d58a" font-weight="700"> NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> H100/H200/B200/B300</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> AMD</tspan></text>
+<text x="428.00" y="823.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">MI300X/MI350X/MI355X。AMD</tspan><tspan fill="#9aa3b8" font-weight="400"> 合作是有意的第二货源，用以缓解</tspan><tspan fill="#9aa3b8" font-weight="400"> NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> GPU</tspan></text>
+<text x="428.00" y="839.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">定价权。</tspan></text>
+<rect x="782.00" y="741.00" width="356.00" height="132.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="741.00" width="3" height="132.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="765.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">间接 · 瓶颈</text>
+<text x="798.00" y="783.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">钱最终汇集到 TSMC</text>
+<text x="798.00" y="807.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">无论买</tspan><tspan fill="#9aa3b8" font-weight="400"> NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> 还是</tspan><tspan fill="#9aa3b8" font-weight="400"> AMD，芯片都在</tspan><tspan fill="#f4d58a" font-weight="700"> TSMC</tspan><tspan fill="#9aa3b8" font-weight="400"> 流片——台积电是整条</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 算力链的最终瓶颈</tspan></text>
+<text x="798.00" y="823.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">chokepoint，DOCN</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#9aa3b8" font-weight="400"> GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 支出经由</tspan><tspan fill="#9aa3b8" font-weight="400"> NVIDIA</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> AMD</tspan><tspan fill="#9aa3b8" font-weight="400"> 间接落到台积电口袋。</tspan></text>
+<rect x="42.00" y="887.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#d9a05b" stroke-opacity="0.28"/>
+<rect x="42.00" y="887.00" width="3" height="116.00" rx="2" fill="#d9a05b"/>
+<text x="58.00" y="911.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#d9a05b" letter-spacing="1">新瓶颈 · 电力</text>
+<text x="58.00" y="929.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">电力成为新的稀缺资源</text>
+<text x="58.00" y="953.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 推理的最大边际成本是电力。DOCN</tspan><tspan fill="#9aa3b8" font-weight="400"> 的</tspan><tspan fill="#f4d58a" font-weight="700"> 135</tspan><tspan fill="#f4d58a" font-weight="700"> MW</tspan></text>
+<text x="58.00" y="969.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">总承诺容量本身就是一种稀缺资源——数据中心电力供应（电网/公用事业）正取代</tspan><tspan fill="#9aa3b8" font-weight="400"> GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 成为扩张的新约束。</tspan></text>
+<text x="590.00" y="1039.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: DOCN FY2025 10-K (营业成本/数据中心租金/折旧) + Q1 2026 业绩新闻稿 (60 MW / $100M 启动成本 / 135 MW)</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">FY2025 营收按地区 / Revenue by Geography</text>
+<path d="M 288.00,107.20 A 132 132 0 0 1 375.69,337.86 L 339.82,297.50 A 78 78 0 0 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 375.69,337.86 A 132 132 0 0 1 179.28,314.07 L 223.76,283.44 A 78 78 0 0 0 339.82,297.50 Z" fill="#15803d"/>
+<path d="M 179.28,314.07 A 132 132 0 0 1 202.85,138.34 L 237.68,179.60 A 78 78 0 0 0 223.76,283.44 Z" fill="#d97706"/>
+<path d="M 202.85,138.34 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 237.68,179.60 Z" fill="#7c3aed"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">DOCN</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$901.5M</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="416.99" y1="190.16" x2="432.99" y2="190.16" stroke="#2563eb" stroke-width="1.4"/>
+<text x="436.99" y="188.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">North America</text>
+<text x="436.99" y="202.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$346.5M  (38.4%)</text>
+<line x1="271.40" y1="376.20" x2="255.40" y2="376.20" stroke="#15803d" stroke-width="1.4"/>
+<text x="251.40" y="374.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Europe</text>
+<text x="251.40" y="388.20" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$243.1M  (27.0%)</text>
+<line x1="151.22" y1="220.86" x2="135.22" y2="220.86" stroke="#d97706" stroke-width="1.4"/>
+<text x="131.22" y="218.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Asia</text>
+<text x="131.22" y="232.86" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$211.3M  (23.4%)</text>
+<line x1="240.61" y1="109.59" x2="224.61" y2="109.59" stroke="#7c3aed" stroke-width="1.4"/>
+<text x="220.61" y="107.59" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Rest of World</text>
+<text x="220.61" y="121.59" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$100.6M  (11.2%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: DOCN FY2025 10-K, 营收地区分解 / Revenue by geography</text>
+</svg>

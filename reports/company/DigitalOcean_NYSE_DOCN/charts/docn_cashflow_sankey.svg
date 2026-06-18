@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">DigitalOcean (DOCN) 现金流 — FY2025</text>
+<path d="M 644.00,64.00 C 746.00,64.00 746.00,211.02 848.00,211.02 L 848.00,291.84 C 746.00,291.84 746.00,144.82 644.00,144.82 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,144.82 C 746.00,144.82 746.00,305.84 848.00,305.84 L 848.00,312.60 C 746.00,312.60 746.00,151.58 644.00,151.58 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,151.58 C 746.00,151.58 746.00,326.60 848.00,326.60 L 848.00,406.98 C 746.00,406.98 746.00,231.96 644.00,231.96 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,71.00 C 306.00,71.00 306.00,78.00 408.00,78.00 L 408.00,346.19 C 306.00,346.19 306.00,339.19 204.00,339.19 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,231.96 C 526.00,231.96 526.00,245.96 424.00,245.96 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,245.96 C 526.00,245.96 526.00,245.96 628.00,245.96 L 628.00,381.74 C 526.00,381.74 526.00,381.74 424.00,381.74 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,381.74 C 526.00,381.74 526.00,395.74 628.00,395.74 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,353.19 C 306.00,353.19 306.00,346.19 408.00,346.19 L 408.00,540.00 C 306.00,540.00 306.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="268.19" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="353.19" width="16" height="193.81" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="167.96" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="245.96" width="16" height="135.78" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="395.74" width="16" height="158.26" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="211.02" width="16" height="80.82" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="305.84" width="16" height="6.76" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="326.60" width="16" height="80.38" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="202.09" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="215.09" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$428.4M  (58.0%)</text>
+<rect x="207.00" y="335.19" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="347.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="360.19" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$309.6M  (42.0%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$738.0M  (100.0%)</text>
+<rect x="647.00" y="46.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$268.3M  (36.4%)</text>
+<rect x="647.00" y="227.96" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="239.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="252.96" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$216.9M  (29.4%)</text>
+<text x="653.00" y="471.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="484.87" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$252.8M  (34.3%)</text>
+<text x="873.00" y="248.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Capex PP&amp;E</text>
+<text x="873.00" y="261.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$129.1M  (17.5%)</text>
+<text x="873.00" y="306.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Capitalized Software</text>
+<text x="873.00" y="319.22" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$10.8M  (1.5%)</text>
+<text x="873.00" y="363.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other Investing</text>
+<text x="873.00" y="376.79" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$128.4M  (17.4%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">Free Cash Flow = CFO − CapEx = $169.7M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: DOCN FY2025 10-K, Consolidated Statements of Cash Flows</text>
+</svg>
