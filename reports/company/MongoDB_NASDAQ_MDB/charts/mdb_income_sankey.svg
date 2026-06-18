@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">MongoDB FY26 利润表 Sankey ($M, GAAP)</text>
+<path d="M 204.00,71.00 C 258.00,71.00 258.00,78.00 312.00,78.00 L 312.00,486.67 C 258.00,486.67 258.00,479.67 204.00,479.67 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,71.00 C 506.00,71.00 506.00,117.88 560.00,117.88 L 560.00,119.88 C 506.00,119.88 506.00,73.00 452.00,73.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,73.00 C 506.00,73.00 506.00,133.88 560.00,133.88 L 560.00,460.12 C 506.00,460.12 506.00,399.24 452.00,399.24 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,78.00 C 382.00,78.00 382.00,71.00 436.00,71.00 L 436.00,373.78 C 382.00,373.78 382.00,380.78 328.00,380.78 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,380.78 C 382.00,380.78 382.00,387.78 436.00,387.78 L 436.00,507.00 C 382.00,507.00 382.00,500.00 328.00,500.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,110.88 C 754.00,110.88 754.00,279.68 808.00,279.68 L 808.00,281.68 C 754.00,281.68 754.00,112.88 700.00,112.88 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,112.88 C 754.00,112.88 754.00,295.68 808.00,295.68 L 808.00,298.32 C 754.00,298.32 754.00,115.53 700.00,115.53 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,117.88 C 630.00,117.88 630.00,110.88 684.00,110.88 L 684.00,112.88 C 630.00,112.88 630.00,119.88 576.00,119.88 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,133.88 C 630.00,133.88 630.00,126.88 684.00,126.88 L 684.00,330.43 C 630.00,330.43 630.00,337.43 576.00,337.43 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,337.43 C 630.00,337.43 630.00,344.43 684.00,344.43 L 684.00,467.12 C 630.00,467.12 630.00,460.12 576.00,460.12 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,493.67 C 258.00,493.67 258.00,486.67 312.00,486.67 L 312.00,500.00 C 258.00,500.00 258.00,507.00 204.00,507.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="408.67" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="493.67" width="16" height="13.33" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="78.00" width="16" height="422.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="71.00" width="16" height="302.78" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="387.78" width="16" height="119.22" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="117.88" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="133.88" width="16" height="326.24" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="110.88" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="126.88" width="16" height="203.55" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="344.43" width="16" height="122.69" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="279.68" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="295.68" width="16" height="2.65" rx="1.5" fill="#dc2626"/>
+<line x1="188.00" y1="275.34" x2="182.00" y2="262.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="265.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Subscription</text>
+<text x="179.00" y="278.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.4B  (96.8%)</text>
+<line x1="188.00" y1="500.34" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Services</text>
+<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$77.8M  (3.2%)</text>
+<rect x="331.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$2.5B  (100.0%)</text>
+<rect x="455.00" y="53.00" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.8B  (71.7%)</text>
+<rect x="455.00" y="369.78" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="381.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="394.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$696.1M  (28.3%)</text>
+<rect x="579.00" y="99.88" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="111.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="124.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$137.0M  (-5.6%)</text>
+<rect x="579.00" y="124.88" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="136.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="149.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.9B  (77.3%)</text>
+<rect x="703.00" y="92.88" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="104.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="117.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$55.7M  (-2.3%)</text>
+<rect x="703.00" y="117.88" width="94.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="129.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="142.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.2B  (48.2%)</text>
+<rect x="703.00" y="326.43" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="338.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="351.43" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$716.3M  (29.1%)</text>
+<text x="833.00" y="277.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="290.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-$71.2M  (-2.9%)</text>
+<text x="833.00" y="302.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="315.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$15.5M  (0.63%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">GAAP 经营亏损 1.370 亿美元 (-6% 收入); S&amp;M+G&amp;A 合并为销售管理费用 11.884 亿美元</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: MongoDB FY2026 10-K (FY ended 2026-01-31) — 合并经营报表</text>
+</svg>

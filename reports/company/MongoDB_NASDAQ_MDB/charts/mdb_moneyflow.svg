@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 986" width="1180" height="986" role="img" aria-label="MongoDB 资金流向 — 客户付费 → MongoDB → 超大规模云厂商 (FY26, $M)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="986" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="84.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">MongoDB 资金流向 — 客户付费 → MongoDB → 超大规模云厂商 (FY26, $M)</text>
+<ellipse cx="1031.00" cy="372.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="150.00" x2="369.50" y2="590.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="150.00" x2="810.50" y2="590.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">who pays</text>
+<text x="483.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">what they buy</text>
+<text x="924.00" y="134.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="150.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">where it pools</text>
+<path d="M 256.00 372.00 C 369.50 372.00, 369.50 262.00, 483.00 262.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 250.00 C 590.00 250.00, 590.00 400.00, 483.00 400.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 274.00 C 590.00 274.00, 590.00 510.00, 483.00 510.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 364.00 C 810.50 364.00, 810.50 207.00, 924.00 207.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 388.00 C 810.50 388.00, 810.50 317.00, 924.00 317.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 412.00 C 810.50 412.00, 810.50 427.00, 924.00 427.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 436.00 C 810.50 436.00, 810.50 537.00, 924.00 537.00" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<text x="369.50" y="311.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">订阅 + 消费付费</text>
+<text x="590.00" y="319.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$1,799M</text>
+<text x="590.00" y="386.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$665M</text>
+<text x="810.50" y="279.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">云基础设施 COGS</text>
+<text x="810.50" y="480.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AI 检索栈</text>
+<rect x="42.00" y="297.00" width="214" height="150.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="297.00" width="3" height="150.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="330.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">65,000+ 付费客户</text>
+<text x="60.00" y="351.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">金融/电商/电信/AI 原生</text>
+<text x="60.00" y="368.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">无单一客户 &gt;10% 收入</text>
+<rect x="483.00" y="187.00" width="214" height="150.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="187.00" width="3" height="150.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="220.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">MongoDB</text>
+<text x="501.00" y="241.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">收入 $2,463.8M (+23%)</text>
+<text x="501.00" y="258.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">毛利率 72%</text>
+<rect x="483.00" y="353.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="353.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="386.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Atlas DBaaS</text>
+<text x="501.00" y="407.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">占收入 73% = $1,799M</text>
+<text x="501.00" y="424.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">按消费计价</text>
+<rect x="483.00" y="463.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="463.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="496.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">EA + 服务</text>
+<text x="501.00" y="517.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">占收入 27% = $665M</text>
+<text x="501.00" y="534.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">自管理许可</text>
+<rect x="924.00" y="160.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="160.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="193.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">AWS</text>
+<text x="942.00" y="214.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Atlas 主力底层云</text>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">DocumentDB/DynamoDB 竞品</text>
+<rect x="924.00" y="270.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="270.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="303.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Google Cloud</text>
+<text x="942.00" y="324.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Atlas 多云之一</text>
+<text x="942.00" y="341.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Firestore/Spanner 竞品</text>
+<rect x="924.00" y="380.00" width="214" height="94.00" rx="12" fill="#101d1a" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="924.00" y="380.00" width="3" height="94.00" rx="2" fill="#34d399"/>
+<text x="942.00" y="413.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Microsoft Azure</text>
+<text x="942.00" y="434.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Atlas 多云之一</text>
+<text x="942.00" y="451.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#7fd9bf">Cosmos DB 竞品</text>
+<rect x="924.00" y="490.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="924.00" y="490.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="942.00" y="523.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Voyage AI</text>
+<text x="942.00" y="544.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">嵌入/重排序模型</text>
+<text x="942.00" y="561.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">2025 年 $220M 收购</text>
+<rect x="42.00" y="610.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="614.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="612.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="612.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="612.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="612.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="614.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="614.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="605.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="747.00" y="614.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<rect x="807.00" y="605.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="826.00" y="614.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="900.40" y="605.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="919.40" y="614.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="1001.00" y="605.00" width="11" height="11" rx="3" fill="#34d399"/>
+<text x="1020.00" y="614.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">foundry</text>
+<line x1="42" y1="650.00" x2="1138" y2="650.00" stroke="#222a3a"/>
+<text x="42.00" y="666.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — 钱流到哪里</text>
+<rect x="42.00" y="686.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="686.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="710.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">需求侧</text>
+<text x="58.00" y="728.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">长尾客户群</text>
+<text x="58.00" y="752.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">65,000+</tspan><tspan fill="#9aa3b8" font-weight="400"> 付费客户、</tspan><tspan fill="#f4d58a" font-weight="700"> 2,895</tspan><tspan fill="#9aa3b8" font-weight="400"> 家</tspan><tspan fill="#9aa3b8" font-weight="400"> ARR≥</tspan><tspan fill="#f4d58a" font-weight="700"> $100K</tspan><tspan fill="#9aa3b8" font-weight="400"> ；</tspan><tspan fill="#f4d58a" font-weight="700"> 无单一客户</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;10%</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan></text>
+<text x="58.00" y="768.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">买方议价能力极低、收入高度分散。</tspan></text>
+<rect x="412.00" y="686.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="412.00" y="686.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="428.00" y="710.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">ATLAS = 73% 收入</text>
+<text x="428.00" y="728.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">消费计价引擎</text>
+<text x="428.00" y="752.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Atlas</tspan><tspan fill="#9aa3b8" font-weight="400"> FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入约</tspan><tspan fill="#f4d58a" font-weight="700"> $1,799M</tspan><tspan fill="#9aa3b8" font-weight="400"> 、同比</tspan><tspan fill="#f4d58a" font-weight="700"> +29%</tspan></text>
+<text x="428.00" y="768.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">，是绝对增长引擎；按集群计算/存储/传输计费。</tspan></text>
+<rect x="782.00" y="686.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#34d399" stroke-opacity="0.28"/>
+<rect x="782.00" y="686.00" width="3" height="116.00" rx="2" fill="#34d399"/>
+<text x="798.00" y="710.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#34d399" letter-spacing="1">钱流向超大规模云厂商</text>
+<text x="798.00" y="728.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">底层云 = COGS 落点</text>
+<text x="798.00" y="752.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Atlas</tspan><tspan fill="#9aa3b8" font-weight="400"> 运行在</tspan><tspan fill="#f4d58a" font-weight="700"> AWS</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#f4d58a" font-weight="700"> GCP</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#f4d58a" font-weight="700"> Azure</tspan><tspan fill="#9aa3b8" font-weight="400"> 之上，底层云费用是</tspan><tspan fill="#9aa3b8" font-weight="400"> MongoDB</tspan><tspan fill="#9aa3b8" font-weight="400"> 的主要</tspan></text>
+<text x="798.00" y="768.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">COGS</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> 但三家同时销售</tspan><tspan fill="#f4d58a" font-weight="700"> DocumentDB</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#f4d58a" font-weight="700"> Cosmos</tspan><tspan fill="#f4d58a" font-weight="700"> DB</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#f4d58a" font-weight="700"> Spanner</tspan><tspan fill="#9aa3b8" font-weight="400"> 等竞品。</tspan></text>
+<rect x="42.00" y="816.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="816.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="840.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">AI 栈</text>
+<text x="58.00" y="858.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Voyage AI 检索层</text>
+<text x="58.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$220M</tspan><tspan fill="#9aa3b8" font-weight="400"> 收购的</tspan><tspan fill="#f4d58a" font-weight="700"> Voyage</tspan><tspan fill="#f4d58a" font-weight="700"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 嵌入/重排序模型并入</tspan><tspan fill="#9aa3b8" font-weight="400"> Atlas</tspan><tspan fill="#9aa3b8" font-weight="400"> Vector</tspan><tspan fill="#9aa3b8" font-weight="400"> Search，把</tspan></text>
+<text x="58.00" y="898.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 检索质量做成可防御差异化。</tspan></text>
+<rect x="412.00" y="816.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="816.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="840.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">受监管装机</text>
+<text x="428.00" y="858.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">EA 自管理</text>
+<text x="428.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Enterprise</tspan><tspan fill="#9aa3b8" font-weight="400"> Advanced</tspan><tspan fill="#9aa3b8" font-weight="400"> 占其余约</tspan><tspan fill="#f4d58a" font-weight="700"> $665M</tspan><tspan fill="#9aa3b8" font-weight="400"> ，面向气隙/本地/监管部署，增速中个位数</tspan><tspan fill="#9aa3b8" font-weight="400"> (</tspan></text>
+<text x="428.00" y="898.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">+7%</tspan><tspan fill="#9aa3b8" font-weight="400"> )。</tspan></text>
+<rect x="782.00" y="816.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="816.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="840.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">钱在哪里汇聚</text>
+<text x="798.00" y="858.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">FCF 自给自足</text>
+<text x="798.00" y="882.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 经营现金流</tspan><tspan fill="#f4d58a" font-weight="700"> $505M</tspan><tspan fill="#9aa3b8" font-weight="400"> 、自由现金流约</tspan><tspan fill="#f4d58a" font-weight="700"> $497M</tspan><tspan fill="#9aa3b8" font-weight="400"> ，已回购</tspan><tspan fill="#f4d58a" font-weight="700"> $400M</tspan><tspan fill="#9aa3b8" font-weight="400"> 股票</tspan><tspan fill="#9aa3b8" font-weight="400"> —</tspan><tspan fill="#9aa3b8" font-weight="400"> 即便</tspan></text>
+<text x="798.00" y="898.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GAAP</tspan><tspan fill="#9aa3b8" font-weight="400"> 亏损也现金充裕。</tspan></text>
+<text x="590.00" y="968.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: MongoDB FY2026 10-K + Q1 FY27 8-K (2026-05-28); 节点为披露的客户/合作伙伴</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">MongoDB FY26 收入构成 (按地区, 合计 $2,463.8M)</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 205.27,342.06 L 239.12,299.98 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 205.27,342.06 A 132 132 0 0 1 200.16,140.67 L 236.10,180.98 A 78 78 0 0 0 239.12,299.98 Z" fill="#15803d"/>
+<path d="M 200.16,140.67 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 236.10,180.98 Z" fill="#d97706"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">地区</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">$2.5B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="418.16" y1="285.05" x2="434.16" y2="285.05" stroke="#2563eb" stroke-width="1.4"/>
+<text x="438.16" y="283.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Americas</text>
+<text x="438.16" y="297.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$1.5B  (60.8%)</text>
+<line x1="150.04" y1="242.70" x2="134.04" y2="242.70" stroke="#15803d" stroke-width="1.4"/>
+<text x="130.04" y="240.70" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">EMEA</text>
+<text x="130.04" y="254.70" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$680.8M  (27.6%)</text>
+<line x1="238.86" y1="110.24" x2="222.86" y2="110.24" stroke="#d97706" stroke-width="1.4"/>
+<text x="218.86" y="108.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">Asia Pacific</text>
+<text x="218.86" y="122.24" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">$285.5M  (11.6%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: MongoDB FY2026 10-K (FY ended 2026-01-31), filed 2026-03-11 — 地理收入说明</text>
+</svg>
