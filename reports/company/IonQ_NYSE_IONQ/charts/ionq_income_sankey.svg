@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="IonQ FY2025 income flow"><rect width="1000" height="560" fill="#ffffff"/>
+<text x="500.0" y="34" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="18" font-weight="700" fill="#1a1a1a">IonQ FY2025 利润表资金流 — 收入与运营亏损缺口如何支撑总运营费用（US$M）</text>
+<text x="500.0" y="54" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" fill="#666">运营总费用 $763.7M = 收入 $130.0M + 运营亏损缺口 $633.7M；缺口以左侧资金来源呈现以保持流量守恒</text>
+<rect x="70" y="70.0" width="14" height="69.8" fill="#2e7d32" rx="2"/>
+<text x="90" y="83.0" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a">Revenue 收入</text>
+<text x="90" y="98.0" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11.5" fill="#666">$130.0M</text>
+<rect x="70" y="147.8" width="14" height="340.2" fill="#c62828" rx="2"/>
+<text x="90" y="160.8" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a">Operating-loss deficit 运营亏损缺口</text>
+<text x="90" y="175.8" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11.5" fill="#666">$633.7M</text>
+<rect x="910" y="70.0" width="14" height="164.1" fill="#1565c0" rx="2"/>
+<text x="904" y="83.0" text-anchor="end" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a">R&amp;D 研发</text>
+<text x="904" y="98.0" text-anchor="end" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11.5" fill="#666">$305.7M</text>
+<rect x="910" y="242.1" width="14" height="131.6" fill="#6a1b9a" rx="2"/>
+<text x="904" y="255.1" text-anchor="end" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a">G&amp;A 一般行政</text>
+<text x="904" y="270.1" text-anchor="end" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11.5" fill="#666">$245.1M</text>
+<rect x="910" y="381.7" width="14" height="44.0" fill="#00838f" rx="2"/>
+<text x="904" y="394.7" text-anchor="end" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a">D&amp;A 折旧摊销</text>
+<text x="904" y="409.7" text-anchor="end" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11.5" fill="#666">$82.0M</text>
+<rect x="910" y="433.7" width="14" height="41.6" fill="#ef6c00" rx="2"/>
+<text x="904" y="446.7" text-anchor="end" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a">COGS 营业成本</text>
+<text x="904" y="461.7" text-anchor="end" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11.5" fill="#666">$77.5M</text>
+<rect x="910" y="483.3" width="14" height="28.7" fill="#ad1457" rx="2"/>
+<text x="904" y="496.3" text-anchor="end" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#1a1a1a">S&amp;M 销售营销</text>
+<text x="904" y="511.3" text-anchor="end" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="11.5" fill="#666">$53.4M</text>
+<path d="M 84 70.0 C 497.0 70.0 497.0 70.0 910 70.0 L 910 97.9 C 497.0 97.9 497.0 97.9 84 97.9 Z" fill="#2e7d32" opacity="0.22"/>
+<path d="M 84 97.9 C 497.0 97.9 497.0 242.1 910 242.1 L 910 264.5 C 497.0 264.5 497.0 120.3 84 120.3 Z" fill="#2e7d32" opacity="0.22"/>
+<path d="M 84 120.3 C 497.0 120.3 497.0 381.7 910 381.7 L 910 389.2 C 497.0 389.2 497.0 127.8 84 127.8 Z" fill="#2e7d32" opacity="0.22"/>
+<path d="M 84 127.8 C 497.0 127.8 497.0 433.7 910 433.7 L 910 440.8 C 497.0 440.8 497.0 134.9 84 134.9 Z" fill="#2e7d32" opacity="0.22"/>
+<path d="M 84 134.9 C 497.0 134.9 497.0 483.3 910 483.3 L 910 488.2 C 497.0 488.2 497.0 139.8 84 139.8 Z" fill="#2e7d32" opacity="0.22"/>
+<path d="M 84 147.8 C 497.0 147.8 497.0 97.9 910 97.9 L 910 234.1 C 497.0 234.1 497.0 284.0 84 284.0 Z" fill="#c62828" opacity="0.22"/>
+<path d="M 84 284.0 C 497.0 284.0 497.0 264.5 910 264.5 L 910 373.7 C 497.0 373.7 497.0 393.2 84 393.2 Z" fill="#c62828" opacity="0.22"/>
+<path d="M 84 393.2 C 497.0 393.2 497.0 389.2 910 389.2 L 910 425.7 C 497.0 425.7 497.0 429.7 84 429.7 Z" fill="#c62828" opacity="0.22"/>
+<path d="M 84 429.7 C 497.0 429.7 497.0 440.8 910 440.8 L 910 475.3 C 497.0 475.3 497.0 464.2 84 464.2 Z" fill="#c62828" opacity="0.22"/>
+<path d="M 84 464.2 C 497.0 464.2 497.0 488.2 910 488.2 L 910 512.0 C 497.0 512.0 497.0 488.0 84 488.0 Z" fill="#c62828" opacity="0.22"/>
+<text x="500.0" y="548" text-anchor="middle" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="10.5" fill="#888">Source: IonQ FY2025 10-K, Consolidated Statements of Operations · sec.gov</text>
+</svg>
