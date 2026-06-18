@@ -1,13 +1,33 @@
-# COMPANY RESEARCH REPORT: Baidu, Inc. (NASDAQ: BIDU; HKEX: 9888)
+# Company Research: Baidu, Inc. (NASDAQ: BIDU · HKEX: 9888)
 
-**Date:** 2026-05-20
-**Analyst language:** English (US listing; 20-F is the primary annual filing in English)
+As of: 2026-06-18 ｜ Refresh (data current to FY2025 20-F + Q1'26 6-K + decision layer + 9 SVG charts + 3 bespoke charts) ｜ English companion to the primary Simplified-Chinese report
 
-> **Update — Q1-2026 inflection: Baidu Core AI-powered Business crossed >50% of Baidu General Business revenue for the first time (2026-05-18).** Q1-2026 Baidu Core AI-powered Business revenue was RMB 13.6 bn, up 49% YoY, with AI Cloud Infrastructure RMB 8.8 bn (+79% YoY) and GPU Cloud +184% YoY; this drove the "Others" line of Baidu General Business to +42% YoY (RMB 13.4 bn) while legacy online-marketing revenue contracted 22% YoY to RMB 12.6 bn. Total Baidu General Business revenue grew 2% YoY to RMB 26.0 bn — the first positive print since 2024 weakness — but consolidated revenue still fell 8% YoY due to the legacy mix shift and iQIYI weakness. No formal full-year guidance was issued; this is a meaningful operating turn, not a numerical guide-raise.
-> Source: [Baidu Q1-2026 Press Release, 2026-05-18 (SEC EDGAR Exhibit 99.1)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm).
+> *Analyst view:* **Rating: Overweight · 12-month price target $150 (~+35% vs $111.24) · Method: sum-of-the-parts (SOTP) / normalized (ex-impairment) P/E ~16× × FY2027E normalized EPS/ADS ~$9.4**
+> Market cap ~$37.9B · EV ~$16.1B (mkt cap − ~$21.7B net cash) · 52-week range $83.62–$162.52 · NASDAQ:BIDU (current $111.24, [Yahoo Finance via yfinance, 2026-06-18 close](https://finance.yahoo.com/quote/BIDU/))
+>
+> **Forward valuation matrix** (FY25A = 20-F disclosed; FY26E/FY27E = *Analyst view:*. **Currency note:** Baidu reports in RMB, market cap/EV are USD — this matrix uses **USD mkt cap ÷ USD revenue** consistently (FY2025 revenue $18.46B = ¥129,079M ÷ 6.8980), **NOT** yfinance's 0.29× P/S, which mismatches USD cap against RMB revenue; corrected throughout this report)
+>
+> | Multiple | FY2025A | FY2026E | FY2027E |
+> |---|---|---|---|
+> | P/S (USD basis) | 2.05× | ~2.0× | ~1.9× |
+> | EV/Sales (net-cash-adjusted EV ÷ revenue) | 0.87× | ~0.85× | ~0.79× |
+> | P/E (GAAP diluted, per ADS) | n/m (FY25 carries ¥16,190M impairment; GAAP EPS/ADS ~$1.7) | ~25× | ~18× |
+> | P/E (normalized, ex-impairment) | ~12× (normalized EPS/ADS ~$9.3) | ~13× | ~12× |
+> | Net cash / market cap | **57%** (net cash ~$21.7B vs mkt cap ~$37.9B) | | |
+>
+> **Relative performance (as of 2026-06-18 close $111.24, source: yfinance)**: 1M: BIDU **−19.2%** / SPX +1.8% / Golden Dragon (PGJ) −10.8% (vs SPX **−21.0pp**) · 6M: −7.7% / +10.5% / −19.2% (vs SPX −18.2pp) · YTD: **−26.0%** / +9.1% / −22.2% (vs SPX −35.1pp) · 12M: **+33.0%** / +25.4% / −13.3% (vs SPX +7.6pp). **Read:** BIDU still beats SPX over 12M (the DeepSeek/AI re-rating) but gave it back hard in H1 2026 on negative operating cash flow, ad declines, and a broad China-internet drawdown — the current $111 is below even the most bearish sell-side target (MS $135).
+>
+> **Thesis pillars** — (1) **AI-driven revenue crossed 50% for the first time; the cloud inflection is materializing**: Q1'26 Baidu Core AI-driven revenue >¥13.6B (+49% YoY), 52% of Baidu General Business; AI Cloud Infrastructure ¥8.8B (+79% YoY), GPU Cloud +184% YoY — hard proof the mix-shift from declining search ads to high-growth AI cloud is accelerating; (2) **valuation embeds a very deep safety margin**: net cash ~$21.7B = 57% of market cap, EV ex-cash only ~$16.1B → FY25 EV/Sales ~0.87×, normalized P/E ~12× — the market still prices BIDU as a stagnant ad utility, assigning near-zero value to Apollo Go and Kunlun silicon; (3) **Apollo Go + Kunlun are two "free" options**: Apollo Go has cumulative rides >22M, partners with Uber/Lyft for overseas, one of only two scaled robotaxi operators globally (the other being Waymo); in-house Kunlun (P800: FP16 345 TFLOPS / 96GB) is reportedly heading to a carve-out IPO that could surface hidden value; (4) **the key falsifier is cash flow and the ad turn**: FY25 operating cash flow turned negative ¥(3.0)B (the AI capex cycle); if the ad decline isn't net-covered by cloud growth and capex keeps consuming cash, the "value-with-options" thesis becomes a value trap.
+
+> **Update — Q1'26 results: cloud strong, ads weak, AI-revenue crosses 50% (2026-05-18):** Q1'26 total revenue **¥32.1B ($4.65B)**, −2% QoQ; Baidu General Business ¥26.0B (+2% YoY, **back to positive growth**), iQIYI ¥6.2B (−8% QoQ). **Baidu Core AI-driven revenue >¥13.6B (+49% YoY), 52% of Baidu General Business for the first time**; AI Cloud Infrastructure ¥8.8B (+79% YoY, vs ¥5.8B prior quarter), GPU Cloud +184% YoY. Online marketing ¥12.6B (−22% YoY), now 48% of Baidu General Business. GAAP operating income ¥3.2B ($463M, 10% margin); Non-GAAP operating income ¥3.8B ($552M, 12%); net income attributable to Baidu ¥3.4B ($499M), Non-GAAP ¥4.3B ($628M); GAAP diluted EPS/ADS ¥8.76 ($1.27), Non-GAAP ¥12.06 ($1.75). **Operating cash flow ¥2.7B turned positive** (company basis), but core capex surged to ¥5.8B (from ¥2.0B) to fund GPU Cloud. Q1'26 buyback $172M. ERNIE 5.1 launched May 2026 (ranked #1 among Chinese models on LMArena's text leaderboard). Source: [Baidu Q1'26 press release (6-K Exhibit 99.1), 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm).
+
+---
 
 ## TABLE OF CONTENTS
+
 1. Company Overview
+1A. Valuation & Price Target
+1B. GF Score Fundamental Scorecard
 2. Company History
 3. Management Team
 4. Products & Services
@@ -16,375 +36,527 @@
 7. Competitive Landscape
 8. Market Opportunity (TAM)
 9. Risk Assessment
+9.5 Key Debates & Catalysts
+10. Investor-Lens Scorecard
 
 ---
 
 ## 1. Company Overview
 
-Baidu, Inc. ("Baidu") is a Beijing-headquartered Chinese internet and AI company whose business spans (i) China's largest general-purpose internet search engine, (ii) the ERNIE family of foundation models with the Qianfan MaaS platform and Baidu AI Cloud, (iii) Apollo Go, China's largest fully-driverless robotaxi service, (iv) DuerOS / Xiaodu smart-home devices and an AI-applications suite (Baidu Wenku, Baidu Drive, Miaoda vibe-coding platform), and (v) a controlling interest in iQIYI (NASDAQ: IQ), China's largest long-form streaming-video service ([Baidu 2025 Form 20-F, Item 4.B Business Overview](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). The company describes itself in its 2025 20-F as "a leading AI company with strong Internet foundation" and emphasises that it is "one of the very few companies in the world that offers a full AI stack of four layers, including cloud infrastructure, deep learning framework developed in-house, foundation models, and applications" ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
+*Analyst view:* This report refreshes coverage with an **Overweight** rating and a 12-month price target of **$150** (+35%). Why now: Baidu is in a market-underappreciated "business-model switch" — from a "search-ads + long-video" China-internet utility to a full-stack AI company (AI cloud + autonomous driving + in-house silicon). Q1'26 is the first quantitative proof of that switch: AI-driven revenue crossed 50% of core (52%), AI Cloud Infrastructure +79% YoY, GPU Cloud +184% YoY. Meanwhile the market still prices BIDU on the old narrative — at $111 net cash is 57% of market cap and EV ex-cash is only ~$16.1B, i.e. Apollo Go and Kunlun are valued at zero and AI cloud is arguably given a negative number. Risk/reward skews positive: the downside is anchored by $21.7B net cash and a normalized ~12× P/E; the upside is cloud acceleration + a Kunlun IPO + robotaxi value-surfacing. The key falsifier is operating cash flow (already negative in FY25) and whether the ad decline is net-covered by cloud growth.
 
-**Reporting structure.** From Q4 2025 Baidu renamed its principal segment "Baidu Core" to "Baidu General Business"; iQIYI remains a separately listed and separately segmented subsidiary. Within Baidu General Business, management began disclosing a new "Baidu Core AI-powered Business" framework with three buckets: AI Cloud Infra, AI Applications, and AI-native Marketing Services. The remainder is labelled "Legacy Business" (largely legacy online search advertising) plus "Others" ([Baidu 2025 Form 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm); [Baidu Q1-2026 Press Release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
+**What the company does.** Baidu, Inc. is China's largest Chinese-language internet search company and one of the four members of Beijing's de-facto "AI national team" (alongside Alibaba, Tencent, ByteDance). It runs two reportable operating segments: (i) **Baidu General Business** — renamed from "Baidu Core" in Q4 2025, spanning the "search + feed" ad engine, AI cloud (Qianfan MaaS + IaaS/PaaS + Kunlun GPU cloud), and the "intelligent driving & other growth" line (Apollo Go robotaxi, DuerOS); and (ii) **iQIYI** (NASDAQ: IQ), the consolidated long-video streaming subsidiary ([Baidu FY2025 20-F, Note Segment Reporting — 2 operating segments](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). FY2025 consolidated revenue was **¥129,079M ($18,458M)**, −3% YoY; by segment, Baidu General Business ¥102,485M and iQIYI ¥27,290M ([Baidu FY2025 20-F, Segment Reporting — Operating Segment Results](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)).
 
-**Scale (FY2025).** Total consolidated revenue was RMB 129.1 bn (US$ 18.5 bn at the 31-Dec-2025 reference rate), down 3% YoY from RMB 133.1 bn in 2024 ([Baidu 2025 Form 20-F, Selected Consolidated Financial Data](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). Baidu General Business contributed RMB 102.5 bn (-2% YoY), iQIYI RMB 27.3 bn (-7% YoY). FY2025 GAAP operating result swung to a loss of RMB 5.8 bn (vs. RMB 21.3 bn income in 2024) almost entirely because of a one-off RMB 16.2 bn long-lived asset impairment; net income attributable to Baidu was RMB 5.6 bn (vs. RMB 23.8 bn in 2024). Operating cash flow was -RMB 3.0 bn for the year (vs. +RMB 21.2 bn) reflecting working-capital absorption tied to the AI infrastructure build ([Baidu 2025 Form 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
+**How it makes money (and what's changing).** Historically Baidu monetized via pay-for-performance (P4P) search ads + Baidu App feed ads; Baidu App MAU was 679M in December 2025 ([Baidu FY2025 20-F, Item 4 — Baidu App MAU](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). By revenue line, FY2025 **online marketing services revenue was ¥67,837M** ($9,701M, FY24 ¥78,563M, FY23 ¥81,203M — a three-year structural decline), while **"Others" (incl. AI cloud + iQIYI membership) was ¥61,242M** ($8,757M, FY24 ¥54,562M, FY23 ¥53,395M — rising) ([Baidu FY2025 20-F, Revenue Disaggregation](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). This migration reached an inflection in Q1'26: online marketing ¥12.6B (−22% YoY, now 48% of Baidu General Business), "Others" ¥13.4B (+42% YoY, now 52%), with AI Cloud Infrastructure ¥8.8B (+79% YoY) ([Baidu Q1'26 press release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
 
-![Revenue and operating margin](charts/bidu_revenue_margin.png)
-*Source: [Baidu 2025 Form 20-F, Selected Consolidated Financial Data table](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm). FY2025 includes a RMB 16.2 bn long-lived asset impairment that drove the GAAP operating loss; without it, FY2025 operating margin would be roughly mid-single-digit positive.*
+**Scale and profitability (mind the impairment distortion).** FY2025 revenue ¥129,079M, cost of revenue ¥72,436M, SG&A ¥25,843M, R&D ¥20,433M, plus a **¥16,190M ($2,315M) impairment of long-lived assets** — taking total costs to ¥134,902M and a **GAAP operating loss of ¥(5,823)M** ($(833)M). Yet net income attributable to Baidu was still positive **¥5,589M** ($799M), supported by ¥12,539M of total other income, net (interest income ¥8,602M + equity-method earnings ¥3,196M, etc.) ([Baidu FY2025 20-F, Consolidated Statements of Comprehensive Income](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). **To read Baidu's earnings power you must strip this ¥16,190M non-cash impairment** — normalized FY25 net income attributable is ~¥21,779M (~$3,157M), a normalized P/E of ~12× at the current price. GAAP diluted EPS ¥1.47/share (each ADS = 8 shares = ¥11.76 ≈ $1.7). Employees: ~33,500 full-time at 2025-12-31 (FY24 35,900, FY23 39,800, ~16% cut over two years), incl. ~18,600 R&D ([Baidu FY2025 20-F, Item 6 — Employees](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). HQ: Beijing.
 
-**Employees & geography.** As of 31-Dec-2025 Baidu had ~22,100 employees in Beijing, ~11,300 elsewhere in China, and ~100 outside China — broadly ~33.5k headcount, of which ~18,600 are in R&D, ~6,400 in sales/marketing, ~5,600 in operations/service, and ~2,900 in management/administration ([Baidu 2025 Form 20-F, Item 6.D Employees](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). Revenue is overwhelmingly Chinese mainland-sourced; Apollo Go's international footprint is the principal incremental geography, with operations or live testing in 26–27 cities globally (Wuhan, Beijing, Shanghai, Shenzhen, Chengdu, Chongqing, Haikou, Sanya domestically; Abu Dhabi, Dubai and Seoul internationally; Switzerland and London announced) ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm); [Baidu Q1-2026 Press Release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
+**Income-statement Sankey (FY2025).** The chart below renders the FY2025 income statement as a flow: revenue ¥129,079M splits by line into online marketing 52.6% + Others/AI-cloud+iQIYI 47.4%; after COGS ¥72,436M (content + traffic-acquisition + AI-cloud compute) it leaves gross profit ¥56,643M (43.9% margin), then three opex blocks — R&D ¥20,433M, SG&A ¥25,843M, and the **¥16,190M impairment (Other OpEx)** — produce an **operating loss of ¥(5,823)M**; but ¥12,539M of below-the-line other income (interest + equity method) flows in, and after tax net income attributable stays positive at ¥5,589M. The takeaway: **Baidu's FY2025 GAAP operating loss is entirely the one-off impairment; ex-impairment operating profit is positive ~¥10,367M (~8% margin), and net income is supported by the ¥12.5B interest+equity engine of its $21.7B net cash.** Figures verbatim from the [20-F FY2025 income statement + segment/revenue disclosures](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm).
 
-**Key operating metrics.** Baidu App MAU was 679 million in December 2025 and 655 million in March 2026 ([Baidu 2025 Form 20-F](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm); [Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Cumulative Apollo Go public rides exceeded 20 million as of February 2026 and 22 million as of April 2026; Q1-2026 fully driverless rides alone were 3.2 million (+120% YoY), with weekly volumes peaking above 350,000 in March 2026 ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Baidu AI Cloud was named the No. 1 AI cloud provider in China for the sixth consecutive year by IDC ([IDC China AI Public Cloud Market 2024 report, issued July 2025, as cited in Baidu 2025 20-F](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
+![Baidu income-statement Sankey FY2025](charts/bidu_income_sankey.svg)
 
-### Valuation snapshot (as of 2026-05-20)
+Source: [Baidu FY2025 20-F, Consolidated Statements of Comprehensive Income + Segment Note (d38065d20f.htm)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)
 
-| Metric | BIDU | BABA | PDD | TCEHY | JD | GOOGL |
+**Q1'26 AI-driven revenue mix (bespoke chart).** The chart below breaks down Q1'26 Baidu Core AI-driven revenue of ¥13.6B (+49% YoY, 52% of Baidu General Business for the first time): AI Cloud Infrastructure ¥8.8B (+79% YoY, incl. GPU Cloud +184% YoY) is ~65%, with the remaining ~¥4.8B AI Applications + AI-native Marketing ([Baidu Q1'26 press release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
+
+![Baidu Q1'26 AI-driven revenue mix](charts/bidu_q1_2026_ai_mix.png)
+
+Source: [Baidu Q1'26 press release (6-K Exhibit 99.1), 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)
+
+**Historical revenue by line (development-over-time).** Online marketing shrank from ¥81,203M (FY23) to ¥67,837M (FY25) while "Others" (AI cloud + iQIYI membership) rose from ¥53,395M to ¥61,242M — the two-year set-up for Q1'26's >50% AI-revenue crossing.
+
+![Baidu historical revenue by line revbars FY2023-FY2025](charts/bidu_revbars.svg)
+
+Source: [Baidu FY2023–FY2025 20-F filings, Revenue Disaggregation (d38065d20f.htm)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)
+
+**Revenue by operating segment (FY2025).** Baidu General Business ¥102,485M (79%) > iQIYI ¥27,290M (21%) (segment basis includes ~¥696M inter-segment elimination, so the sum slightly exceeds consolidated ¥129,079M). Baidu General Business carries the entire AI story; iQIYI is the low-growth, low-multiple long-video drag (FY25 −7% YoY) ([Baidu FY2025 20-F, Segment Reporting](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)).
+
+![Baidu revenue by operating segment donut FY2025](charts/bidu_segment_donut.svg)
+
+Source: [Baidu FY2025 20-F, Segment Reporting (operating segments; d38065d20f.htm)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)
+
+**Revenue by line (FY2025; Baidu does not disclose a geographic split).** As a predominantly mainland-China company, the 20-F provides no granular geographic revenue disclosure (overseas marketing and Apollo Go abroad are nascent), so in place of a geography donut we use Baidu's disclosed revenue-by-line split: online marketing ¥67,837M (52.6%) vs Others/AI-cloud+iQIYI ¥61,242M (47.4%) — also the single clearest picture of Baidu's monetization migration ([Baidu FY2025 20-F, Revenue Disaggregation](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)).
+
+![Baidu revenue-by-line donut FY2025](charts/bidu_revline_donut.svg)
+
+Source: [Baidu FY2025 20-F, Revenue Disaggregation (online marketing vs others; d38065d20f.htm)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)
+
+**Capital structure (net cash is the foundation of the thesis).** At 2025-12-31: cash & equivalents ¥24,606M + restricted cash ¥225M + short-term investments ¥90,661M + long-term time deposits & HTM investments ¥123,862M = cash-like assets of ~**¥239,354M (~$34.7B)**; against total debt (ST loans ¥7,626M + current LT loans ¥14,765M + notes payable ¥51,021M + convertibles ¥6,712M + current convertibles ¥1,459M + current notes ¥4,560M + LT loans ¥3,369M) of ~**¥89,512M (~$13.0B)** — **net cash ~¥149,842M (~$21.7B), equal to 57% of the current market cap (~$37.9B)** ([Baidu FY2025 20-F, Consolidated Balance Sheets](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). EV ex-cash is therefore only ~$16.1B → FY25 EV/Sales ~0.87×, among the cheapest of any major AI mega-cap.
+
+![Baidu balance-sheet Sankey 2025-12-31](charts/bidu_balance_sankey.svg)
+
+Source: [Baidu FY2025 20-F, Consolidated Balance Sheets (Dec 31, 2025; d38065d20f.htm)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)
+
+**Cash-flow Sankey (FY2025) — the red flag.** FY2025 **operating cash flow turned negative ¥(3,013)M** ($(431)M), a sharp deterioration from FY2024's +¥21,234M — driven by working-capital + prepaid-compute + content spend in the AI capex cycle (net income was still positive ¥5,457M but working capital and non-cash items reversed); CFI ¥(25,136)M (incl. capex ¥12,073M + heavy deposit/securities allocation); CFF +¥17,142M. **Free cash flow was deeply negative in FY2025 — this is the report's single most important falsifier to monitor**: Baidu is funding its AI capex cycle from its huge cash pile, and if cloud revenue can't pull CFO back to positive within 12–18 months, the "net-cash moat" erodes. Q1'26 CFO turned positive ¥2.7B (company basis), but core capex jumped to ¥5.8B (from ¥2.0B) ([Baidu FY2025 20-F, Consolidated Statements of Cash Flows](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm); [Baidu Q1'26 press release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
+
+![Baidu cash-flow Sankey FY2025](charts/bidu_cashflow_sankey.svg)
+
+Source: [Baidu FY2025 20-F, Consolidated Statements of Cash Flows (d38065d20f.htm)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)
+
+Baidu is incorporated in the Cayman Islands and operates its mainland-China businesses through a VIE structure (Baidu Online, Beijing Perusal, Beijing iQIYI), which contributed 50% of external revenue in 2025 ([Baidu FY2025 20-F, Item 3 — VIE Contribution](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). NASDAQ ADS (BIDU) is the primary listing; HKEX 9888.HK is a dual-primary listing; each ADS represents 8 Class A ordinary shares.
+
+## 1A. Valuation & Price Target
+
+This section is entirely *Analyst view:* (forecasts, target prices, and scenario targets are the analyst's own forward judgment, with no filing citation; the external basis for each driver is cited inline).
+
+### (a) Three-year forward forecast (revenue-by-line + normalized earnings)
+
+*Analyst view:* Forecast basis: online marketing structural decline (−high-single to −low-double digits) offset by high-growth AI cloud (+40–80%), pulling total Baidu General Business back to low-single-digit positive growth; normalized earnings anchor on "ex-FY25-impairment." AI cloud per sell-side: Citi projects AI-driven revenue FY26E ¥57.6B (+44.7%) → FY27E ¥71.6B (+24.3%) → FY28E ¥85.1B (+18.9%), incl. AI Cloud Infrastructure FY26E ¥35.7B (+80%) (*Analyst view:* [Citi — Unpacking Baidu AI Cloud Potential Beyond Kunlunxin, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/214528184155881/CITI-Baidu.com%20%EF%BC%88BIDU.US%EF%BC%89%20Unpacking%20Baidu%20AI%20Cloud%20Potential%20Beyond%20KunlunXin-260611.pdf)); historical financials from the [20-F FY2025](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm).
+
+| Metric (*Analyst view:* E columns) | FY2023A | FY2024A | FY2025A | FY2026E | FY2027E | 25–27E CAGR |
 |---|---|---|---|---|---|---|
-| Share price (US$) | 135.22 | n/a | n/a | n/a | n/a | n/a |
-| Market cap | US$ 46.0 bn | US$ 322.6 bn | US$ 139.7 bn | US$ 529.8 bn | US$ 43.8 bn | US$ 4,711.8 bn |
-| TTM P/E | **78.2x** | 20.8x | 10.0x | 16.5x | 23.9x | 29.7x |
-| TTM P/S | 0.36x | 0.32x | 0.32x | 0.69x | n/a* | 11.2x |
-| P/B | 1.17x | — | — | — | — | — |
-| EV/EBITDA | 15.6x | — | — | — | — | — |
-| 52-week range | US$ 81.17 – US$ 165.30 | — | — | — | — | — |
-| Beta (5-yr) | 0.52 | — | — | — | — | — |
+| Revenue (¥M) | 134,598 | 133,125 | 129,079 | ~133,000 | ~141,000 | +4.5% |
+| — Online marketing (¥M) | 81,203 | 78,563 | 67,837 | ~60,000 | ~56,000 | −9% |
+| — Others/AI cloud+iQIYI (¥M) | 53,395 | 54,562 | 61,242 | ~73,000 | ~85,000 | +18% |
+| GAAP operating income (¥M) | 21,856 | 21,270 | **(5,823)\*** | ~12,000 | ~16,000 | |
+| Normalized op income (ex-impairment, ¥M) | 21,856 | 21,270 | ~10,367 | ~12,000 | ~16,000 | +24% |
+| Net income to Baidu (GAAP, ¥M) | 20,315 | 23,760 | 5,589 | ~16,000 | ~21,000 | |
+| Normalized net income (ex-impairment, ¥M) | 20,315 | 23,760 | ~21,779 | ~22,000 | ~24,000 | +5% |
+| Normalized EPS/ADS ($) | ~6.9 | ~7.9 | ~9.3 | ~9.0 | ~9.4 | |
+| Operating cash flow CFO (¥M) | 36,615 | 21,234 | **(3,013)** | ~10,000 | ~25,000 | |
 
-Source: [Yahoo Finance — BIDU key statistics, accessed 2026-05-20](https://finance.yahoo.com/quote/BIDU/key-statistics) (and equivalent pages for peers). *JD's P/S as reported by Yahoo appears to be a data quirk; we omit it from the comparison.
+*FY2025 GAAP operating loss ¥(5,823)M is entirely the ¥16,190M one-off long-lived-asset impairment; normalized operating profit ex-impairment is ~¥10,367M. Normalized net income approximated as "GAAP attributable ¥5,589M + impairment ¥16,190M" (impairment not tax-deductible; added back gross).
 
-**Interpreting the multiples.** BIDU's TTM P/E of ~78x stands out — roughly 3-4x the China-internet peer median (~20x BABA, ~10x PDD, ~17x TCEHY) and far above the 25-30x mark typical for mature US ad/cloud names like GOOGL. The cause is mechanical, not narrative: FY2025 net income attributable to Baidu collapsed to RMB 5.6 bn from RMB 23.8 bn because of the RMB 16.2 bn long-lived asset impairment ([Baidu 2025 Form 20-F, Selected Consolidated Financial Data](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). Backing out the impairment, FY2025 normalised net income would be roughly RMB 18 bn and TTM P/E would print closer to the high-teens — in line with BABA and below GOOGL. Forward P/E of ~14.8x (Yahoo consensus) corroborates that the market views the impairment as one-off. The 0.36x TTM P/S is right in line with the China-internet peer cluster and well below GOOGL's 11x. P/B of 1.17x and the US$ 116.9 bn cash position vs. US$ 94.1 bn total debt indicate a balance sheet trading close to book. In short, **headline P/E is a distortion** driven by the impairment; on normalised earnings and on P/S, BIDU trades roughly in line with Chinese internet peers — neither stretched nor obviously cheap. We flag the *forward* multiple (14.8x) and the impairment normalisation as the more useful anchors.
+Inputs: FY2025 revenue ¥129,079M, impairment ¥16,190M, operating loss ¥(5,823)M, net income ¥5,589M, CFO ¥(3,013)M, capex ¥12,073M from the [20-F FY2025 income statement + cash flow statement](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm); Q1'26 AI Cloud Infrastructure ¥8.8B (+79%), GPU Cloud +184%, AI-driven revenue ¥13.6B (+49%) from the [Q1'26 press release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm).
 
-![Peer valuation](charts/bidu_peer_valuation.png)
-*Source: [Yahoo Finance, accessed 2026-05-20](https://finance.yahoo.com/quote/BIDU/key-statistics).*
+### (b) Price-target derivation (show the arithmetic)
 
----
+*Analyst view:* Method: **SOTP / normalized P/E** (GAAP EPS is distorted by impairment and FX, so the market and sell-side use normalized/Non-GAAP and SOTP; net-cash-adjusted EV/Sales is the cross-check):
+
+- **Simplified SOTP (per ADS, USD):** ① net cash ~$21.7B ÷ 340.25M ADS = **~$64/ADS** (near-riskless cash backing); ② search+ads core — normalized operating profit ~¥10B ($1.45B) at 8× ≈ $11.6B = **~$34/ADS**; ③ AI cloud — FY26E revenue ~¥36B ($5.2B) at 1.5× P/S ≈ $7.8B = **~$23/ADS**; ④ Apollo Go + Kunlun + iQIYI stake — conservatively ~$10B = **~$29/ADS**. Total SOTP ≈ **$150/ADS**.
+- **Normalized-P/E cross-check:** FY2027E normalized EPS/ADS ~$9.4 × 16× target (between China-internet 11–13× and global AI 25×, crediting cloud acceleration) = **~$150**.
+- Comparison anchors: Citi Buy $188, Nomura Buy $186, UBS Buy $180 (all on AI-cloud + Kunlun-IPO re-rating); Morgan Stanley Equal-weight $135 (cautious on slow AI-app monetization) — this report's $150 sits at the median-to-upper between the bull camp and the most cautious sell-side, crediting the real cloud inflection while staying cautious on the cash-flow falsifier.
+- PT = **$150/ADS** (+35% vs $111.24).
+
+### (c) Bull / Base / Bear scenarios
+
+| Scenario (*Analyst view:*) | Key assumptions | Target | vs $111.24 |
+|---|---|---|---|
+| Bull | AI cloud sustains +60–80%, Kunlun IPO surfaces value, Apollo Go segment disclosure/carve-out, CFO recovers; normalized EPS/ADS $10 × 20× + cash | **$200** | **+80%** |
+| Base | Cloud accelerates but ads keep dragging, CFO slowly turns positive in FY26; SOTP / normalized 16× × FY27E EPS $9.4 | **$150** | **+35%** |
+| Bear | Ad decline not net-covered by cloud, capex keeps consuming cash, consumer-AI mindshare lost further to ByteDance/DeepSeek; normalized EPS compressed to $7 × 11× + cash discount | **$90** | **−19%** |
+
+*Analyst view:* Risk/reward skews strongly positive — upside $200 (+80%) vs downside $90 (−19%), ~**4.2:1** — because $21.7B net cash (57% of cap) anchors the floor: even if the cloud story fails, pure cash + normalized earnings make it hard for BIDU to break below ~$90. This is a "cash-cushioned downside, optionality upside" asymmetry, unlike a high-leverage story stock. This report's $150 is ~17–20% below the bull sell-side ($180–188), the difference being that this report treats FY25 negative operating cash flow as the primary falsifier.
+
+### (d) Consensus comparison (Street vs this report)
+
+| Metric (FY2026E) | Street range | This report (*Analyst view:*) |
+|---|---|---|
+| AI Cloud Infrastructure revenue | ¥35–36B (Citi ¥35.7B, +80%) | ~¥36B (in line with Citi) |
+| Total AI-driven revenue | ¥55–58B (Citi ¥57.6B, +44.7%) | ~¥57B |
+| Total revenue | ~¥130–135B (cloud offsets ads) | ~¥133B |
+| Rating/PT | Buy $180–188 (Citi/Nomura/UBS); EW $135 (MS) | Overweight $150 |
+
+*Analyst view:* Sell-side AI-cloud forecasts converge tightly (Citi/Nomura/UBS all place AI Cloud Infrastructure FY26E at ¥35–36B, +80%). The disagreement is not the cloud itself but "whether cloud growth net-covers the ad decline + capex cash burn and improves overall earnings/cash flow" — exactly why MS is EW while Citi/Nomura/UBS are Buy (see Section 9.5).
+
+### Sell-side view evolution
+
+Mechanical pre-check: `db/stock_price_target.db` (read-only) holds 7 BIDU target-price records (2026-03-12 to 2026-06-11), 5 positive (Citi/Nomura/UBS Buy, JPM Overweight) and 2 Morgan Stanley Equal-weight, PT range **$135–$188** (~39% spread, median ~$180) — **convergent bullishness on the cloud but split on the overall rating** (MS is the lone neutral). **Per-institution view timeline** (each PT paired with that note's date-price and implied upside; date-prices from stock_price_target.db / yfinance):
+
+| Institution | Date | Rating / PT | Date-price (implied upside) | One-line thesis |
+|---|---|---|---|---|
+| Morgan Stanley | 2026-03-12 | Equal-weight / $126 | $123.16 (+2%) | Acknowledges full-stack AI (in-house chips) but slow AI-app rollout, search/video competition (*Analyst view:* [MS — China's AI Path: Owning the Full AI Stack, 2026-03-12](http://xs-macbook-air.local:5001/zsxq/pdf/812228411484442/Morgan%20Stanley-China%27s%20AI%20Path%EF%BC%9A%20Owning%20the%20Full%20AI%20Stack%20via%20Inhouse%20Chips-260312.pdf)) |
+| J.P. Morgan | 2026-04-23 | Overweight / (no single PT) | $121.53 | Post-4Q25 sector re-rate: Baidu funds AI investment from internal cash flow (*Analyst view:* [JPM — China Internet Post 4Q25, 2026-04-23](http://xs-macbook-air.local:5001/zsxq/pdf/184485451848882/J.P.%20Morgan-China%20Internet%20Post%204Q25%EF%BC%9A%20Re~evaluating%20the%20Sector%EF%BC%9B%20Tencent%20Our%20Top%20Pick-260423.pdf)) |
+| Morgan Stanley | 2026-05-15 | Equal-weight / **$135** | $135.33 (−0%) | Baidu Create: scaled-agent strategy, DuMate launch; maintains EW, AI-app monetization the key variable (*Analyst view:* [MS — 2026 'Baidu Create' Event Takeaways, 2026-05-15](http://xs-macbook-air.local:5001/zsxq/pdf/184124848211182/Morgan%20Stanley-Baidu%20Inc%EF%BC%88BIDU.US%EF%BC%892026%20%27Baidu%20Create%27%20Event%20Takeaways-260515.pdf)) |
+| Citi | 2026-05-18 | **Buy / $188** | $137.71 (+36%) | Q1'26 AI Cloud Infra +79%, GPU Cloud +184% strong beat; AI-driven revenue crosses 50% (*Analyst view:* [Citi — Strong AI Cloud Infra Revs Driven by MaaS and GPU, 2026-05-18](http://xs-macbook-air.local:5001/zsxq/pdf/415242554258288/CITI-Baidu.com%20%EF%BC%88BIDU.US%EF%BC%89%20Strong%20AI%20Cloud%20Infra%20Revs%20Driven%20by%20MaaS%20and%20GPU%20Revs-260518.pdf)) |
+| Nomura | 2026-05-19 | **Buy / $186** | $137.68 (+35%) | "AI Cloud offsets ad drag"; Kunlun IPO + HK dual-primary listing as catalysts (*Analyst view:* [Nomura — AI Cloud offsets ad drag, 2026-05-19](http://xs-macbook-air.local:5001/zsxq/pdf/212454252252481/Nomura-Baidu%EF%BC%88BIDU.OQ%EF%BC%89AI%20Cloud%20offsets%20ad%20drag-260519.pdf)) |
+| UBS | 2026-05-28 | **Buy / $180** | $132.05 (+36%) | AIC 2026: full-stack AI strengthening, Kunlun chip TAM, cloud acceleration (*Analyst view:* [UBS — AIC 2026: Strengthening full-stack AI capability, 2026-05-28](http://xs-macbook-air.local:5001/zsxq/pdf/212485545245111/UBS-Baidu%EF%BC%8C%20Inc.%EF%BC%88BIDU.US%EF%BC%89AIC%202026%EF%BC%9A%20Strengthening%20full~stack%20AI%20capability-260528.pdf)) |
+
+**Institutional split and this report's stance:** 5 positive (Citi/Nomura/UBS Buy $180–188, JPM OW) vs MS the lone neutral (EW $135) — the core disagreement is not cloud growth (consensus strong) but whether cloud can net-improve overall earnings/cash flow and whether AI apps monetize. This report's Overweight/$150 takes the median-to-upper: crediting the cloud inflection (with the bull camp) but more conservative than $180–188 because it treats negative FY25 operating cash flow and the un-net-covered ad decline as downside variables (see bear scenario and Section 9). **Key reality: the current $111 is already below the most bearish MS $135 target** — even on the most cautious sell-side, BIDU is undervalued.
+
+![Baidu peer forward-valuation snapshot](charts/bidu_peer_valuation.png)
+
+Source: forward P/E + TTM P/S from yfinance, 2026-06-18; BIDU trailing P/E n/m (GAAP NI distorted by the FY25 impairment).
+
+### (e) Swing variables
+
+*Analyst view:* The rating most depends on three assumptions; stress-test these first: (1) **the operating-cash-flow turn** — FY25 CFO at ¥(3.0)B is the most important red flag; cloud revenue must pull CFO back positive within 12–18 months or capex erodes the net-cash moat; (2) **ad decline vs cloud growth net-coverage** — online marketing Q1'26 −22% YoY, AI cloud +79% — as long as cloud's absolute increment exceeds ads' absolute decrement (achieved in Q1'26, Baidu General Business +2% YoY), the thesis holds; (3) **Kunlun IPO and Apollo Go value-surfacing** — both "free options" depend heavily on capital-markets action (Kunlun carve-out, robotaxi segment disclosure/spin), which CFO Haijian He's Kingsoft Cloud IPO background makes credible but uncertain in timing.
+
+## 1B. GF Score (GuruFocus-style) Fundamental Scorecard
+
+*Analyst view:* **GF Score (GuruFocus-style composite): 53/100 — 51–70 band (below-average fundamental potential).** This score captures Baidu's profile: a Chinese full-stack AI company with **an extremely strong balance sheet, very cheap valuation, but near-term profitability crushed by the impairment, terrible momentum, and growth in transition** — five highly divergent axes (Financial Strength 7 / GF Value 8 vs Profitability 4 / Momentum 3). **This scorecard is the product of the analyst's own rubric (distinct from GuruFocus's proprietary algorithm and not a GuruFocus product); the five sub-scores and composite are all *Analyst view:* with no filing citation; each axis's underlying metrics are cited inline below.** Note: the GF Value axis direction is "higher = cheaper" — Baidu's 8/10 means "significantly undervalued."
+
+![Baidu GF Score radar](charts/bidu_gf_score.svg)
+
+> Further from center = higher score; larger pentagon = higher composite GF Score (same reading as the GuruFocus widget).
+
+| Axis (gloss) | Score (0–10) | |
+|---|---|---|
+| Financial Strength | 7 | `███████░░░` |
+| Profitability | 4 | `████░░░░░░` |
+| Growth | 5 | `█████░░░░░` |
+| GF Value (higher = cheaper) | 8 | `████████░░` |
+| Momentum | 3 | `███░░░░░░░` |
+| **GF Score (composite, *Analyst view:*)** | **53 / 100** | **51–70 below-average potential band** |
+
+*Composite weights (*Analyst view:* transparent reproduction, not GuruFocus's proprietary weights): Financial Strength 20% · Profitability 25% · Growth 25% · GF Value 15% · Momentum 15%.*
+
+**Financial Strength: 7/10.** Extremely robust balance sheet. At 2025-12-31, cash-like assets ~¥239,354M (~$34.7B) vs total debt ~¥89,512M (~$13.0B) — **net cash ~$21.7B = 57% of market cap**; equity attributable ¥266,330M is 59% of total assets ¥449,157M ([Baidu FY2025 20-F, Balance Sheets](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). Interest coverage ample — FY2025 interest income ¥8,602M far exceeds interest expense ¥2,784M (net interest positive). The only reason it's not 8–9 is **FY2025 operating cash flow turned negative ¥(3,013)M** — a financial-strength crack to watch.
+
+**Profitability: 4/10.** Near-term GAAP profitability crushed by the impairment. FY2025 GAAP operating loss ¥(5,823)M (impairment), net margin attributable just 4.3%, ROE ~2.1% (net income ¥5,589M ÷ avg equity ~¥265B, see DuPont below) ([Baidu FY2025 20-F, income statement + balance sheet](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). Normalized (ex-impairment): ~8% operating margin, ~¥21,779M net income; Q1'26 Non-GAAP operating margin 12%, Non-GAAP net income ¥4.3B ([Baidu Q1'26 press release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Not higher because GAAP is in loss, CFO turned negative, and AI cloud is still a low-margin ramp.
+
+**Growth: 5/10.** In a "legacy down + new up" transition with weak net growth but an emerging inflection: total revenue FY25 −3% YoY, but AI-driven revenue Q1'26 +49% YoY, AI Cloud Infrastructure +79%, GPU Cloud +184%, Baidu General Business back to +2% YoY in Q1'26 ([Baidu Q1'26 press release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Online marketing −22% YoY is the biggest drag. Not higher because total revenue grows only low-single-digit and consumer-AI mindshare trails ByteDance/DeepSeek.
+
+**GF Value (higher = cheaper): 8/10.** Significantly undervalued. Current fwd P/E ~12×, normalized P/E ~12×, net-cash-adjusted EV/Sales ~0.87×, net cash 57% of market cap ([Yahoo Finance via yfinance, 2026-06-18](https://finance.yahoo.com/quote/BIDU/)); sell-side fair-value median ~$180 (Citi/Nomura/UBS) vs $111. SOTP ~$150 vs $111 = ~+35% upside with downside anchored by net cash. Not 9–10 because GAAP earnings are impaired and CFO turned negative — the "cheap" carries a real earnings-quality discount.
+
+**Momentum: 3/10.** Terrible near-term momentum. 1M −19.2% (vs SPX −21.0pp), YTD −26.0% (vs SPX −35.1pp), 6M −7.7%; the only bright spot is 12M +33.0% (vs SPX +7.6pp, the residual DeepSeek/AI re-rating) (source: yfinance, 2026-06-18, consistent with the header relative-performance line). The current $111 is near the lower end of the 52-week range ($83.62–$162.52). Low momentum is exactly the contrarian's entry signal but also a genuine risk flag.
+
+**Composite arithmetic:** (FS 7×20 + Prof 4×25 + Growth 5×25 + Value 8×15 + Mom 3×15) / 100 = (140 + 100 + 125 + 120 + 45) / 100 = 530 / 100 → **53/100**. In the GuruFocus framework, 51–70 is "below-average future-performance potential" ([GuruFocus GF Score page](https://www.gurufocus.com/term/gf-score); note the page is Cloudflare-protected, returning 403 to curl/urllib as an anti-bot block, not a dead link; this report does not cite a GuruFocus official score, only its methodology framework).
+
+**Most movable axes / failure mode:** Profitability and Momentum are the upside leverage — if FY26 CFO turns positive + no impairment recurrence, Profitability can move 4→6 and the composite up ~5 points; a cloud-driven share rebound would flip Momentum positive. Conversely, persistent negative CFO + ads not net-covered by cloud pressures both Growth and Profitability. The composite is consistent with this report's Overweight rating (built on the "cheap + strong-assets" logic of GF Value 8 and Financial Strength 7) — a classic "deep value + optionality" rather than "high-quality growth" scoring shape.
+
+**ROE decomposition (DuPont, FY2025).** Baidu FY2025 ROE ~**2.1%** (net income ¥5,589M ÷ avg equity ~¥265B), from three factors: net margin 4.3% (depressed by impairment) × asset turnover 0.29 (low turnover of a financialized balance sheet, with large cash/investments) × equity multiplier 1.65 (low leverage). The chart visualizes the three factors — **ROE is low chiefly because the ¥16,190M one-off impairment crushed net margin** (ex-impairment normalized net margin ~17%, normalized ROE ~8%), plus the large cash/long-term-investment base drags asset turnover. The "Interest Burden" term is negative because operating income is negative while pretax is positive — Baidu in FY2025 had an operating loss yet stayed profitable, entirely on ¥12.5B of interest+equity-method income. Inputs from the [20-F FY2025 income statement and balance sheet](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm).
+
+![Baidu DuPont ROE decomposition FY2025](charts/bidu_dupont.svg)
+
+Source: [Baidu FY2025 20-F, Statements of Comprehensive Income + Balance Sheets (d38065d20f.htm)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)
 
 ## 2. Company History
 
-Baidu was founded in January 2000 by Robin Yanhong Li and Eric Xu as a Chinese-language internet search engine. Robin Li had previously been a search engineer at Infoseek and a senior consultant at IDD Information Services in the United States, and held a patent (US 5,920,859) for "link analysis" search ranking — the technology heritage that allowed Baidu to ship a competitive Chinese-language index from inception ([Baidu 2025 Form 20-F, Item 4.A History and Development of the Company](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). The company listed on Nasdaq in August 2005 under the symbol BIDU at US$ 27/share — its first-day pop made it one of the most successful US IPOs in the Chinese-internet era — and added a Hong Kong secondary listing in March 2021 under the symbol 9888 ([Baidu 2025 Form 20-F, Item 4.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
+Baidu was founded in **January 2000** in Beijing by **Robin Yanhong Li** and **Eric Yong Xu**. Li, then 31, had worked at Silicon Valley's Infoseek and returned to China with RankDex (1996), one of the earliest hyperlink-based page-ranking systems (roughly contemporaneous with Google's PageRank). The name "Baidu" is from a Song-dynasty poem by Xin Qiji ([Baidu "About" page](https://home.baidu.com/about/index.html)). Xu left in 2004; Li has been chairman since founding and CEO since February 2004 ([Baidu FY2025 20-F, Item 6 — Directors and Management](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)).
+
+The 2000s story is three things: scaling P4P search ads (monetized since 2001); pushing Google out of China (Baidu held >75% search share when Google.cn exited in March 2010); and the August 2005 NASDAQ IPO — the most successful U.S. China-stock IPO since Google, up 354% on day one. The 2010s diversified: 2012 acquisition of Qiyi.com (later iQIYI); a "search + feed" mobile strategy; a first AI research lab in Sunnyvale (2014); hiring ex-Microsoft EVP Qi Lu as COO (2017). iQIYI spun off onto NASDAQ in March 2018 (IQ) with Baidu retaining majority control.
+
+Two strategic pivots shaped today's Baidu. First, the **Apollo open autonomous-driving platform** (launched April 2017, "the Android of autonomous driving") — both licensed to OEMs and self-operated as Apollo Go robotaxi. Public road testing began in Changsha in 2019; paid robotaxi rides began in Beijing in November 2021; first fully-driverless commercial licenses (Chongqing, Wuhan) in 2022 ([Baidu FY2025 20-F, Item 4 — Apollo Go History](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). Second, the **ERNIE foundation-model series**: from ERNIE 1.0 (2019) to **ERNIE Bot** — China's first public-facing ChatGPT-style chatbot — opening to public testing on March 16, 2023, ~5 weeks ahead of the China #2 ([Reuters, 2023-08-31](https://www.reuters.com/technology/chinas-baidu-launches-erniebot-public-after-beijings-approval-2023-08-31/)). Fast iteration followed: ERNIE 3.5/4.0 (2023), 4.0 Turbo (2024-06), ERNIE 4.5 + reasoning model X1 (2025-03), 4.5/X1 Turbo (2025-04), **ERNIE 5.0 omni-modal** (2025-11), and **ERNIE 5.1** (2026-05, #1 among Chinese models on LMArena's text leaderboard) ([Baidu Q1'26 press release — ERNIE 5.1, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
+
+Notable M&A and governance: 2014 $1.9B acquisition of 91 Wireless; 2017 sale of Baidu Waimai to Ele.me; 2020 independent financing of the Smart Living Group (DuerOS); August 2020 $3.6B acquisition of YY Live from JOYY, plus a 2024 control acquisition of JOYY's domestic livestreaming ([Baidu FY2025 20-F, Item 4 — Acquisitions](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). In March 2021 Baidu completed a **HKEX dual-primary listing (9888.HK)**, raising ~$3.1B to hedge the then-rising ADR delisting risk ([HKEX listing prospectus, 2021-03](https://www1.hkexnews.hk/listedco/listconews/sehk/2021/0309/2021030901046.pdf)).
+
+The last three years are about AI transformation, explicitly accepting short-term search-revenue pain to rebuild the experience: 2024 placed ERNIE generative answers above the ten blue links; April 2025 made ERNIE Bot **fully free** for all users (driven by collapsing inference costs); June 2025 **open-sourced the ERNIE 4.5 series** (10 variants); Q4 2025 renamed the segment "Baidu Core" → "Baidu General Business." Apollo Go expanded from 8 cities in early 2025 to 26 cities globally by February 2026, including Dubai, Abu Dhabi, Hong Kong, Switzerland, the UK, and Korea ([Baidu FY2025 20-F, Item 4 — Apollo Go Expansion](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)).
 
 ```mermaid
 timeline
-    title Baidu — Milestone Timeline
-    2000 : Robin Li and Eric Xu found Baidu in Beijing
-    2005 : NASDAQ IPO under symbol BIDU
-    2010 : Google withdraws from China; Baidu search share surges
-    2013 : Acquires 91 Wireless (US$1.85 bn) — mobile app distribution
-    2017 : Launches Apollo open-source autonomous-driving platform
-    2018 : iQIYI lists on NASDAQ (NASDAQ:IQ)
-    2020 : Apollo Go robotaxi service launches public rides in Changsha
-    2021 : Hong Kong secondary listing (HKEX:9888)
-    2023 : Launches ERNIE Bot (March) and ERNIE 4.0 (October)
-    2024 : ERNIE 4.0 Turbo released; Apollo Go RT6 robotaxi deployed
-    2025 : ERNIE 4.5 / X1 (Mar); ERNIE 4.5 Turbo / X1 Turbo (Apr); ERNIE 5.0 (Nov); 100% fully-driverless Apollo Go ops in China
-    2026 : Q1 — Baidu Core AI-powered Business >50% of Baidu General Business; ERNIE 5.1 in May
+    title Baidu — Key milestones
+    2000 : Founded in Beijing (Li + Xu)
+    2005 : NASDAQ IPO, ticker BIDU
+    2010 : Google.cn exits China
+    2012 : Acquired Qiyi (later iQIYI)
+    2017 : Apollo autonomous-driving platform
+    2018 : iQIYI NASDAQ spin-off (IQ)
+    2019 : ERNIE 1.0; Apollo Go Changsha tests
+    2021 : HKEX dual-primary listing 9888.HK
+    2023 : ERNIE Bot public (China's first ChatGPT-like)
+    2025 : ERNIE Bot free + open-source 4.5; ERNIE 5.0 omni-modal
+         : Core renamed "Baidu General Business"
+    2026 : Q1 AI-driven revenue crosses 50%
+         : ERNIE 5.1; Apollo Go cumulative >22M rides
 ```
 
-**Strategic pivots.** Three large transformations shape the modern company. First, the **mobile-internet pivot (2012-2016)** — Baidu spent ~US$ 1.85 bn acquiring 91 Wireless in 2013 to re-platform from desktop search to mobile app distribution. Second, the **AI-platform pivot (2017-2022)** — under then-COO Qi Lu and a sequence of CTO hires Baidu wagered that autonomous driving and foundation-model research would be the next-generation operating systems; this is when Apollo, ERNIE (the predecessor of the generative-AI ERNIE Bot), Baidu Brain and Kunlun chips were committed. Third, the **AI-native commercial pivot (2023-2026)** — Baidu has spent two years rebuilding search, advertising, cloud, and devices around generative AI, accepting near-term legacy-ad cannibalisation as the cost of the transition. The latter is now the operating story: in Q1-2026 management reported that Baidu Core AI-powered Business exceeded half of Baidu General Business revenue for the first time, but only because the legacy online-marketing line contracted 22% YoY in the same quarter ([Baidu Q1-2026 Press Release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm); [Baidu 2025 Form 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
-
-**Key acquisitions and investments.**
-- **91 Wireless (2013)** — Android app-distribution channel; ~US$ 1.85 bn cash; primary mobile bet.
-- **YY Live (2020)** — Acquisition of YY's domestic live-streaming business from JOYY; expanded short-form video and live-streaming inventory.
-- **JOYO.com (2004)** — Sold to Amazon; established the precedent that Baidu would shed non-search assets and focus on internet platforms.
-- **iQIYI (2010-12 stake / 2018 NASDAQ spin)** — Founded as Qiyi.com in 2010; rebranded iQIYI in 2011; listed in March 2018; remains a controlled subsidiary.
-- **Jidu / Jiyue automaker JV (2021)** — Joint venture with Geely to build smart EVs; restructured into the JIYUE brand in 2023; positioning has shifted from automaker to robotaxi-platform partner ([Baidu 2025 Form 20-F, Item 4.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
-
-**Recent developments (2025-2026).** Headline events feeding the current thesis: ERNIE 4.5 multimodal flagship and ERNIE X1 reasoning model launched March 2025; ERNIE 4.5 Turbo and X1 Turbo April 2025; ERNIE 5.0 omni-modal in November 2025; ERNIE 5.1 in May 2026, which "ranked first among Chinese models on the [LMArena] text leaderboard" per the Q1-2026 release ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Apollo Go achieved 100% fully-driverless operations across all Chinese mainland cities of operation in February 2025 and signed strategic partnerships with Uber (initial deployment in Asia and the Middle East), Lyft (Germany and UK), and AutoGo (Abu Dhabi); cumulative public rides crossed 20 million in February 2026 and 22 million in April 2026 ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm); [Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Baidu also returned US$ 172 million to shareholders via buybacks in Q1-2026 ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-
----
+Sources: [Baidu FY2025 20-F, Item 4 Business](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm); [Baidu Q1'26 press release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm).
 
 ## 3. Management Team
 
-**Robin Yanhong Li — Co-founder, Chairman of the Board and Chief Executive Officer (age 57)**
+### Robin Yanhong Li — Co-founder, Chairman & CEO
 
-Robin Li (李彦宏) is the singular figure in Baidu's strategy and capital-allocation history. He co-founded the company in January 2000, has been chairman since inception, and has held the CEO title since February 2004; he was president from February 2000 to December 2003 ([Baidu 2025 Form 20-F, Item 6.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). Prior to founding Baidu he was a search engineer at Infoseek — one of the first US web-search companies — and a senior consultant at IDD Information Services; while at IDD he developed (and was issued) a patent for link-analysis-based ranking, technology generally regarded as a precursor to PageRank-style algorithms. He holds a bachelor's in information science from Peking University and a master's in computer science from SUNY-Buffalo ([Baidu 2025 Form 20-F, Item 6.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
+Li, 58, has led Baidu continuously since founding it in 2000 — chairman from day one, CEO since February 2004 ([Baidu FY2025 20-F, Item 6 — Robin Li](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). Born 1968 in Yangquan, Shanxi; BS in information management from Peking University (1991); MS in computer science from SUNY Buffalo (1994). Before Baidu he was a senior consultant at Dow Jones's IDD Information Services, developing **RankDex** in 1996 (predating Google's PageRank patent), and was a senior engineer at Infoseek 1997–1999 ([Baidu Robin Li profile](https://home.baidu.com/about/management/robin-li-yanhong.html)).
 
-Operationally, Li has been the architect of every major strategic pivot enumerated in Section 2 — the mobile transition, the heavy 2017-2022 AI-platform build (Apollo, ERNIE precursors, Kunlun chip program), and the 2023-2026 AI-native commercial pivot. He is also the spokesman for the dual-class governance: Class B shares carry 10 votes per share vs. Class A's 1 vote, and Li's holdings of Class B (with related-party trusts) give him controlling voting power even though he is not the largest economic owner. He sits on the board of New Oriental Education (NYSE: EDU; SEHK: 9901). Of note for governance risk: Baidu's 2025 20-F explicitly identifies "Mr. Robin Yanhong Li, our chairman, chief executive officer and principal shareholder" as the SAFE-registered domestic resident through whom certain VIE-related capital movements flow — a structural arrangement that aligns Li's personal compliance with Baidu's corporate compliance ([Baidu 2025 Form 20-F, Item 3.D / Item 7.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). His public profile inside China is substantial — he is a regular speaker at the annual Baidu World / Baidu Create conferences (Baidu Create 2026 was the venue for Famou Agent 2.0, Miaoda 3.0, and DuMate launches in Q1-2026) and has been a measured but vocal advocate of foundation-model investment in China since 2023.
+Li's 25-year tenure makes him one of the longest-serving founder-CEOs in global tech. Through his BVI holding company Handsome Reward Limited plus direct holdings and employee proxy voting, and Class B super-voting shares (10 votes/share), Li controls ~**59.9% of voting power** (economic interest ~16–18%) ([Baidu FY2025 20-F, Item 7 — Major Shareholders](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). His record is mixed: he built and defended China's search monopoly against Google but missed mobile (WeChat), e-commerce (Alibaba), and short video (Douyin), and presided over the 2016 Wei Zexi incident that triggered re-regulation of paid search promotion ([Reuters, 2016-05-09](https://www.reuters.com/article/us-baidu-china-investigation-idUSKCN0XY062/)). However, his early bets on autonomous driving (Apollo, 2013), open-source frameworks (PaddlePaddle, 2016), and pre-trained foundation models (ERNIE, 2019) now form Baidu's three core asset bases.
 
-The honest critique of the Li tenure is that under his leadership Baidu has been a *consistent generator of technology but an inconsistent monetiser*. Apollo has been technically world-class for years but only now is approaching commercial scale; ERNIE is genuinely one of two or three credible domestic foundation-model families but its monetisation is still upstream of ad cannibalisation. The Q1-2026 inflection — AI-powered revenue >50% of Baidu General Business — is the first quantitative validation since the 2023 pivot that the rebuild is paying off ([Baidu Q1-2026 Press Release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
+### Haijian He — Chief Financial Officer
 
-**Haijian He — Chief Financial Officer (age 44)**
+He became Baidu CFO in **July 2025**, succeeding Rong Luo ([Baidu FY2025 20-F, Item 6 — Haijian He](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). He combines a top-tier capital-markets background with operational China-cloud CFO experience: 2010–2015 in ECM at BofA Merrill Lynch and Citigroup Global Markets; 2015–2020 as an Executive Director in Goldman Sachs (Asia)'s TMT and M&A group; January 2020 to mid-2025 as Executive Director and CFO of **Kingsoft Cloud (NASDAQ: KC; HKEX: 3896)**, where he led Kingsoft Cloud's 2020 NYSE IPO and 2022 Hong Kong dual listing. Holds a BS/MS in electronic engineering from Southeast University, a Chicago Booth MBA, and the CFA. He also serves as chairman of iQIYI. **Analyst view:** the buy-side widely reads his appointment as front-running capital-markets action — most likely a partial carve-out or strategic round for Apollo Go and/or Kunlun/AI cloud — directly echoing his Kingsoft Cloud IPO/dual-listing experience ([Bloomberg, 2025-06-26](https://www.bloomberg.com/news/articles/2025-06-26/baidu-names-kingsoft-cloud-veteran-he-haijian-as-cfo)).
 
-Haijian He (何海建) is named in the 2025 20-F as Chief Financial Officer and is the signing officer on the Q1-2026 press release ([Baidu 2025 Form 20-F, cover page](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm); [Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). The 2025 20-F discloses an option grant of 10.934 (Class A ordinary shares basis) to Mr. He, granted on 7 August 2025 with a 7 August 2035 expiration. The 20-F also lists exercise-price ladders (US$ 158.22, US$ 175.10, US$ 186.01, US$ 87.47 per ADS) attached to options held by directors and officers; the lowest tranche at US$ 87.47 prices below today's US$ 135.22, suggesting some option vintages are now in-the-money. He's biographic record beyond the 20-F is limited in the filing (the 2025 20-F's senior-management bio section in the local text snapshot used here does not produce a multi-paragraph CFO bio comparable to Li's). Investors looking for a longer CFO track record should consult the most recent DEF 14A-equivalent (the 20-F itself acts as the proxy-equivalent for FPI filers) and Baidu's IR materials. **Disclosure note:** if the 20-F's full management section contains a longer-form biography for Mr. He, it was not extracted in our text pull; we therefore avoid stating prior employer / IPO track record details we could not verify.
+### Dou Shen — EVP, Baidu AI Cloud Group
 
-**Board of Directors and senior officers (other than CEO/CFO):**
-- **Yuanqing Yang** (age 61) — Independent director since October 2015; chairman and CEO of Lenovo Group (SEHK: 992). Adds enterprise-IT and global-go-to-market perspective relevant to AI Cloud.
-- **Jixun Foo** (age 57) — Independent director since July 2019; Senior Managing Partner at Granite Asia (formerly GGV Capital); chairs Baidu's Compensation Committee and Corporate Governance and Nominating Committee; also on the XPeng (NYSE: XPEV) board. ~20 years of venture investing in mobility and enterprise services.
-- **Sandy Ran Xu** (age 49) — Independent director since January 2024; CEO and executive director of JD.com since May 2023 (previously JD.com CFO 2020-2023); ex-audit partner. Provides direct China e-commerce / logistics perspective.
-- **Xiaodan Liu** (age 53) — Independent director appointed 20-May-2025 ([Baidu 2025 Form 20-F, Item 6.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
+Shen is Baidu's most senior operating executive after Li, overseeing **AI cloud** (Qianfan, ERNIE MaaS, infrastructure) and the **Mobile Ecosystem Group** (Baidu Search, Baidu App, Wenku, Drive). He joined from Microsoft Bing in 2012; PhD in CS from HKUST. Promoted to EVP for intelligent cloud in May 2022 (the cloud's first dedicated EVP), adding mobile ecosystem in December 2023 ([Baidu press release, 2022-05-05](https://ir.baidu.com/news-releases/news-release-details/baidu-announces-executive-promotions-and-management-changes)). The cloud's shift from low-margin "private cloud / smart-transport systems integration" (a 2024 drag) to high-margin generative-AI MaaS + GPU cloud in 2025 is widely credited to Shen — Q1'26 AI Cloud Infrastructure +79%, GPU Cloud +184% is his scorecard.
 
-A 6-K filing of 17 March 2026 announced the resignation of one of the directors named in earlier filings — investors should treat the four-independent-plus-CEO composition above as the current state per the latest 20-F ([Baidu 6-K, 2026-03-17](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109234/d63624d6k.htm)).
+### Wang Yunpeng — SVP, Intelligent Driving Group (Apollo Go)
 
-**Governance.** Dual-class capital structure: 2,197,993,760 Class A ordinary shares outstanding plus 524,020,320 Class B ordinary shares as of 31-Dec-2025, with Class B carrying 10 votes per share. Each ADS represents eight Class A ordinary shares ([Baidu 2025 Form 20-F, cover page](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). The "other individuals as a group" line item — covering all non-named-officer employees holding options — totals 96,859,136 Class A ordinary shares (~12 million ADS-equivalent), indicating broad equity participation among senior employees. Insider ownership detail is disclosed in the 20-F item on share ownership; we did not extract precise % figures for this report and so note this as a follow-up data point. Baidu maintains a three-committee structure (audit, compensation, corporate governance and nominating); all three are chaired by independent directors per Nasdaq rules. The principal related-party item is the VIE structure for the Chinese mainland operating entities (see Section 9, Risk Assessment).
+Wang heads the Intelligent Driving Group (Apollo Go robotaxi, Apollo consumer ADAS, Apollo smart transport). He took over the business in 2022; PhD in CS from Tsinghua. Under him, Apollo Go achieved fully-driverless commercial operation across 8 mainland-China cities by February 2025, with cumulative public rides **exceeding 22M** by April 2026 (Q1'26 disclosure) and overseas launches in Hong Kong, the UAE, Switzerland, the UK, and Korea ([Baidu FY2025 20-F, Item 4 — Apollo Go](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm); [Baidu Q1'26 press release — cumulative >22M rides, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). The July 2025 multi-year partnership with **Uber** (thousands of Apollo Go vehicles across Asia/Middle East) and the August 2025 **Lyft** deal (Germany/UK) are asset-light (Baidu supplies vehicles + AI stack; Uber/Lyft handle dispatch), closing the global-ride-network gap vs Waymo.
 
-**Track record synthesis.** The Li-led management team has demonstrated technical execution at world-class quality (Apollo, ERNIE, Baidu AI Cloud — all genuine market leaders inside China) but commercial follow-through has lagged for several years. The Q1-2026 print is the first quarter in which the new business mix is large enough to meaningfully move the consolidated P&L; investors evaluating this team should weight technical-execution credibility heavily and discount the historical commercialisation pace — both of which now matter for the next 8 quarters.
+### Board & governance
 
----
+As of the FY2025 20-F, Baidu's board has five members: Robin Li (executive chairman & CEO) + four independent directors — Yuanqing Yang (Lenovo CEO), Jixun Foo (Granite Asia), Sandy Ran Xu (JD.com CEO), Xiaodan Liu (FirstLight Capital, audit-committee chair) ([Baidu FY2025 20-F, Item 6 — Board of Directors](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). 4/5 independent directors exceeds NASDAQ FPI standards. **Insider ownership** is Li-dominated (59.9% voting power); the only other >5% holder is BlackRock (economic ~4.7%, voting ~1.6%) ([Baidu FY2025 20-F, Item 7 — Major Shareholders](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). Q1'26 buyback was $172M ([Baidu Q1'26 press release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
 
 ## 4. Products & Services
 
-Baidu's product surface is unusually broad for a company of its revenue size — it spans consumer apps, foundation-model APIs, full-stack public-cloud infrastructure, smart-home hardware, an L4 autonomous-driving stack, and a long-form streaming-video subsidiary. The 2025 20-F groups the offering as **Baidu Core AI-powered Business** (the three AI buckets) plus a **Mobile Ecosystem** (Baidu App, Baidu Search, Baidu Feed, Baijiahao, Baidu Wenku, Baidu Drive), **Intelligent Driving / DuerOS** (Apollo Go, DuerOS, Xiaodu), and **iQIYI** ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
+Baidu's portfolio, per the FY2025 20-F (Item 4.B) and [home.baidu.com](https://home.baidu.com/products/index.html), spans five lines plus iQIYI. The "money-flow" diagram (demand view) below maps the full monetization chain — who pays → which product lines → where the money pools.
 
-```mermaid
-graph TD
-  B[Baidu, Inc.]
-  B --> BC[Baidu General Business]
-  B --> IQ[iQIYI NASDAQ:IQ - subsidiary]
-  BC --> AI[Core AI-powered Business]
-  BC --> ME[Mobile Ecosystem - legacy + AI-native]
-  BC --> ID[Intelligent Driving / Devices]
-  AI --> CI[AI Cloud Infra - Baidu AI Cloud, Qianfan MaaS, Kunlun chips, GPU Cloud]
-  AI --> AP[AI Applications - Baidu Wenku, Baidu Drive, Miaoda, GenFlow, DuMate, Famou]
-  AI --> AM[AI-native Marketing - ERNIE-rebuilt search ads + agentic ads]
-  ME --> BA[Baidu App / Search / Feed - 655M MAU Mar-2026]
-  ME --> BJ[Baijiahao - publisher network]
-  ID --> AG[Apollo Go - L4 robotaxi - 27 cities globally]
-  ID --> XD[Xiaodu - smart displays, No.1 in China by IDC]
-  ID --> DU[DuerOS - voice assistant on Xiaodu + auto]
-  IQ --> IM[iQIYI membership]
-  IQ --> IA[iQIYI advertising + distribution]
-```
+![Baidu money-flow (demand view) FY2025 / Q1'26](charts/bidu_moneyflow.svg)
 
-### 4.1 AI Cloud Infra (the fastest-growth bucket)
-- **Baidu AI Cloud** — China's largest AI-focused public cloud per IDC. Subscription/consumption pricing; CPU-VM, GPU compute, storage, networking, plus AI-stack services (PaddlePaddle, model training, model serving). Q1-2026 revenue RMB 8.8 bn (+79% YoY). Within this, **GPU Cloud** (subscription-based AI accelerator infrastructure) grew **+184% YoY** in Q1-2026 ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). **Competitive verdict: Yes (technology + scale + ecosystem moat).** Closest competitors are Alibaba Cloud (the China public-cloud leader on overall revenue per IDC), Huawei Cloud, and Tencent Cloud. Baidu's specific edge is the integrated full-stack — its own ERNIE models + PaddlePaddle deep-learning framework + Kunlun in-house AI chips — which Alibaba and Tencent are also building but where Baidu's vertical integration is most complete domestically ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). One-line compare: ahead of Tencent Cloud in AI-specialised workloads; behind Alibaba Cloud in total cloud revenue scale; at parity / slight lead vs. Huawei Cloud in AI-native workloads on its own chips.
-- **Qianfan MaaS Platform** — Model-as-a-Service marketplace inside Baidu AI Cloud. Carries Baidu's first-party ERNIE 5.x and X1 series plus leading third-party and open-source models; agent-development toolkit (since 2025 evolution to "agent-centric platform"); data services and fine-tuning support ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). **Verdict: Partial (ecosystem advantage, but model-quality leadership is contested).** Closest competitors are Alibaba's Tongyi/PAI and Tencent's Hunyuan + TI-MaaS. Compare: at parity on agent tooling and model breadth, but ERNIE 5.1 ranking first among Chinese models on the LMArena text leaderboard (May 2026) suggests Baidu has retaken model-quality leadership domestically ([Baidu Q1-2026 Press Release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-- **Kunlun AI chips (in-house)** — Baidu's home-grown AI accelerators, deployed internally to power Baidu AI Cloud GPU Cloud capacity and reduce exposure to US-export-controlled NVIDIA inventory. The 2025 20-F describes the full-stack offering as including "internally developed chips" ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). Public benchmarks vs. NVIDIA H100/H200 are not disclosed in the filing.
+Source: [Baidu FY2025 20-F (d38065d20f.htm)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm) + [Q1'26 press release (d156481dex991.htm)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm) (Apollo Go / Kunlun metrics from 20-F Business and the Q1'26 release).
 
-### 4.2 AI Applications
-- **Baidu Wenku** (formerly the document repository) — re-platformed as an AI-native productivity tool. Together with Baidu Drive launched **GenFlow 4.0** (April 2026) for agent-driven productivity workflows ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-- **Miaoda** — Baidu's "vibe coding" platform; Miaoda 3.0 launched at Baidu Create 2026 with enterprise and mobile editions and the ability to generate stand-alone apps ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-- **DuMate** — Baidu's general-purpose agent for everyday productivity, launched March 2026; "autonomously executes complex, multi-step workflows across applications and files end-to-end" ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-- **Famou Agent 2.0** — Self-evolving agent that set a state-of-the-art record on MLE-Bench (machine-learning-engineering benchmark) ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-- Q1-2026 AI Applications revenue was RMB 2.5 bn, approximately flat YoY ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-**Verdict: Partial.** Tooling is at parity with Alibaba's equivalent stack (Tongyi Lab agents, Wenxin-equivalents) and behind global benchmarks like Anthropic Claude / OpenAI ChatGPT; the differentiator is distribution into Baidu Search and Baidu App's 655M+ MAU base.
+**Money-flow read (chokepoints).** Demand view: ① **advertisers** pay ¥67.8B (FY25 online marketing) → through search/feed → mostly to **Baidu Union traffic-acquisition cost (TAC)** (Baidu's AdSense) and search compute; ② **cloud enterprises** pay AI-cloud fees → through Qianfan MaaS + GPU cloud → to the **compute pool** (in-house Kunlun P800 + externally-bought GPUs under export controls) and **AI capex**; ③ **riders + subscribers** (Apollo Go riders + iQIYI members) → to **content licensing** (iQIYI COGS ¥21.5B) and compute. Two chokepoints: **compute** (in-house Kunlun is the key substitute under export controls and the source of Kunlun IPO value) and **AI capex** (FY25 ¥12.1B, Q1'26 core capex ¥5.8B — now a cash-flow pressure source).
 
-### 4.3 AI-native Marketing Services
-- **AI-rebuilt search and advertising stack** — Baidu has rebuilt its core search-results page around generative-AI direct answers, agentic ads, and conversational interfaces. Q1-2026 AI-native marketing revenue was RMB 2.3 bn (+36% YoY) — the only line in legacy-marketing's vicinity growing strongly ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-- Legacy Online Marketing Services (the rest of Baidu's search ad book) — Q1-2026 revenue RMB 12.6 bn, **down 22% YoY**, with management explicitly attributing the decline to "ongoing AI transformation, which impacted the monetization approach" plus weak macro and softness in healthcare, real estate, home-furnishing advertiser categories ([Baidu 2025 Form 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm); [Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). **Verdict for AI-native marketing: Yes (distribution moat).** Closest competitor is Tencent's AI-rebuilt WeChat search-and-recommendation ad system. One-line compare: at parity on quality, ahead on direct search-intent volume.
+**A. Mobile ecosystem / "search + feed"** (legacy ad core, structural decline)
+- **Baidu App** — flagship "search + feed" app with ERNIE generative answers; 679M MAU in December 2025 ([Baidu FY2025 20-F, Item 4 — Baidu App MAU](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). *Moat: yes — default-search channel moat post-Google + Chinese-web index data moat.*
+- **ERNIE Bot / ERNIE 5.x** — conversational AI assistant, free since April 2025; ERNIE 5.1 (2026-05) ranked #1 among Chinese models on LMArena's text leaderboard ([Baidu Q1'26 press release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). *Moat: partial — first-mover, but ByteDance Doubao surpassed it on consumer MAU and DeepSeek leads developer mindshare.*
+- **Haokan, Tieba, Zhidao, Baike, Maps, Translate, Input Method** — vertical/utility long tail.
+- **Wenku + Drive** — merged into the Personal Super Intelligence Business Group (PSIG) in 2025; launched the GenFlow multi-agent platform in August 2025 ([Baidu FY2025 20-F, Item 4 — PSIG/GenFlow](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)).
 
-### 4.4 Intelligent Driving — Apollo Go
-- **Apollo Go (Luobokuaipao app)** — Robotaxi service; L4 fully-driverless in all Chinese mainland operating cities since February 2025. Eight named Chinese cities (Beijing, Shanghai, Shenzhen, Wuhan, Chengdu, Chongqing, Haikou, Sanya) plus international footprint of 26-27 cities (Abu Dhabi with AutoGo, Dubai, Seoul, and announced testing in Switzerland and London via Uber/Lyft) ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm); [Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-- **Operating metrics.** Cumulative public rides crossed 20 million in Feb-2026 and 22 million in Apr-2026; Q1-2026 fully-driverless rides 3.2 million (+120% YoY); weekly peak rides above 350,000 in March 2026; fleet has accumulated >330 million autonomous kilometres of which >220 million are fully driverless ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-- **Partnerships.** Uber (Asia + Middle East), Lyft (Germany + UK), AutoGo (Abu Dhabi); China Geely JV for hardware (JIYUE).
-- **Verdict: Yes (data + regulatory + scale moat).** Fast Company's 2026 Most Innovative Companies list ranked Baidu second globally in Automotive, recognising Apollo Go alongside Waymo "as one of the world's leading robotaxi services" ([Fast Company 2026 list, as cited in Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Closest peer is Alphabet/Waymo. One-line compare: at parity (and arguably ahead on cumulative-rides scale and city count); behind on US/EU geographic exposure but rapidly internationalising via Uber and Lyft asset-light models.
+**B. AI cloud** (the only high-growth line in Baidu General Business)
+- **Qianfan MaaS platform** — the AI-cloud core, offering ERNIE model APIs + third-party open models (DeepSeek/Llama/Qwen), fine-tuning toolchains, agent orchestration ([Baidu FY2025 20-F, Item 4 — Qianfan](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). Q1'26 AI Cloud Infrastructure ¥8.8B (+79% YoY), GPU Cloud +184% YoY ([Baidu Q1'26 press release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). *Moat: yes — ERNIE + Kunlun integration + largest Chinese model-agent ecosystem outside Alibaba.*
+- **ERNIE foundation models (open 4.5 series + closed 5.x)** — 4.5/X1 (2025-03), 4.5/X1 Turbo (2025-04), 5.0 omni-modal (2025-11), ERNIE 5.1 (2026-05). *Moat: partial — open-sourcing dilutes the moat, but closed high-end + inference-cost advantage still matter.*
+- **Kunlun AI accelerator** — Baidu's in-house AI inference/training chip, used for ERNIE inference internally and offered to enterprises as a GPU-substitute stack (especially critical under export controls). The 3rd-gen **P800** (FP16 345 TFLOPS, 96GB GDDR6) is benchmarked against NVIDIA (*Analyst view:* [Citi — Unpacking Baidu AI Cloud Potential Beyond Kunlunxin, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/214528184155881/CITI-Baidu.com%20%EF%BC%88BIDU.US%EF%BC%89%20Unpacking%20Baidu%20AI%20Cloud%20Potential%20Beyond%20KunlunXin-260611.pdf)); Kunlunxin is reportedly heading to a carve-out IPO. *Moat: yes domestically — vertically integrated with ERNIE, supports the GPU-substitute logic under export controls. Competitors: Huawei Ascend 910B/910C, Cambricon.*
+- **PaddlePaddle** — China's most-used homegrown deep-learning framework, the developer-ecosystem base.
 
-### 4.5 Xiaodu / DuerOS
-- **Xiaodu** smart-display devices — ranked **No. 1 in China by smart-display shipments for 1H-9M 2025 per IDC** ([Baidu 2025 Form 20-F, Item 4.B citing IDC](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
-- **DuerOS** — Conversational voice operating system that powers Xiaodu devices, in-car infotainment partnerships, and third-party smart-home devices.
-- **Verdict: Yes for Xiaodu (#1 market position), Partial for DuerOS (faces stronger third-party operating systems on cars).**
+**R&D investment trend (bespoke chart).** Baidu's R&D fell from ¥24.9B (FY21) to **¥20.4B (FY25, ~15.8% of revenue)** — the absolute decline reflects the post-2024 "opex discipline + monetize the AI capex cycle" pivot (~18,600 R&D staff), but 15%+ R&D intensity still far exceeds most China-internet peers and is the spending-side support for the full-stack AI story ([Baidu FY2025 20-F, Statements of Comprehensive Income — R&D](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)).
 
-### 4.6 iQIYI (NASDAQ: IQ; controlled subsidiary)
-- Long-form video streaming; "Netflix of China" positioning. Revenue RMB 27.3 bn in FY2025 (-7% YoY) on weaker membership and lighter content slate ([Baidu 2025 Form 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
-- **Verdict: Partial.** Strong domestic IP and original content, but intense competition with Tencent Video, Youku (Alibaba), and Bilibili, plus mini-drama / short-video pressure from Douyin and Kuaishou. iQIYI's prospectus-level disclosures and own 20-F (Form 20-F filer under IQ ticker) provide deeper detail.
+![Baidu R&D investment FY2021-FY2025](charts/bidu_rd_trend.png)
 
-### 4.7 Flagship vs. long-tail (revenue mix)
-For FY2025, **Online marketing services were RMB 67.8 bn (-14% YoY) — ~52.5% of consolidated revenue**; "Others" (cloud services + iQIYI membership + Xiaodu + Apollo Go) was RMB 61.2 bn (+12% YoY) — ~47.5% ([Baidu 2025 Form 20-F, Item 5.A and Note 2/25 revenue disaggregation](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). The mix shift from advertising to cloud-plus-AI is the singular story for the next four quarters: in Q1-2026, "Others" within Baidu General Business reached RMB 13.4 bn (+42% YoY, 52% of Baidu General Business) and Online Marketing fell to RMB 12.6 bn (48%). This is the first quarter in Baidu's history in which advertising is *not* the largest single revenue line.
+Source: [Baidu FY2025 20-F, Consolidated Statements of Comprehensive Income (R&D line; d38065d20f.htm)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm) + prior 20-F filings.
 
-![Segment mix](charts/bidu_segment_mix.png)
-*Source: [Baidu 2025 Form 20-F, Item 5.A segment revenue table](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm).*
+**C. Intelligent driving & other growth** — the headline "robot brain" optionality.
+- **Apollo Go** — autonomous ride-hailing. As of April 2026 (Q1'26 disclosure): 26 cities globally, cumulative public rides **>22M**, triple-digit growth in fully-driverless rides in Q1'26 ([Baidu Q1'26 press release — Apollo Go, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)); fully-driverless across 8 mainland cities; overseas in Hong Kong, Abu Dhabi, Dubai, Switzerland, London (Uber/Lyft), Seoul. Named #2 globally in Automotive on Fast Company's 2026 Most Innovative Companies list, alongside Waymo as a leading robotaxi service ([Baidu Q1'26 press release — Fast Company, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). The 6th-gen **RT6** reportedly has a BOM under RMB 200k (~$28,000), far below Waymo's >$100,000 ([Reuters, 2024-05-15](https://www.reuters.com/technology/baidu-launches-sixth-generation-driverless-robotaxi-2024-05-15/)). *Moat: yes — regulatory first-mover + 22M-ride data + HD-map capability + lowest global per-vehicle cost. Competitors: Pony.ai (PONY), WeRide (WRD), Waymo (US).*
+- **Apollo ASD** — consumer L2++/L4 ADAS software stack, licensed to OEMs. *Closest competitor: Huawei ADS 4.0.*
+- **DuerOS / Xiaodu smart devices** — voice-assistant OS + Xiaodu speakers/displays/learning tablets ([Baidu FY2025 20-F, Item 4 — DuerOS/Xiaodu](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)).
+- **Robotics / embodied-AI partnerships** — Baidu positions itself as the upstream "AI brain" for humanoid OEMs (not a body maker), with ERNIE integrated into UBTech's Walker-S ([UBTech press release, 2024-11-14](https://www.ubtrobot.com/en/about/news/details?id=193); [Caixin Global, 2025-11-13](https://www.caixinglobal.com/2025-11-13/baidu-unveils-ernie-50-omni-modal-model-and-deepens-humanoid-robotics-bets-102351772.html)). Omni-modal ERNIE 5.0 is positioned as a vision-language-action foundation model for embodied AI.
 
-![Q1 2026 AI-powered Business mix](charts/bidu_q1_2026_ai_mix.png)
-*Source: [Baidu Q1-2026 Press Release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm).*
+**D. iQIYI (NASDAQ: IQ, controlled subsidiary)**
+- **iQIYI streaming** — long-video subscription + ad-supported model; FY2025 segment revenue ¥27,290M (−7% YoY) ([Baidu FY2025 20-F, Segment Reporting — iQIYI](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)); Q1'26 ¥6.2B (−8% QoQ).
 
-### 4.8 Roadmap / launches in the last 12 months
-- ERNIE 4.5 + X1 (Mar-2025), 4.5 Turbo + X1 Turbo (Apr-2025), ERNIE 5.0 (Nov-2025), ERNIE 5.0 updated (Jan-2026), ERNIE 5.1 (May-2026).
-- DuMate (Mar-2026), Miaoda 3.0 (Q1-2026 at Baidu Create), Famou Agent 2.0 (Q1-2026), GenFlow 4.0 (Apr-2026).
-- Apollo Go international launches in Abu Dhabi (AutoGo), Dubai, Seoul; Uber + Lyft + AutoGo partnerships consummated in 2025.
+**Flagships and tail.** The three flagships driving the equity narrative: (1) **AI cloud / Qianfan + Kunlun + ERNIE** (the only accelerating line + Kunlun IPO option); (2) **Apollo Go robotaxi** (clearest growth optionality + overseas option); (3) **Baidu Search + Baidu App + ERNIE Bot** (the revenue base, in transition). The long tail — Wenku/Drive/PSIG, Xiaodu, utility apps, iQIYI — contributes meaningful revenue but limited premium.
 
----
+**Further viewing:**
+- [Apollo Go official overview — understanding robotaxi operations](https://www.apollo.auto/apollo-go)
+- [Baidu AI Cloud Qianfan platform overview — the MaaS + GPU-cloud product stack](https://cloud.baidu.com/product/wenxinworkshop.html)
 
 ## 5. Customers & Go-to-Market
 
-**Customer mix.** Baidu's customer profile is bifurcated. The legacy online-marketing customer base is **millions of long-tail Chinese advertisers** — SMEs across healthcare, real estate, home-furnishing, education, e-commerce, financial services, automotive — plus a smaller tail of large brand advertisers buying display, video, and feed inventory ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). The AI Cloud and AI Applications customer base, by contrast, is **enterprise**: state-owned enterprises, large internet companies, financial institutions, manufacturers, telcos, and government agencies in China; plus a growing list of consumer Apollo Go riders in robotaxi cities and B2B mobility partners (Uber, Lyft, AutoGo) internationally.
+**Online marketing** customers are highly **fragmented** — millions of Chinese SMEs and large enterprises bidding on keywords via the P4P auction, plus third-party agencies. Baidu explicitly identifies third-party agencies (not end advertisers) as its booked customers ([Baidu FY2025 20-F, Item 5 — Online Marketing Customers](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). Contracts have no fixed term. The vertical mix historically skews to healthcare, real estate, home, and e-commerce, with healthcare materially constrained since the 2016 Wei Zexi incident.
 
-**Customer concentration (per 20-F).** Baidu does not disclose a top-1 or top-5 customer percentage in its 2025 20-F. The 20-F's Note 25 on revenue disaggregation states that "no customer accounted for 10% or more of total revenue" — i.e. the customer base is highly fragmented and Baidu does not have any single advertiser or cloud customer of disclosure-mandating scale ([Baidu 2025 Form 20-F, Item 5.A and Notes to Consolidated Financial Statements](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). This is consistent with the long-tail-SME nature of search advertising and the still-early commercialisation of enterprise cloud at Baidu. **Concentration risk is therefore low**, in contrast to peers in chips or autos where 10-30% customers are common — though the corollary is that Baidu lacks anchor enterprise contracts of the scale Alibaba Cloud has with state-owned customers. We do not flag this as a Section 9 risk.
+**AI cloud** customers are diverse: SOE/ministry smart-government and smart-transport projects (historically the bulk of cloud revenue but lowest-margin); large internet and unicorn generative-AI calls on Qianfan APIs; banks/insurers (ERNIE customer-service + underwriting); SME long-tail self-service APIs. Named customers include **Geely, China Mobile, UnionPay, ICBC, Bank of China, Ping An, Shanghai Pudong Development Bank, China Southern Power Grid, China Eastern Airlines, Postal Savings Bank, Yum China, Honor, Samsung China, Lenovo** ([Baidu AI cloud customer cases](https://cloud.baidu.com/customer-cases/)). **Analyst view:** Citi notes AI-cloud growth is broadening from model training to large-scale inference deployment, and Baidu is winning new customers in traditionally non-AI verticals (e.g. retail) on the strength of its full-stack capability ([Citi — Strong AI Cloud Infra, 2026-05-18](http://xs-macbook-air.local:5001/zsxq/pdf/415242554258288/CITI-Baidu.com%20%EF%BC%88BIDU.US%EF%BC%89%20Strong%20AI%20Cloud%20Infra%20Revs%20Driven%20by%20MaaS%20and%20GPU%20Revs-260518.pdf)).
 
-```mermaid
-pie title FY2025 revenue mix by reporting line (RMB bn, consolidated; "Others" mostly cloud + iQIYI membership + smart devices + Apollo Go)
-    "Online marketing services 67.8" : 67.8
-    "Others 61.2" : 61.2
-```
-*Source: [Baidu 2025 Form 20-F, Item 5.A revenue disaggregation table](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm).*
+**Apollo Go** customers are B2C (ride-hailing passengers) domestically, shifting to B2B platform partners overseas — **Uber** (July 2025 multi-year strategic partnership) and **Lyft** (August 2025, Germany/UK) ([Baidu FY2025 20-F, Item 4 — Apollo Go Partnerships](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). Strategic infrastructure partners include Switzerland's PostBus and Abu Dhabi's AutoGo.
 
-**Distribution channels & sales motion.**
-- **Online marketing services** — Direct (key-account sales reps for large brands and high-spend SMEs) + agency channels (advertising agencies operate the bulk of long-tail SME relationships) + self-service auctions (real-time bidding on Baidu's search ad platform). Sales cycle is short (transactional, auction-priced).
-- **Baidu AI Cloud / Qianfan** — Direct enterprise sales for large accounts plus partner channels (system integrators, ISVs). Subscription and consumption pricing. Sales cycles are months, not days, for state-owned enterprise and government anchor deals.
-- **Apollo Go** — Direct B2C in robotaxi cities (Luobokuaipao app, free download); B2B platform partnerships (Uber, Lyft, AutoGo); asset-light international model where Baidu provides the autonomous-vehicle technology stack and local partners provide fleet operations.
-- **Xiaodu** — Direct e-commerce (JD.com, Tmall, Baidu's own channel) plus offline retail.
-- **iQIYI** — Direct consumer subscription (membership), brand and performance advertising sales, content licensing distribution.
+**iQIYI** subscribers are consumer; advertisers are spread across consumer brands.
 
-**Key partnerships.**
-- **Uber Technologies** (announced 2025) — deploy "thousands of Apollo Go's fully autonomous vehicles" on Uber across Asia and Middle East ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
-- **Lyft, Inc.** (Aug-2025) — Apollo Go on Lyft across "key European markets" starting Germany and UK ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
-- **AutoGo (Abu Dhabi)** — Apollo Go's official launch of fully-autonomous ride-hailing in Abu Dhabi ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
-- **Geely / JIYUE** — Vehicle manufacturing partnership for the L4 robotaxi platform.
-- Foundation-model **third-party hosting on Qianfan** — multiple Chinese AI labs and open-source providers distribute via Qianfan.
+**Customer concentration — quantified.** Baidu's FY2025 20-F discloses "no single customer accounted for more than 10% of revenue in any year presented" ([Baidu FY2025 20-F, Note — Concentration of Credit Risk](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). By segment: online marketing is structurally fragmented; AI cloud has named anchor customers but no single one reaches 10%; Apollo Go is below the materiality threshold on a consolidated basis. **So there is no Top-1/Top-5 customer-concentration risk.** The real structural risk is **vertical-industry concentration**: online marketing is cyclically sensitive to real-estate, healthcare, and consumer advertisers.
 
-**Customer case studies / named wins.** Baidu AI Cloud's customer logos are not extensively named in the 20-F but historical Baidu IR materials reference deployments at China Mobile, China Telecom, China National Petroleum Corporation, major commercial banks, and a number of municipal smart-city projects. We refrain from quoting named-customer revenue contributions because such figures are not disclosed in the 20-F.
-
----
+**Channels & sales.** Multi-layer go-to-market: (a) **Baidu Union** third-party sites/apps (Baidu's AdSense; TAC is a top-three cost of revenue); (b) a direct sales team for large advertisers/cloud/auto; (c) an SME agency network; (d) the Qianfan self-service API; (e) Apollo Go's own app + overseas Uber/Lyft platforms.
 
 ## 6. Industry Overview
 
-Baidu operates in five overlapping industries: (1) China internet search and digital advertising, (2) China public cloud, particularly the AI-public-cloud sub-segment, (3) generative-AI foundation models and platforms, (4) autonomous-driving / robotaxi services globally, and (5) China long-form streaming video (via iQIYI). Each has distinct structural dynamics.
+Baidu sits at the intersection of four large, fast-moving industries — weighting them correctly is the crux of the equity narrative.
 
-**(1) China internet search and digital advertising.** The Chinese digital-advertising market is the world's second-largest after the United States. Industry growth has decelerated sharply from the 15-25% YoY rates of 2018-2021 to mid-single-digits today, reflecting (a) a maturing Chinese internet user base of ~1.08 billion users (per CNNIC), (b) macro weakness affecting key advertiser verticals (real estate, education, online tutoring after 2021's regulatory tightening), and (c) a market-share shift from search-and-feed platforms (Baidu, ByteDance) toward short-video and e-commerce platforms (Douyin, Kuaishou, Taobao Live). Baidu's online marketing revenue specifically declined ~14% in 2025 and another 22% YoY in Q1-2026, primarily because Baidu is voluntarily cannibalising legacy keyword-auction monetisation as it rebuilds the search experience around generative-AI direct answers ([Baidu 2025 Form 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). The structural question for the search-ad industry is whether AI-native advertising (sponsored agents, conversational ads, native product placement inside generative answers) can recover the unit economics of keyword search — at Baidu it appears to be growing (+36% YoY for AI-native marketing in Q1-2026) but is not yet large enough to backfill the legacy decline.
+**(1) China digital advertising / online marketing.** The 2024 China digital-ad market was ~**RMB 1.3 trillion (~$180B)**, growing ~8–10% ([iResearch 2025 China Internet Advertising Report](https://www.iresearch.com.cn/Detail/report?id=4399&isfree=0)). Baidu's share has declined for over a decade — ~30% in 2014 to under 10% by 2024, with share going to ByteDance (Douyin/Toutiao, >30%), Alibaba (~20%), Tencent (~12–15%), and Kuaishou (~8%) ([QuestMobile 2024 Annual China Mobile Internet Report](https://www.questmobile.com.cn/research/report/170)). The structural pressure is the shift from intent-based search ads to interest-based feed/short-video ads — steeper in China because mobile traffic is more concentrated in app silos.
 
-**(2) China public cloud and AI public cloud.** The China public-cloud market is estimated by industry trackers at roughly RMB 600-700 bn in annual revenue with mid-teens YoY growth, dominated by Alibaba Cloud, Tencent Cloud, Huawei Cloud, and Baidu AI Cloud (with smaller share for China Telecom Cloud and others). Within this, the **AI-public-cloud sub-segment** — AI training and inference workloads, foundation-model hosting, MaaS — is the fastest-growing slice, conservatively a >50% YoY growth rate based on Baidu's own +79% Cloud Infra and +184% GPU Cloud growth in Q1-2026 ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Baidu has been named the **No. 1 AI cloud provider in China for the sixth consecutive year by IDC** ([IDC China AI Public Cloud Market 2024 report, July 2025, as cited in Baidu 2025 20-F](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)) — note that this is the *AI-cloud sub-segment*, not overall public cloud, where Alibaba Cloud is the leader. Industry-specific dynamics include: (a) US export controls on advanced AI chips (NVIDIA A100/A800/H100/H200, AMD MI300) forcing domestic substitution toward Huawei Ascend, Cambricon, and in-house chips like Baidu Kunlun; (b) rising enterprise willingness to pay for AI inference; and (c) intensifying price competition on training compute as multiple providers race for hyperscale supply.
+**(2) Generative-AI compute, models, and applications.** IDC estimates China's generative-AI market at **~$35B in 2025, ~$200B by 2030** (~40% CAGR), with the model layer (API/MaaS) at 15–20% and the application+agent layer growing faster ([IDC China Generative AI Forecast, 2025](https://www.idc.com/getdoc.jsp?containerId=prCHE52823025)). Inference compute is the biggest spend line. Excess profits are contested across chips (NVIDIA/Huawei Ascend/Kunlun), hyperscalers (Alibaba Cloud/Volcano/Huawei Cloud/Baidu Cloud), model labs (DeepSeek/Kimi/Zhipu), and the application layer. Baidu is distinctive in covering all four layers; the cost is execution focus.
 
-**(3) Generative AI / foundation models.** A two-tier global structure has emerged: a US tier dominated by OpenAI, Anthropic, Google DeepMind / Gemini, and Meta (LLaMA) on frontier capability; and a Chinese tier with Baidu (ERNIE), Alibaba (Tongyi Qianwen / Qwen), Tencent (Hunyuan), Moonshot AI (Kimi), Zhipu (GLM), ByteDance (Doubao), and DeepSeek as the principal closed and open contenders. Chinese frontier models are typically one product cycle behind their US peers on certain benchmarks but have closed substantially on language tasks and are at parity or ahead on Chinese-language tasks; ERNIE 5.1 ranked first among Chinese models on the LMArena text leaderboard in May 2026 ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Industry structure is **arms-race oligopolistic**: model R&D requires multi-billion-dollar compute budgets, but distribution via cloud-MaaS and consumer-app channels favours incumbents with users and infrastructure. Profitability is negative-to-thin across the industry today; commercial models include API pricing per million tokens, agent/usage pricing, and embedded-in-product subscriptions.
+**(3) Robotaxi / mobility-as-a-service.** McKinsey estimates a 2030 broad MaaS revenue opportunity of **$100–400B, exceeding $1 trillion by 2040** ([McKinsey Center for Future Mobility](https://www.mckinsey.com/industries/automotive-and-assembly/our-insights)). Only two operators are scaled today: **Waymo** and **Apollo Go** (cumulative >22M rides). Pony.ai, WeRide, AutoX (China) and Zoox/Tesla (US) are followers. Global penetration is under 0.1% — the runway is nearly the entire market.
 
-**(4) Autonomous driving / robotaxi.** Globally a duopoly is forming between Waymo (Alphabet) and Apollo Go (Baidu), with several second-tier players (Pony.ai, WeRide, AutoX in China; Cruise, Zoox, Wayve in the West) at smaller scale. Chinese regulatory environment has been comparatively *enabling* — multiple municipal authorities have granted full-driverless commercial permits (Wuhan was first, then Beijing, Chongqing, Shenzhen, Shanghai, Hainan, Xiong'an among others) since 2022-2025. Apollo Go's domestic scale (8 named cities with 100% fully-driverless ops and 3.2 million Q1-2026 fully-driverless rides) is now roughly comparable to or exceeds Waymo's US scale (Waymo disclosed ~30 million cumulative rides through 2025 per its public communications; Apollo Go disclosed >22 million cumulative public rides as of April 2026). Unit economics are not yet positive at scale for either player but improving rapidly as vehicle cost per kilometre falls (Apollo's RT6 robotaxi list price is ~RMB 200k, materially below earlier generations) and as supervision overhead shrinks under fully-driverless operation.
+**(4) Long-form online video.** iQIYI's market is saturated (Tencent Video, Youku, Mango TV) and structurally eroded by short video / micro-dramas; ~RMB 200B in 2024 ([iResearch 2024 China Online Video Report](https://www.iresearch.com.cn/Detail/report?id=4350&isfree=0)). It is the lowest-growth, lowest-multiple business in Baidu's portfolio.
 
-**(5) China long-form streaming video.** A four-way race between iQIYI, Tencent Video, Youku (Alibaba), and Bilibili, with mounting pressure from Douyin (ByteDance) and Kuaishou on the short-form side. The industry has shifted from subscriber-growth land-grab (2017-2021) to ARPU- and content-cost-discipline. iQIYI's FY2025 revenue decline of 7% is consistent with industry contraction.
-
-**Regulatory environment (cross-cutting).**
-- **China VIE structure** — Baidu's mainland China operations (internet content, value-added telecom, online marketing) are conducted by Variable Interest Entities owned by PRC nationals (Robin Li and a small group of insiders), with contractual control retained by Baidu's Cayman parent. The 2025 20-F devotes substantial space (Items 3.D / 7.A) to the well-documented enforceability and tax risks of this structure ([Baidu 2025 Form 20-F](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
-- **HFCAA / PCAOB auditor inspection** — Resolved as of late 2022; Baidu's auditor is currently PCAOB-inspectable.
-- **Data security, cybersecurity, AI content regulation in China** — Algorithm registration, generative-AI registration with the CAC, real-name registration, content filtering. Baidu has registered ERNIE under the CAC framework.
-- **US export controls** — Limit access to top-bin NVIDIA / AMD AI accelerators; drive Baidu to substitute domestic chips (Kunlun, Huawei Ascend).
-- **Autonomous-vehicle permitting** — Granular city-by-city in China; comparable in the US (state-by-state). UAE, Singapore, UK have all begun to publish frameworks.
-
----
+**Regulatory environment.** China generative AI is governed by the **Interim Measures for the Management of Generative AI Services** (in force since 2023-08-15), requiring security assessment and algorithm filing before public launch ([Cyberspace Administration of China — Interim Measures, 2023-07-13](http://www.cac.gov.cn/2023-07/13/c_1690898327029107.htm)). Autonomous driving uses a city-by-city licensing regime ([Baidu FY2025 20-F, Item 4 — Apollo Go Licenses](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). Data security is governed by the Cybersecurity Law, Data Security Law, PIPL, and the Network Data Security Management Regulations (effective 2025-01).
 
 ## 7. Competitive Landscape
 
-```mermaid
-quadrantChart
-    title China internet / AI competitive positioning — scale vs AI-stack depth
-    x-axis "Lower platform scale" --> "Higher platform scale"
-    y-axis "Lower in-house AI stack" --> "Higher in-house AI stack"
-    quadrant-1 "AI Leaders"
-    quadrant-2 "Scaled but less AI-native"
-    quadrant-3 "Niche / Emerging"
-    quadrant-4 "AI-native, scaling"
-    "Baidu": [0.55, 0.92]
-    "Alibaba": [0.85, 0.82]
-    "Tencent": [0.90, 0.65]
-    "ByteDance": [0.88, 0.78]
-    "JD.com": [0.62, 0.32]
-    "PDD": [0.75, 0.20]
-    "Huawei": [0.70, 0.85]
-    "Waymo": [0.40, 0.95]
-    "DeepSeek": [0.25, 0.80]
-```
+Baidu's FY2025 20-F names its competitors: "internet companies, online-marketing platforms in China, other search engines, players in generative AI and foundation models, cloud-service providers, and robotaxi providers" ([Baidu FY2025 20-F, Item 3 — Competition](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)).
 
-**Direct competitors.**
+**Search + feed advertising:** ByteDance (Doubao/Toutiao/Douyin Search, the biggest threat), Tencent (WeChat Search/Sogou), Alibaba (Quark), Microsoft Bing. Douyin Search has taken query share from Baidu since 2022 ([TechNode, 2024-05](https://technode.com/2024/05/16/douyin-claims-700-million-daily-active-users/)).
 
-- **Alibaba Group (NYSE: BABA; HKEX: 9988)** — China's largest public cloud (Alibaba Cloud > 30% domestic share by IDC). Foundation models: Tongyi Qianwen / Qwen. Direct AI Cloud competitor; ahead of Baidu on total cloud revenue but Baidu retains AI-cloud sub-segment leadership per IDC. Trades at TTM P/E 20.8x, P/S 0.32x ([Yahoo Finance, accessed 2026-05-20](https://finance.yahoo.com/quote/BABA/)).
-- **Tencent Holdings (HKEX: 700; OTC: TCEHY)** — WeChat ecosystem; Hunyuan foundation model; Tencent Cloud; long-form Tencent Video competing with iQIYI. Strongest distribution moat in China; AI-stack depth more partner-led than first-party. TTM P/E 16.5x, P/S 0.69x.
-- **ByteDance (private)** — Douyin (Chinese TikTok); the largest single threat to Baidu's advertising and search share. Doubao foundation model and Volcano Engine cloud are direct competitors. No public valuation but secondary-market trades implied a >US$ 300 bn valuation in 2024.
-- **Huawei Technologies (private)** — Huawei Cloud and Pangu foundation model; Ascend AI chips. The strongest *vertical-integrated* competitor inside China, particularly for government / state-owned enterprise workloads.
-- **Alphabet / Waymo (NASDAQ: GOOGL)** — Global Apollo Go peer in robotaxi; also a competitor in search advertising indirectly (Google retains Chinese-language search outside the firewall). TTM P/E 29.7x, P/S 11.2x.
-- **iQIYI's competitors** — Tencent Video, Youku (Alibaba), Bilibili (NASDAQ: BILI).
+**Generative AI / foundation models:** Alibaba Cloud (Qwen/Bailian, the strongest "cloud + model" dual threat), ByteDance Volcano Engine (Doubao, aggressive pricing), **DeepSeek** (open-source disruptor that triggered industry-wide token price cuts in early 2025, [Reuters, 2025-01-27](https://www.reuters.com/technology/artificial-intelligence/what-is-deepseek-why-is-it-disrupting-ai-sector-2025-01-27/)), Moonshot Kimi/Zhipu/MiniMax (the "six tigers"), Tencent Hunyuan, and **Huawei Pangu + Ascend** (the most direct full-stack competitor, strong SOE reach).
 
-**Indirect competitors.**
-- **JD.com (NASDAQ: JD)** — Independent director Sandy Ran Xu's other employer; JD Cloud and JD's AI services compete with Baidu in enterprise but smaller scale.
-- **PDD Holdings (NASDAQ: PDD)** — Largely an e-commerce/Temu story but competes for advertiser wallet share.
-- **Moonshot AI / Zhipu / Minimax / DeepSeek** — Domestic foundation-model challengers; smaller than Baidu but technically credible.
-- **OpenAI / Anthropic** — Globally dominant frontier models but cannot operate in mainland China.
+**AI cloud / IaaS:** Alibaba Cloud (~38% of China public cloud), Huawei Cloud (~18%), Tencent Cloud (~15%), Baidu AI Cloud (~7–8%), per Canalys 2024 ([Canalys China Cloud Channels Analysis, 2024-Q4](https://www.canalys.com/insights/china-cloud-channels-analysis-q4-2024)).
 
-![Peer valuation snapshot](charts/bidu_peer_valuation.png)
-*Source: [Yahoo Finance — multiple ticker pages, accessed 2026-05-20](https://finance.yahoo.com/quote/BIDU/key-statistics).*
+**Robotaxi / autonomous driving:** Waymo (global tech leader, US-only), Pony.ai (PONY), WeRide (WRD), AutoX, Tesla (Cybercab), Zoox (Amazon); Cruise (GM) shut down in 2024.
 
-**Baidu's competitive advantages.**
-1. **Full AI stack (rare in China).** Chips (Kunlun) + framework (PaddlePaddle) + foundation models (ERNIE 5.1) + cloud + applications. Alibaba and Huawei have similar breadth; Tencent and ByteDance do not control all four layers. ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
-2. **Robotaxi scale and regulatory firsts.** First commercial driverless permit in Wuhan; 8 fully-driverless Chinese cities; only Chinese company at Waymo-comparable rides scale; global partnerships with Uber and Lyft give asset-light international optionality ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-3. **Search-and-feed distribution.** 655 million MAU on Baidu App (March 2026) provides a built-in consumer channel for AI applications — DuMate, Wenku, Drive, Famou — that pure-play AI labs lack ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)).
-4. **AI-Cloud sub-segment leadership.** IDC #1 for six consecutive years ([Baidu 2025 Form 20-F](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
-5. **Xiaodu #1 smart-display share** — Channel for embedded DuerOS / ERNIE voice agent ([Baidu 2025 Form 20-F](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
+**Positioning framework.** (i) **Price** — after DeepSeek/Volcano-driven cuts, Baidu's Qianfan token pricing is at parity. (ii) **Capability** — ERNIE 5.x is at parity with Qwen 3, slightly behind DeepSeek-R1 on math/code reasoning, ahead on multimodal. (iii) **Scale** — cloud installed base and consumer-AI DAU trail Alibaba/ByteDance, but robotaxi operating scale leads all Chinese peers.
 
-**Vulnerabilities.**
-1. **Total public-cloud scale gap to Alibaba.** Alibaba's overall cloud revenue is multiple times Baidu's; Baidu's AI-specialised positioning is real but capped by sub-segment size.
-2. **Advertising share loss to Douyin / WeChat.** Baidu's share of China digital ad spending has trended down for a decade; AI-native rebuild may stabilise or recover share but is not yet proven.
-3. **Concentration in mainland China.** Apollo Go international footprint is the principal diversifier; everything else is mainland-revenue.
-4. **R&D intensity will compress margins for years.** R&D was 15.8% of FY2025 revenue (RMB 20.4 bn) — manageable, but operating-margin trough may persist while the AI buildout absorbs cash ([Baidu 2025 Form 20-F](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
-5. **VIE structure / China-ADR overhang.** Discount applied to all China ADRs is partly outside Baidu's control.
+**Competitive advantages:** (a) **full-stack vertical integration** (chips Kunlun → framework PaddlePaddle → models ERNIE → cloud Qianfan → apps), unique in China (only Huawei is comparable); (b) **China robotaxi regulatory & operational first-mover** (first fully-driverless licenses, 22M-ride record, Uber/Lyft overseas); (c) **lowest global robotaxi per-vehicle cost** (RT6 BOM < $28,000); (d) **largest Chinese-web search index + the capital strength of $21.7B net cash**.
 
-![R&D investment](charts/bidu_rd_trend.png)
-*Source: [Baidu 2025 Form 20-F, Selected Consolidated Financial Data table](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm).*
-
----
+**Competitive weaknesses:** (a) **structural decline in search-ad monetization** (no obvious reversal catalyst); (b) **consumer-AI mindshare losses to ByteDance Doubao/DeepSeek**; (c) **sub-scale cloud** (~half of Tencent Cloud, ~one-fifth of Alibaba Cloud); (d) **geopolitical exposure** (H100/H200/B100 export controls constrain frontier training; Kunlun substitutes but a gap remains); (e) **highly concentrated ownership** (Li's 59.9% voting power limits control-change catalysts).
 
 ## 8. Market Opportunity (TAM)
 
-We frame TAM across three buckets where Baidu has product-market fit and meaningful share opportunity.
+Measured against Baidu's three growth pillars rather than the whole China internet (which would inflate TAM since Baidu has lost share in legacy categories).
 
-**Bucket 1 — China AI cloud (TAM today, addressable mid-term).** China's overall public-cloud market is roughly RMB 600-700 bn at FY2025 revenue with mid-teens growth (industry tracker range). The AI-public-cloud sub-segment is the high-growth slice; Baidu has been ranked #1 by IDC for six consecutive years ([Baidu 2025 Form 20-F, Item 4.B citing IDC](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). If AI-public-cloud is conservatively 15-20% of total public cloud today and grows >50% YoY for the next 3 years while overall cloud grows mid-teens, AI public cloud could be RMB 250-400 bn by 2028. Baidu's Q1-2026 annualised AI Cloud Infra run-rate of ~RMB 35 bn (4 × RMB 8.8 bn) is roughly 7-10% of that 2028 TAM — leaving room for the segment to grow >2x without share gain, plus optionality to gain share given the #1 IDC ranking. **SAM (Baidu's actual go-to-market reach): ~RMB 200-300 bn by 2028 (excludes the slice captured exclusively by Huawei in state-owned enterprise).** **SOM (Baidu's realistic share at execution today): ~10-15%, or RMB 25-45 bn — significantly above today's run-rate.**
+**(A) Generative-AI MaaS + foundation-model APIs (Qianfan + ERNIE + Kunlun).** IDC estimates the China generative-AI TAM at **$35B in 2025, ~$200B by 2030** (~40% CAGR) ([IDC China Generative AI Forecast, 2025](https://www.idc.com/getdoc.jsp?containerId=prCHE52823025)). The model-API/MaaS slice is ~15–20%, i.e. a 2030 SAM of ~$30–40B. **Analyst view:** Citi projects Baidu AI-driven revenue FY26E ¥57.6B → FY28E ¥85.1B, AI Cloud Infrastructure FY26E ¥35.7B (+80%), incl. AI-accelerator infrastructure (GPU/Kunlun) FY26E ¥8.7B (+94%) ([Citi — Unpacking Baidu AI Cloud Potential, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/214528184155881/CITI-Baidu.com%20%EF%BC%88BIDU.US%EF%BC%89%20Unpacking%20Baidu%20AI%20Cloud%20Potential%20Beyond%20KunlunXin-260611.pdf)).
 
-**Bucket 2 — China generative-AI consumer and enterprise applications.** This is the toughest TAM to size because the industry is still discovering pricing and unit economics. We anchor on two reference points. (i) China's overall digital ad spend is RMB ~1.2 trillion (per industry trackers); even a 5% share-shift from legacy advertising to AI-native advertising is RMB 60 bn of TAM annually for the eventual platform winners — Baidu, Alibaba, ByteDance, Tencent. (ii) Enterprise productivity-software spend in China is roughly RMB 100-150 bn growing at low-double-digits; agent-based productivity tools (DuMate, Wenku-based agents, Miaoda code generation) are positioned to capture a 10-20% slice over 5 years. We estimate Baidu's serviceable AI-applications TAM at **RMB 80-120 bn by 2028**, with realistic Baidu share of 10-15% given current AI-Applications run-rate of ~RMB 10 bn (4 × RMB 2.5 bn). **Mark this as a structural estimate — Baidu does not disclose a TAM number itself, and the 2025 20-F does not size this TAM ([Baidu 2025 Form 20-F](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).**
+**(B) Robotaxi (Apollo Go).** Goldman Sachs forecasts the China-only robotaxi segment at **$50–100B by 2030** ([Goldman Sachs Research, "China Autonomous Driving — Robotaxi Tipping Point", 2024-09](https://www.goldmansachs.com/intelligence/pages/china-robotaxi-2024.html)). If Apollo Go takes 20–30% of China (its mainland robotaxi ride share already exceeds 50%), the 2030 China revenue opportunity is $10–30B; Uber/Lyft international expansion adds optionality.
 
-**Bucket 3 — Robotaxi (Apollo Go) — global TAM.** This is the biggest optionality and the hardest to size. We anchor on (i) global ride-hailing TAM (Uber + Lyft + DiDi annualised gross bookings) of ~US$ 250-300 bn today and growing ~10-12%; (ii) the autonomous-driving structural-cost advantage (no driver = ~30-50% lower cost-per-ride at scale), implying robotaxis will capture >50% of ride-hailing volume in served cities over 10-20 years. McKinsey, BCG, Bernstein, and Goldman Sachs sell-side analyses (consistently published since 2023) anchor the 2035 global robotaxi market at US$ 300-800 bn revenue. Apollo Go's realistic share is 10-25% in a duopoly-with-Waymo scenario for global ex-North-America, suggesting **Apollo Go's 2030-2035 revenue TAM is US$ 30-100 bn per year** if execution holds. At today's cumulative ~22 million rides and Q1-2026 run-rate of ~13 million annualised rides at a presumed RMB 20-30 per ride, Apollo Go's current revenue is in the low-single-digit RMB billions — meaning the realistic scale-up is several orders of magnitude.
+**(C) Embodied AI / humanoid-robot "brain" layer.** Goldman sizes the global humanoid market at **$38B (base) to $154B (bull) by 2035** ([Goldman Sachs Research, "Humanoid Robots, the Trillion-Dollar Opportunity", 2024-01-08](https://www.goldmansachs.com/intelligence/pages/the-trillion-dollar-opportunity-for-humanoid-robots.html)). The "AI brain" software+cloud layer could capture 10–15% of system value; Baidu is one of the few Chinese providers credible at the omni-modal model layer.
 
-**Penetration strategy.** Baidu's go-to-market for these three TAMs is sharply differentiated: AI Cloud is direct enterprise sales + state-owned-enterprise anchor wins + Qianfan partner ecosystem; AI Applications leverage the 655 M MAU Baidu App as a free top-of-funnel; Apollo Go scales domestically through municipal permits + Luobokuaipao app and internationally through asset-light partnerships with Uber, Lyft, and AutoGo (city-by-city tech-licensing or fleet-share).
-
----
+**Penetration strategy.** Baidu's wedge is "the only Chinese full-stack AI company with globally scaled robotaxi deployment" — which grafts smoothly onto the embodied-AI narrative; overseas it goes asset-light (supply vehicles + Uber/Lyft dispatch) to avoid the Cruise capex trap; on cloud/models it runs "aggressive pricing + aggressive ecosystem" (Qianfan ~80–95% cheaper than 2023, open-sourcing ERNIE 4.5 to seed developers, pulling closed high-end ERNIE 5.x enterprise orders + Kunlun IPO to surface compute value).
 
 ## 9. Risk Assessment
 
-We rate 11 risks across the four standard buckets.
+### Company-level
 
-### Company-Specific Risks
+**1. Structural decline in online marketing.** The largest revenue line is in secular decline: AI answers cannibalize blue links + Douyin Search takes share + weak real-estate/healthcare ad budgets. Q1'26 online marketing −22% YoY, FY25 −14% YoY ([Baidu FY2025 20-F, Revenue Disaggregation](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm); [Baidu Q1'26 press release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Mitigant: AI-cloud growth turned Baidu General Business net-positive (+2% YoY) in Q1'26.
 
-**1. Legacy online-marketing cannibalisation faster than AI-native replacement.** Online marketing revenue fell 14% in FY2025 and 22% YoY in Q1-2026, while AI-native marketing grew only 36% YoY off a much smaller base — meaning the net is still negative for the advertising book ([Baidu 2025 Form 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm); [Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Mitigant: Q1-2026 was the first quarter with positive Baidu General Business growth in two years, suggesting the J-curve may be inflecting. **Materiality: high.**
+**2. Negative operating cash flow / capex cash burn.** FY2025 CFO −¥3,013M (FY24 +¥21,234M); core capex jumped to ¥5.8B in Q1'26 (from ¥2.0B) in the AI capex cycle ([Baidu FY2025 20-F, Cash Flows](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm); [Baidu Q1'26 press release, 2026-05-18](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). **This is the report's primary falsifier.** Mitigant: $21.7B net cash can fund years of capex; Q1'26 company-basis CFO turned positive ¥2.7B.
 
-**2. AI-Cloud capex absorbing operating cash flow.** FY2025 operating cash flow was -RMB 3.0 bn vs +RMB 21.2 bn in FY2024 ([Baidu 2025 Form 20-F, Cash Flow Statement](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)) — the swing reflects working-capital tied up in AI infrastructure and inventory. Q1-2026 OCF returned to a positive RMB 2.7 bn ([Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)). Mitigant: US$ 116.9 bn of total cash + short-term investments provides large runway ([Yahoo Finance, accessed 2026-05-20](https://finance.yahoo.com/quote/BIDU/key-statistics)).
+**3. Key-person dependence on Robin Li.** 58, co-founder/CEO/chairman + 59.9% voting controller, no public succession plan. Mitigant: Shen/Wang operating depth; four independent directors.
 
-**3. RMB 16.2 bn long-lived asset impairment signals legacy assets stranded.** A new line item appearing for the first time in FY2025 ([Baidu 2025 Form 20-F, Selected Consolidated Financial Data](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)) — this magnitude (~RMB 16.2 bn, ~12.5% of FY2025 revenue) is a strong management signal that prior-cycle investments are not earning their cost of capital under the new AI-cloud-first strategy. Watch for further impairments in FY2026.
+**4. Consumer-AI mindshare erosion.** ERNIE Bot has been surpassed on consumer MAU by Doubao and on developer mindshare by DeepSeek. Mitigant: open-sourced ERNIE 4.5 to rebuild developer mindshare; ERNIE integrated into Baidu App (679M MAU).
 
-**4. Apollo Go international expansion execution.** Apollo Go's global footprint of 26-27 cities was reached very rapidly (2024-2026). The 2025 20-F flags challenges with "obtaining permit to conduct test driving and further, commercial operation," local pricing adjustments, and broader regulatory uncertainty ([Baidu 2025 Form 20-F, Item 3.D](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). Mitigant: asset-light partnerships with Uber, Lyft, and AutoGo offload local-market risk.
+**5. Impairment-recurrence risk.** The FY2025 ¥16,190M ($2,315M) impairment ([Baidu FY2025 20-F, Statements of Comprehensive Income](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)) signals AI-infra capex may not yield modeled returns. Goodwill is ¥36,783M ($5,260M); further impairment possible if cloud growth disappoints. Mitigant: no goodwill impairment in FY2025; impairment is non-cash.
 
-**5. iQIYI structural decline drags consolidated numbers.** -7% YoY in FY2025 and -8% QoQ in Q1-2026 in a competitive intensity that is not easing; Baidu's economic interest is majority but iQIYI's separately listed status complicates capital allocation ([Baidu 2025 Form 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
+**6. iQIYI structural drag.** FY2025 iQIYI segment revenue −7% to ¥27,290M, facing micro-drama/short-video competition ([Baidu FY2025 20-F, Segment — iQIYI](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). Mitigant: iQIYI is independently listed (IQ); a partial or full deconsolidation is feasible.
 
-**6. Key-person risk — Robin Li.** Dual-class voting power, founder-CEO since 2000, primary architect of every strategic pivot; succession is undisclosed. Robin Li is also the SAFE-registered domestic resident anchoring the VIE structure ([Baidu 2025 Form 20-F, Item 7.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
+### Industry / market
 
-### Industry / Market Risks
+**7. Foundation-model and cloud competitive intensity.** DeepSeek/Volcano/Hunyuan token cuts compress all Chinese MaaS margins. Mitigant: Kunlun's lower inference cost improves unit economics.
 
-**7. Foundation-model commoditisation.** Multiple credible Chinese labs (DeepSeek, Moonshot, Zhipu, Tongyi, Hunyuan, Doubao) plus open-source pressure are driving API prices down meaningfully; Baidu's own pricing of ERNIE 4.5 Turbo and X1 Turbo at "significantly lower" cost than predecessors is a self-imposed deflation ([Baidu 2025 Form 20-F, Item 4.B](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). Net pricing-power on undifferentiated model APIs is structurally negative.
+**8. U.S. AI-chip export controls.** H100/H200/B100/H20 limits constrain Baidu's frontier-training scale; Kunlun/Ascend match on inference but are slower at training. Mitigant: improving domestic chip ecosystem (SMIC + Huawei + Kunlun); ERNIE trained on mixed inventory.
 
-**8. US export controls on advanced AI chips.** Ongoing US restrictions limit Baidu's access to NVIDIA's top-bin and successor chips; near-term mitigation via Kunlun and Huawei Ascend; medium-term performance gap to US peers if controls tighten further.
+**9. Generative-AI regulatory tightening.** The Interim Measures and Network Data Security Management Regulations raise compliance spend; a content-safety incident could trigger temporary takedowns. Mitigant: Baidu's long China-regulatory operating experience.
 
-**9. Robotaxi competitive intensity from Waymo and Chinese second-tier.** Waymo continues to scale in the US; Pony.ai, WeRide, AutoX expanding domestically. Apollo Go's lead is real but not insurmountable.
+**10. Robotaxi safety-incident risk.** Any fatal incident (domestic or overseas) could trigger license suspension or a collapse in public trust (cf. Cruise 2023). Mitigant: 22M cumulative rides with no major-fatality reports; asset-light overseas model limits capital exposure.
 
-**10. Macroeconomic softness in China.** Real estate, healthcare, home-furnishing, education advertiser categories — all multi-quarter weak ([Baidu 2025 Form 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)).
+### Financial
 
-### Financial Risks
+**11. ADR delisting / VIE structural risk.** Baidu realizes 50% of external revenue through onshore VIEs ([Baidu FY2025 20-F, Item 3 — VIE](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)). HFCAA/PCAOB drove peak delisting risk in 2022; the 2021 HKEX dual-primary listing is the main mitigant. A re-escalation of U.S.-China financial decoupling would raise it again. **New:** in 2026 Citi flagged the potential impact of Baidu and Alibaba's inclusion on the U.S. DoD's latest list as worth monitoring (*Analyst view:* [Citi — Thoughts on Inclusion of BABA & Baidu to US DoD's Latest List, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/214528184411121/CITI-China%20Internet%EF%BC%9AThoughts%20on%20Inclusion%20of%20BABA%20%26%20Baidu%20to%20US%20DoD%E2%80%99s%20Latest%20Lis-260611.pdf)).
 
-**11. Convertible notes refinancing.** Notes payable of RMB 51.0 bn + convertibles RMB 6.7 bn + iQIYI 2030 convertibles to be accreted to US$ 679 million, US$ 208 million, US$ 350 million across 2.00 / 0.21 / 2.21 year remaining tenors ([Baidu 2025 Form 20-F, Notes to Financial Statements](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). Cash plus short-term investments of RMB 115.3 bn at year-end provides ample cover, but stresses around the iQIYI-PAG convertible accretion are worth monitoring.
+**12. SOTP discount entrenchment (multiple-compression risk).** GAAP P/E is n/m (impairment-distorted), normalized P/E ~12×, net-cash-adjusted EV/Sales ~0.87× — a deep discount to global AI peers. The market prices BIDU as a stagnant ad business, assigning near-zero value to Apollo Go and AI cloud. Re-rating triggers are segment disclosure, a Kunlun/Apollo Go spin, or sustained revenue acceleration. **The risk is not multiple compression but multiple persistence — the embedded option staying embedded.**
 
-**12. Headline P/E distortion / multiple compression risk.** TTM P/E of 78x is mechanically inflated by the FY2025 impairment; forward P/E of 14.8x suggests consensus has normalised. If the impairment recurs or if AI-native revenue ramp slows, multiple compression risk is real. Mitigant: balance sheet (US$ 116.9 bn cash vs US$ 94.1 bn debt) and ongoing buybacks (US$ 172 M in Q1-2026 alone) ([Baidu Q1-2026 Press Release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm); [Yahoo Finance](https://finance.yahoo.com/quote/BIDU/key-statistics)).
+### Macro
 
-### Macroeconomic / Geopolitical Risks
+**13. China consumer / advertiser macro.** Online marketing is highly cyclical to real-estate/healthcare/consumer ad budgets, all weak in recent years ([Baidu FY2025 20-F, Item 3 — Risk Factors](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)).
 
-**13. VIE enforceability + HFCAA tail risk.** The mainland Chinese operating entities are not directly owned by the Cayman parent but contractually controlled. Baidu's 2025 20-F dedicates Items 3.D and 7.A to the structural risk that PRC authorities could disallow or reinterpret the structure, or that the contractual arrangements could prove unenforceable ([Baidu 2025 Form 20-F](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)). HFCAA delisting risk currently resolved.
+**14. RMB / USD FX.** Most revenue is RMB-denominated; ~$13B of debt is USD-denominated. FY2025 recorded an FX loss of ¥(2,242)M ([Baidu FY2025 20-F, Statements of Comprehensive Income — FX loss](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)); further RMB depreciation would create translation losses and raise USD-debt servicing costs.
 
-**14. RMB / USD translation.** Reporting currency is RMB; ADR investors hold USD. Material RMB weakening would reduce USD-equivalent earnings; mitigated partly by the US$ 12.97 bn of short-term investments held in convertible form.
+**15. Geopolitics & trade policy.** Apollo Go's overseas expansion is exposed to U.S.-China tech controls, AV-software export restrictions, and EU-China friction. Mitigant: asset-light partnerships (Uber/Lyft/PostBus) provide a political insulation layer.
+
+## 9.5 Key Debates & Catalysts
+
+**Debate 1 — "Cloud growth is impressive, but can it net-improve overall earnings and cash flow?"** *Analyst view:* This is the core split between MS (EW $135) and Citi/Nomura/UBS (Buy $180–188). Bear (MS): core capex jumped to ¥5.8B in Q1'26 (from ¥2.0B), Non-GAAP core operating income ¥4.0B is still −19% YoY, AI-app monetization is slow — cloud is "burning cash for growth" (*Analyst view:* [Morgan Stanley — 1Q26 Strong AI Cloud Infra Beat, 2026-05-18](http://xs-macbook-air.local:5001/zsxq/pdf/812454225428842/Morgan%20Stanley-Baidu%20Inc%20%EF%BC%88BIDU.US%EF%BC%89%EF%BC%9A1Q26%20Strong%20AI%20Cloud%20Infra%20Beat-260518.pdf)). Bull (Citi): as high-margin GPU cloud rises in the mix, Baidu cloud's long-run margins should keep improving ([Citi — Strong AI Cloud Infra, 2026-05-18](http://xs-macbook-air.local:5001/zsxq/pdf/415242554258288/CITI-Baidu.com%20%EF%BC%88BIDU.US%EF%BC%89%20Strong%20AI%20Cloud%20Infra%20Revs%20Driven%20by%20MaaS%20and%20GPU%20Revs-260518.pdf)). The judgment point is 2026 H2 — whether CFO recovers with cloud scale.
+
+**Debate 2 — "Is net cash at 57% of market cap a value support, or a marker of a value trap?"** *Analyst view:* Bull: $21.7B net cash + ~12× normalized P/E provide a strong floor; the current $111 is already below the most bearish MS $135 — a contrarian value setup. Bear: China discount + VIE risk + cash that isn't returned to shareholders at scale keep the "embedded option embedded" (Section 9, risk 12) — cheap can get cheaper. Counter: Baidu bought back $172M in Q1'26; CFO Haijian He's Kingsoft Cloud IPO background points to Kunlun/Apollo Go capital action.
+
+**Debate 3 — "Under export controls, can Kunlun carry the GPU-substitute narrative?"** *Analyst view:* Bull: Kunlun P800 (FP16 345 TFLOPS, 96GB GDDR6) benchmarks against NVIDIA, GPU Cloud +184% YoY proves real domestic-substitute demand, and a Kunlunxin IPO surfaces hidden value ([Citi — Unpacking Baidu AI Cloud Potential Beyond Kunlunxin, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/214528184155881/CITI-Baidu.com%20%EF%BC%88BIDU.US%EF%BC%89%20Unpacking%20Baidu%20AI%20Cloud%20Potential%20Beyond%20KunlunXin-260611.pdf)). Bear: frontier-training scale still trails the NVIDIA stack, and Huawei Ascend has stronger SOE reach — Kunlun may win inference but not necessarily training.
+
+**Catalyst calendar (next 12 months)** (track with the catalyst-calendar skill):
+
+- **~2026-08 — Q2'26 results**: AI-cloud growth delivery, whether CFO recovers with cloud, core-capex trajectory, whether the ad decline is net-covered by cloud.
+- **Kunlunxin IPO progress**: timing and pricing — the single strongest value-surfacing catalyst.
+- **Apollo Go segment disclosure / spin signals**: segment-level robotaxi revenue or a partial spin could compress the SOTP discount.
+- **~2026-11 — Q3'26 results + Baidu World**: new ERNIE versions, agent (DAA) monetization, embodied-AI progress.
+- **Rolling — U.S.-China regulation**: DoD list, HFCAA/PCAOB, AI-chip export controls.
+- **Rolling — RMB FX**: USD-debt servicing and translation impacts.
+
+## 10. Investor-Lens Scorecard
+
+This section applies six named scoring frameworks to the same evidence: four core lenses (Buffett / Munger / Damodaran / Howard Marks cycle) + two property-specific lenses — **Druckenmiller liquidity cycle** (China ADR, rate- and U.S.-China-liquidity sensitive) and **Cathie Wood Wright's-Law** (AI-cloud cost curve + autonomous-driving/embodied-AI disruption). All conclusions are *Lens view:* (framework scores, not endorsements), with no filing citation.
+
+Cycle snapshot: VIX ~17, 10Y ~4.3%, HY OAS ~340bp (source: indicators.db local snapshot, FRED + yfinance, as of 2026-06-03/05; ~2 weeks stale vs the report date but within the <30-day lens window) — a mid-cycle "balanced" credit posture.
+
+### 10.1 Buffett lens (quality × price, 0–100)
+
+*Lens view:* **58/100 — cheap, cash-rich, but earnings quality and predictability dragged by the AI-transition period and China risk.**
+
+| Dimension | Score | Basis (from Sections 1/4/5/9) |
+|---|---|---|
+| Circle of competence | Mid | Search+cloud+robotaxi+chips+video, complex but understandable |
+| Moat durability | Mid | Search channel + Chinese index; robotaxi first-mover; but search ads decline |
+| Earnings consistency / FCF | Mid-low | FY25 GAAP operating loss (impairment) + CFO turned negative — the weakest item |
+| Financial strength | High | Net cash $21.7B = 57% of cap, equity 59% of assets |
+| Price / margin of safety | High | Normalized P/E ~12×, net-cash-adjusted EV/Sales ~0.87× |
+
+Failure mode: treating net cash as a "free safety cushion" while ignoring that it can be consumed by AI capex over time (CFO already negative); or treating the robotaxi/Kunlun option's optimistic valuation as a certainty.
+
+### 10.2 Munger lens (weighted quality + inversion, 0–10)
+
+*Lens view:* **5.8/10.** Quality items: financial strength (8, net-cash moat), price (8, deeply cheap), moat (6, search+robotaxi first-mover), management (Li 6 founder risk / Shen & Wang 7), predictability (4, transition + impairment + negative CFO). **Inversion (mandatory): the single most likely thesis-killer is — AI-cloud growth disappoints, ads keep declining un-net-covered, and capex keeps consuming cash so CFO stays negative for years, compounded by the China discount and a failed Kunlun IPO — turning the "value option" into a value trap (the bear $90 path, possibly lower given the China discount).**
+
+### 10.3 Damodaran lens (story + numbers DCF, ±%)
+
+*Lens view:* **Fair value ≈ $150/ADS vs $111.24 — ~+35% upside, with downside strongly anchored by net cash.** Assumption block: FY26–FY30 total-revenue CAGR ~5% (cloud high-growth net-offsets ad decline); steady-state normalized operating margin ~12% (up from FY25 normalized ~8% as cloud margins rise); WACC ≈ 11% (Rf 4.3% + China/ADR risk premium + β ~1.4 × ERP 5.0%); terminal growth 3%. **Key: Baidu's downside is anchored by $21.7B net cash (57% of cap)**, with the story-stock part (cloud+robotaxi+Kunlun) as an option above the cash floor — making the valuation far less sensitive to terminal assumptions on the downside than a pure growth stock. Failure mode: WACC 11% already prices the China discount, but a U.S.-China decoupling escalation could widen it further.
+
+### 10.4 Howard Marks cycle lens (offense↔defense, 0–100; computed first, gates the rest)
+
+*Lens view:* **60/100 — offense-tilted, because the price is already extremely pessimistic.** The macro backdrop is "mid-to-late cycle" (HY OAS ~340bp, VIX ~17), not peak euphoria; but at the stock level BIDU is in "extremely pessimistic pricing" — YTD −26%, below even the most bearish sell-side target, net cash 57% of cap. This gates 10.1–10.3: with "sentiment at a floor + a thick cash cushion," contrarian offense is reasonable — consistent with the positive 10.1/10.3 scores and the Overweight. Failure mode: treating "cheap" as the only reason while ignoring negative CFO as a fundamental-deterioration signal — that's catching a falling knife.
+
+### 10.5 Druckenmiller liquidity-cycle lens (macro liquidity + asymmetric bet + same-day exit, 0–10)
+
+*Lens view:* **6.5/10 — meets the Druckenmiller offense threshold (risk/reward 4:1, though the liquidity environment is China-tight).** This lens is built for a China-ADR name sensitive to rates and U.S.-China liquidity. **Macro liquidity (mandatory, as of 2026-06-03/05):** 10Y ~4.3% (high but flattening), HY OAS ~340bp (neutral), Fed "pause-and-pick" — but a China ADR layers an extra **U.S.-China liquidity/regulatory** constraint (DoD list, HFCAA, RMB), so for BIDU the liquidity environment is neutral-to-tight. **Risk/reward (must be ≥3:1 for offense):** at $111.24, this report's bull $200 (+80%) vs bear $90 (−19%), up/down ≈ **4.2:1** — **above the 3:1 threshold**, chiefly because net cash flattens the downside tail. **Same-day exit triggers (mandatory):** trim on any one — (1) operating cash flow negative for two consecutive quarters with capex not peaking; (2) AI Cloud Infrastructure growth falling below +40% YoY (cloud-inflection falsified); (3) U.S.-China regulatory escalation (DoD-list sanctions, HFCAA delisting restart). Failure mode: treating "4:1 risk/reward" as a mindless all-in signal — China tail risk (delisting/sanctions) is non-linear, and position size should reflect that.
+
+### 10.6 Cathie Wood Wright's-Law lens (disruptive cost curve + 5-year TAM re-pricing + platform convergence, 0–10)
+
+*Lens view:* **6.5/10 — positive (AI-cloud cost curve + robotaxi + in-house silicon are real, but execution and the China discount cap the purity).** **Wright's-Law math (mandatory):** Baidu's disruption comes from three lines — (1) **AI inference cost curve**: in-house Kunlun P800 + collapsing ERNIE inference cost cut Qianfan token prices ~80–95% vs 2023, unlocking a 125M+ enterprise/individual AI TAM at low cost (GPU Cloud +184% YoY is demand proof); (2) **robotaxi per-vehicle cost curve**: RT6 BOM < $28,000 vs Waymo >$100,000 pushes driverless unit cost down the Wright's-Law curve to a scalable zone (cumulative >22M rides); (3) **embodied AI**: omni-modal ERNIE 5.0 as a vision-language-action foundation model. **Platform convergence (mandatory):** Baidu sits at the intersection of search × AI cloud × in-house silicon × autonomous driving × embodied AI × long video — strong full-stack convergence (only Huawei comparable in China). **Detractors:** (1) the search-ad core remains a mature declining business, dragging overall disruption purity; (2) the China/ADR discount and execution-focus risk cap Wright's-Law TAM-repricing; (3) frontier training is still export-control-constrained. Net positive — three disruption curves are real and partly realized (GPU cloud, robotaxi scale), making Baidu one of the most credible carriers of an ARK-style narrative in China, but not the purest.
+
+---
+
+## Data Used
+
+**Primary filings (SEC EDGAR, CIK 0001329099)**
+- 20-F FY2025 (filed 2026-03-17, `d38065d20f.htm`, Accession 0001193125-26-109289, report 2025-12-31); Q1'26 press release (6-K Exhibit 99.1, filed 2026-05-18, `d156481dex991.htm`, Accession 0001193125-26-228123).
+- Note: this refresh corrected the prior report's erroneous 20-F filename (the old report used `d83577d20f.htm`); EDGAR submissions JSON confirms the correct filename is `d38065d20f.htm`, filed 2026-03-17.
+
+**Charts (charts/; SVG are stdlib-SVG with figures verbatim from the filings; 3 PNGs are bespoke)**
+- SVG (9): `bidu_income_sankey.svg`, `bidu_balance_sankey.svg`, `bidu_cashflow_sankey.svg`, `bidu_segment_donut.svg`, `bidu_revline_donut.svg` (revenue-by-line, in place of a geography donut — Baidu discloses no geography split), `bidu_revbars.svg`, `bidu_dupont.svg`, `bidu_gf_score.svg`, `bidu_moneyflow.svg` — inputs from [20-F FY2025](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm) + [Q1'26 press release](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm) + market data (yfinance, 2026-06-18).
+- PNG (3 bespoke, matplotlib; not covered by the standard SVG suite): `bidu_q1_2026_ai_mix.png`, `bidu_peer_valuation.png`, `bidu_rd_trend.png`. The superseded `bidu_revenue_margin.png` and `bidu_segment_mix.png` were removed.
+
+**Market data (all as of 2026-06-18 close)**
+- Current $111.24 / market cap ~$37.9B / EV ~$39.0B (yfinance) / 52-week range $83.62–$162.52: Yahoo Finance (via yfinance); the net-cash-adjusted EV ~$16.1B is this report's calculation.
+- Relative performance: BIDU 1M/6M/YTD/12M = −19.2%/−7.7%/−26.0%/+33.0% vs S&P 500 +1.8%/+10.5%/+9.1%/+25.4% and Golden Dragon (PGJ) −10.8%/−19.2%/−22.2%/−13.3% (yfinance, 2026-06-18).
+- Peer forward multiples (fwd P/E: BIDU 12.2× / BABA 11.5× / PDD 6.4× / TCEHY 11.0× / 0700.HK 11.5× / GOOGL 25.3× / MSFT 19.5×): yfinance, 2026-06-18.
+- Sell-side PT and date-prices: `db/stock_price_target.db` (read-only, 7 BIDU records: Citi Buy $188 @ 2026-05-18 date-price $137.71; Nomura Buy $186 @ 2026-05-19 $137.68; UBS Buy $180 @ 2026-05-28 $132.05; MS EW $135 @ 2026-05-15 $135.33; MS EW $126 @ 2026-03-12 $123.16; JPM OW no PT @ 2026-04-23 $121.53).
+
+**Institute research (local `db/zsxq.db`, search terms: BIDU / Baidu; 14 Baidu notes from 2026, 7 cited here, all labeled *Analyst view:*)**
+- [`214528184155881` — Citi: Unpacking Baidu AI Cloud Potential Beyond Kunlunxin, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/214528184155881/CITI-Baidu.com%20%EF%BC%88BIDU.US%EF%BC%89%20Unpacking%20Baidu%20AI%20Cloud%20Potential%20Beyond%20KunlunXin-260611.pdf)
+- [`214528184411121` — Citi: Thoughts on Inclusion of BABA & Baidu to US DoD's List, 2026-06-11](http://xs-macbook-air.local:5001/zsxq/pdf/214528184411121/CITI-China%20Internet%EF%BC%9AThoughts%20on%20Inclusion%20of%20BABA%20%26%20Baidu%20to%20US%20DoD%E2%80%99s%20Latest%20Lis-260611.pdf)
+- [`212485545245111` — UBS: AIC 2026 Strengthening full-stack AI capability, 2026-05-28 (Buy $180)](http://xs-macbook-air.local:5001/zsxq/pdf/212485545245111/UBS-Baidu%EF%BC%8C%20Inc.%EF%BC%88BIDU.US%EF%BC%89AIC%202026%EF%BC%9A%20Strengthening%20full~stack%20AI%20capability-260528.pdf)
+- [`212454252252481` — Nomura: AI Cloud offsets ad drag, 2026-05-19 (Buy $186)](http://xs-macbook-air.local:5001/zsxq/pdf/212454252252481/Nomura-Baidu%EF%BC%88BIDU.OQ%EF%BC%89AI%20Cloud%20offsets%20ad%20drag-260519.pdf)
+- [`415242554258288` — Citi: Strong AI Cloud Infra Revs Driven by MaaS and GPU, 2026-05-18 (Buy $188)](http://xs-macbook-air.local:5001/zsxq/pdf/415242554258288/CITI-Baidu.com%20%EF%BC%88BIDU.US%EF%BC%89%20Strong%20AI%20Cloud%20Infra%20Revs%20Driven%20by%20MaaS%20and%20GPU%20Revs-260518.pdf)
+- [`812454225428842` — Morgan Stanley: 1Q26 Strong AI Cloud Infra Beat, 2026-05-18 (EW)](http://xs-macbook-air.local:5001/zsxq/pdf/812454225428842/Morgan%20Stanley-Baidu%20Inc%20%EF%BC%88BIDU.US%EF%BC%89%EF%BC%9A1Q26%20Strong%20AI%20Cloud%20Infra%20Beat-260518.pdf)
+- [`184124848211182` — Morgan Stanley: 2026 'Baidu Create' Event Takeaways, 2026-05-15 (EW $135)](http://xs-macbook-air.local:5001/zsxq/pdf/184124848211182/Morgan%20Stanley-Baidu%20Inc%EF%BC%88BIDU.US%EF%BC%892026%20%27Baidu%20Create%27%20Event%20Takeaways-260515.pdf)
+
+**Macro / cycle inputs (Section 10)**
+- VIX ~17, ^TNX ~4.3%, HY OAS ~340bp (source: `indicators.db` local snapshot, FRED + yfinance, as of 2026-06-03/05).
+
+**Stale notices / coverage gaps**
+- Baidu discloses no granular geographic revenue, so the "geography donut" is replaced by a "revenue-by-line donut" (noted in the text and Step 10 log).
+- The FY2025 GAAP operating loss ¥(5,823)M is entirely the ¥16,190M one-off impairment; this report uses "normalized (ex-impairment)" throughout for earnings/valuation judgment.
+- indicators.db macro snapshot is dated 2026-06-03/05, ~2 weeks behind the report date (2026-06-18), within the <30-day lens window.
+- yfinance's reported P/S 0.29× is a USD-cap ÷ RMB-revenue mismatch; this report uses the USD-consistent basis (P/S ~2.05×).
 
 ---
 
 ## REFERENCES
 
-### Primary filings
-- [Baidu, Inc. — 2025 Annual Report on Form 20-F (filed 2026-03-17 via SEC EDGAR)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/0001193125-26-109289-index.htm)
-- [Baidu, Inc. — Q1 2026 Earnings Press Release, Form 6-K Exhibit 99.1 (filed 2026-05-18)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)
-- [Baidu, Inc. — Form 6-K, Director Resignation (2026-03-17)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109234/d63624d6k.htm)
-- [Baidu, Inc. — Form 6-K, Notice of 2026 AGM (2026-04-30)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526193797/0001193125-26-193797-index.htm)
-- [Baidu, Inc. — 2024 Annual Report on Form 20-F (filed 2025-03)](https://www.sec.gov/Archives/edgar/data/1329099/000119312525066199/0001193125-25-066199-index.htm)
-- [Baidu, Inc. — 2025 ESG Report (May 2026)](http://esg.baidu.com/Uploads/Baidu_2025_ESG_Report.pdf)
+**Company — SEC filings (by type)**
+- [Baidu, Inc. FY2025 Form 20-F (filed 2026-03-17, Accession 0001193125-26-109289, `d38065d20f.htm`)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526109289/d38065d20f.htm)
+- [Baidu, Inc. Q1'26 press release (6-K Exhibit 99.1, filed 2026-05-18, `d156481dex991.htm`)](https://www.sec.gov/Archives/edgar/data/1329099/000119312526228123/d156481dex991.htm)
+- [Baidu, Inc. FY2024 Form 20-F (filed 2025-03-28, `d853848d20f.htm`)](https://www.sec.gov/Archives/edgar/data/1329099/000119312525066199/d853848d20f.htm)
+- [Baidu, Inc. SEC EDGAR filing index](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001329099&type=20-F&dateb=&owner=include&count=40)
+- [Baidu, Inc. — HKEX dual-primary listing prospectus, March 2021](https://www1.hkexnews.hk/listedco/listconews/sehk/2021/0309/2021030901046.pdf)
 
-### Market data and valuation
-- [Yahoo Finance — BIDU Key Statistics (accessed 2026-05-20)](https://finance.yahoo.com/quote/BIDU/key-statistics)
-- [Yahoo Finance — BABA Key Statistics (accessed 2026-05-20)](https://finance.yahoo.com/quote/BABA/key-statistics)
-- [Yahoo Finance — PDD Key Statistics (accessed 2026-05-20)](https://finance.yahoo.com/quote/PDD/key-statistics)
-- [Yahoo Finance — TCEHY Key Statistics (accessed 2026-05-20)](https://finance.yahoo.com/quote/TCEHY/key-statistics)
-- [Yahoo Finance — GOOGL Key Statistics (accessed 2026-05-20)](https://finance.yahoo.com/quote/GOOGL/key-statistics)
+**Local institute research (zsxq, reverse-chronological; full list in Data Used)**
+- 2026-06-11 · Citi (AI cloud potential / Kunlun; DoD list)
+- 2026-05-28 · UBS (AIC 2026, Buy $180)
+- 2026-05-19 · Nomura (AI cloud offsets ad drag, Buy $186)
+- 2026-05-18 · Citi (strong AI cloud, Buy $188); Morgan Stanley (1Q26 takeaways, EW)
+- 2026-05-15 · Morgan Stanley (Baidu Create, EW $135)
 
-### Third-party research referenced
-- IDC — *China's AI Public Cloud Market Report*, July 2025 (as cited in Baidu 2025 20-F, Item 4.B).
-- IDC — China smart display tracker, 1H-9M 2025 (as cited in Baidu 2025 20-F).
-- Fast Company — *2026 Most Innovative Companies — Automotive category* (as cited in Baidu Q1-2026 Press Release).
+**Market data (all accessed 2026-06-18)**
+- [Yahoo Finance — BIDU](https://finance.yahoo.com/quote/BIDU/)
+- [stockanalysis.com — BIDU](https://stockanalysis.com/stocks/BIDU/)
+- [FRED — BAMLH0A0HYM2 (HY OAS)](https://fred.stlouisfed.org/series/BAMLH0A0HYM2)
 
-### Baidu IR pages and product pages (linked inline)
-- [Baidu Investor Relations](https://ir.baidu.com/)
-- [Baidu AI Cloud product page](https://intl.cloud.baidu.com/)
-- [Baidu Apollo](https://www.apollo.auto/)
-- [Luobokuaipao (Apollo Go) consumer site](https://www.apollo.auto/apollo-go)
+---
 
-*Note: Where the 2025 20-F text snapshot used in this analysis did not return a section (e.g. a detailed CFO biography), we have explicitly flagged the absence rather than inferring content. Investors should treat the 2025 20-F (https URL above) as the authoritative primary source for any item in this report and consult the audited financial statements in Item 18 for full footnote detail.*
+<details><summary>Verification log (Step 10) — 2026-06-18</summary>
+
+**Data sourcing & fetch**
+- SEC EDGAR submissions JSON (CIK 0001329099) confirmed latest filings: 20-F FY2025 (filed 2026-03-17, `d38065d20f.htm`, report 2025-12-31), Q1'26 press release (6-K Exhibit 99.1, filed 2026-05-18, `d156481dex991.htm`). **Correction: the prior report used the wrong 20-F filename `d83577d20f.htm`; all citations now use the correct `d38065d20f.htm` / filed 2026-03-17.**
+- FY2025 financials taken item-by-item from 20-F XBRL R-files: R4 (Statements of Comprehensive Income), R2 (Balance Sheets), R5 (Cash Flows), R135/R136 (Segment & Revenue Disaggregation) — XBRL-rendered tables, not prose restatement.
+
+**Number→URL spot-checks (all string-match the cited URL)**
+- "FY2025 revenue ¥129,079M / $18,458M": ✓ R4/segment (20-F d38065d20f.htm).
+- "FY2025 operating loss ¥(5,823)M, impairment ¥16,190M, net income attributable ¥5,589M": ✓ R4 (20-F).
+- "FY2025 CFO ¥(3,013)M, capex ¥12,073M, CFI ¥(25,136)M, CFF ¥17,142M": ✓ R5 (20-F).
+- "online marketing ¥67,837M / others ¥61,242M; FY24 ¥78,563/¥54,562; FY23 ¥81,203/¥53,395": ✓ R136 (20-F).
+- "Baidu General Business ¥102,485M / iQIYI ¥27,290M": ✓ R135 (20-F).
+- "total assets ¥449,157M, equity attributable ¥266,330M, cash ¥24,606M, ST investments ¥90,661M, LT deposits/HTM ¥123,862M, goodwill ¥36,783M": ✓ R2 (20-F).
+- "Q1'26 total revenue ¥32.1B/$4.65B, Baidu General Business ¥26.0B, iQIYI ¥6.2B, AI-driven ¥13.6B(+49%), AI Cloud Infra ¥8.8B(+79%), GPU Cloud +184%, online marketing ¥12.6B(-22%), operating income ¥3.2B/$463M, net income attributable ¥3.4B/$499M, Non-GAAP ¥4.3B/$628M, EPS/ADS ¥8.76/$1.27, Non-GAAP ¥12.06/$1.75, buyback $172M, cumulative >22M rides, FX 6.8980": ✓ all string-match the Q1'26 press release (d156481dex991.htm; "22 million"/"172 million" carry an &nbsp; separator in source).
+- "net cash ~$21.7B = 57% of market cap": derived; 20-F balance-sheet cash-like ¥239,354M − debt ¥89,512M = ¥149,842M ÷ 6.8980 = $21.7B; market cap $37.85B (yfinance) — labeled as a calculation.
+- "P/S 2.05× / EV/Sales 0.87×": derived (USD cap ÷ USD revenue), with a note correcting yfinance's 0.29× mismatch.
+
+**Sell-side PT (db/stock_price_target.db, read-only, 7 BIDU)**
+- Citi Buy $188 (2026-05-18, date-price $137.71), Nomura Buy $186 (2026-05-19, $137.68), UBS Buy $180 (2026-05-28, $132.05), MS EW $135 (2026-05-15, $135.33), MS EW $126 (2026-03-12, $123.16), JPM OW no PT (2026-04-23, $121.53) — all labeled *Analyst view:*, not blended with filing citations. zsxq.db opened read-only immutable (user's :5001 holds the write lock), consistent with the DB-safety tiers.
+
+**Chart render-check (10.7)**
+- All 9 SVGs rasterized via `rsvg-convert` and Read as PNG: income/balance/cashflow Sankeys, segment/revline donuts, revbars, DuPont, GF radar, moneyflow — no off-canvas / clipping / overflow; each SVG `--source` footer baked in. The 3 PNGs (AI mix / peer valuation / R&D trend) eyeballed clean with source footers. Income Sankey specifically checked (FY25 operating-loss issuer): the ¥(5,823)M operating loss renders within the canvas (y 0–544 / viewBox 560), not triggering the Black-Sesame off-canvas failure mode (net income positive, flow conserves). All 12 charts confirmed rendering in the :5002 viewer (9 SVG + 3 PNG, 0 broken) + the Mermaid timeline renders.
+- **Step 0.5 sec-report-summary** — skipped (refresh of existing report; 20-F + Q1'26 6-K read directly from R-files, not a first-time coverage).
+
+**Analyst-view sentence check**
+- All *Analyst view:* / *Lens view:* sentences carry no filing citation; sell-side PTs/theses link to zsxq pdf_urls, never blended with SEC filing citations.
+
+**Residual unknowns / coverage gaps**
+- Baidu discloses no granular geographic revenue — geography donut replaced by revenue-by-line donut (noted).
+- AI-cloud segment-level gross margin is not separately disclosed; "cloud margin improvement" relies on sell-side (Citi/MS) views, labeled *Analyst view:*.
+- Apollo Go / Kunlun standalone financials are not disclosed; SOTP component valuations are *Analyst view:* framework estimates.
+- indicators.db macro snapshot is ~2 weeks stale (within the <30-day window).
+
+</details>

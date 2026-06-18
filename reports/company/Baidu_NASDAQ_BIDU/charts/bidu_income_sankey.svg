@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">百度 Baidu 损益表 income statement Sankey · FY2025（人民币百万元 RMB M）</text>
+<path d="M 204.00,78.00 C 258.00,78.00 258.00,85.00 312.00,85.00 L 312.00,299.42 C 258.00,299.42 258.00,292.42 204.00,292.42 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,155.46 560.00,155.46 L 560.00,157.46 C 506.00,157.46 506.00,80.00 452.00,80.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,80.00 C 506.00,80.00 506.00,171.46 560.00,171.46 L 560.00,368.91 C 506.00,368.91 506.00,277.45 452.00,277.45 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,257.04 C 382.00,257.04 382.00,264.04 328.00,264.04 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,264.04 C 382.00,264.04 382.00,271.04 436.00,271.04 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,155.46 C 630.00,155.46 630.00,158.66 684.00,158.66 L 684.00,160.66 C 630.00,160.66 630.00,157.46 576.00,157.46 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,158.66 C 754.00,158.66 754.00,271.18 808.00,271.18 L 808.00,288.84 C 754.00,288.84 754.00,176.33 700.00,176.33 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,176.33 C 754.00,176.33 754.00,302.84 808.00,302.84 L 808.00,306.82 C 754.00,306.82 754.00,180.31 700.00,180.31 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,171.46 C 630.00,171.46 630.00,193.89 684.00,193.89 L 684.00,275.58 C 630.00,275.58 630.00,253.15 576.00,253.15 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,253.15 C 630.00,253.15 630.00,289.58 684.00,289.58 L 684.00,354.16 C 630.00,354.16 630.00,317.73 576.00,317.73 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,317.73 C 630.00,317.73 630.00,368.16 684.00,368.16 L 684.00,419.34 C 630.00,419.34 630.00,368.91 576.00,368.91 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,306.42 C 258.00,306.42 258.00,299.42 312.00,299.42 L 312.00,493.00 C 258.00,493.00 258.00,500.00 204.00,500.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,382.91 C 630.00,382.91 630.00,160.66 684.00,160.66 L 684.00,200.30 C 630.00,200.30 630.00,422.54 576.00,422.54 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="214.42" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="306.42" width="16" height="193.58" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="179.04" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="271.04" width="16" height="228.96" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="155.46" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="171.46" width="16" height="197.45" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="382.91" width="16" height="39.63" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="158.66" width="16" height="21.23" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="193.89" width="16" height="81.69" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="289.58" width="16" height="64.59" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="368.16" width="16" height="51.17" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="271.18" width="16" height="17.67" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="302.84" width="16" height="3.98" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="182.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">在线营销 Online Marketing</text>
+<text x="179.00" y="195.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥67.8B  (52.6%)</text>
+<text x="179.00" y="400.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他/AI云+iQIYI Others</text>
+<text x="179.00" y="413.21" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥61.2B  (47.4%)</text>
+<rect x="331.00" y="67.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥129.1B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥56.6B  (43.9%)</text>
+<rect x="455.00" y="253.04" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="265.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="278.04" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥72.4B  (56.1%)</text>
+<rect x="579.00" y="137.46" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="149.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="162.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-¥5.8B  (-4.5%)</text>
+<rect x="579.00" y="162.46" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="174.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="187.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥62.5B  (48.4%)</text>
+<text x="551.00" y="399.72" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="412.72" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥12.5B  (9.7%)</text>
+<rect x="703.00" y="140.66" width="87.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="152.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="165.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥6.7B  (5.2%)</text>
+<rect x="703.00" y="175.89" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="187.89" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="200.89" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥25.8B  (20.0%)</text>
+<rect x="703.00" y="271.58" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="283.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="296.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥20.4B  (15.8%)</text>
+<rect x="703.00" y="350.16" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="362.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="375.16" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥16.2B  (12.5%)</text>
+<text x="833.00" y="277.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="290.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥5.6B  (4.3%)</text>
+<text x="833.00" y="302.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="315.01" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥1.3B  (0.98%)</text>
+<text x="500.00" y="530.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">营业亏损 ¥(5,823)M 主要源于 ¥16,190M 长期资产减值；归母净利 ¥5,589M 由 ¥12,539M 其他收入（利息+权益法）支撑</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Baidu FY2025 20-F, Consolidated Statements of Comprehensive Income + Segment Note (d38065d20f.htm)</text>
+</svg>

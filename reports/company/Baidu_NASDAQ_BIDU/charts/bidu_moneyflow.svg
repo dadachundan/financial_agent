@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1024" width="1180" height="1024" role="img" aria-label="谁付钱给百度 → 钱经过哪些业务线 → 钱流向哪些供应商" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1024" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">百度 BAIDU 资金流向 MONEY-FLOW · FY2025 / Q1'26（需求视角 DEMAND VIEW）</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">谁付钱给百度 → 钱经过哪些业务线 → 钱流向哪些供应商</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">广告主、云企业与 Robotaxi 乘客付费 → 经过百度的搜索/AI云/智能驾驶产品线 → 大部分内容成本与流量获取成本（COGS）流向算力（自研昆仑+外购GPU）、百度联盟流量伙伴、爱奇艺内容版权方。</text>
+<ellipse cx="1031.00" cy="410.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="628.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="628.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 who pays</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">经过哪些业务线 product lines</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱流向哪里 where it pools</text>
+<path d="M 256.00 300.00 C 369.50 300.00, 369.50 308.50, 483.00 308.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 410.00 C 369.50 410.00, 369.50 418.50, 483.00 418.50" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 520.00 C 369.50 520.00, 369.50 520.00, 483.00 520.00" fill="none" stroke="url(#mfgold)" stroke-width="9.82" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 312.86 C 810.50 312.86, 810.50 355.00, 924.00 355.00" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 301.95 C 810.50 301.95, 810.50 233.55, 924.00 233.55" fill="none" stroke="url(#mfgold)" stroke-width="8.73" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 411.95 C 810.50 411.95, 810.50 246.64, 924.00 246.64" fill="none" stroke="url(#mfgold)" stroke-width="17.45" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 427.23 C 810.50 427.23, 810.50 575.00, 924.00 575.00" fill="none" stroke="url(#mfgold)" stroke-width="13.09" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 522.73 C 810.50 522.73, 810.50 465.00, 924.00 465.00" fill="none" stroke="url(#mfgold)" stroke-width="10.91" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 514.55 C 810.50 514.55, 810.50 258.09, 924.00 258.09" fill="none" stroke="url(#mfgold)" stroke-width="5.45" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="369.50" y="298.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">¥67.8B 广告</text>
+<text x="369.50" y="408.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">AI云</text>
+<text x="810.50" y="327.93" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">TAC</text>
+<text x="810.50" y="261.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">搜索算力</text>
+<text x="810.50" y="323.30" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">GPU/昆仑</text>
+<text x="810.50" y="487.86" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">版权</text>
+<rect x="42.00" y="253.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="253.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="286.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">广告主 ADVERTISERS</text>
+<text x="60.00" y="307.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">P4P 搜索+信息流广告主</text>
+<text x="60.00" y="324.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">在线营销 ¥67.8B (FY25)</text>
+<rect x="42.00" y="363.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="363.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="396.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">云企业 ENTERPRISES</text>
+<text x="60.00" y="417.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">AI云/千帆 MaaS + GPU云客户</text>
+<text x="60.00" y="434.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">AI云基础设施 Q1'26 ¥8.8B (+79% YoY)</text>
+<rect x="42.00" y="473.00" width="214" height="94.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="473.00" width="3" height="94.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="506.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">乘客+订阅 RIDERS / SUBS</text>
+<text x="60.00" y="527.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">萝卜快跑乘客 + 爱奇艺会员</text>
+<text x="60.00" y="544.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">Apollo Go 累计 &gt;2200万单</text>
+<rect x="483.00" y="261.50" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="261.50" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="294.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">搜索+信息流 SEARCH</text>
+<text x="501.00" y="315.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">百度App MAU 6.79亿</text>
+<text x="501.00" y="332.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">AI 答案替代蓝链</text>
+<rect x="483.00" y="371.50" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="483.00" y="371.50" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="501.00" y="404.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AI云+文心 AI CLOUD</text>
+<text x="501.00" y="425.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">千帆 MaaS + 昆仑GPU云</text>
+<text x="501.00" y="442.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">唯一加速增长项</text>
+<rect x="483.00" y="481.50" width="214" height="77.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="483.00" y="481.50" width="3" height="77.00" rx="2" fill="#7fa8f5"/>
+<text x="501.00" y="514.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">智能驾驶+iQIYI</text>
+<text x="501.00" y="535.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#9bb3df">萝卜快跑 + 爱奇艺 ¥27.3B</text>
+<rect x="924.00" y="198.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#56c6e6" stroke-opacity="0.5"/>
+<rect x="924.00" y="198.00" width="3" height="94.00" rx="2" fill="#56c6e6"/>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">算力 COMPUTE</text>
+<text x="942.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">自研昆仑芯 P800</text>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">+ 外购 GPU（出口管制下替代）</text>
+<rect x="924.00" y="308.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="308.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="341.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">百度联盟 TRAFFIC</text>
+<text x="942.00" y="362.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">流量获取成本 TAC</text>
+<text x="942.00" y="379.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">第三方网站/App 分成</text>
+<rect x="924.00" y="418.00" width="214" height="94.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="418.00" width="3" height="94.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="451.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">内容版权 CONTENT</text>
+<text x="942.00" y="472.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">爱奇艺版权+自制</text>
+<text x="942.00" y="489.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">COGS ¥21.5B (iQIYI)</text>
+<rect x="924.00" y="528.00" width="214" height="94.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="528.00" width="3" height="94.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="561.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">AI 资本开支 CAPEX</text>
+<text x="942.00" y="582.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">FY25 capex ¥12.1B</text>
+<text x="942.00" y="599.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#d49b96">Q1'26 核心capex ¥5.8B (+190% QoQ)</text>
+<rect x="42.00" y="648.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="650.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="650.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="650.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="650.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="643.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="747.00" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<rect x="807.00" y="643.00" width="11" height="11" rx="3" fill="#56c6e6"/>
+<text x="826.00" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">compute</text>
+<rect x="900.40" y="643.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="919.40" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">custom modules</text>
+<rect x="42.00" y="663.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="61.00" y="672.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="142.60" y="663.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="161.60" y="672.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="228.80" y="663.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="247.80" y="672.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">in-house silicon</text>
+<line x1="42" y1="688.00" x2="1138" y2="688.00" stroke="#222a3a"/>
+<text x="42.00" y="704.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY · 资金流要点</text>
+<rect x="42.00" y="724.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#56c6e6" stroke-opacity="0.28"/>
+<rect x="42.00" y="724.00" width="3" height="116.00" rx="2" fill="#56c6e6"/>
+<text x="58.00" y="748.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#56c6e6" letter-spacing="1">需求拐点 · AI 云</text>
+<text x="58.00" y="766.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AI 云成为新增长引擎</text>
+<text x="58.00" y="790.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Q1'26</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 云基础设施收入</tspan><tspan fill="#f4d58a" font-weight="700"> ¥8.8B</tspan><tspan fill="#9aa3b8" font-weight="400"> （</tspan><tspan fill="#f4d58a" font-weight="700"> +79%</tspan><tspan fill="#f4d58a" font-weight="700"> YoY</tspan><tspan fill="#9aa3b8" font-weight="400"> ），GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 云</tspan><tspan fill="#f4d58a" font-weight="700"> +184%</tspan><tspan fill="#f4d58a" font-weight="700"> YoY</tspan></text>
+<text x="58.00" y="806.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">；AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 驱动收入首次过半（占百度通用业务</tspan><tspan fill="#f4d58a" font-weight="700"> 52%</tspan><tspan fill="#9aa3b8" font-weight="400"> ）。</tspan></text>
+<rect x="412.00" y="724.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="412.00" y="724.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="428.00" y="748.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">结构性下行 · 广告</text>
+<text x="428.00" y="766.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">在线营销持续萎缩</text>
+<text x="428.00" y="790.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">在线营销收入</tspan><tspan fill="#9aa3b8" font-weight="400"> Q1'26</tspan><tspan fill="#f4d58a" font-weight="700"> ¥12.6B</tspan><tspan fill="#9aa3b8" font-weight="400"> （</tspan><tspan fill="#f4d58a" font-weight="700"> -22%</tspan><tspan fill="#f4d58a" font-weight="700"> YoY</tspan><tspan fill="#9aa3b8" font-weight="400"> ），FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 全年</tspan><tspan fill="#f4d58a" font-weight="700"> ¥67.8B</tspan><tspan fill="#9aa3b8" font-weight="400"> （FY23</tspan></text>
+<text x="428.00" y="806.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">¥81.2B</tspan><tspan fill="#9aa3b8" font-weight="400"> ）——AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 答案替代赞助蓝链的主动取舍。</tspan></text>
+<rect x="782.00" y="724.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="724.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="748.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">现金流压力 · CAPEX</text>
+<text x="798.00" y="766.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">AI 算力周期吞噬现金</text>
+<text x="798.00" y="790.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 经营现金流转负</tspan><tspan fill="#f4d58a" font-weight="700"> ¥(3.0)B</tspan><tspan fill="#9aa3b8" font-weight="400"> （FY24</tspan><tspan fill="#f4d58a" font-weight="700"> +¥21.2B</tspan><tspan fill="#9aa3b8" font-weight="400"> ）；核心</tspan><tspan fill="#9aa3b8" font-weight="400"> capex</tspan><tspan fill="#9aa3b8" font-weight="400"> Q1'26</tspan></text>
+<text x="798.00" y="806.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">飙至</tspan><tspan fill="#f4d58a" font-weight="700"> ¥5.8B</tspan><tspan fill="#9aa3b8" font-weight="400"> （上季</tspan><tspan fill="#f4d58a" font-weight="700"> ¥2.0B</tspan><tspan fill="#9aa3b8" font-weight="400"> ）以支撑</tspan><tspan fill="#9aa3b8" font-weight="400"> GPU</tspan><tspan fill="#9aa3b8" font-weight="400"> 云。</tspan></text>
+<rect x="42.00" y="854.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="854.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="878.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">隐藏价值 · 昆仑</text>
+<text x="58.00" y="896.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">昆仑芯拟分拆上市</text>
+<text x="58.00" y="920.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">自研昆仑</tspan><tspan fill="#9aa3b8" font-weight="400"> P800（FP16</tspan><tspan fill="#f4d58a" font-weight="700"> 345</tspan><tspan fill="#f4d58a" font-weight="700"> TFLOPS</tspan><tspan fill="#9aa3b8" font-weight="400"> ，</tspan><tspan fill="#f4d58a" font-weight="700"> 96GB</tspan><tspan fill="#9aa3b8" font-weight="400"> GDDR6）支撑出口管制下</tspan><tspan fill="#9aa3b8" font-weight="400"> GPU</tspan></text>
+<text x="58.00" y="936.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">替代；昆仑芯（Kunlunxin）拟</tspan><tspan fill="#9aa3b8" font-weight="400"> IPO</tspan><tspan fill="#9aa3b8" font-weight="400"> 有望释放隐藏价值。</tspan></text>
+<rect x="412.00" y="854.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="412.00" y="854.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="428.00" y="878.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">可选性 · ROBOTAXI</text>
+<text x="428.00" y="896.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">萝卜快跑全球扩张</text>
+<text x="428.00" y="920.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Apollo</tspan><tspan fill="#9aa3b8" font-weight="400"> Go</tspan><tspan fill="#9aa3b8" font-weight="400"> 累计载客</tspan><tspan fill="#f4d58a" font-weight="700"> &gt;2200万</tspan><tspan fill="#9aa3b8" font-weight="400"> 单，26</tspan><tspan fill="#9aa3b8" font-weight="400"> 城运营；与</tspan><tspan fill="#f4d58a" font-weight="700"> Uber</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#f4d58a" font-weight="700"> Lyft</tspan><tspan fill="#9aa3b8" font-weight="400"> 合作出海——被</tspan></text>
+<text x="428.00" y="936.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Fast</tspan><tspan fill="#9aa3b8" font-weight="400"> Company</tspan><tspan fill="#9aa3b8" font-weight="400"> 列为与</tspan><tspan fill="#9aa3b8" font-weight="400"> Waymo</tspan><tspan fill="#9aa3b8" font-weight="400"> 并列的全球领先</tspan><tspan fill="#9aa3b8" font-weight="400"> Robotaxi。</tspan></text>
+<rect x="782.00" y="854.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="782.00" y="854.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="798.00" y="878.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">拖累 · 内容</text>
+<text x="798.00" y="896.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">爱奇艺内容成本</text>
+<text x="798.00" y="920.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">iQIYI</tspan><tspan fill="#9aa3b8" font-weight="400"> FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 收入</tspan><tspan fill="#f4d58a" font-weight="700"> ¥27.3B</tspan><tspan fill="#9aa3b8" font-weight="400"> （</tspan><tspan fill="#f4d58a" font-weight="700"> -7%</tspan><tspan fill="#f4d58a" font-weight="700"> YoY</tspan><tspan fill="#9aa3b8" font-weight="400"> ），内容版权</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS</tspan><tspan fill="#f4d58a" font-weight="700"> ¥21.5B</tspan></text>
+<text x="798.00" y="936.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">是最大现金消耗之一；长视频订阅承压。</tspan></text>
+<text x="590.00" y="1006.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Baidu FY2025 20-F (d38065d20f.htm) + Q1'26 results 6-K (d156481dex991.htm); Apollo Go / Kunlun metrics from 20-F Business + Q1'26 release</text>
+</svg>

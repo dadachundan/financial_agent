@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-label="revenue donut"><rect x="0" y="0" width="720" height="460" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">百度 Baidu 收入按经营分部 segment donut · FY2025（RMB M）</text>
+<path d="M 288.00,107.20 A 132 132 0 1 1 160.09,206.60 L 212.42,219.94 A 78 78 0 1 0 288.00,161.20 Z" fill="#2563eb"/>
+<path d="M 160.09,206.60 A 132 132 0 0 1 288.00,107.20 L 288.00,161.20 A 78 78 0 0 0 212.42,219.94 Z" fill="#15803d"/>
+<text x="288.00" y="235.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="800" fill="#1f2933">BIDU</text>
+<text x="288.00" y="255.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#52606d">¥129.8B</text>
+<text x="288.00" y="271.20" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#8a97a3">total</text>
+<line x1="372.68" y1="348.17" x2="388.68" y2="348.17" stroke="#2563eb" stroke-width="1.4"/>
+<text x="392.68" y="346.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">百度通用业务 Baidu General Business</text>
+<text x="392.68" y="360.17" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥102.5B  (79.0%)</text>
+<line x1="203.32" y1="130.23" x2="187.32" y2="130.23" stroke="#15803d" stroke-width="1.4"/>
+<text x="183.32" y="128.23" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="700" fill="#1f2933">爱奇艺 iQIYI</text>
+<text x="183.32" y="142.23" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥27.3B  (21.0%)</text>
+<text x="360.00" y="444.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Baidu FY2025 20-F, Segment Reporting (operating segments; d38065d20f.htm)</text>
+</svg>

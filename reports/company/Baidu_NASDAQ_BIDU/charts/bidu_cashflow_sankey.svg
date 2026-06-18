@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">百度 Baidu 现金流量 cash-flow Sankey · FY2025（人民币百万元 RMB M）</text>
+<path d="M 204.00,63.22 C 306.00,63.22 306.00,78.00 408.00,78.00 L 408.00,392.31 C 306.00,392.31 306.00,377.53 204.00,377.53 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,89.88 C 526.00,89.88 526.00,103.88 424.00,103.88 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,103.88 C 526.00,103.88 526.00,103.88 628.00,103.88 L 628.00,319.81 C 526.00,319.81 526.00,319.81 424.00,319.81 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,319.81 C 526.00,319.81 526.00,333.81 628.00,333.81 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,103.88 C 746.00,103.88 746.00,194.04 848.00,194.04 L 848.00,297.75 C 746.00,297.75 746.00,207.59 644.00,207.59 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,207.59 C 746.00,207.59 746.00,311.75 848.00,311.75 L 848.00,423.96 C 746.00,423.96 746.00,319.81 644.00,319.81 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,391.53 C 306.00,391.53 306.00,392.31 408.00,392.31 L 408.00,539.56 C 306.00,539.56 306.00,538.78 204.00,538.78 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,552.78 C 306.00,552.78 306.00,539.56 408.00,539.56 L 408.00,541.56 C 306.00,541.56 306.00,554.78 204.00,554.78 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="63.22" width="16" height="314.31" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="391.53" width="16" height="147.25" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="552.78" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="25.88" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="103.88" width="16" height="215.92" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="333.81" width="16" height="220.19" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="194.04" width="16" height="103.71" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="311.75" width="16" height="112.21" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="217.37" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="230.37" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥36.6B  (68.0%)</text>
+<rect x="207.00" y="356.75" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="368.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="210.00" y="381.75" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥17.1B  (31.9%)</text>
+<rect x="207.00" y="518.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="530.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FX effect</text>
+<text x="210.00" y="543.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥51.0M  (0.09%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥53.8B  (100.0%)</text>
+<rect x="647.00" y="46.00" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥3.0B  (5.6%)</text>
+<rect x="647.00" y="85.88" width="100.50" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="97.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="110.88" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥25.1B  (46.7%)</text>
+<text x="653.00" y="440.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="453.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥25.6B  (47.7%)</text>
+<text x="873.00" y="242.89" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">购建固定资产 Capex</text>
+<text x="873.00" y="255.89" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥12.1B  (22.4%)</text>
+<text x="873.00" y="364.85" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">投资其他净流出 Net inv.</text>
+<text x="873.00" y="377.85" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">¥13.1B  (24.3%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">FY2025 经营现金流转负 ¥(3,013)M（FY24 +¥21,234M）：AI 算力周期下营运资本+capex 拉动；CFI ¥(25,136)M、CFF +¥17,142M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Baidu FY2025 20-F, Consolidated Statements of Cash Flows (d38065d20f.htm)</text>
+</svg>
