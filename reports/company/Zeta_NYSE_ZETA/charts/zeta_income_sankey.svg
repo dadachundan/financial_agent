@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Zeta Global FY2025 利润表 Sankey (US$ 百万)</text>
+<path d="M 204.00,78.00 C 258.00,78.00 258.00,85.00 312.00,85.00 L 312.00,386.93 C 258.00,386.93 258.00,379.93 204.00,379.93 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 452.00,78.00 C 506.00,78.00 506.00,150.15 560.00,150.15 L 560.00,152.15 C 506.00,152.15 506.00,80.00 452.00,80.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 452.00,80.00 C 506.00,80.00 506.00,166.15 560.00,166.15 L 560.00,411.85 C 506.00,411.85 506.00,325.70 452.00,325.70 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 328.00,85.00 C 382.00,85.00 382.00,78.00 436.00,78.00 L 436.00,325.39 C 382.00,325.39 382.00,332.39 328.00,332.39 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 328.00,332.39 C 382.00,332.39 382.00,339.39 436.00,339.39 L 436.00,500.00 C 382.00,500.00 382.00,493.00 328.00,493.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 700.00,144.15 C 754.00,144.15 754.00,280.00 808.00,280.00 L 808.00,282.00 C 754.00,282.00 754.00,146.15 700.00,146.15 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 700.00,146.15 C 754.00,146.15 754.00,296.00 808.00,296.00 L 808.00,298.00 C 754.00,298.00 754.00,148.15 700.00,148.15 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,150.15 C 630.00,150.15 630.00,144.15 684.00,144.15 L 684.00,146.15 C 630.00,146.15 630.00,152.15 576.00,152.15 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 576.00,166.15 C 630.00,166.15 630.00,160.15 684.00,160.15 L 684.00,339.34 C 630.00,339.34 630.00,345.34 576.00,345.34 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,345.34 C 630.00,345.34 630.00,353.34 684.00,353.34 L 684.00,389.99 C 630.00,389.99 630.00,381.99 576.00,381.99 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 576.00,381.99 C 630.00,381.99 630.00,403.99 684.00,403.99 L 684.00,433.85 C 630.00,433.85 630.00,411.85 576.00,411.85 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,393.93 C 258.00,393.93 258.00,386.93 312.00,386.93 L 312.00,493.00 C 258.00,493.00 258.00,500.00 204.00,500.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 576.00,425.85 C 630.00,425.85 630.00,146.15 684.00,146.15 L 684.00,148.15 C 630.00,148.15 630.00,427.85 576.00,427.85 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="78.00" width="16" height="301.93" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="393.93" width="16" height="106.07" rx="1.5" fill="#2563eb"/>
+<rect x="312.00" y="85.00" width="16" height="408.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="436.00" y="78.00" width="16" height="247.39" rx="1.5" fill="#15803d"/>
+<rect x="436.00" y="339.39" width="16" height="160.61" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="150.15" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="560.00" y="166.15" width="16" height="245.70" rx="1.5" fill="#dc2626"/>
+<rect x="560.00" y="425.85" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
+<rect x="684.00" y="144.15" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="684.00" y="160.15" width="16" height="179.19" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="353.34" width="16" height="36.65" rx="1.5" fill="#dc2626"/>
+<rect x="684.00" y="403.99" width="16" height="29.86" rx="1.5" fill="#dc2626"/>
+<rect x="808.00" y="280.00" width="16" height="2.00" rx="1.5" fill="#15803d"/>
+<rect x="808.00" y="296.00" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="225.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Direct platform (74%)</text>
+<text x="179.00" y="238.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$965.5M  (74.0%)</text>
+<text x="179.00" y="443.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Integrated platform (26%)</text>
+<text x="179.00" y="456.96" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$339.2M  (26.0%)</text>
+<rect x="331.00" y="67.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="334.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
+<text x="334.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (100.0%)</text>
+<rect x="455.00" y="60.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
+<text x="458.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$791.1M  (60.6%)</text>
+<rect x="455.00" y="321.39" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="458.00" y="333.39" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
+<text x="458.00" y="346.39" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$513.6M  (39.4%)</text>
+<rect x="579.00" y="132.15" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="144.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
+<text x="582.00" y="157.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$5.4M  (0.41%)</text>
+<rect x="579.00" y="157.15" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="582.00" y="169.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
+<text x="582.00" y="182.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$785.7M  (60.2%)</text>
+<text x="551.00" y="423.85" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
+<text x="551.00" y="436.85" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$400.0K  (0.03%)</text>
+<rect x="703.00" y="126.15" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="138.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
+<text x="706.00" y="151.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$33.1M  (-2.5%)</text>
+<rect x="703.00" y="151.15" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="163.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
+<text x="706.00" y="176.15" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$573.0M  (43.9%)</text>
+<rect x="703.00" y="335.34" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="347.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
+<text x="706.00" y="360.34" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$117.2M  (9.0%)</text>
+<rect x="703.00" y="385.99" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="706.00" y="397.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other OpEx</text>
+<text x="706.00" y="410.99" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$95.5M  (7.3%)</text>
+<text x="833.00" y="278.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
+<text x="833.00" y="291.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$31.5M  (-2.4%)</text>
+<text x="833.00" y="303.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
+<text x="833.00" y="316.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-US$1.6M  (-0.12%)</text>
+<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Zeta 10-K FY2025 (period 2025-12-31) — Consolidated Statements of Operations</text>
+</svg>

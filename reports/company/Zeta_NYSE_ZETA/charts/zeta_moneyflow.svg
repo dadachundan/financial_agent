@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 918" width="1180" height="918" role="img" aria-label="Zeta 的钱从哪来、流向哪：广告主预算 → ZMP → 媒体与云的成本池" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="918" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">MARKETING-CLOUD MONEY FLOW · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">Zeta 的钱从哪来、流向哪：广告主预算 → ZMP → 媒体与云的成本池</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">企业营销预算流入 Zeta Marketing Platform；Zeta 留下订阅+激活的毛利，再把大部分作为 COGS（媒体采买、数据、云算力）支付给上游——COGS 占营业收入约 39%，是利润率的最大杠杆。</text>
+<ellipse cx="1031.00" cy="357.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="522.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="522.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁在付钱 (需求)</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Zeta 平台 (ZMP)</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱在哪里沉淀 (成本池)</text>
+<path d="M 256.00 267.00 C 369.50 267.00, 369.50 294.00, 483.00 294.00" fill="none" stroke="url(#mfgold)" stroke-width="19.20" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 358.00 C 369.50 358.00, 369.50 315.60, 483.00 315.60" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 445.50 C 369.50 445.50, 369.50 335.60, 483.00 335.60" fill="none" stroke="url(#mfgold)" stroke-width="16.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 280.60 C 369.50 280.60, 369.50 406.00, 483.00 406.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 374.00 C 369.50 374.00, 369.50 414.00, 483.00 414.00" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 456.00 C 369.50 456.00, 369.50 420.50, 483.00 420.50" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 298.70 C 810.50 298.70, 810.50 238.30, 924.00 238.30" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 314.70 C 810.50 314.70, 810.50 336.50, 924.00 336.50" fill="none" stroke="url(#mfgold)" stroke-width="8.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 332.50 C 810.50 332.50, 810.50 478.50, 924.00 478.50" fill="none" stroke="url(#mfgold)" stroke-width="17.60" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 419.70 C 810.50 419.70, 810.50 489.80, 924.00 489.80" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 410.00 C 810.50 410.00, 810.50 257.50, 924.00 257.50" fill="none" stroke="url(#mfgold)" stroke-width="14.40" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<path d="M 697.00 321.20 C 810.50 321.20, 810.50 405.00, 924.00 405.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.78" stroke-dasharray="0.1 11"/>
+<text x="810.50" y="262.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">$513.6M COGS</text>
+<text x="810.50" y="327.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">第三方媒体</text>
+<rect x="42.00" y="236.00" width="214" height="70.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="236.00" width="3" height="70.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="269.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">消费品与零售
+Consumer &amp; Retail</text>
+<text x="60.00" y="290.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY2025 营收 24%</text>
+<rect x="42.00" y="322.00" width="214" height="80.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="42.00" y="322.00" width="3" height="80.00" rx="2" fill="#7fa8f5"/>
+<text x="60.00" y="355.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">旅游/保险/电信/金融
+Travel/Ins/Telecom/Fin</text>
+<text x="60.00" y="376.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">合计 40% 营收</text>
+<rect x="42.00" y="418.00" width="214" height="60.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="42.00" y="418.00" width="3" height="60.00" rx="2" fill="#e9b658"/>
+<text x="60.00" y="451.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">其他垂直 + 政治广告
+Other + Political</text>
+<text x="60.00" y="472.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">36% 营收</text>
+<rect x="483.00" y="266.50" width="214" height="95.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="483.00" y="266.50" width="3" height="95.00" rx="2" fill="#f2655f"/>
+<text x="501.00" y="299.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Direct platform
+直接平台</text>
+<text x="501.00" y="320.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">FY2025 营收 74%</text>
+<text x="501.00" y="337.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">$965.5M</text>
+<text x="501.00" y="354.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">订阅+使用量</text>
+<rect x="483.00" y="377.50" width="214" height="70.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="483.00" y="377.50" width="3" height="70.00" rx="2" fill="#a78bfa"/>
+<text x="501.00" y="410.50" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">Integrated platform
+整合平台</text>
+<text x="501.00" y="431.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">FY2025 营收 26%</text>
+<text x="501.00" y="448.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">$339.2M</text>
+<text x="501.00" y="465.50" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">第三方媒体过路费</text>
+<rect x="924.00" y="198.00" width="214" height="95.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="924.00" y="198.00" width="3" height="95.00" rx="2" fill="#f2655f"/>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">媒体与数据采买
+Media &amp; data (COGS)</text>
+<text x="942.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">COGS $513.6M</text>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">占营收 ~39%</text>
+<rect x="924.00" y="309.00" width="214" height="55.00" rx="12" fill="#0f1622" stroke="#7fa8f5" stroke-opacity="0.5"/>
+<rect x="924.00" y="309.00" width="3" height="55.00" rx="2" fill="#7fa8f5"/>
+<text x="942.00" y="342.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">云算力
+AWS / GCP / Azure</text>
+<text x="942.00" y="363.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8ca6d6">混合云 + Kubernetes</text>
+<rect x="924.00" y="380.00" width="214" height="50.00" rx="12" fill="#15121f" stroke="#a78bfa" stroke-opacity="0.5"/>
+<rect x="924.00" y="380.00" width="3" height="50.00" rx="2" fill="#a78bfa"/>
+<text x="942.00" y="413.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">OpenAI
+Athena AI 推理</text>
+<text x="942.00" y="434.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#b9a6f5">Athena 编排层动力</text>
+<rect x="924.00" y="446.00" width="214" height="70.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="446.00" width="3" height="70.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="479.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">员工成本
+~3,300 人 (60% 离岸)</text>
+<text x="942.00" y="500.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">S&amp;M $340M·R&amp;D $117M·G&amp;A $233M</text>
+<rect x="42.00" y="542.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="546.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="544.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="544.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="544.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="544.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="546.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="546.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="537.00" width="11" height="11" rx="3" fill="#f2655f"/>
+<text x="747.00" y="546.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<rect x="807.00" y="537.00" width="11" height="11" rx="3" fill="#a78bfa"/>
+<text x="826.00" y="546.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">memory</text>
+<rect x="893.20" y="537.00" width="11" height="11" rx="3" fill="#7fa8f5"/>
+<text x="912.20" y="546.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">buyer</text>
+<rect x="972.20" y="537.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="991.20" y="546.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="582.00" x2="1138" y2="582.00" stroke="#222a3a"/>
+<text x="42.00" y="598.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY — ZETA FY2025</text>
+<rect x="42.00" y="618.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="618.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="642.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">需求端 · 谁在付钱</text>
+<text x="58.00" y="660.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">前五垂直占 64% 营收</text>
+<text x="58.00" y="684.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">消费品与零售</tspan><tspan fill="#f4d58a" font-weight="700"> 24%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、旅游</tspan><tspan fill="#9aa3b8" font-weight="400"> 11%、保险</tspan><tspan fill="#9aa3b8" font-weight="400"> 11%、电信</tspan><tspan fill="#9aa3b8" font-weight="400"> 10%、金融</tspan><tspan fill="#9aa3b8" font-weight="400"> 8%——预算对</tspan></text>
+<text x="58.00" y="700.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">GDP/广告周期敏感，是营收周期性的来源。</tspan></text>
+<rect x="412.00" y="618.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="412.00" y="618.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="428.00" y="642.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">营收结构</text>
+<text x="428.00" y="660.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Direct 74% vs Integrated 26%</text>
+<text x="428.00" y="684.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Direct</tspan><tspan fill="#f4d58a" font-weight="700"> platform</tspan><tspan fill="#f4d58a" font-weight="700"> $965.5M</tspan><tspan fill="#9aa3b8" font-weight="400"> 是完全在</tspan><tspan fill="#9aa3b8" font-weight="400"> ZMP</tspan><tspan fill="#9aa3b8" font-weight="400"> 上的高质量订阅+使用量收入；</tspan></text>
+<text x="428.00" y="700.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">Integrated</tspan><tspan fill="#f4d58a" font-weight="700"> $339.2M</tspan><tspan fill="#9aa3b8" font-weight="400"> 被空头视为第三方媒体过路费，是估值折让的来源之一。</tspan></text>
+<rect x="782.00" y="618.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="782.00" y="618.00" width="3" height="116.00" rx="2" fill="#f2655f"/>
+<text x="798.00" y="642.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">成本池 · 最大杠杆</text>
+<text x="798.00" y="660.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">COGS 占营收 ~39%</text>
+<text x="798.00" y="684.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">$513.6M</tspan><tspan fill="#9aa3b8" font-weight="400"> 媒体与数据采买是最大的现金外流；毛利率</tspan><tspan fill="#f4d58a" font-weight="700"> 60.6%</tspan></text>
+<text x="798.00" y="700.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">的提升主要靠把整合平台占比压低、把高毛利的</tspan><tspan fill="#9aa3b8" font-weight="400"> Direct/Answers</tspan><tspan fill="#9aa3b8" font-weight="400"> 做大。</tspan></text>
+<rect x="42.00" y="748.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#7fa8f5" stroke-opacity="0.28"/>
+<rect x="42.00" y="748.00" width="3" height="116.00" rx="2" fill="#7fa8f5"/>
+<text x="58.00" y="772.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#7fa8f5" letter-spacing="1">AI 基础设施</text>
+<text x="58.00" y="790.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">云 + OpenAI 推理</text>
+<text x="58.00" y="814.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">Zeta</tspan><tspan fill="#9aa3b8" font-weight="400"> 运行</tspan><tspan fill="#f4d58a" font-weight="700"> AWS/GCP/Azure</tspan><tspan fill="#9aa3b8" font-weight="400"> 混合云；</tspan><tspan fill="#f4d58a" font-weight="700"> Athena</tspan><tspan fill="#9aa3b8" font-weight="400"> 的生成式推理由</tspan><tspan fill="#f4d58a" font-weight="700"> OpenAI</tspan></text>
+<text x="58.00" y="830.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">合作驱动，AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 成本随</tspan><tspan fill="#9aa3b8" font-weight="400"> Athena</tspan><tspan fill="#9aa3b8" font-weight="400"> 使用上升（GA</tspan><tspan fill="#9aa3b8" font-weight="400"> 首周</tspan><tspan fill="#9aa3b8" font-weight="400"> &gt;60%</tspan><tspan fill="#9aa3b8" font-weight="400"> AI</tspan><tspan fill="#9aa3b8" font-weight="400"> 使用）。</tspan></text>
+<rect x="412.00" y="748.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="748.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="772.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">人力 · 离岸杠杆</text>
+<text x="428.00" y="790.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">~3,300 人，60% 在美国境外</text>
+<text x="428.00" y="814.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">S&amp;M</tspan><tspan fill="#f4d58a" font-weight="700"> $340M</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> R&amp;D</tspan><tspan fill="#f4d58a" font-weight="700"> $117M</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> G&amp;A</tspan><tspan fill="#f4d58a" font-weight="700"> $233M</tspan></text>
+<text x="428.00" y="830.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">；印度/欧盟工程中心提供成本杠杆，是经营利润率改善的关键。</tspan></text>
+<rect x="782.00" y="748.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#a78bfa" stroke-opacity="0.28"/>
+<rect x="782.00" y="748.00" width="3" height="116.00" rx="2" fill="#a78bfa"/>
+<text x="798.00" y="772.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#a78bfa" letter-spacing="1">钱在哪里沉淀</text>
+<text x="798.00" y="790.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">上游是媒体与云，不是供应链</text>
+<text x="798.00" y="814.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">与硬件公司不同，Zeta</tspan><tspan fill="#9aa3b8" font-weight="400"> 没有实物供应链——现金最终沉淀在</tspan><tspan fill="#f4d58a" font-weight="700"> 媒体库存方</tspan><tspan fill="#9aa3b8" font-weight="400"> 、</tspan><tspan fill="#f4d58a" font-weight="700"> 云厂商</tspan><tspan fill="#9aa3b8" font-weight="400"> 与</tspan><tspan fill="#f4d58a" font-weight="700"> 自有人力</tspan></text>
+<text x="798.00" y="830.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">；护城河在</tspan><tspan fill="#9aa3b8" font-weight="400"> SuperGraph</tspan><tspan fill="#9aa3b8" font-weight="400"> 数据，不在任何单一供应商。</tspan></text>
+<text x="590.00" y="900.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Zeta 10-K FY2025 — revenue by vertical (p.5) / direct 74% vs integrated 26% / COGS $513.6M / opex / ~3,300 employees (p.7)</text>
+</svg>
