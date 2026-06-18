@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Duolingo FY2025 现金流 Sankey (US$M)</text>
+<path d="M 644.00,64.00 C 746.00,64.00 746.00,286.23 848.00,286.23 L 848.00,304.77 C 746.00,304.77 746.00,82.54 644.00,82.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,82.54 C 746.00,82.54 746.00,318.77 848.00,318.77 L 848.00,331.77 C 746.00,331.77 746.00,95.54 644.00,95.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,71.00 C 306.00,71.00 306.00,78.00 408.00,78.00 L 408.00,387.69 C 306.00,387.69 306.00,380.69 204.00,380.69 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,95.54 C 526.00,95.54 526.00,109.54 424.00,109.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,109.54 C 526.00,109.54 526.00,109.54 628.00,109.54 L 628.00,120.93 C 526.00,120.93 526.00,120.93 424.00,120.93 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,120.93 C 526.00,120.93 526.00,134.93 628.00,134.93 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,394.69 C 306.00,394.69 306.00,387.69 408.00,387.69 L 408.00,540.00 C 306.00,540.00 306.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="309.69" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="394.69" width="16" height="152.31" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="31.54" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="109.54" width="16" height="11.39" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="134.93" width="16" height="419.07" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="286.23" width="16" height="18.54" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="318.77" width="16" height="13.00" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="222.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="235.84" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$788.5M  (67.0%)</text>
+<rect x="207.00" y="376.69" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="388.69" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="401.69" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$387.8M  (33.0%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.2B  (100.0%)</text>
+<rect x="647.00" y="46.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$80.3M  (6.8%)</text>
+<rect x="647.00" y="91.54" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="103.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="116.54" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$29.0M  (2.5%)</text>
+<text x="653.00" y="341.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="354.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.1B  (90.7%)</text>
+<text x="873.00" y="292.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net investment purchases 净投资买入</text>
+<text x="873.00" y="305.50" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$47.2M  (4.0%)</text>
+<text x="873.00" y="322.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Acquisitions 收购</text>
+<text x="873.00" y="335.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$33.1M  (2.8%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">FCF = OCF 387.8 − capex 27.4 (PP&amp;E 18.1 + 资本化软件 9.3) = US$360.4M; FY25 无重大回购 (4 亿美元回购计划 2026 年才启动)  ·  Free Cash Flow = CFO − CapEx = US$360.4M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: DUOL FY2025 10-K (cash-flow statement, p. 86) · SEC EDGAR</text>
+</svg>

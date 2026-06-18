@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Duolingo 资产负债表 Sankey (2025-12-31, US$M)</text>
+<path d="M 204.00,64.26 C 262.00,64.26 262.00,106.26 320.00,106.26 L 320.00,310.19 C 262.00,310.19 262.00,268.19 204.00,268.19 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,99.00 C 790.00,99.00 790.00,85.00 848.00,85.00 L 848.00,182.64 C 790.00,182.64 790.00,196.64 732.00,196.64 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,196.64 C 790.00,196.64 790.00,196.64 848.00,196.64 L 848.00,207.46 C 790.00,207.46 790.00,207.46 732.00,207.46 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,106.00 C 658.00,106.00 658.00,99.00 716.00,99.00 L 716.00,207.46 C 658.00,207.46 658.00,214.46 600.00,214.46 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,214.46 C 658.00,214.46 658.00,221.46 716.00,221.46 L 716.00,239.95 C 658.00,239.95 658.00,232.95 600.00,232.95 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,106.26 C 394.00,106.26 394.00,113.26 452.00,113.26 L 452.00,395.93 C 394.00,395.93 394.00,388.93 336.00,388.93 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 468.00,113.26 C 526.00,113.26 526.00,106.00 584.00,106.00 L 584.00,232.95 C 526.00,232.95 526.00,240.21 468.00,240.21 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,240.21 C 526.00,240.21 526.00,246.95 584.00,246.95 L 584.00,512.00 C 526.00,512.00 526.00,505.26 468.00,505.26 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,221.46 C 790.00,221.46 790.00,221.46 848.00,221.46 L 848.00,239.95 C 790.00,239.95 790.00,239.95 732.00,239.95 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,246.95 C 658.00,246.95 658.00,253.95 716.00,253.95 L 716.00,519.00 C 658.00,519.00 658.00,512.00 600.00,512.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,253.95 C 790.00,253.95 790.00,253.95 848.00,253.95 L 848.00,462.29 C 790.00,462.29 790.00,462.29 732.00,462.29 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,462.29 C 790.00,462.29 790.00,476.29 848.00,476.29 L 848.00,533.00 C 790.00,533.00 790.00,519.00 732.00,519.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,282.19 C 262.00,282.19 262.00,310.19 320.00,310.19 L 320.00,330.67 C 262.00,330.67 262.00,302.67 204.00,302.67 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,316.67 C 262.00,316.67 262.00,330.67 320.00,330.67 L 320.00,362.70 C 262.00,362.70 262.00,348.70 204.00,348.70 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,362.70 C 262.00,362.70 262.00,362.70 320.00,362.70 L 320.00,382.91 C 262.00,382.91 262.00,382.91 204.00,382.91 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,396.91 C 262.00,396.91 262.00,382.91 320.00,382.91 L 320.00,388.93 C 262.00,388.93 262.00,402.93 204.00,402.93 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,402.93 C 394.00,402.93 394.00,395.93 452.00,395.93 L 452.00,504.74 C 394.00,504.74 394.00,511.74 336.00,511.74 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,416.93 C 262.00,416.93 262.00,402.93 320.00,402.93 L 320.00,429.52 C 262.00,429.52 262.00,443.52 204.00,443.52 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,457.52 C 262.00,457.52 262.00,429.52 320.00,429.52 L 320.00,474.24 C 262.00,474.24 262.00,502.24 204.00,502.24 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,516.24 C 262.00,516.24 262.00,474.24 320.00,474.24 L 320.00,511.74 C 262.00,511.74 262.00,553.74 204.00,553.74 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.26" width="16" height="203.93" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="282.19" width="16" height="20.48" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="316.67" width="16" height="32.03" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="362.70" width="16" height="20.21" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="396.91" width="16" height="6.02" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="416.93" width="16" height="26.58" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="457.52" width="16" height="44.73" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="516.24" width="16" height="37.50" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="106.26" width="16" height="282.68" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="402.93" width="16" height="108.81" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="113.26" width="16" height="391.49" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="106.00" width="16" height="126.95" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="246.95" width="16" height="265.05" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="99.00" width="16" height="108.46" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="221.46" width="16" height="18.50" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="253.95" width="16" height="265.05" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="85.00" width="16" height="97.64" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="196.64" width="16" height="10.82" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="221.46" width="16" height="18.50" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="253.95" width="16" height="208.34" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="476.29" width="16" height="56.71" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="161.23" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cash &amp; equivalents 现金</text>
+<text x="179.00" y="174.23" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.0B  (52.1%)</text>
+<text x="179.00" y="287.43" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Short-term investments 短期投资</text>
+<text x="179.00" y="300.43" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$104.1M  (5.2%)</text>
+<text x="179.00" y="327.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Accounts receivable 应收账款</text>
+<text x="179.00" y="340.69" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$162.8M  (8.2%)</text>
+<text x="179.00" y="367.81" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Deferred cost of rev 递延成本</text>
+<text x="179.00" y="380.81" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$102.7M  (5.2%)</text>
+<text x="179.00" y="394.93" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other current 其他流动</text>
+<text x="179.00" y="407.93" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$30.6M  (1.5%)</text>
+<text x="179.00" y="425.23" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Long-term investments 长期投资</text>
+<text x="179.00" y="438.23" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$135.1M  (6.8%)</text>
+<text x="179.00" y="474.89" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Deferred tax assets 递延税资产</text>
+<text x="179.00" y="487.89" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$227.3M  (11.4%)</text>
+<text x="179.00" y="530.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Lease ROU + PP&amp;E + Goodwill 其他长期</text>
+<text x="179.00" y="543.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$190.6M  (9.6%)</text>
+<rect x="339.00" y="88.26" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="100.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="113.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.4B  (72.2%)</text>
+<rect x="339.00" y="384.93" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="396.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="409.93" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$553.0M  (27.8%)</text>
+<rect x="471.00" y="95.26" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="107.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="120.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.0B  (100.0%)</text>
+<rect x="603.00" y="88.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="100.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="113.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$645.2M  (32.4%)</text>
+<rect x="603.00" y="228.95" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="240.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="253.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (67.7%)</text>
+<rect x="735.00" y="81.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="93.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="106.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$551.2M  (27.7%)</text>
+<rect x="735.00" y="203.46" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="215.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="228.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$94.0M  (4.7%)</text>
+<rect x="735.00" y="235.95" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="247.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="260.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.3B  (67.7%)</text>
+<text x="873.00" y="130.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Deferred revenue 递延收入</text>
+<text x="873.00" y="143.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$496.2M  (24.9%)</text>
+<text x="873.00" y="199.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Other current liab 其他流动负债</text>
+<text x="873.00" y="212.05" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$55.0M  (2.8%)</text>
+<text x="873.00" y="227.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">LT lease + other 长期负债</text>
+<text x="873.00" y="240.71" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$94.0M  (4.7%)</text>
+<text x="873.00" y="355.12" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">APIC 实收资本</text>
+<text x="873.00" y="368.12" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.1B  (53.2%)</text>
+<text x="873.00" y="501.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Retained earnings 留存收益</text>
+<text x="873.00" y="514.65" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$288.2M  (14.5%)</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: DUOL FY2025 10-K (income/balance/cash-flow statements, pp. 83-86) · SEC EDGAR</text>
+</svg>
