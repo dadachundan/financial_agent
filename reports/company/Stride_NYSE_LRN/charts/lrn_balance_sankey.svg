@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Stride 资产负债表 Sankey (balance sheet, 2025-06-30, US$m)</text>
+<path d="M 204.00,65.46 C 262.00,65.46 262.00,93.46 320.00,93.46 L 320.00,273.86 C 262.00,273.86 262.00,245.86 204.00,245.86 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,85.00 C 790.00,85.00 790.00,78.00 848.00,78.00 L 848.00,133.46 C 790.00,133.46 790.00,140.46 732.00,140.46 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,92.00 C 658.00,92.00 658.00,85.00 716.00,85.00 L 716.00,140.46 C 658.00,140.46 658.00,147.46 600.00,147.46 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,147.46 C 658.00,147.46 658.00,154.46 716.00,154.46 L 716.00,248.09 C 658.00,248.09 658.00,241.09 600.00,241.09 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,93.46 C 394.00,93.46 394.00,100.46 452.00,100.46 L 452.00,399.39 C 394.00,399.39 394.00,392.39 336.00,392.39 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 468.00,100.46 C 526.00,100.46 526.00,92.00 584.00,92.00 L 584.00,241.09 C 526.00,241.09 526.00,249.55 468.00,249.55 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,249.55 C 526.00,249.55 526.00,255.09 584.00,255.09 L 584.00,526.00 C 526.00,526.00 526.00,520.46 468.00,520.46 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,154.46 C 790.00,154.46 790.00,147.46 848.00,147.46 L 848.00,223.68 C 790.00,223.68 790.00,230.68 732.00,230.68 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 732.00,230.68 C 790.00,230.68 790.00,237.68 848.00,237.68 L 848.00,255.09 C 790.00,255.09 790.00,248.09 732.00,248.09 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,255.09 C 658.00,255.09 658.00,262.09 716.00,262.09 L 716.00,533.00 C 658.00,533.00 658.00,526.00 600.00,526.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,259.86 C 262.00,259.86 262.00,273.86 320.00,273.86 L 320.00,376.32 C 262.00,376.32 262.00,362.32 204.00,362.32 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 732.00,262.09 C 790.00,262.09 790.00,269.09 848.00,269.09 L 848.00,540.00 C 790.00,540.00 790.00,533.00 732.00,533.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,376.32 C 262.00,376.32 262.00,376.32 320.00,376.32 L 320.00,392.39 C 262.00,392.39 262.00,392.39 204.00,392.39 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,406.39 C 394.00,406.39 394.00,399.39 452.00,399.39 L 452.00,517.54 C 394.00,517.54 394.00,524.54 336.00,524.54 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,406.39 C 262.00,406.39 262.00,406.39 320.00,406.39 L 320.00,445.30 C 262.00,445.30 262.00,445.30 204.00,445.30 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,459.30 C 262.00,459.30 262.00,445.30 320.00,445.30 L 320.00,493.80 C 262.00,493.80 262.00,507.80 204.00,507.80 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 204.00,521.80 C 262.00,521.80 262.00,493.80 320.00,493.80 L 320.00,524.54 C 262.00,524.54 262.00,552.54 204.00,552.54 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="65.46" width="16" height="180.40" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="259.86" width="16" height="102.46" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="376.32" width="16" height="16.08" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="406.39" width="16" height="38.91" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="459.30" width="16" height="48.50" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="521.80" width="16" height="30.74" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="93.46" width="16" height="298.94" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="406.39" width="16" height="118.15" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="100.46" width="16" height="417.09" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="92.00" width="16" height="149.09" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="255.09" width="16" height="270.91" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="85.00" width="16" height="55.46" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="154.46" width="16" height="93.63" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="262.09" width="16" height="270.91" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="78.00" width="16" height="55.46" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="147.46" width="16" height="76.22" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="237.68" width="16" height="17.41" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="269.09" width="16" height="270.91" rx="1.5" fill="#15803d"/>
+<line x1="188.00" y1="155.66" x2="182.00" y2="145.48" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="148.48" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">现金+有价证券 Cash &amp; securities</text>
+<text x="179.00" y="161.48" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$985.3M  (43.3%)</text>
+<line x1="188.00" y1="311.09" x2="182.00" y2="300.91" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="303.91" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">应收账款 AR</text>
+<text x="179.00" y="316.91" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$559.6M  (24.6%)</text>
+<line x1="188.00" y1="384.36" x2="182.00" y2="374.18" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="377.18" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他流动资产 Other current</text>
+<text x="179.00" y="390.18" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$87.8M  (3.9%)</text>
+<line x1="188.00" y1="425.85" x2="182.00" y2="415.67" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="418.67" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">PP&amp;E+软件+课程 PP&amp;E/software</text>
+<text x="179.00" y="431.67" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$212.5M  (9.3%)</text>
+<line x1="188.00" y1="483.55" x2="182.00" y2="473.38" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="476.38" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">商誉+无形 Goodwill/intangibles</text>
+<text x="179.00" y="489.38" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$264.9M  (11.6%)</text>
+<line x1="188.00" y1="537.17" x2="182.00" y2="527.00" stroke="#cbd5e1" stroke-width="1"/>
+<text x="179.00" y="530.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他非流动 Other non-current</text>
+<text x="179.00" y="543.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$167.9M  (7.4%)</text>
+<rect x="339.00" y="75.46" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="87.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="100.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.6B  (71.7%)</text>
+<rect x="339.00" y="388.39" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="400.39" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="413.39" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$645.3M  (28.3%)</text>
+<rect x="471.00" y="82.46" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="94.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="107.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$2.3B  (100.0%)</text>
+<rect x="603.00" y="74.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$814.3M  (35.7%)</text>
+<rect x="603.00" y="237.09" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="249.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="262.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.5B  (65.0%)</text>
+<rect x="735.00" y="67.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$302.9M  (13.3%)</text>
+<rect x="735.00" y="136.46" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="148.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="161.46" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$511.4M  (22.4%)</text>
+<rect x="735.00" y="244.09" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="256.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="269.09" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.5B  (65.0%)</text>
+<text x="873.00" y="102.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">流动负债 Current liabilities</text>
+<text x="873.00" y="115.73" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$302.9M  (13.3%)</text>
+<text x="873.00" y="182.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">长期债务 Long-term debt</text>
+<text x="873.00" y="195.57" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$416.3M  (18.3%)</text>
+<text x="873.00" y="243.39" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他长期负债 Other LT liab</text>
+<text x="873.00" y="256.39" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$95.1M  (4.2%)</text>
+<text x="873.00" y="401.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股东权益 Stockholders' equity</text>
+<text x="873.00" y="414.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$1.5B  (65.0%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">总资产 US$2,293.96m = 总负债 US$814.34m + 股东权益 US$1,479.6m。现金+有价证券(含受限)合计 US$1,011.4m。</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Stride Q4-FY25 8-K Ex-99.1 资产负债表 (2025-06-30)</text>
+</svg>

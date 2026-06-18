@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1056" width="1180" height="1056" role="img" aria-label="Stride 的钱从哪来、到哪去 (who pays → Stride → where it lands)" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif">
+<defs><linearGradient id="mfgold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1180" y2="0"><stop offset="0" stop-color="#f6dc97"/><stop offset="0.5" stop-color="#e9b658"/><stop offset="1" stop-color="#cf8f2c"/></linearGradient><radialGradient id="mfpool" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#34d399" stop-opacity="0.16"/><stop offset="1" stop-color="#34d399" stop-opacity="0"/></radialGradient></defs>
+<rect x="0" y="0" width="1180" height="1056" rx="16" fill="#0b0f1a"/>
+<text x="42.00" y="56.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="600" fill="#e9b658" letter-spacing="3">STRIDE (NYSE:LRN) MONEY FLOW · FY2025</text>
+<text x="42.00" y="100.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e8ecf5">Stride 的钱从哪来、到哪去 (who pays → Stride → where it lands)</text>
+<text x="42.00" y="142.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15" font-weight="400" fill="#8a93a8">州政府按生均经费 (per-pupil funding) 通过特许学校董事会付费给 Stride 运营整所学校;Stride 再把这笔钱投向持证教师、自研课程/LMS、学生设备与招生营销。约 95% 普通教育营收、100% 中高中职业学习营收来自按拨款型合同。</text>
+<ellipse cx="1031.00" cy="410.00" rx="190" ry="150" fill="url(#mfpool)"/>
+<line x1="369.50" y1="188.00" x2="369.50" y2="628.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<line x1="810.50" y1="188.00" x2="810.50" y2="628.00" stroke="#222a3a" stroke-dasharray="2 8"/>
+<text x="42.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 01</text>
+<text x="42.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">谁付钱 who pays</text>
+<text x="483.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 02</text>
+<text x="483.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">Stride 各业务</text>
+<text x="924.00" y="172.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="400" fill="#e9b658" letter-spacing="3">STAGE 03</text>
+<text x="924.00" y="188.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#646d82">钱去哪 where it lands</text>
+<path d="M 256.00 359.71 C 369.50 359.71, 369.50 297.50, 483.00 297.50" fill="none" stroke="url(#mfgold)" stroke-width="24.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 379.00 C 369.50 379.00, 369.50 410.00, 483.00 410.00" fill="none" stroke="url(#mfgold)" stroke-width="14.57" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 475.50 C 369.50 475.50, 369.50 312.00, 483.00 312.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 256.00 480.50 C 369.50 480.50, 369.50 520.00, 483.00 520.00" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 290.14 C 810.50 290.14, 810.50 240.71, 924.00 240.71" fill="none" stroke="url(#mfgold)" stroke-width="15.43" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 405.00 C 810.50 405.00, 810.50 252.71, 924.00 252.71" fill="none" stroke="url(#mfgold)" stroke-width="8.57" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 301.29 C 810.50 301.29, 810.50 352.50, 924.00 352.50" fill="none" stroke="url(#mfgold)" stroke-width="6.86" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 411.79 C 810.50 411.79, 810.50 358.43, 924.00 358.43" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 307.29 C 810.50 307.29, 810.50 465.00, 924.00 465.00" fill="none" stroke="url(#mfgold)" stroke-width="5.14" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 313.71 C 810.50 313.71, 810.50 572.50, 924.00 572.50" fill="none" stroke="url(#mfgold)" stroke-width="7.71" stroke-linecap="round" opacity="0.9"/>
+<path d="M 697.00 416.79 C 810.50 416.79, 810.50 578.86, 924.00 578.86" fill="none" stroke="url(#mfgold)" stroke-width="5.00" stroke-linecap="round" opacity="0.9"/>
+<text x="369.50" y="322.61" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">生均拨款 (95% GenEd 营收)</text>
+<text x="369.50" y="388.50" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">100% 中高中职业营收</text>
+<text x="369.50" y="387.75" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">5% 私立/消费者</text>
+<text x="369.50" y="494.25" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#f4d58a" paint-order="stroke" stroke="#0b0f1a" stroke-width="3.2" stroke-linejoin="round">雇主/消费者</text>
+<rect x="42.00" y="307.00" width="214" height="120.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="307.00" width="3" height="120.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="340.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">州 / 地方政府</text>
+<text x="60.00" y="361.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">生均经费 per-pupil $5k–10k/生</text>
+<text x="60.00" y="378.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">经特许学校董事会拨付</text>
+<rect x="42.00" y="443.00" width="214" height="70.00" rx="12" fill="#15101a" stroke="#f2655f" stroke-opacity="0.5"/>
+<rect x="42.00" y="443.00" width="3" height="70.00" rx="2" fill="#f2655f"/>
+<text x="60.00" y="476.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="21" font-weight="700" fill="#ffffff">家庭 + 雇主</text>
+<text x="60.00" y="497.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">私立学费 + 消费者直销</text>
+<text x="60.00" y="514.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#c98c87">雇主/政府成人学习采购</text>
+<rect x="483.00" y="253.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="253.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="286.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="14" font-weight="700" fill="#ffffff">General Education</text>
+<text x="501.00" y="307.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">US$1,448.7m (60%)</text>
+<text x="501.00" y="324.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">K-12 虚拟/混合公立校</text>
+<rect x="483.00" y="363.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="363.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="396.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Career Learning</text>
+<text x="501.00" y="417.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">US$876.3m (36%)</text>
+<text x="501.00" y="434.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">中-高中职业路径</text>
+<rect x="483.00" y="473.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="483.00" y="473.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="501.00" y="506.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">Adult Learning</text>
+<text x="501.00" y="527.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">US$80.4m (3%)</text>
+<text x="501.00" y="544.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">MedCerts/Galvanize/Tallo</text>
+<rect x="924.00" y="198.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="198.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="231.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">持证教师 + 教学辅助</text>
+<text x="942.00" y="252.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">最大成本项</text>
+<text x="942.00" y="269.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">~7,700 FTE</text>
+<rect x="924.00" y="308.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="308.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="341.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">自研课程 + LMS/SIS</text>
+<text x="942.00" y="362.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">资本化课程开发 US$21.8m/yr</text>
+<text x="942.00" y="379.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">自有内容护城河</text>
+<rect x="924.00" y="418.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="418.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="451.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">学生设备 + 学习套件</text>
+<text x="942.00" y="472.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">邮寄电脑/教材</text>
+<text x="942.00" y="489.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">计入 COGS</text>
+<rect x="924.00" y="528.00" width="214" height="94.00" rx="12" fill="#141a2a" stroke="#e9b658" stroke-opacity="0.5"/>
+<rect x="924.00" y="528.00" width="3" height="94.00" rx="2" fill="#e9b658"/>
+<text x="942.00" y="561.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="17" font-weight="700" fill="#ffffff">招生营销 + 行政</text>
+<text x="942.00" y="582.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">SG&amp;A US$524.3m</text>
+<text x="942.00" y="599.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11" font-weight="400" fill="#8a93a8">enrollment funnel</text>
+<rect x="42.00" y="648.00" width="26" height="4" rx="2" fill="#e9b658"/>
+<text x="78.00" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money paid directly</text>
+<circle cx="242.80" cy="650.00" r="2" fill="#e9b658"/>
+<circle cx="249.80" cy="650.00" r="2" fill="#e9b658"/>
+<circle cx="256.80" cy="650.00" r="2" fill="#e9b658"/>
+<circle cx="263.80" cy="650.00" r="2" fill="#e9b658"/>
+<text x="276.80" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">money embedded in a finished chip</text>
+<text x="538.40" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">thickness ≈ rough scale</text>
+<rect x="728.00" y="643.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="747.00" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="828.60" y="643.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="847.60" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<rect x="929.20" y="643.00" width="11" height="11" rx="3" fill="#e9b658"/>
+<text x="948.20" y="652.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="11.5" font-weight="400" fill="#8a93a8">supplier</text>
+<line x1="42" y1="688.00" x2="1138" y2="688.00" stroke="#222a3a"/>
+<text x="42.00" y="704.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="12" font-weight="500" fill="#8a93a8" letter-spacing="3">FOLLOW THE MONEY</text>
+<rect x="42.00" y="724.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#f2655f" stroke-opacity="0.28"/>
+<rect x="42.00" y="724.00" width="3" height="148.00" rx="2" fill="#f2655f"/>
+<text x="58.00" y="748.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#f2655f" letter-spacing="1">谁付钱 · 州政府主导</text>
+<text x="58.00" y="766.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">按拨款型合同 (funding-based)</text>
+<text x="58.00" y="790.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">约</tspan><tspan fill="#f4d58a" font-weight="700"> 95%</tspan><tspan fill="#9aa3b8" font-weight="400"> 普通教育营收与</tspan><tspan fill="#f4d58a" font-weight="700"> 100%</tspan></text>
+<text x="58.00" y="806.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">中-高中职业学习营收来自州/地方政府生均经费,经特许学校董事会拨付;合同期通常</tspan><tspan fill="#f4d58a" font-weight="700"> 超过</tspan><tspan fill="#f4d58a" font-weight="700"> 5</tspan><tspan fill="#f4d58a" font-weight="700"> 年</tspan></text>
+<text x="58.00" y="822.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">、自动续约。这是结构上稳定的现金来源,但也使公司暴露于单一学区不续约</tspan><tspan fill="#9aa3b8" font-weight="400"> (如</tspan><tspan fill="#f4d58a" font-weight="700"> Roscoe</tspan><tspan fill="#f4d58a" font-weight="700"> ISD</tspan><tspan fill="#9aa3b8" font-weight="400"> 撤约约</tspan></text>
+<text x="58.00" y="838.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#f4d58a" font-weight="700">5%</tspan><tspan fill="#9aa3b8" font-weight="400"> 入学)。</tspan></text>
+<rect x="412.00" y="724.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="412.00" y="724.00" width="3" height="148.00" rx="2" fill="#e9b658"/>
+<text x="428.00" y="748.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">业务结构 · 增长引擎</text>
+<text x="428.00" y="766.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">Career Learning 拉动增长</text>
+<text x="428.00" y="790.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">FY25</tspan><tspan fill="#9aa3b8" font-weight="400"> 总营收</tspan><tspan fill="#f4d58a" font-weight="700"> US$2,405m</tspan><tspan fill="#9aa3b8" font-weight="400"> ;普通教育</tspan><tspan fill="#f4d58a" font-weight="700"> 60%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、职业学习(中高中)</tspan><tspan fill="#f4d58a" font-weight="700"> 36%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、成人</tspan><tspan fill="#f4d58a" font-weight="700"> 3%</tspan></text>
+<text x="428.00" y="806.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">。职业学习</tspan><tspan fill="#9aa3b8" font-weight="400"> Q3-FY26</tspan><tspan fill="#9aa3b8" font-weight="400"> 入学</tspan><tspan fill="#f4d58a" font-weight="700"> +11.6%</tspan><tspan fill="#9aa3b8" font-weight="400"> 、营收</tspan><tspan fill="#f4d58a" font-weight="700"> +12.3%</tspan><tspan fill="#9aa3b8" font-weight="400"> ,是抵消普通教育</tspan><tspan fill="#f4d58a" font-weight="700"> −5.0%</tspan></text>
+<text x="428.00" y="822.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">入学下滑的关键。</tspan></text>
+<rect x="782.00" y="724.00" width="356.00" height="148.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="782.00" y="724.00" width="3" height="148.00" rx="2" fill="#e9b658"/>
+<text x="798.00" y="748.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">钱去哪 · 最大成本</text>
+<text x="798.00" y="766.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">持证教师是第一成本项</text>
+<text x="798.00" y="790.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">运营整所学校意味着</tspan><tspan fill="#9aa3b8" font-weight="400"> Stride</tspan><tspan fill="#9aa3b8" font-weight="400"> 承担</tspan><tspan fill="#f4d58a" font-weight="700"> ~7,700</tspan><tspan fill="#9aa3b8" font-weight="400"> 名教师/辅助人员的薪酬,计入</tspan><tspan fill="#9aa3b8" font-weight="400"> COGS;FY25</tspan></text>
+<text x="798.00" y="806.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">毛利率</tspan><tspan fill="#f4d58a" font-weight="700"> 39.2%</tspan><tspan fill="#9aa3b8" font-weight="400"> (gross</tspan><tspan fill="#9aa3b8" font-weight="400"> profit</tspan><tspan fill="#9aa3b8" font-weight="400"> US$943.9m</tspan><tspan fill="#9aa3b8" font-weight="400"> /</tspan><tspan fill="#9aa3b8" font-weight="400"> 营收</tspan><tspan fill="#9aa3b8" font-weight="400"> US$2,405m)。</tspan></text>
+<rect x="42.00" y="886.00" width="356.00" height="116.00" rx="13" fill="#0e1320" stroke="#e9b658" stroke-opacity="0.28"/>
+<rect x="42.00" y="886.00" width="3" height="116.00" rx="2" fill="#e9b658"/>
+<text x="58.00" y="910.00" text-anchor="start" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10" font-weight="600" fill="#e9b658" letter-spacing="1">护城河 · 自有内容</text>
+<text x="58.00" y="928.00" text-anchor="start" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="15.5" font-weight="700" fill="#ffffff">自研课程 + LMS/SIS</text>
+<text x="58.00" y="952.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">公司每年资本化约</tspan><tspan fill="#f4d58a" font-weight="700"> US$21.8m</tspan><tspan fill="#9aa3b8" font-weight="400"> 课程开发</tspan><tspan fill="#9aa3b8" font-weight="400"> +</tspan><tspan fill="#f4d58a" font-weight="700"> US$36.4m</tspan><tspan fill="#9aa3b8" font-weight="400"> 软件开发;自有</tspan><tspan fill="#9aa3b8" font-weight="400"> K-12</tspan></text>
+<text x="58.00" y="968.00" font-family="'Space Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif" font-size="12" xml:space="preserve"><tspan fill="#9aa3b8" font-weight="400">课程目录与学习平台是相对纯软件</tspan><tspan fill="#9aa3b8" font-weight="400"> EdTech</tspan><tspan fill="#9aa3b8" font-weight="400"> 的差异化壁垒,但需持续再投资。</tspan></text>
+<text x="590.00" y="1038.00" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,Menlo,monospace" font-size="10.5" font-weight="400" fill="#646d82">Source: Stride 10-K FY2025 · Q3-FY26 10-Q · Q4-FY25 8-K Ex-99.1 · 公司新闻稿</text>
+</svg>

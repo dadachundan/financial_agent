@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="cash flow Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Stride FY2025 现金流量表 Sankey (cash flow, US$m)</text>
+<path d="M 204.00,71.00 C 306.00,71.00 306.00,78.00 408.00,78.00 L 408.00,325.78 C 306.00,325.78 306.00,318.78 204.00,318.78 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 424.00,78.00 C 526.00,78.00 526.00,64.00 628.00,64.00 L 628.00,77.86 C 526.00,77.86 526.00,91.86 424.00,91.86 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,91.86 C 526.00,91.86 526.00,91.86 628.00,91.86 L 628.00,123.04 C 526.00,123.04 526.00,123.04 424.00,123.04 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 424.00,123.04 C 526.00,123.04 526.00,137.04 628.00,137.04 L 628.00,554.00 C 526.00,554.00 526.00,540.00 424.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 644.00,91.86 C 746.00,91.86 746.00,286.41 848.00,286.41 L 848.00,306.95 C 746.00,306.95 746.00,112.40 644.00,112.40 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 644.00,112.40 C 746.00,112.40 746.00,320.95 848.00,320.95 L 848.00,331.59 C 746.00,331.59 746.00,123.04 644.00,123.04 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,332.78 C 306.00,332.78 306.00,325.78 408.00,325.78 L 408.00,540.00 C 306.00,540.00 306.00,547.00 204.00,547.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="71.00" width="16" height="247.78" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="332.78" width="16" height="214.22" rx="1.5" fill="#2563eb"/>
+<rect x="408.00" y="78.00" width="16" height="462.00" rx="1.5" fill="#1e3a8a"/>
+<rect x="628.00" y="64.00" width="16" height="13.86" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="91.86" width="16" height="31.18" rx="1.5" fill="#dc2626"/>
+<rect x="628.00" y="137.04" width="16" height="416.96" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="286.41" width="16" height="20.54" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="320.95" width="16" height="10.64" rx="1.5" fill="#dc2626"/>
+<text x="179.00" y="191.89" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Beginning Cash</text>
+<text x="179.00" y="204.89" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$500.6M  (53.6%)</text>
+<rect x="207.00" y="314.78" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="210.00" y="326.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating (CFO)</text>
+<text x="210.00" y="339.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$432.8M  (46.4%)</text>
+<rect x="427.00" y="60.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="430.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Cash Mobilized</text>
+<text x="430.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$933.4M  (100.0%)</text>
+<rect x="647.00" y="46.00" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Investing (CFI)</text>
+<text x="650.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$28.0M  (3.0%)</text>
+<rect x="647.00" y="73.86" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="650.00" y="85.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Financing (CFF)</text>
+<text x="650.00" y="98.86" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$63.0M  (6.7%)</text>
+<text x="653.00" y="342.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Ending Cash</text>
+<text x="653.00" y="355.52" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$842.4M  (90.3%)</text>
+<text x="873.00" y="293.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">融资租赁偿还 Lease repay</text>
+<text x="873.00" y="306.68" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$41.5M  (4.4%)</text>
+<text x="873.00" y="323.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">限制性股票回购代扣税 RSU tax w/h</text>
+<text x="873.00" y="336.27" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">US$21.5M  (2.3%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">CFO US$432.8m;capex US$60.0m → FCF≈US$372.8m。CFI 净 −US$88.0m,CFF 净 −US$62.9m(FY25未做公开市场普通股回购,该计划 2025-11 才授权)。现金期初 US$500.6m → 期末 US$782.5m。  ·  Free Cash Flow = CFO − CapEx = US$372.8M</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: Stride Q4-FY25 8-K Ex-99.1 现金流量表 (FY2025)</text>
+</svg>
