@@ -27,9 +27,11 @@ API_BASE = "https://api.zsxq.com/v2"
 from db_paths import db_path
 
 SCRIPT_DIR              = Path(__file__).parent
-DEFAULT_CHROME_PROFILE  = Path("~/Library/Application Support/Google/Chrome").expanduser()
+local_profile           = SCRIPT_DIR / "chrome_profile"
+DEFAULT_CHROME_PROFILE  = local_profile if local_profile.exists() else Path("~/Library/Application Support/Google/Chrome").expanduser()
 DEFAULT_DB              = db_path("zsxq.db")
 DEFAULT_DOWNLOADS       = Path("~/Downloads/zsxq_reports").expanduser()
+
 
 HEADERS = {
     "User-Agent": (
@@ -46,6 +48,27 @@ HEADERS = {
 
 def get_session_via_selenium(chrome_profile: Path) -> requests.Session:
     """Build a requests.Session with zsxq cookies read from a Chrome profile."""
+    import sys
+
+    # 1) Try local JSON cache first to bypass keychain decryption issues
+    cookie_json_path = chrome_profile / "zsxq_cookies.json"
+    if cookie_json_path.exists():
+        import json
+        print(f"Loading session cookies from JSON cache: {cookie_json_path}...")
+        try:
+            with open(cookie_json_path, "r", encoding="utf-8") as f:
+                cookies = json.load(f)
+            session = requests.Session()
+            for name, value in cookies.items():
+                session.cookies.set(name, value)
+                session.cookies.set(name, value, domain="api.zsxq.com")
+                session.cookies.set(name, value, domain=".zsxq.com")
+            print(f"Loaded {len(cookies)} cookies from JSON cache.\n")
+            return session
+        except Exception as e:
+            print(f"Warning: Failed to load cookies from JSON cache: {e}. Falling back...")
+
+    # 2) Fallback to browser_cookie3
     import browser_cookie3  # lazy: only the Selenium downloader needs this
 
     cookie_file = chrome_profile / "Default" / "Cookies"
@@ -53,17 +76,25 @@ def get_session_via_selenium(chrome_profile: Path) -> requests.Session:
         raise FileNotFoundError(f"Cookie file not found: {cookie_file}")
 
     print("Loading session cookies from Chrome profile...")
-    cookies = list(browser_cookie3.chrome(
-        cookie_file=str(cookie_file),
-        domain_name=".zsxq.com",
-    ))
-    session = requests.Session()
-    for c in cookies:
-        session.cookies.set(c.name, c.value)
-        session.cookies.set(c.name, c.value, domain="api.zsxq.com")
+    try:
+        cookies = list(browser_cookie3.chrome(
+            cookie_file=str(cookie_file),
+            domain_name=".zsxq.com",
+        ))
+        session = requests.Session()
+        for c in cookies:
+            session.cookies.set(c.name, c.value)
+            session.cookies.set(c.name, c.value, domain="api.zsxq.com")
+        print(f"Loaded {len(cookies)} cookies from Chrome profile.\n")
+        return session
+    except Exception as exc:
+        print(f"\nERROR: Failed to decrypt cookies from Chrome profile using browser_cookie3: {exc}")
+        print("\nTo fix this on macOS:")
+        print("1. Run the interactive login helper to generate a local cookie file:")
+        print("   python3 login_zsxq.py")
+        print("2. Once completed, re-run your downloader command.")
+        sys.exit(1)
 
-    print(f"Loaded {len(cookies)} cookies from Chrome profile.\n")
-    return session
 
 
 # ── Utilities ─────────────────────────────────────────────────────────────────
