@@ -26,7 +26,8 @@ from typing import Optional
 
 SCRIPT_DIR         = pathlib.Path(__file__).parent
 CACHE_FILE         = SCRIPT_DIR / "ticker_name_cache.json"
-CACHE_MAX_AGE_DAYS = 7  # refresh weekly
+CACHE_MAX_AGE_DAYS = 365  # ticker mappings are stable; refresh yearly instead of weekly
+
 
 # ── module-level state ────────────────────────────────────────────────────────
 _cache: Optional[dict] = None
