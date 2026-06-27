@@ -52,17 +52,26 @@ def _build_cache() -> None:
 
         # ── HK stocks (EastMoney source, ~2 600 stocks, ~35 s) ───────────────
         print("[ticker_names] fetching HK stock names…")
-        df_hk = ak.stock_hk_spot_em()
-        hk_count = 0
-        for _, row in df_hk[["代码", "名称"]].iterrows():
-            code = str(row["代码"])   # e.g. "00700"
-            name = str(row["名称"])
-            result[code] = name
-            stripped = code.lstrip("0") or "0"
-            if stripped != code:
-                result[stripped] = name   # "700" → same name
-            hk_count += 1
-        print(f"[ticker_names] HK stocks: {hk_count} entries")
+        try:
+            df_hk = ak.stock_hk_spot_em()
+            hk_count = 0
+            for _, row in df_hk[["代码", "名称"]].iterrows():
+                code = str(row["代码"])   # e.g. "00700"
+                name = str(row["名称"])
+                result[code] = name
+                stripped = code.lstrip("0") or "0"
+                if stripped != code:
+                    result[stripped] = name   # "700" → same name
+                hk_count += 1
+            print(f"[ticker_names] HK stocks: {hk_count} entries")
+        except Exception as hk_exc:
+            print(f"[ticker_names] warning: HK stocks fetch failed ({hk_exc}). Using previous HK stock cache if available.")
+            with _cache_lock:
+                if _cache:
+                    for k, v in _cache.items():
+                        # HK stock codes are either 5-digit strings or the stripped version
+                        if (k.isdigit() and len(k) == 5) or (k.isdigit() and k not in result):
+                            result[k] = v
 
         # ── persist ───────────────────────────────────────────────────────────
         CACHE_FILE.write_text(
@@ -83,26 +92,35 @@ def _build_cache() -> None:
 def init(force_refresh: bool = False) -> None:
     """
     Call once at app startup.
-    - If a fresh cache file exists, load it synchronously (instant).
-    - Otherwise start a background thread to build the cache.
+    - If a cache file exists, load it synchronously (instant) even if stale.
+    - If missing or stale, start a background thread to update it.
     """
     global _cache, _cache_building
 
-    if not force_refresh and CACHE_FILE.exists():
-        age = (
-            datetime.datetime.now()
-            - datetime.datetime.fromtimestamp(CACHE_FILE.stat().st_mtime)
-        )
-        if age.days < CACHE_MAX_AGE_DAYS:
+    has_cache = CACHE_FILE.exists()
+    stale = True
+
+    if has_cache:
+        try:
             with _cache_lock:
                 _cache = json.loads(CACHE_FILE.read_text(encoding="utf-8"))
             print(f"[ticker_names] loaded {len(_cache)} entries from cache file")
-            return
+        except Exception as e:
+            print(f"[ticker_names] failed to read cache file: {e}")
+            has_cache = False
 
-    # Cache missing or stale — build in background
-    print("[ticker_names] cache missing/stale; starting background build (~2 min)…")
-    _cache_building = True
-    threading.Thread(target=_build_cache, daemon=True).start()
+        if has_cache:
+            age = (
+                datetime.datetime.now()
+                - datetime.datetime.fromtimestamp(CACHE_FILE.stat().st_mtime)
+            )
+            if age.days < CACHE_MAX_AGE_DAYS:
+                stale = False
+
+    if force_refresh or not has_cache or stale:
+        print("[ticker_names] cache missing/stale; starting background build (~2 min)…")
+        _cache_building = True
+        threading.Thread(target=_build_cache, daemon=True).start()
 
 
 def is_ready() -> bool:
