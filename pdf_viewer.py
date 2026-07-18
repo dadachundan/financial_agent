@@ -720,7 +720,7 @@ _VIEWER_TMPL = r"""<!doctype html>
   </script>
 
   <script type="module">
-  import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/+esm";
+  import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/build/pdf.min.mjs";
   pdfjsLib.GlobalWorkerOptions.workerSrc =
     "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.7.76/build/pdf.worker.min.mjs";
 
@@ -1013,10 +1013,19 @@ _VIEWER_TMPL = r"""<!doctype html>
     pageTextIndex[idx] = buildIndex(textLayerDiv);
 
     // Empty / near-empty text layer = scanned page (or CID-encoded fonts
-    // PDF.js can't decode). Trigger backend OCR and inject the word boxes
-    // as a synthetic text layer so native text selection works — same UX
-    // Apple Preview offers via on-demand Vision OCR.
-    if ((pageTextIndex[idx].full || '').trim().length < 8) {
+    // PDF.js can't decode). Also treat a long-but-nearly-spaceless text
+    // layer as broken: some PDFs (e.g. justified body text laid out via
+    // per-glyph TJ positioning instead of explicit space glyphs) extract
+    // as "weknowmostofitwillneverbebuilt" — plenty of characters, but
+    // pdf.js's own space-insertion heuristic never fires, so every join
+    // downstream (buildIndex, sel.toString(), copy-paste) stays fused.
+    // Both cases get the same fix: trigger backend OCR and inject the
+    // word boxes as a synthetic text layer so native text selection
+    // works — same UX Apple Preview offers via on-demand Vision OCR.
+    const pageText = (pageTextIndex[idx].full || '').trim();
+    const spaceCount = (pageText.match(/\s/g) || []).length;
+    const looksGarbled = pageText.length > 200 && (spaceCount / pageText.length) < 0.03;
+    if (pageText.length < 8 || looksGarbled) {
       div.classList.add('scanned', 'ocr-loading');
       injectOcrTextLayer(pageNum, textLayerDiv, vp).then(() => {
         // Rebuild the index from the synthetic spans so quote-based
@@ -1062,6 +1071,11 @@ _VIEWER_TMPL = r"""<!doctype html>
     });
     const lines = (resp && resp.words) || [];
     if (!lines.length) return;
+    // Clear any existing pdf.js text-layer spans first — for the "garbled"
+    // (non-empty but spaceless) case there's real content already here, and
+    // leaving it in place would double up with the OCR spans we're about to
+    // add, corrupting selection.
+    textLayerDiv.innerHTML = '';
     const W = vp.width, H = vp.height;
 
     let prevRow = -1;
@@ -1155,14 +1169,22 @@ _VIEWER_TMPL = r"""<!doctype html>
     const idx = pageTextIndex[pageNum - 1];
     if (!idx) return null;
 
-    const quote = sel.toString();
-    if (!quote || !quote.trim()) return null;
+    const rawQuote = sel.toString();
+    if (!rawQuote || !rawQuote.trim()) return null;
     let startOff = -1, endOff = -1;
     for (const e of idx.nodes) {
       if (e.node === range.startContainer) startOff = e.start + range.startOffset;
       if (e.node === range.endContainer)   endOff   = e.start + range.endOffset;
     }
     if (startOff < 0 || endOff < 0 || endOff <= startOff) return null;
+    // Prefer the space-normalised index text over sel.toString(): some PDFs
+    // (e.g. justified body text laid out with per-glyph positioning rather
+    // than explicit space characters) produce a text layer whose adjacent
+    // word <span>s contain no whitespace in the DOM, so raw browser
+    // selection collapses "we know most of it" into "weknowmostofit".
+    // idx.full already inserts a space between adjacent text nodes
+    // (buildIndex above), so slicing it gives a readable quote.
+    const quote = idx.full.slice(startOff, endOff) || rawQuote;
     const prefix = idx.full.slice(Math.max(0, startOff - 32), startOff);
     const suffix = idx.full.slice(endOff, endOff + 32);
     const rect = range.getBoundingClientRect();
