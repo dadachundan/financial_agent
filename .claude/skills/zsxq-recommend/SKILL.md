@@ -211,12 +211,43 @@ For each recommendation give:
 
 - `file_id` (so the user can hand it to `/zsxq-analyze`)
 - Bank / publisher if known (`bank` column, or extract from name)
-- A ≤2-sentence "why read this" — anchored in the actual summary, not
-  generic.
+- **The report's own 概要 gist — NOT your one-line spin.** This is the
+  load-bearing column and the one most often botched. The user is
+  triaging blind: the *only* thing they see is your row, so it must
+  state (a) **which company / subject** the report is about — named
+  explicitly, in the gist itself, never left implied by the theme
+  header — and (b) **the report's actual content**, lifted or tightly
+  paraphrased from the `summary` (概要) text: the broker's thesis + the
+  concrete numbers the summary contains (rating, PT, growth %, TAM,
+  units, pricing). Reproduce the summary's substance; do not replace it
+  with a generic gloss like "the flagship read" or "best framing of the
+  cycle" — a label the user can't act on. If the summary names the
+  company and gives numbers, your gist must too.
 - Page count + create_time when useful for triage.
 
-Markdown table when listing >3 picks. Keep the whole reply tight — the
-user is choosing what to read next, not consuming the reports here.
+**Anti-pattern → fix (this is the exact failure this section exists to
+prevent):**
+
+- ❌ `Innolight (300308) — the single biggest markup in the feed.`
+  (Reader has no idea what the report *says* — what business, what
+  thesis, what numbers.)
+- ✅ `中际旭创 Innolight (300308.SZ) — GS 维持"买入", 12M PT 上调至 ¥2,581
+  (原 ¥1,187). 硅光在 800G/1.6T/3.2T 光模块渗透率 2026 达 60/80/100%;
+  2026-28 净利润预测上调 65/108/119%, 营收 CAGR 64%. 从 scale-out 数据中心
+  互联延伸到 scale-up 芯片级互联.` (Company, rating, PT + prior PT, the
+  mechanism, the numbers — all from the 概要.)
+
+Preserve the summary's original language in the gist (Chinese 概要 stay
+Chinese; English broker prose stays English) — don't translate the
+report's own numbers/terms into your own words if the 概要 already
+states them cleanly.
+
+Markdown table when listing >3 picks (columns: `file_id` · Bank · pg ·
+Date · **概要 gist**). The gist column carries the weight — let it be
+2–4 sentences even in a table; a one-clause gloss there is the bug.
+Keep the surrounding prose tight — the user is choosing what to read
+next, not consuming the reports here — but never compress the gist
+itself down to a label.
 
 End the reply with two compact one-liners (only when non-empty):
 
