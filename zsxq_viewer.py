@@ -12,6 +12,7 @@ PDFs open in a new browser tab when you click "Open PDF".
 
 import argparse
 import datetime
+import math as _math
 import sqlite3
 import md_comment_widget as mcw
 import nav_widget2 as nw2
@@ -119,6 +120,25 @@ __MCW_HEAD__
     /* PDF actions column: stack the buttons vertically, one per row */
     .pdf-col        { width:1%; white-space:nowrap; }
     .pdf-col .btn   { display:block; width:100%; margin:2px 0 !important; }
+    /* Page-count dual range slider */
+    .pages-slider   { position:relative; width:200px; height:26px; flex:0 0 auto; }
+    .pages-slider .track      { position:absolute; top:50%; left:0; right:0; transform:translateY(-50%);
+                      height:4px; border-radius:2px; background:#dfe3e8; }
+    .pages-slider .track-fill { position:absolute; top:50%; transform:translateY(-50%);
+                      height:4px; border-radius:2px; background:#1a56db; }
+    .pages-slider input[type=range] { position:absolute; top:0; left:0; width:100%; height:26px;
+                      margin:0; background:none; pointer-events:none;
+                      -webkit-appearance:none; appearance:none; }
+    .pages-slider input[type=range]::-webkit-slider-runnable-track { background:none; height:26px; }
+    .pages-slider input[type=range]::-webkit-slider-thumb {
+                      -webkit-appearance:none; appearance:none; pointer-events:auto;
+                      width:16px; height:16px; margin-top:5px; border-radius:50%;
+                      background:#1a56db; border:2px solid #fff; box-shadow:0 0 2px rgba(0,0,0,.5);
+                      cursor:pointer; }
+    .pages-slider input[type=range]::-moz-range-track { background:none; }
+    .pages-slider input[type=range]::-moz-range-thumb { pointer-events:auto;
+                      width:14px; height:14px; border-radius:50%; background:#1a56db;
+                      border:2px solid #fff; cursor:pointer; }
     .name-col       { max-width:180px; word-break:break-all; }
     .title-col      { max-width:200px; word-break:break-word; }
     .analysis-col   { max-width:200px; word-break:break-word; }
@@ -258,6 +278,25 @@ __URLPATCH__
          class="btn btn-sm {{ 'btn-dark' if not with_comment else 'btn-outline-dark' }}">Any</a>
       <a href="#" onclick="applyParams({with_comment:'1'});return false"
          class="btn btn-sm {{ 'btn-success' if with_comment else 'btn-outline-success' }}">💬 With comment ({{ stats.with_comment }})</a>
+    </div>
+
+    <!-- Pages filter row (dual range slider on page_count) -->
+    <div class="d-flex filter-row align-items-center">
+      <span class="filter-label">Pages:</span>
+      {% set pmin = current_min_pages or 0 %}
+      {% set pmax = current_max_pages or max_page_count %}
+      <div class="pages-slider" id="pagesSlider" data-cap="{{ max_page_count }}">
+        <div class="track"></div>
+        <div class="track-fill" id="pagesFill"></div>
+        <input type="range" id="pagesMin" min="0" max="{{ max_page_count }}" value="{{ pmin }}" step="1">
+        <input type="range" id="pagesMax" min="0" max="{{ max_page_count }}" value="{{ pmax }}" step="1">
+      </div>
+      <span id="pagesLabel" class="text-muted small align-self-center ms-2"
+            style="white-space:nowrap;min-width:78px"></span>
+      {% if current_min_pages or current_max_pages %}
+      <a href="#" onclick="clearPagesFilter();return false"
+         class="btn btn-sm btn-link text-muted p-0 ms-1">✕ clear</a>
+      {% endif %}
     </div>
 
     <!-- Column toggle -->
@@ -848,6 +887,44 @@ __MCW_FOOTER__
 
   __MCW_JS__
 
+  // ── Pages dual-range slider ──────────────────────────────────────────────
+  function clearPagesFilter() { applyParams({min_pages: null, max_pages: null}); }
+  (function() {
+    const wrap = document.getElementById('pagesSlider');
+    if (!wrap) return;
+    const cap  = parseInt(wrap.dataset.cap) || 100;
+    const lo   = document.getElementById('pagesMin');
+    const hi   = document.getElementById('pagesMax');
+    const fill = document.getElementById('pagesFill');
+    const label = document.getElementById('pagesLabel');
+    function render() {
+      let a = parseInt(lo.value), b = parseInt(hi.value);
+      // Prevent the two thumbs from crossing over.
+      if (a > b) {
+        if (document.activeElement === lo) { b = a; hi.value = b; }
+        else { a = b; lo.value = a; }
+      }
+      // Keep the low thumb grabbable when both sit at the top of the range.
+      lo.style.zIndex = (a >= cap) ? 5 : 3;
+      const pa = cap ? a / cap * 100 : 0, pb = cap ? b / cap * 100 : 100;
+      fill.style.left  = pa + '%';
+      fill.style.width = (pb - pa) + '%';
+      label.textContent = a + ' – ' + (b >= cap ? cap + '+' : b) + ' pp';
+    }
+    function commit() {
+      const a = parseInt(lo.value), b = parseInt(hi.value);
+      applyParams({
+        min_pages: a > 0   ? a : null,
+        max_pages: b < cap ? b : null,
+      });
+    }
+    lo.addEventListener('input', render);
+    hi.addEventListener('input', render);
+    lo.addEventListener('change', commit);
+    hi.addEventListener('change', commit);
+    render();
+  })();
+
   // ── Column toggle ────────────────────────────────────────────────────────
   (function() {
     const KEY = 'zsxq_show_extra_cols_v2';  // v2: default OFF
@@ -951,7 +1028,9 @@ def _build_where(f: str, ticker: str, tag: str,
                  unrated: bool = False,
                  bank: str = "",
                  with_comment: bool = False,
-                 annotated_ids: set[int] | None = None) -> tuple[str, list]:
+                 annotated_ids: set[int] | None = None,
+                 min_pages: int = 0,
+                 max_pages: int = 0) -> tuple[str, list]:
     """Build WHERE clause + params from filter args (shared by index and print-view)."""
     conditions: list[str] = []
     params: list = []
@@ -998,6 +1077,12 @@ def _build_where(f: str, ticker: str, tag: str,
     if group_id:
         conditions.append("group_id = ?")
         params.append(group_id)
+    if min_pages:
+        conditions.append("page_count >= ?")
+        params.append(min_pages)
+    if max_pages:
+        conditions.append("page_count <= ?")
+        params.append(max_pages)
     if min_claude_rating:
         conditions.append("claude_rating >= ?")
         params.append(min_claude_rating)
@@ -1218,6 +1303,14 @@ def index():
         q = legacy_file_id
     with_comment = request.args.get("with_comment") == "1"
     try:
+        min_pages = max(0, int(request.args.get("min_pages", 0)))
+    except ValueError:
+        min_pages = 0
+    try:
+        max_pages = max(0, int(request.args.get("max_pages", 0)))
+    except ValueError:
+        max_pages = 0
+    try:
         page = max(1, int(request.args.get("page", 1)))
     except ValueError:
         page = 1
@@ -1264,7 +1357,14 @@ def index():
         "FROM pdf_files"
     ).fetchone()
 
-    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank, with_comment, annotated_ids)
+    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank, with_comment, annotated_ids, min_pages=min_pages, max_pages=max_pages)
+
+    # Slider cap: round the largest local PDF's page count up to a tidy 10.
+    _max_pp = conn.execute(
+        "SELECT MAX(page_count) FROM pdf_files "
+        "WHERE local_path IS NOT NULL AND local_path != ''"
+    ).fetchone()[0] or 0
+    max_page_count = int(_math.ceil((_max_pp or 100) / 10.0) * 10) or 100
     order      = "ASC" if sort == "asc" else "DESC"
     order_col  = "page_count" if sort_by == "pages" else "create_time"
     # NULLs last for page_count sort
@@ -1317,6 +1417,9 @@ def index():
         all_group_ids=all_group_ids,
         all_banks=all_banks,
         current_bank=bank,
+        current_min_pages=min_pages,
+        current_max_pages=max_pages,
+        max_page_count=max_page_count,
         with_comment=with_comment,
         annotated_ids=annotated_ids,
         flomo_enabled=bool(_FLOMO_WEBHOOK_URL),
