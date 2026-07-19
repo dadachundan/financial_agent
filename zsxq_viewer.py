@@ -113,6 +113,11 @@ __MCW_HEAD__
                       overflow:hidden; word-break:break-word; cursor:pointer; }
     .summary-more   { font-size:.72rem; color:#1a56db; cursor:pointer; white-space:nowrap; }
     .summary-more:hover { text-decoration:underline; }
+    /* Date column: stack date over time so it stays narrow on tablets */
+    .date-col       { white-space:nowrap; width:1%; font-size:.78rem; line-height:1.25; }
+    .date-col .date-time { color:#888; }
+    /* PDF actions column: shrink to fit its buttons instead of forcing extra width */
+    .pdf-col        { width:1%; white-space:nowrap; }
     .name-col       { max-width:180px; word-break:break-all; }
     .title-col      { max-width:200px; word-break:break-word; }
     .analysis-col   { max-width:200px; word-break:break-word; }
@@ -304,7 +309,7 @@ __URLPATCH__
         <tr class="{{ 'row-match' if any_cat else ('row-unclassed' if unclassed else 'row-no-match') }}"
             data-search="{{ (row.name ~ ' ' ~ (row.topic_title or '') ~ ' ' ~ (row.tickers or '') ~ ' ' ~ (row.tags or '') ~ ' ' ~ (row.comment or '') ~ ' ' ~ (row.file_id|string))|lower }}">
           <td class="text-muted">{{ idx }}</td>
-          <td class="text-nowrap">{{ (row.create_time or '')[:16].replace('T', ' ') }}</td>
+          <td class="date-col">{{ (row.create_time or '')[:10] }}<br><span class="date-time">{{ (row.create_time or '')[11:16] }}</span></td>
           <td class="name-col">{{ row.name }}</td>
           <td class="col-extra text-nowrap" style="font-size:.8rem;color:#0dcaf0;white-space:nowrap">
             {%- if row.claude_rating == 5 %}★★★★★
@@ -380,7 +385,7 @@ __URLPATCH__
             {% else %}—{% endif %}
           </td>
 
-          <td class="text-center" style="white-space:nowrap">
+          <td class="pdf-col text-center">
             {% if row.local_path %}
               <a href="{{ _base | default('') }}/pdf/{{ row.file_id }}/{{ row.name }}" target="_blank"
                  class="btn btn-outline-danger open-btn">📄 Open</a>
