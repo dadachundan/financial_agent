@@ -949,6 +949,10 @@ def _build_where(f: str, ticker: str, tag: str,
     """Build WHERE clause + params from filter args (shared by index and print-view)."""
     conditions: list[str] = []
     params: list = []
+    # Baseline: never list rows with no downloadable local PDF — there is
+    # nothing to Open/Annotate, so the row can't do anything but delete itself
+    # (these are metadata-only / duplicate entries). Always excluded.
+    conditions.append("local_path IS NOT NULL AND local_path != ''")
     filter_cond = {
         "downloaded":   "local_path IS NOT NULL",
         "unclassified": "ai_related IS NULL",
