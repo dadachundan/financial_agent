@@ -71,7 +71,11 @@ _obsidian_filters(app)
 
 @app.route("/")
 def index():
-    return redirect("/zsxq")
+    target = "/zsxq"
+    qs = freq.query_string.decode("utf-8")
+    if qs:
+        target = f"{target}?{qs}"
+    return redirect(target)
 
 
 # Legacy redirect: /notes/* → /manual-report/* (renamed 2026-05-21)
