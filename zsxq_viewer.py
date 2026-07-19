@@ -152,19 +152,6 @@ __URLPATCH__
        were dropped, and the 📓 ZSXQ Notes link is already in the side nav
        (see nav_widget2.NAV_HTML). --#}
 
-  {#-- URL-fragment helpers used by the rating / bank / claude / comment / sort
-       links below. Originally lived inside the Status row; that row was
-       removed but other rows still depend on these variables. --#}
-  {%- set sp   = ('&sort=' ~ current_sort if current_sort != 'desc' else '') ~ ('&sort_by=' ~ current_sort_by if current_sort_by != 'date' else '') %}
-  {%- set tp   = ('&ticker=' ~ current_ticker) if current_ticker else '' %}
-  {%- set tagp = ('&tag='    ~ current_tag)    if current_tag    else '' %}
-  {%- set dp   = ('&date_from=' ~ current_date_from if current_date_from else '') ~ ('&date_to=' ~ current_date_to if current_date_to else '') %}
-  {%- set rp   = ('&min_rating=' ~ current_min_rating) if current_min_rating else '' %}
-  {%- set crp  = ('&min_claude_rating=' ~ current_min_claude_rating) if current_min_claude_rating else '' %}
-  {%- set qp   = ('&q=' ~ current_q) if current_q else '' %}
-  {%- set bp   = ('&bank=' ~ current_bank) if current_bank else '' %}
-  {%- set cwp  = '&with_comment=1' if with_comment else '' %}
-
   <div class="filter-section">
     <!-- Search row -->
     <div class="d-flex filter-row">
@@ -216,14 +203,14 @@ __URLPATCH__
     <!-- Rating filter row -->
     <div class="d-flex filter-row">
       <span class="filter-label">Rating:</span>
-      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}"
+      <a href="#" onclick="applyParams({min_rating:null, unrated:null});return false"
          class="btn btn-sm {{ 'btn-dark' if not current_min_rating and not unrated_only else 'btn-outline-dark' }}">Any</a>
       {% for stars in [1,2,3,4,5] %}
-      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}&min_rating={{ stars }}"
+      <a href="#" onclick="applyParams({min_rating:'{{ stars }}', unrated:null});return false"
          class="btn btn-sm {{ 'btn-warning text-dark' if current_min_rating == stars|string else 'btn-outline-warning' }}">
         {{ '★' * stars }}+</a>
       {% endfor %}
-      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}&unrated=1"
+      <a href="#" onclick="applyParams({unrated:'1', min_rating:null});return false"
          class="btn btn-sm {{ 'btn-secondary' if unrated_only else 'btn-outline-secondary' }}">Unrated</a>
     </div>
 
@@ -247,23 +234,23 @@ __URLPATCH__
     <!-- Claude rating filter row -->
     <div class="d-flex filter-row">
       <span class="filter-label">🤖 Claude:</span>
-      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}{{ rp }}{{ qp }}"
+      <a href="#" onclick="applyParams({min_claude_rating:null});return false"
          class="btn btn-sm {{ 'btn-dark' if not current_min_claude_rating else 'btn-outline-dark' }}">Any</a>
       {% for stars in [3,4,5] %}
-      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}{{ rp }}{{ qp }}&min_claude_rating={{ stars }}"
+      <a href="#" onclick="applyParams({min_claude_rating:'{{ stars }}'});return false"
          class="btn btn-sm {{ 'btn-info' if current_min_claude_rating == stars|string else 'btn-outline-info' }}">
         {{ '★' * stars }}+</a>
       {% endfor %}
-      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}{{ rp }}{{ qp }}&min_claude_rating=1"
+      <a href="#" onclick="applyParams({min_claude_rating:'1'});return false"
          class="btn btn-sm {{ 'btn-info' if current_min_claude_rating == '1' else 'btn-outline-info' }}">Any rated</a>
     </div>
 
     <!-- Comment filter row -->
     <div class="d-flex filter-row">
       <span class="filter-label">Comment:</span>
-      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}{{ rp }}{{ qp }}{{ crp }}{{ bp }}"
+      <a href="#" onclick="applyParams({with_comment:null});return false"
          class="btn btn-sm {{ 'btn-dark' if not with_comment else 'btn-outline-dark' }}">Any</a>
-      <a href="?filter={{ current_filter }}{{ tp }}{{ tagp }}{{ sp }}{{ dp }}{{ rp }}{{ qp }}{{ crp }}{{ bp }}&with_comment=1"
+      <a href="#" onclick="applyParams({with_comment:'1'});return false"
          class="btn btn-sm {{ 'btn-success' if with_comment else 'btn-outline-success' }}">💬 With comment ({{ stats.with_comment }})</a>
     </div>
 
@@ -664,6 +651,22 @@ __MCW_FOOTER__
         });
       }
     });
+  }
+
+  // Change one or more filter params while PRESERVING every other active
+  // filter in the URL (with_comment, bank, q, group_id, sort…). The old
+  // server-rendered links hand-assembled the query string per row and each
+  // row forgot some params — e.g. clicking a Rating star silently dropped
+  // ?with_comment=1, showing "commented" rows the user never annotated.
+  // A null/empty value deletes the param.
+  function applyParams(changes) {
+    const params = new URLSearchParams(window.location.search);
+    params.delete('page');
+    for (const [k, v] of Object.entries(changes)) {
+      if (v === null || v === undefined || v === '') { params.delete(k); }
+      else { params.set(k, v); }
+    }
+    window.location.href = '?' + params.toString();
   }
 
   function applyDateFilter() {
