@@ -116,8 +116,9 @@ __MCW_HEAD__
     /* Date column: stack date over time so it stays narrow on tablets */
     .date-col       { white-space:nowrap; width:1%; font-size:.78rem; line-height:1.25; }
     .date-col .date-time { color:#888; }
-    /* PDF actions column: shrink to fit its buttons instead of forcing extra width */
+    /* PDF actions column: stack the buttons vertically, one per row */
     .pdf-col        { width:1%; white-space:nowrap; }
+    .pdf-col .btn   { display:block; width:100%; margin:2px 0 !important; }
     .name-col       { max-width:180px; word-break:break-all; }
     .title-col      { max-width:200px; word-break:break-word; }
     .analysis-col   { max-width:200px; word-break:break-word; }
