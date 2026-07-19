@@ -57,6 +57,7 @@ _tn.init()
 # Routes land at /zsxq/pdf-viewer/<file_id> and /zsxq/pdf-inline-comments/*.
 # DB_PATH is mutated at startup, so resolve lazily in the provider.
 import pdf_viewer as _pdf_viewer
+import quote_respace as _qr
 
 
 def _zsxq_pdf_meta(file_id: int) -> dict | None:
@@ -1502,7 +1503,7 @@ def feed():
                 return out
             placeholders = ",".join("?" * len(ids))
             rows = conn.execute(
-                f"SELECT file_id, name, comment, bank, "
+                f"SELECT file_id, name, comment, bank, local_path, "
                 f"  COALESCE(comment_updated_at, create_time, '') AS date "
                 f"FROM pdf_files WHERE file_id IN ({placeholders})",
                 tuple(ids),
@@ -1518,6 +1519,7 @@ def feed():
                 "badge":          r["bank"] or "ZSXQ",
                 "viewer_url":     f"/zsxq/pdf-viewer/{fid}",
                 "open_url":       f"/zsxq/open-local/{fid}",
+                "local_path":     r["local_path"],
             }
         return out
 
@@ -1540,7 +1542,7 @@ def feed():
                 return out
             placeholders = ",".join("?" * len(ids))
             rows = conn.execute(
-                f"SELECT id, ticker, company_name, period, form_type, comment, "
+                f"SELECT id, ticker, company_name, period, form_type, comment, local_path, "
                 f"  COALESCE(comment_updated_at, filed_date, '') AS date "
                 f"FROM reports WHERE id IN ({placeholders})",
                 tuple(ids),
@@ -1558,6 +1560,7 @@ def feed():
                 "badge":          r["ticker"] or "SEC",
                 "viewer_url":     f"/sec/pdf-viewer/{r['id']}",
                 "open_url":       f"/sec/open-local/{r['id']}",
+                "local_path":     r["local_path"],
             }
         return out
 
@@ -1590,7 +1593,7 @@ def feed():
                 "COALESCE(filed_date, '')"
             )
             rows = conn.execute(
-                f"SELECT id, ticker, company_name, period, form_type, "
+                f"SELECT id, ticker, company_name, period, form_type, local_path, "
                 f"  {comment_col} AS comment, {date_expr} AS date "
                 f"FROM cninfo_reports WHERE id IN ({placeholders})",
                 tuple(ids),
@@ -1608,6 +1611,7 @@ def feed():
                 "badge":          r["ticker"] or "CN",
                 "viewer_url":     f"/cn/pdf-viewer/{r['id']}",
                 "open_url":       f"/cn/open-local/{r['id']}",
+                "local_path":     r["local_path"],
             }
         return out
 
@@ -1630,7 +1634,7 @@ def feed():
                 return out
             placeholders = ",".join("?" * len(ids))
             rows = conn.execute(
-                f"SELECT id, name, ticker, type, comment, "
+                f"SELECT id, name, ticker, type, comment, local_path, "
                 f"  COALESCE(comment_updated_at, created_at, '') AS date "
                 f"FROM notes WHERE id IN ({placeholders})",
                 tuple(ids),
@@ -1647,6 +1651,7 @@ def feed():
                 "badge":          r["ticker"] or "MANUAL",
                 "viewer_url":     f"/manual-report/pdf-viewer/{r['id']}",
                 "open_url":       f"/manual-report/open-local/{r['id']}",
+                "local_path":     r["local_path"],
             }
         return out
 
@@ -1778,9 +1783,22 @@ def feed():
                            "w": rect["w"], "h": rect["h"], "dpi": 3})
         return f'![P{page} region screenshot]({prefix}/pdf-region-image/{fid}?{qs})'
 
-    def _format_annotation(ann: dict) -> str:
+    def _format_annotation(ann: dict, local_path: str | None = None) -> str:
         page = ann.get("page") or 0
-        quote_full = (ann.get("quote") or "").strip().replace("\n", " ")
+        raw_quote = (ann.get("quote") or "").strip()
+        # Pre-fix rows (before 07485e3) may have a squished quote frozen
+        # into this Tier-1 table (see CLAUDE.md DB Safety). Re-derive a
+        # readable string from the page's OCR cache for DISPLAY ONLY —
+        # never rewrites pdf_inline_comments.
+        respaced = _qr.respace(
+            raw_quote,
+            source=ann.get("source") or "",
+            file_id=ann.get("file_id") or 0,
+            page=page,
+            rect_json=ann.get("rect_json"),
+            local_path=local_path,
+        )
+        quote_full = respaced.strip().replace("\n", " ")
         body = (ann.get("body") or "").strip()
         label = (quote_full[:40].rstrip() + "…") if len(quote_full) > 40 else quote_full
         heading = f'## P{page} — "{label}"' if label else f"## P{page}"
@@ -1816,7 +1834,9 @@ def feed():
         annotations = grouped.get((source, fid), [])
         if annotations:
             # Modern path: render inline annotations as ## P{n} blocks.
-            comment_md = "\n\n".join(_format_annotation(a) for a in annotations)
+            comment_md = "\n\n".join(
+                _format_annotation(a, meta.get("local_path")) for a in annotations
+            )
         else:
             # Pre-mirror path: fall back to the legacy aggregated comment.
             comment_md = meta["legacy_comment"]
