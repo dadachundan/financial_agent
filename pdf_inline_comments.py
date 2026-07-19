@@ -155,6 +155,22 @@ def list_for_file(source: str, file_id: int) -> list[dict]:
     return [_row_to_dict(r) for r in rows]
 
 
+def file_ids_with_comments(source: str) -> set[int]:
+    """Return the set of file_ids that have ≥1 inline annotation for `source`.
+
+    Used by the zsxq index to fold manually-annotated PDFs into the
+    "💬 With comment" filter — those live here in notes.db, not in the
+    `comment` column of pdf_files (zsxq.db), so a plain column check misses
+    them (e.g. file_id 214515482244551, annotated via the /pdf-viewer)."""
+    init_db()
+    with _conn() as conn:
+        rows = conn.execute(
+            "SELECT DISTINCT file_id FROM pdf_inline_comments WHERE source=?",
+            (source,),
+        ).fetchall()
+    return {r["file_id"] for r in rows}
+
+
 def create(
     source: str,
     file_id: int,

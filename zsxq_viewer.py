@@ -401,6 +401,11 @@ __URLPATCH__
 
           <!-- Comment cell -->
           <td class="col-extra" style="max-width:160px" id="comment-cell-{{ row.file_id }}">
+            {% if row.file_id in annotated_ids %}
+            <a href="{{ _base | default('') }}/pdf-viewer/{{ row.file_id }}" target="_blank"
+               class="tag-badge" style="background:#e8f0fe;color:#1a56db;border-color:#c3d3f7;text-decoration:none"
+               title="Has manual inline annotations — open the viewer">🖍 annotated</a>
+            {% endif %}
             <span class="comment-preview" data-comment="{{ (row.comment or '')|e }}"
                   onclick="viewComment({{ row.file_id }}, this)"
                   title="Click to preview / edit"></span>
@@ -939,7 +944,8 @@ def _build_where(f: str, ticker: str, tag: str,
                  min_claude_rating: int = 0,
                  unrated: bool = False,
                  bank: str = "",
-                 with_comment: bool = False) -> tuple[str, list]:
+                 with_comment: bool = False,
+                 annotated_ids: set[int] | None = None) -> tuple[str, list]:
     """Build WHERE clause + params from filter args (shared by index and print-view)."""
     conditions: list[str] = []
     params: list = []
@@ -991,7 +997,16 @@ def _build_where(f: str, ticker: str, tag: str,
         conditions.append("bank = ?")
         params.append(bank)
     if with_comment:
-        conditions.append("comment IS NOT NULL AND comment != ''")
+        # A PDF "has a comment" if either the legacy `comment` column is set
+        # OR it has ≥1 manual inline annotation (pdf_inline_comments, notes.db).
+        if annotated_ids:
+            id_list = ",".join(str(int(i)) for i in annotated_ids)
+            conditions.append(
+                f"((comment IS NOT NULL AND comment != '') "
+                f"OR file_id IN ({id_list}))"
+            )
+        else:
+            conditions.append("comment IS NOT NULL AND comment != ''")
     where = ("WHERE " + " AND ".join(conditions)) if conditions else ""
     return where, params
 
@@ -1106,8 +1121,18 @@ def print_view():
         sort = "desc"
 
     where, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id)
-    # Only rows that have a comment
-    comment_cond = "comment IS NOT NULL AND comment != ''"
+    # Only rows that have a comment — either the legacy `comment` column OR a
+    # manual inline annotation (pdf_inline_comments, notes.db).
+    try:
+        import pdf_inline_comments as _pic
+        annotated_ids = _pic.file_ids_with_comments("zsxq")
+    except Exception:
+        annotated_ids = set()
+    _annot_sql = (
+        f" OR file_id IN ({','.join(str(int(i)) for i in annotated_ids)})"
+        if annotated_ids else ""
+    )
+    comment_cond = f"((comment IS NOT NULL AND comment != ''){_annot_sql})"
     if where:
         where += f" AND {comment_cond}"
     else:
@@ -1193,6 +1218,21 @@ def index():
 
     conn = get_conn()
 
+    # PDFs the user manually annotated in the /pdf-viewer live in
+    # pdf_inline_comments (notes.db), not in the `comment` column of pdf_files.
+    # Fold them into the "💬 With comment" filter + count so highlight-only
+    # PDFs (e.g. file_id 214515482244551) show up too.
+    try:
+        import pdf_inline_comments as _pic
+        annotated_ids = _pic.file_ids_with_comments("zsxq")
+    except Exception as e:
+        print(f"[zsxq index] inline-comment ids skipped: {e}")
+        annotated_ids = set()
+    _annot_sql = (
+        f" OR file_id IN ({','.join(str(int(i)) for i in annotated_ids)})"
+        if annotated_ids else ""
+    )
+
     stats = conn.execute(
         "SELECT "
         "  COUNT(*)                                                          AS total, "
@@ -1209,11 +1249,12 @@ def index():
         "               AND semiconductor_related=0 AND energy_related=0) "
         "               THEN 1 ELSE 0 END)                                  AS cat_none, "
         "  SUM(CASE WHEN local_path IS NULL              THEN 1 ELSE 0 END) AS no_pdf, "
-        "  SUM(CASE WHEN comment IS NOT NULL AND comment != '' THEN 1 ELSE 0 END) AS with_comment "
+        "  SUM(CASE WHEN (comment IS NOT NULL AND comment != '')"
+        f"               {_annot_sql} THEN 1 ELSE 0 END)                    AS with_comment "
         "FROM pdf_files"
     ).fetchone()
 
-    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank, with_comment)
+    where_clause, params = _build_where(f, ticker, tag, date_from, date_to, min_rating, q, group_id, min_claude_rating, unrated, bank, with_comment, annotated_ids)
     order      = "ASC" if sort == "asc" else "DESC"
     order_col  = "page_count" if sort_by == "pages" else "create_time"
     # NULLs last for page_count sort
@@ -1267,6 +1308,7 @@ def index():
         all_banks=all_banks,
         current_bank=bank,
         with_comment=with_comment,
+        annotated_ids=annotated_ids,
         flomo_enabled=bool(_FLOMO_WEBHOOK_URL),
         db_path=DB_PATH,
         query_string=request.query_string.decode(),
