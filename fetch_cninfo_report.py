@@ -294,6 +294,37 @@ def init_db() -> None:
                 pass
 
 
+def prune_missing(*, dry_run: bool = False) -> int:
+    """Remove report rows whose ``local_path`` no longer exists on disk.
+
+    The ``cninfo_reports/`` tree is a re-fetchable cninfo filing cache; when the
+    files are deleted the DB rows become dangling pointers that the viewer would
+    surface as broken links. This prunes those orphans. Rows with a non-empty
+    user ``comment`` are always kept so no hand-typed note is ever lost.
+    Idempotent — re-running is a no-op once the DB matches the filesystem.
+    Returns the number of rows removed (or that *would* be removed when
+    ``dry_run`` is set).
+    """
+    conn = get_conn()
+    try:
+        rows = conn.execute(
+            "SELECT id, local_path, comment FROM cninfo_reports"
+        ).fetchall()
+        orphan_ids = [
+            r["id"] for r in rows
+            if not (r["comment"] and r["comment"].strip())
+            and not (r["local_path"] and Path(r["local_path"]).exists())
+        ]
+        if not dry_run and orphan_ids:
+            conn.executemany(
+                "DELETE FROM cninfo_reports WHERE id=?", [(i,) for i in orphan_ids]
+            )
+            conn.commit()
+        return len(orphan_ids)
+    finally:
+        conn.close()
+
+
 # ── SSE helper ─────────────────────────────────────────────────────────────────
 
 def _sse(msg: str, *, done: bool = False, error: bool = False,
