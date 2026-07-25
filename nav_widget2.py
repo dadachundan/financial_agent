@@ -6,8 +6,6 @@ NAV_HTML = """\
   <ul class="navbar-nav ms-3">
     <li class="nav-item"><a class="nav-link py-1" href="/zep">&#128376; Knowledge Graph</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/zsxq">&#128218; ZSXQ</a></li>
-    <li class="nav-item"><a class="nav-link py-1" href="/sec">&#128196; US Reports</a></li>
-    <li class="nav-item"><a class="nav-link py-1" href="/cn">&#127464;&#127475; CN Reports</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/manual-report">&#128206; Manual Report</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/claude-reports">&#128209; Claude Reports</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/comments">&#128172; Comments</a></li>
