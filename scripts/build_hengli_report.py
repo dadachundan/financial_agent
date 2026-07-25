@@ -10,7 +10,7 @@ from docx.enum.table import WD_ALIGN_VERTICAL, WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-CHARTS_DIR = "charts_hengli"
+CHARTS_DIR = "reports/company/Hengli_SSE601100/charts"
 OUT_PATH = "reports/company/Hengli_SSE601100/Hengli_SSE601100_Initiation_Report_2026-05-19.docx"
 
 NAVY = RGBColor(0x1F, 0x4E, 0x79)

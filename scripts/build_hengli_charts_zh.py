@@ -30,7 +30,7 @@ NAVY = "#1F4E79"; TEAL = "#3F8EAA"; ORANGE = "#E07B14"
 GREEN = "#2E7D45"; RED = "#C62828"; GREY = "#808080"
 PALETTE = [NAVY, TEAL, ORANGE, GREEN, RED, "#9C27B0", "#FFB300", "#5D4037"]
 
-OUT_DIR = "charts_hengli_zh"
+OUT_DIR = "reports/company/Hengli_SSE601100/charts"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 YEARS_ALL = ["20A","21A","22A","23A","24A","25A","26E","27E","28E","29E","30E"]

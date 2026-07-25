@@ -1,6 +1,6 @@
 """
 Task 4: Generate 25+ professional charts for Hengli Hydraulics initiation report.
-All charts saved at 300 DPI to charts_hengli/ then zipped.
+All charts saved at 300 DPI to reports/company/Hengli_SSE601100/charts/ then zipped.
 
 Includes 4 MANDATORY charts:
   chart_03: Revenue by product (stacked area)
@@ -42,7 +42,7 @@ RED = "#C62828"
 GREY = "#808080"
 PALETTE = [NAVY, TEAL, ORANGE, GREEN, RED, "#9C27B0", "#FFB300", "#5D4037"]
 
-OUT_DIR = "charts_hengli"
+OUT_DIR = "reports/company/Hengli_SSE601100/charts"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 # ============= DATA =============
