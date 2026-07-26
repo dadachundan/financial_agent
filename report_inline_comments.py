@@ -27,6 +27,8 @@ def _conn() -> sqlite3.Connection:
     DB_PATH.parent.mkdir(exist_ok=True)
     conn = sqlite3.connect(DB_PATH, timeout=30)
     conn.row_factory = sqlite3.Row
+    from db_paths import harden
+    harden(conn)  # WAL + synchronous=FULL + busy_timeout (crash-safety)
     return conn
 
 

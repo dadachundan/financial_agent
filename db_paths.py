@@ -22,6 +22,8 @@ change.
 from __future__ import annotations
 
 import os
+import sqlite3
+import time
 from pathlib import Path
 
 PROJECT_ROOT: Path = Path(__file__).resolve().parent
@@ -61,3 +63,72 @@ def is_sandbox_path(path: str | Path) -> bool:
     s = str(path)
     name = Path(s).name
     return s.startswith("/tmp/") or name.endswith((".test.db", ".sandbox.db"))
+
+
+# ── Durability / crash-safety hardening ─────────────────────────────────
+#
+# Motivation: on 2026-07-26 ``db/notes.db`` became "database disk image is
+# malformed" — the ``pdf_inline_comments`` B-tree had a contiguous run of
+# *zero-filled* leaf pages that the interior page still pointed at. That is
+# the signature of a torn / lost write: pages were allocated and the pointer
+# flushed, but the leaf contents never reached disk before the process was
+# killed (the 16 GB M4 Air OOM/jetsam-kills under memory pressure). WAL mode
+# alone does not prevent this when ``synchronous`` is too low, because the
+# main-db file can be left half-written during a checkpoint. ``harden()``
+# closes that window; ``backup_db()`` gives a rotating fallback so a future
+# torn write is recoverable instead of silently lost.
+
+
+def harden(conn: sqlite3.Connection) -> sqlite3.Connection:
+    """Apply crash-safety PRAGMAs to a freshly-opened connection.
+
+    - ``journal_mode=WAL``   — concurrent readers while one process writes.
+    - ``synchronous=FULL``   — fsync the WAL on every commit AND the main db
+      on checkpoint, so a SIGKILL mid-checkpoint can't leave zeroed pages.
+      These DBs are tiny + low-write, so the fsync cost is irrelevant.
+    - ``busy_timeout=5000``  — wait out a concurrent writer instead of
+      raising ``database is locked`` (multiple processes open notes.db).
+    - ``wal_autocheckpoint=256`` — keep the WAL bounded (~1 MB at 4 KB pages).
+
+    Idempotent and safe to call on every connect. Returns ``conn`` so it can
+    be chained: ``conn = harden(sqlite3.connect(path))``.
+    """
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.execute("PRAGMA synchronous=FULL")
+    conn.execute("PRAGMA busy_timeout=5000")
+    conn.execute("PRAGMA wal_autocheckpoint=256")
+    return conn
+
+
+def backup_db(name: str, *, keep: int = 5) -> Path | None:
+    """Make a consistent rotating backup of a DB using SQLite's online
+    backup API (safe even while the DB is being written).
+
+    Backups land next to the source as ``<name>.bak-YYYYmmdd-HHMMSS`` and the
+    newest ``keep`` are retained. Skips sandbox DBs (``FINAGENT_DB_DIR`` /
+    ``/tmp``) and missing files. Returns the backup path, or ``None`` if
+    skipped. Callers should invoke this at startup (see ``init_db``) — it is
+    cheap for these small DBs and gives a recoverable fallback for the
+    torn-write failure mode documented above.
+    """
+    src = db_path(name)
+    if is_sandbox_path(src) or not src.exists():
+        return None
+    stamp = time.strftime("%Y%m%d-%H%M%S")
+    dest = src.with_name(f"{src.name}.bak-{stamp}")
+    try:
+        s = sqlite3.connect(f"file:{src}?mode=ro", uri=True)
+        d = sqlite3.connect(dest)
+        with d:
+            s.backup(d)
+        d.close()
+        s.close()
+    except sqlite3.Error:
+        # A corrupt source can't be backed up — don't mask the real error.
+        dest.unlink(missing_ok=True)
+        return None
+    # Rotate: keep only the newest ``keep`` backups.
+    backups = sorted(src.parent.glob(f"{src.name}.bak-*"), reverse=True)
+    for old in backups[keep:]:
+        old.unlink(missing_ok=True)
+    return dest

@@ -40,6 +40,8 @@ def _conn() -> sqlite3.Connection:
     DB_PATH.parent.mkdir(exist_ok=True)
     conn = sqlite3.connect(DB_PATH, timeout=30)
     conn.row_factory = sqlite3.Row
+    from db_paths import harden
+    harden(conn)  # WAL + synchronous=FULL + busy_timeout (crash-safety)
     return conn
 
 
@@ -103,6 +105,22 @@ def init_db() -> None:
                 "ON pdf_inline_comments(source, file_id)"
             )
             conn.commit()
+            # Crash-safety: verify the file isn't already corrupt, and take a
+            # rotating consistent backup so a future torn write (see the
+            # 2026-07-26 malformed-btree incident) is recoverable. Both are
+            # cheap for this small DB; failures here must never block startup.
+            try:
+                bad = conn.execute("PRAGMA quick_check").fetchone()
+                if bad and bad[0] != "ok":
+                    print(f"[pdf_inline_comments] ⚠️  quick_check: {bad[0]!r} "
+                          f"— {DB_PATH} may be corrupt")
+            except sqlite3.DatabaseError as e:
+                print(f"[pdf_inline_comments] ⚠️  quick_check failed: {e}")
+            try:
+                from db_paths import backup_db
+                backup_db("notes.db")
+            except Exception as e:  # backup must never break the app
+                print(f"[pdf_inline_comments] backup skipped: {e}")
         _INITED = True
 
 

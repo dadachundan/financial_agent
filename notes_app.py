@@ -85,7 +85,8 @@ _pdf_viewer.register(notes_bp, source="manual", path_provider=_notes_pdf_meta)
 def get_conn():
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
-    conn.execute("PRAGMA journal_mode=WAL")
+    from db_paths import harden
+    harden(conn)  # WAL + synchronous=FULL + busy_timeout (crash-safety)
     return conn
 
 

@@ -15,6 +15,9 @@ package-lock.json
 *.db-wal
 *.db-shm
 *.wal
+# Rotating consistent backups + salvaged corrupt copies (db_paths.backup_db) — local only
+*.db.bak-*
+*.db.corrupt-*
 kg_uploads/
 ticker_name_cache.json
 db/pe_cache.json
