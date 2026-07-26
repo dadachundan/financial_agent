@@ -1,17 +1,19 @@
 # WeRide Inc. 文远知行 (NASDAQ:WRD; HKEX:0800) — 公司研究报告
 
-**截至日期: 2026-06-14**
+**截至日期: 2026-07-26**
 **上市地: 纳斯达克全球精选市场 (代码 WRD, 自 2024 年 10 月起) 与香港联合交易所主板 (代码 0800, 自 2025 年 11 月 6 日起)**
 **注册地: 开曼群岛 (运营总部: 中国广州国际生物岛)**
 **报告语言: 简体中文 (英文版同时存在于本目录, 本次刷新未改动英文版)**
-**分析师报告——首次覆盖刷新 (上一版 2026-05-27)**
+**分析师报告——覆盖刷新 (上一版 2026-06-14)**
 
 ---
 
-> *分析师观点：* **评级：Overweight（增持）· 12 个月目标价 US\$10.50（较 2026-06-12 现价 US\$6.17 上行 +70%）· 估值方法：概率加权情景树 (25% 牛 / 50% 基准 / 25% 熊)，基准锚定 2027E EV/Sales 约 9× 远期收入**
-> 市值约 US\$2.04bn · EV 约 US\$1.18bn (净现金约 US\$0.86bn) · 52 周区间 US\$6.10–US\$12.38 · NASDAQ:WRD / HKEX:0800 · 每 1 股 ADS = 3 股 A 类普通股
+> *分析师观点：* **评级：Overweight（增持）· 12 个月目标价 US\$10.50（较 2026-07-24 现价 US\$5.32 上行 +97%）· 估值方法：概率加权情景树 (25% 牛 / 50% 基准 / 25% 熊)，基准锚定 2027E EV/Sales 约 9× 远期收入**
+> 市值约 US\$1.75bn · EV 约 US\$0.89bn (净现金约 US\$0.86bn) · 52 周区间 US\$5.18–US\$12.55 · NASDAQ:WRD / HKEX:0800 · 每 1 股 ADS = 3 股 A 类普通股
 >
-> **核心论点（thesis pillars）**——（1）**全球监管布局是同业最宽、且最难复制的护城河**：8 个国家持有无人驾驶许可、12+ 个中国城市运营，阿布扎比拿下美国境外全球首张城市级完全无人驾驶商业牌照；（2）**四产品平台 (Robotaxi/Robobus/Robovan/Robosweeper) + 博世 ADAS 渠道** 把同一套 L4 技术栈摊薄到更多变现任务，2025 年整车收入放量驱动总收入 +89.6%；（3）**轻资产国际模式 (Uber/Grab/ELEVATE 分销)** 加上约 US\$0.86bn 净现金, 给了多年烧钱跑道而不必摊薄到无法承受；（4）**估值已计入"商业化不及预期"的深度折让**——年初至今股价 −34%、跑输标普 500 约 43 个百分点, 近 52 周低位, 而 1Q26 营收 +57.6% 与车队爬坡到约 1,300 辆并未显著恶化, 风险回报偏向上行。
+> **核心论点（thesis pillars）**——（1）**全球监管布局是同业最宽、且最难复制的护城河**：8 个国家持有无人驾驶许可、12+ 个中国城市运营，阿布扎比拿下美国境外全球首张城市级完全无人驾驶商业牌照；（2）**四产品平台 (Robotaxi/Robobus/Robovan/Robosweeper) + 博世 ADAS 渠道** 把同一套 L4 技术栈摊薄到更多变现任务，2025 年整车收入放量驱动总收入 +89.6%；（3）**轻资产国际模式 (Uber/Grab/ELEVATE 分销)** 加上约 US\$0.86bn 净现金, 给了多年烧钱跑道而不必摊薄到无法承受；（4）**估值已计入"商业化不及预期"的深度折让**——年初至今股价约 −39%、跑输标普 500 约 47 个百分点, 已跌至 52 周新低 (US\$5.18)，而 1Q26 营收 +57.6% 与车队爬坡到约 1,300 辆并未显著恶化, 风险回报偏向上行。
+>
+> **本次刷新的关键新事项 (相对 2026-06-14 版)：** (i) 股价自上一版的 US\$6.17 进一步回落至 US\$5.32 (−14%)，跌破前低创 52 周新低，本方目标价对现价的隐含上行由 +70% 扩大至 +97%；(ii) **摩根士丹利 2026-07-01 将目标价下调约 10% 至 US\$13.10、维持 Overweight**——理由是车队扩张进度略低于预期而非基本面转向，仍预判 2027 年净利盈亏平衡，是本次纳入的最新一手卖方观点 (详见第 1A 章 (d) 卖方观点演变)。
 >
 > **最该盯紧的两个关键变量**——(i) 全球 Robotaxi 车队从约 1,300 辆向管理层 2026 年底 2,600 辆目标的实际兑现速度 (尤其安全员撤除时间表)；(ii) 阿布扎比已宣布的单车经济 (UE) 盈亏平衡能否复制到第二、第三个城市——这是把"先发牌照"转化为"可规模化利润"的桥梁。
 
@@ -41,7 +43,7 @@
 
 ## 1. 公司概览
 
-*分析师观点：* 我们以 **Overweight（增持）评级、12 个月目标价 US\$10.50（较现价 US\$6.17 上行 +70%）** 启动对文远知行的覆盖刷新。投资逻辑可压缩为一句话: **这是一个监管布局全球最宽、技术栈完整、账上净现金约 US\$0.86bn 给了多年跑道、但市场已经按"商业化会失败"定价的纯 L4 自动驾驶平台。** 我们认为风险回报偏向上行的理由有四 (见上方核心论点)；触发"为什么是现在"的是 1Q26 营收 +57.6%、车队跨过千辆级与阿布扎比 UE 盈亏平衡——这些一手事实与股价年初至今 −34% 的走势严重背离 ([WeRide 1Q26 业绩 6-K, 2026-05-13](https://www.sec.gov/Archives/edgar/data/1867729/000110465926059704/tm2614059d1_ex99-1.htm))。我们也直陈风险: 这是一家 2025 财年净亏损 RMB16.5 亿 (US\$2.37 亿) 的公司, 任何牌照丢失或致命安全事故都会显著压缩倍数 (见第 9 章)。
+*分析师观点：* 我们以 **Overweight（增持）评级、12 个月目标价 US\$10.50（较 2026-07-24 现价 US\$5.32 上行 +97%）** 维持对文远知行的覆盖。投资逻辑可压缩为一句话: **这是一个监管布局全球最宽、技术栈完整、账上净现金约 US\$0.86bn 给了多年跑道、但市场已经按"商业化会失败"定价的纯 L4 自动驾驶平台。** 我们认为风险回报偏向上行的理由有四 (见上方核心论点)；触发"为什么是现在"的是 1Q26 营收 +57.6%、车队跨过千辆级与阿布扎比 UE 盈亏平衡——这些一手事实与股价年初至今约 −39% (已创 52 周新低) 的走势严重背离 ([WeRide 1Q26 业绩 6-K, 2026-05-13](https://www.sec.gov/Archives/edgar/data/1867729/000110465926059704/tm2614059d1_ex99-1.htm))。我们也直陈风险: 这是一家 2025 财年净亏损 RMB16.5 亿 (US\$2.37 亿) 的公司, 任何牌照丢失或致命安全事故都会显著压缩倍数 (见第 9 章)。
 
 文远知行 (WeRide Inc., 开曼群岛注册; 以下简称"文远知行"或"WRD") 是一家**纯粹的 L4 (Level-4) 自动驾驶 (autonomous driving) 公司**, 总部位于中国广州国际生物岛, 并在纳斯达克全球精选市场 (代码 WRD, 自 2024 年 10 月起) 与香港联合交易所主板 (股票代码 0800, 自 2025 年 11 月 6 日起) 双重上市 ([WeRide FY2025 Form 20-F, Item 4.A 公司沿革与发展](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。公司自主研发了完整的自动驾驶技术栈——感知 (perception)、规划 (planning)、决策 (decision-making)、仿真 (simulation) 以及自研的高性能计算 (HPC, High-Performance Compute) 平台, 并将其封装为四种已量产的车型: **Robotaxi (无人驾驶出租车)、Robobus (自动驾驶巴士)、Robovan (无人货运车)、Robosweeper (自动驾驶环卫车)**, 此外还提供与博世 (Bosch) 联合开发的面向大众市场的端到端 ADAS (Advanced Driver Assistance System, 高级驾驶辅助系统) 方案。每股 ADS (美国存托股) 代表 3 股 A 类普通股 ([WeRide FY2025 20-F, 封面与术语表](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。
 
@@ -55,86 +57,40 @@
 
 下面的桑基图把 2025 财年的收入如何沿着 COGS、研发、管理与销售费用流向最终的经营亏损可视化。它直观说明了核心问题: 即便 gross profit (毛利) 为正 (RMB206.8 百万、毛利率 30.2%), 研发费用 (RMB1,372.2 百万) 单项就是毛利的 6.6 倍——这是一家把利润表完全投入"规模化之前的技术领先"的公司 ([WeRide FY2025 20-F, Item 5.A——R&D RMB1,372.2 百万](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1000" height="560" fill="#ffffff"/>
-<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">文远知行 WeRide (WRD) 收入如何转化为亏损 — FY2025</text>
-<path d="M 576.00,-366.61 C 630.00,-366.61 630.00,-313.58 684.00,-313.58 L 684.00,-311.58 C 630.00,-311.58 630.00,-364.61 576.00,-364.61 Z" fill="#86efac" fill-opacity="0.55"/>
-<path d="M 576.00,-350.61 C 630.00,-350.61 630.00,-297.58 684.00,-297.58 L 684.00,87.85 C 630.00,87.85 630.00,34.82 576.00,34.82 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 576.00,34.82 C 630.00,34.82 630.00,101.85 684.00,101.85 L 684.00,891.58 C 630.00,891.58 630.00,824.54 576.00,824.54 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 700.00,-313.58 C 754.00,-313.58 754.00,279.82 808.00,279.82 L 808.00,281.82 C 754.00,281.82 754.00,-311.58 700.00,-311.58 Z" fill="#86efac" fill-opacity="0.55"/>
-<path d="M 700.00,-311.58 C 754.00,-311.58 754.00,295.82 808.00,295.82 L 808.00,298.18 C 754.00,298.18 754.00,-309.22 700.00,-309.22 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 204.00,64.00 C 258.00,64.00 258.00,92.00 312.00,92.00 L 312.00,225.23 C 258.00,225.23 258.00,197.23 204.00,197.23 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 452.00,85.00 C 506.00,85.00 506.00,-366.61 560.00,-366.61 L 560.00,-364.61 C 506.00,-364.61 506.00,87.00 452.00,87.00 Z" fill="#86efac" fill-opacity="0.55"/>
-<path d="M 452.00,87.00 C 506.00,87.00 506.00,-350.61 560.00,-350.61 L 560.00,824.54 C 506.00,824.54 506.00,1262.15 452.00,1262.15 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 328.00,92.00 C 382.00,92.00 382.00,85.00 436.00,85.00 L 436.00,204.02 C 382.00,204.02 382.00,211.02 328.00,211.02 Z" fill="#86efac" fill-opacity="0.55"/>
-<path d="M 328.00,211.02 C 382.00,211.02 382.00,218.02 436.00,218.02 L 436.00,493.00 C 382.00,493.00 382.00,486.00 328.00,486.00 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 204.00,211.23 C 258.00,211.23 258.00,225.23 312.00,225.23 L 312.00,339.47 C 258.00,339.47 258.00,325.47 204.00,325.47 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,339.47 C 258.00,339.47 258.00,339.47 312.00,339.47 L 312.00,424.65 C 258.00,424.65 258.00,424.65 204.00,424.65 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,438.65 C 258.00,438.65 258.00,424.65 312.00,424.65 L 312.00,479.96 C 258.00,479.96 258.00,493.96 204.00,493.96 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,507.96 C 258.00,507.96 258.00,479.96 312.00,479.96 L 312.00,486.00 C 258.00,486.00 258.00,514.00 204.00,514.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 576.00,838.54 C 630.00,838.54 630.00,-311.58 684.00,-311.58 L 684.00,-205.51 C 630.00,-205.51 630.00,944.61 576.00,944.61 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<rect x="188.00" y="64.00" width="16" height="133.23" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="211.23" width="16" height="114.24" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="339.47" width="16" height="85.18" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="438.65" width="16" height="55.31" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="507.96" width="16" height="6.04" rx="1.5" fill="#2563eb"/>
-<rect x="312.00" y="92.00" width="16" height="394.00" rx="1.5" fill="#1e3a8a"/>
-<rect x="436.00" y="85.00" width="16" height="119.02" rx="1.5" fill="#15803d"/>
-<rect x="436.00" y="218.02" width="16" height="274.98" rx="1.5" fill="#dc2626"/>
-<rect x="560.00" y="-366.61" width="16" height="2.00" rx="1.5" fill="#15803d"/>
-<rect x="560.00" y="-350.61" width="16" height="1175.15" rx="1.5" fill="#dc2626"/>
-<rect x="560.00" y="838.54" width="16" height="106.07" rx="1.5" fill="#2563eb"/>
-<rect x="684.00" y="-313.58" width="16" height="2.00" rx="1.5" fill="#15803d"/>
-<rect x="684.00" y="-297.58" width="16" height="385.42" rx="1.5" fill="#dc2626"/>
-<rect x="684.00" y="101.85" width="16" height="789.73" rx="1.5" fill="#dc2626"/>
-<rect x="808.00" y="279.82" width="16" height="2.00" rx="1.5" fill="#15803d"/>
-<rect x="808.00" y="295.82" width="16" height="2.36" rx="1.5" fill="#dc2626"/>
-<line x1="188.00" y1="130.62" x2="182.00" y2="106.64" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="109.64" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Robobus</text>
-<text x="179.00" y="122.64" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB231.5M  (33.8%)</text>
-<line x1="188.00" y1="268.35" x2="182.00" y2="244.37" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="247.37" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他技术服务 Tech Svc</text>
-<text x="179.00" y="260.37" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB198.5M  (29.0%)</text>
-<line x1="188.00" y1="382.06" x2="182.00" y2="358.08" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="361.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Robotaxi</text>
-<text x="179.00" y="374.08" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB148.0M  (21.6%)</text>
-<line x1="188.00" y1="466.30" x2="182.00" y2="442.32" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="445.32" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Robosweeper</text>
-<text x="179.00" y="458.32" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB96.1M  (14.0%)</text>
-<line x1="188.00" y1="510.98" x2="182.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Robovan</text>
-<text x="179.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB10.5M  (1.5%)</text>
-<rect x="331.00" y="74.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="334.00" y="86.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Revenue</text>
-<text x="334.00" y="99.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB684.6M  (100.0%)</text>
-<rect x="455.00" y="67.00" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="458.00" y="79.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Gross Profit</text>
-<text x="458.00" y="92.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB206.8M  (30.2%)</text>
-<rect x="455.00" y="200.02" width="144.60" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="458.00" y="212.02" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Cost of Revenue (COGS)</text>
-<text x="458.00" y="225.02" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB477.8M  (69.8%)</text>
-<rect x="579.00" y="-384.61" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="582.00" y="-372.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Operating Income</text>
-<text x="582.00" y="-359.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-RMB1.8B  (-268.1%)</text>
-<rect x="579.00" y="-359.61" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="582.00" y="-347.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Operating Expense</text>
-<text x="582.00" y="-334.61" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB2.0B  (298.3%)</text>
-<line x1="560.00" y1="891.58" x2="554.00" y2="487.00" stroke="#cbd5e1" stroke-width="1"/>
-<text x="551.00" y="490.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Interest / Other Income</text>
-<text x="551.00" y="503.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB184.3M  (26.9%)</text>
-<rect x="703.00" y="-331.58" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="706.00" y="-319.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Pretax Income</text>
-<text x="706.00" y="-306.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-RMB1.7B  (-241.1%)</text>
-<rect x="703.00" y="-306.58" width="119.40" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="706.00" y="-294.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">SG&amp;A</text>
-<text x="706.00" y="-281.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB669.7M  (97.8%)</text>
-<rect x="703.00" y="83.85" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="706.00" y="95.85" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">R&amp;D</text>
-<text x="706.00" y="108.85" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB1.4B  (200.4%)</text>
-<text x="833.00" y="277.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Net Income</text>
-<text x="833.00" y="290.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-RMB1.7B  (-241.7%)</text>
-<text x="833.00" y="302.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Income Tax</text>
-<text x="833.00" y="315.82" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB4.1M  (0.60%)</text>
-<text x="500.00" y="544.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: WeRide FY2025 20-F, 合并损益表 + Note 5 收入拆分 (RMB mn)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="income statement Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">文远知行 WeRide (WRD) 收入如何转化为亏损 — FY2025 (RMB 百万)</text>
+<text x="20.00" y="48.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10.5" fill="#52606d">营业开支 2,042 由毛利 207 + 经营亏损 1,835 (缺口) 共同承担 — 研发独占 67%，单项即为毛利的 6.6 倍</text>
+<path d="M 165.0,70.0 C 245.5,70.0 245.5,70.0 326.0,70.0 L 326.0,131.7 C 245.5,131.7 245.5,131.7 165.0,131.7 Z" fill="#93c5fd" fill-opacity="0.5"/>
+<path d="M 165.0,135.7 C 245.5,135.7 245.5,131.7 326.0,131.7 L 326.0,187.4 C 245.5,187.4 245.5,191.4 165.0,191.4 Z" fill="#93c5fd" fill-opacity="0.5"/>
+<rect x="150.0" y="70.0" width="15" height="61.7" rx="1.5" fill="#2563eb"/>
+<text x="141.0" y="100.8" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">产品 Product</text><text x="141.0" y="113.8" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 359.8M (53%)</text>
+<rect x="150.0" y="135.7" width="15" height="55.7" rx="1.5" fill="#2563eb"/>
+<text x="141.0" y="163.5" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">服务 Service</text><text x="141.0" y="176.5" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 324.7M (47%)</text>
+<rect x="326.0" y="70.0" width="15" height="117.4" rx="1.5" fill="#1e3a8a"/>
+<text x="341.0" y="64.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">营收 Revenue</text><text x="341.0" y="77.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 684.6M (100%)</text>
+<path d="M 341.0,70.0 C 421.5,70.0 421.5,70.0 502.0,70.0 L 502.0,105.5 C 421.5,105.5 421.5,105.5 341.0,105.5 Z" fill="#86efac" fill-opacity="0.5"/>
+<path d="M 341.0,105.5 C 421.5,105.5 421.5,105.5 502.0,105.5 L 502.0,187.4 C 421.5,187.4 421.5,187.4 341.0,187.4 Z" fill="#fca5a5" fill-opacity="0.5"/>
+<rect x="502.0" y="70.0" width="15" height="35.5" rx="1.5" fill="#15803d"/>
+<rect x="502.0" y="105.5" width="15" height="81.9" rx="1.5" fill="#dc2626"/>
+<text x="526.0" y="81.7" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">毛利 Gross profit</text><text x="526.0" y="94.7" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 206.8M · 毛利率 30.2%</text>
+<text x="526.0" y="146.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">COGS 营业成本</text><text x="526.0" y="159.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 477.8M (69.8%)</text>
+<rect x="502.0" y="205.4" width="15" height="314.6" rx="1.5" fill="#dc2626"/>
+<text x="526.0" y="362.7" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">经营亏损 Operating loss</text><text x="526.0" y="375.7" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">−RMB 1,835.1M · 缺口 (deficit)</text>
+<path d="M 517.0,70.0 C 597.5,70.0 597.5,70.0 678.0,70.0 L 678.0,105.5 C 597.5,105.5 597.5,105.5 517.0,105.5 Z" fill="#86efac" fill-opacity="0.45"/>
+<path d="M 517.0,205.4 C 597.5,205.4 597.5,105.5 678.0,105.5 L 678.0,420.1 C 597.5,420.1 597.5,520.0 517.0,520.0 Z" fill="#fca5a5" fill-opacity="0.45"/>
+<rect x="678.0" y="70.0" width="15" height="350.1" rx="1.5" fill="#b91c1c"/>
+<text x="702.0" y="64.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">营业开支 Operating expenses</text><text x="702.0" y="77.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 2,041.9M (298%)</text>
+<path d="M 693.0,70.0 C 773.5,70.0 773.5,70.0 854.0,70.0 L 854.0,305.3 C 773.5,305.3 773.5,305.3 693.0,305.3 Z" fill="#dc2626" fill-opacity="0.42"/>
+<rect x="854.0" y="70.0" width="15" height="235.3" rx="1.5" fill="#dc2626"/>
+<text x="878.0" y="187.6" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">研发 R&amp;D</text><text x="878.0" y="200.6" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 1372.2M (200% of rev)</text>
+<path d="M 693.0,305.3 C 773.5,305.3 773.5,305.3 854.0,305.3 L 854.0,407.5 C 773.5,407.5 773.5,407.5 693.0,407.5 Z" fill="#dc2626" fill-opacity="0.42"/>
+<rect x="854.0" y="305.3" width="15" height="102.2" rx="1.5" fill="#dc2626"/>
+<text x="878.0" y="356.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">管理费用 G&amp;A</text><text x="878.0" y="369.4" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 596.1M (87% of rev)</text>
+<path d="M 693.0,407.5 C 773.5,407.5 773.5,407.5 854.0,407.5 L 854.0,420.1 C 773.5,420.1 773.5,420.1 693.0,420.1 Z" fill="#dc2626" fill-opacity="0.42"/>
+<rect x="854.0" y="407.5" width="15" height="12.6" rx="1.5" fill="#dc2626"/>
+<text x="878.0" y="413.8" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">销售费用 Selling</text><text x="878.0" y="426.8" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#52606d">RMB 73.6M (11% of rev)</text>
+<text x="20.00" y="574.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-style="italic" fill="#8a97a3">经营亏损 = 毛利 206.8 − 营业开支 2,041.9 = −1,835.1；R&amp;D 1,372.2 ≈ 收入 200%，为亏损主因。IFRS 净亏损 −1,654.9 (含营业外净收入约 +180)。</text>
+<text x="20.00" y="590.0" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: WeRide FY2025 20-F Item 5.A</text>
 </svg>
 
 
@@ -245,27 +201,27 @@ xychart-beta
 
 文远知行尚未盈利且仍在持续烧钱: 2023/2024/2025 年公司**经营亏损分别为 RMB15.7 亿、RMB18.4 亿和 RMB18.4 亿** (经营费用拆分: 2025 年研发 RMB1,372.2 百万 + 管理 RMB596.1 百万 + 销售 RMB73.6 百万), **IFRS 净亏损 (loss for the year) 分别为 RMB19.5 亿、RMB25.2 亿和 RMB16.5 亿 (即 2025 年 US\$2.366 亿)** ([WeRide FY2025 20-F, Item 5.A——亏损与费用拆分](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。值得注意的细节: 2025 年 IFRS 净亏损同比*收窄* 34.2%, 但这主要由 share-based compensation (SBC, 股份支付) 大幅回落驱动 (管理费用中的 SBC 单项同比减少 RMB653.3 百万); 剔除非现金项的**非 IFRS 调整后净亏损反而同比扩大 55.5%, 从 RMB8.02 亿增至 RMB12.47 亿 (US\$1.783 亿)**——这是一个更诚实的烧钱口径, 说明经营层面的现金消耗其实在加速 ([WeRide FY2025 20-F, Item 5.A——非 IFRS 调整后净亏损](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。2025 年经营活动现金净流出为 **RMB13.2 亿 (US\$1.890 亿)** ([WeRide FY2025 20-F, 合并现金流量表](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。
 
-### 估值快照 (定价日 2026-06-12)
+### 估值快照 (定价日 2026-07-24)
 
-文远知行以每 ADS **US\$6.17** 交易, **市值约 US\$2.04bn** ([Yahoo Finance——WRD 关键统计指标, 访问于 2026-06-12](https://finance.yahoo.com/quote/WRD/key-statistics))。52 周区间: US\$6.10–US\$12.38——当前价格已接近 52 周低位。所披露的财务倍数与解读如下:
+文远知行以每 ADS **US\$5.32** 交易, **市值约 US\$1.75bn** ([Yahoo Finance——WRD 关键统计指标, 访问于 2026-07-24](https://finance.yahoo.com/quote/WRD/key-statistics))。52 周区间: US\$5.18–US\$12.55——**当前价格已跌至 52 周新低附近** (较上一版 2026-06-12 的 US\$6.17 再跌约 14%)。所披露的财务倍数与解读如下:
 
 - **TTM 市盈率 (P/E): 不具备意义 (not meaningful)**——公司处于亏损状态 (2025 财年净亏损 US\$2.366 亿), 没有正盈利可锚定。亏损的主要驱动是研发支出 (US\$196.2 百万) 远超营业收入 (US\$97.9 百万)。这是典型的"烧钱式增长"原型: 规模化之前的 L4 部署期, 单位经济只有在车队与乘车量上量后才会改善 ([WeRide FY2025 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。
-- **TTM 市销率 (P/S): 约 20.8 倍** (= 市值 US\$2.04bn ÷ FY2025 营收 US\$97.9 百万)。**这里必须纠正上一版报告的一个错误**: 此前引用 yfinance 字段给出的"3.47 倍"使用了不同的股本/营收口径, 与"市值 ÷ 报表营收"的同口径计算不一致; 以一手报表营收计算, WRD 实际 P/S 约为 20.8 倍, 属高估值区间。
-- **企业价值/销售额 (EV/Sales): 约 12.1 倍** (EV ≈ US\$1.18bn = 市值 US\$2.04bn − 净现金约 US\$0.86bn; 净现金 = 合计流动性 US\$902.4 百万 − 短期银行借款约 US\$47 百万)。**同样纠正上一版**: 公司账面是约 US\$0.86bn 净现金 (并非"约 US\$67 亿/71 亿净现金"——上一版把 RMB6.2bn 误读为 US\$, 偏差约 7–8 倍), EV 为正约 US\$1.18bn, 而非负值 ([WeRide 1Q26 6-K, 2026-05-13——合计流动性 RMB6,224.7 百万 (US\$902.4 百万)](https://www.sec.gov/Archives/edgar/data/1867729/000110465926059704/tm2614059d1_ex99-1.htm); [WeRide FY2025 20-F, 合并财务状况表——短期借款 RMB324.3 百万](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。
-- **市净率 (P/B): 约 1.75 倍** ([Yahoo Finance——WRD, 2026-06-12](https://finance.yahoo.com/quote/WRD/key-statistics))。
+- **TTM 市销率 (P/S): 约 17.9 倍** (= 市值 US\$1.75bn ÷ FY2025 营收 US\$97.9 百万; 上一版 2026-06-12 为约 20.8×, 随股价回落而压缩)。此处采用"市值 ÷ 报表营收"的同口径计算; yfinance 字段给出的 TTM P/S 约 2.4× 混用了 RMB 营收与 USD 市值口径, 不可比, 不予采用。
+- **企业价值/销售额 (EV/Sales): 约 9.1 倍** (EV ≈ US\$0.89bn = 市值 US\$1.75bn − 净现金约 US\$0.86bn; 净现金 = 1Q26 合计流动性 US\$902.4 百万 − 短期银行借款约 US\$47 百万; 上一版为约 12.1×)。公司账面是约 US\$0.86bn 净现金, EV 为正约 US\$0.89bn ([WeRide 1Q26 6-K, 2026-05-13——合计流动性 RMB6,224.7 百万 (US\$902.4 百万)](https://www.sec.gov/Archives/edgar/data/1867729/000110465926059704/tm2614059d1_ex99-1.htm); [WeRide FY2025 20-F, 合并财务状况表——短期借款 RMB324.3 百万](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。
+- **市净率 (P/B): 约 1.5 倍** (随市值回落自上一版约 1.75× 压缩) ([Yahoo Finance——WRD, 2026-07-24](https://finance.yahoo.com/quote/WRD/key-statistics))。
 
-**同业倍数比较 (TTM 市销率 P/S, 自 Yahoo Finance 2026-06-12; WRD 用同口径报表营收计算):**
+**同业倍数比较 (TTM 市销率 P/S, 自 Yahoo Finance 2026-07-24; WRD 用同口径报表营收计算):**
 
 | 同业 (代码) | TTM P/S | 状态 |
 |---|---|---|
-| 文远知行 (WRD) | 约 20.8× (报表口径) | L4 Robotaxi 纯标的, 收入 US\$97.9M |
+| 文远知行 (WRD) | 约 17.9× (报表口径) | L4 Robotaxi 纯标的, 收入 US\$97.9M |
 | 小马智行 (PONY) | 约 32.0× | L4 Robotaxi 纯标的, 收入更小 |
 | 特斯拉 (TSLA) | 约 15.6× | EV + 早期 FSD / Robotaxi |
 | Alphabet (GOOGL, Waymo 母公司) | 约 10.4× | 科技巨头; Waymo 是较小营收条线 |
 | 百度 (BIDU, Apollo Go 母公司) | 约 0.31× | 中国互联网 + AD; 传统业务拖累倍数 |
 | Mobileye (MBLY) | 约 3.9× | L2/L2+ ADAS 供应商 |
 
-**为何 WRD 的 P/S 低于最接近的纯标的可比公司小马智行 (PONY 约 32×)?** 主因是 WRD 2025 财年营业收入 (US\$97.9 百万) 显著大于小马智行 (据其披露处于约 US\$75 百万的运行口径), 分母更大、倍数被压低; 加之 WRD 营收里含约 29% 的"其他技术服务 (ADAS 研发 + 智能数据)"——市场倾向于按企业服务倍数 (个位数) 而非纯 Robotaxi 平台倍数估值 ([WeRide FY2025 20-F, Item 5.A 服务收入说明](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm); [小马智行 Pony.ai Form 20-F FY2024](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001999458&type=20-F))。*分析师观点：* 从 2027E 远期收入基础看, 卖方一致预期所隐含的远期 P/S 已大幅压缩 (高盛、瑞银、汇丰、大摩均上调 2026–2028 收入预测), 当下约 20.8× 的表观 TTM 倍数并非严格同口径比较——我们在第 1A 章用 EV/Sales 而非 P/S 作为目标价的主锚。
+**为何 WRD 的 P/S 低于最接近的纯标的可比公司小马智行 (PONY 约 32×)?** 主因是 WRD 2025 财年营业收入 (US\$97.9 百万) 显著大于小马智行 (据其披露处于约 US\$75 百万的运行口径), 分母更大、倍数被压低; 加之 WRD 营收里含约 29% 的"其他技术服务 (ADAS 研发 + 智能数据)"——市场倾向于按企业服务倍数 (个位数) 而非纯 Robotaxi 平台倍数估值 ([WeRide FY2025 20-F, Item 5.A 服务收入说明](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm); [小马智行 Pony.ai Form 20-F FY2024](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001999458&type=20-F))。*分析师观点：* 从 2027E 远期收入基础看, 卖方一致预期所隐含的远期 P/S 已大幅压缩 (高盛、瑞银、汇丰、大摩均上调 2026–2028 收入预测), 当下约 17.9× 的表观 TTM 倍数并非严格同口径比较——我们在第 1A 章用 EV/Sales 而非 P/S 作为目标价的主锚。
 
 ---
 
@@ -298,11 +254,11 @@ xychart-beta
 
 对一家无正盈利、无正自由现金流的纯 L4 平台, **forward-PE 与 DCF 都不稳健** (EPS 为负、终值假设占 DCF 价值 >90%)。我们采用**概率加权情景树, 主锚为 2027E EV/Sales**:
 
-- **基准 (50% 权重):** FY2027E 收入 RMB19.5 亿 (约 US\$2.78 亿, 按 7.0 汇率)；给予 9× EV/Sales (低于当前 12.1×, 反映规模化前折让, 但高于成熟汽车科技因纯 L4 的期权价值)→ EV 约 US\$2.5bn；加净现金约 US\$0.7bn (扣除两年烧钱)→ 股权价值约 US\$3.2bn；按约 3.42 亿 ADS → 约 US\$9.4/ADS。
+- **基准 (50% 权重):** FY2027E 收入 RMB19.5 亿 (约 US\$2.78 亿, 按 7.0 汇率)；给予 9× EV/Sales (应用于显著高于 TTM 的 2027E 收入基数, 相较当前 TTM 约 9.1× 的表观倍数实为更低的隐含估值, 反映规模化前折让, 但高于成熟汽车科技因纯 L4 的期权价值)→ EV 约 US\$2.5bn；加净现金约 US\$0.7bn (扣除两年烧钱)→ 股权价值约 US\$3.2bn；按约 3.42 亿 ADS → 约 US\$9.4/ADS。
 - **牛市 (25% 权重):** 车队提前兑现 2026 年 2,600 辆并向 2027 年加速, 海外 UE 盈亏平衡复制到 3+ 城市, 收入超预期至 RMB24 亿、给 12× EV/Sales → 约 US\$15/ADS (与大摩 US\$14.70 牛市锚一致 ([Morgan Stanley — WeRide, 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/812488548484422/Morgan%20Stanley-WeRide%20Inc%EF%BC%88WRD.US%EF%BC%89Rooted%20in%20Madrid%EF%BC%8C%20with%20a%20pan~EU%20vision-260604.pdf)))。
 - **熊市 (25% 权重):** 牌照延迟或安全事件 + 价格战压缩毛利, 收入仅 RMB14 亿、de-rate 到 5× EV/Sales → 约 US\$5/ADS (接近 52 周低位)。
 
-概率加权目标价 = 0.25×15 + 0.50×9.4 + 0.25×5 = **约 US\$10.50/ADS**, 较现价 US\$6.17 上行 **+70%**。**这是一个 PTS 式 (probability-weighted) 目标价**——我们明确不把它当成点估值, 因为 L4 商业化的结果分布是高度双峰的。
+概率加权目标价 = 0.25×15 + 0.50×9.4 + 0.25×5 = **约 US\$10.50/ADS**, 较 2026-07-24 现价 US\$5.32 上行 **+97%** (上一版现价 US\$6.17 时为 +70%; 目标价本身未变, 上行扩大源于股价进一步回落)。**这是一个 PTS 式 (probability-weighted) 目标价**——我们明确不把它当成点估值, 因为 L4 商业化的结果分布是高度双峰的。
 
 **为什么用 9× 的 2027E EV/Sales?** 对标三组: (i) 小马智行当前约 32× TTM P/S, 但其收入基数更小、增速更高, 2027E 远期口径下二者趋同; (ii) 成熟自动驾驶感知供应商 Mobileye 约 3.9× P/S——但 Mobileye 是 L2/L2+ 供应商, 不含 Robotaxi 平台期权; (iii) 高盛对 WRD 的 0800.HK 目标价 HK\$54.72 (较 2026-05-14 现价上行约 165%) 基于"2031 年 EV/EBITDA 折现", 隐含的远期收入倍数显著高于我们的 9× ([Goldman Sachs — WeRide 0800.HK, 2026-05-14](http://xs-macbook-air.local:5001/zsxq/pdf/184124114522122/Goldman%20Sachs-WeRide%20%EF%BC%880800.HK%EF%BC%89%EF%BC%9A%20Robotaxi%20commercialization%20in%20China%20and%20overseas%20market%EF%BC%9B%20Fleet%20ramp~up%20with%20improving%20coverage%20efficiency%EF%BC%9B%20Buy-260514.pdf))。我们取 9× 是有意偏保守。
 
@@ -310,16 +266,18 @@ xychart-beta
 
 | 情景 | 关键假设 | 目标价/ADS | 较现价 |
 |---|---|---|---|
-| 牛市 (25%) | 车队提前兑现 + 海外 UE 盈亏平衡复制 3+ 城; 12× 2027E EV/Sales | US\$15.0 | +143% |
-| 基准 (50%) | 中性收入爬坡; 9× 2027E EV/Sales | US\$9.4 | +52% |
-| 熊市 (25%) | 牌照延迟/安全事件 + 价格战; 5× EV/Sales | US\$5.0 | −19% |
-| **概率加权** | — | **US\$10.50** | **+70%** |
+| 牛市 (25%) | 车队提前兑现 + 海外 UE 盈亏平衡复制 3+ 城; 12× 2027E EV/Sales | US\$15.0 | +182% |
+| 基准 (50%) | 中性收入爬坡; 9× 2027E EV/Sales | US\$9.4 | +77% |
+| 熊市 (25%) | 牌照延迟/安全事件 + 价格战; 5× EV/Sales | US\$5.0 | −6% |
+| **概率加权** | — | **US\$10.50** | **+97%** |
+
+*上表"较现价"列以 2026-07-24 现价 US\$5.32 计。*
 
 ### (d) 与市场一致预期的对比 / 卖方观点演变 (Sell-side view evolution)
 
-本报告引用了 **≥2 份 db/zsxq.db 文远知行卖方研报**, 故须给出按机构的观点时间线与机构间分歧。我们先做了 `db/stock_price_target.db` 只读预查 (read-only), 机械地拉出全部 WRD 行: UBS Buy US\$12 (2026-05-14, 现价 US\$7.60, +57.9%)、HSBC Buy US\$11.40 (2026-05-14, +50%)、Goldman Buy HK\$54.72 (0800.HK, 2026-05-14)、Morgan Stanley Overweight (2026-05-08, 无单独 PT 行)。PT 分散度 (美股口径): 最低 US\$11.40 (HSBC)、最高 US\$14.70 (MS), 中位约 US\$12 (UBS), 区间约 ±13%——**全部为 Buy/Overweight, 无分歧于方向, 仅分歧于幅度**。
+本报告引用了 **≥2 份 db/zsxq.db 文远知行卖方研报**, 故须给出按机构的观点时间线与机构间分歧。我们先做了 `db/stock_price_target.db` 只读预查 (read-only), 机械地拉出全部 WRD 行: UBS Buy US\$12 (2026-05-14, 现价 US\$7.60, +57.9%)、HSBC Buy US\$11.40 (2026-05-14, +50%)、Goldman Buy HK\$54.72 (0800.HK, 2026-05-14)、Morgan Stanley Overweight (2026-05-08, 无单独 PT 行)。**本次刷新新增最新一手观点: 大摩 2026-07-01 把美股目标价从 US\$14.70 下调约 10% 至 US\$13.10 (维持 Overweight)。** PT 分散度 (美股口径, 截至本刷新): 最低 US\$11.40 (HSBC)、最高 US\$13.10 (MS 最新), 中位约 US\$12 (UBS), 区间约 ±7%——**全部为 Buy/Overweight, 无分歧于方向, 仅分歧于幅度**。
 
-**按机构的观点时间线 (按研报日期):**
+**按机构的观点时间线 (按研报日期; 注意大摩自身 6/4 → 7/1 的下调):**
 
 | 机构 | 日期 | 评级 / 目标价 | 报告日现价 / 上行 | 核心论点 |
 |---|---|---|---|---|
@@ -327,20 +285,25 @@ xychart-beta
 | HSBC (WRD.US) | 2026-05-14 | Buy / US\$11.40 (H 股 HK\$29.60) | 现价约 US\$7.6, +50% | 1Q26 基本符合预期; 截至 4 月底全球约 1,300 辆 Robotaxi (中国 1,000)；2026 目标 2,600 辆/L4 共 5,000 辆 ([HSBC — WeRide](http://xs-macbook-air.local:5001/zsxq/pdf/812452122241522/HSBC-WeRide%20%EF%BC%88WRD.US%EF%BC%89Buy%EF%BC%9A%201Q26%20broadly%20in%20line%EF%BC%9B%20fleet%20ramp%20intact-260514.pdf)) |
 | UBS (WRD.US) | 2026-05-14 | Buy / US\$12.00 | 5/13 现价 US\$7.65, +57% | 1Q26 符合预期; 产品收入同比 +116%, 服务 +49%; 净现金 RMB59 亿; 联想计划 5 年全球 20 万台 ([UBS — WeRide](http://xs-macbook-air.local:5001/zsxq/pdf/812452441528252/UBS-WeRide%EF%BC%88WRD.US%EF%BC%8926Q1%EF%BC%9A%20Results%20inline%EF%BC%9B%20operation%20expansion%20gathered%20pace-260513.pdf)) |
 | Morgan Stanley (WRD.US) | 2026-06-04 | Overweight / US\$14.70 | 6/3 收盘 US\$7.96, +85% | 马德里启动欧洲首个商用 Robotaxi 试点; DCF 概率加权 25/50/25, WACC 17.9% (β 2.5), LTG 3%; 12/26E 收入 RMB16.99 亿、EPS RMB−3.31 ([MS — WeRide, Rooted in Madrid](http://xs-macbook-air.local:5001/zsxq/pdf/812488548484422/Morgan%20Stanley-WeRide%20Inc%EF%BC%88WRD.US%EF%BC%89Rooted%20in%20Madrid%EF%BC%8C%20with%20a%20pan~EU%20vision-260604.pdf)) |
+| **Morgan Stanley (WRD.US) — 最新** | **2026-07-01** | **Overweight / US\$13.10 (自 14.70 下调约 10%)** | **6/30 收盘 US\$5.82, +125%** | **下调 2026 车队规模假设以匹配实际扩张进度, 相应下修 2026–30 现金流、DCF 牛/基准/熊估值同步下调 10–13%; WACC 17.9% 与 LTG 3% 维持不变; 严控 opex 下 2026E 每股亏损反收窄 13.5%, 仍预判 2027 年净利盈亏平衡, 仅 2027–28E EPS 下调约 10%; 基准 21× / 牛市 25× / 熊市 7.5× 2026E 收入 ([MS — WeRide Risk Reward Update, 2026-07-01, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584242242858114/Morgan%20Stanley-WeRide%20Inc%EF%BC%88WRD.US%EF%BC%89Risk%20Reward%20Update-260701.pdf)) |
+
+**大摩自身的观点修正 (self-revision):** 大摩在 6/4 → 7/1 之间把美股目标价从 US\$14.70 **下调约 10% 至 US\$13.10**，触发点是"**车队扩张进度略低于预期**"——这是*节奏*的下修 (车队规模假设 + 2026–30 现金流) 而非*方向*的转向: 评级仍维持 Overweight、盈亏平衡时点仍锚定 2027 年、WACC 与长期增长率两大 DCF 核心假设均未动, 且严控 opex 下 2026E 每股亏损反而收窄 13.5% ([MS — WeRide Risk Reward Update, 2026-07-01, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584242242858114/Morgan%20Stanley-WeRide%20Inc%EF%BC%88WRD.US%EF%BC%89Risk%20Reward%20Update-260701.pdf))。这印证了本报告基准情形的谨慎方向——车队兑现节奏正是我们列为第一位的关键变量。
 
 **机构间分歧 (机构间分歧表)** — 方向一致 (全 Buy/OW), 分歧主要在*目标价幅度*与*估值方法*:
 
 | 机构 | 日期 | 评级 / 目标价 | 核心论点 | 什么证据能证明其正确 |
 |---|---|---|---|---|
-| Morgan Stanley | 2026-06-04 | OW / US\$14.70 (最高) | 欧洲先发 + 港股通纳入支撑情绪; DCF | 马德里 6–9 个月内从有人监护转全无人, 单位经济成立 |
+| Morgan Stanley | 2026-07-01 | OW / US\$13.10 (最高, 已从 14.70 下调) | 欧洲先发 + 港股通纳入支撑情绪; DCF; 车队节奏下修 | 马德里 6–9 个月内从有人监护转全无人, 单位经济成立 |
 | UBS / HSBC | 2026-05-14 | Buy / US\$12.0–11.4 (中位) | 1Q26 符合预期, 车队爬坡不变 | 2026 年底兑现 2,600 辆 Robotaxi 目标 |
-| 本报告 | 2026-06-14 | OW / US\$10.50 (最保守) | 情景树, 对整车放量节奏更谨慎 | 同上, 但要求海外 UE 盈亏平衡复制到 3+ 城 |
+| 本报告 | 2026-07-26 | OW / US\$10.50 (最保守) | 情景树, 对整车放量节奏更谨慎 | 同上, 但要求海外 UE 盈亏平衡复制到 3+ 城 |
 
-**与市场一致预期的对比:** 我们的目标价 US\$10.50 位于卖方区间 (US\$11.40–14.70) **之下约 8–29%**——我们对整车销售放量节奏给出更保守的爬坡假设, 且用 EV/Sales 而非高盛的"2031 年 EV/EBITDA 折现"或大摩的 DCF, 以减少对远期终值的依赖。换言之, **本报告比卖方更谨慎, 但方向一致**。
+**与市场一致预期的对比:** 我们的目标价 US\$10.50 位于卖方区间 (US\$11.40–13.10) **之下约 8–20%**——我们对整车销售放量节奏给出更保守的爬坡假设, 且用 EV/Sales 而非高盛的"2031 年 EV/EBITDA 折现"或大摩的 DCF, 以减少对远期终值的依赖。大摩 7/1 把上限从 US\$14.70 拉近到 US\$13.10, 我们与卖方的差距因而收窄。换言之, **本报告仍比卖方更谨慎, 但方向一致, 且卖方最新的车队节奏下修印证了我们的保守假设**。
 
 ### (e) 估值刷新说明 (本次相对上一版)
 
-上一版 (2026-05-27) 没有决策层, 仅停在 TTM 快照, 且把净现金误报为约 US\$67–71 亿 (实为约 US\$0.86bn)、P/S 误报为 3.47× (同口径实为约 20.8×)。本次刷新: (i) 新增 Overweight / US\$10.50 目标价与情景树; (ii) 修正净现金与 P/S/EV/Sales 口径; (iii) 把全部 SEC 引用从错误的 CIK 2002510 改为真实 CIK 1867729 并解析出真实文件名。**目标价完全由远期估计驱动 (估值方法本身保守), 不存在"上一版目标价"可供比较, 因为上一版无目标价。**
+**本次刷新 (2026-07-26 相对上一版 2026-06-14):** 维持 Overweight / 目标价 US\$10.50 不变——目标价由 2027E 远期收入 × EV/Sales 情景树驱动, 与股价短期波动脱钩, 故未随现价回落而调整。变化项: (i) **现价自 US\$6.17 回落至 US\$5.32 (−14%), 跌破前低创 52 周新低 (US\$5.18)**, 目标价对现价的隐含上行由 +70% 扩大至 +97%; (ii) 估值倍数随市值回落压缩——P/S 约 20.8× → 17.9×, EV/Sales 约 12.1× → 9.1×, P/B 约 1.75× → 1.5×; (iii) **纳入大摩 2026-07-01 Risk Reward Update: 美股目标价自 US\$14.70 下调约 10% 至 US\$13.10 (维持 OW), 卖方上限因而下移, 与本方差距收窄**——大摩的车队节奏下修方向与本报告基准情形一致。上一版 (2026-06-14) 已完成的口径修正 (净现金约 US\$0.86bn、SEC CIK 1867729) 保持不变。
+
+（历史注记: 更早的 2026-05-27 版本无决策层, 曾把净现金误报为约 US\$67–71 亿、P/S 误报为 3.47×、SEC 引用误用 CIK 2002510, 均已在 2026-06-14 版系统性修正。）
 
 ---
 
@@ -384,7 +347,7 @@ xychart-beta
 <circle cx="150.1" cy="205.6" r="2.6" fill="#2e8b57"/>
 <circle cx="321.3" cy="214.8" r="2.6" fill="#2e8b57"/>
 <circle cx="267.6" cy="262.3" r="2.6" fill="#2e8b57"/>
-<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: WeRide FY2025 20-F · Yahoo Finance (2026-06-12) · indicators.db (2026-06-05)</text>
+<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: WeRide FY2025 20-F · Yahoo Finance (2026-07-24) · indicators.db (2026-06-05)</text>
 <text x="250" y="485" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#52606d">GF Score = independent analyst rubric (*Analyst view:*) — not GuruFocus™ official number</text>
 </svg>
 
@@ -406,8 +369,8 @@ xychart-beta
 - **Financial Strength (财务实力) = 8/10。** 强。截至 2026-03-31 合计流动性 RMB6,224.7 百万 (US\$902.4 百万), 而总负债仅 RMB1,035.8 百万 (FY2025)、其中长期银行借款已降至 0、短期借款 RMB324.3 百万——**净现金状态、几乎无杠杆**, 现金/债务比极高 ([WeRide 1Q26 6-K, 2026-05-13](https://www.sec.gov/Archives/edgar/data/1867729/000110465926059704/tm2614059d1_ex99-1.htm); [WeRide FY2025 20-F, 合并财务状况表](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。未给满分的唯一原因: EBITDA 为负、靠存量现金而非经营造血支撑, 现金跑道虽有约 12–16 季但终会耗尽。
 - **Profitability (盈利能力) = 1/10。** 极弱——这是评分的诚实之处。2025 年经营亏损 RMB18.4 亿、IFRS 净亏损 RMB16.5 亿, ROE、ROIC、各利润率 (除毛利外) 全部为负; 调整后净亏损同比还在扩大 55.5% ([WeRide FY2025 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。唯一正向项是 gross margin 30.2% (1Q26 回升至 34.7%)。
 - **Growth (成长性) = 7/10。** 强但波动。FY2025 营收同比 +89.6%、产品收入 +310.3%、1Q26 +57.6% ([WeRide FY2025 20-F, Item 5.A](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm); [WeRide 1Q26 6-K, 2026-05-13](https://www.sec.gov/Archives/edgar/data/1867729/000110465926059704/tm2614059d1_ex99-1.htm))。未给更高分因为 FY2024 曾同比 −10.1%, 收入受一次性 ADAS 项目交付扰动, 增长不平滑。与第 1A 章远期模型 (FY25-28 收入 CAGR 约 +65%) 一致。
-- **GF Value (估值, 越高越便宜) = 5/10。** 中性。TTM P/S 约 20.8× 偏高, 但低于纯标的可比小马智行的约 32×; EV/Sales 12.1× 在规模化前标的中属中等; 目标价隐含 +70% 上行提供约中等的 margin of safety ([Yahoo Finance — WRD, 2026-06-12](https://finance.yahoo.com/quote/WRD/key-statistics))。无 PEG (盈利为负)。
-- **Momentum (动量) = 2/10。** 弱。年初至今 −34.3%, 6 个月 −30.8%, 1 个月 −18.8%, 而同期标普 500 分别 +8.4% / +7.7% / −0.9%——**跑输基准约 43 个百分点 (YTD)**, 股价近 52 周低位 ([Yahoo Finance — WRD, 2026-06-12](https://finance.yahoo.com/quote/WRD/key-statistics); indicators.db 本地快照, as of 2026-06-05)。这与我们的逆向论点一致: 动量极弱正是估值给出折让的来源。
+- **GF Value (估值, 越高越便宜) = 5/10。** 中性 (随股价回落略偏便宜)。TTM P/S 约 17.9× 偏高, 但低于纯标的可比小马智行的约 32×; EV/Sales 约 9.1× 在规模化前标的中属中等; 目标价隐含 +97% 上行提供中等偏上的 margin of safety ([Yahoo Finance — WRD, 2026-07-24](https://finance.yahoo.com/quote/WRD/key-statistics))。无 PEG (盈利为负)。
+- **Momentum (动量) = 2/10。** 弱。截至 2026-07-24 年初至今约 −39% (自 2025-12-29 的 US\$8.66 跌至 US\$5.32), 且已跌破前低创 **52 周新低 (US\$5.18)**, 同期标普 500 上涨——**跑输基准约 47 个百分点 (YTD)** ([Yahoo Finance — WRD, 2026-07-24](https://finance.yahoo.com/quote/WRD/key-statistics))。这与我们的逆向论点一致: 动量极弱正是估值给出折让的来源。
 - **综合算术线:** (FS·20 + Prof·25 + Growth·25 + Value·15 + Mom·15)/100 = (8·20 + 1·25 + 7·25 + 5·15 + 2·15)/100 = **46/100**。最可能翻转的一轴是 Profitability/Momentum——若 2027 年前实现净利润转正 (大摩列为上行风险) 或股价企稳, 综合分会明显上修。
 
 ---
@@ -664,144 +627,71 @@ quadrantChart
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
 <text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">文远知行 WeRide (WRD) 资产负债表 — FY2025</text>
-<path d="M 204.00,63.43 C 262.00,63.43 262.00,134.00 320.00,134.00 L 320.00,384.65 C 262.00,384.65 262.00,314.07 204.00,314.07 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 732.00,126.64 C 790.00,126.64 790.00,-110.20 848.00,-110.20 L 848.00,-98.01 C 790.00,-98.01 790.00,138.82 732.00,138.82 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 732.00,138.82 C 790.00,138.82 790.00,-84.01 848.00,-84.01 L 848.00,-77.88 C 790.00,-77.88 790.00,144.95 732.00,144.95 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 732.00,144.95 C 790.00,144.95 790.00,-63.88 848.00,-63.88 L 848.00,-48.54 C 790.00,-48.54 790.00,160.29 732.00,160.29 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 732.00,160.29 C 790.00,160.29 790.00,-34.54 848.00,-34.54 L 848.00,-32.54 C 790.00,-32.54 790.00,162.29 732.00,162.29 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 732.00,162.29 C 790.00,162.29 790.00,-18.54 848.00,-18.54 L 848.00,-15.65 C 790.00,-15.65 790.00,165.19 732.00,165.19 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 600.00,134.00 C 658.00,134.00 658.00,126.64 716.00,126.64 L 716.00,164.28 C 658.00,164.28 658.00,171.64 600.00,171.64 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 336.00,134.00 C 394.00,134.00 394.00,141.00 452.00,141.00 L 452.00,449.70 C 394.00,449.70 394.00,442.70 336.00,442.70 Z" fill="#86efac" fill-opacity="0.55"/>
-<path d="M 600.00,171.64 C 658.00,171.64 658.00,178.28 716.00,178.28 L 716.00,180.28 C 658.00,180.28 658.00,173.64 600.00,173.64 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 468.00,141.00 C 526.00,141.00 526.00,134.00 584.00,134.00 L 584.00,172.92 C 526.00,172.92 526.00,179.92 468.00,179.92 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 468.00,179.92 C 526.00,179.92 526.00,186.92 584.00,186.92 L 584.00,484.00 C 526.00,484.00 526.00,477.00 468.00,477.00 Z" fill="#86efac" fill-opacity="0.55"/>
-<path d="M 732.00,178.28 C 790.00,178.28 790.00,-1.65 848.00,-1.65 L 848.00,0.35 C 790.00,0.35 790.00,180.28 732.00,180.28 Z" fill="#fca5a5" fill-opacity="0.55"/>
-<path d="M 600.00,186.92 C 658.00,186.92 658.00,194.28 716.00,194.28 L 716.00,491.36 C 658.00,491.36 658.00,484.00 600.00,484.00 Z" fill="#86efac" fill-opacity="0.55"/>
-<path d="M 732.00,194.28 C 790.00,194.28 790.00,14.35 848.00,14.35 L 848.00,576.97 C 790.00,576.97 790.00,756.90 732.00,756.90 Z" fill="#86efac" fill-opacity="0.55"/>
-<path d="M 732.00,756.90 C 790.00,756.90 790.00,590.97 848.00,590.97 L 848.00,712.20 C 790.00,712.20 790.00,878.12 732.00,878.12 Z" fill="#86efac" fill-opacity="0.55"/>
-<path d="M 732.00,878.12 C 790.00,878.12 790.00,726.20 848.00,726.20 L 848.00,728.20 C 790.00,728.20 790.00,880.12 732.00,880.12 Z" fill="#86efac" fill-opacity="0.55"/>
-<path d="M 204.00,328.07 C 262.00,328.07 262.00,384.65 320.00,384.65 L 320.00,395.96 C 262.00,395.96 262.00,339.39 204.00,339.39 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,353.39 C 262.00,353.39 262.00,395.96 320.00,395.96 L 320.00,413.34 C 262.00,413.34 262.00,370.76 204.00,370.76 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,384.76 C 262.00,384.76 262.00,413.34 320.00,413.34 L 320.00,425.41 C 262.00,425.41 262.00,396.83 204.00,396.83 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,410.83 C 262.00,410.83 262.00,425.41 320.00,425.41 L 320.00,435.93 C 262.00,435.93 262.00,421.36 204.00,421.36 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,435.36 C 262.00,435.36 262.00,435.93 320.00,435.93 L 320.00,441.35 C 262.00,441.35 262.00,440.77 204.00,440.77 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,454.77 C 262.00,454.77 262.00,441.35 320.00,441.35 L 320.00,443.35 C 262.00,443.35 262.00,456.77 204.00,456.77 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 336.00,456.70 C 394.00,456.70 394.00,449.70 452.00,449.70 L 452.00,477.00 C 394.00,477.00 394.00,484.00 336.00,484.00 Z" fill="#86efac" fill-opacity="0.55"/>
-<path d="M 204.00,470.77 C 262.00,470.77 262.00,456.70 320.00,456.70 L 320.00,470.95 C 262.00,470.95 262.00,485.02 204.00,485.02 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,499.02 C 262.00,499.02 262.00,470.95 320.00,470.95 L 320.00,478.02 C 262.00,478.02 262.00,506.09 204.00,506.09 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,520.09 C 262.00,520.09 262.00,478.02 320.00,478.02 L 320.00,480.02 C 262.00,480.02 262.00,522.09 204.00,522.09 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,536.09 C 262.00,536.09 262.00,480.02 320.00,480.02 L 320.00,482.50 C 262.00,482.50 262.00,538.57 204.00,538.57 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<path d="M 204.00,552.57 C 262.00,552.57 262.00,482.50 320.00,482.50 L 320.00,484.50 C 262.00,484.50 262.00,554.57 204.00,554.57 Z" fill="#93c5fd" fill-opacity="0.55"/>
-<rect x="188.00" y="63.43" width="16" height="250.65" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="328.07" width="16" height="11.32" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="353.39" width="16" height="17.37" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="384.76" width="16" height="12.07" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="410.83" width="16" height="10.53" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="435.36" width="16" height="5.41" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="454.77" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="470.77" width="16" height="14.25" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="499.02" width="16" height="7.07" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="520.09" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="536.09" width="16" height="2.48" rx="1.5" fill="#2563eb"/>
-<rect x="188.00" y="552.57" width="16" height="2.00" rx="1.5" fill="#2563eb"/>
-<rect x="320.00" y="134.00" width="16" height="308.70" rx="1.5" fill="#15803d"/>
-<rect x="320.00" y="456.70" width="16" height="27.30" rx="1.5" fill="#15803d"/>
-<rect x="452.00" y="141.00" width="16" height="336.00" rx="1.5" fill="#1e3a8a"/>
-<rect x="584.00" y="134.00" width="16" height="38.92" rx="1.5" fill="#dc2626"/>
-<rect x="584.00" y="186.92" width="16" height="297.08" rx="1.5" fill="#15803d"/>
-<rect x="716.00" y="126.64" width="16" height="37.64" rx="1.5" fill="#dc2626"/>
-<rect x="716.00" y="178.28" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
-<rect x="716.00" y="194.28" width="16" height="297.08" rx="1.5" fill="#15803d"/>
-<rect x="848.00" y="-110.20" width="16" height="12.18" rx="1.5" fill="#dc2626"/>
-<rect x="848.00" y="-84.01" width="16" height="6.13" rx="1.5" fill="#dc2626"/>
-<rect x="848.00" y="-63.88" width="16" height="15.34" rx="1.5" fill="#dc2626"/>
-<rect x="848.00" y="-34.54" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
-<rect x="848.00" y="-18.54" width="16" height="2.90" rx="1.5" fill="#dc2626"/>
-<rect x="848.00" y="-1.65" width="16" height="2.00" rx="1.5" fill="#dc2626"/>
-<rect x="848.00" y="14.35" width="16" height="562.62" rx="1.5" fill="#15803d"/>
-<rect x="848.00" y="590.97" width="16" height="121.22" rx="1.5" fill="#15803d"/>
-<rect x="848.00" y="726.20" width="16" height="2.00" rx="1.5" fill="#15803d"/>
-<line x1="188.00" y1="188.75" x2="182.00" y2="124.65" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="127.65" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">现金及等价物 Cash</text>
-<text x="179.00" y="140.65" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB6.7B  (74.6%)</text>
-<line x1="188.00" y1="333.73" x2="182.00" y2="269.64" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="272.64" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">时间存款 Time Deposits</text>
-<text x="179.00" y="285.64" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB301.0M  (3.4%)</text>
-<line x1="188.00" y1="362.08" x2="182.00" y2="297.98" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="300.98" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">应收账款 Receivables</text>
-<text x="179.00" y="313.98" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB462.0M  (5.2%)</text>
-<line x1="188.00" y1="390.80" x2="182.00" y2="326.70" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="329.70" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">存货 Inventories</text>
-<text x="179.00" y="342.70" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB321.0M  (3.6%)</text>
-<line x1="188.00" y1="416.09" x2="182.00" y2="352.00" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="355.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">预付款及其他 Prepay/Other</text>
-<text x="179.00" y="368.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB280.0M  (3.1%)</text>
-<line x1="188.00" y1="438.07" x2="182.00" y2="377.00" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="380.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FVTPL金融资产 FVTPL</text>
-<text x="179.00" y="393.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB144.0M  (1.6%)</text>
-<line x1="188.00" y1="455.77" x2="182.00" y2="402.00" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="405.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他流动 Other Cur</text>
-<text x="179.00" y="418.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB36.0M  (0.40%)</text>
-<line x1="188.00" y1="477.90" x2="182.00" y2="427.00" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="430.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">物业设备 PP&amp;E</text>
-<text x="179.00" y="443.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB379.0M  (4.2%)</text>
-<line x1="188.00" y1="502.56" x2="182.00" y2="452.00" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="455.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">FVTPL非流动 FVTPL-LT</text>
-<text x="179.00" y="468.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB188.0M  (2.1%)</text>
-<line x1="188.00" y1="521.09" x2="182.00" y2="477.00" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="480.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">商誉 Goodwill</text>
-<text x="179.00" y="493.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB45.0M  (0.50%)</text>
-<line x1="188.00" y1="537.33" x2="182.00" y2="502.00" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="505.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">使用权资产 ROU</text>
-<text x="179.00" y="518.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB66.0M  (0.74%)</text>
-<line x1="188.00" y1="553.57" x2="182.00" y2="527.00" stroke="#cbd5e1" stroke-width="1"/>
-<text x="179.00" y="530.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他非流动 Other LT</text>
-<text x="179.00" y="543.00" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB48.0M  (0.54%)</text>
-<rect x="339.00" y="116.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="342.00" y="128.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
-<text x="342.00" y="141.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB8.2B  (91.9%)</text>
-<rect x="339.00" y="438.70" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="342.00" y="450.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
-<text x="342.00" y="463.70" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB726.0M  (8.1%)</text>
-<rect x="471.00" y="123.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="474.00" y="135.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
-<text x="474.00" y="148.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB8.9B  (100.0%)</text>
-<rect x="603.00" y="116.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="606.00" y="128.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
-<text x="606.00" y="141.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB1.0B  (11.6%)</text>
-<rect x="603.00" y="168.92" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="606.00" y="180.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
-<text x="606.00" y="193.92" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB7.9B  (88.4%)</text>
-<rect x="735.00" y="108.64" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="738.00" y="120.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
-<text x="738.00" y="133.64" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB1.0B  (11.2%)</text>
-<rect x="735.00" y="160.28" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="738.00" y="172.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
-<text x="738.00" y="185.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB34.0M  (0.38%)</text>
-<rect x="735.00" y="185.28" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
-<text x="738.00" y="197.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
-<text x="738.00" y="210.28" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB7.9B  (88.4%)</text>
-<text x="873.00" y="-107.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">短期借款 ST Loans</text>
-<text x="873.00" y="-94.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB324.0M  (3.6%)</text>
-<text x="873.00" y="-82.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">应付账款 Payables</text>
-<text x="873.00" y="-69.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB163.0M  (1.8%)</text>
-<text x="873.00" y="-57.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他应付/计提 Other Payables</text>
-<text x="873.00" y="-44.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB408.0M  (4.6%)</text>
-<text x="873.00" y="-32.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">合同负债 Contract Liab</text>
-<text x="873.00" y="-19.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB29.0M  (0.32%)</text>
-<line x1="864.00" y1="-17.10" x2="870.00" y2="-10.10" stroke="#cbd5e1" stroke-width="1"/>
-<text x="873.00" y="-7.10" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他流动负债 Other Cur Liab</text>
-<text x="873.00" y="5.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB77.0M  (0.86%)</text>
-<line x1="864.00" y1="-0.65" x2="870.00" y2="14.90" stroke="#cbd5e1" stroke-width="1"/>
-<text x="873.00" y="17.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">非流动负债 Non-Cur Liab</text>
-<text x="873.00" y="30.90" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB34.0M  (0.38%)</text>
-<text x="873.00" y="292.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股本溢价 Share Premium</text>
-<text x="873.00" y="305.66" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB15.0B  (167.4%)</text>
-<text x="873.00" y="648.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">储备 Reserves</text>
-<text x="873.00" y="661.58" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB3.2B  (36.1%)</text>
-<text x="873.00" y="724.20" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">累计亏损 Accum Losses</text>
-<text x="873.00" y="737.20" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">-RMB10.3B  (-115.1%)</text>
-<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: WeRide FY2025 20-F, 合并财务状况表 (RMB mn)</text>
+<path d="M 732.00,64.00 C 790.00,64.00 790.00,64.00 848.00,64.00 L 848.00,114.97 C 790.00,114.97 790.00,114.97 732.00,114.97 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 204.00,64.00 C 262.00,64.00 262.00,71.00 320.00,71.00 L 320.00,415.66 C 262.00,415.66 262.00,408.66 204.00,408.66 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 600.00,71.00 C 658.00,71.00 658.00,64.00 716.00,64.00 L 716.00,114.97 C 658.00,114.97 658.00,121.97 600.00,121.97 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,121.97 C 658.00,121.97 658.00,128.97 716.00,128.97 L 716.00,131.55 C 658.00,131.55 658.00,124.55 600.00,124.55 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 336.00,71.00 C 394.00,71.00 394.00,78.00 452.00,78.00 L 452.00,489.95 C 394.00,489.95 394.00,482.95 336.00,482.95 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 468.00,78.00 C 526.00,78.00 526.00,71.00 584.00,71.00 L 584.00,124.55 C 526.00,124.55 526.00,131.55 468.00,131.55 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 468.00,131.55 C 526.00,131.55 526.00,138.55 584.00,138.55 L 584.00,547.00 C 526.00,547.00 526.00,540.00 468.00,540.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,128.97 C 790.00,128.97 790.00,128.97 848.00,128.97 L 848.00,131.55 C 790.00,131.55 790.00,131.55 732.00,131.55 Z" fill="#fca5a5" fill-opacity="0.55"/>
+<path d="M 600.00,138.55 C 658.00,138.55 658.00,145.55 716.00,145.55 L 716.00,554.00 C 658.00,554.00 658.00,547.00 600.00,547.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 732.00,145.55 C 790.00,145.55 790.00,145.55 848.00,145.55 L 848.00,554.00 C 790.00,554.00 790.00,554.00 732.00,554.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,422.66 C 262.00,422.66 262.00,415.66 320.00,415.66 L 320.00,482.95 C 262.00,482.95 262.00,489.95 204.00,489.95 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<path d="M 336.00,496.95 C 394.00,496.95 394.00,489.95 452.00,489.95 L 452.00,540.00 C 394.00,540.00 394.00,547.00 336.00,547.00 Z" fill="#86efac" fill-opacity="0.55"/>
+<path d="M 204.00,503.95 C 262.00,503.95 262.00,496.95 320.00,496.95 L 320.00,547.00 C 262.00,547.00 262.00,554.00 204.00,554.00 Z" fill="#93c5fd" fill-opacity="0.55"/>
+<rect x="188.00" y="64.00" width="16" height="344.65" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="422.66" width="16" height="67.29" rx="1.5" fill="#2563eb"/>
+<rect x="188.00" y="503.95" width="16" height="50.05" rx="1.5" fill="#2563eb"/>
+<rect x="320.00" y="71.00" width="16" height="411.95" rx="1.5" fill="#15803d"/>
+<rect x="320.00" y="496.95" width="16" height="50.05" rx="1.5" fill="#15803d"/>
+<rect x="452.00" y="78.00" width="16" height="461.99" rx="1.5" fill="#1e3a8a"/>
+<rect x="584.00" y="71.00" width="16" height="53.55" rx="1.5" fill="#dc2626"/>
+<rect x="584.00" y="138.55" width="16" height="408.45" rx="1.5" fill="#15803d"/>
+<rect x="716.00" y="64.00" width="16" height="50.97" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="128.97" width="16" height="2.59" rx="1.5" fill="#dc2626"/>
+<rect x="716.00" y="145.55" width="16" height="408.45" rx="1.5" fill="#15803d"/>
+<rect x="848.00" y="64.00" width="16" height="50.97" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="128.97" width="16" height="2.59" rx="1.5" fill="#dc2626"/>
+<rect x="848.00" y="145.55" width="16" height="408.45" rx="1.5" fill="#15803d"/>
+<text x="179.00" y="233.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">现金及等价物 Cash</text>
+<text x="179.00" y="246.33" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB6.7B  (74.6%)</text>
+<text x="179.00" y="453.30" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">其他流动资产 Other current</text>
+<text x="179.00" y="466.30" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB1.3B  (14.6%)</text>
+<text x="179.00" y="525.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">非流动资产 Non-current</text>
+<text x="179.00" y="538.97" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB968.0M  (10.8%)</text>
+<rect x="339.00" y="53.00" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Current Assets</text>
+<text x="342.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB8.0B  (89.2%)</text>
+<rect x="339.00" y="478.95" width="157.20" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="342.00" y="490.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Non-Current Assets</text>
+<text x="342.00" y="503.95" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB968.0M  (10.8%)</text>
+<rect x="471.00" y="60.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="474.00" y="72.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Assets</text>
+<text x="474.00" y="85.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB8.9B  (100.0%)</text>
+<rect x="603.00" y="53.00" width="113.10" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="65.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Liabilities</text>
+<text x="606.00" y="78.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB1.0B  (11.6%)</text>
+<rect x="603.00" y="120.55" width="106.80" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="606.00" y="132.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Total Equity</text>
+<text x="606.00" y="145.55" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB7.9B  (88.4%)</text>
+<rect x="735.00" y="46.00" width="125.70" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="58.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Current Liabilities</text>
+<text x="738.00" y="71.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB985.8M  (11.0%)</text>
+<rect x="735.00" y="110.97" width="150.90" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="122.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Non-Current Liabilities</text>
+<text x="738.00" y="135.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB50.0M  (0.56%)</text>
+<rect x="735.00" y="135.97" width="132.00" height="26" rx="2" fill="#ffffff" fill-opacity="0.72"/>
+<text x="738.00" y="147.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">Shareholders' Equity</text>
+<text x="738.00" y="160.97" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB7.9B  (88.4%)</text>
+<text x="873.00" y="86.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">流动负债 Current liab</text>
+<text x="873.00" y="99.48" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB985.8M  (11.0%)</text>
+<text x="873.00" y="127.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">非流动负债 Non-current liab</text>
+<text x="873.00" y="140.26" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB50.0M  (0.56%)</text>
+<text x="873.00" y="346.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#1f2933">股东权益 Total equity</text>
+<text x="873.00" y="359.78" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">RMB7.9B  (88.4%)</text>
+<text x="520.00" y="570.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" font-style="italic" fill="#8a97a3">净现金、几乎无杠杆：总负债 1,035.8 仅为总资产 8,935.9 的 11.6%；现金占资产 74.6%</text>
+<text x="520.00" y="584.00" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="400" fill="#52606d">Source: WeRide FY2025 20-F 合并财务状况表</text>
 </svg>
 
 
@@ -1045,7 +935,7 @@ quadrantChart
 
 **14. PRC 数据与网络安全监管。** WRD 处理大量驾驶数据; CAC (网信办)、MIIT (工信部)、MOT (交通部) 可对跨境数据流施加新限制 ([WeRide FY2025 20-F, Item 4.B——网络安全与数据隐私](https://www.sec.gov/Archives/edgar/data/1867729/000110465926047323/wrd-20251231x20f.htm))。缓释: 已为美股与港股上市完成 CSRC (证监会) 备案。
 
-**15. 估值 / 倍数压缩风险。** 当前 EV/Sales 约 12.1× (P/S 约 20.8×) 相对成熟汽车科技偏高; 重大商业化延迟、致命安全事故或 HFCAA 升级都会显著压缩倍数 ([Yahoo Finance — WRD, 2026-06-12](https://finance.yahoo.com/quote/WRD/key-statistics))。这是我们 25% 熊市概率权重的核心。
+**15. 估值 / 倍数压缩风险。** 当前 EV/Sales 约 9.1× (P/S 约 17.9×) 相对成熟汽车科技仍偏高; 重大商业化延迟、致命安全事故或 HFCAA 升级都会进一步压缩倍数 ([Yahoo Finance — WRD, 2026-07-24](https://finance.yahoo.com/quote/WRD/key-statistics))。股价年初至今约 −39% 已部分兑现该风险 (52 周新低)，但倍数尚未跌至成熟汽车科技区间——这是我们 25% 熊市概率权重的核心。
 
 ---
 
@@ -1110,7 +1000,7 @@ quadrantChart
 |---|---|---|---|
 | 增长与再投资 | 4 | 2.5 | 收入 CAGR 高 (约 65%), 但 ROIC 为负、再投资 > 100% (无 FCF) |
 | 风险侧写 | 3 | 1.0 | β 约 2.5 (大摩口径), 无重大债务但烧钱; 利息覆盖不适用 |
-| 相对估值 | 1 | 0.5 | EV/Sales 12.1× 高于成熟汽车科技、低于纯标的小马 |
+| 相对估值 | 1 | 0.5 | EV/Sales 约 9.1× 高于成熟汽车科技、低于纯标的小马 |
 
 *视角观点:* 故事 (全球 L4 平台 + 监管护城河) 可信, 但负 FCF + 负 ROIC 使传统 DCF 不稳健——这正是本报告用概率加权 EV/Sales 情景树 (而非点 DCF) 的原因。失效条件: 若 ROIC 转正且 FCF 可见, Damodaran 框架会给出可防御的正内在价值。
 
@@ -1160,6 +1050,7 @@ quadrantChart
 - [文远与 Uber 阿布扎比商业化运营, 2025-11-25](https://investor.uber.com/news-events/news/press-release-details/2025/WeRide-and-Uber-Launch-Middle-Easts-First-Fully-Driverless-Robotaxi-Commercial-Operations-in-Abu-Dhabi-UAE/default.aspx)
 
 ### 二级——本地机构研报库 (db/zsxq.db, 全部为 *分析师观点：*, 报告日现价见正文)
+- [Morgan Stanley — WeRide Inc (WRD.US): Risk Reward Update, 2026-07-01, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584242242858114/Morgan%20Stanley-WeRide%20Inc%EF%BC%88WRD.US%EF%BC%89Risk%20Reward%20Update-260701.pdf) — **OW, PT 自 US\$14.70 下调约 10% 至 US\$13.10 (较 6/30 收盘 US\$5.82 上行 +125%); 车队节奏下修, 2027 盈亏平衡不变** (本次刷新新增)
 - [Morgan Stanley — WeRide Inc (WRD.US): Rooted in Madrid, with a pan-EU vision, 2026-06-04, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812488548484422/Morgan%20Stanley-WeRide%20Inc%EF%BC%88WRD.US%EF%BC%89Rooted%20in%20Madrid%EF%BC%8C%20with%20a%20pan~EU%20vision-260604.pdf) — OW, PT US\$14.70 (较 6/3 收盘 US\$7.96 上行 +85%)
 - [HSBC — WeRide (WRD.US) Buy: 1Q26 broadly in line; fleet ramp intact, 2026-05-14, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812452122241522/HSBC-WeRide%20%EF%BC%88WRD.US%EF%BC%89Buy%EF%BC%9A%201Q26%20broadly%20in%20line%EF%BC%9B%20fleet%20ramp%20intact-260514.pdf) — Buy, PT US\$11.40 (+50%)
 - [UBS — WeRide (WRD.US) 26Q1: Results inline; operation expansion gathered pace, 2026-05-14, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/812452441528252/UBS-WeRide%EF%BC%88WRD.US%EF%BC%8926Q1%EF%BC%9A%20Results%20inline%EF%BC%9B%20operation%20expansion%20gathered%20pace-260513.pdf) — Buy, PT US\$12.00 (较 5/13 现价 US\$7.65 上行 +57%)
@@ -1174,15 +1065,19 @@ quadrantChart
 - [美中经济与安全审查委员会, 《在美国主要证券交易所上市的中国公司》, 2025-03](https://www.uscc.gov/sites/default/files/2025-03/Chinese_Companies_Listed_on_US_Stock_Exchanges_03_2025.pdf)
 
 ### 市场数据
-- [Yahoo Finance——WRD / PONY / TSLA / GOOGL / BIDU / MBLY 关键统计指标, 访问于 2026-06-12](https://finance.yahoo.com/quote/WRD/key-statistics)
+- [Yahoo Finance——WRD / PONY / TSLA / GOOGL / BIDU / MBLY 关键统计指标, 访问于 2026-07-24](https://finance.yahoo.com/quote/WRD/key-statistics)（现价 US\$5.32, 市值约 US\$1.75bn；同业倍数沿用上一版 2026-06-12 抓取, 仅 WRD 自身刷新）
 - indicators.db 本地快照 (FRED BAMLH0A0HYM2 / ^TNX + yfinance), as of 2026-06-05
-- db/stock_price_target.db 只读预查 (WRD 四行: UBS/HSBC/GS/MS), as of 2026-06-03
+- db/stock_price_target.db 只读预查 (WRD 四行: UBS/HSBC/GS/MS), as of 2026-07-26
 
 
 <details>
-<summary>Verification log (Step 10) — 2026-06-14</summary>
+<summary>Verification log (Step 10) — 2026-07-26</summary>
 
-**URL check** — 所有正文与参考资料 URL 已 HTTP 检查 (2026-06-14)。5 个 SEC EDGAR 主文件 (FY2025 20-F / FY2024 20-F / F-1 / 424B4 / 港股 F-1) 用 SEC 规范 UA 检查均返回 **200**; SEC 对浏览器 UA 返回 403 是反爬, 非死链 (已用 `User-Agent: ...email` 复检 200)。IR/新闻/麦肯锡/USCC URL 沿用上一版已验证链接。本地 db/zsxq.db 链接为用户本机路由 (`/zsxq/pdf/<file_id>/<filename>`), 经 find_pdf.py 确认 file_id 存在。
+**本次刷新 (2026-07-26) 变更摘要:** (i) 现价 US\$6.17 (2026-06-12) → **US\$5.32 (2026-07-24, 52 周新低区)**, 市值 US\$2.04bn → US\$1.75bn; 目标价 US\$10.50 维持不变, 隐含上行 +70% → **+97%** (股价回落所致, 非目标价变动)。(ii) 倍数随市值压缩: P/S 20.8× → 17.9×, EV/Sales 12.1× → 9.1×, P/B 1.75× → 1.5×; 全部为"市值÷报表营收"同口径 (yfinance 的 TTM P/S 2.4× 混用 RMB 营收/USD 市值, 不采用)。(iii) 新增最新一手卖方观点 **Morgan Stanley Risk Reward Update, 2026-07-01 (file_id 584242242858114)**: PT 自 US\$14.70 下调约 10% 至 **US\$13.10** (维持 OW), 6/30 收盘 US\$5.82, 上行 +125%——已 OCR+extract 并 string-match ("US$13.1", "Overweight", "21x base case 2026E revenue", "17.9% WACC", "2027" breakeven) 均在原 PDF 出现。MS 报告日现价 US\$5.82 (6/30 收盘) 经 yfinance 复核 ✓。(iv) YTD 动量 −34.3% → 约 −39% (2025-12-29 US\$8.66 → 2026-07-24 US\$5.32), 跑输标普约 47pp。目标价情景树、GF Score (46/100)、财务图数字均未受价格刷新影响 (基于 FY2025 报表, 不变)。
+
+**URL check** — 本次刷新新增的 1 个 zsxq 链接 (MS 2026-07-01, file_id 584242242858114) 经 find_pdf.py 确认 `local_exists: true`、路由 `/zsxq/pdf/<file_id>/<filename>`。其余正文与参考资料 URL 沿用上一版 (2026-06-14) 已 HTTP 检查的链接 (SEC EDGAR 5 主文件 200, IR/新闻/麦肯锡/USCC 已验证)。
+
+**Chart render-check (10.7) — 本次刷新修复了两张此前静默破损的桑基图。** 运行 `lint_report_charts.py` 发现上一版 (2026-06-14) 的**收入亏损桑基图**与**资产负债表桑基图**均有节点渲染到 viewBox 之外 (income: 因营业开支 2,042 ≫ 毛利 207 的亏损企业几何; balance: 因股东权益 7,900 ≫ 总负债 1,036 且现金占资产 75% 的极端结构 + 过多微小负债节点)。二者已重建: (i) **income 采用亏损安全的 5 列布局**——经营亏损缺口 (1,835) 作为左侧来源, 与毛利 (207) 共同注入营业开支池 (2,042), 每个节点守恒 (参照 Black Sesame 报告的同类布局); (ii) **balance 用粗粒度桶重建** (现金/其他流动/非流动 → 总资产 → 流动+非流动负债 + 股东权益), 各桶合计对齐已核验总额 (资产 8,935.9 / 负债 1,035.8 / 权益 7,900.2)。重建后 `lint_report_charts.py` **exit 0 (8 张 inline SVG 全部在 viewBox 内)**; 另经 :5002 viewer 渲染 + rsvg-convert 光栅化 Read 二图, 确认流向守恒、标签不裁切; 6 个 mermaid 块经 DOM 检查全部渲染为 `<svg>` 无 "Syntax error"。其余 6 张 SVG (2 donut / revbars / GF radar / cashflow / DuPont) 未改动, 数字沿用上一版 string-match。5 个 SEC EDGAR 主文件 (FY2025 20-F / FY2024 20-F / F-1 / 424B4 / 港股 F-1) 用 SEC 规范 UA 检查均返回 **200**; SEC 对浏览器 UA 返回 403 是反爬, 非死链 (已用 `User-Agent: ...email` 复检 200)。IR/新闻/麦肯锡/USCC URL 沿用上一版已验证链接。本地 db/zsxq.db 链接为用户本机路由 (`/zsxq/pdf/<file_id>/<filename>`), 经 find_pdf.py 确认 file_id 存在。
 
 **Step 0.5 sec-report-summary** — skipped (FPI: files 20-F/6-K, not 10-K; sec-report-summary infrastructure is 10-K-only)。历史演变线索直接从 FY2025/FY2024 20-F + F-1 招股书 + 1Q26 6-K 业绩发布构建。
 
@@ -1229,4 +1124,4 @@ quadrantChart
 
 ---
 
-*报告结束。本次刷新 (2026-06-14): 已加入完整决策层 (header + 1A/1B + 第 2 章 PT 推导 + 9.5 + 第 10 章) 与全套 stdlib-SVG 财务图; 全部 SEC 引用已从错误 CIK 2002510 修正为真实 CIK 1867729; 净现金 / P/S / EV/Sales 口径已纠正。字数目标 6,000–10,000 字 (按字符计)。*
+*报告结束。本次刷新 (2026-07-26): 现价刷新至 US\$5.32 (52 周新低区), 目标价 US\$10.50 维持不变、隐含上行扩大至 +97%; 估值倍数随市值压缩 (P/S 17.9× / EV/Sales 9.1×); 卖方观点演变纳入大摩 2026-07-01 目标价下调至 US\$13.10 (维持 OW)。决策层结构、GF Score、全套 stdlib-SVG 财务图沿用 2026-06-14 版 (基于 FY2025 报表, 未变)。字数目标 6,000–10,000 字 (按字符计)。*
