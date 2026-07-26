@@ -267,6 +267,18 @@ prose per dimension. Rules:
    The `pdf_<file_id>` episode slug renders as a clickable PDF link in `/zep/`
    (graph_mirror `_episode_url` already handles the `pdf_` prefix). This is the
    first time PDFs feed the graph — every run grows it.
+3. **`claude_rating`** — for each PDF you deep-read to answer the question, set a
+   1-5 star `claude_rating` so your read/skip verdict is durable (feeds ranking,
+   shows in `/zsxq`). `5` must-read · `4` strong · `3` solid · `2` skippable ·
+   `1` noise — i.e. **3/4/5 = worth reading, 1/2 = not worth reading**. A deep
+   read is the most confident verdict, so it overrides any summary-only rating a
+   prior `/zsxq-recommend` run wrote. Write through the shared helper (the ONLY
+   sanctioned write path — never raw SQL):
+   ```bash
+   python3 scripts/set_zsxq_ratings.py <<'JSON'
+   [{"file_id": 585582881584284, "rating": 5}]
+   JSON
+   ```
 
 ## 延伸观看 / Further viewing — explainer videos (optional, but default to including)
 
@@ -388,7 +400,8 @@ This rule **deepens** the skill's existing output format — it never replaces o
 - **DB writes go through the helpers only.** Reads of `pdf_files` are free;
   the only writes are: `ocr_pdf.py` (OCR cache), `zsxq_cards.py` (cards),
   `manual_graph.py` (graph), `scripts/persist_pts.py` (price targets if the
-  PDFs carry broker calls). Never raw SQL against any DB. (Tier-2/Tier-3 rules.)
+  PDFs carry broker calls), `scripts/set_zsxq_ratings.py` (`claude_rating`).
+  Never raw SQL against any DB. (Tier-2/Tier-3 rules.)
 - **Cover every side of a comparison.** Run a retrieval query per entity; a
   one-sided answer (rich on the focal, thin on peers) is a failure mode — flag
   thin coverage rather than papering over it.

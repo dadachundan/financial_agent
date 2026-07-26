@@ -103,6 +103,47 @@ unless the user asked for quick takes; (3) recency (`create_time`);
 regional-broker flyer must not outrank an 80-page GS deep-dive on
 topical match alone. Name the tier in each "why read this" line.
 
+### 3b. Persist your read/skip verdict as `claude_rating` (MANDATORY)
+
+Every time this skill recommends (or triages away) a PDF, record your
+verdict as a 1-5 star `claude_rating` on that `pdf_files` row so the
+judgement is durable — it feeds the ranking rubric (step 3.4), shows in
+the `/zsxq` viewer, and lets future runs skip re-triaging the same feed.
+**Rate every row you actually evaluated in step 3, not just the picks.**
+
+Convention (project-wide, set by the user):
+
+| Stars | Meaning |
+|---|---|
+| **5** | must-read — top of the reading list |
+| **4** | strong — worth reading |
+| **3** | solid — worth reading if the topic is relevant |
+| **2** | skippable — not worth reading |
+| **1** | noise / off-topic / stale flash note — not worth reading |
+
+So `3/4/5 = worth reading`, `1/2 = not worth reading`. Rate on
+substance × relevance × bank tier (same signals as the step-3 rubric),
+NOT on recency alone.
+
+Write the ratings through the shared helper (this is the ONLY sanctioned
+write path for `claude_rating` besides `zsxq_common.set_claude_rating` —
+never raw SQL, per CLAUDE.md DB safety). Emit a JSON array of
+`{file_id, rating}` on stdin:
+
+```bash
+python3 scripts/set_zsxq_ratings.py <<'JSON'
+[
+  {"file_id": 184418524511182, "rating": 5, "note": "GS 800G deep-dive, PT raise"},
+  {"file_id": 184152128158222, "rating": 4, "note": "CR Land Buy, solid"},
+  {"file_id": 212215818525881, "rating": 2, "note": "1-page macro flyer"}
+]
+JSON
+```
+
+The script prints `{considered, updated, missing, errored, rows}`.
+Surface `updated` in the final reply's one-liners (step 6). A `missing`
+row means the file_id wasn't in `pdf_files` — re-check the id.
+
 ### 4. Persist any PT calls into `stock_price_target.db` (free side-effect)
 
 While reading the same summaries in step 3, the agent is already
@@ -249,8 +290,10 @@ Keep the surrounding prose tight — the user is choosing what to read
 next, not consuming the reports here — but never compress the gist
 itself down to a label.
 
-End the reply with two compact one-liners (only when non-empty):
+End the reply with these compact one-liners (only when non-empty):
 
+0. `⭐ claude_rating: <updated> rows rated (3-5 read / 1-2 skip)` —
+   from step 3b's stdout `updated` count.
 1. `📈 PT inserts: <inserted> new, <total_in_db> total in /pt` —
    from step 4's stdout summary. **When you list the actual PT calls
    (not just the count), one line per row using the step-4 `rows`
@@ -268,7 +311,11 @@ AI / robotics is already this skill's default focus — so the bar is higher tha
 
 ## Notes
 
-- DB is read-only here. Never write to `db/zsxq.db` from this skill.
+- `db/zsxq.db` is read-only here **except** for the agent-curated
+  `claude_rating` column, which step 3b writes via
+  `scripts/set_zsxq_ratings.py` → `zsxq_common.set_claude_rating()`.
+  Never write any other column, and never write `claude_rating` with
+  raw SQL — only through that helper.
 - `scripts/list_recent.py` resolves the DB via `db_paths.db_path()`
   (honours `FINAGENT_DB_DIR`); any new script added under `scripts/`
   must copy that pattern in the same commit (CLAUDE.md DB-safety rule).

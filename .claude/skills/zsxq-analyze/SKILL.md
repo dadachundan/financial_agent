@@ -317,6 +317,36 @@ flags carded PDFs so the expert system reuses your digest instead of
 re-extracting the same PDF from scratch. Every deep read that skips this
 step leaves the library no smarter.
 
+### 5c. Set `claude_rating` from the deep read (MANDATORY)
+
+A full deep read is the **most confident** read/skip verdict you can
+give a PDF — record it as a 1-5 star `claude_rating` (this overrides any
+lower-fidelity summary-only rating a prior `/zsxq-recommend` run wrote,
+just like `persist_pts.py --replace` does for PT rows). Rate on how much
+the report is actually worth reading, given what the full text turned
+out to contain:
+
+| Stars | Meaning |
+|---|---|
+| **5** | must-read — differentiated data / thesis, act on it |
+| **4** | strong — worth reading |
+| **3** | solid — worth reading if the topic is relevant |
+| **2** | skippable — thin once you read it fully |
+| **1** | noise — no signal / off-topic / stale |
+
+So `3/4/5 = worth reading`, `1/2 = not worth reading`. Write through the
+shared helper (the ONLY sanctioned write path for `claude_rating` — never
+raw SQL, per CLAUDE.md DB safety):
+
+```bash
+python3 scripts/set_zsxq_ratings.py <<'JSON'
+[{"file_id": 184124282514242, "rating": 5}]
+JSON
+```
+
+The script prints `{considered, updated, missing, errored, rows}`;
+mention the rating you set in the final reply.
+
 ## Primary-source-first & development-over-time rule (MANDATORY)
 
 The user's standing preference for every report-producing skill: **reference the 10-K / 10-Q / original investor-relations materials as much as possible, cite them at page level, and present the material so the reader can see the company's development over time — what's new this period.**
@@ -350,7 +380,8 @@ This rule **deepens** the skill's existing output format — it never replaces o
 
 - DB writes from this skill go through the sanctioned Tier-2 helpers
   only — `ocr_pdf.py` (OCR cache), `zsxq_cards.py` (cards),
-  `scripts/persist_pts.py` (PTs). Never raw SQL against any project DB.
+  `scripts/persist_pts.py` (PTs), `scripts/set_zsxq_ratings.py`
+  (`claude_rating`). Never raw SQL against any project DB.
 - All scripts here resolve `db/zsxq.db` via `db_paths.db_path()` so
   `FINAGENT_DB_DIR` redirection works; any new script added under
   `scripts/` must do the same in the same commit (CLAUDE.md DB-safety

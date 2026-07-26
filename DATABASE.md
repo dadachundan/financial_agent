@@ -43,7 +43,7 @@ Schema is in [zsxq_common.py](zsxq_common.py) (search `CREATE TABLE pdf_files`).
 | `categories_analysis`, `categories_prompt`, `categories_raw` | TEXT | LLM categorisation trace |
 | `ai_robotics_analysis`, `ai_robotics_related`, `ai_prompt`, `ai_raw_response` | TEXT, INTEGER, TEXT, TEXT | Legacy AI-relatedness columns (kept for backwards compat) |
 | **`user_rating`** | INTEGER (1-5) | Human star rating |
-| **`claude_rating`** | INTEGER (1-5) | LLM star rating |
+| **`claude_rating`** | INTEGER (1-5) | Agent-curated star rating written by the zsxq skills when they recommend/triage a PDF: **3/4/5 = worth reading, 1/2 = skip**. Sole write path is `scripts/set_zsxq_ratings.py` → `zsxq_common.set_claude_rating()` — never raw SQL. |
 | **`comment`**, `comment_updated_at` | TEXT, TEXT | Markdown comment per PDF |
 | `bank` | TEXT | Brokerage / source bank |
 | `group_id` | TEXT | zsxq group |

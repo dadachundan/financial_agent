@@ -189,7 +189,8 @@ If `count == 0` after a --subject filter, drop the filter, widen
 Score each row 0-3 on relevance to the theme. Keep **top 8-12 file_ids**.
 Tie-breakers (in order):
 
-1. `claude_rating` (when populated — 0/1/2/3 scale)
+1. `claude_rating` (when populated — 1-5 scale: 3-5 = worth reading,
+   1-2 = skip; see [T2b](#t2b-persist-your-verdict-as-claude_rating))
 2. Bank quality (GS / MS / JPM / UBS / Nomura > regional > unknown)
 3. `page_count` (12-60 is the sweet spot; <5 is often a snippet, >100
    is often a year-end compendium that's mostly noise for this purpose)
@@ -198,6 +199,37 @@ Tie-breakers (in order):
 
 If <3 PDFs pass the relevance bar, tell the user honestly — don't pad
 with weak picks just to fill a quota.
+
+### T2b. Persist your verdict as `claude_rating` (MANDATORY)
+
+The moment you rank rows (T2 above, or F3/F4 in fishing mode) you have
+formed a read/skip verdict on each — record it as a 1-5 star
+`claude_rating` so the judgement is durable (feeds ranking, shows in
+`/zsxq`, saves future re-triage). **Rate every row you actually scored,
+not only the ones that make the shortlist.**
+
+Convention (project-wide): `5` must-read · `4` strong · `3` solid ·
+`2` skippable · `1` noise — i.e. **3/4/5 = worth reading, 1/2 = not
+worth reading**. Score on substance × relevance × bank tier, not
+recency alone.
+
+Write through the shared helper (the ONLY sanctioned write path for
+`claude_rating` besides `zsxq_common.set_claude_rating` — never raw SQL,
+per CLAUDE.md DB safety):
+
+```bash
+python3 scripts/set_zsxq_ratings.py <<'JSON'
+[
+  {"file_id": 184418524511182, "rating": 5},
+  {"file_id": 212215818525881, "rating": 2}
+]
+JSON
+```
+
+The script prints `{considered, updated, missing, errored, rows}` —
+mention the `updated` count in the final reply. In fishing mode run the
+same write after F3/F4 clustering (rate the anchor PDFs and any row you
+triaged away).
 
 ### T3. Parallel per-PDF extraction (full)
 
