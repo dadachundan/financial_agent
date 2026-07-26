@@ -758,3 +758,18 @@ def upsert_entry(conn: sqlite3.Connection, row: dict) -> None:
         """,
         {**row, "query_term": row.get("query_term")},
     )
+
+
+def set_claude_rating(conn: sqlite3.Connection, file_id: int, rating: int | None) -> int:
+    """Set the agent-curated ``claude_rating`` (0-5 stars, or None to clear) on a
+    pdf_files row. This is the sanctioned write path for the ``claude_rating``
+    column — callers must go through here rather than raw SQL. Returns the number
+    of rows updated (0 if the file_id does not exist)."""
+    if rating is not None and not (0 <= int(rating) <= 5):
+        raise ValueError(f"claude_rating must be 0-5 or None, got {rating!r}")
+    cur = conn.execute(
+        "UPDATE pdf_files SET claude_rating = ? WHERE file_id = ?",
+        (int(rating) if rating is not None else None, int(file_id)),
+    )
+    conn.commit()
+    return cur.rowcount
