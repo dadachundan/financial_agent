@@ -1,24 +1,24 @@
 # Netflix, Inc. (NASDAQ:NFLX) — 公司研究报告
 
-**截至日期: 2026-06-14**
+**截至日期: 2026-07-28** (上一版 2026-06-14; 本次刷新纳入 **2026-07-16 Q2'26 业绩** 与 Q2 后卖方目标价集体下调)
 **上市地: NASDAQ:NFLX (普通股; 1 拆 10 已于 2025-11-17 生效, EPS / 股数已追溯调整)**
 **总部: 美国加利福尼亚州洛斯加托斯 (Los Gatos, California)**
 **审计师: 安永会计师事务所 (Ernst & Young LLP)**
 **报告语言: 简体中文 (英文版同时存在于本目录)**
 
-> *分析师观点：* **评级：Hold（持有）· 12 个月目标价 $100（较 2026-06-12 收盘 $80.34 上行 +24%）· 估值方法：FY2027E EPS $3.30 × 30× forward P/E**
-> 市值 ~$338bn · 52 周区间 $75.86–$133.91 · NASDAQ:NFLX
+> *分析师观点：* **评级：Hold（持有，偏建设性）· 12 个月目标价 $90（较 2026-07-28 收盘 $73.11 上行 +23%）· 估值方法：FY2027E adj EPS $3.60 × 25× forward P/E**
+> 市值 ~$312bn (稀释股数 4,261M × $73.11) · 52 周区间 $70.86–$127.75 · NASDAQ:NFLX
 >
 > | 倍数 / Multiple (*分析师观点：* 前瞻列) | FY2025A | FY2026E | FY2027E |
 > |---|---|---|---|
-> | P/E (调整后) | ~32× | ~25× | ~24× |
-> | EV/EBITDA | ~25× | ~21× | ~18× |
-> | EV/Sales | ~7.7× | ~6.6× | ~5.8× |
-> | FCF yield | ~2.8% | ~3.7% | ~4.5% |
+> | P/E (调整后) | ~29× | ~23× | ~20× |
+> | EV/EBITDA | ~22× | ~19× | ~16× |
+> | EV/Sales | ~7.1× | ~6.2× | ~5.5× |
+> | FCF yield | ~3.0% | ~4.0% | ~4.6% |
 >
-> 相对表现 (截至 2026-06-12, [yfinance](https://finance.yahoo.com/quote/NFLX)): 1M **−7.6%** · 6M **−14.6%** · YTD **−11.7%** · 12M **−33.7%** vs. S&P 500 (1M −0.9% · 6M +7.7% · YTD +8.4% · 12M +24.3%) — 12 个月相对标普 **约 −58 个百分点**, 是 2022 年以来最差的相对表现窗口。
+> 相对表现 (截至 2026-07-28, [yfinance](https://finance.yahoo.com/quote/NFLX)): 1M **−1.0%** · 6M **−14.7%** · YTD **−22.0%** · 12M **−37.8%** vs. S&P 500 (1M +1.1% · 6M +7.0% · YTD +8.7% · 12M +16.4%) — 12 个月相对标普 **约 −54 个百分点**, 仍是 2022 年以来最差的相对表现窗口; Q2'26 业绩符合指引却仍下跌, 参与度分歧未解。
 >
-> **核心论点 (thesis pillars)**——(1) 商业模式已从"订阅用户增长故事"切换为"营业收入 / 利润率 / 自由现金流故事", FY2025 营业利润率 (operating margin) 29.5%、FY2026 指引 31.5%, 结构性高于所有同业; (2) 广告业务 (ad-supported tier) 是第二增长引擎——2025 年广告收入 >$15 亿、指引 2026 年翻倍至 ~$30 亿, 边际利润率高; (3) 但股价 12 个月已跌逾 33%, 市场担忧 AI / 短视频对参与度的结构性侵蚀与内容摊销再加速, 这些担忧短期难以证伪; (4) 因此当前为"优质资产、估值已回落但缺乏近端催化剂"的持有状态——25× 前瞻 P/E 在增速放缓至 12–14% 的背景下定价合理而非便宜。
+> **核心论点 (thesis pillars)**——(1) 商业模式已从"订阅用户增长故事"切换为"营业收入 / 利润率 / 自由现金流故事", FY2025 营业利润率 (operating margin) 29.5%、FY2026 指引 31.5%、Q2'26 实际 33.4%, 结构性高于所有同业; (2) 广告业务 (ad-supported tier) 是第二增长引擎——2025 年广告收入 >$15 亿、2026 年指引翻倍至 ~$30 亿, 边际利润率高; (3) 但股价 12 个月已跌逾 37%, 且 **Q2'26 业绩完全符合指引后卖方仍集体下调目标价** (Morgan Stanley $115→$90、Bernstein $100→$95、Goldman 至 $94), 反映市场对 AI / 短视频侵蚀参与度、内容摊销再加速的担忧短期难以证伪; (4) 因此维持"优质资产、估值已明显回落但缺乏近端催化剂"的持有——但随股价跌至 ~20× FY2027E 前瞻盈利、且全体卖方仍维持 OW/Buy, 风险回报已转为偏建设性, 上调触发点为**下半年全年利润率指引上修 + 参与度降幅企稳同时出现**。
 
 ---
 
@@ -44,7 +44,7 @@
 
 ## 1. 公司概览
 
-*分析师观点：* **本报告给予 Netflix 持有 (Hold) 评级、12 个月目标价 $100 (较 2026-06-12 收盘 $80.34 上行 +24%)。** 核心判断是: 这是一家执行力极强、盈利能力结构性领先的优质流媒体公司, 但当前正处在叙事真空期——市场在 2024 年中把它当作"重新加速的增长股"给到拆股前 >50× TTM P/E, 而过去 12 个月股价回吐逾 33%, 反映对**人均观看时长下滑 (2025 下半年每付费用户观看时长同比 −8%)、AI 与短视频对参与度的结构性侵蚀、以及内容摊销 (content amortization) 2026 年再加速 ~10%** 的担忧 ([Q1'26 致股东信, 2026-04-16](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000137/ex991_q126.htm) 中管理层强调"内部高质量参与度指标创历史新高"以反驳这一叙事)。我们认为基本面引擎 (会员 × ARM × 利润率) 仍健康, 但**缺乏 2026 年上半年的近端催化剂**——内容摊销前置、提价收益集中在下半年, 使得"持有、待下半年利润率上调信号"成为更审慎的姿态, 而非追涨或做空。
+*分析师观点：* **本报告给予 Netflix 持有 (Hold, 偏建设性) 评级、12 个月目标价 $90 (较 2026-07-28 收盘 $73.11 上行 +23%)。** 核心判断是: 这是一家执行力极强、盈利能力结构性领先的优质流媒体公司, 但当前正处在叙事真空期——市场在 2024 年中把它当作"重新加速的增长股"给到拆股前 >50× TTM P/E, 而过去 12 个月股价回吐逾 37%, 反映对**人均观看时长下滑 (2025 下半年每付费用户观看时长同比 −8%)、AI 与短视频对参与度的结构性侵蚀、以及内容摊销 (content amortization) 2026 年再加速 ~10%** 的担忧 ([Q1'26 致股东信, 2026-04-16](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000137/ex991_q126.htm) 中管理层强调"内部高质量参与度指标创历史新高"以反驳这一叙事)。**2026-07-16 的 Q2'26 业绩正是这一分歧的缩影**: 营业收入 $12.56bn (+13.4% YoY)、营业利润率 33.4%、稀释 EPS $0.80 全部符合或略超指引, 管理层重申全年营业收入 $510–514 亿、31.5% 利润率, 但股价仍下跌, 卖方随即集体下调目标价 (Morgan Stanley $115→$90、Bernstein $100→$95、Goldman 至 $94, 评级全部维持 OW/Buy) ([Q2'26 致股东信, 2026-07-16](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm))。我们认为基本面引擎 (会员 × ARM × 利润率) 仍健康, 但**近端催化剂稀缺**——内容摊销前置、提价收益集中在下半年, 使得"持有、待下半年利润率上调信号"成为更审慎的姿态; 随股价再跌至 ~20× FY2027E 前瞻盈利, 风险回报已偏建设性, 但尚不足以在参与度分歧证伪前上调至买入。
 
 Netflix, Inc. 是全球最大的纯订阅式视频点播 (subscription video-on-demand, SVOD) 公司。公司自我定位为"全球领先的娱乐服务之一, 提供跨多种类型与语言的电视剧集、电影、游戏及现场直播节目" ([Netflix 2025 10-K, Item 1](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000034/nflx-20251231.htm))。订阅用户 (subscriber/member) 按月支付固定费用——从新兴市场最低档相当于 1 美元的方案, 到美国顶配 4K 套餐 (拆股与定价后) 高端档——即可在联网设备上无限制点播, 也可选择 2022 年 11 月推出的低价**广告支持套餐 (ad-supported tier)** ([Netflix 2025 10-K, MD&A](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000034/nflx-20251231.htm))。
 
@@ -161,17 +161,17 @@ Netflix, Inc. 是全球最大的纯订阅式视频点播 (subscription video-on-
 
 来源 / Source: [NFLX FY2025 10-K, MD&A——按地区营业收入](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000034/nflx-20251231.htm)。
 
-### 估值快照 (TTM, 截至 2026-06-12)
+### 估值快照 (TTM, 截至 2026-07-28)
 
 **股价与倍数 (1 拆 10 后):**
-- 股价: **$80.34** (2026-06-12 收盘, [yfinance](https://finance.yahoo.com/quote/NFLX))
-- 市值: **~$3,380 亿** ([yfinance, marketCap](https://finance.yahoo.com/quote/NFLX))
-- TTM 调整后市盈率 (P/E): **约 30–32 倍** (以 FY2025 稀释 EPS $2.53 为基, 剔除 2026 年 Q1 一次性 $28 亿 WBD 终止补偿后的 TTM EPS 口径)。GAAP TTM 因 Q1'26 一次性项目而失真偏低 ([Macrotrends NFLX P/E](https://www.macrotrends.net/stocks/charts/NFLX/netflix/pe-ratio))。
-- TTM 市销率 (P/S): **约 7.5 倍** (市值 $3,380 亿 / TTM 营业收入约 $452 亿)。
-- 3 年 P/E 区间: Netflix 已从 2024 年中 TTM P/E 峰值 >50 倍 (拆股前) 压缩至今天约 30 倍区间, 反映从"重估值上的增长"到"成熟利润率下的增长"叙事的切换, 并叠加过去 12 个月 −33.7% 的股价回吐 ([Public.com NFLX 历史 P/E](https://public.com/stocks/nflx/pe-ratio))。
-- 前瞻倍数: 按管理层 $507–517 亿营业收入及 31.5% 营业利润率指引, **FY2026 前瞻 P/E 约 25 倍**。
+- 股价: **$73.11** (2026-07-28 收盘, [yfinance](https://finance.yahoo.com/quote/NFLX))
+- 市值: **~$3,120 亿** (稀释股数 4,261M × $73.11; [Q2'26 致股东信, 2026-07-16](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm) 披露 Q2'26 稀释股数 4,261M)
+- TTM 调整后市盈率 (P/E): **约 27–29 倍** (以 FY2025 稀释 EPS $2.53 为基, 剔除 2026 年 Q1 一次性 $28 亿 WBD 终止补偿后的 TTM EPS 口径)。GAAP TTM 因 Q1'26 一次性项目而失真偏低 ([Macrotrends NFLX P/E](https://www.macrotrends.net/stocks/charts/NFLX/netflix/pe-ratio))。
+- TTM 市销率 (P/S): **约 6.6 倍** (市值 $3,120 亿 / TTM 营业收入约 $474 亿, 以 Q3'25–Q2'26 四季合计计)。
+- 3 年 P/E 区间: Netflix 已从 2024 年中 TTM P/E 峰值 >50 倍 (拆股前) 压缩至今天约 27–29 倍区间, 反映从"重估值上的增长"到"成熟利润率下的增长"叙事的切换, 并叠加过去 12 个月 −37.8% 的股价回吐 ([Public.com NFLX 历史 P/E](https://public.com/stocks/nflx/pe-ratio))。
+- 前瞻倍数: 按管理层 $510–514 亿营业收入及 31.5% 营业利润率指引, **FY2026 前瞻 P/E 约 23 倍、FY2027E 约 20 倍** (卖方口径: Bernstein Q2 后 F26E adj P/E 23.6×、F27E 19.2×) ([Bernstein — 2Q26, 2026-07-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412414241484888/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%20%EF%BC%88NFLX%EF%BC%89%202Q26%EF%BC%9A%20Same~ish%20guide%EF%BC%8C%20more%20doubts-260717.pdf))。
 
-**倍数解读。** Netflix 约 7.5 倍销售额、25 倍前瞻盈利的估值, 仍是传统媒体同业 (Disney P/S 约 1.9 倍、WBD、PSKY) 的数倍, 但已较 2024 年高点显著回落。这并非纯"叙事性"溢价, 而是由真实基本面落差支撑: Netflix 是唯一具备结构性盈利、规模化、仍在增长的订阅业务的主流流媒体纯玩家。FY2025 的 29.5% 营业利润率 (FY2026 指引 31.5%) 大约是传统同业 DTC 分部利润率的两倍。市场为以下因素付费: (a) 在 $450 亿规模上仍延伸至 2026 年的 12–14% 营业收入增长; (b) 仍在进行的利润率扩张 (每 100 个基点利润率在 $500 亿+ 基数上约相当于 $5 亿增量营业利润); (c) 广告第二引擎。但 *分析师观点：* 当前市场分歧在于**这个溢价是否会因参与度结构性流失而瓦解**——过去 12 个月 −33.7% 的回报说明市场正在重新定价这一尾部风险, 这也是本报告给持有而非买入的核心理由 (见第 9.5 章)。
+**倍数解读。** Netflix 约 6.6 倍销售额、20–23 倍前瞻盈利的估值, 仍是传统媒体同业 (Disney P/S 约 1.9 倍、WBD、PSKY) 的数倍, 但已较 2024 年高点显著回落, 且经 Q2 后进一步压缩。这并非纯"叙事性"溢价, 而是由真实基本面落差支撑: Netflix 是唯一具备结构性盈利、规模化、仍在增长的订阅业务的主流流媒体纯玩家。FY2025 的 29.5% 营业利润率 (Q2'26 实际 33.4%、FY2026 指引 31.5%) 大约是传统同业 DTC 分部利润率的两倍。市场为以下因素付费: (a) 在 $500 亿规模上仍延伸至 2026 年的 13–14% 营业收入增长; (b) 仍在进行的利润率扩张 (每 100 个基点利润率在 $500 亿+ 基数上约相当于 $5 亿增量营业利润); (c) 广告第二引擎。但 *分析师观点：* 当前市场分歧在于**这个溢价是否会因参与度结构性流失而瓦解**——过去 12 个月 −37.8% 的回报、以及 Q2'26 符合指引却仍被卖方下调目标价, 说明市场正在重新定价这一尾部风险, 这也是本报告给持有而非买入的核心理由 (见第 9.5 章)。
 
 ---
 
@@ -183,40 +183,42 @@ Netflix, Inc. 是全球最大的纯订阅式视频点播 (subscription video-on-
 
 | 指标 (*分析师观点：*) | FY2025A | FY2026E | FY2027E | FY2028E | CAGR (25–28E) |
 |---|---|---|---|---|---|
-| 营业收入 Revenue ($bn) | 45.2 | 51.2 | 57.4 | 63.5 | +12.0% |
-| — YoY % | +16% | +13% | +12% | +11% | |
+| 营业收入 Revenue ($bn) | 45.2 | 51.3 | 57.5 | 63.7 | +12.1% |
+| — YoY % | +16% | +14% | +12% | +11% | |
 | 其中: 广告收入 Ad rev ($bn) | 1.5 | 3.0 | 5.0 | 7.5 | +71% |
 | 营业利润率 Operating margin % | 29.5% | 31.5% | 33% | 34.5% | |
-| 营业利润 Operating income ($bn) | 13.3 | 16.1 | 18.9 | 21.9 | +18% |
-| 稀释 EPS ($, 拆股后) | 2.53 | 3.05 | 3.30 | 4.10 | +17% |
-| — YoY % | — | +21% | +8% | +24% | |
+| 营业利润 Operating income ($bn) | 13.3 | 16.2 | 19.0 | 22.0 | +18% |
+| 稀释 EPS ($, 拆股后, 调整) | 2.53 | 3.15 | 3.60 | 4.30 | +19% |
+| — YoY % | — | +25% | +14% | +19% | |
 | ROIC % | ~24% | ~26% | ~28% | ~30% | |
 | 自由现金流 FCF ($bn) | 9.5 | 12.5 | 14.5 | 17.0 | +21% |
-| 净债务 Net debt ($bn) | ~5.4 | ~3 | 净现金 | 净现金 | |
+| 净债务 Net debt ($bn) | ~5.3 | ~3 | 净现金 | 净现金 | |
 
-各预测单元的输入来源: 营业收入起点为管理层 FY2026 指引 **$507–517 亿 (12–14% 增长)** 与 31.5% 营业利润率指引 ([Q4'25 致股东信, 2026-01-20](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000033/ex991_q425.htm)); FY2026 FCF 起点为管理层上调后的 **"约 $125 亿" FCF 预期** ([Q1'26 致股东信, 2026-04-16: "We now expect 2026 FCF of approximately $12.5B, an increase from our previous projection of $11B"](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000137/ex991_q126.htm)); 广告收入路径锚定管理层"2026 年广告收入 ~$30 亿, 翻倍"指引 ([Q1'26 致股东信: "advertising revenue remains on track to reach $3B in 2026, up 2x year-over-year"](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000137/ex991_q126.htm)) 与 *分析师观点：* 卖方对 2030 年广告收入 $76–83 亿的预测 ([Bernstein — Netflix: Messy Near-Term Narrative but a Durable Engine, 2026-06-04, p.3](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484441/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%EF%BC%9A%20Messy%20Near~Term%20Narrative%EF%BC%8C%20but%20a%20Durable%20Engine-260604.pdf))。
+**本次刷新调整 (Q2'26 后)。** 上一版 FY2027E EPS 为 $3.30；纳入 Q2'26 实际 (半年 EPS $2.03 = Q1 $1.23 + Q2 $0.80, 其中 Q1 含一次性 WBD 终止补偿) 与管理层收窄后的全年指引后, 本报告将 **FY2026E 调整后 EPS 上修至 $3.15、FY2027E 上修至 $3.60**, 向卖方共识靠拢 (Bernstein F26E $3.15 / F27E $3.87、Morgan Stanley F26E $3.59 / F27E $3.70) ([Bernstein — 2Q26, 2026-07-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412414241484888/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%20%EF%BC%88NFLX%EF%BC%89%202Q26%EF%BC%9A%20Same~ish%20guide%EF%BC%8C%20more%20doubts-260717.pdf); *分析师观点：* [Morgan Stanley — We've Seen This Movie Before, 2026-07-14, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584282525585124/Morgan%20Stanley-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89We%27ve%20Seen%20This%20Movie%20Before%20%E2%80%93%20Reiterate%20OW-260714.pdf))。
+
+各预测单元的输入来源: 营业收入起点为管理层 Q2'26 收窄后的 FY2026 指引 **$510–514 亿 (13–14% 增长)** 与 31.5% 营业利润率指引 (隐含营业利润 +20%+) ([Q2'26 致股东信, 2026-07-16: "we are narrowing our revenue forecast to $51.0-$51.4B ... operating margin of 31.5% ... implies annual operating income growth of 20%+"](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm)); FY2026 FCF 起点为管理层重申的 **"约 $125 亿" FCF 预期** ([Q2'26 致股东信: "For the full year, we continue to expect FCF of approximately $12.5B"](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm)); 广告收入路径锚定管理层"2026 年广告收入 ~$30 亿, 翻倍"指引 ([Q2'26 致股东信: "a projected rough doubling of our ads revenue to approximately $3 billion"](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm)) 与 *分析师观点：* 卖方对 2030 年广告收入 $76–83 亿的预测 ([Bernstein — Netflix: Messy Near-Term Narrative but a Durable Engine, 2026-06-04, p.3](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484441/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%EF%BC%9A%20Messy%20Near~Term%20Narrative%EF%BC%8C%20but%20a%20Durable%20Engine-260604.pdf))。
 
 **利润率桥 (margin bridge, *分析师观点：*)。** FY2025→FY2026 营业利润率 29.5%→31.5% (+200bps) 的拆解: 提价与广告增量贡献 +250bps · 运营杠杆 +100bps · 内容摊销前置 (上半年 ~10% 增长) −100bps · 现场直播/体育版权占比上升 (低毛利) −50bps。每个驱动因素的方向源于管理层"上半年内容摊销增长更高"与"广告收入翻倍"的指引 ([Q4'25 致股东信](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000033/ex991_q425.htm)); bps 量级为 *分析师观点：* 估算。
 
 ### (b) 目标价推导 (*分析师观点：*——展示算术)
 
-**方法: 前瞻 P/E × 目标倍数。** `FY2027E EPS $3.30 × 30× forward P/E = $99 ≈ $100`。
+**方法: 前瞻 P/E × 目标倍数。** `FY2027E adj EPS $3.60 × 25× forward P/E = $90`。
 
-**为什么用 30 倍?** Netflix 在 FY2025–FY2028E 期间预计实现约 17% 的 EPS CAGR 与 33–34.5% 的营业利润率, 显著高于任何传统媒体同业 (Disney EPS CAGR 个位数、WBD 整合中)。30× 大致对标卖方共识倍数中枢 (Jefferies 基准用 30×、Bernstein 隐含约 28–30×、Goldman 约 33×), 较 Spotify 约 30–35× 前瞻盈利相当 ([Macrotrends Disney P/E](https://www.macrotrends.net/stocks/charts/DIS/disney/pe-ratio); *分析师观点：* [Jefferies — What Gets Netflix Working Again, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584251881854254/Jefferies-Netflix%EF%BC%88NFLX.US%EF%BC%89What%20Gets%20Netflix%20Working%20Again%EF%BC%9F~Reiterate%20Buy-260610.pdf))。30× 既不激进 (不假设回到 2024 年的 >40× 重估) 也不悲观 (不假设熊市的 20× 去评级)。
+**为什么用 25 倍 (较上一版 30× 下调)?** Netflix 在 FY2025–FY2028E 期间预计实现约 19% 的 EPS CAGR 与 33–34.5% 的营业利润率, 显著高于任何传统媒体同业 (Disney EPS CAGR 个位数、WBD 整合中)。上一版用 30×, 但 Q2'26 后两点变化促使下调目标倍数: (1) 营业收入增长已由 2025 年的 16–18% 减速至 Q3'26 指引的 ~12%, 高增长溢价理应收敛; (2) Q2 后全体卖方主动去评级——Bernstein 隐含 F27E 仅 ~19×、Morgan Stanley 目标价隐含约 24×、Goldman 目标价 $94 隐含约 24×。25× 取卖方 Q2 后隐含倍数区间 (19–26×) 的中枢, 既不激进 (不假设回到 2024 年 >40× 重估) 也不悲观 (不假设熊市 20× 去评级) ([Bernstein — 2Q26, 2026-07-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412414241484888/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%20%EF%BC%88NFLX%EF%BC%89%202Q26%EF%BC%9A%20Same~ish%20guide%EF%BC%8C%20more%20doubts-260717.pdf); *分析师观点：* [Morgan Stanley — We've Seen This Movie Before, 2026-07-14, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584282525585124/Morgan%20Stanley-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89We%27ve%20Seen%20This%20Movie%20Before%20%E2%80%93%20Reiterate%20OW-260714.pdf))。
 
 ### (c) 牛/基/熊情景 (*分析师观点：*)
 
-| 情景 (*分析师观点：*) | 核心假设 | 目标价 | 较 $80.34 |
+| 情景 (*分析师观点：*) | 核心假设 | 目标价 | 较 $73.11 |
 |---|---|---|---|
-| 牛市 Bull | 参与度企稳, 广告 2027 超预期, 提价顺畅, 给 FY2027E EPS $3.30 × 38× | $125 | +56% |
-| 基准 Base | 中性估计, FY2027E EPS $3.30 × 30× | $100 | +24% |
-| 熊市 Bear | 美区订户放缓 + 短视频分流参与度 + 内容成本失控压制 FCF, 去评级至 20× | $66 | −18% |
+| 牛市 Bull | 参与度企稳, 广告 2027 超预期, 提价顺畅, 给 FY2027E EPS $3.87 (Bernstein) × 32× | $124 | +70% |
+| 基准 Base | 中性估计, FY2027E adj EPS $3.60 × 25× | $90 | +23% |
+| 熊市 Bear | 美区订户放缓 + 短视频分流参与度 + 内容成本失控压制 FCF, 去评级至 20× × $3.30 | $66 | −10% |
 
-熊市情景大致对应 Jefferies 给出的悲观情形 ($75, FY27E × 20×) ([Jefferies, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584251881854254/Jefferies-Netflix%EF%BC%88NFLX.US%EF%BC%89What%20Gets%20Netflix%20Working%20Again%EF%BC%9F~Reiterate%20Buy-260610.pdf)); 牛市对应 Bernstein 的"2–3 年看 $130–135"中期目标 ([Bernstein, 2026-06-04, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484441/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%EF%BC%9A%20Messy%20Near~Term%20Narrative%EF%BC%8C%20but%20a%20Durable%20Engine-260604.pdf))。风险回报大致对称, 这正是给持有而非买入的量化依据: +24% 上行 vs −18% 下行, 比值并不足以构成强烈买入。
+牛市大致对应 Bernstein 的"2–3 年看 $130–135"中期目标与 F27E EPS $3.87 ([Bernstein — 2Q26, 2026-07-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412414241484888/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%20%EF%BC%88NFLX%EF%BC%89%202Q26%EF%BC%9A%20Same~ish%20guide%EF%BC%8C%20more%20doubts-260717.pdf))。相较上一版 (+24% 上行 vs −18% 下行), Q2 后股价再跌约 9%, 风险回报已改善为 **+23% 上行 vs −10% 下行**——偏正向但仍不构成强烈买入, 因熊市情景 (参与度结构性衰退) 恰是 Q2 未能证伪的核心分歧。
 
 ### (d) 与卖方一致预期的对比
 
-本报告 FY2026E 营业收入 $512 亿、EPS $3.05 大致落在卖方共识中枢: Bernstein FY2026E 营业收入 $516.96 亿、EPS $3.20; Goldman FY2026E 营业收入 $516.6 亿、EPS $3.60 (更乐观) ([Bernstein, 2026-06-04, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484441/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%EF%BC%9A%20Messy%20Near~Term%20Narrative%EF%BC%8C%20but%20a%20Durable%20Engine-260604.pdf); *分析师观点：* [Goldman Sachs — Key Takeaways from Netflix Ad Upfront, 2026-05-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585425844811454/Goldman%20Sachs-Netflix%20Inc.%20%EF%BC%88NFLX.US%EF%BC%89%20Key%20Takeaways%20from%20Netflix.pdf))。本报告 EPS 略低于 Goldman, 主因对内容摊销前置与现场直播低毛利拖累更保守。
+本报告 FY2026E 营业收入 $513 亿、adj EPS $3.15 与 Q2 后卖方共识中枢基本一致: Bernstein FY2026E 营业收入 $513.46 亿、adj EPS $3.15; Goldman FY2026E 营业收入 $513.47 亿 (Q2 后自 $516.64 亿下调); Morgan Stanley FY2026E EPS $3.59 (更乐观) ([Bernstein — 2Q26, 2026-07-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412414241484888/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%20%EF%BC%88NFLX%EF%BC%89%202Q26%EF%BC%9A%20Same~ish%20guide%EF%BC%8C%20more%20doubts-260717.pdf); *分析师观点：* [Goldman Sachs — Q2'26 Earnings Review, 2026-07-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412414241488828/Goldman%20Sachs-Netflix%20Inc.%20%EF%BC%88NFLX.US%EF%BC%89%20Q2%E2%80%9926%20Earnings%20Review%EF%BC%9A%20Management%20Team%20Focused%20on%20Compounded%20Revenue%EF%BC%8C%20Margin%20Trajectory%20%26%20Capital%20Allocation%EF%BC%9B%20Investor%20Debates%20Likely%20to%20Persist-260717.pdf))。本报告 FY2027E 营业收入 $575 亿与 Bernstein ($574.55 亿)、Goldman ($578.72 亿, Q2 后自 $585.94 亿下调) 一致, EPS $3.60 略低于 Bernstein $3.87, 主因对内容摊销前置与现场直播低毛利拖累更保守。
 
 ### (e) 最该盯紧的变量
 
@@ -224,7 +226,7 @@ Netflix, Inc. 是全球最大的纯订阅式视频点播 (subscription video-on-
 
 ### (f) 卖方观点演变 (Sell-side view evolution)
 
-本报告引用了 ≥2 篇本地机构研报 (`db/zsxq.db`), 因此按规则构建按机构的观点时间线与机构间分歧表。**机械预读 `db/stock_price_target.db` (只读)**: NFLX 共录得 7 条 PT 记录, 区间 $110–$120 (除 JPM 一条无价), 中位数 $115, 离散度窄 (±5%)——这是一个**卖方高度一致看多、但股价持续走弱**的典型背离, 本身就是市场叙事 (参与度/AI 担忧) 压过卖方模型的信号。
+本报告引用了 ≥2 篇本地机构研报 (`db/zsxq.db`), 因此按规则构建按机构的观点时间线与机构间分歧表。**机械预读 `db/stock_price_target.db` (只读)**: NFLX 录得 7 条结构化 PT 记录 (截至 Q1 季), 区间 $110–$120, 中位数 $115; **叠加 Q2'26 (2026-07-16) 后新读取的三篇研报, 目标价被集体下调至 $90–95**——Morgan Stanley $115→$90、Bernstein $100→$95、Goldman 至 $94。这是本次刷新最关键的信号: **Q2 业绩完全符合指引, 卖方评级全部维持 OW/Buy, 却同步下调目标价**——市场叙事 (参与度/AI 担忧 + 增长减速) 已压过卖方原有模型, 卖方选择向下修正倍数而非评级。
 
 **按机构的观点时间线 (评级 / 目标价, 报告日收盘价已机械存于 `stock_price_target.db`):**
 
@@ -233,23 +235,25 @@ Netflix, Inc. 是全球最大的纯订阅式视频点播 (subscription video-on-
 | Morgan Stanley | 2026-04-09 | Overweight | $115 | +12.7% | "Reclaiming The Crown"——重申首选 |
 | Bernstein | 2026-04-17 | Outperform | $110 | +13.0% | 1Q26 增长放缓但引擎稳固 |
 | J.P. Morgan | 2026-04-17 | Overweight | $118 (此前 $120) | +21.3% | 实质重于表象, 逢低吸纳 |
-| Bernstein | 2026-05-14 | Outperform | $110 (维持) | +26.5% | AVOD 扩 15 国 |
 | Goldman Sachs | 2026-05-15 | Buy | $120 | +37.9% | 广告招商会四重共振 |
 | Bernstein | 2026-06-04 | Outperform | $110 (维持) | — | 短期叙事混乱, 长期引擎仍稳固 |
 | Jefferies | 2026-06-10 | Buy | $110 (此前 $128, **下调**) | +33% (vs $82.64) | 估值已过度悲观, 情绪可修复 |
+| **Morgan Stanley** | **2026-07-14** | **Overweight (维持)** | **$90 (此前 $115, ▼22%)** | +22% (vs $73.83) | **"这部电影我们看过"——提价+淡季+片单轻致流失担忧, 但仍被低估** |
+| **Bernstein** | **2026-07-17** | **Outperform (维持)** | **$95 (此前 $100, ▼5%)** | +28% (vs $74.4) | **Q2 指引"换汤不换药", 疑虑加深; F27E EPS $3.87** |
+| **Goldman Sachs** | **2026-07-17** | **Buy (维持)** | **$94 (此前更高)** | +26.4% (vs $74.35) | **管理层聚焦复合营业收入/利润率/资本配置; 投资者分歧料将持续** |
 
-**关键自我修订:** Jefferies 在 2026-06-10 把目标价从 **$128 下调至 $110** (FY27E EPS × 30× PE), 触发因素是 AI 冲击论与短视频分流担忧持续压制估值——但其结论仍是"当前 FY27E 约 20 倍出头 PE 已过度悲观", 维持买入 ([Jefferies, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584251881854254/Jefferies-Netflix%EF%BC%88NFLX.US%EF%BC%89What%20Gets%20Netflix%20Working%20Again%EF%BC%9F~Reiterate%20Buy-260610.pdf))。J.P. Morgan 在 4 月把目标价从 $120 微降至 $118, 因管理层 1Q26 业绩略超但维持全年指引不变令部分投资者失望 (*分析师观点：* [J.P. Morgan — More Meat & Potatoes Than Sizzle, 2026-04-18, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/184482585254822/J.P.%20Morgan-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89More%20Meat%20%26%20Potatoes%20Than%20Sizzle-260418.pdf))。
+**关键自我修订 (Q2'26 后, 本次刷新新增):** Q2'26 业绩虽符合指引 (营业收入 $12.56bn、营业利润率 33.4%、EPS $0.80), **三大行却在同一周内下调目标价**: Morgan Stanley 幅度最大, 从 **$115 直接下调至 $90** (−22%), 理由是"更早的提价撞上季节性淡季 + 较轻的片单, 可能触发高于往常的流失", 但仍认为相对增长股价被低估、只是"催化剂路径棘手" (*分析师观点：* [Morgan Stanley — We've Seen This Movie Before, 2026-07-14, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584282525585124/Morgan%20Stanley-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89We%27ve%20Seen%20This%20Movie%20Before%20%E2%80%93%20Reiterate%20OW-260714.pdf))。Bernstein 从 $100 微降至 $95, 标题直言"同样的指引, 更多疑虑" ([Bernstein — 2Q26, 2026-07-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412414241484888/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%20%EF%BC%88NFLX%EF%BC%89%202Q26%EF%BC%9A%20Same~ish%20guide%EF%BC%8C%20more%20doubts-260717.pdf))。Goldman 维持买入、目标价 $94, 但直言"投资者分歧料将持续" (*分析师观点：* [Goldman Sachs — Q2'26 Earnings Review, 2026-07-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412414241488828/Goldman%20Sachs-Netflix%20Inc.%20%EF%BC%88NFLX.US%EF%BC%89%20Q2%E2%80%9926%20Earnings%20Review%EF%BC%9A%20Management%20Team%20Focused%20on%20Compounded%20Revenue%EF%BC%8C%20Margin%20Trajectory%20%26%20Capital%20Allocation%EF%BC%9B%20Investor%20Debates%20Likely%20to%20Persist-260717.pdf))。较早的 Jefferies (2026-06-10) 已先行把目标价从 $128 下调至 $110, 是这一轮去评级的前奏。
 
 **机构间分歧 (机构间分歧——不混合为虚假共识):**
 
 | 机构 | 日期 | 评级 / 目标价 | 核心论点 | 什么证据能证明其正确 |
 |---|---|---|---|---|
-| Goldman Sachs | 2026-05-15 | Buy / $120 (+38%) | 会员增长 + 广告变现 + 内容提效 + 现金流爆发"四重共振"; FY26 EPS $3.60 | 广告收入 2026 翻倍至 $30 亿坐实; FCF yield 升至 3.6% |
-| Bernstein | 2026-06-04 | Outperform / $110 (+35%) | 引擎稳固但增长节奏放缓; 2030 EBIT margin 看 40%+ | 非英语市场渗透 + 运营杠杆持续释放 |
-| Jefferies | 2026-06-10 | Buy / $110 (下调自 $128) | 估值已过度悲观, 情绪修复空间; 但下调 PT 承认逆风 | 人均观看时长降幅 2026 上半年收窄至 −5% |
-| 本报告 | 2026-06-14 | **Hold / $100 (+24%)** | 优质资产但缺近端催化剂, 风险回报不够对称 | 下半年 OM 指引上调 + 参与度企稳同时出现 |
+| Morgan Stanley | 2026-07-14 | Overweight / $90 (+22%) | 流失担忧被夸大, 相对增长股价低估; 但催化剂路径棘手 | 提价后 Q3/Q4 流失不高于历史; H2 利润率指引上修 |
+| Goldman Sachs | 2026-07-17 | Buy / $94 (+26%) | 复合营业收入/利润率/资本配置故事完整; 广告顺风累积 | 广告收入 2026 翻倍至 $30 亿坐实; FCF 达 $125 亿 |
+| Bernstein | 2026-07-17 | Outperform / $95 (+28%) | 引擎耐久但短期指引乏味; 2030 EBIT margin 看 40%+ | 非英语市场渗透 + 运营杠杆持续释放; 参与度企稳 |
+| 本报告 | 2026-07-28 | **Hold (偏建设性) / $90 (+23%)** | 优质资产、估值已明显回落但缺近端催化剂 | 下半年 OM 指引上调 + 参与度降幅企稳同时出现 |
 
-机构间最大分歧在于**参与度下滑是统计假象还是结构性衰退**: Jefferies 与 Bernstein 倾向前者 (账户持有人真实观看时长近 2.5 年基本平稳, 降幅源于广告层占比上升与地理结构偏移), 而市场用 −33% 的股价投票倾向后者。本报告的持有评级正是承认这一分歧短期无法证伪。
+机构间最大分歧在于**参与度下滑是统计假象还是结构性衰退**: Morgan Stanley 与 Bernstein 倾向前者 (账户持有人真实观看时长近 2.5 年基本平稳, 降幅源于广告层占比上升与地理结构偏移; 管理层称 H1'26 观看小时 +2% vs 2025 全年 +1.5%), 而市场用 −37.8% 的股价投票倾向后者。本报告的持有评级正是承认这一分歧短期无法证伪——Q2 业绩符合指引却仍下跌, 恰恰印证"分歧未解"这一判断。
 
 ### Netflix 杜邦 ROE 分解 (FY2025)
 
@@ -341,7 +345,7 @@ Netflix, Inc. 是全球最大的纯订阅式视频点播 (subscription video-on-
 
 ## 1B. GF Score (GuruFocus-style) 基本面评分卡
 
-*分析师观点：* **GF Score (GuruFocus-style): 70 / 100 — 51–70 区间 (Poor future performance potential / 未来表现潜力偏弱)。** 这一综合分**完全被动量 (Momentum) 维度拖累**——基本面四维 (财务实力、盈利、成长、估值) 均健康, 但过去 12 个月 −33.7% 的股价回报把动量打到 2/10, 使综合分跌入偏弱区间。这恰是 Netflix 当前的画像: 优质企业 + 弱价格动量 = 持有。(注: 此为独立计算的 GuruFocus-*风格* 复现, 非 GuruFocus 官方数字。)
+*分析师观点：* **GF Score (GuruFocus-style): 71 / 100 — 51–70 区间 (Poor future performance potential / 未来表现潜力偏弱)。** 这一综合分**几乎完全被动量 (Momentum) 维度拖累**——基本面四维 (财务实力、盈利、成长、估值) 均健康 (估值维度因 Q2 后进一步回落已上调至 8/10), 但过去 12 个月 −37.8% 的股价回报把动量打到 2/10, 使综合分仍处偏弱区间。这恰是 Netflix 当前的画像: 优质企业 + 弱价格动量 = 持有。(注: 此为独立计算的 GuruFocus-*风格* 复现, 非 GuruFocus 官方数字。)
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" role="img" aria-label="GF Score radar">
 <rect x="0" y="0" width="500" height="500" fill="#ffffff"/>
@@ -379,7 +383,7 @@ Netflix, Inc. 是全球最大的纯订阅式视频点播 (subscription video-on-
 <circle cx="150.1" cy="205.6" r="2.6" fill="#2e8b57"/>
 <circle cx="349.9" cy="205.6" r="2.6" fill="#2e8b57"/>
 <circle cx="267.6" cy="262.3" r="2.6" fill="#2e8b57"/>
-<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: NFLX FY2025 10-K · Yahoo Finance · indicators.db, as of 2026-06-14</text>
+<text x="250" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9.5" fill="#52606d">Source: NFLX FY2025 10-K · Q2'26 8-K · Yahoo Finance, as of 2026-07-28</text>
 <text x="250" y="485" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="9" fill="#52606d">GF Score = independent analyst rubric (*Analyst view:*) — not GuruFocus™ official number</text>
 </svg>
 
@@ -390,9 +394,9 @@ Netflix, Inc. 是全球最大的纯订阅式视频点播 (subscription video-on-
 | Financial Strength (财务实力) | 8 | `████████░░` |
 | Profitability (盈利能力) | 9 | `█████████░` |
 | Growth (成长性) | 7 | `███████░░░` |
-| GF Value (估值) | 7 | `███████░░░` |
+| GF Value (估值) | 8 | `████████░░` |
 | Momentum (动量) | 2 | `██░░░░░░░░` |
-| **GF Score (composite, *Analyst view:*)** | **70 / 100** | **51–70 Poor future performance potential** |
+| **GF Score (composite, *Analyst view:*)** | **71 / 100** | **51–70 Poor future performance potential** |
 
 *Composite weights (*Analyst view:*): Financial Strength 20% · Profitability 25% · Growth 25% · GF Value 15% · Momentum 15% (transparent reproduction — not GuruFocus's proprietary weighting).*
 
@@ -404,9 +408,9 @@ Netflix, Inc. 是全球最大的纯订阅式视频点播 (subscription video-on-
 
 **Growth (成长性) = 7/10。** FY2023–FY2025 营业收入 CAGR 约 16% ($337 亿→$452 亿)、EPS 增速更高; 前瞻 FY2025–FY2028E 营业收入 CAGR 约 12%、EPS CAGR 约 17% ([NFLX FY2025 10-K](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000034/nflx-20251231.htm); 1A 前瞻模型 *分析师观点：*)。增速从 16% 放缓至 12–14% 使其落在 7 而非 9——成长仍稳健但已从超高速过渡。
 
-**GF Value (估值, 越高越便宜) = 7/10。** FY2026 前瞻 P/E 约 25 倍, 处于自身 3 年区间下半部 (2024 年中 >50 倍拆股前峰值后大幅回落); PEG 约 1.5 (25× / 17% EPS CAGR); 较卖方目标价中枢 $110–115 仍有约 +35% 上行 ([Macrotrends NFLX P/E](https://www.macrotrends.net/stocks/charts/NFLX/netflix/pe-ratio); *分析师观点：* PT 时间线见 1A(f))。相对自身历史已便宜, 但绝对倍数仍高于传统媒体, 故 7 而非 9。
+**GF Value (估值, 越高越便宜) = 8/10 (Q2 后自 7 上调)。** FY2026 前瞻 P/E 约 23 倍、FY2027E 约 20 倍, 处于自身 3 年区间下沿 (2024 年中 >50 倍拆股前峰值后大幅回落); PEG 约 1.2 (23× / 19% EPS CAGR); 即便卖方 Q2 后下调目标价至 $90–95, 较现价 $73.11 仍有约 +23–30% 上行 ([Macrotrends NFLX P/E](https://www.macrotrends.net/stocks/charts/NFLX/netflix/pe-ratio); *分析师观点：* PT 时间线见 1A(f))。相对自身历史已明显便宜, 仅因绝对倍数仍高于传统媒体而未给 9。
 
-**Momentum (动量) = 2/10。** 这是拖累项: 12 个月 −33.7% (vs 标普 +24.3%, 相对约 −58pp)、6 个月 −14.6%、YTD −11.7%, 股价处于 52 周区间 ($75.86–$133.91) 下沿附近 ([yfinance, 截至 2026-06-12](https://finance.yahoo.com/quote/NFLX))。深度跑输基准 + 近 52 周低位 = 2/10。
+**Momentum (动量) = 2/10。** 这是拖累项: 12 个月 −37.8% (vs 标普 +16.4%, 相对约 −54pp)、6 个月 −14.7%、YTD −22.0%, 股价处于 52 周区间 ($70.86–$127.75) 下沿附近, Q2'26 业绩符合指引却仍未止跌 ([yfinance, 截至 2026-07-28](https://finance.yahoo.com/quote/NFLX))。深度跑输基准 + 近 52 周低位 = 2/10。
 
 **综合算术:** `(FS·20 + Prof·25 + Growth·25 + Value·15 + Mom·15)/100 = (8·20 + 9·25 + 7·25 + 7·15 + 2·15)/100 = (160+225+175+105+30)/100 = 695/100 → 70/100` (权重 20/25/25/15/15)。
 
@@ -435,7 +439,7 @@ timeline
     2022 : 推出广告支持套餐; 启动付费共享 (paid sharing) 整顿
     2023 : 联席 CEO 架构正式化 (Sarandos 与 Peters); DVD 业务终止
     2025 : 营业收入 452 亿、营业利润率 29.5%、付费会员 3.25 亿+、1 拆 10、停止季度披露订阅数
-    2026 : 终止 720 亿美元 WBD 收购 (2 月); Q1 EPS 因 28 亿终止补偿大涨; 股价 12M 跌逾 33%
+    2026 : 终止 720 亿美元 WBD 收购 (2 月); Q1 EPS 因 28 亿终止补偿大涨; Q2 营业收入 126 亿/利润率 33.4%符合指引仍下跌; 4 月新增 250 亿回购授权、Q2 回购 47 亿创纪录; 股价 12M 跌逾 37%
 ```
 *来源: [Netflix 投资者关系——SEC 申报](https://ir.netflix.net/financials/sec-filings/default.aspx)、[Wikipedia](https://en.wikipedia.org/wiki/Netflix,_Inc.)。*
 
@@ -447,7 +451,7 @@ timeline
 
 *第三, "盈利下增长 (growth-at-a-profit)"转型 (2022–2025)。* 2022 年股价崩盘 (NFLX 从拆股前 700 美元跌至 170 美元以下, 付费会员增长十多年来首次转负) 迫使公司在过渡到联席 CEO 架构的框架下进行战略重置。三项杠杆依次拉下: 付费共享强制执行 (跨家庭密码共享整顿, 始于 2023 年初)、广告支持套餐 (2022 年 11 月推出, 微软为初始广告技术合作方)、以及对内容支出增速相对营业收入增速的实质性收紧。重置奏效: 营业利润率从 2.8%(2021 重述基数) / 17.8%(2022) → 20.6%(2023) → 26.7%(2024) → 29.5%(2025), 营业收入增速也从个位数重新加速到 +16% ([Netflix 2025 10-K, MD&A 营业利润率 29.5%/26.7%/20.6%](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000034/nflx-20251231.htm))。
 
-**本期新变化 (refresh)。** 自上一版报告 (2026-05-20) 以来的主要增量: (1) 股价从约 $89 进一步回落至 $80.34 (2026-06-12), 12 个月跌幅扩大至 −33.7%, 相对标普跑输约 58 个百分点——这是本次评级从隐含偏多调整为明确**持有**的核心原因; (2) 卖方在 4–6 月密集下调目标价 (Jefferies $128→$110、JPM $120→$118), 但全部维持买入/增持, 形成"卖方一致看多 vs 股价持续走弱"的背离; (3) 管理层在 Q1'26 把 2026 年 FCF 预期从约 $110 亿上调至**约 $125 亿** ([Q1'26 致股东信, 2026-04-16](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000137/ex991_q126.htm))。
+**本期新变化 (refresh, 2026-07-28)。** 自上一版报告 (2026-06-14) 以来的主要增量: (1) **Q2'26 业绩 (2026-07-16) 落地**——营业收入 $12.56bn (+13.4% YoY)、营业利润率 33.4%、稀释 EPS $0.80, 全部符合或略超指引; 管理层把全年营业收入指引收窄至 **$510–514 亿 (13–14% 增长)**, 重申 31.5% 利润率、广告收入翻倍至 ~$30 亿、FCF ~$125 亿、营业利润 +20%+ ([Q2'26 致股东信, 2026-07-16](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm)); (2) **股价进一步回落至 $73.11 (2026-07-28)**, 12 个月跌幅扩大至 −37.8%, 相对标普跑输约 54 个百分点; (3) **卖方 Q2 后集体下调目标价** (Morgan Stanley $115→$90、Bernstein $100→$95、Goldman 至 $94), 但评级全部维持 OW/Buy——"符合指引却被下调"是本次刷新最强的市场信号, 本报告据此把目标倍数从 30× 下调至 25×、目标价从 $100 下调至 **$90**, 评级维持持有但转为**偏建设性** (估值已跌至 ~20× FY2027E); (4) **资本配置加码**——董事会 4 月新增 **$250 亿回购授权**, Q2 回购 **$47 亿创单季纪录**, 剩余授权 $271 亿, 期末总债务 $144 亿、现金 $91 亿 ([Q2'26 致股东信, 2026-07-16](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm))。
 
 **主要并购案**按美国大盘股标准均属温和量级: Millarworld (2017, 漫画 IP)、Animal Logic (2022, 澳洲动画)、Night School Studio (2021, 游戏)、Boss Fight / Next Games / Spry Fox (2021–2022, Netflix Games 手游工作室)、Scanline VFX (2022)。直到 2025 年 12 月**拟议中的 WBD 收购**之前, 无一桩对合并 P&L 形成实质影响; 该收购原定 $720 亿股权对价 / $827 亿 EV, 本将成为本十年最大的美国媒体交易。WBD 交易在 **2026 年 2 月 26 日被终止**, Netflix 不愿继续抬价超过 Paramount Skydance 的 $31/股反向报价 (Netflix 报价 $27.75/股现金); Netflix 随后在 Q1'26 确认了 **$28 亿 WBD 终止补偿**, 推动 Q1 稀释 EPS 达 **$1.23** (vs Q1'25 $0.66, +86%), 大幅超出市场一致预期 ([Variety, 2026-02-26](https://variety.com/2026/film/news/paramount-warner-bros-deal-explained-netflix-ellison-1236674841/); [Q1'26 致股东信: "Diluted EPS... $1.23... above our forecast of $0.76... the $2.8B"](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000137/ex991_q126.htm))。
 
@@ -868,7 +872,7 @@ quadrantChart
 
 2026 年管理层 playbook (依据 Q4'25 致股东信) 是明确的: (1) **核心业务改进**——剧集/电影品质、产品体验、广告增长; (2) **新举措**——现场直播 (WBC)、视频播客、云优先游戏; (3) **保持健康增长**——12–14% 营业收入增长、31.5% 利润率、扩张 FCF ([Q4'25 致股东信](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000033/ex991_q425.htm))。
 
-framing 的关键在于其**没有说什么**: 没有进取的订阅用户目标数字、没有回到"增长不计代价"的迹象。管理层明确把 Netflix 定位为**成熟规模运营者**——增长营业收入与利润率、向股东返还资本 (FY2025 回购 $91.3 亿; Q4'25 期间因 WBD 一度暂停回购积累现金, 后于 Q1'26 恢复), 在广告/现场直播/游戏上保留增长惊喜的可选权 (optionality) ([Netflix 2025 10-K, 现金流量表 Repurchases of common stock $9,127.2M](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000034/nflx-20251231.htm); Goldman 提到已宣布 $250 亿回购授权, *分析师观点：* [Goldman Sachs, 2026-05-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585425844811454/Goldman%20Sachs-Netflix%20Inc.%20%EF%BC%88NFLX.US%EF%BC%89%20Key%20Takeaways%20from%20Netflix.pdf))。
+framing 的关键在于其**没有说什么**: 没有进取的订阅用户目标数字、没有回到"增长不计代价"的迹象。管理层明确把 Netflix 定位为**成熟规模运营者**——增长营业收入与利润率、向股东返还资本, 在广告/现场直播/游戏上保留增长惊喜的可选权 (optionality) ([Netflix 2025 10-K, 现金流量表 Repurchases of common stock $9,127.2M](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000034/nflx-20251231.htm))。**回购在 Q2'26 显著提速**: FY2025 回购 $91.3 亿 (Q4'25 因 WBD 一度暂停积累现金, Q1'26 恢复); 董事会 **2026 年 4 月新增 $250 亿授权** (叠加 Q1 末剩余 $68 亿), Q2'26 回购 **$47 亿创单季历史纪录**, 期末剩余授权 **$271 亿**; 期末总债务 $144 亿、现金及等价物 $91 亿, 年内到期 $10 亿债务计划再融资 ([Q2'26 致股东信, 2026-07-16: "In April, our Board ... authorized ... an additional $25B ... In Q2, we bought back $4.7B of stock, our largest quarter of share repurchases ... $27.1B of capacity left"](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm))。稀释股数已由 FY2025 的约 4,349M 降至 Q2'26 的 **4,261M**, 回购对每股价值的支撑在股价低位时尤为高效。
 
 ---
 
@@ -878,7 +882,7 @@ framing 的关键在于其**没有说什么**: 没有进取的订阅用户目标
 
 下面两张图给出 Netflix 的资产负债表与现金流量结构, 是评估杠杆与 FCF 风险的视觉锚。
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="balance sheet Sankey"><rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -16 1040 666" width="1040" height="666" role="img" aria-label="balance sheet Sankey"><rect x="0" y="-16" width="1040" height="666" fill="#ffffff"/>
 <text x="20.00" y="30.00" text-anchor="start" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#1f2933">Netflix 资产负债表 / Balance Sheet — FY2025</text>
 <path d="M 204.00,98.09 C 262.00,98.09 262.00,127.00 320.00,127.00 L 320.00,183.87 C 262.00,183.87 262.00,154.96 204.00,154.96 Z" fill="#93c5fd" fill-opacity="0.55"/>
 <path d="M 732.00,120.00 C 790.00,120.00 790.00,-9.25 848.00,-9.25 L 848.00,16.47 C 790.00,16.47 790.00,145.72 732.00,145.72 Z" fill="#fca5a5" fill-opacity="0.55"/>
@@ -1034,7 +1038,7 @@ framing 的关键在于其**没有说什么**: 没有进取的订阅用户目标
 
 ### 公司特定风险
 
-**1. 参与度结构性侵蚀 (最受市场关注)。** 2025 下半年每付费用户观看时长同比 −8%, 总观看时长仅 +2%; 市场担忧这是 AI 与短视频 (YouTube/TikTok) 对长视频参与度的结构性侵蚀。这是过去 12 个月股价 −33.7% 的核心叙事。*分析师观点：* Jefferies 认为降幅更可能是广告层占比上升、地理结构向低观看量市场偏移及密码整顿造成的统计假象 (账户持有人真实观看时长近 2.5 年基本平稳), 预计 2026 上半年收窄至约 −5% ([Jefferies, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584251881854254/Jefferies-Netflix%EF%BC%88NFLX.US%EF%BC%89What%20Gets%20Netflix%20Working%20Again%EF%BC%9F~Reiterate%20Buy-260610.pdf))。**严重性: 高。可能性: 中。**缓解: 广告层与本土内容深度; 但短期难以证伪是评级给持有的关键。
+**1. 参与度结构性侵蚀 (最受市场关注)。** 2025 下半年每付费用户观看时长同比 −8% (H1'26 总观看小时 +2% vs 2025 全年 +1.5%); 市场担忧这是 AI 与短视频 (YouTube/TikTok) 对长视频参与度的结构性侵蚀。这是过去 12 个月股价 −37.8% 的核心叙事, 也是 Q2'26 业绩符合指引却仍被卖方下调目标价的根本原因。*分析师观点：* Jefferies 认为降幅更可能是广告层占比上升、地理结构向低观看量市场偏移及密码整顿造成的统计假象 (账户持有人真实观看时长近 2.5 年基本平稳), 预计 2026 上半年收窄至约 −5% ([Jefferies, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584251881854254/Jefferies-Netflix%EF%BC%88NFLX.US%EF%BC%89What%20Gets%20Netflix%20Working%20Again%EF%BC%9F~Reiterate%20Buy-260610.pdf))。**严重性: 高。可能性: 中。**缓解: 广告层与本土内容深度; 但短期难以证伪是评级给持有的关键。
 
 **2. 资本配置风险 (WBD 退出后)。** 历经五个月对 WBD 的追逐 (过桥融资峰值 $422 亿), 引发对资本配置纪律的合理质疑; 退出决定是积极信号 ($28 亿终止补偿部分抵消分心), 但寻找"变革性"交易的压力可能催化更差的第二次尝试 ([Variety, 2026-02-26](https://variety.com/2026/film/news/paramount-warner-bros-deal-explained-netflix-ellison-1236674841/))。**严重性: 中。可能性: 中偏低。**
 
@@ -1072,15 +1076,15 @@ framing 的关键在于其**没有说什么**: 没有进取的订阅用户目标
 
 本节区别于第 9 章的风险清单——这里**针对空头的具体论点逐一辩护**, 并列出未来 12 个月的日期化催化剂。
 
-**Debate 1 — 参与度下滑是结构性衰退的开始。** *分析师观点：* 这是当前最大的分歧。空头认为 2025 下半年人均观看时长 −8% 是 AI/短视频侵蚀的结构性信号。反驳: Jefferies 的分解显示账户持有人真实观看时长近 2.5 年基本平稳, 降幅主要由广告层占比上升、地理结构向低观看量市场偏移及密码整顿造成——而流失率与净增并未恶化, 总观看时长仍 +2% ([Jefferies, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584251881854254/Jefferies-Netflix%EF%BC%88NFLX.US%EF%BC%89What%20Gets%20Netflix%20Working%20Again%EF%BC%9F~Reiterate%20Buy-260610.pdf))。但本报告承认这一辩护短期无法证伪, 故评级保持持有。
+**Debate 1 — 参与度下滑是结构性衰退的开始。** *分析师观点：* 这是当前最大的分歧, Q2'26 后依然未解。空头认为 2025 下半年人均观看时长 −8% 是 AI/短视频侵蚀的结构性信号; Morgan Stanley Q2 后直言"参与度这头大象继续冒头, 投资者对更早的提价撞上淡季 + 较轻片单可能引发高于往常的流失感到不安" (*分析师观点：* [Morgan Stanley — We've Seen This Movie Before, 2026-07-14, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584282525585124/Morgan%20Stanley-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89We%27ve%20Seen%20This%20Movie%20Before%20%E2%80%93%20Reiterate%20OW-260714.pdf))。反驳: 管理层 Q2'26 披露 **H1'26 观看小时 +2% vs 2025 全年 +1.5%**, 即便面临冬奥与世界杯的竞争分流, 总观看仍在增长 ([Q2'26 致股东信, 2026-07-16](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm)); Goldman 亦称 1H'26 参与度符合预期、并未如市场担忧的那样下滑 (*分析师观点：* [Goldman Sachs — Q2'26 Earnings Review, 2026-07-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/412414241488828/Goldman%20Sachs-Netflix%20Inc.%20%EF%BC%88NFLX.US%EF%BC%89%20Q2%E2%80%9926%20Earnings%20Review%EF%BC%9A%20Management%20Team%20Focused%20on%20Compounded%20Revenue%EF%BC%8C%20Margin%20Trajectory%20%26%20Capital%20Allocation%EF%BC%9B%20Investor%20Debates%20Likely%20to%20Persist-260717.pdf))。但本报告承认这一辩护短期无法证伪——Q2 业绩符合指引却仍下跌, 正说明市场尚未被说服, 故评级保持持有。
 
-**Debate 2 — 广告变现远不及 $30 亿指引。** *分析师观点：* 空头担忧自有广告技术转型 (替换微软) 执行不力。反驳: Q1'26 广告业务"on track to reach $3B in 2026" ([Q1'26 致股东信](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000137/ex991_q126.htm)); Goldman 招商会纪要给出实质进展 (新注册 60%+ 选广告套餐、Ads Suite 接入亚马逊/雅虎程序化, *分析师观点：* [Goldman Sachs, 2026-05-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585425844811454/Goldman%20Sachs-Netflix%20Inc.%20%EF%BC%88NFLX.US%EF%BC%89%20Key%20Takeaways%20from%20Netflix.pdf))。Bernstein 给 2030 年广告收入 $76–83 亿 ([Bernstein, 2026-06-04, p.3](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484441/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%EF%BC%9A%20Messy%20Near~Term%20Narrative%EF%BC%8C%20but%20a%20Durable%20Engine-260604.pdf))。
+**Debate 2 — 广告变现远不及 $30 亿指引。** *分析师观点：* 空头担忧自有广告技术转型 (替换微软) 执行不力。反驳: Q2'26 重申广告收入"a projected rough doubling ... to approximately $3 billion" ([Q2'26 致股东信, 2026-07-16](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm)), 且 Q2 把 AI 工具扩展至整个广告生命周期、Pause Ads 与直播库存扩展程序化接入; Goldman 招商会纪要给出实质进展 (新注册 60%+ 选广告套餐、Ads Suite 接入亚马逊/雅虎程序化, *分析师观点：* [Goldman Sachs, 2026-05-17, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/585425844811454/Goldman%20Sachs-Netflix%20Inc.%20%EF%BC%88NFLX.US%EF%BC%89%20Key%20Takeaways%20from%20Netflix.pdf))。Bernstein 给 2030 年广告收入 $76–83 亿 ([Bernstein, 2026-06-04, p.3](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484441/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%EF%BC%9A%20Messy%20Near~Term%20Narrative%EF%BC%8C%20but%20a%20Durable%20Engine-260604.pdf))。
 
 **Debate 3 — 利润率扩张已见顶。** *分析师观点：* 空头认为内容摊销 2026 年再加速 (~10%) 将终结利润率扩张。反驳: 过去 5 年 (除 2022 汇率外) 最终全年 OM 均高于初始指引至少 100bp; 提价收益集中在下半年、广告增量利润率高, 偏向年底出现 OM 指引上调 ([Jefferies, 2026-06-10, p.1](http://xs-macbook-air.local:5001/zsxq/pdf/584251881854254/Jefferies-Netflix%EF%BC%88NFLX.US%EF%BC%89What%20Gets%20Netflix%20Working%20Again%EF%BC%9F~Reiterate%20Buy-260610.pdf)); Bernstein 看 2030 年集团 EBIT margin 40%+ ([Bernstein, 2026-06-04, p.4](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484441/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%EF%BC%9A%20Messy%20Near~Term%20Narrative%EF%BC%8C%20but%20a%20Durable%20Engine-260604.pdf))。
 
 **催化剂日历 (未来 12 个月):**
-- **2026 年 7 月中 — Q2'26 业绩** — 关注上半年内容摊销前置后的利润率, 以及全年 OM 指引是否上调。
-- **2026 年 10 月中 — Q3'26 业绩** — 历史上 Netflix 多在 Q3/Q4 上调全年 OM 指引; 这是最强的近端催化剂窗口。
+- **2026 年 7 月 16 日 — Q2'26 业绩 (已落地)** — 营业收入/利润率符合指引、全年指引收窄但未上调 OM, 卖方随即下调目标价; "同样的指引、更多疑虑"的市场反应印证近端催化剂稀缺。
+- **2026 年 10 月中 — Q3'26 业绩** — 管理层指引 Q3 营业收入 $12.86bn (+11.7%)、OM 33.2%; 历史上 Netflix 多在 Q3/Q4 上调全年 OM 指引, 这是下一个最强的近端催化剂窗口。
 - **2026 全年 — 广告收入是否兑现翻倍至 ~$30 亿** — 季度性披露, 是第二引擎证伪/证实的关键。
 - **2026 下半年 — 提价传导** — 美国提价收益集中在下半年。
 - **2026 年 9 月后 — PSKY-WBD 合并交割** — 竞争格局变化, 影响 Netflix 相对定位。
@@ -1108,7 +1112,7 @@ framing 的关键在于其**没有说什么**: 没有进取的订阅用户目标
 *视角观点:* **高质量、反向检验通过, 但价格未提供"明显错误定价"——5/10。** 反向检验 (什么会毁掉它): 内容成本失控 + 参与度流失同时发生——这正是当前股价下跌所定价的尾部。芒格式"以合理价买伟大公司"在 25× 倍数下成立但不激动人心。
 
 ### 10.3 Damodaran scorecard
-*视角观点:* **故事 (成熟规模、利润率扩张、广告期权) 与数字基本自洽; DCF 隐含公允价值约 $95–105, 当前 $80.34 有约 +20–30% 安全边际。** 假设块: 无风险利率 4.54% (来源: indicators.db, as of 2026-06-05) + ERP 4.5% + β≈1.2 → WACC 约 9.9%; 终端增长 ≤ 无风险利率; FY2025–FY2028E FCF CAGR 约 21% 后逐步收敛。**失败模式:** WACC 对 10Y 敏感; 若长端利率上行 100bp, 公允价值下移约 10%。
+*视角观点:* **故事 (成熟规模、利润率扩张、广告期权) 与数字基本自洽; DCF 隐含公允价值约 $92–102, 当前 $73.11 有约 +26–40% 安全边际——Q2 后股价回落使安全边际扩大。** 假设块: 无风险利率 4.54% (来源: indicators.db, as of 2026-06-05) + ERP 4.5% + β≈1.2 → WACC 约 9.9%; 终端增长 ≤ 无风险利率; FY2025–FY2028E FCF CAGR 约 21% 后逐步收敛。**失败模式:** WACC 对 10Y 敏感; 若长端利率上行 100bp, 公允价值下移约 10%; 若参与度结构性衰退坐实, 终端 FCF 增速假设需下修。
 
 ### 10.4 Howard Marks 周期姿态
 *视角观点:* **个股层面"防守略偏进攻"——优质资产已被市场情绪打到弱动量, 但缺近端催化剂, 等待右侧信号 (OM 指引上调) 再加仓更稳。** 市场层面信用利差偏紧 (HY OAS 2.74%)、VIX 21.5, 属中性偏乐观, 不构成系统性逆风也不提供深度折价。
@@ -1122,24 +1126,27 @@ framing 的关键在于其**没有说什么**: 没有进取的订阅用户目标
 - 历史 10-K (FY2021–FY2024) 用于按地区营业收入趋势 (revbars)。
 
 **Investor-relations materials**
-- Q4'25 致股东信 (2026-01-20)、Q1'26 致股东信 (2026-04-16)——营业收入、营业利润率、广告收入、FCF 指引、内容支出。Source: Netflix IR / SEC 8-K Ex 99.1。
+- Q4'25 致股东信 (2026-01-20)、Q1'26 致股东信 (2026-04-16)、**Q2'26 致股东信 (2026-07-16)**——营业收入、营业利润率、广告收入、FCF 指引、回购、内容支出。Source: Netflix IR / SEC 8-K Ex 99.1。
 
 **Market data**
-- NFLX 现价 $80.34、市值 ~$338bn、52 周区间 $75.86–$133.91、相对表现 (1M/6M/YTD/12M) as of 2026-06-12. Source: yfinance。
-- S&P 500 基准相对表现 as of 2026-06-12. Source: yfinance (^GSPC)。
+- NFLX 现价 $73.11、市值 ~$312bn (稀释股数 4,261M)、52 周区间 $70.86–$127.75、相对表现 (1M/6M/YTD/12M) as of 2026-07-28. Source: yfinance。
+- S&P 500 基准相对表现 as of 2026-07-28. Source: yfinance (^GSPC)。
 - 同业倍数 (Disney / WBD / PSKY / Spotify) as of 2026 年中. Source: Macrotrends / Statista / Simply Wall St。
 
 **Third-party research / Industry**
 - Omdia 全球电视与视频市场 (2025-10-16); Statista 全球 SVoD; Market Research Future SVOD; Research and Markets。
 
 **Institute research (local `db/zsxq.db`)**
-- 搜索 6 个别名 (NFLX / Netflix / 奈飞 / 网飞 / streaming / 流媒体); 使用 5 篇机构研报, 全部 *分析师观点：* 标注:
+- 搜索 4 个别名 (NFLX / Netflix / 奈飞 / 网飞); 使用 8 篇机构研报, 全部 *分析师观点：* 标注 (其中 3 篇为 Q2'26 后新增):
+  - [`412414241488828` — Goldman Sachs：Q2'26 Earnings Review (Buy, PT $94), 2026-07-17](http://xs-macbook-air.local:5001/zsxq/pdf/412414241488828/Goldman%20Sachs-Netflix%20Inc.%20%EF%BC%88NFLX.US%EF%BC%89%20Q2%E2%80%9926%20Earnings%20Review%EF%BC%9A%20Management%20Team%20Focused%20on%20Compounded%20Revenue%EF%BC%8C%20Margin%20Trajectory%20%26%20Capital%20Allocation%EF%BC%9B%20Investor%20Debates%20Likely%20to%20Persist-260717.pdf) **(新增)**
+  - [`412414241484888` — Bernstein：2Q26 Same-ish guide, more doubts (OP, PT $95), 2026-07-17](http://xs-macbook-air.local:5001/zsxq/pdf/412414241484888/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%20%EF%BC%88NFLX%EF%BC%89%202Q26%EF%BC%9A%20Same~ish%20guide%EF%BC%8C%20more%20doubts-260717.pdf) **(新增)**
+  - [`584282525585124` — Morgan Stanley：We've Seen This Movie Before (OW, PT $90 from $115), 2026-07-14](http://xs-macbook-air.local:5001/zsxq/pdf/584282525585124/Morgan%20Stanley-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89We%27ve%20Seen%20This%20Movie%20Before%20%E2%80%93%20Reiterate%20OW-260714.pdf) **(新增)**
   - [`584251881854254` — Jefferies：What Gets Netflix Working Again? Reiterate Buy, 2026-06-10](http://xs-macbook-air.local:5001/zsxq/pdf/584251881854254/Jefferies-Netflix%EF%BC%88NFLX.US%EF%BC%89What%20Gets%20Netflix%20Working%20Again%EF%BC%9F~Reiterate%20Buy-260610.pdf)
   - [`212488548484441` — Bernstein：Messy Near-Term Narrative but a Durable Engine, 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484441/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%EF%BC%9A%20Messy%20Near~Term%20Narrative%EF%BC%8C%20but%20a%20Durable%20Engine-260604.pdf)
   - [`585425844811454` — Goldman Sachs：Key Takeaways from Netflix Ad Upfront, 2026-05-17](http://xs-macbook-air.local:5001/zsxq/pdf/585425844811454/Goldman%20Sachs-Netflix%20Inc.%20%EF%BC%88NFLX.US%EF%BC%89%20Key%20Takeaways%20from%20Netflix.pdf)
   - [`184482585254822` — J.P. Morgan：More Meat & Potatoes Than Sizzle, 2026-04-18](http://xs-macbook-air.local:5001/zsxq/pdf/184482585254822/J.P.%20Morgan-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89More%20Meat%20%26%20Potatoes%20Than%20Sizzle-260418.pdf)
   - [`585548825224524` — Morgan Stanley：Spotify: The Golden Road (同业参考), 2026-04-15](http://xs-macbook-air.local:5001/zsxq/pdf/585548825224524/Morgan%20Stanley-Spotify%20Technology%20SA%EF%BC%88SPOT.UN%EF%BC%89The%20Golden%20Road-260415.pdf)
-- PT 预读: `db/stock_price_target.db` (只读) NFLX 共 7 条记录, PT 区间 $110–120, 中位数 $115。
+- PT 预读: `db/stock_price_target.db` (只读) NFLX 共 7 条结构化记录 (截至 Q1 季), PT 区间 $110–120, 中位数 $115; Q2'26 后从新读研报手工提取的目标价为 MS $90 / Bernstein $95 / Goldman $94。
 
 **Macro / cycle inputs (Section 10)**
 - 10Y Treasury (^TNX) 4.54% as of 2026-06-05; HY OAS (FRED BAMLH0A0HYM2) 2.74% as of 2026-06-04; IG OAS 0.74%; VIX 21.5 as of 2026-06-05. Source: indicators.db (FRED + yfinance)。
@@ -1157,12 +1164,17 @@ framing 的关键在于其**没有说什么**: 没有进取的订阅用户目标
 - [Netflix 2025 10-K (申报 2026-01-23)](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000034/nflx-20251231.htm)
 - [Q4'25 致股东信 / 8-K Ex 99.1 (2026-01-20)](https://www.sec.gov/Archives/edgar/data/0001065280/000106528026000033/ex991_q425.htm)
 - [Q1'26 致股东信 / 8-K Ex 99.1 (2026-04-16)](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000137/ex991_q126.htm)
+- [Q2'26 致股东信 / 8-K Ex 99.1 (2026-07-16)](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000211/ex991_q226.htm)
+- [Netflix Q2 2026 10-Q (2026-07-17)](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm)
 - [Netflix DEF 14A 2025](https://www.sec.gov/Archives/edgar/data/0001065280/000119312525084425/d867701ddef14a.htm)
 - [Netflix 8-K——1 拆 10 拆股 (2025-10-30)](https://www.sec.gov/Archives/edgar/data/0001065280/000106528025000407/ex991_q425stocksplit.htm)
 - [Netflix 8-K——董事/高管变更 (2025-06-24)](https://www.sec.gov/Archives/edgar/data/0001065280/000106528025000287/ex991_bodappointment.htm)
 - [Netflix Q3 2025 10-Q (2025-10-22)](https://www.sec.gov/Archives/edgar/data/0001065280/000106528025000406/nflx-20250930.htm)
 
 ### 机构研报 (本地 db/zsxq.db, 标注 *分析师观点：*)
+- [Goldman Sachs — Q2'26 Earnings Review (Buy, PT $94), 2026-07-17](http://xs-macbook-air.local:5001/zsxq/pdf/412414241488828/Goldman%20Sachs-Netflix%20Inc.%20%EF%BC%88NFLX.US%EF%BC%89%20Q2%E2%80%9926%20Earnings%20Review%EF%BC%9A%20Management%20Team%20Focused%20on%20Compounded%20Revenue%EF%BC%8C%20Margin%20Trajectory%20%26%20Capital%20Allocation%EF%BC%9B%20Investor%20Debates%20Likely%20to%20Persist-260717.pdf)
+- [Bernstein — 2Q26: Same-ish guide, more doubts (OP, PT $95), 2026-07-17](http://xs-macbook-air.local:5001/zsxq/pdf/412414241484888/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%20%EF%BC%88NFLX%EF%BC%89%202Q26%EF%BC%9A%20Same~ish%20guide%EF%BC%8C%20more%20doubts-260717.pdf)
+- [Morgan Stanley — We've Seen This Movie Before (OW, PT $90 from $115), 2026-07-14](http://xs-macbook-air.local:5001/zsxq/pdf/584282525585124/Morgan%20Stanley-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89We%27ve%20Seen%20This%20Movie%20Before%20%E2%80%93%20Reiterate%20OW-260714.pdf)
 - [Jefferies — What Gets Netflix Working Again?, 2026-06-10](http://xs-macbook-air.local:5001/zsxq/pdf/584251881854254/Jefferies-Netflix%EF%BC%88NFLX.US%EF%BC%89What%20Gets%20Netflix%20Working%20Again%EF%BC%9F~Reiterate%20Buy-260610.pdf)
 - [Bernstein — Messy Near-Term Narrative but a Durable Engine, 2026-06-04](http://xs-macbook-air.local:5001/zsxq/pdf/212488548484441/Bernstein-Netflix%20Inc%EF%BC%88NFLX.US%EF%BC%89Netflix%EF%BC%9A%20Messy%20Near~Term%20Narrative%EF%BC%8C%20but%20a%20Durable%20Engine-260604.pdf)
 - [Goldman Sachs — Key Takeaways from Netflix Ad Upfront, 2026-05-17](http://xs-macbook-air.local:5001/zsxq/pdf/585425844811454/Goldman%20Sachs-Netflix%20Inc.%20%EF%BC%88NFLX.US%EF%BC%89%20Key%20Takeaways%20from%20Netflix.pdf)
@@ -1191,18 +1203,25 @@ framing 的关键在于其**没有说什么**: 没有进取的订阅用户目标
 
 ---
 
-*本报告以 Netflix 最新 SEC 申报材料 (2026-01-23 申报的 FY2025 10-K、2026-04-16 的 Q1'26 致股东信、2026-04-17 的 Q1'26 10-Q) 为主要来源, 卖方观点来自本地 db/zsxq.db 机构研报并全部标注 *分析师观点：*, 二手新闻来源保持在 12 个月时效窗口内。所有定量主张均通过内联链接指向申报材料或近期来源; 由于 Netflix 自 2025 年起停止披露季度订阅用户数, 本报告不构造任何实时订阅数字。*
+*本报告以 Netflix 最新 SEC 申报材料 (2026-01-23 申报的 FY2025 10-K、**2026-07-16 的 Q2'26 致股东信、2026-07-17 的 Q2'26 10-Q**) 为主要来源, 卖方观点来自本地 db/zsxq.db 机构研报并全部标注 *分析师观点：*, 二手新闻来源保持在 12 个月时效窗口内。所有定量主张均通过内联链接指向申报材料或近期来源; 由于 Netflix 自 2025 年起停止披露季度订阅用户数, 本报告不构造任何实时订阅数字。*
 
 ---
 
 <details>
-<summary>Verification log (Step 10) — 2026-06-14</summary>
+<summary>Verification log (Step 10) — 2026-07-28</summary>
 
-**Step 0 — filings refresh.** 运行 `fetch_financial_report.py` (经 `_run_download('NFLX', ['10-K','10-Q','8-K'])`) 重新拉取全部 EDGAR 申报; 确认 FY2025 10-K (2026-01-23)、Q1'26 8-K 致股东信 (2026-04-16)、Q1'26 10-Q (2026-04-17) 均在本地。所有财务数字直接从本地 HTML 解析 (HTMLParser), 非二手数据源。
+**本次刷新 (2026-07-28) 增量核对 (Q2'26 update).** 相对上一版 (2026-06-14) 的主要更新与核对:
+- **Q2'26 业绩 (2026-07-16 8-K Ex-99.1) 已下载并本地解析** (`financial_reports/NFLX/2026-07-16_..._ex991_q226.htm`), Q2'26 10-Q 亦在本地。以下 Q2 数字均 string-match 致股东信原文: 营业收入 **$12,560M** (+13.4% YoY) ✓、营业利润 **$4,193M** / 营业利润率 **33.4%** ✓、净利润 **$3,401M** ✓、稀释 EPS **$0.80** ✓、FCF **$1,525M** ✓、稀释股数 **4,261M** ✓; Q3'26 指引营业收入 **$12,860M** (+11.7%) / OM **33.2%** / EPS **$0.82** ✓; FY2026 指引收窄 **"$51.0-$51.4B"** ✓、OM 31.5% ✓、广告 **"approximately $3 billion"** (~2x) ✓、FCF **"approximately $12.5B"** ✓、营业利润 **"20%+"** ✓; 回购 **"$25B"** 新授权 + Q2 **"$4.7B ... largest quarter"** + 剩余 **"$27.1B"** ✓; 总债务 **"$14.4B"** / 现金 **"$9.1B"** ✓。
+- **价格更新 (yfinance, as of 2026-07-28)**: NFLX $73.11、12M −37.8% vs S&P +16.4% (相对约 −54pp); 52 周区间 $70.86–$127.75 (取自 MS 2026-07-14 研报, 与 yfinance 一致)。
+- **Q2'26 后卖方目标价下调 (新读 3 篇 zsxq 研报, OCR+extract)**: Morgan Stanley $115→$90 (OW, 报告日 $73.83, file_id 584282525585124) ✓ string-match "Price Target $115.00 → $90.00"; Bernstein $100→$95 (OP, F26E adj P/E 23.6× / F27E 19.2×, adj EPS F26E $3.15 / F27E $3.87, file_id 412414241484888) ✓; Goldman PT $94 / Buy / 报告日 $74.35 / upside 26.4% / FY26E rev $51,347M / FY27E $57,872M (file_id 412414241488828) ✓ string-match。全部 *分析师观点：* 标注、引用 `/zsxq/pdf/<file_id>/<filename>` 直链。
+- **目标价与评级调整**: 目标倍数 30×→25× (反映增长减速至 ~12% 与 Q2 后卖方去评级), FY2027E adj EPS $3.30→$3.60 (向共识靠拢), PT $100→**$90** (+23% vs $73.11); 评级维持 Hold 但转"偏建设性"。GF Score 70→71 (GF Value 7→8, 因估值进一步回落; Momentum 维持 2)。
+- **未重跑图表数据**: 全部 SVG (利润表/资产负债表/现金流 Sankey、donut、revbars、DuPont、GF 雷达、money-flow) 仍基于 FY2025 10-K 审计数, Q2 为季度增量、不改 FY2025 全年图表; GF 雷达源注已更新为 "as of 2026-07-28"。
+
+**Step 0 — filings refresh.** 运行 `fetch_financial_report.py` (经 `_run_download('NFLX', ['10-K','10-Q','8-K'], last=6)`) 重新拉取全部 EDGAR 申报; 确认 FY2025 10-K (2026-01-23)、Q1'26 8-K 致股东信 (2026-04-16)、**Q2'26 8-K 致股东信 (2026-07-16)、Q2'26 10-Q (2026-07-17)** 均在本地 (8 new files downloaded)。所有财务数字直接从本地 HTML 解析, 非二手数据源。
 
 **Step 0.5 — sec-report-summary disposition.** SKIPPED — 本任务为现有报告 REFRESH 而非首发覆盖, 历史 10-K 已下载且关键年度财务 (FY2021–FY2025) 直接从本地 HTML 解析; 未单独跑 sec-report-summary 技能, 因发展趋势 (营业利润率 17.8%→20.6%→26.7%→29.5%、按地区营业收入五年序列) 已直接从多份 10-K 提取并入图表。
 
-**Step 0.7 — zsxq library.** 搜索 6 个别名 (NFLX / Netflix / 奈飞 / 网飞 / streaming / 流媒体); 命中 10+ 篇 NFLX 研报, 使用 5 篇 (Jefferies 06-10、Bernstein 06-04、Goldman 05-17、JPM 04-18、MS-Spotify 04-15), 全部 *分析师观点：* 标注、引用 `/zsxq/pdf/<file_id>/<filename>` 直链。≥2 篇覆盖 NFLX → 构建了卖方观点演变 (按机构时间线 + 机构间分歧表); 机械预读 `db/stock_price_target.db` (只读 `mode=ro`) 得 7 条 PT 记录 (区间 $110–120, 中位数 $115)。zsxq DB 用 `mode=ro&immutable=1` 回退读取 (因 :5001 Flask 可能持锁)。
+**Step 0.7 — zsxq library.** 搜索 4 个别名 (NFLX / Netflix / 奈飞 / 网飞); 命中 30+ 篇 NFLX 研报, 使用 8 篇 (Q2 后新增 Goldman 07-17、Bernstein 07-17、MS 07-14; 另 Jefferies 06-10、Bernstein 06-04、Goldman 05-17、JPM 04-18、MS-Spotify 04-15), 全部 *分析师观点：* 标注、引用 `/zsxq/pdf/<file_id>/<filename>` 直链 (3 篇 Q2 后研报经 ocr_pdf + extract_pdf 读取, 数字 string-match)。≥2 篇覆盖 NFLX → 构建了卖方观点演变 (按机构时间线 + 机构间分歧表, 含 Q2 后集体下调 PT 的关键自我修订); 机械预读 `db/stock_price_target.db` (只读 `mode=ro`) 得 7 条结构化 PT 记录 (区间 $110–120, 中位数 $115)。
 
 **Step 10.1 — URL HTTP checks.** SEC URLs (10-K / Q4'25 / Q1'26 致股东信) 用 SEC 合规 UA (`financial-agent-research lx00617@gmail.com`) 验证均返回 **200** (普通浏览器 UA 返回 403 是 SEC 反爬, 非死链)。padded CIK (`0001065280`) 与 unpadded (`1065280`) 两种形式均 200。延伸观看 YouTube 链接 (Netflix CDN 设计, vid LkLLpYdDINA) 经 oembed 验证为真实视频 (title "Designing Netflix's Content Delivery System", Uptime Institute); 原拟第二条 (vid Pn8mWGNQ4S4) 经 oembed 确认为 **404 死链** (尽管页面返回 200), 已**删除** (404 链接比无链接更糟)。
 
@@ -1219,9 +1238,11 @@ framing 的关键在于其**没有说什么**: 没有进取的订阅用户目标
 - Q1'26 EPS $1.23 / WBD 终止补偿 $2.8B ✓ ("Diluted ... $1.23 ... the $2.8B"); FY2026 FCF 上调至 ~$12.5B ✓
 - 广告收入 2025 >$1.5B (+2.5x) ✓ ("ad revenue grew by more than 2.5x ... to over $1.5 billion"); 2026 ~$3B (2x) ✓
 
-**Step 10.4 — Analyst-view discipline.** 所有评级/目标价/前瞻预测/GF Score/卖方数据均 *分析师观点：* 标注, 无一附 10-K 引用。GF Score 综合 70/100 (FS8 Prof9 Growth7 Value7 Mom2), 标注为 GuruFocus-风格独立计算、非官方数字。订阅数停披露后未构造任何实时订阅数字 (仅引用最后官方值 3.25 亿 @ 2025-Q4)。
+**Step 10.4 — Analyst-view discipline.** 所有评级/目标价/前瞻预测/GF Score/卖方数据均 *分析师观点：* 标注, 无一附 10-K 引用。GF Score 综合 71/100 (FS8 Prof9 Growth7 Value8 Mom2), 标注为 GuruFocus-风格独立计算、非官方数字。订阅数停披露后未构造任何实时订阅数字 (仅引用最后官方值 3.25 亿 @ 2025-Q4)。
 
 **Step 10.5 — charts.** 全套 stdlib-SVG 已生成并 un-fenced 嵌入: 利润表 Sankey、资产负债表 Sankey、现金流 Sankey、按地区营业收入 donut、按业务线 donut、按地区历史 revbars、DuPont ROE 树、GF Score 雷达、money-flow 供应链图 (共 9 张 SVG) + Mermaid (timeline / 产品树 / pie / xychart-beta / quadrant)。NEVER matplotlib。所有 SVG 数字源自已解析并引用的 10-K 财报。无图表省略。
+
+**Chart render-check (10.7) — 2026-07-28.** `lint_report_charts.py` 初次报 20 处几何越界 (svg #8 资产负债表 Sankey 的节点/标签溢出 600px viewBox 上下沿——上一版遗留问题); 修复为将该 SVG 的 viewBox 扩为 `0 -16 1040 666` (背景 rect 同步), **lint 重跑 exit 0 (9 inline SVG 全部在界内 / 5 mermaid)**。:5002 viewer 渲染核验: DOM 检查确认 16 个 <svg>、5 个 mermaid 块、**0 个 Syntax error**; 资产负债表 Sankey 实渲染 1040×666、34 rect / 24 path / 52 text 全部就位; 现价 $73.11 已更新、无残留 $80.34。lint exit 0 + DOM 渲染核验通过。
 
 **Step 10.6 — DB safety.** 所有 DB 访问只读 (`mode=ro` / `mode=ro&immutable=1`); 用 `/opt/anaconda3/bin/python3`; 无任何写操作。stock_price_target.db 仅 SELECT。
 
