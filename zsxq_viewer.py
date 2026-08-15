@@ -2484,11 +2484,26 @@ def open_local(file_id: int):
     path = Path(row["local_path"])
     if not path.exists():
         return jsonify(ok=False, error="File not found on disk"), 404
-    import subprocess
-    result = subprocess.run(["open", str(path)], capture_output=True, text=True)
-    print(f"[open-local] open rc={result.returncode} stderr={result.stderr!r} path={path}")
+    import subprocess, sys
+    # Reveal the file in the local file manager (Finder on macOS) rather than
+    # handing the PDF to `open <path>` — the latter routes to the default PDF
+    # handler, which for many users is Chrome, so the PDF opens as a browser
+    # tab instead of "the local file system". `open -R` selects it in Finder.
+    try:
+        if sys.platform == "darwin":
+            result = subprocess.run(["open", "-R", str(path)],
+                                    capture_output=True, text=True)
+        elif sys.platform.startswith("win"):
+            result = subprocess.run(["explorer", "/select,", str(path)],
+                                    capture_output=True, text=True)
+        else:
+            result = subprocess.run(["xdg-open", str(path.parent)],
+                                    capture_output=True, text=True)
+    except Exception as exc:
+        return jsonify(ok=False, error=str(exc)), 200
+    print(f"[open-local] reveal rc={result.returncode} stderr={result.stderr!r} path={path}")
     if result.returncode != 0:
-        return jsonify(ok=False, error=result.stderr or "open command failed"), 200
+        return jsonify(ok=False, error=result.stderr or "reveal command failed"), 200
     return jsonify(ok=True)
 
 
