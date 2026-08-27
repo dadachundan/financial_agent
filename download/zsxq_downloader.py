@@ -37,7 +37,7 @@ from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     clean_zsxq_text, do_download, extract_bank, fetch_all_files,
     fetch_all_search_results, fetch_all_search_topic_files, sanitize_filename,
-    get_session_via_selenium, init_db, upsert_entry,
+    get_session_via_selenium, init_db, upsert_entry, ZsxqAuthError,
 )
 
 GROUP_ALIASES = {
@@ -45,6 +45,12 @@ GROUP_ALIASES = {
     "2": "28888824254221",
 }
 ALL_GROUP_IDS = list(GROUP_ALIASES.values())
+
+
+def _refresh_session_after_auth_error(chrome_profile: Path, exc: ZsxqAuthError):
+    print(f"\nAuthentication failed: {exc}")
+    print("Cached cookies look stale; retrying once with fresh Chrome-profile cookies...")
+    return get_session_via_selenium(chrome_profile, use_json_cache=False)
 
 
 def _run_group(group_id: str, args, session, conn, out_dir: Path,
@@ -446,12 +452,21 @@ def main() -> None:
     all_results: list[dict] = []
 
     if args.query:
-        results = _run_query(args.query, args, session, conn, out_dir)
+        try:
+            results = _run_query(args.query, args, session, conn, out_dir)
+        except ZsxqAuthError as exc:
+            session = _refresh_session_after_auth_error(chrome_profile, exc)
+            results = _run_query(args.query, args, session, conn, out_dir)
         all_results.extend(results)
     else:
         for group_id in group_ids:
-            results = _run_group(group_id, args, session, conn, out_dir,
-                                 from_date, to_date)
+            try:
+                results = _run_group(group_id, args, session, conn, out_dir,
+                                     from_date, to_date)
+            except ZsxqAuthError as exc:
+                session = _refresh_session_after_auth_error(chrome_profile, exc)
+                results = _run_group(group_id, args, session, conn, out_dir,
+                                     from_date, to_date)
             all_results.extend(results)
 
     conn.close()

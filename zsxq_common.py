@@ -46,13 +46,30 @@ HEADERS = {
 
 # ── Cookie / session ──────────────────────────────────────────────────────────
 
-def get_session_via_selenium(chrome_profile: Path) -> requests.Session:
+class ZsxqAuthError(RuntimeError):
+    """Raised when zsxq rejects the current session cookies."""
+
+
+def _raise_for_auth_or_status(resp: requests.Response, context: str) -> None:
+    if resp.status_code in (401, 403):
+        raise ZsxqAuthError(
+            f"{context} rejected the current zsxq cookies "
+            f"(HTTP {resp.status_code})."
+        )
+    resp.raise_for_status()
+
+
+def get_session_via_selenium(
+    chrome_profile: Path,
+    *,
+    use_json_cache: bool = True,
+) -> requests.Session:
     """Build a requests.Session with zsxq cookies read from a Chrome profile."""
     import sys
 
     # 1) Try local JSON cache first to bypass keychain decryption issues
     cookie_json_path = chrome_profile / "zsxq_cookies.json"
-    if cookie_json_path.exists():
+    if use_json_cache and cookie_json_path.exists():
         import json
         print(f"Loading session cookies from JSON cache: {cookie_json_path}...")
         try:
@@ -151,7 +168,7 @@ def fetch_files_page(
                 raise RuntimeError(f"API timed out after {retries} retries") from exc
             time.sleep(wait)
             continue
-        resp.raise_for_status()
+        _raise_for_auth_or_status(resp, "File listing API")
         data = resp.json()
         if data.get("succeeded"):
             return data["resp_data"].get("files", [])
@@ -252,7 +269,7 @@ def fetch_search_files_page(
                 raise RuntimeError(f"Search API timed out after {retries} retries") from exc
             time.sleep(wait)
             continue
-        resp.raise_for_status()
+        _raise_for_auth_or_status(resp, "File search API")
         data = resp.json()
         if data.get("succeeded"):
             rd = data["resp_data"]
@@ -332,7 +349,7 @@ def fetch_search_topics_page(
                 raise RuntimeError(f"Topics search timed out after {retries} retries") from exc
             time.sleep(wait)
             continue
-        resp.raise_for_status()
+        _raise_for_auth_or_status(resp, "Topic search API")
         data = resp.json()
         if data.get("succeeded"):
             rd = data["resp_data"]
@@ -409,7 +426,7 @@ def get_download_url(session: requests.Session, file_id: int,
     for attempt in range(retries):
         try:
             resp = session.get(url, headers=HEADERS, timeout=30)
-            resp.raise_for_status()
+            _raise_for_auth_or_status(resp, "Download URL API")
             data = resp.json()
             if data.get("succeeded"):
                 return data["resp_data"]["download_url"]
@@ -423,6 +440,8 @@ def get_download_url(session: requests.Session, file_id: int,
             print(f"    ⚠ Download URL API error for file {file_id}: "
                   f"{data.get('info') or data}")
             return None
+        except ZsxqAuthError:
+            raise
         except Exception as exc:
             print(f"    ⚠ Failed to get download URL for file {file_id}: {exc}")
             return None
