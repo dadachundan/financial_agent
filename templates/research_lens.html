@@ -320,6 +320,16 @@
       pointer-events: none;
     }
 
+    .price-source {
+      position: absolute;
+      left: 78px;
+      bottom: 18px;
+      color: rgba(238, 245, 242, .46);
+      font: 700 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      pointer-events: none;
+      z-index: 2;
+    }
+
     .legend-item {
       display: inline-flex;
       align-items: center;
@@ -690,6 +700,7 @@
                 <span class="legend-item"><span class="legend-swatch"></span>Price</span>
                 <span class="legend-item"><span class="legend-swatch target"></span>Target</span>
               </div>
+              <div class="price-source" id="priceSource"></div>
               <div class="selection-box" id="selectionBox"></div>
             </div>
             <div class="axis-label axis-y" id="axisY">Stock price</div>
@@ -729,6 +740,7 @@
 
 <script>
   const reports = {{ reports_json | safe }};
+  const priceHistory = {{ price_history_json | safe }};
   const CHART_PAD = { top: 54, right: 40, bottom: 56, left: 76 };
 
   function parseDate(value) {
@@ -752,6 +764,7 @@
   const zoomButtons = document.querySelectorAll("[data-zoom]");
   const modeButtons = document.querySelectorAll("[data-mode]");
   const selectionBox = document.getElementById("selectionBox");
+  const priceSource = document.getElementById("priceSource");
   let activeId = reports.length ? reports[reports.length - 1].id : null;
   let interactionMode = "pan";
   let dragState = null;
@@ -768,10 +781,11 @@
     return `${prefix}${Math.round(Number(value)).toLocaleString("en-US")}`;
   }
 
-  function chartValue(report, index) {
+  function chartValue(report) {
+    const yfClose = priceCloseForDate(report.date);
+    if (yfClose !== null) return yfClose;
     if (report.price !== null && report.price !== undefined) return Number(report.price);
-    if (report.target !== null && report.target !== undefined) return Number(report.target) * .85;
-    return 100 + index * 8;
+    return null;
   }
 
   function targetValue(report) {
@@ -790,63 +804,27 @@
     return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
   }
 
-  function syntheticSeries() {
-    const base = reports.length ? reports : [{date: "2026-01-01", price: 100}];
-    const anchors = base.map((report, index) => ({
-      date: report.date,
-      time: parseDate(report.date),
-      price: chartValue(report, index),
-    }));
-    anchors.sort((a, b) => a.time - b.time);
-    if (anchors.length === 1) {
-      const day = 24 * 60 * 60 * 1000;
-      anchors.unshift({ date: anchors[0].date, time: anchors[0].time - day * 20, price: anchors[0].price * .96 });
-      anchors.push({ date: anchors[1].date, time: anchors[1].time + day * 20, price: anchors[1].price * 1.04 });
-    }
-    const start = anchors[0].time;
-    const end = anchors[anchors.length - 1].time;
-    const points = [];
-    const steps = Math.max(48, anchors.length * 8);
-    let previousClose = anchors[0].price;
-    for (let i = 0; i <= steps; i += 1) {
-      const t = start + ((end - start) * i / steps);
-      let left = anchors[0];
-      let right = anchors[anchors.length - 1];
-      for (let j = 0; j < anchors.length - 1; j += 1) {
-        if (t >= anchors[j].time && t <= anchors[j + 1].time) {
-          left = anchors[j];
-          right = anchors[j + 1];
-          break;
-        }
-      }
-      const pct = right.time === left.time ? 0 : (t - left.time) / (right.time - left.time);
-      const spread = Math.max(2, (maxAnchorPrice(anchors) - minAnchorPrice(anchors)) * .018);
-      const trendClose = left.price + (right.price - left.price) * pct;
-      const jitter = Math.sin(i * 1.7) * spread + Math.cos(i * .73) * spread * .55;
-      const close = Math.max(0.01, trendClose + jitter);
-      const open = i === 0 ? close * .996 : previousClose;
-      const wick = Math.max(1, Math.abs(close - open) * .45 + spread * (1 + Math.abs(Math.sin(i * 1.13))));
-      const high = Math.max(open, close) + wick;
-      const low = Math.max(0.01, Math.min(open, close) - wick * .8);
-      points.push({ time: t, open, high, low, close, price: close });
-      previousClose = close;
-    }
-    return points;
-  }
-
-  function minAnchorPrice(anchors) {
-    return Math.min(...anchors.map(point => point.price));
-  }
-
-  function maxAnchorPrice(anchors) {
-    return Math.max(...anchors.map(point => point.price));
-  }
-
-  const series = syntheticSeries();
-  const minTime = Math.min(...series.map(p => p.time));
-  const maxTime = Math.max(...series.map(p => p.time));
+  const priceBars = (priceHistory.bars || []).map(bar => ({
+    ...bar,
+    time: parseDate(bar.date),
+    price: Number(bar.close),
+  })).filter(bar => Number.isFinite(bar.time) && Number.isFinite(bar.open) && Number.isFinite(bar.high) && Number.isFinite(bar.low) && Number.isFinite(bar.close));
+  const reportTimes = reports.map(report => parseDate(report.date)).filter(Number.isFinite);
+  const minTime = priceBars.length ? Math.min(...priceBars.map(bar => bar.time)) : Math.min(...reportTimes);
+  const maxTime = priceBars.length ? Math.max(...priceBars.map(bar => bar.time)) : Math.max(...reportTimes);
   let viewStart = minTime;
   let viewEnd = maxTime;
+
+  function priceCloseForDate(date) {
+    if (!priceBars.length) return null;
+    const time = parseDate(date);
+    let best = null;
+    for (const bar of priceBars) {
+      if (bar.time <= time) best = bar;
+      else break;
+    }
+    return best ? Number(best.close) : null;
+  }
 
   function visibleReports() {
     return reports.filter(report => {
@@ -856,22 +834,22 @@
   }
 
   function visibleSeries() {
-    return series.filter(point => point.time >= viewStart && point.time <= viewEnd);
+    return priceBars.filter(point => point.time >= viewStart && point.time <= viewEnd);
   }
 
   function visibleDomain() {
     const visible = visibleReports();
     const values = [
       ...visibleSeries().flatMap(point => [point.high, point.low, point.close]),
-      ...visible.map(report => chartValue(report, reports.indexOf(report))),
+      ...visible.map(report => chartValue(report)),
       ...visible.map(report => targetValue(report)),
     ].filter(Number.isFinite);
     const fallback = [
-      ...series.flatMap(point => [point.high, point.low, point.close]),
-      ...reports.map((report, index) => chartValue(report, index)),
+      ...priceBars.flatMap(point => [point.high, point.low, point.close]),
+      ...reports.map(report => chartValue(report)),
       ...reports.map(report => targetValue(report)),
     ].filter(Number.isFinite);
-    const plotted = values.length ? values : fallback;
+    const plotted = values.length ? values : fallback.length ? fallback : [0, 1];
     const spread = Math.max(...plotted) - Math.min(...plotted);
     const pad = Math.max(1, spread * .14);
     return {
@@ -1119,7 +1097,9 @@
       const time = parseDate(report.date);
       const target = targetValue(report);
       if (time < viewStart || time > viewEnd || !Number.isFinite(target)) return;
-      const pricePos = positionOf(report.date, chartValue(report, index), width, height, pad, domain);
+      const price = chartValue(report);
+      if (!Number.isFinite(price)) return;
+      const pricePos = positionOf(report.date, price, width, height, pad, domain);
       const targetPos = positionOf(report.date, target, width, height, pad, domain);
       const active = report.id === activeId;
       ctx.beginPath();
@@ -1134,10 +1114,13 @@
 
     positioned.clear();
     targetPositioned.clear();
-    reports.forEach((report, index) => {
+    reports.forEach(report => {
       const time = parseDate(report.date);
       if (time < viewStart || time > viewEnd) return;
-      positioned.set(report.id, positionOf(report.date, chartValue(report, index), width, height, pad, domain));
+      const price = chartValue(report);
+      if (Number.isFinite(price)) {
+        positioned.set(report.id, positionOf(report.date, price, width, height, pad, domain));
+      }
       const target = targetValue(report);
       if (Number.isFinite(target)) {
         targetPositioned.set(report.id, positionOf(report.date, target, width, height, pad, domain));
@@ -1148,6 +1131,11 @@
       document.getElementById("axisEnd").textContent = displayTime(viewEnd);
       const axisCurrency = currencyLabel(reports.find(report => currencyLabel(report)) || reports[0]);
       document.getElementById("axisY").textContent = axisCurrency ? `Stock price (${axisCurrency})` : "Report timeline";
+    }
+    if (priceSource) {
+      priceSource.textContent = priceBars.length
+        ? `Yahoo Finance via yfinance · ${priceHistory.ticker} · actual OHLC`
+        : `Actual yfinance price unavailable${priceHistory.error ? ` · ${priceHistory.error}` : ""}`;
     }
     layoutMarkers();
   }
@@ -1233,7 +1221,8 @@
     const report = reports.find(item => item.id === id);
     if (!report) return;
     const ccy = currencyLabel(report);
-    document.getElementById("activePrice").textContent = money(report.price, ccy);
+    const activePrice = chartValue(report);
+    document.getElementById("activePrice").textContent = money(activePrice, ccy);
     document.getElementById("activeReturn").textContent = `${report.bank} · ${report.date}`;
     document.getElementById("cardBank").textContent = report.bank;
     document.getElementById("cardDate").textContent = report.date;
@@ -1244,7 +1233,7 @@
     document.getElementById("cardSource").textContent = report.source;
     document.getElementById("cardRating").textContent = report.rating;
     document.getElementById("cardTarget").textContent = money(report.target, report.targetCurrency || ccy);
-    document.getElementById("cardMetricPrice").textContent = money(report.price, ccy);
+    document.getElementById("cardMetricPrice").textContent = money(activePrice, ccy);
     document.getElementById("cardLink").href = report.pdfUrl;
     card.classList.remove("is-idle");
     document.querySelectorAll(".report-marker, .report-chip").forEach(el => {

@@ -16,6 +16,7 @@ import math as _math
 import sqlite3
 import md_comment_widget as mcw
 import nav_widget2 as nw2
+import sector_map
 from pathlib import Path
 
 import os
@@ -1077,6 +1078,85 @@ def _research_lens_pdf_url(file_id: int, name: str | None) -> str:
     return url
 
 
+def _research_lens_yfinance_ticker(ticker: str) -> str:
+    raw = (ticker or "").strip().upper()
+    mapped = sector_map.to_yfinance(raw)
+    if mapped:
+        return mapped
+    compact = raw.replace("NASDAQ:", "").replace("NYSE:", "").replace("AMEX:", "")
+    compact = compact.replace("SSE:", "").replace("SZSE:", "").replace("HKEX:", "")
+    compact = compact.strip()
+    if compact.endswith(".SH"):
+        return compact[:-3] + ".SS"
+    if "." in compact:
+        return compact
+    if compact.isdigit() and len(compact) == 6:
+        return f"{compact}.SS" if compact.startswith("6") else f"{compact}.SZ"
+    if compact.isdigit() and len(compact) <= 5:
+        return f"{compact.zfill(4)}.HK"
+    return compact.replace(".", "-")
+
+
+def _research_lens_price_history(ticker: str, reports: list[dict]) -> dict:
+    """Fetch real daily OHLC bars from yfinance for the report timeline window."""
+    if not reports:
+        return {"ticker": _research_lens_yfinance_ticker(ticker), "bars": [], "error": "no reports"}
+
+    yf_ticker = _research_lens_yfinance_ticker(ticker)
+    try:
+        import yfinance as yf
+    except ImportError:
+        return {"ticker": yf_ticker, "bars": [], "error": "yfinance is not installed"}
+
+    report_dates = []
+    for report in reports:
+        try:
+            report_dates.append(datetime.date.fromisoformat(report["date"]))
+        except (TypeError, ValueError):
+            continue
+    if not report_dates:
+        return {"ticker": yf_ticker, "bars": [], "error": "no valid report dates"}
+
+    start = min(report_dates) - datetime.timedelta(days=14)
+    end = max(report_dates) + datetime.timedelta(days=14)
+    try:
+        hist = yf.Ticker(yf_ticker).history(
+            start=start.isoformat(),
+            end=end.isoformat(),
+            interval="1d",
+            auto_adjust=False,
+        )
+    except Exception as exc:
+        return {"ticker": yf_ticker, "bars": [], "error": str(exc)}
+
+    if hist is None or hist.empty:
+        return {"ticker": yf_ticker, "bars": [], "error": "yfinance returned no price history"}
+
+    bars = []
+    for idx, row in hist.iterrows():
+        try:
+            bar_date = idx.date().isoformat()
+            open_ = float(row["Open"])
+            high = float(row["High"])
+            low = float(row["Low"])
+            close = float(row["Close"])
+        except Exception:
+            continue
+        if not all(_math.isfinite(v) for v in (open_, high, low, close)):
+            continue
+        volume = row.get("Volume")
+        bars.append({
+            "date": bar_date,
+            "open": open_,
+            "high": high,
+            "low": low,
+            "close": close,
+            "volume": int(volume) if volume is not None and _math.isfinite(float(volume)) else None,
+        })
+
+    return {"ticker": yf_ticker, "bars": bars, "error": "" if bars else "no usable yfinance bars"}
+
+
 def _build_where(f: str, ticker: str, tag: str,
                  date_from: str, date_to: str,
                  min_rating: int = 0, q: str = "",
@@ -1586,6 +1666,7 @@ def _research_lens_reports(ticker: str = "688256") -> tuple[list[dict], str]:
 def research_lens():
     ticker = request.args.get("ticker", "688256").strip().upper() or "688256"
     reports, company_name = _research_lens_reports(ticker)
+    price_history = _research_lens_price_history(ticker, reports)
     return render_template(
         "research_lens.html",
         nav_html=nw2.NAV_HTML,
@@ -1594,6 +1675,7 @@ def research_lens():
         company_name=company_name,
         reports=reports,
         reports_json=_json.dumps(reports, ensure_ascii=False),
+        price_history_json=_json.dumps(price_history, ensure_ascii=False),
     )
 
 
