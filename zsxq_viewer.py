@@ -19,11 +19,12 @@ import nav_widget2 as nw2
 from pathlib import Path
 
 import os
+import re
 import subprocess
 import sys
 import json as _json
 
-from flask import Flask, Blueprint, Response, abort, jsonify, render_template_string, request, send_file
+from flask import Flask, Blueprint, Response, abort, jsonify, render_template, render_template_string, request, send_file
 import ticker_names as _tn
 
 from db_paths import db_path
@@ -1020,6 +1021,62 @@ def _get_all_banks(conn: sqlite3.Connection) -> list[str]:
     return [r["bank"] for r in rows]
 
 
+def _ticker_search_terms(ticker: str) -> list[str]:
+    raw = (ticker or "").strip().upper()
+    if not raw:
+        return ["688256", "688256.SS"]
+    compact = raw.replace("SSE:", "").replace("SZSE:", "").replace("HKEX:", "")
+    compact = compact.replace("NASDAQ:", "").replace("NYSE:", "")
+    compact = compact.replace("SSE", "").replace("SZSE", "").replace("HKEX", "")
+    compact = compact.strip()
+    core = compact.split(".")[0]
+    terms = {raw, compact, core}
+    if core.isdigit() and len(core) == 6:
+        terms.update({f"{core}.SS", f"{core}.SH", f"{core}.SZ", f"SSE{core}", f"SZSE{core}"})
+    if core.isdigit() and len(core) == 4:
+        terms.update({f"{core}.HK", f"HKEX{core}", core.zfill(4), f"{core.zfill(4)}.HK"})
+    return sorted(t for t in terms if t)
+
+
+def _first_number(text: str, patterns: list[str]) -> float | None:
+    for pattern in patterns:
+        m = re.search(pattern, text, re.I)
+        if not m:
+            continue
+        raw = m.group(1).replace(",", "").replace("，", "")
+        try:
+            return float(raw)
+        except ValueError:
+            continue
+    return None
+
+
+def _rating_from_text(text: str) -> str:
+    patterns = [
+        r"\b(Buy|Neutral|Sell|Overweight|Equal-weight|Underweight|Outperform|Market Perform|Underperform)\b",
+        r"(买入|增持|超配|跑赢大盘|中性|持有|与大市同步|减持|跑输大盘)",
+    ]
+    for pattern in patterns:
+        m = re.search(pattern, text, re.I)
+        if m:
+            return m.group(1)
+    return "Research"
+
+
+def _short_summary(text: str, limit: int = 180) -> str:
+    cleaned = re.sub(r"\s+", " ", (text or "")).strip()
+    if len(cleaned) <= limit:
+        return cleaned
+    return cleaned[:limit].rsplit(" ", 1)[0] + "..."
+
+
+def _research_lens_pdf_url(file_id: int, name: str | None) -> str:
+    url = f"/zsxq/pdf/{file_id}"
+    if name:
+        url = f"{url}/{name}"
+    return url
+
+
 def _build_where(f: str, ticker: str, tag: str,
                  date_from: str, date_to: str,
                  min_rating: int = 0, q: str = "",
@@ -1272,6 +1329,274 @@ def _page_range(cur: int, tot: int) -> list:
     if tot not in pages:
         pages.append(tot)
     return pages
+
+
+_RESEARCH_LENS_POINTS = {
+    415515552122288: {
+        "marker_date": "2026-04-29",
+        "price": 1416.63,
+        "target": 2000.00,
+        "rating": "Outperform",
+        "stance": "bullish",
+        "label": "1Q26 beat",
+        "change": "Target introduced/maintained at RMB 2,000 after a historic earnings beat.",
+        "source": "1Q26 revenue grew 159.6% YoY to RMB 2.885bn; net profit reached RMB 1.013bn and operating cash flow turned positive.",
+    },
+    812458524221182: {
+        "marker_date": "2026-05-04",
+        "price": 1139.55,
+        "target": 2406.00,
+        "rating": "Buy",
+        "stance": "bullish",
+        "label": "GS raises TP",
+        "change": "Goldman Sachs lifted its target to RMB 2,406 on stronger orders and margin expansion.",
+        "source": "EBITDA margin rose to 42%; contract liabilities jumped to RMB 396mn, supporting delivery visibility.",
+    },
+    585421288142184: {
+        "marker_date": "2026-05-04",
+        "price": 1139.55,
+        "target": 2000.00,
+        "rating": "Overweight",
+        "stance": "bullish",
+        "label": "MS supply visibility",
+        "change": "Morgan Stanley raised its target from RMB 1,588 to RMB 2,000.",
+        "source": "MLU580 had completed design flow at SMIC and was expected to ramp in 3Q26; MLU690 was expected in 4Q26.",
+    },
+    814512481282142: {
+        "marker_date": "2026-07-30",
+        "price": 1146.90,
+        "target": 1408.00,
+        "rating": "Overweight",
+        "stance": "cautious",
+        "label": "Delivery slippage",
+        "change": "Morgan Stanley cut its target from RMB 1,528 to RMB 1,408 while keeping Overweight.",
+        "source": "MLU580/590 delivery delays reduced 2026-2028 EPS estimates by 6%/5%/8%; demand was still described as intact.",
+    },
+    412412181125418: {
+        "marker_date": "2026-08-08",
+        "price": 1199.93,
+        "target": 1340.00,
+        "rating": "Outperform",
+        "stance": "cautious",
+        "label": "2Q26 print",
+        "change": "Bernstein adjusted its target from RMB 2,000 to RMB 1,340 after the 49% share-capital increase.",
+        "source": "2Q26 revenue growth slowed to 7.8% QoQ, but gross margin hit 56.1% and net margin reached 41.7%.",
+    },
+    584288158144824: {
+        "marker_date": "2026-08-09",
+        "price": 1199.93,
+        "target": 1408.00,
+        "rating": "Overweight",
+        "stance": "cautious",
+        "label": "Risk/reward update",
+        "change": "Morgan Stanley kept its RMB 1,408 target and Overweight rating.",
+        "source": "2026 EPS was cut 3%, while 2027/2028 EPS rose 3%/1% on pricing power and operating leverage.",
+    },
+    412884488851828: {
+        "marker_date": "2026-08-24",
+        "price": 1035.00,
+        "target": 1841.00,
+        "rating": "Buy",
+        "stance": "bullish",
+        "label": "GS re-accelerates",
+        "change": "Goldman Sachs raised its split-adjusted target from RMB 1,614.77 to RMB 1,841.",
+        "source": "Inventory and wafer build supported a stronger 3Q26 setup; 2027-2030 revenue forecasts were sharply raised.",
+    },
+}
+
+
+def _research_lens_reports(ticker: str = "688256") -> tuple[list[dict], str]:
+    """Return timeline records for the interactive research-lens chart."""
+    ticker = (ticker or "688256").strip().upper()
+    terms = _ticker_search_terms(ticker)
+    core = terms[0].split(".")[0] if terms else ticker
+    reports: list[dict] = []
+    seen: set[int] = set()
+    company_name = ticker
+
+    pt_db = db_path("stock_price_target.db")
+    if pt_db.exists():
+        placeholders = ",".join("?" for _ in terms)
+        like_terms = [f"%{term}%" for term in terms]
+        conn = sqlite3.connect(pt_db)
+        conn.row_factory = sqlite3.Row
+        try:
+            rows = conn.execute(
+                f"""
+                SELECT company_ticker, company_name, research_institute, rating,
+                       price_target, target_currency, catalyst, report_file_id,
+                       report_pdf_filename, report_url, report_date,
+                       report_date_price, price_currency, upside_pct
+                FROM price_targets
+                WHERE upper(company_ticker) IN ({placeholders})
+                   OR {" OR ".join(["upper(company_ticker) LIKE ?" for _ in like_terms])}
+                ORDER BY report_date DESC, report_file_id DESC
+                LIMIT 18
+                """,
+                (*terms, *like_terms),
+            ).fetchall()
+        finally:
+            conn.close()
+
+        for row in rows:
+            fid = int(row["report_file_id"])
+            if fid in seen:
+                continue
+            seen.add(fid)
+            company_name = row["company_name"] or company_name
+            target = row["price_target"]
+            price = row["report_date_price"]
+            upside = row["upside_pct"]
+            rating = row["rating"] or "Research"
+            stance = "bullish"
+            if rating.lower() in {"sell", "underweight", "underperform", "减持", "跑输大盘"}:
+                stance = "bearish"
+            elif target is not None and price is not None and target < price:
+                stance = "cautious"
+            elif rating.lower() in {"neutral", "equal-weight", "market perform", "hold", "中性", "持有", "与大市同步"}:
+                stance = "cautious"
+            change = row["catalyst"] or "Structured price-target call from the local zsxq extraction database."
+            if target is not None:
+                ccy = row["target_currency"] or row["price_currency"] or ""
+                change = f"{row['research_institute']} {rating}; target {ccy} {target:,.0f}. {change}"
+            if upside is not None:
+                change = f"{change} Implied upside {upside:.1f}%."
+            reports.append({
+                "id": fid,
+                "date": row["report_date"],
+                "posted": row["report_date"],
+                "bank": row["research_institute"] or "Research",
+                "title": row["report_pdf_filename"] or row["report_url"] or f"Research report {fid}",
+                "price": float(price) if price is not None else None,
+                "priceCurrency": row["price_currency"] or row["target_currency"] or "",
+                "target": float(target) if target is not None else None,
+                "targetCurrency": row["target_currency"] or row["price_currency"] or "",
+                "rating": rating,
+                "stance": stance,
+                "label": rating,
+                "change": change,
+                "source": row["catalyst"] or "Price target extracted from local zsxq report metadata.",
+                "pdfUrl": row["report_url"] or _research_lens_pdf_url(fid, row["report_pdf_filename"]),
+            })
+
+    zsxq_conditions: list[str] = []
+    params: list = []
+    curated_ids = tuple(_RESEARCH_LENS_POINTS.keys()) if core == "688256" else ()
+    if not reports:
+        for term in terms:
+            like = f"%{term}%"
+            zsxq_conditions.append(
+                "(upper(name) LIKE ? OR upper(topic_title) LIKE ? OR upper(summary) LIKE ? OR upper(tickers) LIKE ?)"
+            )
+            params.extend([like, like, like, like])
+    elif curated_ids:
+        zsxq_conditions.append(f"file_id IN ({','.join('?' for _ in curated_ids)})")
+        params.extend(curated_ids)
+
+    if zsxq_conditions:
+        conn = get_conn()
+        try:
+            rows = conn.execute(
+                f"""
+                SELECT file_id, create_time, bank, name, topic_title, summary, local_path
+                FROM pdf_files
+                WHERE local_path IS NOT NULL
+                  AND local_path != ''
+                  AND ({" OR ".join(zsxq_conditions)})
+                ORDER BY coalesce(create_time, indexed_at), file_id
+                LIMIT 28
+                """,
+                params,
+            ).fetchall()
+        finally:
+            conn.close()
+
+        for row in rows:
+            fid = int(row["file_id"])
+            title = row["topic_title"] or row["name"] or f"Research report {fid}"
+            summary = row["summary"] or title
+            if fid in _RESEARCH_LENS_POINTS and core == "688256":
+                meta = _RESEARCH_LENS_POINTS[fid]
+                source = meta["source"]
+                change = meta["change"]
+                rating = meta["rating"]
+                target = meta["target"]
+                price = meta["price"]
+                stance = meta["stance"]
+                label = meta["label"]
+                date = meta["marker_date"]
+            else:
+                source = _short_summary(summary, 210)
+                target = _first_number(summary, [
+                    r"目标价[^\d]{0,12}([\d,，.]+)",
+                    r"TP[^\d]{0,12}([\d,，.]+)",
+                    r"target price[^\d]{0,16}([\d,，.]+)",
+                ])
+                price = _first_number(summary, [
+                    r"收盘价[^\d]{0,12}([\d,，.]+)",
+                    r"当前股价[^\d]{0,12}([\d,，.]+)",
+                    r"current price[^\d]{0,16}([\d,，.]+)",
+                ])
+                rating = _rating_from_text(summary)
+                stance = "bullish" if rating.lower() in {"buy", "overweight", "outperform", "买入", "增持", "超配", "跑赢大盘"} else "cautious"
+                label = rating if rating != "Research" else "Report"
+                change = source
+                date = (row["create_time"] or "")[:10] or "2026-01-01"
+
+            if fid in seen:
+                for report in reports:
+                    if report["id"] == fid:
+                        report["title"] = title
+                        report["pdfUrl"] = _research_lens_pdf_url(fid, row["name"])
+                        if fid in _RESEARCH_LENS_POINTS and core == "688256":
+                            report.update({
+                                "date": date,
+                                "price": price,
+                                "target": target,
+                                "rating": rating,
+                                "stance": stance,
+                                "label": label,
+                                "change": change,
+                                "source": source,
+                            })
+                        break
+                continue
+            seen.add(fid)
+            reports.append({
+                "id": fid,
+                "date": date,
+                "posted": (row["create_time"] or "")[:10],
+                "bank": row["bank"] or "Research",
+                "title": title,
+                "price": float(price) if price is not None else None,
+                "priceCurrency": "",
+                "target": float(target) if target is not None else None,
+                "targetCurrency": "",
+                "rating": rating,
+                "stance": stance,
+                "label": label,
+                "change": change,
+                "source": source,
+                "pdfUrl": _research_lens_pdf_url(fid, row["name"]),
+            })
+
+    reports.sort(key=lambda r: (r["date"], r["id"]))
+    return reports[:18], company_name
+
+
+@zsxq_bp.route("/research-lens")
+def research_lens():
+    ticker = request.args.get("ticker", "688256").strip().upper() or "688256"
+    reports, company_name = _research_lens_reports(ticker)
+    return render_template(
+        "research_lens.html",
+        nav_html=nw2.NAV_HTML,
+        url_patch_js=nw2.URL_PATCH_JS,
+        ticker=ticker,
+        company_name=company_name,
+        reports=reports,
+        reports_json=_json.dumps(reports, ensure_ascii=False),
+    )
 
 
 @zsxq_bp.route("/")

@@ -6,6 +6,7 @@ NAV_HTML = """\
   <ul class="navbar-nav ms-3">
     <li class="nav-item"><a class="nav-link py-1" href="/zep">&#128376; Knowledge Graph</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/zsxq">&#128218; ZSXQ</a></li>
+    <li class="nav-item"><a class="nav-link py-1" href="/zsxq/research-lens">&#128269; Research Lens</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/manual-report">&#128206; Manual Report</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/claude-reports">&#128209; Claude Reports</a></li>
     <li class="nav-item"><a class="nav-link py-1" href="/comments">&#128172; Comments</a></li>
@@ -16,9 +17,18 @@ NAV_HTML = """\
   </ul>
 </nav>
 <script>
-document.querySelectorAll('#_mainNav .nav-link').forEach(function(a){
-  if(window.location.pathname.startsWith(a.getAttribute('href'))) a.classList.add('active');
-});
+(function(){
+  var path = window.location.pathname;
+  var links = Array.from(document.querySelectorAll('#_mainNav .nav-link'));
+  var best = null;
+  links.forEach(function(a){
+    var href = a.getAttribute('href');
+    if(path === href || (href !== '/' && path.startsWith(href + '/'))) {
+      if(!best || href.length > best.getAttribute('href').length) best = a;
+    }
+  });
+  if(best) best.classList.add('active');
+})();
 </script>"""
 
 # JS snippet injected right after <body> in every template.

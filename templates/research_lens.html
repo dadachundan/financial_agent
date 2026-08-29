@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Lens · {{ ticker }}</title>
+  <link href="/static/vendor/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07100d;
+      --panel: rgba(12, 22, 19, .82);
+      --panel-strong: rgba(16, 29, 25, .96);
+      --line: rgba(255, 255, 255, .12);
+      --muted: rgba(238, 245, 242, .62);
+      --text: #f2f7f5;
+      --green: #2ff0b5;
+      --green-dim: rgba(47, 240, 181, .16);
+      --amber: #f8c55b;
+      --red: #ff6f7d;
+      --blue: #87b7ff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255,255,255,.032) 1px, transparent 1px),
+        radial-gradient(circle at 82% 18%, rgba(47, 240, 181, .13), transparent 32rem),
+        var(--bg);
+      background-size: 72px 72px, 72px 72px, auto, auto;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      overflow-x: hidden;
+    }
+
+    #_mainNav {
+      margin: 0 !important;
+      background: rgba(3, 11, 9, .92) !important;
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    #_mainNav .navbar-nav {
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+
+    #_mainNav .navbar-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .lens-shell {
+      width: min(1480px, calc(100vw - 40px));
+      margin: 0 auto;
+      padding: 52px 0 36px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(250px, 330px) minmax(0, 1fr);
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--green);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .kicker span:first-child {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 28px;
+      color: #03110c;
+      background: var(--green);
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 24px 0 16px;
+      font-size: clamp(26px, 2.2vw, 34px);
+      line-height: 1.12;
+      font-weight: 420;
+      letter-spacing: 0;
+    }
+
+    h1 strong {
+      color: var(--green);
+      font-weight: 400;
+    }
+
+    .lede {
+      max-width: 660px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .ticker-form {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      margin: 26px 0 0;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .04);
+    }
+
+    .ticker-form label {
+      grid-column: 1 / -1;
+      color: rgba(238, 245, 242, .54);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .ticker-form input {
+      min-width: 0;
+      height: 38px;
+      padding: 0 12px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 6px;
+      color: var(--text);
+      background: rgba(2, 10, 8, .82);
+      font: 700 14px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      outline: 0;
+    }
+
+    .ticker-form input:focus {
+      border-color: rgba(47, 240, 181, .7);
+      box-shadow: 0 0 0 3px rgba(47, 240, 181, .12);
+    }
+
+    .ticker-form button {
+      height: 38px;
+      padding: 0 14px;
+      border: 0;
+      border-radius: 6px;
+      color: #03110c;
+      background: var(--green);
+      font-weight: 800;
+    }
+
+    .feature-list {
+      margin-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    .feature-row {
+      display: grid;
+      grid-template-columns: 32px minmax(0, 1fr);
+      gap: 14px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .feature-row b {
+      color: var(--green);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 14px;
+    }
+
+    .feature-row h2 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      font-weight: 650;
+    }
+
+    .feature-row p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .lens-panel {
+      position: relative;
+      min-height: 620px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
+      box-shadow: inset 0 0 0 1px rgba(47, 240, 181, .02), 0 26px 90px rgba(0, 0, 0, .28);
+      overflow: hidden;
+    }
+
+    .panel-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 38px 38px 0;
+      align-items: flex-start;
+    }
+
+    .ticker-block {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .ticker-mark {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      color: #03110c;
+      background: var(--text);
+      font-size: 29px;
+      font-weight: 850;
+      border-radius: 7px;
+    }
+
+    .ticker-name {
+      font-size: 31px;
+      font-weight: 780;
+      line-height: 1;
+    }
+
+    .ticker-sub {
+      margin-top: 5px;
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      letter-spacing: .08em;
+    }
+
+    .price-readout {
+      text-align: right;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .price-readout strong {
+      display: block;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+
+    .price-readout span {
+      color: var(--green);
+      font-size: 13px;
+      letter-spacing: .08em;
+    }
+
+    .visual-grid {
+      position: absolute;
+      inset: 126px 32px 32px 32px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 24px;
+      align-items: stretch;
+      min-height: 0;
+    }
+
+    .chart-stage {
+      position: relative;
+      min-height: 0;
+      border-right: 1px solid rgba(255, 255, 255, .08);
+      padding-right: 10px;
+    }
+
+    .chart-wrap {
+      position: absolute;
+      inset: 0 0 0 0;
+    }
+
+    #researchChart {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .axis-label {
+      position: absolute;
+      color: rgba(238, 245, 242, .48);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      pointer-events: none;
+    }
+
+    .axis-y { top: 18px; left: 20px; }
+    .axis-x-left { bottom: 16px; left: 74px; }
+    .axis-x-right { bottom: 16px; right: 28px; }
+
+    .marker-layer {
+      position: absolute;
+      inset: 0;
+    }
+
+    .report-marker {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border: 2px solid rgba(3, 17, 12, .95);
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 5px rgba(47, 240, 181, .16), 0 0 22px rgba(47, 240, 181, .44);
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+    }
+
+    .report-marker[data-stance="cautious"] {
+      background: var(--amber);
+      box-shadow: 0 0 0 5px rgba(248, 197, 91, .15), 0 0 22px rgba(248, 197, 91, .34);
+    }
+
+    .report-marker:hover,
+    .report-marker:focus,
+    .report-marker.active {
+      transform: translate(-50%, -50%) scale(1.32);
+      outline: 0;
+      box-shadow: 0 0 0 8px rgba(47, 240, 181, .2), 0 0 34px rgba(47, 240, 181, .7);
+      z-index: 4;
+    }
+
+    .tooltip-card {
+      align-self: center;
+      width: 100%;
+      max-height: 100%;
+      overflow: auto;
+      padding: 22px;
+      border: 1px solid rgba(47, 240, 181, .5);
+      border-radius: 7px;
+      background: rgba(9, 24, 20, .96);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .45), 0 0 26px rgba(47, 240, 181, .08);
+      transition: opacity .15s ease, transform .15s ease;
+      z-index: 3;
+    }
+
+    .tooltip-card.is-idle {
+      opacity: .9;
+    }
+
+    .tooltip-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      color: rgba(238, 245, 242, .52);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .tooltip-card h3 {
+      margin: 0 0 12px;
+      font-size: 16px;
+      line-height: 1.35;
+      font-weight: 680;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 7px 11px;
+      border-radius: 5px;
+      color: var(--green);
+      background: var(--green-dim);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .tooltip-card p {
+      margin: 0 0 12px;
+      color: rgba(238, 245, 242, .72);
+      line-height: 1.48;
+      font-size: 14px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .metric span {
+      display: block;
+      margin-bottom: 6px;
+      color: rgba(238, 245, 242, .48);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .metric strong {
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .report-link {
+      display: inline-flex;
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+
+    .report-link:hover { text-decoration: underline; }
+
+    .timeline-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .report-chip {
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 7px;
+      padding: 12px;
+      background: rgba(255, 255, 255, .04);
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+      min-height: 106px;
+      transition: border-color .16s ease, background .16s ease, transform .16s ease;
+    }
+
+    .report-chip:hover,
+    .report-chip:focus,
+    .report-chip.active {
+      outline: 0;
+      border-color: rgba(47, 240, 181, .58);
+      background: rgba(47, 240, 181, .08);
+      transform: translateY(-2px);
+    }
+
+    .report-chip time {
+      display: block;
+      color: var(--green);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+      margin-bottom: 10px;
+    }
+
+    .report-chip b {
+      display: block;
+      font-size: 13px;
+      line-height: 1.35;
+      font-weight: 650;
+    }
+
+    .report-chip span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .empty-state {
+      padding: 48px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--muted);
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .lens-panel { min-height: 720px; }
+      .visual-grid {
+        inset: 124px 24px 24px 24px;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(360px, 1fr) auto;
+        gap: 18px;
+      }
+      .chart-stage {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+        padding-right: 0;
+        padding-bottom: 16px;
+      }
+      .tooltip-card {
+        align-self: stretch;
+        max-height: none;
+        overflow: visible;
+      }
+      .timeline-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 700px) {
+      .lens-shell { width: min(100% - 24px, 1480px); padding-top: 32px; }
+      h1 { font-size: 34px; }
+      .lede { font-size: 15px; }
+      .feature-list { display: none; }
+      .feature-row { padding: 18px 0; }
+      .panel-top { padding: 24px 20px 0; flex-direction: column; }
+      .price-readout { text-align: left; }
+      .lens-panel { min-height: 760px; }
+      .visual-grid {
+        inset: 186px 14px 18px 14px;
+        grid-template-rows: 310px auto;
+      }
+      .chart-stage { padding-bottom: 12px; }
+      .metrics { grid-template-columns: 1fr; }
+      .timeline-strip { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<script>
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  window.scrollTo(0, 0);
+</script>
+{{ nav_html | safe }}
+{{ url_patch_js | safe }}
+
+<main class="lens-shell">
+  <section class="hero-grid" aria-label="Interactive research lens for {{ ticker }}">
+    <div>
+      <div class="kicker"><span>01</span><span>Research Lens</span></div>
+      <h1>Research reports mapped to the <strong>price path</strong>.</h1>
+      <p class="lede">
+        Enter a ticker to pull matching zsxq reports and price-target calls. Hover a marker to
+        inspect the research data behind that point.
+      </p>
+      <form class="ticker-form" action="/zsxq/research-lens" method="get">
+        <label for="tickerInput">Ticker</label>
+        <input id="tickerInput" name="ticker" value="{{ ticker }}" placeholder="NVDA, 0700.HK, 688256">
+        <button type="submit">Load</button>
+      </form>
+
+      <div class="feature-list">
+        <div class="feature-row">
+          <b>01</b>
+          <div>
+            <h2>Institution timeline</h2>
+            <p>Broker notes become dated markers instead of static rows in a table.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <b>02</b>
+          <div>
+            <h2>Hoverable evidence</h2>
+            <p>Each marker highlights the price, target, rating, and thesis change.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <b>03</b>
+          <div>
+            <h2>Direct report access</h2>
+            <p>Open the original zsxq PDF from the active evidence card.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      {% if reports %}
+      <div class="lens-panel">
+        <div class="panel-top">
+          <div class="ticker-block">
+            <div class="ticker-mark">{{ (company_name or ticker)[:1] }}</div>
+            <div>
+              <div class="ticker-name">{{ company_name }}</div>
+              <div class="ticker-sub">{{ ticker }} · ZSXQ research data</div>
+            </div>
+          </div>
+          <div class="price-readout" aria-live="polite">
+            <strong id="activePrice">--</strong>
+            <span id="activeReturn">latest marked price</span>
+          </div>
+        </div>
+
+        <div class="visual-grid">
+          <div class="chart-stage">
+            <div class="chart-wrap">
+              <canvas id="researchChart"></canvas>
+              <div class="marker-layer" id="markerLayer" aria-label="Research report markers"></div>
+            </div>
+            <div class="axis-label axis-y" id="axisY">Stock price</div>
+            <div class="axis-label axis-x-left" id="axisStart">Start</div>
+            <div class="axis-label axis-x-right" id="axisEnd">End</div>
+          </div>
+
+          <article class="tooltip-card is-idle" id="reportCard" aria-live="polite">
+            <div class="tooltip-meta">
+              <span id="cardBank">Goldman Sachs</span>
+              <span id="cardDate">Aug 24, 2026</span>
+            </div>
+            <h3 id="cardTitle">China AI demand and localization trend to drive growth ahead</h3>
+            <div class="pill" id="cardPill">Bullish view</div>
+            <p id="cardChange">Target price raised as demand and localization strengthened.</p>
+            <p id="cardSource">Inventory and wafer build supported a stronger next-quarter setup.</p>
+            <div class="metrics">
+              <div class="metric"><span>Rating</span><strong id="cardRating">Buy</strong></div>
+              <div class="metric"><span>Target</span><strong id="cardTarget">RMB 1,841</strong></div>
+              <div class="metric"><span>Price</span><strong id="cardMetricPrice">RMB 1,035</strong></div>
+            </div>
+            <a class="report-link" id="cardLink" href="#" target="_blank" rel="noreferrer">Open zsxq report</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="timeline-strip" id="timelineStrip" aria-label="Research reports"></div>
+      {% else %}
+      <div class="empty-state">
+        No research-lens reports were found for {{ ticker }}. Try another ticker form such as
+        <strong>NVDA</strong>, <strong>0700.HK</strong>, <strong>300750.SZ</strong>, or <strong>688256</strong>.
+      </div>
+      {% endif %}
+    </div>
+  </section>
+</main>
+
+<script>
+  const reports = {{ reports_json | safe }};
+
+  function parseDate(value) {
+    const [year, month, day] = value.split("-").map(Number);
+    return new Date(year, month - 1, day).getTime();
+  }
+
+  function shortTitle(title) {
+    return title
+      .replace(/^#外资研报\s*/, "")
+      .replace(/^.*?——/, "")
+      .replace(/（688256\.(SS|CH)）/g, "")
+      .slice(0, 92);
+  }
+
+  const canvas = document.getElementById("researchChart");
+  const markerLayer = document.getElementById("markerLayer");
+  const timelineStrip = document.getElementById("timelineStrip");
+  const card = document.getElementById("reportCard");
+  let activeId = reports.length ? reports[reports.length - 1].id : null;
+  const positioned = new Map();
+
+  function currencyLabel(report) {
+    return report.priceCurrency || report.targetCurrency || "";
+  }
+
+  function money(value, currency = "") {
+    if (value === null || value === undefined || Number.isNaN(Number(value))) return "n/a";
+    const prefix = currency && currency !== "CNY" ? `${currency} ` : "RMB ";
+    return `${prefix}${Math.round(Number(value)).toLocaleString("en-US")}`;
+  }
+
+  function chartValue(report, index) {
+    if (report.price !== null && report.price !== undefined) return Number(report.price);
+    if (report.target !== null && report.target !== undefined) return Number(report.target) * .85;
+    return 100 + index * 8;
+  }
+
+  function displayDate(value) {
+    const date = new Date(parseDate(value));
+    return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  }
+
+  function syntheticSeries() {
+    const base = reports.length ? reports : [{date: "2026-01-01", price: 100}];
+    const anchors = base.map((report, index) => ({
+      date: report.date,
+      time: parseDate(report.date),
+      price: chartValue(report, index),
+    }));
+    anchors.sort((a, b) => a.time - b.time);
+    if (anchors.length === 1) {
+      const day = 24 * 60 * 60 * 1000;
+      anchors.unshift({ date: anchors[0].date, time: anchors[0].time - day * 20, price: anchors[0].price * .96 });
+      anchors.push({ date: anchors[1].date, time: anchors[1].time + day * 20, price: anchors[1].price * 1.04 });
+    }
+    const start = anchors[0].time;
+    const end = anchors[anchors.length - 1].time;
+    const points = [];
+    const steps = Math.max(36, anchors.length * 14);
+    for (let i = 0; i <= steps; i += 1) {
+      const t = start + ((end - start) * i / steps);
+      let left = anchors[0];
+      let right = anchors[anchors.length - 1];
+      for (let j = 0; j < anchors.length - 1; j += 1) {
+        if (t >= anchors[j].time && t <= anchors[j + 1].time) {
+          left = anchors[j];
+          right = anchors[j + 1];
+          break;
+        }
+      }
+      const pct = right.time === left.time ? 0 : (t - left.time) / (right.time - left.time);
+      const amplitude = Math.max(2, (maxAnchorPrice(anchors) - minAnchorPrice(anchors)) * .035);
+      const wave = Math.sin(i * .58) * amplitude + Math.cos(i * .21) * amplitude * .55;
+      points.push({ time: t, price: left.price + (right.price - left.price) * pct + wave });
+    }
+    return points;
+  }
+
+  function minAnchorPrice(anchors) {
+    return Math.min(...anchors.map(point => point.price));
+  }
+
+  function maxAnchorPrice(anchors) {
+    return Math.max(...anchors.map(point => point.price));
+  }
+
+  const series = syntheticSeries();
+  const minTime = Math.min(...series.map(p => p.time));
+  const maxTime = Math.max(...series.map(p => p.time));
+  const plottedPrices = [...series.map(p => p.price), ...reports.map((r, i) => chartValue(r, i))].filter(Number.isFinite);
+  const priceSpread = Math.max(...plottedPrices) - Math.min(...plottedPrices);
+  const pricePad = Math.max(1, priceSpread * .16);
+  const minPrice = Math.min(...plottedPrices) - pricePad;
+  const maxPrice = Math.max(...plottedPrices) + pricePad;
+
+  function positionOf(date, price, width, height, pad) {
+    const x = pad.left + ((parseDate(date) - minTime) / (maxTime - minTime)) * (width - pad.left - pad.right);
+    const y = pad.top + (1 - ((price - minPrice) / (maxPrice - minPrice))) * (height - pad.top - pad.bottom);
+    return { x, y };
+  }
+
+  function drawChart() {
+    if (!canvas) return;
+    const rect = canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.max(1, Math.floor(rect.width * dpr));
+    canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+    const ctx = canvas.getContext("2d");
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const width = rect.width;
+    const height = rect.height;
+    const pad = { top: 54, right: 40, bottom: 56, left: 76 };
+    ctx.clearRect(0, 0, width, height);
+
+    ctx.strokeStyle = "rgba(255,255,255,.075)";
+    ctx.lineWidth = 1;
+    ctx.font = "12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
+    ctx.fillStyle = "rgba(238,245,242,.45)";
+    const tickStep = (maxPrice - minPrice) / 3;
+    const ticks = [0, 1, 2, 3].map(i => minPrice + tickStep * i);
+    ticks.forEach(tick => {
+      const y = pad.top + (1 - ((tick - minPrice) / (maxPrice - minPrice))) * (height - pad.top - pad.bottom);
+      ctx.beginPath();
+      ctx.setLineDash([4, 6]);
+      ctx.moveTo(pad.left, y);
+      ctx.lineTo(width - pad.right, y);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillText(String(Math.round(tick)), pad.left - 48, y + 4);
+    });
+
+    const gradient = ctx.createLinearGradient(0, pad.top, 0, height - pad.bottom);
+    gradient.addColorStop(0, "rgba(47, 240, 181, .38)");
+    gradient.addColorStop(1, "rgba(47, 240, 181, 0)");
+
+    ctx.beginPath();
+    series.forEach((point, index) => {
+      const x = pad.left + ((point.time - minTime) / (maxTime - minTime)) * (width - pad.left - pad.right);
+      const y = pad.top + (1 - ((point.price - minPrice) / (maxPrice - minPrice))) * (height - pad.top - pad.bottom);
+      if (index === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    });
+    ctx.lineTo(width - pad.right, height - pad.bottom);
+    ctx.lineTo(pad.left, height - pad.bottom);
+    ctx.closePath();
+    ctx.fillStyle = gradient;
+    ctx.fill();
+
+    ctx.beginPath();
+    series.forEach((point, index) => {
+      const x = pad.left + ((point.time - minTime) / (maxTime - minTime)) * (width - pad.left - pad.right);
+      const y = pad.top + (1 - ((point.price - minPrice) / (maxPrice - minPrice))) * (height - pad.top - pad.bottom);
+      if (index === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    });
+    ctx.strokeStyle = "#2ff0b5";
+    ctx.lineWidth = 3;
+    ctx.shadowColor = "rgba(47, 240, 181, .45)";
+    ctx.shadowBlur = 14;
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+
+    positioned.clear();
+    reports.forEach((report, index) => {
+      const pos = positionOf(report.date, chartValue(report, index), width, height, pad);
+      positioned.set(report.id, pos);
+    });
+    if (reports.length) {
+      document.getElementById("axisStart").textContent = displayDate(reports[0].date);
+      document.getElementById("axisEnd").textContent = displayDate(reports[reports.length - 1].date);
+      const axisCurrency = currencyLabel(reports.find(report => currencyLabel(report)) || reports[0]);
+      document.getElementById("axisY").textContent = axisCurrency ? `Stock price (${axisCurrency})` : "Report timeline";
+    }
+    layoutMarkers();
+  }
+
+  function layoutMarkers() {
+    if (!markerLayer) return;
+    const rect = canvas.getBoundingClientRect();
+    markerLayer.innerHTML = "";
+    reports.forEach(report => {
+      const pos = positioned.get(report.id) || { x: rect.width / 2, y: rect.height / 2 };
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = `report-marker${report.id === activeId ? " active" : ""}`;
+      button.dataset.id = report.id;
+      button.dataset.stance = report.stance;
+      button.style.left = `${pos.x}px`;
+      button.style.top = `${pos.y}px`;
+      button.setAttribute("aria-label", `${report.bank} ${report.date} ${report.label}`);
+      button.addEventListener("mouseenter", () => setActive(report.id));
+      button.addEventListener("focus", () => setActive(report.id));
+      button.addEventListener("click", () => setActive(report.id));
+      markerLayer.appendChild(button);
+    });
+  }
+
+  function renderChips() {
+    if (!timelineStrip) return;
+    timelineStrip.innerHTML = "";
+    reports.forEach(report => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = `report-chip${report.id === activeId ? " active" : ""}`;
+      button.dataset.id = report.id;
+      button.innerHTML = `<time>${report.date}</time><b>${report.bank}</b><span>${report.label}</span>`;
+      button.addEventListener("mouseenter", () => setActive(report.id));
+      button.addEventListener("focus", () => setActive(report.id));
+      button.addEventListener("click", () => setActive(report.id));
+      timelineStrip.appendChild(button);
+    });
+  }
+
+  function setActive(id) {
+    activeId = id;
+    const report = reports.find(item => item.id === id);
+    if (!report) return;
+    const ccy = currencyLabel(report);
+    document.getElementById("activePrice").textContent = money(report.price, ccy);
+    document.getElementById("activeReturn").textContent = `${report.bank} · ${report.date}`;
+    document.getElementById("cardBank").textContent = report.bank;
+    document.getElementById("cardDate").textContent = report.date;
+    document.getElementById("cardTitle").textContent = shortTitle(report.title);
+    document.getElementById("cardPill").textContent = report.stance === "bullish" ? "Bullish view" : report.stance === "bearish" ? "Bearish view" : "Execution watch";
+    document.getElementById("cardPill").style.color = report.stance === "bullish" ? "var(--green)" : report.stance === "bearish" ? "var(--red)" : "var(--amber)";
+    document.getElementById("cardChange").textContent = report.change;
+    document.getElementById("cardSource").textContent = report.source;
+    document.getElementById("cardRating").textContent = report.rating;
+    document.getElementById("cardTarget").textContent = money(report.target, report.targetCurrency || ccy);
+    document.getElementById("cardMetricPrice").textContent = money(report.price, ccy);
+    document.getElementById("cardLink").href = report.pdfUrl;
+    card.classList.remove("is-idle");
+    document.querySelectorAll(".report-marker, .report-chip").forEach(el => {
+      el.classList.toggle("active", Number(el.dataset.id) === id);
+    });
+  }
+
+  if (reports.length) {
+    renderChips();
+    drawChart();
+    setActive(activeId);
+    window.addEventListener("resize", drawChart);
+  }
+</script>
+</body>
+</html>
