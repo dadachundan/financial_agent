@@ -55,23 +55,32 @@
     .lens-shell {
       width: min(1480px, calc(100vw - 40px));
       margin: 0 auto;
-      padding: 52px 0 36px;
+      padding: 28px 0 36px;
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(250px, 330px) minmax(0, 1fr);
-      gap: 34px;
-      align-items: stretch;
+      display: block;
+    }
+
+    .lens-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .title-block {
+      min-width: 0;
     }
 
     .kicker {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       color: var(--green);
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 13px;
+      font-size: 12px;
       letter-spacing: .16em;
       text-transform: uppercase;
     }
@@ -88,10 +97,10 @@
     }
 
     h1 {
-      margin: 24px 0 16px;
-      font-size: clamp(26px, 2.2vw, 34px);
-      line-height: 1.12;
-      font-weight: 420;
+      margin: 8px 0 0;
+      font-size: clamp(20px, 2vw, 28px);
+      line-height: 1.15;
+      font-weight: 650;
       letter-spacing: 0;
     }
 
@@ -100,18 +109,12 @@
       font-weight: 400;
     }
 
-    .lede {
-      max-width: 660px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
     .ticker-form {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
       gap: 8px;
-      margin: 26px 0 0;
+      width: min(430px, 44vw);
+      margin: 0;
       padding: 12px;
       border: 1px solid rgba(255, 255, 255, .12);
       border-radius: 8px;
@@ -154,41 +157,9 @@
       font-weight: 800;
     }
 
-    .feature-list {
-      margin-top: 34px;
-      border-top: 1px solid var(--line);
-    }
-
-    .feature-row {
-      display: grid;
-      grid-template-columns: 32px minmax(0, 1fr);
-      gap: 14px;
-      padding: 18px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .feature-row b {
-      color: var(--green);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 14px;
-    }
-
-    .feature-row h2 {
-      margin: 0 0 8px;
-      font-size: 17px;
-      font-weight: 650;
-    }
-
-    .feature-row p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
     .lens-panel {
       position: relative;
-      min-height: 620px;
+      min-height: 680px;
       border: 1px solid rgba(255, 255, 255, .14);
       border-radius: 8px;
       background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
@@ -625,7 +596,6 @@
     }
 
     @media (max-width: 1100px) {
-      .hero-grid { grid-template-columns: 1fr; }
       .lens-panel { min-height: 720px; }
       .visual-grid {
         inset: 124px 24px 24px 24px;
@@ -649,10 +619,9 @@
 
     @media (max-width: 700px) {
       .lens-shell { width: min(100% - 24px, 1480px); padding-top: 32px; }
-      h1 { font-size: 34px; }
-      .lede { font-size: 15px; }
-      .feature-list { display: none; }
-      .feature-row { padding: 18px 0; }
+      .lens-header { align-items: stretch; flex-direction: column; }
+      h1 { font-size: 24px; }
+      .ticker-form { width: 100%; }
       .panel-top { padding: 24px 20px 0; flex-direction: column; }
       .price-readout { text-align: left; }
       .lens-panel { min-height: 760px; }
@@ -676,42 +645,16 @@
 
 <main class="lens-shell">
   <section class="hero-grid" aria-label="Interactive research lens for {{ ticker }}">
-    <div>
+    <div class="lens-header">
+      <div class="title-block">
       <div class="kicker"><span>01</span><span>Research Lens</span></div>
       <h1>Research reports mapped to the <strong>price path</strong>.</h1>
-      <p class="lede">
-        Enter a ticker to pull matching zsxq reports and price-target calls. Hover a marker to
-        inspect the research data behind that point.
-      </p>
+      </div>
       <form class="ticker-form" action="/zsxq/research-lens" method="get">
         <label for="tickerInput">Ticker</label>
         <input id="tickerInput" name="ticker" value="{{ ticker }}" placeholder="NVDA, 0700.HK, 688256">
         <button type="submit">Load</button>
       </form>
-
-      <div class="feature-list">
-        <div class="feature-row">
-          <b>01</b>
-          <div>
-            <h2>Institution timeline</h2>
-            <p>Broker notes become dated markers instead of static rows in a table.</p>
-          </div>
-        </div>
-        <div class="feature-row">
-          <b>02</b>
-          <div>
-            <h2>Hoverable evidence</h2>
-            <p>Each marker highlights the price, target, rating, and thesis change.</p>
-          </div>
-        </div>
-        <div class="feature-row">
-          <b>03</b>
-          <div>
-            <h2>Direct report access</h2>
-            <p>Open the original zsxq PDF from the active evidence card.</p>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div>
