@@ -273,6 +273,17 @@
     .chart-wrap {
       position: absolute;
       inset: 0 0 0 0;
+      cursor: grab;
+      touch-action: none;
+      user-select: none;
+    }
+
+    .chart-wrap.is-panning {
+      cursor: grabbing;
+    }
+
+    .chart-wrap.is-selecting {
+      cursor: crosshair;
     }
 
     #researchChart {
@@ -304,7 +315,7 @@
       border-radius: 7px;
       background: rgba(3, 11, 9, .68);
       backdrop-filter: blur(10px);
-      z-index: 5;
+      z-index: 8;
     }
 
     .chart-tool {
@@ -318,7 +329,8 @@
     }
 
     .chart-tool:hover,
-    .chart-tool:focus {
+    .chart-tool:focus,
+    .chart-tool.active {
       outline: 0;
       color: #03110c;
       border-color: rgba(47, 240, 181, .8);
@@ -359,6 +371,7 @@
     .marker-layer {
       position: absolute;
       inset: 0;
+      pointer-events: none;
     }
 
     .report-marker {
@@ -371,6 +384,7 @@
       box-shadow: 0 0 0 5px rgba(47, 240, 181, .16), 0 0 22px rgba(47, 240, 181, .44);
       transform: translate(-50%, -50%);
       cursor: pointer;
+      pointer-events: auto;
       transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
     }
 
@@ -397,12 +411,25 @@
       position: absolute;
       width: 14px;
       height: 14px;
+      padding: 0;
       border: 2px solid var(--blue);
       border-radius: 3px;
       background: rgba(7, 16, 13, .88);
+      appearance: none;
       box-shadow: 0 0 16px rgba(135, 183, 255, .4);
       transform: translate(-50%, -50%) rotate(45deg);
-      pointer-events: none;
+      pointer-events: auto;
+      cursor: pointer;
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    }
+
+    .target-marker:hover,
+    .target-marker:focus,
+    .target-marker.active {
+      outline: 0;
+      border-color: #c4d8ff;
+      transform: translate(-50%, -50%) rotate(45deg) scale(1.26);
+      box-shadow: 0 0 0 5px rgba(135, 183, 255, .13), 0 0 26px rgba(135, 183, 255, .55);
     }
 
     .target-label {
@@ -416,6 +443,33 @@
       transform: translate(8px, -50%);
       pointer-events: none;
       white-space: nowrap;
+    }
+
+    .pair-index {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      min-width: 18px;
+      height: 18px;
+      padding: 0 5px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 999px;
+      color: rgba(238, 245, 242, .9);
+      background: rgba(3, 11, 9, .86);
+      font: 800 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 6;
+    }
+
+    .selection-box {
+      position: absolute;
+      border: 1px solid rgba(47, 240, 181, .92);
+      background: rgba(47, 240, 181, .12);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08), 0 0 24px rgba(47, 240, 181, .16);
+      pointer-events: none;
+      display: none;
+      z-index: 7;
     }
 
     .tooltip-card {
@@ -682,6 +736,8 @@
             <div class="chart-wrap">
               <canvas id="researchChart"></canvas>
               <div class="chart-toolbar" aria-label="Chart zoom controls">
+                <button class="chart-tool active" type="button" data-mode="pan" title="Drag to pan">Pan</button>
+                <button class="chart-tool" type="button" data-mode="select" title="Drag a range to zoom">Box</button>
                 <button class="chart-tool" type="button" data-zoom="in" title="Zoom in">+</button>
                 <button class="chart-tool" type="button" data-zoom="out" title="Zoom out">−</button>
                 <button class="chart-tool" type="button" data-zoom="reset" title="Reset zoom">All</button>
@@ -691,6 +747,7 @@
                 <span class="legend-item"><span class="legend-swatch"></span>Price</span>
                 <span class="legend-item"><span class="legend-swatch target"></span>Target</span>
               </div>
+              <div class="selection-box" id="selectionBox"></div>
             </div>
             <div class="axis-label axis-y" id="axisY">Stock price</div>
             <div class="axis-label axis-x-left" id="axisStart">Start</div>
@@ -729,6 +786,7 @@
 
 <script>
   const reports = {{ reports_json | safe }};
+  const CHART_PAD = { top: 54, right: 40, bottom: 56, left: 76 };
 
   function parseDate(value) {
     const [year, month, day] = value.split("-").map(Number);
@@ -744,11 +802,16 @@
   }
 
   const canvas = document.getElementById("researchChart");
+  const chartWrap = document.querySelector(".chart-wrap");
   const markerLayer = document.getElementById("markerLayer");
   const timelineStrip = document.getElementById("timelineStrip");
   const card = document.getElementById("reportCard");
   const zoomButtons = document.querySelectorAll("[data-zoom]");
+  const modeButtons = document.querySelectorAll("[data-mode]");
+  const selectionBox = document.getElementById("selectionBox");
   let activeId = reports.length ? reports[reports.length - 1].id : null;
+  let interactionMode = "pan";
+  let dragState = null;
   const positioned = new Map();
   const targetPositioned = new Map();
 
@@ -849,7 +912,7 @@
     const visible = visibleReports();
     const values = [
       ...visibleSeries().map(point => point.price),
-      ...visible.map((report, index) => chartValue(report, index)),
+      ...visible.map(report => chartValue(report, reports.indexOf(report))),
       ...visible.map(report => targetValue(report)),
     ].filter(Number.isFinite);
     const fallback = [
@@ -885,6 +948,23 @@
       .sort((a, b) => a.time - b.time);
   }
 
+  function clampView(start, end) {
+    const fullSpan = maxTime - minTime;
+    let span = Math.min(fullSpan, Math.max(fullSpan * .08, end - start));
+    let nextStart = start;
+    let nextEnd = start + span;
+    if (nextStart < minTime) {
+      nextStart = minTime;
+      nextEnd = minTime + span;
+    }
+    if (nextEnd > maxTime) {
+      nextEnd = maxTime;
+      nextStart = maxTime - span;
+    }
+    viewStart = nextStart;
+    viewEnd = nextEnd;
+  }
+
   function zoomChart(direction, centerRatio = .5) {
     const span = viewEnd - viewStart;
     const fullSpan = maxTime - minTime;
@@ -898,17 +978,97 @@
     const factor = direction === "in" ? .72 : 1.38;
     let nextSpan = Math.min(fullSpan, Math.max(fullSpan * .08, span * factor));
     const center = viewStart + span * centerRatio;
-    viewStart = center - nextSpan * centerRatio;
-    viewEnd = viewStart + nextSpan;
-    if (viewStart < minTime) {
-      viewStart = minTime;
-      viewEnd = minTime + nextSpan;
-    }
-    if (viewEnd > maxTime) {
-      viewEnd = maxTime;
-      viewStart = maxTime - nextSpan;
-    }
+    clampView(center - nextSpan * centerRatio, center + nextSpan * (1 - centerRatio));
     drawChart();
+  }
+
+  function setInteractionMode(mode) {
+    interactionMode = mode;
+    chartWrap.classList.toggle("is-selecting", mode === "select");
+    modeButtons.forEach(button => {
+      button.classList.toggle("active", button.dataset.mode === mode);
+    });
+  }
+
+  function plotWidth() {
+    const rect = canvas.getBoundingClientRect();
+    return Math.max(1, rect.width - CHART_PAD.left - CHART_PAD.right);
+  }
+
+  function clientXToTime(clientX) {
+    const rect = canvas.getBoundingClientRect();
+    const x = Math.min(rect.width - CHART_PAD.right, Math.max(CHART_PAD.left, clientX - rect.left));
+    return viewStart + ((x - CHART_PAD.left) / plotWidth()) * (viewEnd - viewStart);
+  }
+
+  function selectionRectFrom(startX, currentX) {
+    const rect = chartWrap.getBoundingClientRect();
+    const left = Math.max(CHART_PAD.left, Math.min(startX, currentX) - rect.left);
+    const right = Math.min(rect.width - CHART_PAD.right, Math.max(startX, currentX) - rect.left);
+    return { left, width: Math.max(0, right - left), top: CHART_PAD.top, height: rect.height - CHART_PAD.top - CHART_PAD.bottom };
+  }
+
+  function updateSelectionBox(startX, currentX) {
+    const box = selectionRectFrom(startX, currentX);
+    selectionBox.style.display = box.width > 2 ? "block" : "none";
+    selectionBox.style.left = `${box.left}px`;
+    selectionBox.style.top = `${box.top}px`;
+    selectionBox.style.width = `${box.width}px`;
+    selectionBox.style.height = `${box.height}px`;
+  }
+
+  function clearSelectionBox() {
+    selectionBox.style.display = "none";
+    selectionBox.style.width = "0";
+  }
+
+  function beginChartDrag(event) {
+    if (event.target.closest(".chart-toolbar, .report-marker, .target-marker, a, button")) return;
+    event.preventDefault();
+    chartWrap.setPointerCapture(event.pointerId);
+    dragState = {
+      mode: interactionMode,
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      lastX: event.clientX,
+      startViewStart: viewStart,
+      startViewEnd: viewEnd,
+    };
+    chartWrap.classList.toggle("is-panning", interactionMode === "pan");
+    if (interactionMode === "select") updateSelectionBox(event.clientX, event.clientX);
+  }
+
+  function moveChartDrag(event) {
+    if (!dragState || event.pointerId !== dragState.pointerId) return;
+    event.preventDefault();
+    if (dragState.mode === "pan") {
+      const dx = event.clientX - dragState.startX;
+      const span = dragState.startViewEnd - dragState.startViewStart;
+      const shift = -(dx / plotWidth()) * span;
+      clampView(dragState.startViewStart + shift, dragState.startViewEnd + shift);
+      drawChart();
+    } else {
+      updateSelectionBox(dragState.startX, event.clientX);
+    }
+    dragState.lastX = event.clientX;
+  }
+
+  function endChartDrag(event) {
+    if (!dragState || event.pointerId !== dragState.pointerId) return;
+    if (dragState.mode === "select") {
+      const distance = Math.abs(event.clientX - dragState.startX);
+      if (distance > 28) {
+        const start = clientXToTime(dragState.startX);
+        const end = clientXToTime(event.clientX);
+        clampView(Math.min(start, end), Math.max(start, end));
+        drawChart();
+      }
+      clearSelectionBox();
+    }
+    chartWrap.classList.remove("is-panning");
+    chartWrap.releasePointerCapture(event.pointerId);
+    dragState = null;
   }
 
   function drawChart() {
@@ -921,7 +1081,7 @@
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     const width = rect.width;
     const height = rect.height;
-    const pad = { top: 54, right: 40, bottom: 56, left: 76 };
+    const pad = CHART_PAD;
     const domain = visibleDomain();
     const visibleLine = visibleSeries();
     ctx.clearRect(0, 0, width, height);
@@ -947,30 +1107,32 @@
     gradient.addColorStop(0, "rgba(47, 240, 181, .38)");
     gradient.addColorStop(1, "rgba(47, 240, 181, 0)");
 
-    ctx.beginPath();
-    visibleLine.forEach((point, index) => {
-      const { x, y } = positionOfTimeValue(point.time, point.price, width, height, pad, domain);
-      if (index === 0) ctx.moveTo(x, y);
-      else ctx.lineTo(x, y);
-    });
-    ctx.lineTo(width - pad.right, height - pad.bottom);
-    ctx.lineTo(pad.left, height - pad.bottom);
-    ctx.closePath();
-    ctx.fillStyle = gradient;
-    ctx.fill();
+    if (visibleLine.length) {
+      ctx.beginPath();
+      visibleLine.forEach((point, index) => {
+        const { x, y } = positionOfTimeValue(point.time, point.price, width, height, pad, domain);
+        if (index === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.lineTo(width - pad.right, height - pad.bottom);
+      ctx.lineTo(pad.left, height - pad.bottom);
+      ctx.closePath();
+      ctx.fillStyle = gradient;
+      ctx.fill();
 
-    ctx.beginPath();
-    visibleLine.forEach((point, index) => {
-      const { x, y } = positionOfTimeValue(point.time, point.price, width, height, pad, domain);
-      if (index === 0) ctx.moveTo(x, y);
-      else ctx.lineTo(x, y);
-    });
-    ctx.strokeStyle = "#2ff0b5";
-    ctx.lineWidth = 3;
-    ctx.shadowColor = "rgba(47, 240, 181, .45)";
-    ctx.shadowBlur = 14;
-    ctx.stroke();
-    ctx.shadowBlur = 0;
+      ctx.beginPath();
+      visibleLine.forEach((point, index) => {
+        const { x, y } = positionOfTimeValue(point.time, point.price, width, height, pad, domain);
+        if (index === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.strokeStyle = "#2ff0b5";
+      ctx.lineWidth = 3;
+      ctx.shadowColor = "rgba(47, 240, 181, .45)";
+      ctx.shadowBlur = 14;
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+    }
 
     const targets = targetAnchors().filter(point => point.time >= viewStart && point.time <= viewEnd);
     if (targets.length) {
@@ -989,6 +1151,23 @@
       ctx.setLineDash([]);
       ctx.shadowBlur = 0;
     }
+
+    reports.forEach((report, index) => {
+      const time = parseDate(report.date);
+      const target = targetValue(report);
+      if (time < viewStart || time > viewEnd || !Number.isFinite(target)) return;
+      const pricePos = positionOf(report.date, chartValue(report, index), width, height, pad, domain);
+      const targetPos = positionOf(report.date, target, width, height, pad, domain);
+      const active = report.id === activeId;
+      ctx.beginPath();
+      ctx.setLineDash(active ? [3, 4] : [2, 8]);
+      ctx.moveTo(pricePos.x, pricePos.y);
+      ctx.lineTo(targetPos.x, targetPos.y);
+      ctx.strokeStyle = active ? "rgba(196, 216, 255, .86)" : "rgba(135, 183, 255, .22)";
+      ctx.lineWidth = active ? 2 : 1;
+      ctx.stroke();
+      ctx.setLineDash([]);
+    });
 
     positioned.clear();
     targetPositioned.clear();
@@ -1017,6 +1196,7 @@
     reports.forEach(report => {
       const pos = positioned.get(report.id);
       if (!pos) return;
+      const reportNumber = reports.findIndex(item => item.id === report.id) + 1;
       const button = document.createElement("button");
       button.type = "button";
       button.className = `report-marker${report.id === activeId ? " active" : ""}`;
@@ -1032,10 +1212,17 @@
 
       const targetPos = targetPositioned.get(report.id);
       if (targetPos) {
-        const target = document.createElement("span");
+        const target = document.createElement("button");
+        target.type = "button";
         target.className = "target-marker";
+        if (report.id === activeId) target.classList.add("active");
+        target.dataset.id = report.id;
         target.style.left = `${targetPos.x}px`;
         target.style.top = `${targetPos.y}px`;
+        target.setAttribute("aria-label", `${report.bank} ${report.date} target ${money(report.target, report.targetCurrency || currencyLabel(report))}`);
+        target.addEventListener("mouseenter", () => setActive(report.id));
+        target.addEventListener("focus", () => setActive(report.id));
+        target.addEventListener("click", () => setActive(report.id));
         markerLayer.appendChild(target);
         if (report.id === activeId) {
           const label = document.createElement("span");
@@ -1044,6 +1231,18 @@
           label.style.left = `${Math.min(targetPos.x, rect.width - 112)}px`;
           label.style.top = `${targetPos.y}px`;
           markerLayer.appendChild(label);
+          const priceIndex = document.createElement("span");
+          priceIndex.className = "pair-index";
+          priceIndex.textContent = reportNumber;
+          priceIndex.style.left = `${pos.x}px`;
+          priceIndex.style.top = `${pos.y - 24}px`;
+          markerLayer.appendChild(priceIndex);
+          const targetIndex = document.createElement("span");
+          targetIndex.className = "pair-index";
+          targetIndex.textContent = reportNumber;
+          targetIndex.style.left = `${targetPos.x}px`;
+          targetIndex.style.top = `${targetPos.y - 24}px`;
+          markerLayer.appendChild(targetIndex);
         }
       }
     });
@@ -1057,7 +1256,8 @@
       button.type = "button";
       button.className = `report-chip${report.id === activeId ? " active" : ""}`;
       button.dataset.id = report.id;
-      button.innerHTML = `<time>${report.date}</time><b>${report.bank}</b><span>${report.label}</span>`;
+      const reportNumber = reports.findIndex(item => item.id === report.id) + 1;
+      button.innerHTML = `<time>${reportNumber}. ${report.date}</time><b>${report.bank}</b><span>${report.label}</span>`;
       button.addEventListener("mouseenter", () => setActive(report.id));
       button.addEventListener("focus", () => setActive(report.id));
       button.addEventListener("click", () => setActive(report.id));
@@ -1095,15 +1295,23 @@
     drawChart();
     setActive(activeId);
     window.addEventListener("resize", drawChart);
+    modeButtons.forEach(button => {
+      button.addEventListener("click", () => setInteractionMode(button.dataset.mode));
+    });
     zoomButtons.forEach(button => {
       button.addEventListener("click", () => zoomChart(button.dataset.zoom));
     });
+    chartWrap.addEventListener("pointerdown", beginChartDrag);
+    chartWrap.addEventListener("pointermove", moveChartDrag);
+    chartWrap.addEventListener("pointerup", endChartDrag);
+    chartWrap.addEventListener("pointercancel", endChartDrag);
     canvas.addEventListener("wheel", event => {
       event.preventDefault();
       const rect = canvas.getBoundingClientRect();
       const centerRatio = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width));
       zoomChart(event.deltaY < 0 ? "in" : "out", centerRatio);
     }, { passive: false });
+    setInteractionMode("pan");
   }
 </script>
 </body>
