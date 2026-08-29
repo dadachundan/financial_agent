@@ -1367,7 +1367,7 @@ _RESEARCH_LENS_POINTS = {
         "price": 1146.90,
         "target": 1408.00,
         "rating": "Overweight",
-        "stance": "cautious",
+        "stance": "bullish",
         "label": "Delivery slippage",
         "change": "Morgan Stanley cut its target from RMB 1,528 to RMB 1,408 while keeping Overweight.",
         "source": "MLU580/590 delivery delays reduced 2026-2028 EPS estimates by 6%/5%/8%; demand was still described as intact.",
@@ -1377,7 +1377,7 @@ _RESEARCH_LENS_POINTS = {
         "price": 1199.93,
         "target": 1340.00,
         "rating": "Outperform",
-        "stance": "cautious",
+        "stance": "bullish",
         "label": "2Q26 print",
         "change": "Bernstein adjusted its target from RMB 2,000 to RMB 1,340 after the 49% share-capital increase.",
         "source": "2Q26 revenue growth slowed to 7.8% QoQ, but gross margin hit 56.1% and net margin reached 41.7%.",
@@ -1387,7 +1387,7 @@ _RESEARCH_LENS_POINTS = {
         "price": 1199.93,
         "target": 1408.00,
         "rating": "Overweight",
-        "stance": "cautious",
+        "stance": "bullish",
         "label": "Risk/reward update",
         "change": "Morgan Stanley kept its RMB 1,408 target and Overweight rating.",
         "source": "2026 EPS was cut 3%, while 2027/2028 EPS rose 3%/1% on pricing power and operating leverage.",
@@ -1451,8 +1451,6 @@ def _research_lens_reports(ticker: str = "688256") -> tuple[list[dict], str]:
             stance = "bullish"
             if rating.lower() in {"sell", "underweight", "underperform", "减持", "跑输大盘"}:
                 stance = "bearish"
-            elif target is not None and price is not None and target < price:
-                stance = "cautious"
             elif rating.lower() in {"neutral", "equal-weight", "market perform", "hold", "中性", "持有", "与大市同步"}:
                 stance = "cautious"
             change = row["catalyst"] or "Structured price-target call from the local zsxq extraction database."

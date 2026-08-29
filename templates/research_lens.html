@@ -293,6 +293,69 @@
     .axis-x-left { bottom: 16px; left: 74px; }
     .axis-x-right { bottom: 16px; right: 28px; }
 
+    .chart-toolbar {
+      position: absolute;
+      top: 12px;
+      right: 22px;
+      display: inline-flex;
+      gap: 6px;
+      padding: 5px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 7px;
+      background: rgba(3, 11, 9, .68);
+      backdrop-filter: blur(10px);
+      z-index: 5;
+    }
+
+    .chart-tool {
+      min-width: 30px;
+      height: 28px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 5px;
+      color: rgba(238, 245, 242, .82);
+      background: rgba(255, 255, 255, .04);
+      font: 800 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .chart-tool:hover,
+    .chart-tool:focus {
+      outline: 0;
+      color: #03110c;
+      border-color: rgba(47, 240, 181, .8);
+      background: var(--green);
+    }
+
+    .chart-legend {
+      position: absolute;
+      left: 78px;
+      top: 88px;
+      display: inline-flex;
+      gap: 16px;
+      color: rgba(238, 245, 242, .58);
+      font: 700 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .legend-swatch {
+      width: 22px;
+      height: 0;
+      border-top: 2px solid var(--green);
+      box-shadow: 0 0 10px rgba(47, 240, 181, .35);
+    }
+
+    .legend-swatch.target {
+      border-top-color: var(--blue);
+      border-top-style: dashed;
+      box-shadow: 0 0 10px rgba(135, 183, 255, .3);
+    }
+
     .marker-layer {
       position: absolute;
       inset: 0;
@@ -312,8 +375,13 @@
     }
 
     .report-marker[data-stance="cautious"] {
-      background: var(--amber);
-      box-shadow: 0 0 0 5px rgba(248, 197, 91, .15), 0 0 22px rgba(248, 197, 91, .34);
+      background: var(--blue);
+      box-shadow: 0 0 0 5px rgba(135, 183, 255, .15), 0 0 22px rgba(135, 183, 255, .34);
+    }
+
+    .report-marker[data-stance="bearish"] {
+      background: var(--red);
+      box-shadow: 0 0 0 5px rgba(255, 111, 125, .15), 0 0 22px rgba(255, 111, 125, .34);
     }
 
     .report-marker:hover,
@@ -323,6 +391,31 @@
       outline: 0;
       box-shadow: 0 0 0 8px rgba(47, 240, 181, .2), 0 0 34px rgba(47, 240, 181, .7);
       z-index: 4;
+    }
+
+    .target-marker {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--blue);
+      border-radius: 3px;
+      background: rgba(7, 16, 13, .88);
+      box-shadow: 0 0 16px rgba(135, 183, 255, .4);
+      transform: translate(-50%, -50%) rotate(45deg);
+      pointer-events: none;
+    }
+
+    .target-label {
+      position: absolute;
+      padding: 4px 7px;
+      border: 1px solid rgba(135, 183, 255, .34);
+      border-radius: 5px;
+      color: var(--blue);
+      background: rgba(7, 16, 13, .82);
+      font: 800 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      transform: translate(8px, -50%);
+      pointer-events: none;
+      white-space: nowrap;
     }
 
     .tooltip-card {
@@ -588,7 +681,16 @@
           <div class="chart-stage">
             <div class="chart-wrap">
               <canvas id="researchChart"></canvas>
+              <div class="chart-toolbar" aria-label="Chart zoom controls">
+                <button class="chart-tool" type="button" data-zoom="in" title="Zoom in">+</button>
+                <button class="chart-tool" type="button" data-zoom="out" title="Zoom out">−</button>
+                <button class="chart-tool" type="button" data-zoom="reset" title="Reset zoom">All</button>
+              </div>
               <div class="marker-layer" id="markerLayer" aria-label="Research report markers"></div>
+              <div class="chart-legend" aria-hidden="true">
+                <span class="legend-item"><span class="legend-swatch"></span>Price</span>
+                <span class="legend-item"><span class="legend-swatch target"></span>Target</span>
+              </div>
             </div>
             <div class="axis-label axis-y" id="axisY">Stock price</div>
             <div class="axis-label axis-x-left" id="axisStart">Start</div>
@@ -645,8 +747,10 @@
   const markerLayer = document.getElementById("markerLayer");
   const timelineStrip = document.getElementById("timelineStrip");
   const card = document.getElementById("reportCard");
+  const zoomButtons = document.querySelectorAll("[data-zoom]");
   let activeId = reports.length ? reports[reports.length - 1].id : null;
   const positioned = new Map();
+  const targetPositioned = new Map();
 
   function currencyLabel(report) {
     return report.priceCurrency || report.targetCurrency || "";
@@ -664,8 +768,19 @@
     return 100 + index * 8;
   }
 
+  function targetValue(report) {
+    if (report.target === null || report.target === undefined) return null;
+    const value = Number(report.target);
+    return Number.isFinite(value) ? value : null;
+  }
+
   function displayDate(value) {
     const date = new Date(parseDate(value));
+    return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  }
+
+  function displayTime(value) {
+    const date = new Date(value);
     return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
   }
 
@@ -716,16 +831,84 @@
   const series = syntheticSeries();
   const minTime = Math.min(...series.map(p => p.time));
   const maxTime = Math.max(...series.map(p => p.time));
-  const plottedPrices = [...series.map(p => p.price), ...reports.map((r, i) => chartValue(r, i))].filter(Number.isFinite);
-  const priceSpread = Math.max(...plottedPrices) - Math.min(...plottedPrices);
-  const pricePad = Math.max(1, priceSpread * .16);
-  const minPrice = Math.min(...plottedPrices) - pricePad;
-  const maxPrice = Math.max(...plottedPrices) + pricePad;
+  let viewStart = minTime;
+  let viewEnd = maxTime;
 
-  function positionOf(date, price, width, height, pad) {
-    const x = pad.left + ((parseDate(date) - minTime) / (maxTime - minTime)) * (width - pad.left - pad.right);
-    const y = pad.top + (1 - ((price - minPrice) / (maxPrice - minPrice))) * (height - pad.top - pad.bottom);
+  function visibleReports() {
+    return reports.filter(report => {
+      const time = parseDate(report.date);
+      return time >= viewStart && time <= viewEnd;
+    });
+  }
+
+  function visibleSeries() {
+    return series.filter(point => point.time >= viewStart && point.time <= viewEnd);
+  }
+
+  function visibleDomain() {
+    const visible = visibleReports();
+    const values = [
+      ...visibleSeries().map(point => point.price),
+      ...visible.map((report, index) => chartValue(report, index)),
+      ...visible.map(report => targetValue(report)),
+    ].filter(Number.isFinite);
+    const fallback = [
+      ...series.map(point => point.price),
+      ...reports.map((report, index) => chartValue(report, index)),
+      ...reports.map(report => targetValue(report)),
+    ].filter(Number.isFinite);
+    const plotted = values.length ? values : fallback;
+    const spread = Math.max(...plotted) - Math.min(...plotted);
+    const pad = Math.max(1, spread * .14);
+    return {
+      min: Math.min(...plotted) - pad,
+      max: Math.max(...plotted) + pad,
+    };
+  }
+
+  function positionOfTimeValue(time, value, width, height, pad, domain) {
+    const timeSpan = Math.max(1, viewEnd - viewStart);
+    const valueSpan = Math.max(1, domain.max - domain.min);
+    const x = pad.left + ((time - viewStart) / timeSpan) * (width - pad.left - pad.right);
+    const y = pad.top + (1 - ((value - domain.min) / valueSpan)) * (height - pad.top - pad.bottom);
     return { x, y };
+  }
+
+  function positionOf(date, value, width, height, pad, domain) {
+    return positionOfTimeValue(parseDate(date), value, width, height, pad, domain);
+  }
+
+  function targetAnchors() {
+    return reports
+      .map(report => ({ report, time: parseDate(report.date), target: targetValue(report) }))
+      .filter(point => Number.isFinite(point.target))
+      .sort((a, b) => a.time - b.time);
+  }
+
+  function zoomChart(direction, centerRatio = .5) {
+    const span = viewEnd - viewStart;
+    const fullSpan = maxTime - minTime;
+    if (!fullSpan) return;
+    if (direction === "reset") {
+      viewStart = minTime;
+      viewEnd = maxTime;
+      drawChart();
+      return;
+    }
+    const factor = direction === "in" ? .72 : 1.38;
+    let nextSpan = Math.min(fullSpan, Math.max(fullSpan * .08, span * factor));
+    const center = viewStart + span * centerRatio;
+    viewStart = center - nextSpan * centerRatio;
+    viewEnd = viewStart + nextSpan;
+    if (viewStart < minTime) {
+      viewStart = minTime;
+      viewEnd = minTime + nextSpan;
+    }
+    if (viewEnd > maxTime) {
+      viewEnd = maxTime;
+      viewStart = maxTime - nextSpan;
+    }
+    drawChart();
   }
 
   function drawChart() {
@@ -739,16 +922,18 @@
     const width = rect.width;
     const height = rect.height;
     const pad = { top: 54, right: 40, bottom: 56, left: 76 };
+    const domain = visibleDomain();
+    const visibleLine = visibleSeries();
     ctx.clearRect(0, 0, width, height);
 
     ctx.strokeStyle = "rgba(255,255,255,.075)";
     ctx.lineWidth = 1;
     ctx.font = "12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
     ctx.fillStyle = "rgba(238,245,242,.45)";
-    const tickStep = (maxPrice - minPrice) / 3;
-    const ticks = [0, 1, 2, 3].map(i => minPrice + tickStep * i);
+    const tickStep = (domain.max - domain.min) / 3;
+    const ticks = [0, 1, 2, 3].map(i => domain.min + tickStep * i);
     ticks.forEach(tick => {
-      const y = pad.top + (1 - ((tick - minPrice) / (maxPrice - minPrice))) * (height - pad.top - pad.bottom);
+      const y = pad.top + (1 - ((tick - domain.min) / (domain.max - domain.min))) * (height - pad.top - pad.bottom);
       ctx.beginPath();
       ctx.setLineDash([4, 6]);
       ctx.moveTo(pad.left, y);
@@ -763,9 +948,8 @@
     gradient.addColorStop(1, "rgba(47, 240, 181, 0)");
 
     ctx.beginPath();
-    series.forEach((point, index) => {
-      const x = pad.left + ((point.time - minTime) / (maxTime - minTime)) * (width - pad.left - pad.right);
-      const y = pad.top + (1 - ((point.price - minPrice) / (maxPrice - minPrice))) * (height - pad.top - pad.bottom);
+    visibleLine.forEach((point, index) => {
+      const { x, y } = positionOfTimeValue(point.time, point.price, width, height, pad, domain);
       if (index === 0) ctx.moveTo(x, y);
       else ctx.lineTo(x, y);
     });
@@ -776,9 +960,8 @@
     ctx.fill();
 
     ctx.beginPath();
-    series.forEach((point, index) => {
-      const x = pad.left + ((point.time - minTime) / (maxTime - minTime)) * (width - pad.left - pad.right);
-      const y = pad.top + (1 - ((point.price - minPrice) / (maxPrice - minPrice))) * (height - pad.top - pad.bottom);
+    visibleLine.forEach((point, index) => {
+      const { x, y } = positionOfTimeValue(point.time, point.price, width, height, pad, domain);
       if (index === 0) ctx.moveTo(x, y);
       else ctx.lineTo(x, y);
     });
@@ -789,14 +972,38 @@
     ctx.stroke();
     ctx.shadowBlur = 0;
 
+    const targets = targetAnchors().filter(point => point.time >= viewStart && point.time <= viewEnd);
+    if (targets.length) {
+      ctx.beginPath();
+      targets.forEach((point, index) => {
+        const { x, y } = positionOfTimeValue(point.time, point.target, width, height, pad, domain);
+        if (index === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      });
+      ctx.setLineDash([8, 6]);
+      ctx.strokeStyle = "#87b7ff";
+      ctx.lineWidth = 2;
+      ctx.shadowColor = "rgba(135, 183, 255, .35)";
+      ctx.shadowBlur = 10;
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.shadowBlur = 0;
+    }
+
     positioned.clear();
+    targetPositioned.clear();
     reports.forEach((report, index) => {
-      const pos = positionOf(report.date, chartValue(report, index), width, height, pad);
-      positioned.set(report.id, pos);
+      const time = parseDate(report.date);
+      if (time < viewStart || time > viewEnd) return;
+      positioned.set(report.id, positionOf(report.date, chartValue(report, index), width, height, pad, domain));
+      const target = targetValue(report);
+      if (Number.isFinite(target)) {
+        targetPositioned.set(report.id, positionOf(report.date, target, width, height, pad, domain));
+      }
     });
     if (reports.length) {
-      document.getElementById("axisStart").textContent = displayDate(reports[0].date);
-      document.getElementById("axisEnd").textContent = displayDate(reports[reports.length - 1].date);
+      document.getElementById("axisStart").textContent = displayTime(viewStart);
+      document.getElementById("axisEnd").textContent = displayTime(viewEnd);
       const axisCurrency = currencyLabel(reports.find(report => currencyLabel(report)) || reports[0]);
       document.getElementById("axisY").textContent = axisCurrency ? `Stock price (${axisCurrency})` : "Report timeline";
     }
@@ -808,7 +1015,8 @@
     const rect = canvas.getBoundingClientRect();
     markerLayer.innerHTML = "";
     reports.forEach(report => {
-      const pos = positioned.get(report.id) || { x: rect.width / 2, y: rect.height / 2 };
+      const pos = positioned.get(report.id);
+      if (!pos) return;
       const button = document.createElement("button");
       button.type = "button";
       button.className = `report-marker${report.id === activeId ? " active" : ""}`;
@@ -821,6 +1029,23 @@
       button.addEventListener("focus", () => setActive(report.id));
       button.addEventListener("click", () => setActive(report.id));
       markerLayer.appendChild(button);
+
+      const targetPos = targetPositioned.get(report.id);
+      if (targetPos) {
+        const target = document.createElement("span");
+        target.className = "target-marker";
+        target.style.left = `${targetPos.x}px`;
+        target.style.top = `${targetPos.y}px`;
+        markerLayer.appendChild(target);
+        if (report.id === activeId) {
+          const label = document.createElement("span");
+          label.className = "target-label";
+          label.textContent = money(report.target, report.targetCurrency || currencyLabel(report));
+          label.style.left = `${Math.min(targetPos.x, rect.width - 112)}px`;
+          label.style.top = `${targetPos.y}px`;
+          markerLayer.appendChild(label);
+        }
+      }
     });
   }
 
@@ -850,8 +1075,8 @@
     document.getElementById("cardBank").textContent = report.bank;
     document.getElementById("cardDate").textContent = report.date;
     document.getElementById("cardTitle").textContent = shortTitle(report.title);
-    document.getElementById("cardPill").textContent = report.stance === "bullish" ? "Bullish view" : report.stance === "bearish" ? "Bearish view" : "Execution watch";
-    document.getElementById("cardPill").style.color = report.stance === "bullish" ? "var(--green)" : report.stance === "bearish" ? "var(--red)" : "var(--amber)";
+    document.getElementById("cardPill").textContent = report.stance === "bullish" ? "Positive rating" : report.stance === "bearish" ? "Bearish rating" : "Neutral rating";
+    document.getElementById("cardPill").style.color = report.stance === "bullish" ? "var(--green)" : report.stance === "bearish" ? "var(--red)" : "var(--blue)";
     document.getElementById("cardChange").textContent = report.change;
     document.getElementById("cardSource").textContent = report.source;
     document.getElementById("cardRating").textContent = report.rating;
@@ -862,6 +1087,7 @@
     document.querySelectorAll(".report-marker, .report-chip").forEach(el => {
       el.classList.toggle("active", Number(el.dataset.id) === id);
     });
+    layoutMarkers();
   }
 
   if (reports.length) {
@@ -869,6 +1095,15 @@
     drawChart();
     setActive(activeId);
     window.addEventListener("resize", drawChart);
+    zoomButtons.forEach(button => {
+      button.addEventListener("click", () => zoomChart(button.dataset.zoom));
+    });
+    canvas.addEventListener("wheel", event => {
+      event.preventDefault();
+      const rect = canvas.getBoundingClientRect();
+      const centerRatio = Math.min(1, Math.max(0, (event.clientX - rect.left) / rect.width));
+      zoomChart(event.deltaY < 0 ? "in" : "out", centerRatio);
+    }, { passive: false });
   }
 </script>
 </body>
