@@ -29,12 +29,19 @@ read-only DB opens and lacks deps like `yfinance` in some shells).
 
 ### 1. Parse the request
 
-Pull out three optional knobs from the user's prompt:
+Pull out four optional knobs from the user's prompt:
 
 - **Count** — "latest 50" (default), "latest 100", "last week", etc.
   Map to `--limit N` or `--since YYYY-MM-DD`.
 - **Subject** — explicit topic ("semiconductors", "EVs", "中东"), or
   none. If none, **default focus = AI + robotics**.
+- **Universe / listing constraint** — phrases like "US-traded only",
+  "Chinese companies", "A/H shares", "exclude Japan", "only ADRs".
+  Apply this after pulling rows by mapping broker-summary tickers to
+  yfinance-style symbols (`META`, `BZ`, `600276.SS`, `002371.SZ`,
+  `2269.HK`, etc.). Do not include Japan/Taiwan/Korea/Europe names when
+  the user constrained the universe to US-traded or Chinese companies,
+  even if those names dominate the recent feed.
 - **Vibe** — does the user know what they want, or are they fishing?
   Wording like "summarize for me", "anything interesting", "what
   should I read" → fishing mode (theme-cluster + 3-5 picks).
@@ -93,6 +100,30 @@ first cluster the recent feed into 3-6 themes ("AI capex /
 inference economics", "robotics + autonomy", "energy & power",
 "China consumer slowdown", "geopolitics", …) with a one-line gist
 each. Then pick 2-3 standout reads under each theme.
+
+**If the user asks for "undervalued", "high upside", "cheap", "mispriced",
+"what do reports think is undervalued", or similar valuation-screen
+language** — switch from reading-list mode to **valuation screen mode**:
+
+- Scan **all** rows requested by the count/window, not just the first
+  handful of visually obvious reports.
+- Extract every explicit single-stock broker call that has rating and/or
+  PT language, persist it through `scripts/persist_pts.py`, and use the
+  returned `report_date_price` + `upside_pct` for the ranking.
+- Respect any universe constraint strictly. For "US-traded or Chinese
+  companies", include only bare US tickers/ADRs and China/HK/A-share
+  tickers (`*.HK`, `*.SS`, `*.SZ`); exclude Tokyo/Japan names unless the
+  user explicitly re-includes them.
+- Do **not** arbitrarily stop at 5. Surface all clear high-upside names
+  above the natural cutoff (usually `upside_pct >= 25%` for positive
+  ratings), capped around 20-25 rows only to keep the answer readable.
+  If there are more, say how many additional lower-conviction names were
+  omitted and what cutoff was used.
+- Always include `file_id`, company/ticker, broker, rating, PT, report-date
+  price, implied upside, and a tight gist from the row's summary. When
+  multiple brokers cover the same company in the scanned window, either
+  show the strongest call and mention the confirming/conflicting file IDs,
+  or show separate lines if the disagreement matters.
 
 **Ranking rubric (after relevance filtering, all three modes).** Order
 picks by: (1) bank-quality tier — GS / MS / JPM / UBS / Bernstein /
@@ -289,6 +320,15 @@ Date · **概要 gist**). The gist column carries the weight — let it be
 Keep the surrounding prose tight — the user is choosing what to read
 next, not consuming the reports here — but never compress the gist
 itself down to a label.
+
+For **valuation screen mode**, use a ticker-first table instead:
+`file_id` · `Company / ticker` · `Broker call` · `PT vs report-date px`
+· `Upside` · `概要 gist`. Sort by implied upside after applying the
+user's universe constraint. If a report-date price lookup fails but the
+summary itself states a current/reference price, label it explicitly as
+`summary px`; otherwise write `report-date price n/a` and do not invent
+the upside. If the user asks "which file id", every row must carry the
+exact `file_id`; do not group file IDs only in prose.
 
 End the reply with these compact one-liners (only when non-empty):
 
