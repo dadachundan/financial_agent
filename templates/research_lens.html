@@ -263,6 +263,34 @@
       display: block;
     }
 
+    #researchHoverChart {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    .chart-ohlc {
+      position: absolute;
+      top: 16px;
+      left: 20px;
+      display: flex;
+      gap: 10px;
+      max-width: calc(100% - 430px);
+      color: rgba(238, 245, 242, .68);
+      font: 700 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      pointer-events: none;
+      z-index: 6;
+    }
+
+    .chart-ohlc .ohlc-date { color: var(--text); }
+    .chart-ohlc .ohlc-up { color: var(--green); }
+    .chart-ohlc .ohlc-down { color: var(--red); }
+
     .axis-label {
       position: absolute;
       color: rgba(238, 245, 242, .48);
@@ -271,7 +299,7 @@
       pointer-events: none;
     }
 
-    .axis-y { top: 18px; left: 20px; }
+    .axis-y { top: 40px; left: 20px; }
     .axis-x-left { bottom: 16px; left: 74px; }
     .axis-x-right { bottom: 16px; right: 28px; }
 
@@ -640,6 +668,8 @@
         grid-template-rows: 310px auto;
       }
       .chart-stage { padding-bottom: 12px; }
+      .chart-ohlc { top: 52px; left: 22px; max-width: calc(100% - 44px); overflow: hidden; }
+      .axis-y { top: 78px; }
       .metrics { grid-template-columns: 1fr; }
       .timeline-strip { grid-template-columns: 1fr; }
     }
@@ -688,6 +718,8 @@
           <div class="chart-stage">
             <div class="chart-wrap">
               <canvas id="researchChart"></canvas>
+              <canvas id="researchHoverChart" aria-hidden="true"></canvas>
+              <div class="chart-ohlc" id="chartOhlc" aria-live="polite"></div>
               <div class="chart-toolbar" aria-label="Chart zoom controls">
                 <button class="chart-tool active" type="button" data-mode="pan" title="Drag to pan">Pan</button>
                 <button class="chart-tool" type="button" data-mode="select" title="Drag a range to zoom">Box</button>
@@ -757,6 +789,8 @@
   }
 
   const canvas = document.getElementById("researchChart");
+  const hoverCanvas = document.getElementById("researchHoverChart");
+  const chartOhlc = document.getElementById("chartOhlc");
   const chartWrap = document.querySelector(".chart-wrap");
   const markerLayer = document.getElementById("markerLayer");
   const timelineStrip = document.getElementById("timelineStrip");
@@ -768,6 +802,7 @@
   let activeId = reports.length ? reports[reports.length - 1].id : null;
   let interactionMode = "pan";
   let dragState = null;
+  let hoveredBar = null;
   const positioned = new Map();
   const targetPositioned = new Map();
 
@@ -802,6 +837,20 @@
   function displayTime(value) {
     const date = new Date(value);
     return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  }
+
+  function ohlcNumber(value) {
+    return Number(value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function renderOhlc(bar) {
+    if (!chartOhlc || !bar) return;
+    const change = Number(bar.open) ? ((Number(bar.close) - Number(bar.open)) / Number(bar.open)) * 100 : 0;
+    const changeClass = change >= 0 ? "ohlc-up" : "ohlc-down";
+    chartOhlc.innerHTML = `<span class="ohlc-date">${bar.date}</span>` +
+      `<span>O ${ohlcNumber(bar.open)}</span><span>H ${ohlcNumber(bar.high)}</span>` +
+      `<span>L ${ohlcNumber(bar.low)}</span><span>C ${ohlcNumber(bar.close)}</span>` +
+      `<span class="${changeClass}">${change >= 0 ? "+" : ""}${change.toFixed(2)}%</span>`;
   }
 
   const priceBars = (priceHistory.bars || []).map(bar => ({
@@ -930,6 +979,80 @@
     return viewStart + ((x - CHART_PAD.left) / plotWidth()) * (viewEnd - viewStart);
   }
 
+  function drawHoverOverlay() {
+    if (!hoverCanvas) return;
+    const rect = hoverCanvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    hoverCanvas.width = Math.max(1, Math.floor(rect.width * dpr));
+    hoverCanvas.height = Math.max(1, Math.floor(rect.height * dpr));
+    const ctx = hoverCanvas.getContext("2d");
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, rect.width, rect.height);
+    if (!hoveredBar || hoveredBar.time < viewStart || hoveredBar.time > viewEnd) return;
+
+    const domain = visibleDomain();
+    const pos = positionOfTimeValue(hoveredBar.time, hoveredBar.close, rect.width, rect.height, CHART_PAD, domain);
+    ctx.save();
+    ctx.strokeStyle = "rgba(238,245,242,.58)";
+    ctx.lineWidth = 1;
+    ctx.setLineDash([5, 5]);
+    ctx.beginPath();
+    ctx.moveTo(pos.x, CHART_PAD.top);
+    ctx.lineTo(pos.x, rect.height - CHART_PAD.bottom);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(CHART_PAD.left, pos.y);
+    ctx.lineTo(rect.width - CHART_PAD.right, pos.y);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.font = "700 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
+    ctx.textBaseline = "middle";
+
+    const priceText = ohlcNumber(hoveredBar.close);
+    const priceWidth = ctx.measureText(priceText).width + 14;
+    ctx.fillStyle = "rgba(29, 45, 40, .98)";
+    ctx.fillRect(rect.width - CHART_PAD.right + 4, pos.y - 11, priceWidth, 22);
+    ctx.fillStyle = "#f2f7f5";
+    ctx.textAlign = "left";
+    ctx.fillText(priceText, rect.width - CHART_PAD.right + 11, pos.y);
+
+    const dateWidth = ctx.measureText(hoveredBar.date).width + 16;
+    const dateX = Math.max(CHART_PAD.left, Math.min(rect.width - CHART_PAD.right - dateWidth, pos.x - dateWidth / 2));
+    ctx.fillStyle = "rgba(29, 45, 40, .98)";
+    ctx.fillRect(dateX, rect.height - CHART_PAD.bottom + 8, dateWidth, 22);
+    ctx.fillStyle = "#f2f7f5";
+    ctx.textAlign = "center";
+    ctx.fillText(hoveredBar.date, dateX + dateWidth / 2, rect.height - CHART_PAD.bottom + 19);
+    ctx.restore();
+  }
+
+  function resetCandleHover() {
+    hoveredBar = null;
+    const visible = visibleSeries();
+    renderOhlc(visible.length ? visible[visible.length - 1] : priceBars[priceBars.length - 1]);
+    drawHoverOverlay();
+  }
+
+  function updateCandleHover(event) {
+    if (dragState || !priceBars.length || event.target.closest(".chart-toolbar")) return;
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    if (x < CHART_PAD.left || x > rect.width - CHART_PAD.right || y < CHART_PAD.top || y > rect.height - CHART_PAD.bottom) {
+      if (hoveredBar) resetCandleHover();
+      return;
+    }
+    const time = clientXToTime(event.clientX);
+    const visible = visibleSeries();
+    if (!visible.length) return;
+    const nearest = visible.reduce((best, bar) => Math.abs(bar.time - time) < Math.abs(best.time - time) ? bar : best, visible[0]);
+    if (!hoveredBar || hoveredBar.date !== nearest.date) {
+      hoveredBar = nearest;
+      renderOhlc(nearest);
+      drawHoverOverlay();
+    }
+  }
+
   function selectionRectFrom(startX, currentX) {
     const rect = chartWrap.getBoundingClientRect();
     const left = Math.max(CHART_PAD.left, Math.min(startX, currentX) - rect.left);
@@ -954,6 +1077,7 @@
   function beginChartDrag(event) {
     if (event.target.closest(".chart-toolbar, .report-marker, .target-marker, a, button")) return;
     event.preventDefault();
+    resetCandleHover();
     chartWrap.setPointerCapture(event.pointerId);
     dragState = {
       mode: interactionMode,
@@ -1137,6 +1261,10 @@
         ? `Yahoo Finance via yfinance · ${priceHistory.ticker} · actual OHLC`
         : `Actual yfinance price unavailable${priceHistory.error ? ` · ${priceHistory.error}` : ""}`;
     }
+    if (hoveredBar && (hoveredBar.time < viewStart || hoveredBar.time > viewEnd)) hoveredBar = null;
+    const latestVisibleBar = visibleLine.length ? visibleLine[visibleLine.length - 1] : priceBars[priceBars.length - 1];
+    renderOhlc(hoveredBar || latestVisibleBar);
+    drawHoverOverlay();
     layoutMarkers();
   }
 
@@ -1255,8 +1383,12 @@
     });
     chartWrap.addEventListener("pointerdown", beginChartDrag);
     chartWrap.addEventListener("pointermove", moveChartDrag);
+    chartWrap.addEventListener("pointermove", updateCandleHover);
     chartWrap.addEventListener("pointerup", endChartDrag);
     chartWrap.addEventListener("pointercancel", endChartDrag);
+    chartWrap.addEventListener("pointerleave", () => {
+      if (!dragState) resetCandleHover();
+    });
     canvas.addEventListener("wheel", event => {
       event.preventDefault();
       const rect = canvas.getBoundingClientRect();

@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alert Monitor - FinAgent</title>
+<link rel="icon" href="data:,">
+<link href="/static/vendor/bootstrap.min.css" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0b0d0f; --panel:#101214; --panel2:#15181b; --line:#262a2f;
+    --grid:#1f2429; --fg:#d6d9de; --muted:#8d949d; --green:#00b894;
+    --red:#ff475f; --blue:#2f6bff; --amber:#f0b429;
+  }
+  html, body { height:100%; }
+  body {
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    overflow:hidden;
+  }
+  #_mainNav { margin-bottom:0 !important; border-bottom:1px solid var(--line); }
+  .monitor-shell {
+    height:calc(100dvh - var(--nav-h, 40px)); min-height:0;
+    display:grid; grid-template-columns:minmax(540px,1fr) minmax(390px,420px);
+  }
+  .chart-pane {
+    min-width:0; min-height:0; height:100%; max-height:100%; overflow:hidden;
+    display:grid; grid-template-rows:auto minmax(0,1fr);
+    border-right:1px solid var(--line); background:#0d0f11;
+  }
+  .toolbar { min-height:48px; display:flex; align-items:center; gap:8px; padding:7px 10px; border-bottom:1px solid var(--line); background:#111315; }
+  .symbol-pill { min-width:92px; background:#2b2e33; color:#e9ecef; border-radius:20px; padding:7px 12px; font-weight:700; letter-spacing:.01em; }
+  .timeframes, .chart-actions, .sort-tabs { display:flex; align-items:center; gap:4px; }
+  .tool-btn, .tf-btn, .sort-btn {
+    border:1px solid transparent; background:transparent; color:#c6cbd1; border-radius:7px;
+    height:32px; min-width:34px; padding:0 10px; display:inline-flex; align-items:center; justify-content:center;
+  }
+  .tool-btn:hover, .tf-btn:hover, .sort-btn:hover { background:#22262a; color:#fff; }
+  .tf-btn.active, .sort-btn.active { background:#34383e; color:#fff; border-color:#555b63; }
+  .chart-wrap { position:relative; min-height:0; height:100%; overflow:hidden; }
+  #priceChart { position:absolute; inset:0; width:100%; height:100%; display:block; cursor:grab; }
+  #priceChart.dragging { cursor:grabbing; }
+  .chart-title { position:absolute; left:16px; top:12px; z-index:2; pointer-events:none; }
+  .chart-title .name { font-size:1.02rem; font-weight:650; color:#d9dde3; }
+  .chart-title .quote { display:flex; gap:10px; font-variant-numeric:tabular-nums; color:var(--muted); }
+  .chart-title .quote .hover-date { color:#d7dbe1; font-weight:650; }
+  .quote .down { color:var(--red); } .quote .up { color:var(--green); }
+  .watermark { position:absolute; left:16px; bottom:14px; color:rgba(255,255,255,.10); font-size:2.1rem; font-weight:800; letter-spacing:-.04em; pointer-events:none; }
+  .side-pane {
+    min-width:0; min-height:0; height:100%; max-height:100%; overflow:hidden;
+    background:var(--panel); display:grid; grid-template-columns:minmax(0,1fr); grid-template-rows:auto minmax(0,1fr);
+    position:relative; z-index:3;
+  }
+  .side-tools { display:flex; align-items:center; gap:8px; padding:12px; border-bottom:1px solid var(--line); background:#17191c; }
+  .search { flex:1; background:#0d0f11; border:1px solid #30343a; color:#e8eaed; height:34px; border-radius:7px; padding:0 10px; }
+  .search:focus { outline:none; border-color:#5c88ff; box-shadow:0 0 0 3px rgba(47,107,255,.18); }
+  .alert-list { min-width:0; min-height:0; justify-self:stretch; overflow-x:hidden; overflow-y:auto; }
+  .alert-row {
+    width:100%; box-sizing:border-box; display:block; text-align:left;
+    background:transparent; color:var(--fg); border:0; border-bottom:1px solid var(--line); padding:14px;
+  }
+  .alert-row:hover { background:#161a1e; }
+  .alert-row.active { background:#1a1f25; box-shadow:inset 3px 0 0 var(--blue); }
+  .alert-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:baseline; }
+  .desc { font-size:.96rem; line-height:1.2; color:#d4d7dc; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .pct { font-size:1.08rem; line-height:1; font-weight:750; font-variant-numeric:tabular-nums; }
+  .pos { color:var(--green); } .neg { color:var(--red); }
+  .price-grid { display:grid; grid-template-columns:1.35fr repeat(3,minmax(0,1fr)); gap:10px; align-items:end; margin-top:12px; }
+  .metric { min-width:0; font-variant-numeric:tabular-nums; }
+  .metric-label { display:block; color:#747b84; font-size:.68rem; line-height:1; text-transform:uppercase; }
+  .metric-value { display:block; margin-top:5px; color:#b9bec6; font-size:.82rem; line-height:1.1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .metric.current .metric-label { color:#9299a2; }
+  .metric.current .metric-value { color:#f2f4f7; font-size:1.3rem; font-weight:720; }
+  .empty, .loading { color:var(--muted); padding:26px 16px; text-align:center; }
+  .divider { width:1px; height:28px; background:var(--line); margin:0 4px; }
+  .chart-hint { color:#8d949d; white-space:nowrap; }
+  @media (max-width: 980px) {
+    body { overflow:auto; }
+    .monitor-shell { flex:0 0 auto; min-height:900px; grid-template-columns:1fr; grid-template-rows:520px 1fr; }
+    .chart-pane { border-right:0; border-bottom:1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+{{ NAV_HTML | safe }}
+<main class="monitor-shell">
+  <section class="chart-pane">
+    <div class="toolbar">
+      <div id="symbolPill" class="symbol-pill">{{ initial_symbol }}</div>
+      <div class="divider"></div>
+      <div class="timeframes" aria-label="Time range">
+        <button class="tf-btn" data-period="1mo" type="button">1m</button>
+        <button class="tf-btn" data-period="3mo" type="button">3m</button>
+        <button class="tf-btn" data-period="6mo" type="button">6m</button>
+        <button class="tf-btn active" data-period="1y" type="button">1Y</button>
+        <button class="tf-btn" data-period="2y" type="button">2Y</button>
+      </div>
+      <div class="divider"></div>
+      <div class="chart-actions" aria-label="Chart controls">
+        <button id="zoomIn" class="tool-btn" type="button" title="Zoom in">+</button>
+        <button id="zoomOut" class="tool-btn" type="button" title="Zoom out">-</button>
+        <button id="resetZoom" class="tool-btn" type="button" title="Reset zoom">Reset</button>
+      </div>
+      <div class="ms-auto small chart-hint">Wheel zoom, drag pan</div>
+    </div>
+    <div class="chart-wrap">
+      <div class="chart-title">
+        <div id="chartName" class="name">Loading...</div>
+        <div id="chartQuote" class="quote"></div>
+      </div>
+      <canvas id="priceChart"></canvas>
+      <div class="watermark">FinAgent</div>
+    </div>
+  </section>
+  <aside class="side-pane">
+    <div class="side-tools">
+      <input id="alertSearch" class="search" placeholder="Search alerts">
+      <div class="sort-tabs">
+        <button id="sortOrder" class="sort-btn" type="button" title="Original TradingView order">Order</button>
+        <button id="sortDiff" class="sort-btn active" type="button" title="Sort by absolute move required to reach alert">Diff</button>
+      </div>
+      <button id="refreshAlerts" class="tool-btn" type="button" title="Refresh prices">Refresh</button>
+    </div>
+    <div id="alertList" class="alert-list">
+      <div class="loading">Loading alerts...</div>
+    </div>
+  </aside>
+</main>
+
+<script>
+(function(){
+  var alerts = [];
+  var bars = [];
+  var selected = null;
+  var period = '1y';
+  var sortMode = 'diff';
+  var searchText = '';
+  var view = { start: 0, end: 0 };
+  var drag = null;
+  var hoveredDate = '';
+  var CHART_PAD = { left:18, right:78, top:106, bottom:42 };
+
+  var els = {
+    list: document.getElementById('alertList'),
+    search: document.getElementById('alertSearch'),
+    refresh: document.getElementById('refreshAlerts'),
+    sortOrder: document.getElementById('sortOrder'),
+    sortDiff: document.getElementById('sortDiff'),
+    symbol: document.getElementById('symbolPill'),
+    chartName: document.getElementById('chartName'),
+    chartQuote: document.getElementById('chartQuote'),
+    canvas: document.getElementById('priceChart')
+  };
+  var ctx = els.canvas.getContext('2d');
+
+  function syncNavHeight(){
+    var nav = document.getElementById('_mainNav');
+    document.documentElement.style.setProperty('--nav-h', ((nav ? nav.offsetHeight : 40) || 40) + 'px');
+  }
+
+  function fmt(n, digits){
+    if(n == null || Number.isNaN(Number(n))) return '-';
+    return Number(n).toLocaleString(undefined, {minimumFractionDigits: digits, maximumFractionDigits: digits});
+  }
+  function fmtPct(n){
+    if(n == null) return '-';
+    return (n >= 0 ? '+' : '') + fmt(n, 2) + '%';
+  }
+  function esc(s){
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+    });
+  }
+  function directionCls(n){ return n == null ? '' : (n >= 0 ? 'pos' : 'neg'); }
+
+  function filteredAlerts(){
+    var q = searchText.trim().toLowerCase();
+    var rows = alerts.map(function(a, i){ return Object.assign({index:i}, a); });
+    if(q){
+      rows = rows.filter(function(a){
+        return [a.ticker, a.yf_symbol, a.description].join(' ').toLowerCase().indexOf(q) >= 0;
+      });
+    }
+    if(sortMode === 'diff'){
+      rows.sort(function(a,b){
+        var av = a.diff_pct == null ? -1 : Math.abs(a.diff_pct);
+        var bv = b.diff_pct == null ? -1 : Math.abs(b.diff_pct);
+        return bv - av;
+      });
+    } else {
+      rows.sort(function(a,b){ return a.index - b.index; });
+    }
+    return rows;
+  }
+
+  function renderAlerts(){
+    var rows = filteredAlerts();
+    els.sortDiff.classList.toggle('active', sortMode === 'diff');
+    els.sortOrder.classList.toggle('active', sortMode === 'order');
+    if(!rows.length){
+      els.list.innerHTML = '<div class="empty">No matching alerts.</div>';
+      return;
+    }
+    els.list.innerHTML = rows.map(function(a){
+      var active = selected && selected.description === a.description && selected.alert_price === a.alert_price;
+      var diffClass = directionCls(a.diff_pct);
+      return '<button class="alert-row ' + (active ? 'active' : '') + '" data-index="' + a.index + '" type="button">' +
+        '<div class="alert-head"><span class="desc">' + esc(a.description) + '</span>' +
+        '<span class="pct ' + diffClass + '">' + fmtPct(a.diff_pct) + '</span></div>' +
+        '<div class="price-grid">' +
+        '<div class="metric current"><span class="metric-label">Current</span><span class="metric-value">' + fmt(a.current_price, 2) + '</span></div>' +
+        '<div class="metric"><span class="metric-label">Alert</span><span class="metric-value">' + fmt(a.alert_price, 2) + '</span></div>' +
+        '<div class="metric"><span class="metric-label">1Y Low</span><span class="metric-value">' + fmt(a.low_1y, 2) + '</span></div>' +
+        '<div class="metric"><span class="metric-label">1Y High</span><span class="metric-value">' + fmt(a.high_1y, 2) + '</span></div>' +
+        '</div></button>';
+    }).join('');
+  }
+
+  async function loadHistory(alert){
+    selected = alert;
+    hoveredDate = '';
+    els.symbol.textContent = alert.yf_symbol;
+    els.chartName.textContent = alert.description;
+    els.chartQuote.innerHTML = '<span>Alert ' + fmt(alert.alert_price, 2) + '</span><span class="' + directionCls(alert.diff_pct) + '">' + fmtPct(alert.diff_pct) + '</span>';
+    renderAlerts();
+    var res = await fetch('/alert-monitor/api/history/' + encodeURIComponent(alert.yf_symbol) + '?period=' + encodeURIComponent(period)).then(function(r){ return r.json(); });
+    if(!res.ok || !res.bars.length){
+      els.chartName.textContent = alert.yf_symbol + ' - no chart data';
+      bars = [];
+      resizeCanvas();
+      return;
+    }
+    bars = res.bars;
+    view.start = 0;
+    view.end = bars.length;
+    drawChart();
+  }
+
+  function resizeCanvas(){
+    syncNavHeight();
+    var rect = els.canvas.getBoundingClientRect();
+    var ratio = window.devicePixelRatio || 1;
+    els.canvas.width = Math.max(1, Math.floor(rect.width * ratio));
+    els.canvas.height = Math.max(1, Math.floor(rect.height * ratio));
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    drawChart();
+  }
+
+  function visibleBars(){
+    if(!bars.length) return [];
+    var s = Math.max(0, Math.floor(view.start));
+    var e = Math.min(bars.length, Math.ceil(view.end));
+    return bars.slice(s, e);
+  }
+
+  function niceTicks(min, max, count){
+    if(!isFinite(min) || !isFinite(max) || min === max) return [];
+    var raw = (max - min) / Math.max(1, count - 1);
+    var pow = Math.pow(10, Math.floor(Math.log10(raw)));
+    var step = pow;
+    if(raw / pow > 5) step = 10 * pow;
+    else if(raw / pow > 2) step = 5 * pow;
+    else if(raw / pow > 1) step = 2 * pow;
+    var first = Math.ceil(min / step) * step;
+    var out = [];
+    for(var v = first; v <= max + step * 0.25; v += step) out.push(v);
+    return out;
+  }
+
+  function drawChart(){
+    var w = els.canvas.clientWidth;
+    var h = els.canvas.clientHeight;
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = '#0d0f11';
+    ctx.fillRect(0, 0, w, h);
+    if(!bars.length || !selected){
+      ctx.fillStyle = '#8d949d';
+      ctx.font = '14px -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif';
+      ctx.fillText('No chart data', 16, 84);
+      return;
+    }
+    var vbars = visibleBars();
+    if(!vbars.length) return;
+    var pad = CHART_PAD;
+    var plotW = Math.max(20, w - pad.left - pad.right);
+    var plotH = Math.max(20, h - pad.top - pad.bottom);
+    var hi = Math.max.apply(null, vbars.map(function(b){ return Number(b.high); }).concat([selected.alert_price]));
+    var lo = Math.min.apply(null, vbars.map(function(b){ return Number(b.low); }).concat([selected.alert_price]));
+    var span = Math.max(0.01, hi - lo);
+    hi += span * 0.08;
+    lo -= span * 0.08;
+    var xFor = function(i){ return pad.left + (i + 0.5) * (plotW / vbars.length); };
+    var yFor = function(v){ return pad.top + ((hi - v) / (hi - lo)) * plotH; };
+    var ticks = niceTicks(lo, hi, 6);
+
+    ctx.strokeStyle = '#1f2429';
+    ctx.lineWidth = 1;
+    ticks.forEach(function(t){
+      var y = yFor(t);
+      ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(w - pad.right, y); ctx.stroke();
+      ctx.fillStyle = '#a9afb7';
+      ctx.font = '12px -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif';
+      ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+      ctx.fillText(fmt(t, 2), w - pad.right + 10, y);
+    });
+    var verticalCount = Math.min(8, vbars.length);
+    for(var gx = 0; gx <= verticalCount; gx++){
+      var x = pad.left + gx * plotW / verticalCount;
+      ctx.beginPath(); ctx.moveTo(x, pad.top); ctx.lineTo(x, h - pad.bottom); ctx.stroke();
+    }
+
+    var alertY = yFor(selected.alert_price);
+    ctx.strokeStyle = '#c8ccd2';
+    ctx.setLineDash([7, 7]);
+    ctx.beginPath(); ctx.moveTo(pad.left, alertY); ctx.lineTo(w - pad.right, alertY); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = '#c8ccd2';
+    ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+    ctx.fillText(fmt(selected.alert_price, 2), w - pad.right + 10, alertY);
+
+    var slot = plotW / vbars.length;
+    var bodyW = Math.max(2, Math.min(12, slot * 0.62));
+    vbars.forEach(function(b, i){
+      var o = Number(b.open), c = Number(b.close), high = Number(b.high), low = Number(b.low);
+      if(!isFinite(o) || !isFinite(c) || !isFinite(high) || !isFinite(low)) return;
+      var x = xFor(i);
+      var up = c >= o;
+      var color = up ? '#00b894' : '#ff475f';
+      ctx.strokeStyle = color;
+      ctx.fillStyle = color;
+      ctx.lineWidth = 1.4;
+      ctx.beginPath(); ctx.moveTo(x, yFor(high)); ctx.lineTo(x, yFor(low)); ctx.stroke();
+      var y1 = yFor(Math.max(o, c));
+      var y2 = yFor(Math.min(o, c));
+      var bodyH = Math.max(1, y2 - y1);
+      if(up){
+        ctx.strokeRect(x - bodyW / 2, y1, bodyW, bodyH);
+      } else {
+        ctx.fillRect(x - bodyW / 2, y1, bodyW, bodyH);
+      }
+    });
+
+    var hoverIndex = hoveredDate ? vbars.findIndex(function(b){ return b.date === hoveredDate; }) : -1;
+    if(hoverIndex >= 0){
+      var hoverBar = vbars[hoverIndex];
+      var hoverX = xFor(hoverIndex);
+      var hoverY = yFor(Number(hoverBar.close));
+      ctx.save();
+      ctx.strokeStyle = 'rgba(215,219,225,.65)';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([5, 5]);
+      ctx.beginPath(); ctx.moveTo(hoverX, pad.top); ctx.lineTo(hoverX, h - pad.bottom); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(pad.left, hoverY); ctx.lineTo(w - pad.right, hoverY); ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.font = '12px -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif';
+      ctx.textBaseline = 'middle';
+      var priceText = fmt(hoverBar.close, 2);
+      var priceWidth = ctx.measureText(priceText).width + 14;
+      ctx.fillStyle = '#343941';
+      ctx.fillRect(w - pad.right + 4, hoverY - 11, priceWidth, 22);
+      ctx.fillStyle = '#f2f4f7';
+      ctx.textAlign = 'left';
+      ctx.fillText(priceText, w - pad.right + 11, hoverY);
+      var dateWidth = ctx.measureText(hoverBar.date).width + 14;
+      var dateX = Math.max(pad.left, Math.min(w - pad.right - dateWidth, hoverX - dateWidth / 2));
+      ctx.fillStyle = '#343941';
+      ctx.fillRect(dateX, h - pad.bottom + 5, dateWidth, 23);
+      ctx.fillStyle = '#f2f4f7';
+      ctx.textAlign = 'center';
+      ctx.fillText(hoverBar.date, dateX + dateWidth / 2, h - pad.bottom + 16.5);
+      ctx.restore();
+    }
+
+    ctx.fillStyle = '#8d949d';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+    var labelEvery = Math.max(1, Math.ceil(vbars.length / 7));
+    vbars.forEach(function(b, i){
+      if(i % labelEvery !== 0 && i !== vbars.length - 1) return;
+      if(hoverIndex >= 0 && Math.abs(i - hoverIndex) < Math.max(1, labelEvery / 2)) return;
+      ctx.fillText(b.date.slice(5), xFor(i), h - pad.bottom + 14);
+    });
+
+    ctx.strokeStyle = '#303640';
+    ctx.strokeRect(pad.left, pad.top, plotW, plotH);
+
+    var lastBar = hoverIndex >= 0 ? vbars[hoverIndex] : bars[bars.length - 1];
+    var first = Number(bars[0].close);
+    var last = Number(lastBar.close);
+    var chg = hoverIndex >= 0
+      ? (Number(lastBar.open) ? ((last - Number(lastBar.open)) / Number(lastBar.open)) * 100 : null)
+      : (first ? ((last - first) / first) * 100 : null);
+    els.chartQuote.innerHTML = (hoverIndex >= 0 ? '<span class="hover-date">' + esc(lastBar.date) + '</span>' : '') +
+      '<span>O ' + fmt(lastBar.open, 2) + '</span>' +
+      '<span>H ' + fmt(lastBar.high, 2) + '</span>' +
+      '<span>L ' + fmt(lastBar.low, 2) + '</span>' +
+      '<span>C ' + fmt(last, 2) + '</span>' +
+      '<span class="' + directionCls(chg) + '">' + fmtPct(chg) + '</span>' +
+      '<span>Alert ' + fmt(selected.alert_price, 2) + '</span>';
+  }
+
+  function zoom(factor){
+    if(!bars.length) return;
+    var len = view.end - view.start;
+    var center = (view.start + view.end) / 2;
+    var next = Math.max(12, Math.min(bars.length, len / factor));
+    view.start = Math.max(0, center - next / 2);
+    view.end = Math.min(bars.length, center + next / 2);
+    if(view.end - view.start < next){
+      if(view.start === 0) view.end = Math.min(bars.length, next);
+      if(view.end === bars.length) view.start = Math.max(0, bars.length - next);
+    }
+    drawChart();
+  }
+
+  function pan(deltaBars){
+    if(!bars.length) return;
+    var len = view.end - view.start;
+    view.start = Math.max(0, Math.min(bars.length - len, view.start + deltaBars));
+    view.end = view.start + len;
+    drawChart();
+  }
+
+  async function loadAlerts(refresh){
+    var previous = selected ? selected.description + '|' + selected.alert_price : '';
+    els.list.innerHTML = '<div class="loading">Loading alerts...</div>';
+    var url = '/alert-monitor/api/alerts' + (refresh ? '?refresh=1' : '');
+    var res = await fetch(url).then(function(r){ return r.json(); });
+    alerts = res.alerts || [];
+    selected = alerts.find(function(a){ return previous && previous === a.description + '|' + a.alert_price; }) || alerts[0] || null;
+    renderAlerts();
+    if(selected) loadHistory(selected);
+  }
+
+  document.querySelectorAll('.tf-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.tf-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      period = btn.getAttribute('data-period');
+      if(selected) loadHistory(selected);
+    });
+  });
+  els.list.addEventListener('click', function(e){
+    var row = e.target.closest('.alert-row');
+    if(!row) return;
+    loadHistory(alerts[Number(row.getAttribute('data-index'))]);
+  });
+  els.search.addEventListener('input', function(){ searchText = els.search.value; renderAlerts(); });
+  els.refresh.addEventListener('click', function(){ loadAlerts(true); });
+  els.sortOrder.addEventListener('click', function(){ sortMode = 'order'; renderAlerts(); });
+  els.sortDiff.addEventListener('click', function(){ sortMode = 'diff'; renderAlerts(); });
+  document.getElementById('zoomIn').addEventListener('click', function(){ zoom(1.25); });
+  document.getElementById('zoomOut').addEventListener('click', function(){ zoom(0.8); });
+  document.getElementById('resetZoom').addEventListener('click', function(){ view.start = 0; view.end = bars.length; drawChart(); });
+  els.canvas.addEventListener('wheel', function(e){
+    e.preventDefault();
+    zoom(e.deltaY < 0 ? 1.18 : 0.85);
+  }, { passive:false });
+  els.canvas.addEventListener('pointerdown', function(e){
+    hoveredDate = '';
+    drag = { x:e.clientX, start:view.start, end:view.end };
+    els.canvas.classList.add('dragging');
+    els.canvas.setPointerCapture(e.pointerId);
+  });
+  els.canvas.addEventListener('pointermove', function(e){
+    if(!bars.length) return;
+    if(!drag){
+      var rect = els.canvas.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      var vbars = visibleBars();
+      var plotW = Math.max(20, rect.width - CHART_PAD.left - CHART_PAD.right);
+      if(!vbars.length || x < CHART_PAD.left || x > rect.width - CHART_PAD.right || y < CHART_PAD.top || y > rect.height - CHART_PAD.bottom){
+        if(hoveredDate){ hoveredDate = ''; drawChart(); }
+        return;
+      }
+      var slot = plotW / vbars.length;
+      var index = Math.max(0, Math.min(vbars.length - 1, Math.floor((x - CHART_PAD.left) / slot)));
+      if(hoveredDate !== vbars[index].date){ hoveredDate = vbars[index].date; drawChart(); }
+      return;
+    }
+    var rect = els.canvas.getBoundingClientRect();
+    var barsPerPx = (drag.end - drag.start) / Math.max(1, rect.width - 96);
+    view.start = drag.start - (e.clientX - drag.x) * barsPerPx;
+    view.end = drag.end - (e.clientX - drag.x) * barsPerPx;
+    pan(0);
+  });
+  els.canvas.addEventListener('pointerup', function(e){
+    drag = null;
+    els.canvas.classList.remove('dragging');
+    try { els.canvas.releasePointerCapture(e.pointerId); } catch(_e) {}
+  });
+  els.canvas.addEventListener('pointerleave', function(){
+    if(!drag && hoveredDate){ hoveredDate = ''; drawChart(); }
+  });
+  window.addEventListener('resize', resizeCanvas);
+
+  syncNavHeight();
+  resizeCanvas();
+  loadAlerts(false);
+})();
+</script>
+</body>
+</html>

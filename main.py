@@ -20,7 +20,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from flask import Flask, redirect, jsonify, request as freq
+from flask import Flask, Response, redirect, jsonify, request as freq
 from flask_compress import Compress
 
 import md_comment_widget as mcw
@@ -39,6 +39,7 @@ from indicators.app         import indicators_bp, init_db as _ind_init
 from pe.app                 import pe_bp
 from pt_app                import pt_bp
 from vol_app                import vol_bp
+from alert_monitor_app      import alert_monitor_bp
 from notes_app              import notes_bp, init_db as _notes_init
 from obsidian_app           import obsidian_bp, register_filters as _obsidian_filters
 from reports_viewer         import reports_bp
@@ -63,6 +64,7 @@ app.register_blueprint(indicators_bp,   url_prefix="/indicators")
 app.register_blueprint(pe_bp,           url_prefix="/pe")
 app.register_blueprint(pt_bp,           url_prefix="/pt")
 app.register_blueprint(vol_bp,          url_prefix="/vol")
+app.register_blueprint(alert_monitor_bp, url_prefix="/alert-monitor")
 app.register_blueprint(notes_bp,        url_prefix="/manual-report")
 app.register_blueprint(obsidian_bp,     url_prefix="/obsidian")
 app.register_blueprint(reports_bp,      url_prefix="/claude-reports")
@@ -76,6 +78,11 @@ def index():
     if qs:
         target = f"{target}?{qs}"
     return redirect(target)
+
+
+@app.route("/favicon.ico")
+def favicon():
+    return Response(status=204)
 
 
 # Legacy redirect: /notes/* → /manual-report/* (renamed 2026-05-21)
@@ -117,6 +124,7 @@ _BP_PREFIXES = {
     "indicators":   "/indicators",
     "pt":           "/pt",
     "notes":        "/manual-report",
+    "alert_monitor": "/alert-monitor",
     "obsidian":     "/obsidian",
     "reports":      "/claude-reports",
 }
