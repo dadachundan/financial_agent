@@ -52,8 +52,10 @@
     position:relative; z-index:3;
   }
   .side-tools { display:flex; align-items:center; gap:8px; padding:12px; border-bottom:1px solid var(--line); background:#17191c; }
-  .search { flex:1; background:#0d0f11; border:1px solid #30343a; color:#e8eaed; height:34px; border-radius:7px; padding:0 10px; }
+  .search { flex:1; min-width:100px; background:#0d0f11; border:1px solid #30343a; color:#e8eaed; height:34px; border-radius:7px; padding:0 10px; }
   .search:focus { outline:none; border-color:#5c88ff; box-shadow:0 0 0 3px rgba(47,107,255,.18); }
+  .sort-dir { min-width:32px; padding:0 8px; font-size:1rem; font-weight:750; }
+  .sort-label { color:#aeb4bc; font-size:.82rem; font-weight:650; padding-left:4px; }
   .alert-list { min-width:0; min-height:0; justify-self:stretch; overflow-x:hidden; overflow-y:auto; }
   .alert-row {
     width:100%; box-sizing:border-box; display:block; text-align:left;
@@ -116,8 +118,8 @@
     <div class="side-tools">
       <input id="alertSearch" class="search" placeholder="Search alerts">
       <div class="sort-tabs">
-        <button id="sortOrder" class="sort-btn" type="button" title="Original TradingView order">Order</button>
-        <button id="sortDiff" class="sort-btn active" type="button" title="Sort by absolute move required to reach alert">Diff</button>
+        <span class="sort-label">Move</span>
+        <button id="sortDirection" class="sort-btn sort-dir" type="button" title="Ascending: lowest move first" aria-label="Sort move ascending">&#8593;</button>
       </div>
       <button id="refreshAlerts" class="tool-btn" type="button" title="Refresh prices">Refresh</button>
     </div>
@@ -133,7 +135,7 @@
   var bars = [];
   var selected = null;
   var period = '1y';
-  var sortMode = 'diff';
+  var sortDirection = 'asc';
   var searchText = '';
   var view = { start: 0, end: 0 };
   var drag = null;
@@ -144,8 +146,7 @@
     list: document.getElementById('alertList'),
     search: document.getElementById('alertSearch'),
     refresh: document.getElementById('refreshAlerts'),
-    sortOrder: document.getElementById('sortOrder'),
-    sortDiff: document.getElementById('sortDiff'),
+    sortDirection: document.getElementById('sortDirection'),
     symbol: document.getElementById('symbolPill'),
     chartName: document.getElementById('chartName'),
     chartQuote: document.getElementById('chartQuote'),
@@ -181,22 +182,20 @@
         return [a.ticker, a.yf_symbol, a.description].join(' ').toLowerCase().indexOf(q) >= 0;
       });
     }
-    if(sortMode === 'diff'){
-      rows.sort(function(a,b){
-        var av = a.diff_pct == null ? -1 : Math.abs(a.diff_pct);
-        var bv = b.diff_pct == null ? -1 : Math.abs(b.diff_pct);
-        return bv - av;
-      });
-    } else {
-      rows.sort(function(a,b){ return a.index - b.index; });
-    }
+    rows.sort(function(a,b){
+      if(a.diff_pct == null && b.diff_pct == null) return 0;
+      if(a.diff_pct == null) return 1;
+      if(b.diff_pct == null) return -1;
+      return sortDirection === 'asc' ? a.diff_pct - b.diff_pct : b.diff_pct - a.diff_pct;
+    });
     return rows;
   }
 
   function renderAlerts(){
     var rows = filteredAlerts();
-    els.sortDiff.classList.toggle('active', sortMode === 'diff');
-    els.sortOrder.classList.toggle('active', sortMode === 'order');
+    els.sortDirection.textContent = String.fromCharCode(sortDirection === 'asc' ? 8593 : 8595);
+    els.sortDirection.title = sortDirection === 'asc' ? 'Ascending: lowest move first' : 'Descending: highest move first';
+    els.sortDirection.setAttribute('aria-label', sortDirection === 'asc' ? 'Sort move ascending' : 'Sort move descending');
     if(!rows.length){
       els.list.innerHTML = '<div class="empty">No matching alerts.</div>';
       return;
@@ -446,8 +445,10 @@
   });
   els.search.addEventListener('input', function(){ searchText = els.search.value; renderAlerts(); });
   els.refresh.addEventListener('click', function(){ loadAlerts(true); });
-  els.sortOrder.addEventListener('click', function(){ sortMode = 'order'; renderAlerts(); });
-  els.sortDiff.addEventListener('click', function(){ sortMode = 'diff'; renderAlerts(); });
+  els.sortDirection.addEventListener('click', function(){
+    sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+    renderAlerts();
+  });
   document.getElementById('zoomIn').addEventListener('click', function(){ zoom(1.25); });
   document.getElementById('zoomOut').addEventListener('click', function(){ zoom(0.8); });
   document.getElementById('resetZoom').addEventListener('click', function(){ view.start = 0; view.end = bars.length; drawChart(); });
