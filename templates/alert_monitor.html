@@ -89,8 +89,9 @@
   /* TradingView-style watchlist: one compact line per alert with sortable headers.
      Column widths live in the <colgroup> so the symbol column takes what is left. */
   .alert-table { width:100%; border-collapse:separate; border-spacing:0; table-layout:fixed; font-size:.78rem; }
-  .alert-table col.c-num { width:74px; }
-  .alert-table col.c-hi { width:58px; }
+  .alert-table col.c-chg { width:62px; }
+  .alert-table col.c-num { width:70px; }
+  .alert-table col.c-hi { width:56px; }
   .alert-table col.c-x { width:28px; }
   .alert-table thead th {
     position:sticky; top:0; z-index:2; background:#141719; border-bottom:1px solid var(--line);
@@ -153,7 +154,8 @@
   /* Narrow window: trim the number columns and the venue badge so the symbol
      column keeps enough room to stay readable. */
   @media (max-width: 1400px) {
-    .alert-table col.c-num { width:68px; }
+    .alert-table col.c-num { width:64px; }
+    .alert-table col.c-chg { width:56px; }
   }
   @media (max-width: 1300px) {
     .name-cell .exch { display:none; }
@@ -243,6 +245,7 @@
   var COLUMNS = [
     { key:'name',          label:'Symbol', cls:'col-name',      sortable:true,  title:'Ticker, company name and venue' },
     { key:'current_price', label:'Last',   cls:'num',           sortable:true,  title:'Latest market price' },
+    { key:'day_chg_pct',   label:'1D %',   cls:'num',           sortable:true,  title:'Today price change percentage' },
     { key:'alert_price',   label:'Alert',  cls:'num',           sortable:true,  title:'Alert trigger price' },
     { key:'low_1y',        label:'1Y Low', cls:'num col-hi',    sortable:true,  title:'Lowest price in the last year' },
     { key:'high_1y',       label:'1Y High',cls:'num col-hi',    sortable:true,  title:'Highest price in the last year' },
@@ -438,7 +441,7 @@
       return '<th class="' + cls.trim() + '"' + attrs + '>' + esc(c.label) + arrow + '</th>';
     }).join('');
     return '<table class="alert-table">' +
-      '<colgroup><col class="c-name"><col class="c-num"><col class="c-num">' +
+      '<colgroup><col class="c-name"><col class="c-num"><col class="c-chg"><col class="c-num">' +
       '<col class="c-hi"><col class="c-hi"><col class="c-num"><col class="c-x"></colgroup>' +
       '<thead><tr>' + head + '</tr></thead><tbody>' + bodyHtml + '</tbody></table>';
   }
@@ -471,6 +474,7 @@
         (a.exchange ? '<span class="exch ' + exchangeCls(a.exchange) + '" title="' + esc(a.exchange_full || a.exchange) + '">' + esc(a.exchange) + '</span>' : '') +
         '</div></td>' +
       '<td class="num last">' + fmt(a.current_price, 2) + '</td>' +
+      '<td class="num ' + directionCls(a.day_chg_pct) + '">' + fmtPct(a.day_chg_pct) + '</td>' +
       '<td class="num alert-price">' + fmt(a.alert_price, 2) + '</td>' +
       '<td class="num col-hi">' + fmt(a.low_1y, 2) + '</td>' +
       '<td class="num col-hi">' + fmt(a.high_1y, 2) + '</td>' +

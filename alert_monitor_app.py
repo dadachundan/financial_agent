@@ -391,11 +391,19 @@ def _market_snapshot(yf_symbol: str) -> dict[str, Any]:
             price = _safe_float(hist["Close"].dropna().iloc[-1])
         high_1y = _safe_float(hist["High"].max()) if not hist.empty and "High" in hist else None
         low_1y = _safe_float(hist["Low"].min()) if not hist.empty and "Low" in hist else None
+        day_chg_pct = None
+        if not hist.empty and "Close" in hist and len(hist["Close"].dropna()) >= 2:
+            closes = hist["Close"].dropna()
+            prev_close = _safe_float(closes.iloc[-2])
+            curr_close = _safe_float(closes.iloc[-1])
+            if prev_close and curr_close and prev_close > 0:
+                day_chg_pct = ((curr_close - prev_close) / prev_close) * 100.0
         return {
             "price": price,
             "currency": currency,
             "high_1y": high_1y,
             "low_1y": low_1y,
+            "day_chg_pct": day_chg_pct,
             "error": "" if price is not None else "no price",
         }
     except Exception as exc:
@@ -413,6 +421,7 @@ def _alert_payload(alert: AlertSeed, alert_id: str = "") -> dict[str, Any]:
     d["currency"] = px.get("currency") or ""
     d["high_1y"] = px.get("high_1y")
     d["low_1y"] = px.get("low_1y")
+    d["day_chg_pct"] = px.get("day_chg_pct")
     d["price_error"] = px.get("error") or ""
     if current is not None and current:
         d["diff_pct"] = ((alert.alert_price - current) / current) * 100.0
