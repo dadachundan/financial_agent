@@ -154,8 +154,9 @@
   /* Narrow window: trim the number columns and the venue badge so the symbol
      column keeps enough room to stay readable. */
   @media (max-width: 1400px) {
-    .alert-table col.c-num { width:64px; }
-    .alert-table col.c-chg { width:56px; }
+    .alert-table col.c-num { width:62px; }
+    .alert-table col.c-chg { width:52px; }
+    .alert-table col.c-hi { width:52px; }
   }
   @media (max-width: 1300px) {
     .name-cell .exch { display:none; }
@@ -190,7 +191,7 @@
         <button id="zoomOut" class="tool-btn" type="button" title="Zoom out">-</button>
         <button id="resetZoom" class="tool-btn" type="button" title="Reset zoom">Reset</button>
       </div>
-      <div class="ms-auto small chart-hint">Wheel zoom, drag pan</div>
+      <div class="ms-auto small chart-hint" title="Drag the chart to pan, wheel to zoom. Drag the date strip under the chart (or click a candle) to pin the quoted day; Esc releases it.">Wheel zoom, drag pan · drag the dates below to pin a day</div>
     </div>
     <div class="chart-wrap">
       <div class="chart-title">
@@ -239,17 +240,19 @@
   var exchangeFilter = '';
   var focusId = '';
   var pendingDelete = '';
+  var pinnedDate = '';
   var MARKET_ORDER = ['US', 'A-Share', 'HKEX', 'Other'];
   // Right-panel table columns. `key` is the alert field the header sorts on
   // ("name" sorts by ticker); the widths live in the colgroup of tableHtml.
   var COLUMNS = [
     { key:'name',          label:'Symbol', cls:'col-name',      sortable:true,  title:'Ticker, company name and venue' },
     { key:'current_price', label:'Last',   cls:'num',           sortable:true,  title:'Latest market price' },
-    { key:'day_chg_pct',   label:'1D %',   cls:'num',           sortable:true,  title:'Today price change percentage' },
     { key:'alert_price',   label:'Alert',  cls:'num',           sortable:true,  title:'Alert trigger price' },
+    { key:'diff_pct',      label:'Move',   cls:'num',           sortable:true,  title:'Alert trigger vs the current price' },
+    { key:'day_chg_pct',   label:'1D %',   cls:'num',           sortable:true,  title:'Today price change percentage' },
+    { key:'week_chg_pct',  label:'7D %',   cls:'num',           sortable:true,  title:'Change over the last 5 trading days (7 calendar days)' },
     { key:'low_1y',        label:'1Y Low', cls:'num col-hi',    sortable:true,  title:'Lowest price in the last year' },
     { key:'high_1y',       label:'1Y High',cls:'num col-hi',    sortable:true,  title:'Highest price in the last year' },
-    { key:'diff_pct',      label:'Move',   cls:'num',           sortable:true,  title:'Alert trigger vs the current price' },
     { key:'',              label:'',       cls:'cell-x',        sortable:false, title:'' }
   ];
   var view = { start: 0, end: 0 };
@@ -441,8 +444,9 @@
       return '<th class="' + cls.trim() + '"' + attrs + '>' + esc(c.label) + arrow + '</th>';
     }).join('');
     return '<table class="alert-table">' +
-      '<colgroup><col class="c-name"><col class="c-num"><col class="c-chg"><col class="c-num">' +
-      '<col class="c-hi"><col class="c-hi"><col class="c-num"><col class="c-x"></colgroup>' +
+      '<colgroup><col class="c-name"><col class="c-num"><col class="c-num">' +
+      '<col class="c-num"><col class="c-chg"><col class="c-chg"><col class="c-hi">' +
+      '<col class="c-hi"><col class="c-x"></colgroup>' +
       '<thead><tr>' + head + '</tr></thead><tbody>' + bodyHtml + '</tbody></table>';
   }
 
@@ -474,12 +478,13 @@
         (a.exchange ? '<span class="exch ' + exchangeCls(a.exchange) + '" title="' + esc(a.exchange_full || a.exchange) + '">' + esc(a.exchange) + '</span>' : '') +
         '</div></td>' +
       '<td class="num last">' + fmt(a.current_price, 2) + '</td>' +
-      '<td class="num ' + directionCls(a.day_chg_pct) + '">' + fmtPct(a.day_chg_pct) + '</td>' +
       '<td class="num alert-price">' + fmt(a.alert_price, 2) + '</td>' +
-      '<td class="num col-hi">' + fmt(a.low_1y, 2) + '</td>' +
-      '<td class="num col-hi">' + fmt(a.high_1y, 2) + '</td>' +
       '<td class="num mv ' + directionCls(a.diff_pct) + '"' + (moveTip ? ' title="' + esc(moveTip) + '"' : '') + '>' +
         fmtPct(a.diff_pct) + '</td>' +
+      '<td class="num ' + directionCls(a.day_chg_pct) + '">' + fmtPct(a.day_chg_pct) + '</td>' +
+      '<td class="num ' + directionCls(a.week_chg_pct) + '">' + fmtPct(a.week_chg_pct) + '</td>' +
+      '<td class="num col-hi">' + fmt(a.low_1y, 2) + '</td>' +
+      '<td class="num col-hi">' + fmt(a.high_1y, 2) + '</td>' +
       '<td class="cell-x">' + action + '</td>' +
       '</tr>';
   }
@@ -494,6 +499,7 @@
   async function loadHistory(alert){
     selected = alert;
     hoveredDate = '';
+    pinnedDate = '';
     els.symbol.textContent = alert.yf_symbol;
     els.chartName.textContent = alert.description;
     els.chartMeta.textContent = [alert.company_cn, alert.company, alert.exchange_full || alert.exchange,
@@ -620,34 +626,40 @@
       }
     });
 
-    var hoverRel = hoveredDate ? vbars.findIndex(function(b){ return b.date === hoveredDate; }) : -1;
-    if(hoverRel >= 0){
-      var hoverBar = vbars[hoverRel];
-      var hoverX = xFor(baseIdx + hoverRel);
-      var hoverY = yFor(Number(hoverBar.close));
+    // Which day the header quotes: the hovered bar while the cursor is over
+    // the chart, else the pinned one, else the newest. crossAbs also drives
+    // the crosshair (-1 when neither a hover nor a pin is active).
+    var hoverAbs = hoveredDate ? bars.findIndex(function(b){ return b.date === hoveredDate; }) : -1;
+    var pinAbs = pinnedDate ? bars.findIndex(function(b){ return b.date === pinnedDate; }) : -1;
+    var crossAbs = hoverAbs >= 0 ? hoverAbs : pinAbs;
+    if(crossAbs >= 0 && crossAbs >= baseIdx && crossAbs < baseIdx + vbars.length){
+      var crossBar = bars[crossAbs];
+      var crossX = xFor(crossAbs);
+      var crossY = yFor(Number(crossBar.close));
       ctx.save();
       ctx.strokeStyle = 'rgba(215,219,225,.65)';
       ctx.lineWidth = 1;
-      ctx.setLineDash([5, 5]);
-      ctx.beginPath(); ctx.moveTo(hoverX, pad.top); ctx.lineTo(hoverX, h - pad.bottom); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(pad.left, hoverY); ctx.lineTo(w - pad.right, hoverY); ctx.stroke();
+      // Hovering previews a day (dashed); a pinned day stays (solid).
+      ctx.setLineDash(hoverAbs >= 0 ? [5, 5] : []);
+      ctx.beginPath(); ctx.moveTo(crossX, pad.top); ctx.lineTo(crossX, h - pad.bottom); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(pad.left, crossY); ctx.lineTo(w - pad.right, crossY); ctx.stroke();
       ctx.setLineDash([]);
       ctx.font = '12px -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif';
       ctx.textBaseline = 'middle';
-      var priceText = fmt(hoverBar.close, 2);
+      var priceText = fmt(crossBar.close, 2);
       var priceWidth = ctx.measureText(priceText).width + 14;
       ctx.fillStyle = '#343941';
-      ctx.fillRect(w - pad.right + 4, hoverY - 11, priceWidth, 22);
+      ctx.fillRect(w - pad.right + 4, crossY - 11, priceWidth, 22);
       ctx.fillStyle = '#f2f4f7';
       ctx.textAlign = 'left';
-      ctx.fillText(priceText, w - pad.right + 11, hoverY);
-      var dateWidth = ctx.measureText(hoverBar.date).width + 14;
-      var dateX = Math.max(pad.left, Math.min(w - pad.right - dateWidth, hoverX - dateWidth / 2));
+      ctx.fillText(priceText, w - pad.right + 11, crossY);
+      var dateWidth = ctx.measureText(crossBar.date).width + 14;
+      var dateX = Math.max(pad.left, Math.min(w - pad.right - dateWidth, crossX - dateWidth / 2));
       ctx.fillStyle = '#343941';
       ctx.fillRect(dateX, h - pad.bottom + 5, dateWidth, 23);
       ctx.fillStyle = '#f2f4f7';
       ctx.textAlign = 'center';
-      ctx.fillText(hoverBar.date, dateX + dateWidth / 2, h - pad.bottom + 16.5);
+      ctx.fillText(crossBar.date, dateX + dateWidth / 2, h - pad.bottom + 16.5);
       ctx.restore();
     }
 
@@ -656,19 +668,19 @@
     var labelEvery = Math.max(1, Math.ceil(vbars.length / 7));
     vbars.forEach(function(b, k){
       if(k % labelEvery !== 0 && k !== vbars.length - 1) return;
-      if(hoverRel >= 0 && Math.abs(k - hoverRel) < Math.max(1, labelEvery / 2)) return;
+      if(crossAbs >= 0 && Math.abs(baseIdx + k - crossAbs) < Math.max(1, labelEvery / 2)) return;
       ctx.fillText(b.date.slice(5), xFor(baseIdx + k), h - pad.bottom + 14);
     });
 
     ctx.strokeStyle = '#303640';
     ctx.strokeRect(pad.left, pad.top, plotW, plotH);
 
-    // Header quotes the referenced bar (hovered one, else the newest) and shows
-    // its 1D change: close vs the previous close -- the same metric the
-    // watchlist's "1D %" column uses, so both panels always agree.
-    var refRel = hoverRel >= 0 ? hoverRel : vbars.length - 1;
-    var refBar = vbars[refRel] || bars[bars.length - 1];
-    var refAbs = baseIdx + refRel;
+    // Header quotes the referenced bar (hovered one, else the pinned one, else
+    // the newest) and shows its 1D change: close vs the previous close -- the
+    // same metric the watchlist's "1D %" column uses, so both panels agree.
+    var quoteAbs = hoverAbs >= 0 ? hoverAbs : (pinAbs >= 0 ? pinAbs : bars.length - 1);
+    var refBar = bars[quoteAbs];
+    var refAbs = quoteAbs;
     var last = Number(refBar.close);
     var prevClose = refAbs > 0 ? Number(bars[refAbs - 1].close) : NaN;
     var chg = isFinite(prevClose) && prevClose > 0
@@ -715,6 +727,18 @@
     if(!bars.length) return;
     view.start += deltaBars;
     clampView();
+    drawChart();
+  }
+
+  // Pin the quoted day to the bar under the given canvas x position.
+  function pinBarAt(xPx){
+    if(!bars.length) return;
+    var rect = els.canvas.getBoundingClientRect();
+    var plotW = Math.max(20, rect.width - CHART_PAD.left - CHART_PAD.right);
+    var slot = plotW / Math.max(1, view.end - view.start);
+    var index = Math.floor((xPx - CHART_PAD.left) / slot + view.start);
+    index = Math.max(0, Math.min(bars.length - 1, index));
+    pinnedDate = bars[index].date;
     drawChart();
   }
 
@@ -810,38 +834,67 @@
   }, { passive:false });
   els.canvas.addEventListener('pointerdown', function(e){
     hoveredDate = '';
-    drag = { x:e.clientX, start:view.start, end:view.end };
+    var rect = els.canvas.getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    var y = e.clientY - rect.top;
+    // Pressing the date strip starts a scrub that pins the day under the
+    // cursor right away; pressing the plot starts a pan (a plain click then
+    // toggles the pin on that candle).
+    var overStrip = x >= CHART_PAD.left && x <= rect.width - CHART_PAD.right &&
+                    y > rect.height - CHART_PAD.bottom;
+    drag = overStrip
+      ? { mode:'scrub', x:e.clientX, start:view.start, end:view.end }
+      : { mode:'pan', moved:false, x:e.clientX, start:view.start, end:view.end };
+    if(overStrip) pinBarAt(x);
     els.canvas.classList.add('dragging');
     els.canvas.setPointerCapture(e.pointerId);
   });
   els.canvas.addEventListener('pointermove', function(e){
     if(!bars.length) return;
-    if(!drag){
+    var rect = els.canvas.getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    var y = e.clientY - rect.top;
+    if(drag){
+      if(Math.abs(e.clientX - drag.x) > 4) drag.moved = true;
+      if(drag.mode === 'scrub'){ pinBarAt(x); return; }
+      var barsPerPx = (drag.end - drag.start) / Math.max(1, rect.width - 96);
+      view.start = drag.start - (e.clientX - drag.x) * barsPerPx;
+      view.end = drag.end - (e.clientX - drag.x) * barsPerPx;
+      pan(0);
+      return;
+    }
+    var plotW = Math.max(20, rect.width - CHART_PAD.left - CHART_PAD.right);
+    // Hovering previews a day over the plot and the date strip below it.
+    if(x < CHART_PAD.left || x > rect.width - CHART_PAD.right || y < CHART_PAD.top || y > rect.height){
+      if(hoveredDate){ hoveredDate = ''; drawChart(); }
+      return;
+    }
+    var slot = plotW / Math.max(1, view.end - view.start);
+    var index = Math.floor((x - CHART_PAD.left) / slot + view.start);
+    if(index < 0 || index >= bars.length){
+      if(hoveredDate){ hoveredDate = ''; drawChart(); }
+      return;
+    }
+    if(hoveredDate !== bars[index].date){ hoveredDate = bars[index].date; drawChart(); }
+  });
+  els.canvas.addEventListener('pointerup', function(e){
+    if(drag && drag.mode === 'pan' && !drag.moved){
+      // A plain click on a candle pins the quoted day to it; clicking the
+      // pinned candle again releases the pin.
       var rect = els.canvas.getBoundingClientRect();
       var x = e.clientX - rect.left;
       var y = e.clientY - rect.top;
-      var vbars = visibleBars();
-      var plotW = Math.max(20, rect.width - CHART_PAD.left - CHART_PAD.right);
-      if(!vbars.length || x < CHART_PAD.left || x > rect.width - CHART_PAD.right || y < CHART_PAD.top || y > rect.height - CHART_PAD.bottom){
-        if(hoveredDate){ hoveredDate = ''; drawChart(); }
-        return;
+      if(x >= CHART_PAD.left && x <= rect.width - CHART_PAD.right &&
+         y >= CHART_PAD.top && y <= rect.height - CHART_PAD.bottom){
+        var plotW = Math.max(20, rect.width - CHART_PAD.left - CHART_PAD.right);
+        var slot = plotW / Math.max(1, view.end - view.start);
+        var index = Math.floor((x - CHART_PAD.left) / slot + view.start);
+        if(index >= 0 && index < bars.length){
+          pinnedDate = pinnedDate === bars[index].date ? '' : bars[index].date;
+          drawChart();
+        }
       }
-      var slot = plotW / Math.max(1, view.end - view.start);
-      var index = Math.floor((x - CHART_PAD.left) / slot + view.start);
-      if(index < 0 || index >= bars.length){
-        if(hoveredDate){ hoveredDate = ''; drawChart(); }
-        return;
-      }
-      if(hoveredDate !== bars[index].date){ hoveredDate = bars[index].date; drawChart(); }
-      return;
     }
-    var rect = els.canvas.getBoundingClientRect();
-    var barsPerPx = (drag.end - drag.start) / Math.max(1, rect.width - 96);
-    view.start = drag.start - (e.clientX - drag.x) * barsPerPx;
-    view.end = drag.end - (e.clientX - drag.x) * barsPerPx;
-    pan(0);
-  });
-  els.canvas.addEventListener('pointerup', function(e){
     drag = null;
     els.canvas.classList.remove('dragging');
     try { els.canvas.releasePointerCapture(e.pointerId); } catch(_e) {}
@@ -852,6 +905,7 @@
   window.addEventListener('resize', resizeCanvas);
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape' && pendingDelete){ pendingDelete = ''; renderAlerts(); }
+    else if(e.key === 'Escape' && pinnedDate){ pinnedDate = ''; drawChart(); }
   });
 
   syncNavHeight();

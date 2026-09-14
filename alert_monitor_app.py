@@ -392,22 +392,30 @@ def _market_snapshot(yf_symbol: str) -> dict[str, Any]:
         high_1y = _safe_float(hist["High"].max()) if not hist.empty and "High" in hist else None
         low_1y = _safe_float(hist["Low"].min()) if not hist.empty and "Low" in hist else None
         day_chg_pct = None
+        week_chg_pct = None
         if not hist.empty and "Close" in hist and len(hist["Close"].dropna()) >= 2:
             closes = hist["Close"].dropna()
-            prev_close = _safe_float(closes.iloc[-2])
             curr_close = _safe_float(closes.iloc[-1])
+            prev_close = _safe_float(closes.iloc[-2])
             if prev_close and curr_close and prev_close > 0:
                 day_chg_pct = ((curr_close - prev_close) / prev_close) * 100.0
+            if len(closes) >= 6:
+                # 7 calendar days back is 5 trading sessions on the daily series.
+                prev_week = _safe_float(closes.iloc[-6])
+                if prev_week and curr_close and prev_week > 0:
+                    week_chg_pct = ((curr_close - prev_week) / prev_week) * 100.0
         return {
             "price": price,
             "currency": currency,
             "high_1y": high_1y,
             "low_1y": low_1y,
             "day_chg_pct": day_chg_pct,
+            "week_chg_pct": week_chg_pct,
             "error": "" if price is not None else "no price",
         }
     except Exception as exc:
-        return {"price": None, "currency": "", "high_1y": None, "low_1y": None, "error": str(exc)}
+        return {"price": None, "currency": "", "high_1y": None, "low_1y": None,
+                "day_chg_pct": None, "week_chg_pct": None, "error": str(exc)}
 
 
 def _alert_payload(alert: AlertSeed, alert_id: str = "") -> dict[str, Any]:
@@ -422,6 +430,7 @@ def _alert_payload(alert: AlertSeed, alert_id: str = "") -> dict[str, Any]:
     d["high_1y"] = px.get("high_1y")
     d["low_1y"] = px.get("low_1y")
     d["day_chg_pct"] = px.get("day_chg_pct")
+    d["week_chg_pct"] = px.get("week_chg_pct")
     d["price_error"] = px.get("error") or ""
     if current is not None and current:
         d["diff_pct"] = ((alert.alert_price - current) / current) * 100.0
