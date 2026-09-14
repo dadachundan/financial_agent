@@ -42,15 +42,26 @@
   #priceChart.dragging { cursor:grabbing; }
   .chart-title { position:absolute; left:16px; top:12px; z-index:2; pointer-events:none; }
   .chart-title .name { font-size:1.02rem; font-weight:650; color:#d9dde3; }
+  .chart-title .meta { font-size:.78rem; color:#8d949d; margin-top:2px; }
   .chart-title .quote { display:flex; gap:10px; font-variant-numeric:tabular-nums; color:var(--muted); }
   .chart-title .quote .hover-date { color:#d7dbe1; font-weight:650; }
   .quote .down { color:var(--red); } .quote .up { color:var(--green); }
   .watermark { position:absolute; left:16px; bottom:14px; color:rgba(255,255,255,.10); font-size:2.1rem; font-weight:800; letter-spacing:-.04em; pointer-events:none; }
   .side-pane {
     min-width:0; min-height:0; height:100%; max-height:100%; overflow:hidden;
-    background:var(--panel); display:grid; grid-template-columns:minmax(0,1fr); grid-template-rows:auto minmax(0,1fr);
+    background:var(--panel); display:grid; grid-template-columns:minmax(0,1fr); grid-template-rows:auto auto minmax(0,1fr);
     position:relative; z-index:3;
   }
+  .side-filters {
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; gap:6px;
+    padding:9px 12px; border-bottom:1px solid var(--line); background:#141719;
+  }
+  .chip {
+    border:1px solid #2f343a; background:#191d21; color:#aeb4bc; border-radius:999px;
+    height:26px; padding:0 11px; font-size:.74rem; font-weight:650; letter-spacing:.02em; white-space:nowrap;
+  }
+  .chip:hover { background:#22262a; color:#fff; }
+  .chip.active { background:rgba(47,107,255,.18); border-color:#3d6ff5; color:#dce4ff; }
   .side-tools { display:flex; align-items:center; gap:8px; padding:12px; border-bottom:1px solid var(--line); background:#17191c; }
   .search { flex:1; min-width:100px; background:#0d0f11; border:1px solid #30343a; color:#e8eaed; height:34px; border-radius:7px; padding:0 10px; }
   .search:focus { outline:none; border-color:#5c88ff; box-shadow:0 0 0 3px rgba(47,107,255,.18); }
@@ -64,7 +75,18 @@
   .alert-row:hover { background:#161a1e; }
   .alert-row.active { background:#1a1f25; box-shadow:inset 3px 0 0 var(--blue); }
   .alert-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:baseline; }
+  .head-main { min-width:0; display:flex; flex-direction:column; gap:4px; }
   .desc { font-size:.96rem; line-height:1.2; color:#d4d7dc; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .company-line { display:flex; align-items:center; gap:6px; min-width:0; }
+  .company { min-width:0; font-size:.76rem; line-height:1.15; color:#8d949d; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .exch {
+    flex:0 0 auto; font-size:.62rem; font-weight:750; letter-spacing:.05em; text-transform:uppercase;
+    color:#9aa1aa; border:1px solid #333941; background:#1b1f23; border-radius:4px; padding:1px 5px;
+  }
+  .exch-nasdaq { color:#7fa8ff; border-color:#2f4a7d; background:rgba(47,107,255,.12); }
+  .exch-ashare { color:#ff8a9b; border-color:#7d3038; background:rgba(255,71,95,.12); }
+  .exch-hkex   { color:#f0c260; border-color:#7d6528; background:rgba(240,180,41,.12); }
+  .exch-nyse   { color:#5fd6b4; border-color:#2b6b5a; background:rgba(0,184,148,.12); }
   .pct { font-size:1.08rem; line-height:1; font-weight:750; font-variant-numeric:tabular-nums; }
   .pos { color:var(--green); } .neg { color:var(--red); }
   .price-grid { display:grid; grid-template-columns:1.35fr repeat(3,minmax(0,1fr)); gap:10px; align-items:end; margin-top:12px; }
@@ -108,6 +130,7 @@
     <div class="chart-wrap">
       <div class="chart-title">
         <div id="chartName" class="name">Loading...</div>
+        <div id="chartMeta" class="meta"></div>
         <div id="chartQuote" class="quote"></div>
       </div>
       <canvas id="priceChart"></canvas>
@@ -115,6 +138,9 @@
     </div>
   </section>
   <aside class="side-pane">
+    <div id="exchangeFilters" class="side-filters" role="group" aria-label="Filter by stock exchange">
+      <span class="filter-label">Exchange</span>
+    </div>
     <div class="side-tools">
       <input id="alertSearch" class="search" placeholder="Search alerts">
       <div class="sort-tabs">
@@ -137,6 +163,8 @@
   var period = '1y';
   var sortDirection = 'asc';
   var searchText = '';
+  var exchangeFilter = '';
+  var EXCHANGE_ORDER = ['NASDAQ', 'NYSE', 'NYSE Arca', 'A-Share', 'HKEX'];
   var view = { start: 0, end: 0 };
   var drag = null;
   var hoveredDate = '';
@@ -147,8 +175,10 @@
     search: document.getElementById('alertSearch'),
     refresh: document.getElementById('refreshAlerts'),
     sortDirection: document.getElementById('sortDirection'),
+    exchangeFilters: document.getElementById('exchangeFilters'),
     symbol: document.getElementById('symbolPill'),
     chartName: document.getElementById('chartName'),
+    chartMeta: document.getElementById('chartMeta'),
     chartQuote: document.getElementById('chartQuote'),
     canvas: document.getElementById('priceChart')
   };
@@ -173,13 +203,43 @@
     });
   }
   function directionCls(n){ return n == null ? '' : (n >= 0 ? 'pos' : 'neg'); }
+  function exchangeCls(ex){
+    var k = String(ex || '').toUpperCase();
+    if(k === 'NASDAQ') return 'exch-nasdaq';
+    if(k === 'A-SHARE') return 'exch-ashare';
+    if(k === 'HKEX') return 'exch-hkex';
+    if(k.indexOf('NYSE') === 0) return 'exch-nyse';
+    return '';
+  }
+
+  function exchangeList(){
+    var seen = {};
+    alerts.forEach(function(a){ if(a.exchange) seen[a.exchange] = true; });
+    var known = EXCHANGE_ORDER.filter(function(x){ return seen[x]; });
+    var extra = Object.keys(seen).filter(function(x){ return EXCHANGE_ORDER.indexOf(x) < 0; }).sort();
+    return known.concat(extra);
+  }
+
+  function renderExchangeFilters(){
+    var list = exchangeList();
+    if(exchangeFilter && list.indexOf(exchangeFilter) < 0) exchangeFilter = '';
+    var html = '<button class="chip ' + (exchangeFilter ? '' : 'active') + '" data-exchange="" type="button">All</button>';
+    list.forEach(function(ex){
+      html += '<button class="chip ' + (exchangeFilter === ex ? 'active' : '') + '" data-exchange="' + esc(ex) +
+        '" type="button" title="Filter by ' + esc(ex) + '">' + esc(ex) + '</button>';
+    });
+    els.exchangeFilters.innerHTML = html;
+  }
 
   function filteredAlerts(){
     var q = searchText.trim().toLowerCase();
     var rows = alerts.map(function(a, i){ return Object.assign({index:i}, a); });
+    if(exchangeFilter){
+      rows = rows.filter(function(a){ return a.exchange === exchangeFilter; });
+    }
     if(q){
       rows = rows.filter(function(a){
-        return [a.ticker, a.yf_symbol, a.description].join(' ').toLowerCase().indexOf(q) >= 0;
+        return [a.ticker, a.yf_symbol, a.description, a.company, a.exchange].join(' ').toLowerCase().indexOf(q) >= 0;
       });
     }
     rows.sort(function(a,b){
@@ -203,8 +263,14 @@
     els.list.innerHTML = rows.map(function(a){
       var active = selected && selected.description === a.description && selected.alert_price === a.alert_price;
       var diffClass = directionCls(a.diff_pct);
+      var meta = [a.company, a.exchange_full || a.exchange].filter(Boolean).join(' · ');
       return '<button class="alert-row ' + (active ? 'active' : '') + '" data-index="' + a.index + '" type="button">' +
-        '<div class="alert-head"><span class="desc">' + esc(a.description) + '</span>' +
+        '<div class="alert-head"><div class="head-main">' +
+        '<span class="desc">' + esc(a.description) + '</span>' +
+        '<span class="company-line">' +
+        (a.company ? '<span class="company" title="' + esc(meta) + '">' + esc(a.company) + '</span>' : '') +
+        (a.exchange ? '<span class="exch ' + exchangeCls(a.exchange) + '" title="' + esc(a.exchange_full || a.exchange) + '">' + esc(a.exchange) + '</span>' : '') +
+        '</span></div>' +
         '<span class="pct ' + diffClass + '">' + fmtPct(a.diff_pct) + '</span></div>' +
         '<div class="price-grid">' +
         '<div class="metric current"><span class="metric-label">Current</span><span class="metric-value">' + fmt(a.current_price, 2) + '</span></div>' +
@@ -220,6 +286,7 @@
     hoveredDate = '';
     els.symbol.textContent = alert.yf_symbol;
     els.chartName.textContent = alert.description;
+    els.chartMeta.textContent = [alert.company, alert.exchange_full || alert.exchange].filter(Boolean).join(' · ');
     els.chartQuote.innerHTML = '<span>Alert ' + fmt(alert.alert_price, 2) + '</span><span class="' + directionCls(alert.diff_pct) + '">' + fmtPct(alert.diff_pct) + '</span>';
     renderAlerts();
     var res = await fetch('/alert-monitor/api/history/' + encodeURIComponent(alert.yf_symbol) + '?period=' + encodeURIComponent(period)).then(function(r){ return r.json(); });
@@ -426,6 +493,7 @@
     var res = await fetch(url).then(function(r){ return r.json(); });
     alerts = res.alerts || [];
     selected = alerts.find(function(a){ return previous && previous === a.description + '|' + a.alert_price; }) || alerts[0] || null;
+    renderExchangeFilters();
     renderAlerts();
     if(selected) loadHistory(selected);
   }
@@ -444,6 +512,15 @@
     loadHistory(alerts[Number(row.getAttribute('data-index'))]);
   });
   els.search.addEventListener('input', function(){ searchText = els.search.value; renderAlerts(); });
+  els.exchangeFilters.addEventListener('click', function(e){
+    var chip = e.target.closest('.chip');
+    if(!chip) return;
+    var next = chip.getAttribute('data-exchange') || '';
+    if(next === exchangeFilter) return;
+    exchangeFilter = next;
+    renderExchangeFilters();
+    renderAlerts();
+  });
   els.refresh.addEventListener('click', function(){ loadAlerts(true); });
   els.sortDirection.addEventListener('click', function(){
     sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
