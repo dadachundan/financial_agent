@@ -21,7 +21,7 @@
   #_mainNav { margin-bottom:0 !important; border-bottom:1px solid var(--line); }
   .monitor-shell {
     height:calc(100dvh - var(--nav-h, 40px)); min-height:0;
-    display:grid; grid-template-columns:minmax(540px,1fr) minmax(390px,420px);
+    display:grid; grid-template-columns:minmax(0,1fr) clamp(500px, 38vw, 640px);
   }
   .chart-pane {
     min-width:0; min-height:0; height:100%; max-height:100%; overflow:hidden;
@@ -30,13 +30,13 @@
   }
   .toolbar { min-height:48px; display:flex; align-items:center; gap:8px; padding:7px 10px; border-bottom:1px solid var(--line); background:#111315; }
   .symbol-pill { min-width:92px; background:#2b2e33; color:#e9ecef; border-radius:20px; padding:7px 12px; font-weight:700; letter-spacing:.01em; }
-  .timeframes, .chart-actions, .sort-tabs { display:flex; align-items:center; gap:4px; }
-  .tool-btn, .tf-btn, .sort-btn {
+  .timeframes, .chart-actions { display:flex; align-items:center; gap:4px; }
+  .tool-btn, .tf-btn {
     border:1px solid transparent; background:transparent; color:#c6cbd1; border-radius:7px;
     height:32px; min-width:34px; padding:0 10px; display:inline-flex; align-items:center; justify-content:center;
   }
-  .tool-btn:hover, .tf-btn:hover, .sort-btn:hover { background:#22262a; color:#fff; }
-  .tf-btn.active, .sort-btn.active, .tool-btn.active { background:#34383e; color:#fff; border-color:#555b63; }
+  .tool-btn:hover, .tf-btn:hover { background:#22262a; color:#fff; }
+  .tf-btn.active, .tool-btn.active { background:#34383e; color:#fff; border-color:#555b63; }
   .chart-wrap { position:relative; min-height:0; height:100%; overflow:hidden; }
   #priceChart { position:absolute; inset:0; width:100%; height:100%; display:block; cursor:grab; }
   #priceChart.dragging { cursor:grabbing; }
@@ -85,35 +85,45 @@
   .side-tools { display:flex; align-items:center; gap:8px; padding:12px; border-bottom:1px solid var(--line); background:#17191c; }
   .search { flex:1; min-width:100px; background:#0d0f11; border:1px solid #30343a; color:#e8eaed; height:34px; border-radius:7px; padding:0 10px; }
   .search:focus { outline:none; border-color:#5c88ff; box-shadow:0 0 0 3px rgba(47,107,255,.18); }
-  .sort-dir { min-width:32px; padding:0 8px; font-size:1rem; font-weight:750; }
-  .sort-label { color:#aeb4bc; font-size:.82rem; font-weight:650; padding-left:4px; }
   .alert-list { min-width:0; min-height:0; justify-self:stretch; overflow-x:hidden; overflow-y:auto; }
-  .alert-row-wrap { position:relative; }
-  .alert-row {
-    width:100%; box-sizing:border-box; display:block; text-align:left;
-    background:transparent; color:var(--fg); border:0; border-bottom:1px solid var(--line); padding:14px;
+  /* TradingView-style watchlist: one compact line per alert with sortable headers.
+     Column widths live in the <colgroup> so the symbol column takes what is left. */
+  .alert-table { width:100%; border-collapse:separate; border-spacing:0; table-layout:fixed; font-size:.78rem; }
+  .alert-table col.c-num { width:74px; }
+  .alert-table col.c-hi { width:58px; }
+  .alert-table col.c-x { width:28px; }
+  .alert-table thead th {
+    position:sticky; top:0; z-index:2; background:#141719; border-bottom:1px solid var(--line);
+    padding:7px 8px; text-align:right; white-space:nowrap; color:#7c838c;
+    font-size:.66rem; font-weight:650; letter-spacing:.06em; text-transform:uppercase;
   }
-  .alert-row:hover { background:#161a1e; }
-  .alert-row.active { background:#1a1f25; box-shadow:inset 3px 0 0 var(--blue); }
-  .row-delete {
-    position:absolute; top:10px; right:10px; height:22px; min-width:22px; padding:0 6px;
-    display:inline-flex; align-items:center; justify-content:center;
-    border:1px solid transparent; border-radius:6px; background:transparent;
-    color:#6f767f; font-size:.98rem; font-weight:650; line-height:1;
+  .alert-table thead th.col-name { text-align:left; }
+  .alert-table thead th.sortable { cursor:pointer; user-select:none; }
+  .alert-table thead th.sortable:hover { color:#c9ced5; }
+  .alert-table thead th.sortable.active { color:#d6d9de; }
+  .alert-table thead th .arrow { color:#7fa8ff; font-size:.72rem; }
+  .alert-table tbody td {
+    padding:5px 8px; border-bottom:1px solid #1b1f23; vertical-align:middle;
+    white-space:nowrap; font-variant-numeric:tabular-nums;
   }
-  .row-delete:hover { background:#2a2f35; color:#fff; border-color:#3a4048; }
-  .row-delete.confirm { color:#ff8a9b; border-color:#7d3038; background:rgba(255,71,95,.14); font-size:.72rem; }
-  .row-delete.confirm:hover { background:rgba(255,71,95,.26); color:#ffd7dd; }
-  .alert-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:baseline; padding-right:26px; }
-  .alert-row-wrap.confirming .alert-head { padding-right:64px; }
-  .head-main { min-width:0; display:flex; flex-direction:column; gap:4px; }
-  .desc { font-size:.96rem; line-height:1.2; color:#d4d7dc; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-  .company-line { display:flex; align-items:center; gap:6px; min-width:0; }
-  .company { min-width:0; font-size:.76rem; line-height:1.15; color:#8d949d; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-  /* Chinese name first for China-listed companies, the English one dimmed after it.
-     The English name carries the shrink weight so the Chinese one stays readable. */
-  .company.cn { color:#c9ced5; }
-  .company-en { flex:1 100 auto; min-width:0; font-size:.72rem; line-height:1.15; color:#737a83; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .alert-table tbody tr.alert-row { cursor:pointer; }
+  .alert-table tbody tr.alert-row:hover td { background:#15181b; }
+  .alert-table tbody tr.alert-row.active td { background:rgba(47,107,255,.12); }
+  .alert-table tbody tr.alert-row.active td.col-name { box-shadow:inset 3px 0 0 var(--blue); }
+  .alert-table td.num { text-align:right; }
+  .alert-table td.last { color:#e8eaed; font-weight:650; }
+  .alert-table td.alert-price { color:#a3aab3; }
+  .alert-table td.col-hi { color:#7b828b; font-size:.7rem; }
+  /* The 1Y columns hold 8-digit prices, so they give up padding, not digits. */
+  .alert-table th.col-hi, .alert-table td.col-hi { padding-left:4px; padding-right:4px; }
+  .alert-table td.mv { font-weight:700; }
+  .alert-table td.empty { color:var(--muted); padding:26px 16px; text-align:center; white-space:normal; }
+  .name-cell { display:flex; align-items:center; gap:6px; min-width:0; }
+  .name-cell .sym { flex:0 0 auto; color:#e8eaed; font-weight:650; }
+  /* Chinese name first for China-listed companies; the English one follows it
+     dimmed, and truncates first because it carries the shrink weight. */
+  .name-cell .co { flex:1 1 auto; min-width:0; color:#828a93; font-size:.74rem; overflow:hidden; text-overflow:ellipsis; }
+  .name-cell .exch { flex:0 0 auto; }
   .exch {
     flex:0 0 auto; font-size:.62rem; font-weight:750; letter-spacing:.05em; text-transform:uppercase;
     color:#9aa1aa; border:1px solid #333941; background:#1b1f23; border-radius:4px; padding:1px 5px;
@@ -122,14 +132,32 @@
   .exch-ashare { color:#ff8a9b; border-color:#7d3038; background:rgba(255,71,95,.12); }
   .exch-hkex   { color:#f0c260; border-color:#7d6528; background:rgba(240,180,41,.12); }
   .exch-nyse   { color:#5fd6b4; border-color:#2b6b5a; background:rgba(0,184,148,.12); }
-  .pct { font-size:1.08rem; line-height:1; font-weight:750; font-variant-numeric:tabular-nums; }
   .pos { color:var(--green); } .neg { color:var(--red); }
-  .price-grid { display:grid; grid-template-columns:1.35fr repeat(3,minmax(0,1fr)); gap:10px; align-items:end; margin-top:12px; }
-  .metric { min-width:0; font-variant-numeric:tabular-nums; }
-  .metric-label { display:block; color:#747b84; font-size:.68rem; line-height:1; text-transform:uppercase; }
-  .metric-value { display:block; margin-top:5px; color:#b9bec6; font-size:.82rem; line-height:1.1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-  .metric.current .metric-label { color:#9299a2; }
-  .metric.current .metric-value { color:#f2f4f7; font-size:1.3rem; font-weight:720; }
+  .alert-table td.cell-x { position:relative; padding:0 6px 0 0; text-align:right; }
+  /* The row actions stay out of the way until the row is hovered or focused. */
+  .row-delete {
+    height:20px; min-width:20px; padding:0 4px; display:inline-flex; align-items:center; justify-content:center;
+    border:1px solid transparent; border-radius:5px; background:transparent;
+    color:#6f767f; font-size:.9rem; font-weight:650; line-height:1; opacity:0;
+  }
+  .alert-table tbody tr:hover .row-delete, .row-delete:focus-visible, .row-delete.confirm { opacity:1; }
+  .row-delete:hover { background:#2a2f35; color:#fff; border-color:#3a4048; }
+  .row-delete.confirm {
+    position:absolute; right:4px; top:50%; transform:translateY(-50%); width:auto; white-space:nowrap;
+    border-color:#7d3038; background:#2b1519; color:#ff8a9b; font-size:.68rem;
+  }
+  .row-delete.confirm:hover { background:rgba(255,71,95,.26); color:#ffd7dd; }
+  /* The confirm chip overlays the move column, so clear it out behind itself. */
+  .alert-table tbody tr.confirming td.mv { color:transparent; }
+  @media (hover:none) { .row-delete { opacity:1; } }
+  /* Narrow window: trim the number columns and the venue badge so the symbol
+     column keeps enough room to stay readable. */
+  @media (max-width: 1400px) {
+    .alert-table col.c-num { width:68px; }
+  }
+  @media (max-width: 1300px) {
+    .name-cell .exch { display:none; }
+  }
   .empty, .loading { color:var(--muted); padding:26px 16px; text-align:center; }
   .divider { width:1px; height:28px; background:var(--line); margin:0 4px; }
   .chart-hint { color:#8d949d; white-space:nowrap; }
@@ -179,10 +207,6 @@
     </div>
     <div class="side-tools">
       <input id="alertSearch" class="search" placeholder="Search alerts">
-      <div class="sort-tabs">
-        <span class="sort-label">Move</span>
-        <button id="sortDirection" class="sort-btn sort-dir" type="button" title="Ascending: lowest move first" aria-label="Sort move ascending">&#8593;</button>
-      </div>
       <button id="refreshAlerts" class="tool-btn" type="button" title="Refresh prices">Refresh</button>
       <button id="toggleAddAlert" class="tool-btn" type="button" title="Add an alert" aria-expanded="false" aria-controls="addAlertWrap">+ Add</button>
     </div>
@@ -207,12 +231,24 @@
   var bars = [];
   var selected = null;
   var period = '1y';
+  var sortKey = 'diff_pct';
   var sortDirection = 'asc';
   var searchText = '';
   var exchangeFilter = '';
   var focusId = '';
   var pendingDelete = '';
   var MARKET_ORDER = ['US', 'A-Share', 'HKEX', 'Other'];
+  // Right-panel table columns. `key` is the alert field the header sorts on
+  // ("name" sorts by ticker); the widths live in the colgroup of tableHtml.
+  var COLUMNS = [
+    { key:'name',          label:'Symbol', cls:'col-name',      sortable:true,  title:'Ticker, company name and venue' },
+    { key:'current_price', label:'Last',   cls:'num',           sortable:true,  title:'Latest market price' },
+    { key:'alert_price',   label:'Alert',  cls:'num',           sortable:true,  title:'Alert trigger price' },
+    { key:'low_1y',        label:'1Y Low', cls:'num col-hi',    sortable:true,  title:'Lowest price in the last year' },
+    { key:'high_1y',       label:'1Y High',cls:'num col-hi',    sortable:true,  title:'Highest price in the last year' },
+    { key:'diff_pct',      label:'Move',   cls:'num',           sortable:true,  title:'Alert trigger vs the current price' },
+    { key:'',              label:'',       cls:'cell-x',        sortable:false, title:'' }
+  ];
   var view = { start: 0, end: 0 };
   var drag = null;
   var hoveredDate = '';
@@ -222,7 +258,6 @@
     list: document.getElementById('alertList'),
     search: document.getElementById('alertSearch'),
     refresh: document.getElementById('refreshAlerts'),
-    sortDirection: document.getElementById('sortDirection'),
     exchangeFilters: document.getElementById('exchangeFilters'),
     addWrap: document.getElementById('addAlertWrap'),
     addForm: document.getElementById('addAlertForm'),
@@ -361,6 +396,21 @@
     els.exchangeFilters.innerHTML = html;
   }
 
+  // The value a column sorts on. Sorting never moves rows the data cannot rank:
+  // rows with no value sink to the bottom in either direction.
+  function sortValue(a, key){
+    if(key === 'name') return String(a.ticker || a.yf_symbol || '').toLowerCase();
+    return a[key];
+  }
+  function compareRows(a, b){
+    var va = sortValue(a, sortKey), vb = sortValue(b, sortKey);
+    var na = va == null || va === '' || (typeof va === 'number' && !isFinite(va));
+    var nb = vb == null || vb === '' || (typeof vb === 'number' && !isFinite(vb));
+    if(na || nb) return na && nb ? 0 : (na ? 1 : -1);
+    var res = typeof va === 'string' ? va.localeCompare(vb) : Number(va) - Number(vb);
+    return sortDirection === 'asc' ? res : -res;
+  }
+
   function filteredAlerts(){
     var q = searchText.trim().toLowerCase();
     var rows = alerts.map(function(a, i){ return Object.assign({index:i}, a); });
@@ -372,60 +422,69 @@
         return [a.ticker, a.yf_symbol, a.description, a.company, a.company_cn, a.exchange].join(' ').toLowerCase().indexOf(q) >= 0;
       });
     }
-    rows.sort(function(a,b){
-      if(a.diff_pct == null && b.diff_pct == null) return 0;
-      if(a.diff_pct == null) return 1;
-      if(b.diff_pct == null) return -1;
-      return sortDirection === 'asc' ? a.diff_pct - b.diff_pct : b.diff_pct - a.diff_pct;
-    });
+    rows.sort(compareRows);
     return rows;
+  }
+
+  function tableHtml(bodyHtml){
+    var head = COLUMNS.map(function(c){
+      var sorted = c.sortable && sortKey === c.key;
+      var cls = (c.cls ? c.cls + ' ' : '') + (c.sortable ? 'sortable ' : '') + (sorted ? 'active' : '');
+      var attrs = c.sortable
+        ? ' data-key="' + esc(c.key) + '" title="' + esc((c.title ? c.title + ' - ' : '') + 'click to sort') +
+          '" aria-sort="' + (sorted ? (sortDirection === 'asc' ? 'ascending' : 'descending') : 'none') + '"'
+        : '';
+      var arrow = sorted ? ' <span class="arrow">' + (sortDirection === 'asc' ? '\u2191' : '\u2193') + '</span>' : '';
+      return '<th class="' + cls.trim() + '"' + attrs + '>' + esc(c.label) + arrow + '</th>';
+    }).join('');
+    return '<table class="alert-table">' +
+      '<colgroup><col class="c-name"><col class="c-num"><col class="c-num">' +
+      '<col class="c-hi"><col class="c-hi"><col class="c-num"><col class="c-x"></colgroup>' +
+      '<thead><tr>' + head + '</tr></thead><tbody>' + bodyHtml + '</tbody></table>';
+  }
+
+  function placeholderHtml(text){
+    return tableHtml('<tr><td class="empty" colspan="' + COLUMNS.length + '">' + esc(text) + '</td></tr>');
+  }
+
+  function rowHtml(a){
+    var active = selected && selected.id
+      ? selected.id === a.id
+      : !!(selected && selected.description === a.description && selected.alert_price === a.alert_price);
+    var confirming = a.id && pendingDelete === a.id;
+    var names = [a.company_cn, a.company].filter(function(v, i, arr){ return v && arr.indexOf(v) === i; }).join(' \u00b7 ');
+    var tip = [a.description, names, a.exchange_full || a.exchange,
+               a.created_at ? 'added ' + a.created_at.slice(0, 10) : '']
+      .filter(function(v){ return v; }).join(' \u00b7 ');
+    var moveTip = a.diff_abs == null ? '' : 'Alert trigger sits ' + fmt(Math.abs(a.diff_abs), 2) +
+      (a.diff_abs >= 0 ? ' above' : ' below') + ' the current price';
+    var action = !a.id ? '' :
+      '<button class="row-delete' + (confirming ? ' confirm' : '') + '" data-id="' + esc(a.id) + '" type="button" ' +
+      'title="' + (confirming ? 'Click again to delete this alert' : 'Delete this alert (its history is kept)') + '" ' +
+      'aria-label="' + (confirming ? 'Confirm delete ' : 'Delete ') + esc(a.description) + '">' +
+      (confirming ? 'Delete?' : '&times;') + '</button>';
+    return '<tr class="alert-row' + (active ? ' active' : '') + (confirming ? ' confirming' : '') + '" data-index="' + a.index + '">' +
+      '<td class="col-name"' + (tip ? ' title="' + esc(tip) + '"' : '') + '>' +
+        '<div class="name-cell">' +
+        '<span class="sym">' + esc(a.ticker || a.yf_symbol) + '</span>' +
+        (names ? '<span class="co">' + esc(names) + '</span>' : '') +
+        (a.exchange ? '<span class="exch ' + exchangeCls(a.exchange) + '" title="' + esc(a.exchange_full || a.exchange) + '">' + esc(a.exchange) + '</span>' : '') +
+        '</div></td>' +
+      '<td class="num last">' + fmt(a.current_price, 2) + '</td>' +
+      '<td class="num alert-price">' + fmt(a.alert_price, 2) + '</td>' +
+      '<td class="num col-hi">' + fmt(a.low_1y, 2) + '</td>' +
+      '<td class="num col-hi">' + fmt(a.high_1y, 2) + '</td>' +
+      '<td class="num mv ' + directionCls(a.diff_pct) + '"' + (moveTip ? ' title="' + esc(moveTip) + '"' : '') + '>' +
+        fmtPct(a.diff_pct) + '</td>' +
+      '<td class="cell-x">' + action + '</td>' +
+      '</tr>';
   }
 
   function renderAlerts(){
     var rows = filteredAlerts();
-    els.sortDirection.textContent = String.fromCharCode(sortDirection === 'asc' ? 8593 : 8595);
-    els.sortDirection.title = sortDirection === 'asc' ? 'Ascending: lowest move first' : 'Descending: highest move first';
-    els.sortDirection.setAttribute('aria-label', sortDirection === 'asc' ? 'Sort move ascending' : 'Sort move descending');
-    if(!rows.length){
-      els.list.innerHTML = '<div class="empty">No matching alerts.</div>';
-      return;
-    }
-    els.list.innerHTML = rows.map(function(a){
-      var active = selected && selected.id
-        ? selected.id === a.id
-        : !!(selected && selected.description === a.description && selected.alert_price === a.alert_price);
-      var diffClass = directionCls(a.diff_pct);
-      var addedDate = a.created_at ? a.created_at.slice(0, 10) : '';
-      var meta = [a.company_cn, a.company, a.exchange_full || a.exchange,
-                  addedDate ? 'added ' + addedDate : '']
-        .filter(function(v, i, arr){ return v && arr.indexOf(v) === i; }).join(' · ');
-      var confirming = a.id && pendingDelete === a.id;
-      var action = !a.id ? '' :
-        '<button class="row-delete' + (confirming ? ' confirm' : '') + '" data-id="' + esc(a.id) + '" type="button" ' +
-        'title="' + (confirming ? 'Click again to delete this alert' : 'Delete this alert (its history is kept)') + '" ' +
-        'aria-label="' + (confirming ? 'Confirm delete ' : 'Delete ') + esc(a.description) + '">' +
-        (confirming ? 'Delete?' : '&times;') + '</button>';
-      return '<div class="alert-row-wrap' + (confirming ? ' confirming' : '') + '">' +
-        '<button class="alert-row' + (active ? ' active' : '') + '" data-index="' + a.index + '" type="button">' +
-        '<div class="alert-head"><div class="head-main">' +
-        '<span class="desc">' + esc(a.description) + '</span>' +
-        '<span class="company-line">' +
-        (a.company_cn
-          ? '<span class="company cn" title="' + esc(meta) + '">' + esc(a.company_cn) + '</span>' +
-            (a.company ? '<span class="company-en" title="' + esc(meta) + '">' + esc(a.company) + '</span>' : '')
-          : (a.company ? '<span class="company" title="' + esc(meta) + '">' + esc(a.company) + '</span>' : '')) +
-        (a.exchange ? '<span class="exch ' + exchangeCls(a.exchange) + '" title="' + esc(a.exchange_full || a.exchange) + '">' + esc(a.exchange) + '</span>' : '') +
-        '</span>' +
-        '</div>' +
-        '<span class="pct ' + diffClass + '">' + fmtPct(a.diff_pct) + '</span></div>' +
-        '<div class="price-grid">' +
-        '<div class="metric current"><span class="metric-label">Current</span><span class="metric-value">' + fmt(a.current_price, 2) + '</span></div>' +
-        '<div class="metric"><span class="metric-label">Alert</span><span class="metric-value">' + fmt(a.alert_price, 2) + '</span></div>' +
-        '<div class="metric"><span class="metric-label">1Y Low</span><span class="metric-value">' + fmt(a.low_1y, 2) + '</span></div>' +
-        '<div class="metric"><span class="metric-label">1Y High</span><span class="metric-value">' + fmt(a.high_1y, 2) + '</span></div>' +
-        '</div></button>' + action +
-        '</div>';
-    }).join('');
+    els.list.innerHTML = rows.length
+      ? tableHtml(rows.map(rowHtml).join(''))
+      : placeholderHtml('No matching alerts.');
   }
 
   async function loadHistory(alert){
@@ -638,7 +697,7 @@
   async function loadAlerts(refresh){
     var previousId = selected && selected.id ? selected.id : '';
     var previous = selected ? selected.description + '|' + selected.alert_price : '';
-    els.list.innerHTML = '<div class="loading">Loading alerts...</div>';
+    els.list.innerHTML = placeholderHtml('Loading alerts...');
     var params = [];
     if(refresh) params.push('refresh=1');
     var url = '/alert-monitor/api/alerts' + (params.length ? '?' + params.join('&') : '');
@@ -664,6 +723,15 @@
     });
   });
   els.list.addEventListener('click', function(e){
+    var th = e.target.closest('th.sortable');
+    if(th){
+      var key = th.getAttribute('data-key');
+      if(key === sortKey) sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+      else { sortKey = key; sortDirection = key === 'name' ? 'asc' : 'desc'; }
+      pendingDelete = '';
+      renderAlerts();
+      return;
+    }
     var del = e.target.closest('.row-delete');
     if(del){
       var id = del.getAttribute('data-id');
@@ -708,10 +776,6 @@
   });
   els.addPrice.addEventListener('keydown', function(e){
     if(e.key === 'Escape') closeAddForm();
-  });
-  els.sortDirection.addEventListener('click', function(){
-    sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
-    renderAlerts();
   });
   document.getElementById('zoomIn').addEventListener('click', function(){ zoom(1.25); });
   document.getElementById('zoomOut').addEventListener('click', function(){ zoom(0.8); });
