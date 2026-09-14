@@ -86,13 +86,24 @@
   .sort-dir { min-width:32px; padding:0 8px; font-size:1rem; font-weight:750; }
   .sort-label { color:#aeb4bc; font-size:.82rem; font-weight:650; padding-left:4px; }
   .alert-list { min-width:0; min-height:0; justify-self:stretch; overflow-x:hidden; overflow-y:auto; }
+  .alert-row-wrap { position:relative; }
   .alert-row {
     width:100%; box-sizing:border-box; display:block; text-align:left;
     background:transparent; color:var(--fg); border:0; border-bottom:1px solid var(--line); padding:14px;
   }
   .alert-row:hover { background:#161a1e; }
   .alert-row.active { background:#1a1f25; box-shadow:inset 3px 0 0 var(--blue); }
-  .alert-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:baseline; }
+  .row-delete {
+    position:absolute; top:10px; right:10px; height:22px; min-width:22px; padding:0 6px;
+    display:inline-flex; align-items:center; justify-content:center;
+    border:1px solid transparent; border-radius:6px; background:transparent;
+    color:#6f767f; font-size:.98rem; font-weight:650; line-height:1;
+  }
+  .row-delete:hover { background:#2a2f35; color:#fff; border-color:#3a4048; }
+  .row-delete.confirm { color:#ff8a9b; border-color:#7d3038; background:rgba(255,71,95,.14); font-size:.72rem; }
+  .row-delete.confirm:hover { background:rgba(255,71,95,.26); color:#ffd7dd; }
+  .alert-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:baseline; padding-right:26px; }
+  .alert-row-wrap.confirming .alert-head { padding-right:64px; }
   .head-main { min-width:0; display:flex; flex-direction:column; gap:4px; }
   .desc { font-size:.96rem; line-height:1.2; color:#d4d7dc; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .company-line { display:flex; align-items:center; gap:6px; min-width:0; }
@@ -193,6 +204,7 @@
   var searchText = '';
   var exchangeFilter = '';
   var focusId = '';
+  var pendingDelete = '';
   var EXCHANGE_ORDER = ['NASDAQ', 'NYSE', 'NYSE Arca', 'A-Share', 'HKEX'];
   var view = { start: 0, end: 0 };
   var drag = null;
@@ -262,6 +274,20 @@
     els.addToggle.classList.remove('active');
     els.addToggle.setAttribute('aria-expanded', 'false');
     setAddStatus('');
+  }
+
+  async function deleteAlert(id){
+    try {
+      var res = await fetch('/alert-monitor/api/alerts/' + encodeURIComponent(id), { method: 'DELETE' });
+      var data = await res.json();
+      if(!data.ok) throw new Error(data.error || 'Could not delete the alert.');
+      pendingDelete = '';
+      await loadAlerts(false);
+    } catch(err) {
+      pendingDelete = '';
+      renderAlerts();
+      window.alert(err.message);
+    }
   }
 
   async function submitAddAlert(e){
@@ -359,7 +385,9 @@
       var active = selected && selected.description === a.description && selected.alert_price === a.alert_price;
       var diffClass = directionCls(a.diff_pct);
       var meta = [a.company, a.exchange_full || a.exchange].filter(Boolean).join(' · ');
-      return '<button class="alert-row ' + (active ? 'active' : '') + '" data-index="' + a.index + '" type="button">' +
+      var confirming = a.id && pendingDelete === a.id;
+      return '<div class="alert-row-wrap' + (confirming ? ' confirming' : '') + '">' +
+        '<button class="alert-row ' + (active ? 'active' : '') + '" data-index="' + a.index + '" type="button">' +
         '<div class="alert-head"><div class="head-main">' +
         '<span class="desc">' + esc(a.description) + '</span>' +
         '<span class="company-line">' +
@@ -372,7 +400,12 @@
         '<div class="metric"><span class="metric-label">Alert</span><span class="metric-value">' + fmt(a.alert_price, 2) + '</span></div>' +
         '<div class="metric"><span class="metric-label">1Y Low</span><span class="metric-value">' + fmt(a.low_1y, 2) + '</span></div>' +
         '<div class="metric"><span class="metric-label">1Y High</span><span class="metric-value">' + fmt(a.high_1y, 2) + '</span></div>' +
-        '</div></button>';
+        '</div></button>' +
+        (a.id ? '<button class="row-delete' + (confirming ? ' confirm' : '') + '" data-id="' + esc(a.id) + '" type="button" ' +
+          'title="' + (confirming ? 'Click again to delete this alert' : 'Delete this alert') + '" ' +
+          'aria-label="' + (confirming ? 'Confirm delete ' : 'Delete ') + esc(a.description) + '">' +
+          (confirming ? 'Delete?' : '&times;') + '</button>' : '') +
+        '</div>';
     }).join('');
   }
 
@@ -587,6 +620,7 @@
     var url = '/alert-monitor/api/alerts' + (refresh ? '?refresh=1' : '');
     var res = await fetch(url).then(function(r){ return r.json(); });
     alerts = res.alerts || [];
+    pendingDelete = '';
     selected = alerts.find(function(a){ return focusId && a.id === focusId; })
       || alerts.find(function(a){ return previous && previous === a.description + '|' + a.alert_price; })
       || alerts[0] || null;
@@ -605,17 +639,31 @@
     });
   });
   els.list.addEventListener('click', function(e){
+    var del = e.target.closest('.row-delete');
+    if(del){
+      var id = del.getAttribute('data-id');
+      if(pendingDelete === id){ deleteAlert(id); return; }
+      pendingDelete = id;
+      renderAlerts();
+      return;
+    }
     var row = e.target.closest('.alert-row');
     if(!row) return;
+    if(pendingDelete){ pendingDelete = ''; renderAlerts(); }
     loadHistory(alerts[Number(row.getAttribute('data-index'))]);
   });
-  els.search.addEventListener('input', function(){ searchText = els.search.value; renderAlerts(); });
+  els.search.addEventListener('input', function(){
+    searchText = els.search.value;
+    pendingDelete = '';
+    renderAlerts();
+  });
   els.exchangeFilters.addEventListener('click', function(e){
     var chip = e.target.closest('.chip');
     if(!chip) return;
     var next = chip.getAttribute('data-exchange') || '';
     if(next === exchangeFilter) return;
     exchangeFilter = next;
+    pendingDelete = '';
     renderExchangeFilters();
     renderAlerts();
   });
@@ -685,6 +733,9 @@
     if(!drag && hoveredDate){ hoveredDate = ''; drawChart(); }
   });
   window.addEventListener('resize', resizeCanvas);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && pendingDelete){ pendingDelete = ''; renderAlerts(); }
+  });
 
   syncNavHeight();
   resizeCanvas();

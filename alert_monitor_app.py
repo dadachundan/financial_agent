@@ -141,23 +141,17 @@ def _resolve_exchange(alert: AlertSeed) -> tuple[str, str]:
 
 
 # -- User-added alerts ---------------------------------------------------------
-# Stored as a JSON list beside this module so they survive a restart. Each entry
-# keeps the yfinance symbol plus the company / venue resolved when it was added.
+# Stored as JSON beside this module so they survive a restart: the alerts the
+# user added, plus the ids of seeded alerts the user deleted. Each entry keeps
+# the yfinance symbol and the company / venue resolved when it was added.
 _STORE_PATH = pathlib.Path(__file__).with_name("alert_monitor_alerts.json")
 _store_lock = threading.Lock()
 
 _EXCHANGE_SUFFIXES = ("HK", "SS", "SH", "SZ", "BJ")
 
 
-def _load_user_alerts() -> list[dict[str, Any]]:
-    """Read the persisted alerts, skipping malformed entries."""
-    try:
-        raw = json.loads(_STORE_PATH.read_text(encoding="utf-8"))
-    except FileNotFoundError:
-        return []
-    except Exception as exc:
-        print(f"[alert_monitor] could not read {_STORE_PATH.name}: {exc}")
-        return []
+def _parse_alerts(raw: Any) -> list[dict[str, Any]]:
+    """Keep the well-formed alert records, drop anything malformed."""
     if not isinstance(raw, list):
         return []
     out: list[dict[str, Any]] = []
@@ -188,18 +182,56 @@ def _load_user_alerts() -> list[dict[str, Any]]:
     return out
 
 
-def _write_user_alerts(items: list[dict[str, Any]]) -> None:
+def _load_store() -> tuple[list[dict[str, Any]], list[str]]:
+    """Return (user alerts, hidden seed ids). A bare list is the legacy format."""
+    try:
+        raw = json.loads(_STORE_PATH.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return [], []
+    except Exception as exc:
+        print(f"[alert_monitor] could not read {_STORE_PATH.name}: {exc}")
+        return [], []
+    if isinstance(raw, list):  # legacy: alerts only
+        return _parse_alerts(raw), []
+    if not isinstance(raw, dict):
+        return [], []
+    hidden = raw.get("hidden_seeds")
+    return (
+        _parse_alerts(raw.get("alerts")),
+        [str(x) for x in hidden if isinstance(x, str)] if isinstance(hidden, list) else [],
+    )
+
+
+def _save_store(alerts: list[dict[str, Any]], hidden: list[str]) -> None:
     tmp = _STORE_PATH.with_name(_STORE_PATH.name + ".tmp")
-    tmp.write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    tmp.write_text(
+        json.dumps({"alerts": alerts, "hidden_seeds": hidden}, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
     tmp.replace(_STORE_PATH)
 
 
+def seed_ids() -> list[str]:
+    """Stable ids for ALERTS, keyed on the symbol so reordering keeps them valid."""
+    ids: list[str] = []
+    seen: dict[str, int] = {}
+    for seed in ALERTS:
+        base = f"seed-{seed.yf_symbol}"
+        seen[base] = seen.get(base, 0) + 1
+        ids.append(base if seen[base] == 1 else f"{base}#{seen[base]}")
+    return ids
+
+
 def all_alerts() -> list[tuple[str, AlertSeed]]:
-    """Seeded alerts first, then the user's, each paired with a stable id."""
+    """Seeded alerts still visible, then the user's, each paired with its id."""
+    rows, hidden = _load_store()
+    hidden_set = set(hidden)
     items: list[tuple[str, AlertSeed]] = [
-        (f"seed-{i}", seed) for i, seed in enumerate(ALERTS)
+        (seed_id, seed)
+        for seed_id, seed in zip(seed_ids(), ALERTS)
+        if seed_id not in hidden_set
     ]
-    for row in _load_user_alerts():
+    for row in rows:
         items.append((row["id"], AlertSeed(
             row["ticker"], row["yf_symbol"], row["description"], row["alert_price"],
             row["company"], row["exchange"], row["exchange_full"],
@@ -346,17 +378,32 @@ def api_add_alert():
         "created_at": datetime.now().isoformat(timespec="seconds"),
     }
     with _store_lock:
-        items = _load_user_alerts()
+        items, hidden = _load_store()
         if any(r["yf_symbol"] == yf_symbol and r["alert_price"] == price for r in items):
             return jsonify({"ok": False,
                             "error": f"{yf_symbol} already has an alert at {price:,.2f}."}), 409
         items.append(entry)
-        _write_user_alerts(items)
+        _save_store(items, hidden)
 
     alert = AlertSeed(entry["ticker"], entry["yf_symbol"], entry["description"],
                       entry["alert_price"], entry["company"], entry["exchange"],
                       entry["exchange_full"])
     return jsonify({"ok": True, "alert": _alert_payload(alert, entry["id"])})
+
+
+@alert_monitor_bp.route("/api/alerts/<path:alert_id>", methods=["DELETE"])
+def api_delete_alert(alert_id: str):
+    """Remove an alert: user alerts are dropped, seeded ones are hidden."""
+    with _store_lock:
+        items, hidden = _load_store()
+        kept = [r for r in items if r["id"] != alert_id]
+        if len(kept) != len(items):
+            _save_store(kept, hidden)
+            return jsonify({"ok": True, "deleted": alert_id})
+        if alert_id in seed_ids() and alert_id not in hidden:
+            _save_store(items, hidden + [alert_id])
+            return jsonify({"ok": True, "deleted": alert_id})
+    return jsonify({"ok": False, "error": "Alert not found."}), 404
 
 
 @alert_monitor_bp.route("/api/history/<path:yf_symbol>")
