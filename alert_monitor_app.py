@@ -2,10 +2,18 @@
 
 Shows a pannable/zoomable price chart and a sortable alert list enriched with
 current-price distance to each alert trigger.
+
+The list is the seeded TradingView alerts in ALERTS plus alerts the user adds
+through the UI, which are persisted in alert_monitor_alerts.json.
 """
 from __future__ import annotations
 
+import json
+import pathlib
+import threading
+import uuid
 from dataclasses import asdict, dataclass
+from datetime import datetime
 from functools import lru_cache
 from typing import Any
 
@@ -132,6 +140,101 @@ def _resolve_exchange(alert: AlertSeed) -> tuple[str, str]:
     return profile["exchange"] or "US", profile["exchange_full"] or profile["exchange"] or "US"
 
 
+# -- User-added alerts ---------------------------------------------------------
+# Stored as a JSON list beside this module so they survive a restart. Each entry
+# keeps the yfinance symbol plus the company / venue resolved when it was added.
+_STORE_PATH = pathlib.Path(__file__).with_name("alert_monitor_alerts.json")
+_store_lock = threading.Lock()
+
+_EXCHANGE_SUFFIXES = ("HK", "SS", "SH", "SZ", "BJ")
+
+
+def _load_user_alerts() -> list[dict[str, Any]]:
+    """Read the persisted alerts, skipping malformed entries."""
+    try:
+        raw = json.loads(_STORE_PATH.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return []
+    except Exception as exc:
+        print(f"[alert_monitor] could not read {_STORE_PATH.name}: {exc}")
+        return []
+    if not isinstance(raw, list):
+        return []
+    out: list[dict[str, Any]] = []
+    for item in raw:
+        if not isinstance(item, dict):
+            continue
+        yf_symbol = str(item.get("yf_symbol") or "").strip()
+        if not yf_symbol:
+            continue
+        try:
+            price = float(item.get("alert_price"))
+        except (TypeError, ValueError):
+            continue
+        if price <= 0:
+            continue
+        ticker = str(item.get("ticker") or yf_symbol).strip() or yf_symbol
+        out.append({
+            "id": str(item.get("id") or f"user-{uuid.uuid4().hex[:8]}"),
+            "ticker": ticker,
+            "yf_symbol": yf_symbol,
+            "description": str(item.get("description") or f"{ticker} Crossing {price:,.2f}"),
+            "alert_price": price,
+            "company": str(item.get("company") or ""),
+            "exchange": str(item.get("exchange") or ""),
+            "exchange_full": str(item.get("exchange_full") or ""),
+            "created_at": str(item.get("created_at") or ""),
+        })
+    return out
+
+
+def _write_user_alerts(items: list[dict[str, Any]]) -> None:
+    tmp = _STORE_PATH.with_name(_STORE_PATH.name + ".tmp")
+    tmp.write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    tmp.replace(_STORE_PATH)
+
+
+def all_alerts() -> list[tuple[str, AlertSeed]]:
+    """Seeded alerts first, then the user's, each paired with a stable id."""
+    items: list[tuple[str, AlertSeed]] = [
+        (f"seed-{i}", seed) for i, seed in enumerate(ALERTS)
+    ]
+    for row in _load_user_alerts():
+        items.append((row["id"], AlertSeed(
+            row["ticker"], row["yf_symbol"], row["description"], row["alert_price"],
+            row["company"], row["exchange"], row["exchange_full"],
+        )))
+    return items
+
+
+def _symbol_candidates(raw: str) -> list[tuple[str, str]]:
+    """Turn user input into (yfinance symbol, display ticker) guesses, best first."""
+    text = raw.strip().upper().replace(" ", "")
+    if not text:
+        return []
+    if "." in text:
+        base, _, suffix = text.partition(".")
+        if suffix in _EXCHANGE_SUFFIXES:
+            return [(text, base)]
+        return [(text, text)]
+    if text.isdigit():
+        if len(text) >= 6:  # A-share board code
+            first = "SS" if text.startswith("6") else ("BJ" if text[0] in "48" else "SZ")
+            order = [first] + [s for s in ("SS", "SZ", "BJ") if s != first]
+            return [(f"{text}.{s}", text) for s in order]
+        # Hong Kong codes are quoted with four digits on Yahoo
+        return [(f"{text.zfill(4)}.HK", text)]
+    return [(text, text)]
+
+
+def resolve_symbol(raw: str) -> tuple[str, str] | None:
+    """Resolve user input to a live (yfinance symbol, display ticker)."""
+    for yf_symbol, ticker in _symbol_candidates(raw):
+        if _market_snapshot(yf_symbol).get("price"):
+            return yf_symbol, ticker
+    return None
+
+
 def _safe_float(value: Any) -> float | None:
     try:
         if value is None:
@@ -172,8 +275,9 @@ def _market_snapshot(yf_symbol: str) -> dict[str, Any]:
         return {"price": None, "currency": "", "high_1y": None, "low_1y": None, "error": str(exc)}
 
 
-def _alert_payload(alert: AlertSeed) -> dict[str, Any]:
+def _alert_payload(alert: AlertSeed, alert_id: str = "") -> dict[str, Any]:
     d = asdict(alert)
+    d["id"] = alert_id
     d["company"] = _resolve_company(alert)
     d["exchange"], d["exchange_full"] = _resolve_exchange(alert)
     px = _market_snapshot(alert.yf_symbol)
@@ -206,7 +310,53 @@ def api_alerts():
     refresh = request.args.get("refresh") == "1"
     if refresh:
         _market_snapshot.cache_clear()
-    return jsonify({"alerts": [_alert_payload(a) for a in ALERTS]})
+    return jsonify({"alerts": [_alert_payload(a, i) for i, a in all_alerts()]})
+
+
+@alert_monitor_bp.route("/api/alerts", methods=["POST"])
+def api_add_alert():
+    """Add an alert from a symbol and a target price."""
+    payload = request.get_json(silent=True) or {}
+    raw_symbol = str(payload.get("symbol") or "").strip()
+    if not raw_symbol:
+        return jsonify({"ok": False, "error": "Enter a symbol."}), 400
+    try:
+        price = float(payload.get("alert_price"))
+    except (TypeError, ValueError):
+        return jsonify({"ok": False, "error": "Enter a target price."}), 400
+    if not price > 0:
+        return jsonify({"ok": False, "error": "Target price must be greater than zero."}), 400
+
+    resolved = resolve_symbol(raw_symbol)
+    if not resolved:
+        return jsonify({"ok": False,
+                        "error": f"No market data found for \u201c{raw_symbol}\u201d."}), 400
+    yf_symbol, ticker = resolved
+    seed = AlertSeed(ticker, yf_symbol, f"{ticker} Crossing {price:,.2f}", price)
+    exchange, exchange_full = _resolve_exchange(seed)
+    entry = {
+        "id": f"user-{uuid.uuid4().hex[:8]}",
+        "ticker": ticker,
+        "yf_symbol": yf_symbol,
+        "description": seed.description,
+        "alert_price": price,
+        "company": _resolve_company(seed),
+        "exchange": exchange,
+        "exchange_full": exchange_full,
+        "created_at": datetime.now().isoformat(timespec="seconds"),
+    }
+    with _store_lock:
+        items = _load_user_alerts()
+        if any(r["yf_symbol"] == yf_symbol and r["alert_price"] == price for r in items):
+            return jsonify({"ok": False,
+                            "error": f"{yf_symbol} already has an alert at {price:,.2f}."}), 409
+        items.append(entry)
+        _write_user_alerts(items)
+
+    alert = AlertSeed(entry["ticker"], entry["yf_symbol"], entry["description"],
+                      entry["alert_price"], entry["company"], entry["exchange"],
+                      entry["exchange_full"])
+    return jsonify({"ok": True, "alert": _alert_payload(alert, entry["id"])})
 
 
 @alert_monitor_bp.route("/api/history/<path:yf_symbol>")
