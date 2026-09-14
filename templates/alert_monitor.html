@@ -567,7 +567,8 @@
     var span = Math.max(0.01, hi - lo);
     hi += span * 0.08;
     lo -= span * 0.08;
-    var xFor = function(i){ return pad.left + (i + 0.5) * (plotW / vbars.length); };
+    var slot = plotW / Math.max(1, view.end - view.start);
+    var xFor = function(i){ return pad.left + (i + 0.5 - view.start) * slot; };
     var yFor = function(v){ return pad.top + ((hi - v) / (hi - lo)) * plotH; };
     var ticks = niceTicks(lo, hi, 6);
 
@@ -596,9 +597,10 @@
     ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
     ctx.fillText(fmt(selected.alert_price, 2), w - pad.right + 10, alertY);
 
-    var slot = plotW / vbars.length;
+    var baseIdx = Math.max(0, Math.floor(view.start));
     var bodyW = Math.max(2, Math.min(12, slot * 0.62));
-    vbars.forEach(function(b, i){
+    vbars.forEach(function(b, k){
+      var i = baseIdx + k;
       var o = Number(b.open), c = Number(b.close), high = Number(b.high), low = Number(b.low);
       if(!isFinite(o) || !isFinite(c) || !isFinite(high) || !isFinite(low)) return;
       var x = xFor(i);
@@ -618,10 +620,10 @@
       }
     });
 
-    var hoverIndex = hoveredDate ? vbars.findIndex(function(b){ return b.date === hoveredDate; }) : -1;
-    if(hoverIndex >= 0){
-      var hoverBar = vbars[hoverIndex];
-      var hoverX = xFor(hoverIndex);
+    var hoverRel = hoveredDate ? vbars.findIndex(function(b){ return b.date === hoveredDate; }) : -1;
+    if(hoverRel >= 0){
+      var hoverBar = vbars[hoverRel];
+      var hoverX = xFor(baseIdx + hoverRel);
       var hoverY = yFor(Number(hoverBar.close));
       ctx.save();
       ctx.strokeStyle = 'rgba(215,219,225,.65)';
@@ -652,49 +654,67 @@
     ctx.fillStyle = '#8d949d';
     ctx.textAlign = 'center'; ctx.textBaseline = 'top';
     var labelEvery = Math.max(1, Math.ceil(vbars.length / 7));
-    vbars.forEach(function(b, i){
-      if(i % labelEvery !== 0 && i !== vbars.length - 1) return;
-      if(hoverIndex >= 0 && Math.abs(i - hoverIndex) < Math.max(1, labelEvery / 2)) return;
-      ctx.fillText(b.date.slice(5), xFor(i), h - pad.bottom + 14);
+    vbars.forEach(function(b, k){
+      if(k % labelEvery !== 0 && k !== vbars.length - 1) return;
+      if(hoverRel >= 0 && Math.abs(k - hoverRel) < Math.max(1, labelEvery / 2)) return;
+      ctx.fillText(b.date.slice(5), xFor(baseIdx + k), h - pad.bottom + 14);
     });
 
     ctx.strokeStyle = '#303640';
     ctx.strokeRect(pad.left, pad.top, plotW, plotH);
 
-    var lastBar = hoverIndex >= 0 ? vbars[hoverIndex] : bars[bars.length - 1];
-    var first = Number(bars[0].close);
-    var last = Number(lastBar.close);
-    var chg = hoverIndex >= 0
-      ? (Number(lastBar.open) ? ((last - Number(lastBar.open)) / Number(lastBar.open)) * 100 : null)
-      : (first ? ((last - first) / first) * 100 : null);
-    els.chartQuote.innerHTML = (hoverIndex >= 0 ? '<span class="hover-date">' + esc(lastBar.date) + '</span>' : '') +
-      '<span>O ' + fmt(lastBar.open, 2) + '</span>' +
-      '<span>H ' + fmt(lastBar.high, 2) + '</span>' +
-      '<span>L ' + fmt(lastBar.low, 2) + '</span>' +
+    // Header quotes the referenced bar (hovered one, else the newest) and shows
+    // its 1D change: close vs the previous close -- the same metric the
+    // watchlist's "1D %" column uses, so both panels always agree.
+    var refRel = hoverRel >= 0 ? hoverRel : vbars.length - 1;
+    var refBar = vbars[refRel] || bars[bars.length - 1];
+    var refAbs = baseIdx + refRel;
+    var last = Number(refBar.close);
+    var prevClose = refAbs > 0 ? Number(bars[refAbs - 1].close) : NaN;
+    var chg = isFinite(prevClose) && prevClose > 0
+      ? ((last - prevClose) / prevClose) * 100
+      : (Number(refBar.open) ? ((last - Number(refBar.open)) / Number(refBar.open)) * 100 : null);
+    els.chartQuote.innerHTML = '<span class="hover-date">' + esc(refBar.date) + '</span>' +
+      '<span>O ' + fmt(refBar.open, 2) + '</span>' +
+      '<span>H ' + fmt(refBar.high, 2) + '</span>' +
+      '<span>L ' + fmt(refBar.low, 2) + '</span>' +
       '<span>C ' + fmt(last, 2) + '</span>' +
       '<span class="' + directionCls(chg) + '">' + fmtPct(chg) + '</span>' +
       '<span>Alert ' + fmt(selected.alert_price, 2) + '</span>';
   }
 
+  // Blank space the view may reach past the data on either side, so the chart
+  // can be panned beyond the newest bar like on TradingView (15% of the data,
+  // at least a few bars).
+  function overPad(){
+    return Math.max(5, Math.round(bars.length * 0.15));
+  }
+  function clampView(){
+    var pad = overPad();
+    var len = Math.max(12, Math.min(bars.length + 2 * pad, view.end - view.start));
+    view.start = Math.max(-pad, Math.min(bars.length + pad - len, view.start));
+    view.end = view.start + len;
+  }
+  function resetView(){
+    view.start = 0;
+    view.end = bars.length;
+    clampView();
+  }
+
   function zoom(factor){
     if(!bars.length) return;
-    var len = view.end - view.start;
     var center = (view.start + view.end) / 2;
-    var next = Math.max(12, Math.min(bars.length, len / factor));
-    view.start = Math.max(0, center - next / 2);
-    view.end = Math.min(bars.length, center + next / 2);
-    if(view.end - view.start < next){
-      if(view.start === 0) view.end = Math.min(bars.length, next);
-      if(view.end === bars.length) view.start = Math.max(0, bars.length - next);
-    }
+    var next = Math.max(12, (view.end - view.start) / factor);
+    view.start = center - next / 2;
+    view.end = center + next / 2;
+    clampView();
     drawChart();
   }
 
   function pan(deltaBars){
     if(!bars.length) return;
-    var len = view.end - view.start;
-    view.start = Math.max(0, Math.min(bars.length - len, view.start + deltaBars));
-    view.end = view.start + len;
+    view.start += deltaBars;
+    clampView();
     drawChart();
   }
 
@@ -806,9 +826,13 @@
         if(hoveredDate){ hoveredDate = ''; drawChart(); }
         return;
       }
-      var slot = plotW / vbars.length;
-      var index = Math.max(0, Math.min(vbars.length - 1, Math.floor((x - CHART_PAD.left) / slot)));
-      if(hoveredDate !== vbars[index].date){ hoveredDate = vbars[index].date; drawChart(); }
+      var slot = plotW / Math.max(1, view.end - view.start);
+      var index = Math.floor((x - CHART_PAD.left) / slot + view.start);
+      if(index < 0 || index >= bars.length){
+        if(hoveredDate){ hoveredDate = ''; drawChart(); }
+        return;
+      }
+      if(hoveredDate !== bars[index].date){ hoveredDate = bars[index].date; drawChart(); }
       return;
     }
     var rect = els.canvas.getBoundingClientRect();
