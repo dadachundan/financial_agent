@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import pathlib
 import re
+import time
 import uuid
 from dataclasses import asdict, dataclass
 from functools import lru_cache
@@ -530,11 +531,21 @@ def api_restore_alert(alert_id: str):
     return jsonify({"ok": True, "id": alert_id, "obsolete_at": ""})
 
 
+# Same-day price history cache: (yf_symbol, period, calendar day) -> payload.
+# Reloading a series on the same day is served from memory; a new day (or
+# ?refresh=1) fetches fresh bars from Yahoo Finance again.
+_HISTORY_CACHE: dict[tuple[str, str, str], dict[str, Any]] = {}
+
+
 @alert_monitor_bp.route("/api/history/<path:yf_symbol>")
 def api_history(yf_symbol: str):
     period = request.args.get("period", "1y")
     if period not in {"1mo", "3mo", "6mo", "1y", "2y", "5y"}:
         period = "1y"
+    day = time.strftime("%Y-%m-%d")
+    key = (yf_symbol, period, day)
+    if request.args.get("refresh") != "1" and key in _HISTORY_CACHE:
+        return jsonify(_HISTORY_CACHE[key])
     try:
         import yfinance as yf
 
@@ -553,6 +564,11 @@ def api_history(yf_symbol: str):
                     "close": close,
                     "volume": _safe_float(row.get("Volume")),
                 })
-        return jsonify({"ok": bool(bars), "symbol": yf_symbol, "period": period, "bars": bars})
+        payload = {"ok": bool(bars), "symbol": yf_symbol, "period": period, "bars": bars}
+        if bars:
+            for stale in [k for k in _HISTORY_CACHE if k[:2] == key[:2] and k[2] != day]:
+                _HISTORY_CACHE.pop(stale, None)
+            _HISTORY_CACHE[key] = payload
+        return jsonify(payload)
     except Exception as exc:
         return jsonify({"ok": False, "symbol": yf_symbol, "period": period, "bars": [], "error": str(exc)}), 200
