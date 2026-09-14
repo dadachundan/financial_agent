@@ -515,8 +515,7 @@
       return;
     }
     bars = res.bars;
-    view.start = 0;
-    view.end = bars.length;
+    resetView();
     drawChart();
   }
 
@@ -665,12 +664,31 @@
 
     ctx.fillStyle = '#8d949d';
     ctx.textAlign = 'center'; ctx.textBaseline = 'top';
-    var labelEvery = Math.max(1, Math.ceil(vbars.length / 7));
-    vbars.forEach(function(b, k){
-      if(k % labelEvery !== 0 && k !== vbars.length - 1) return;
-      if(crossAbs >= 0 && Math.abs(baseIdx + k - crossAbs) < Math.max(1, labelEvery / 2)) return;
-      ctx.fillText(b.date.slice(5), xFor(baseIdx + k), h - pad.bottom + 14);
-    });
+    // X labels over the whole visible span: real dates for actual bars, then
+    // projected business days past the newest bar so the blank right side
+    // keeps a readable axis while dragging over today (TradingView-style).
+    var labelEvery = Math.max(1, Math.ceil((view.end - view.start) / 7));
+    var iFirst = Math.max(0, Math.floor(view.start));
+    var parts = bars[bars.length - 1].date.split('-');
+    var proj = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+    var crossSkip = Math.max(1, labelEvery / 2);
+    for(var li = iFirst; li < view.end; li++){
+      var isLast = li === bars.length - 1;
+      var isFuture = li >= bars.length;
+      if(isFuture){
+        // One business day per bar index, labeled or not, so future dates
+        // keep pace with the axis position.
+        do { proj.setDate(proj.getDate() + 1); } while(proj.getDay() === 0 || proj.getDay() === 6);
+      }
+      if(li % labelEvery !== iFirst % labelEvery && !isLast) continue;
+      // Skip any other tick that would crowd the always-shown newest date.
+      if(!isLast && Math.abs(li - (bars.length - 1)) < labelEvery * 0.6) continue;
+      if(!isFuture && crossAbs >= 0 && Math.abs(li - crossAbs) < crossSkip) continue;
+      var label = isFuture
+        ? ('0' + (proj.getMonth() + 1)).slice(-2) + '-' + ('0' + proj.getDate()).slice(-2)
+        : bars[li].date.slice(5);
+      ctx.fillText(label, xFor(li), h - pad.bottom + 14);
+    }
 
     ctx.strokeStyle = '#303640';
     ctx.strokeRect(pad.left, pad.top, plotW, plotH);
@@ -695,21 +713,31 @@
       '<span>Alert ' + fmt(selected.alert_price, 2) + '</span>';
   }
 
-  // Blank space the view may reach past the data on either side, so the chart
-  // can be panned beyond the newest bar like on TradingView (15% of the data,
-  // at least a few bars).
+  // Blank space the view may reach past the data. TradingView-style: a fixed
+  // gap right of the newest bar on open, and room to keep dragging into the
+  // future (projected dates on the axis) well beyond that gap.
   function overPad(){
     return Math.max(5, Math.round(bars.length * 0.15));
   }
+  function rightGap(){
+    return Math.max(4, Math.round(bars.length * 0.12));
+  }
+  function futurePad(){
+    return Math.max(15, Math.round(bars.length * 0.45));
+  }
   function clampView(){
-    var pad = overPad();
-    var len = Math.max(12, Math.min(bars.length + 2 * pad, view.end - view.start));
-    view.start = Math.max(-pad, Math.min(bars.length + pad - len, view.start));
+    var leftPad = overPad();
+    var rightPad = futurePad();
+    var len = Math.max(12, Math.min(bars.length + leftPad + rightPad, view.end - view.start));
+    // Scrolling into the blank future is allowed, but the newest bar must
+    // stay on the chart: never pan it off the left side of the plot.
+    view.start = Math.max(-leftPad,
+      Math.min(Math.min(view.start, bars.length - 1), bars.length + rightPad - len));
     view.end = view.start + len;
   }
   function resetView(){
     view.start = 0;
-    view.end = bars.length;
+    view.end = bars.length + rightGap();
     clampView();
   }
 
@@ -827,7 +855,7 @@
   });
   document.getElementById('zoomIn').addEventListener('click', function(){ zoom(1.25); });
   document.getElementById('zoomOut').addEventListener('click', function(){ zoom(0.8); });
-  document.getElementById('resetZoom').addEventListener('click', function(){ view.start = 0; view.end = bars.length; drawChart(); });
+  document.getElementById('resetZoom').addEventListener('click', function(){ resetView(); drawChart(); });
   els.canvas.addEventListener('wheel', function(e){
     e.preventDefault();
     zoom(e.deltaY < 0 ? 1.18 : 0.85);
