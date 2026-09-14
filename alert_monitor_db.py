@@ -8,6 +8,8 @@ distinguishes a seeded row from an added one.
 Deleting never removes a row -- it stamps ``obsolete_at``, so the history (what
 was tracked, when it was added, when it was retired) survives. ``created_at``
 is when the alert was added, ``obsolete_at`` is NULL while the alert is live.
+``company`` is the company's listing (English) name and ``company_cn`` its
+Chinese name, which only China-listed companies have.
 
 Paths resolve through :func:`db_paths.db_path`, so ``FINAGENT_DB_DIR``
 redirects writes to a sandbox copy during tests, per the *Database Safety* rule
@@ -32,7 +34,8 @@ CREATE TABLE IF NOT EXISTS alerts (
     yf_symbol     TEXT NOT NULL,             -- yfinance symbol, e.g. "6869.HK"
     description   TEXT NOT NULL,             -- "6869 Crossing 100.5"
     alert_price   REAL NOT NULL,
-    company       TEXT NOT NULL DEFAULT '',
+    company       TEXT NOT NULL DEFAULT '',  -- English / listing name
+    company_cn    TEXT NOT NULL DEFAULT '',  -- Chinese name, China listings only
     exchange      TEXT NOT NULL DEFAULT '',  -- short venue label, e.g. "HKEX"
     exchange_full TEXT NOT NULL DEFAULT '',  -- "Hong Kong Stock Exchange"
     created_at    TEXT NOT NULL,             -- when the alert was added (local ISO 8601)
@@ -49,7 +52,13 @@ CREATE UNIQUE INDEX IF NOT EXISTS uq_alerts_live
 """
 
 FIELDS = ("id", "ticker", "yf_symbol", "description", "alert_price",
-          "company", "exchange", "exchange_full", "created_at", "obsolete_at")
+          "company", "company_cn", "exchange", "exchange_full",
+          "created_at", "obsolete_at")
+
+# Columns added after the table was first created, applied on connect.
+_ADDED_COLUMNS: tuple[tuple[str, str], ...] = (
+    ("company_cn", "TEXT NOT NULL DEFAULT ''"),
+)
 
 
 class DuplicateAlert(Exception):
@@ -75,10 +84,19 @@ def _conn():
     con.row_factory = sqlite3.Row
     try:
         con.executescript(SCHEMA)
+        _migrate(con)
         yield con
         con.commit()
     finally:
         con.close()
+
+
+def _migrate(con: sqlite3.Connection) -> None:
+    """Add the columns a database created before them is still missing."""
+    have = {row[1] for row in con.execute("PRAGMA table_info(alerts)")}
+    for column, ddl in _ADDED_COLUMNS:
+        if column not in have:
+            con.execute(f"ALTER TABLE alerts ADD COLUMN {column} {ddl}")
 
 
 def _as_dict(row: sqlite3.Row) -> dict[str, Any]:
@@ -128,6 +146,7 @@ def insert_alert(row: dict[str, Any]) -> dict[str, Any]:
         "description": str(row["description"]),
         "alert_price": float(row["alert_price"]),
         "company": str(row.get("company") or ""),
+        "company_cn": str(row.get("company_cn") or ""),
         "exchange": str(row.get("exchange") or ""),
         "exchange_full": str(row.get("exchange_full") or ""),
         "created_at": str(row.get("created_at") or now_iso()),
@@ -141,6 +160,16 @@ def insert_alert(row: dict[str, Any]) -> dict[str, Any]:
     except sqlite3.IntegrityError as exc:
         raise DuplicateAlert(str(exc)) from exc
     return values
+
+
+def set_company_cn(alert_id: str, name: str) -> bool:
+    """Store the Chinese company name of one alert. False if nothing changed."""
+    with _conn() as c:
+        cur = c.execute(
+            "UPDATE alerts SET company_cn = ? WHERE id = ? AND company_cn = ''",
+            (name, alert_id),
+        )
+        return cur.rowcount > 0
 
 
 def set_obsolete(alert_id: str, when: str | None = None) -> str | None:

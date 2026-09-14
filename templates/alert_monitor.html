@@ -127,6 +127,10 @@
   .desc { font-size:.96rem; line-height:1.2; color:#d4d7dc; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .company-line { display:flex; align-items:center; gap:6px; min-width:0; }
   .company { min-width:0; font-size:.76rem; line-height:1.15; color:#8d949d; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  /* Chinese name first for China-listed companies, the English one dimmed after it.
+     The English name carries the shrink weight so the Chinese one stays readable. */
+  .company.cn { color:#c9ced5; }
+  .company-en { flex:1 100 auto; min-width:0; font-size:.72rem; line-height:1.15; color:#737a83; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .exch {
     flex:0 0 auto; font-size:.62rem; font-weight:750; letter-spacing:.05em; text-transform:uppercase;
     color:#9aa1aa; border:1px solid #333941; background:#1b1f23; border-radius:4px; padding:1px 5px;
@@ -229,7 +233,7 @@
   var focusId = '';
   var pendingDelete = '';
   var showObsolete = false;
-  var EXCHANGE_ORDER = ['NASDAQ', 'NYSE', 'NYSE Arca', 'A-Share', 'HKEX'];
+  var MARKET_ORDER = ['US', 'A-Share', 'HKEX', 'Other'];
   var view = { start: 0, end: 0 };
   var drag = null;
   var hoveredDate = '';
@@ -366,20 +370,22 @@
     if(k === 'NASDAQ') return 'exch-nasdaq';
     if(k === 'A-SHARE') return 'exch-ashare';
     if(k === 'HKEX') return 'exch-hkex';
-    if(k.indexOf('NYSE') === 0) return 'exch-nyse';
+    if(k.indexOf('NYSE') === 0 || k === 'AMEX' || k === 'BATS') return 'exch-nyse';
     return '';
   }
 
-  function exchangeList(){
+  // The chips filter by market (US / A-Share / HKEX / Other), not by venue:
+  // NASDAQ, NYSE and NYSE Arca are all "US".
+  function marketList(){
     var seen = {};
-    alerts.forEach(function(a){ if(a.exchange) seen[a.exchange] = true; });
-    var known = EXCHANGE_ORDER.filter(function(x){ return seen[x]; });
-    var extra = Object.keys(seen).filter(function(x){ return EXCHANGE_ORDER.indexOf(x) < 0; }).sort();
+    alerts.forEach(function(a){ if(a.market) seen[a.market] = true; });
+    var known = MARKET_ORDER.filter(function(x){ return seen[x]; });
+    var extra = Object.keys(seen).filter(function(x){ return MARKET_ORDER.indexOf(x) < 0; }).sort();
     return known.concat(extra);
   }
 
   function renderExchangeFilters(){
-    var list = exchangeList();
+    var list = marketList();
     if(exchangeFilter && list.indexOf(exchangeFilter) < 0) exchangeFilter = '';
     var html = '<button class="chip ' + (exchangeFilter ? '' : 'active') + '" data-exchange="" type="button">All</button>';
     list.forEach(function(ex){
@@ -401,11 +407,11 @@
     var q = searchText.trim().toLowerCase();
     var rows = alerts.map(function(a, i){ return Object.assign({index:i}, a); });
     if(exchangeFilter){
-      rows = rows.filter(function(a){ return a.exchange === exchangeFilter; });
+      rows = rows.filter(function(a){ return a.market === exchangeFilter; });
     }
     if(q){
       rows = rows.filter(function(a){
-        return [a.ticker, a.yf_symbol, a.description, a.company, a.exchange].join(' ').toLowerCase().indexOf(q) >= 0;
+        return [a.ticker, a.yf_symbol, a.description, a.company, a.company_cn, a.exchange].join(' ').toLowerCase().indexOf(q) >= 0;
       });
     }
     rows.sort(function(a,b){
@@ -436,9 +442,10 @@
       var obsolete = !!a.obsolete_at;
       var obsoleteDate = obsolete ? a.obsolete_at.slice(0, 10) : '';
       var addedDate = a.created_at ? a.created_at.slice(0, 10) : '';
-      var meta = [a.company, a.exchange_full || a.exchange,
+      var meta = [a.company_cn, a.company, a.exchange_full || a.exchange,
                   addedDate ? 'added ' + addedDate : '',
-                  obsoleteDate ? 'obsolete ' + obsoleteDate : ''].filter(Boolean).join(' · ');
+                  obsoleteDate ? 'obsolete ' + obsoleteDate : '']
+        .filter(function(v, i, arr){ return v && arr.indexOf(v) === i; }).join(' · ');
       var confirming = !obsolete && a.id && pendingDelete === a.id;
       var action = !a.id ? '' : (obsolete
         ? '<button class="row-restore" data-id="' + esc(a.id) + '" type="button" ' +
@@ -453,7 +460,10 @@
         '<div class="alert-head"><div class="head-main">' +
         '<span class="desc">' + esc(a.description) + '</span>' +
         '<span class="company-line">' +
-        (a.company ? '<span class="company" title="' + esc(meta) + '">' + esc(a.company) + '</span>' : '') +
+        (a.company_cn
+          ? '<span class="company cn" title="' + esc(meta) + '">' + esc(a.company_cn) + '</span>' +
+            (a.company ? '<span class="company-en" title="' + esc(meta) + '">' + esc(a.company) + '</span>' : '')
+          : (a.company ? '<span class="company" title="' + esc(meta) + '">' + esc(a.company) + '</span>' : '')) +
         (a.exchange ? '<span class="exch ' + exchangeCls(a.exchange) + '" title="' + esc(a.exchange_full || a.exchange) + '">' + esc(a.exchange) + '</span>' : '') +
         '</span>' +
         (obsolete ? '<span class="obsolete-tag" title="Deleted ' + esc(a.obsolete_at) + '">obsolete ' + esc(obsoleteDate) + '</span>' : '') +
@@ -474,9 +484,10 @@
     hoveredDate = '';
     els.symbol.textContent = alert.yf_symbol;
     els.chartName.textContent = alert.description;
-    els.chartMeta.textContent = [alert.company, alert.exchange_full || alert.exchange,
+    els.chartMeta.textContent = [alert.company_cn, alert.company, alert.exchange_full || alert.exchange,
       alert.created_at ? 'added ' + alert.created_at.slice(0, 10) : '',
-      alert.obsolete_at ? 'obsolete ' + alert.obsolete_at.slice(0, 10) : ''].filter(Boolean).join(' · ');
+      alert.obsolete_at ? 'obsolete ' + alert.obsolete_at.slice(0, 10) : '']
+      .filter(function(v, i, arr){ return v && arr.indexOf(v) === i; }).join(' · ');
     els.chartQuote.innerHTML = '<span>Alert ' + fmt(alert.alert_price, 2) + '</span><span class="' + directionCls(alert.diff_pct) + '">' + fmtPct(alert.diff_pct) + '</span>';
     renderAlerts();
     var res = await fetch('/alert-monitor/api/history/' + encodeURIComponent(alert.yf_symbol) + '?period=' + encodeURIComponent(period)).then(function(r){ return r.json(); });

@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import json
 import pathlib
+import re
 import uuid
 from dataclasses import asdict, dataclass
 from functools import lru_cache
@@ -41,8 +42,9 @@ class AlertSeed:
 
 # Seeded from the user's pasted TradingView alerts. The yfinance symbol can be
 # changed here later if a TradingView ticker needs a different venue suffix.
-# `exchange` is the short venue label shown as a badge and used by the
-# exchange filter in the UI; leave it empty to let the resolver derive it.
+# `exchange` is the short venue label shown as a badge; the UI filters by the
+# market derived from it (US / A-Share / HKEX / Other, see _market_group).
+# Leave it empty to let the resolver derive it.
 ALERTS: tuple[AlertSeed, ...] = (
     AlertSeed("6869", "6869.HK", "6869 Crossing 100.5", 100.50,
               "Yangtze Optical Fibre and Cable", "HKEX", "Hong Kong Stock Exchange"),
@@ -123,13 +125,77 @@ def _yf_profile(yf_symbol: str) -> dict[str, str]:
 def _resolve_company(alert: AlertSeed) -> str:
     if alert.company:
         return alert.company
-    if _suffix_of(alert.yf_symbol):
+    return _yf_profile(alert.yf_symbol)["company"]
+
+
+# Chinese company names. ticker_names owns the code -> Chinese name table for
+# A-shares and HK listings (fetched from EastMoney, cached in
+# ticker_name_cache.json); it only loads that table once someone calls init(),
+# so do it here. Seeded alerts carry their English name above, and this adds
+# the Chinese one beside it for China-listed companies.
+_CN_SUFFIXES = (".HK", ".SS", ".SH", ".SZ", ".BJ")
+_CJK = re.compile(r"[\u4e00-\u9fff]")
+
+
+@lru_cache(maxsize=1)
+def _cn_name_map() -> dict[str, str]:
+    """The cached {code: Chinese name} table, empty if it cannot be read."""
+    try:
         import ticker_names
 
-        name = ticker_names.get_name(alert.ticker) or ticker_names.get_name(alert.yf_symbol)
-        if name:
-            return name
-    return _yf_profile(alert.yf_symbol)["company"]
+        ticker_names.init()  # loads ticker_name_cache.json; instant when present
+        return ticker_names.get_map() or {}
+    except Exception as exc:  # missing cache, import error, ...
+        print(f"[alert_monitor] Chinese company names unavailable: {exc}")
+        return {}
+
+
+def _resolve_company_cn(alert: AlertSeed) -> str:
+    """Chinese name of a China-listed company, "" when there is none.
+
+    A name the table only has in Latin letters (Hong Kong short names such as
+    "MINIMAX-W") is dropped: the alert already shows that name in English, and
+    the point of this field is the Chinese one.
+    """
+    if not alert.yf_symbol.upper().endswith(_CN_SUFFIXES):
+        return ""
+    import ticker_names
+
+    name = ticker_names.get_name(alert.ticker, _cn_name_map()) or ""
+    return name if _CJK.search(name) else ""
+
+
+# Coarse market the UI filters by, derived from the short venue label.
+_MARKET_OF_VENUE: dict[str, str] = {
+    "US": "US",
+    "NASDAQ": "US",
+    "NYSE": "US",
+    "NYSE ARCA": "US",
+    "NYSE AMERICAN": "US",
+    "AMEX": "US",
+    "BATS": "US",
+    "A-SHARE": "A-Share",
+    "HKEX": "HKEX",
+}
+
+
+def _market_group(exchange: str, yf_symbol: str = "") -> str:
+    """The market one alert belongs to: US, A-Share, HKEX or Other.
+
+    The UI filters on this instead of the venue, so NASDAQ, NYSE and NYSE Arca
+    do not split the list into three. A venue the table does not know about is
+    read from the symbol's suffix -- a bare symbol is a US listing, a symbol
+    with a suffix we cannot place is neither, so it lands in "Other". Nothing
+    silently drops out of the filter chips.
+    """
+    label = (exchange or "").strip()
+    group = _MARKET_OF_VENUE.get(label.upper())
+    if group:
+        return group
+    pair = _suffix_of(yf_symbol or "")
+    if pair:
+        return pair[0]
+    return "Other" if "." in (yf_symbol or "") else "US"
 
 
 def _resolve_exchange(alert: AlertSeed) -> tuple[str, str]:
@@ -166,6 +232,7 @@ def _seed_rows() -> list[dict[str, Any]]:
             "description": seed.description,
             "alert_price": seed.alert_price,
             "company": seed.company,
+            "company_cn": _resolve_company_cn(seed),
             "exchange": seed.exchange,
             "exchange_full": seed.exchange_full,
         })
@@ -227,10 +294,26 @@ def _import_legacy_store() -> None:
               f"from {_LEGACY_STORE.name}")
 
 
+def backfill_company_cn() -> int:
+    """Give Chinese names to China-listed alerts stored without one."""
+    filled = 0
+    for row in alert_db.list_alerts(include_obsolete=True):
+        if row.get("company_cn"):
+            continue
+        seed = AlertSeed(row["ticker"], row["yf_symbol"], row["description"], row["alert_price"])
+        name = _resolve_company_cn(seed)
+        if name and alert_db.set_company_cn(row["id"], name):
+            filled += 1
+    if filled:
+        print(f"[alert_monitor] added Chinese names to {filled} alert(s)")
+    return filled
+
+
 def init_db() -> None:
     """Create and, on a fresh install, seed the alert store. Idempotent."""
     if alert_db.init_db(_seed_rows()):
         _import_legacy_store()
+    backfill_company_cn()
 
 
 def _row_payload(row: dict[str, Any]) -> dict[str, Any]:
@@ -239,6 +322,8 @@ def _row_payload(row: dict[str, Any]) -> dict[str, Any]:
                       row["alert_price"], row["company"], row["exchange"],
                       row["exchange_full"])
     payload = _alert_payload(alert, row["id"])
+    payload["company_cn"] = row.get("company_cn") or ""
+    payload["market"] = _market_group(row.get("exchange") or "", row.get("yf_symbol") or "")
     payload["created_at"] = row.get("created_at") or ""
     payload["obsolete_at"] = row.get("obsolete_at") or ""
     return payload
@@ -386,6 +471,7 @@ def api_add_alert():
         "description": seed.description,
         "alert_price": price,
         "company": _resolve_company(seed),
+        "company_cn": _resolve_company_cn(seed),
         "exchange": exchange,
         "exchange_full": exchange_full,
         "created_at": alert_db.now_iso(),
