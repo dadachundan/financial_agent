@@ -3,23 +3,25 @@
 Shows a pannable/zoomable price chart and a sortable alert list enriched with
 current-price distance to each alert trigger.
 
-The list is the seeded TradingView alerts in ALERTS plus alerts the user adds
-through the UI, which are persisted in alert_monitor_alerts.json.
+Every alert lives in one SQLite table (see :mod:`alert_monitor_db`): the
+seeded TradingView alerts in ALERTS become rows on first run, alerts added
+through the UI are appended beside them, and the two behave identically.
+Deleting an alert marks it obsolete instead of removing it, so the list keeps
+its history.
 """
 from __future__ import annotations
 
 import json
 import pathlib
-import threading
 import uuid
 from dataclasses import asdict, dataclass
-from datetime import datetime
 from functools import lru_cache
 from typing import Any
 
 from flask import Blueprint, jsonify, render_template, request
 from markupsafe import Markup
 
+import alert_monitor_db as alert_db
 import nav_widget2 as nw2
 
 
@@ -140,103 +142,111 @@ def _resolve_exchange(alert: AlertSeed) -> tuple[str, str]:
     return profile["exchange"] or "US", profile["exchange_full"] or profile["exchange"] or "US"
 
 
-# -- User-added alerts ---------------------------------------------------------
-# Stored as JSON beside this module so they survive a restart: the alerts the
-# user added, plus the ids of seeded alerts the user deleted. Each entry keeps
-# the yfinance symbol and the company / venue resolved when it was added.
-_STORE_PATH = pathlib.Path(__file__).with_name("alert_monitor_alerts.json")
-_store_lock = threading.Lock()
+# -- Storage -------------------------------------------------------------------
+# The alert list lives in db/alert_monitor.db (see alert_monitor_db). ALERTS is
+# only the seed used on a fresh install; alert_monitor_alerts.json is the store
+# this module used before the move to SQLite, read once so the entries and
+# deletions recorded there survive the upgrade.
+_LEGACY_STORE = pathlib.Path(__file__).with_name("alert_monitor_alerts.json")
 
 _EXCHANGE_SUFFIXES = ("HK", "SS", "SH", "SZ", "BJ")
 
 
-def _parse_alerts(raw: Any) -> list[dict[str, Any]]:
-    """Keep the well-formed alert records, drop anything malformed."""
-    if not isinstance(raw, list):
-        return []
-    out: list[dict[str, Any]] = []
-    for item in raw:
-        if not isinstance(item, dict):
-            continue
-        yf_symbol = str(item.get("yf_symbol") or "").strip()
-        if not yf_symbol:
-            continue
-        try:
-            price = float(item.get("alert_price"))
-        except (TypeError, ValueError):
-            continue
-        if price <= 0:
-            continue
-        ticker = str(item.get("ticker") or yf_symbol).strip() or yf_symbol
-        out.append({
-            "id": str(item.get("id") or f"user-{uuid.uuid4().hex[:8]}"),
-            "ticker": ticker,
-            "yf_symbol": yf_symbol,
-            "description": str(item.get("description") or f"{ticker} Crossing {price:,.2f}"),
-            "alert_price": price,
-            "company": str(item.get("company") or ""),
-            "exchange": str(item.get("exchange") or ""),
-            "exchange_full": str(item.get("exchange_full") or ""),
-            "created_at": str(item.get("created_at") or ""),
-        })
-    return out
-
-
-def _load_store() -> tuple[list[dict[str, Any]], list[str]]:
-    """Return (user alerts, hidden seed ids). A bare list is the legacy format."""
-    try:
-        raw = json.loads(_STORE_PATH.read_text(encoding="utf-8"))
-    except FileNotFoundError:
-        return [], []
-    except Exception as exc:
-        print(f"[alert_monitor] could not read {_STORE_PATH.name}: {exc}")
-        return [], []
-    if isinstance(raw, list):  # legacy: alerts only
-        return _parse_alerts(raw), []
-    if not isinstance(raw, dict):
-        return [], []
-    hidden = raw.get("hidden_seeds")
-    return (
-        _parse_alerts(raw.get("alerts")),
-        [str(x) for x in hidden if isinstance(x, str)] if isinstance(hidden, list) else [],
-    )
-
-
-def _save_store(alerts: list[dict[str, Any]], hidden: list[str]) -> None:
-    tmp = _STORE_PATH.with_name(_STORE_PATH.name + ".tmp")
-    tmp.write_text(
-        json.dumps({"alerts": alerts, "hidden_seeds": hidden}, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
-    )
-    tmp.replace(_STORE_PATH)
-
-
-def seed_ids() -> list[str]:
-    """Stable ids for ALERTS, keyed on the symbol so reordering keeps them valid."""
-    ids: list[str] = []
+def _seed_rows() -> list[dict[str, Any]]:
+    """ALERTS as alert rows. Ids key on the symbol so reordering keeps them."""
+    rows: list[dict[str, Any]] = []
     seen: dict[str, int] = {}
     for seed in ALERTS:
         base = f"seed-{seed.yf_symbol}"
         seen[base] = seen.get(base, 0) + 1
-        ids.append(base if seen[base] == 1 else f"{base}#{seen[base]}")
-    return ids
+        rows.append({
+            "id": base if seen[base] == 1 else f"{base}#{seen[base]}",
+            "ticker": seed.ticker,
+            "yf_symbol": seed.yf_symbol,
+            "description": seed.description,
+            "alert_price": seed.alert_price,
+            "company": seed.company,
+            "exchange": seed.exchange,
+            "exchange_full": seed.exchange_full,
+        })
+    return rows
 
 
-def all_alerts() -> list[tuple[str, AlertSeed]]:
-    """Seeded alerts still visible, then the user's, each paired with its id."""
-    rows, hidden = _load_store()
-    hidden_set = set(hidden)
-    items: list[tuple[str, AlertSeed]] = [
-        (seed_id, seed)
-        for seed_id, seed in zip(seed_ids(), ALERTS)
-        if seed_id not in hidden_set
-    ]
-    for row in rows:
-        items.append((row["id"], AlertSeed(
-            row["ticker"], row["yf_symbol"], row["description"], row["alert_price"],
-            row["company"], row["exchange"], row["exchange_full"],
-        )))
-    return items
+def _legacy_row(item: dict[str, Any]) -> dict[str, Any] | None:
+    """Validate one record from the retired JSON store, or None if malformed."""
+    yf_symbol = str(item.get("yf_symbol") or "").strip()
+    try:
+        price = float(item.get("alert_price"))
+    except (TypeError, ValueError):
+        return None
+    if not yf_symbol or price <= 0:
+        return None
+    ticker = str(item.get("ticker") or yf_symbol).strip() or yf_symbol
+    return {
+        "id": str(item.get("id") or f"user-{uuid.uuid4().hex[:8]}"),
+        "ticker": ticker,
+        "yf_symbol": yf_symbol,
+        "description": str(item.get("description") or f"{ticker} Crossing {price:,.2f}"),
+        "alert_price": price,
+        "company": str(item.get("company") or ""),
+        "exchange": str(item.get("exchange") or ""),
+        "exchange_full": str(item.get("exchange_full") or ""),
+        "created_at": str(item.get("created_at") or ""),
+        "obsolete_at": str(item.get("obsolete_at") or "") or None,
+    }
+
+
+def _import_legacy_store() -> None:
+    """One-time import of alert_monitor_alerts.json, the pre-SQLite store."""
+    if not _LEGACY_STORE.exists():
+        return
+    try:
+        raw = json.loads(_LEGACY_STORE.read_text(encoding="utf-8"))
+    except Exception as exc:
+        print(f"[alert_monitor] could not read {_LEGACY_STORE.name}: {exc}")
+        return
+    if isinstance(raw, list):  # oldest format: a bare list of alerts
+        raw = {"alerts": raw, "hidden_seeds": []}
+    if not isinstance(raw, dict):
+        return
+    added = 0
+    for item in raw.get("alerts") or []:
+        row = _legacy_row(item) if isinstance(item, dict) else None
+        if not row:
+            continue
+        try:
+            alert_db.insert_alert(row)
+            added += 1
+        except alert_db.DuplicateAlert:
+            pass  # an alert for that symbol and price is already live
+    hidden = raw.get("hidden_seeds") or []
+    retired = sum(1 for seed_id in hidden
+                  if isinstance(seed_id, str) and alert_db.set_obsolete(seed_id))
+    if added or retired:
+        print(f"[alert_monitor] imported {added} alert(s) and {retired} deletion(s) "
+              f"from {_LEGACY_STORE.name}")
+
+
+def init_db() -> None:
+    """Create and, on a fresh install, seed the alert store. Idempotent."""
+    if alert_db.init_db(_seed_rows()):
+        _import_legacy_store()
+
+
+def _row_payload(row: dict[str, Any]) -> dict[str, Any]:
+    """One alert row as the API payload, enriched with its market snapshot."""
+    alert = AlertSeed(row["ticker"], row["yf_symbol"], row["description"],
+                      row["alert_price"], row["company"], row["exchange"],
+                      row["exchange_full"])
+    payload = _alert_payload(alert, row["id"])
+    payload["created_at"] = row.get("created_at") or ""
+    payload["obsolete_at"] = row.get("obsolete_at") or ""
+    return payload
+
+
+# The store is ready as soon as the blueprint is imported, so the app works
+# whether or not the caller initialises it explicitly.
+init_db()
 
 
 def _symbol_candidates(raw: str) -> list[tuple[str, str]]:
@@ -330,10 +340,11 @@ def _alert_payload(alert: AlertSeed, alert_id: str = "") -> dict[str, Any]:
 
 @alert_monitor_bp.route("/")
 def index():
+    live = alert_db.list_alerts()
     return render_template(
         "alert_monitor.html",
         NAV_HTML=Markup(nw2.NAV_HTML),
-        initial_symbol=ALERTS[0].yf_symbol,
+        initial_symbol=live[0]["yf_symbol"] if live else ALERTS[0].yf_symbol,
     )
 
 
@@ -342,7 +353,9 @@ def api_alerts():
     refresh = request.args.get("refresh") == "1"
     if refresh:
         _market_snapshot.cache_clear()
-    return jsonify({"alerts": [_alert_payload(a, i) for i, a in all_alerts()]})
+    rows = alert_db.list_alerts(
+        include_obsolete=request.args.get("include_obsolete") == "1")
+    return jsonify({"alerts": [_row_payload(row) for row in rows]})
 
 
 @alert_monitor_bp.route("/api/alerts", methods=["POST"])
@@ -366,7 +379,7 @@ def api_add_alert():
     yf_symbol, ticker = resolved
     seed = AlertSeed(ticker, yf_symbol, f"{ticker} Crossing {price:,.2f}", price)
     exchange, exchange_full = _resolve_exchange(seed)
-    entry = {
+    row = {
         "id": f"user-{uuid.uuid4().hex[:8]}",
         "ticker": ticker,
         "yf_symbol": yf_symbol,
@@ -375,35 +388,42 @@ def api_add_alert():
         "company": _resolve_company(seed),
         "exchange": exchange,
         "exchange_full": exchange_full,
-        "created_at": datetime.now().isoformat(timespec="seconds"),
+        "created_at": alert_db.now_iso(),
     }
-    with _store_lock:
-        items, hidden = _load_store()
-        if any(r["yf_symbol"] == yf_symbol and r["alert_price"] == price for r in items):
-            return jsonify({"ok": False,
-                            "error": f"{yf_symbol} already has an alert at {price:,.2f}."}), 409
-        items.append(entry)
-        _save_store(items, hidden)
-
-    alert = AlertSeed(entry["ticker"], entry["yf_symbol"], entry["description"],
-                      entry["alert_price"], entry["company"], entry["exchange"],
-                      entry["exchange_full"])
-    return jsonify({"ok": True, "alert": _alert_payload(alert, entry["id"])})
+    try:
+        alert_db.insert_alert(row)
+    except alert_db.DuplicateAlert:
+        return jsonify({"ok": False,
+                        "error": f"{yf_symbol} already has an alert at {price:,.2f}."}), 409
+    return jsonify({"ok": True, "alert": _row_payload(row)})
 
 
 @alert_monitor_bp.route("/api/alerts/<path:alert_id>", methods=["DELETE"])
 def api_delete_alert(alert_id: str):
-    """Remove an alert: user alerts are dropped, seeded ones are hidden."""
-    with _store_lock:
-        items, hidden = _load_store()
-        kept = [r for r in items if r["id"] != alert_id]
-        if len(kept) != len(items):
-            _save_store(kept, hidden)
-            return jsonify({"ok": True, "deleted": alert_id})
-        if alert_id in seed_ids() and alert_id not in hidden:
-            _save_store(items, hidden + [alert_id])
-            return jsonify({"ok": True, "deleted": alert_id})
-    return jsonify({"ok": False, "error": "Alert not found."}), 404
+    """Delete an alert by marking it obsolete -- the row is kept for the record."""
+    if alert_db.get_alert(alert_id) is None:
+        return jsonify({"ok": False, "error": "Alert not found."}), 404
+    stamp = alert_db.set_obsolete(alert_id)
+    if stamp is None:
+        return jsonify({"ok": False, "error": "Alert is already obsolete."}), 409
+    return jsonify({"ok": True, "id": alert_id, "obsolete_at": stamp})
+
+
+@alert_monitor_bp.route("/api/alerts/<path:alert_id>/restore", methods=["POST"])
+def api_restore_alert(alert_id: str):
+    """Bring an obsolete alert back into the active list."""
+    row = alert_db.get_alert(alert_id)
+    if row is None:
+        return jsonify({"ok": False, "error": "Alert not found."}), 404
+    if not row["obsolete_at"]:
+        return jsonify({"ok": False, "error": "Alert is not obsolete."}), 409
+    try:
+        alert_db.clear_obsolete(alert_id)
+    except alert_db.DuplicateAlert:
+        return jsonify({"ok": False,
+                        "error": f"{row['yf_symbol']} already has an active alert "
+                                 f"at {row['alert_price']:,.2f}."}), 409
+    return jsonify({"ok": True, "id": alert_id, "obsolete_at": ""})
 
 
 @alert_monitor_bp.route("/api/history/<path:yf_symbol>")

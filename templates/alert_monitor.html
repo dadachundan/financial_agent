@@ -62,6 +62,9 @@
   }
   .chip:hover { background:#22262a; color:#fff; }
   .chip.active { background:rgba(47,107,255,.18); border-color:#3d6ff5; color:#dce4ff; }
+  .filter-label { color:#8d949d; font-size:.72rem; font-weight:650; letter-spacing:.04em; text-transform:uppercase; }
+  .chip-row { display:flex; flex-wrap:wrap; align-items:center; justify-content:flex-end; gap:6px; min-width:0; }
+  .chip.obsolete-toggle.active { background:rgba(240,180,41,.16); border-color:#8a6d1f; color:#f3d493; }
   .add-alert-wrap { display:none; padding:11px 12px; border-bottom:1px solid var(--line); background:#121518; }
   .add-alert-wrap.open { display:block; }
   .add-alert-form { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) auto auto; gap:8px; align-items:center; }
@@ -102,8 +105,24 @@
   .row-delete:hover { background:#2a2f35; color:#fff; border-color:#3a4048; }
   .row-delete.confirm { color:#ff8a9b; border-color:#7d3038; background:rgba(255,71,95,.14); font-size:.72rem; }
   .row-delete.confirm:hover { background:rgba(255,71,95,.26); color:#ffd7dd; }
+  .row-restore {
+    position:absolute; top:10px; right:10px; height:22px; padding:0 9px;
+    display:inline-flex; align-items:center; justify-content:center;
+    border:1px solid #2b6b5a; border-radius:6px; background:rgba(0,184,148,.12);
+    color:#5fd6b4; font-size:.68rem; font-weight:700; letter-spacing:.02em;
+  }
+  .row-restore:hover { background:rgba(0,184,148,.26); color:#d9fff5; }
+  .alert-row.obsolete { opacity:.6; }
+  .alert-row.obsolete .desc { text-decoration:line-through; text-decoration-color:rgba(255,255,255,.35); }
+  .obsolete-tag {
+    align-self:flex-start; margin-top:2px;
+    font-size:.62rem; font-weight:750; letter-spacing:.04em; text-transform:uppercase;
+    color:#e0b366; border:1px solid #6b5426; background:rgba(240,180,41,.12); border-radius:4px; padding:1px 5px;
+    white-space:nowrap;
+  }
   .alert-head { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:10px; align-items:baseline; padding-right:26px; }
   .alert-row-wrap.confirming .alert-head { padding-right:64px; }
+  .alert-row-wrap.obsolete .alert-head { padding-right:78px; }
   .head-main { min-width:0; display:flex; flex-direction:column; gap:4px; }
   .desc { font-size:.96rem; line-height:1.2; color:#d4d7dc; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   .company-line { display:flex; align-items:center; gap:6px; min-width:0; }
@@ -167,8 +186,12 @@
     </div>
   </section>
   <aside class="side-pane">
-    <div id="exchangeFilters" class="side-filters" role="group" aria-label="Filter by stock exchange">
+    <div class="side-filters">
       <span class="filter-label">Exchange</span>
+      <div id="exchangeFilters" class="chip-row" role="group" aria-label="Filter by stock exchange"></div>
+      <span class="divider"></span>
+      <button id="toggleObsolete" class="chip obsolete-toggle" type="button" aria-pressed="false"
+              title="Show the alerts you deleted (kept as obsolete)">Deleted</button>
     </div>
     <div class="side-tools">
       <input id="alertSearch" class="search" placeholder="Search alerts">
@@ -205,6 +228,7 @@
   var exchangeFilter = '';
   var focusId = '';
   var pendingDelete = '';
+  var showObsolete = false;
   var EXCHANGE_ORDER = ['NASDAQ', 'NYSE', 'NYSE Arca', 'A-Share', 'HKEX'];
   var view = { start: 0, end: 0 };
   var drag = null;
@@ -217,6 +241,7 @@
     refresh: document.getElementById('refreshAlerts'),
     sortDirection: document.getElementById('sortDirection'),
     exchangeFilters: document.getElementById('exchangeFilters'),
+    obsoleteToggle: document.getElementById('toggleObsolete'),
     addWrap: document.getElementById('addAlertWrap'),
     addForm: document.getElementById('addAlertForm'),
     addToggle: document.getElementById('toggleAddAlert'),
@@ -290,6 +315,18 @@
     }
   }
 
+  async function restoreAlert(id){
+    try {
+      var res = await fetch('/alert-monitor/api/alerts/' + encodeURIComponent(id) + '/restore', { method: 'POST' });
+      var data = await res.json();
+      if(!data.ok) throw new Error(data.error || 'Could not restore the alert.');
+      pendingDelete = '';
+      await loadAlerts(false);
+    } catch(err) {
+      window.alert(err.message);
+    }
+  }
+
   async function submitAddAlert(e){
     e.preventDefault();
     var symbol = els.addSymbol.value.trim();
@@ -352,6 +389,14 @@
     els.exchangeFilters.innerHTML = html;
   }
 
+  function renderObsoleteToggle(){
+    els.obsoleteToggle.classList.toggle('active', showObsolete);
+    els.obsoleteToggle.setAttribute('aria-pressed', showObsolete ? 'true' : 'false');
+    els.obsoleteToggle.title = showObsolete
+      ? 'Hide the alerts you deleted'
+      : 'Show the alerts you deleted (kept as obsolete)';
+  }
+
   function filteredAlerts(){
     var q = searchText.trim().toLowerCase();
     var rows = alerts.map(function(a, i){ return Object.assign({index:i}, a); });
@@ -364,6 +409,8 @@
       });
     }
     rows.sort(function(a,b){
+      var ao = a.obsolete_at ? 1 : 0, bo = b.obsolete_at ? 1 : 0;
+      if(ao !== bo) return ao - bo;   // deleted alerts always sink to the bottom
       if(a.diff_pct == null && b.diff_pct == null) return 0;
       if(a.diff_pct == null) return 1;
       if(b.diff_pct == null) return -1;
@@ -382,29 +429,42 @@
       return;
     }
     els.list.innerHTML = rows.map(function(a){
-      var active = selected && selected.description === a.description && selected.alert_price === a.alert_price;
+      var active = selected && selected.id
+        ? selected.id === a.id
+        : !!(selected && selected.description === a.description && selected.alert_price === a.alert_price);
       var diffClass = directionCls(a.diff_pct);
-      var meta = [a.company, a.exchange_full || a.exchange].filter(Boolean).join(' · ');
-      var confirming = a.id && pendingDelete === a.id;
-      return '<div class="alert-row-wrap' + (confirming ? ' confirming' : '') + '">' +
-        '<button class="alert-row ' + (active ? 'active' : '') + '" data-index="' + a.index + '" type="button">' +
+      var obsolete = !!a.obsolete_at;
+      var obsoleteDate = obsolete ? a.obsolete_at.slice(0, 10) : '';
+      var addedDate = a.created_at ? a.created_at.slice(0, 10) : '';
+      var meta = [a.company, a.exchange_full || a.exchange,
+                  addedDate ? 'added ' + addedDate : '',
+                  obsoleteDate ? 'obsolete ' + obsoleteDate : ''].filter(Boolean).join(' · ');
+      var confirming = !obsolete && a.id && pendingDelete === a.id;
+      var action = !a.id ? '' : (obsolete
+        ? '<button class="row-restore" data-id="' + esc(a.id) + '" type="button" ' +
+          'title="Bring this alert back (deleted ' + esc(obsoleteDate) + ')" ' +
+          'aria-label="Restore ' + esc(a.description) + '">Restore</button>'
+        : '<button class="row-delete' + (confirming ? ' confirm' : '') + '" data-id="' + esc(a.id) + '" type="button" ' +
+          'title="' + (confirming ? 'Click again to delete this alert' : 'Delete this alert (kept as obsolete)') + '" ' +
+          'aria-label="' + (confirming ? 'Confirm delete ' : 'Delete ') + esc(a.description) + '">' +
+          (confirming ? 'Delete?' : '&times;') + '</button>');
+      return '<div class="alert-row-wrap' + (confirming ? ' confirming' : '') + (obsolete ? ' obsolete' : '') + '">' +
+        '<button class="alert-row' + (active ? ' active' : '') + (obsolete ? ' obsolete' : '') + '" data-index="' + a.index + '" type="button">' +
         '<div class="alert-head"><div class="head-main">' +
         '<span class="desc">' + esc(a.description) + '</span>' +
         '<span class="company-line">' +
         (a.company ? '<span class="company" title="' + esc(meta) + '">' + esc(a.company) + '</span>' : '') +
         (a.exchange ? '<span class="exch ' + exchangeCls(a.exchange) + '" title="' + esc(a.exchange_full || a.exchange) + '">' + esc(a.exchange) + '</span>' : '') +
-        '</span></div>' +
+        '</span>' +
+        (obsolete ? '<span class="obsolete-tag" title="Deleted ' + esc(a.obsolete_at) + '">obsolete ' + esc(obsoleteDate) + '</span>' : '') +
+        '</div>' +
         '<span class="pct ' + diffClass + '">' + fmtPct(a.diff_pct) + '</span></div>' +
         '<div class="price-grid">' +
         '<div class="metric current"><span class="metric-label">Current</span><span class="metric-value">' + fmt(a.current_price, 2) + '</span></div>' +
         '<div class="metric"><span class="metric-label">Alert</span><span class="metric-value">' + fmt(a.alert_price, 2) + '</span></div>' +
         '<div class="metric"><span class="metric-label">1Y Low</span><span class="metric-value">' + fmt(a.low_1y, 2) + '</span></div>' +
         '<div class="metric"><span class="metric-label">1Y High</span><span class="metric-value">' + fmt(a.high_1y, 2) + '</span></div>' +
-        '</div></button>' +
-        (a.id ? '<button class="row-delete' + (confirming ? ' confirm' : '') + '" data-id="' + esc(a.id) + '" type="button" ' +
-          'title="' + (confirming ? 'Click again to delete this alert' : 'Delete this alert') + '" ' +
-          'aria-label="' + (confirming ? 'Confirm delete ' : 'Delete ') + esc(a.description) + '">' +
-          (confirming ? 'Delete?' : '&times;') + '</button>' : '') +
+        '</div></button>' + action +
         '</div>';
     }).join('');
   }
@@ -414,7 +474,9 @@
     hoveredDate = '';
     els.symbol.textContent = alert.yf_symbol;
     els.chartName.textContent = alert.description;
-    els.chartMeta.textContent = [alert.company, alert.exchange_full || alert.exchange].filter(Boolean).join(' · ');
+    els.chartMeta.textContent = [alert.company, alert.exchange_full || alert.exchange,
+      alert.created_at ? 'added ' + alert.created_at.slice(0, 10) : '',
+      alert.obsolete_at ? 'obsolete ' + alert.obsolete_at.slice(0, 10) : ''].filter(Boolean).join(' · ');
     els.chartQuote.innerHTML = '<span>Alert ' + fmt(alert.alert_price, 2) + '</span><span class="' + directionCls(alert.diff_pct) + '">' + fmtPct(alert.diff_pct) + '</span>';
     renderAlerts();
     var res = await fetch('/alert-monitor/api/history/' + encodeURIComponent(alert.yf_symbol) + '?period=' + encodeURIComponent(period)).then(function(r){ return r.json(); });
@@ -615,17 +677,23 @@
   }
 
   async function loadAlerts(refresh){
+    var previousId = selected && selected.id ? selected.id : '';
     var previous = selected ? selected.description + '|' + selected.alert_price : '';
     els.list.innerHTML = '<div class="loading">Loading alerts...</div>';
-    var url = '/alert-monitor/api/alerts' + (refresh ? '?refresh=1' : '');
+    var params = [];
+    if(refresh) params.push('refresh=1');
+    if(showObsolete) params.push('include_obsolete=1');
+    var url = '/alert-monitor/api/alerts' + (params.length ? '?' + params.join('&') : '');
     var res = await fetch(url).then(function(r){ return r.json(); });
     alerts = res.alerts || [];
     pendingDelete = '';
     selected = alerts.find(function(a){ return focusId && a.id === focusId; })
+      || alerts.find(function(a){ return previousId && a.id === previousId; })
       || alerts.find(function(a){ return previous && previous === a.description + '|' + a.alert_price; })
       || alerts[0] || null;
     focusId = '';
     renderExchangeFilters();
+    renderObsoleteToggle();
     renderAlerts();
     if(selected) loadHistory(selected);
   }
@@ -639,6 +707,8 @@
     });
   });
   els.list.addEventListener('click', function(e){
+    var restore = e.target.closest('.row-restore');
+    if(restore){ restoreAlert(restore.getAttribute('data-id')); return; }
     var del = e.target.closest('.row-delete');
     if(del){
       var id = del.getAttribute('data-id');
@@ -668,6 +738,12 @@
     renderAlerts();
   });
   els.refresh.addEventListener('click', function(){ loadAlerts(true); });
+  els.obsoleteToggle.addEventListener('click', function(){
+    showObsolete = !showObsolete;
+    pendingDelete = '';
+    renderObsoleteToggle();
+    loadAlerts(false);
+  });
   els.addForm.addEventListener('submit', submitAddAlert);
   els.addToggle.addEventListener('click', function(){
     if(els.addWrap.classList.contains('open')) closeAddForm();

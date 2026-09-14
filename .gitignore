@@ -11,6 +11,7 @@ package-lock.json
 # Git LFS instead (see .gitattributes). Optional off-GitHub backup: scripts/backup_dbs_to_gcs.sh
 !db/zsxq.db
 !db/notes.db
+!db/alert_monitor.db
 # SQLite transient transaction logs — regenerated automatically, never commit
 *.db-wal
 *.db-shm
