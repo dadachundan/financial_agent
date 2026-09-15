@@ -101,7 +101,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Quiet patch, but anchored to the 27 May shareholder meeting and the All-America vote.
 
-**Why 10:** — the densest primary META monetization work in the batch.
+**Why 10:** the densest primary META monetization work in the batch.
 
 ---
 
@@ -115,7 +115,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written the day after the Muse AI launch and roughly two weeks before Meta Connect; meta shares were +20% off their lows but -1% YTD against the S&P's +12%.
 
-**Why 9:** — the dated, reasoned upgrade that anchors the current bull case on the name.
+**Why 9:** the dated, reasoned upgrade that anchors the current bull case on the name.
 
 ---
 
@@ -129,7 +129,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written hours after the 29 April print.
 
-**Why 9:** — the primary post-print META read, with both the model and the reason for the PT cut.
+**Why 9:** the primary post-print META read, with both the model and the reason for the PT cut.
 
 ---
 
@@ -143,7 +143,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** A pre-4Q25-print investment memo, positioning explicitly into the guidance.
 
-**Why 9:** — the deepest primary META work in the set, with a testable framework and quantified revisions.
+**Why 9:** the deepest primary META work in the set, with a testable framework and quantified revisions.
 
 ---
 
@@ -157,7 +157,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Pre-print — positioned ahead of the January 4Q opex guide, with sentiment explicitly negative.
 
-**Why 9:** — primary, quantified META work with a dated, testable op-ex-guide catalyst.
+**Why 9:** primary, quantified META work with a dated, testable op-ex-guide catalyst.
 
 ---
 
@@ -171,7 +171,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Q2'26 print of 29 Jul; the stock was -12.5% over 3m and -27.2% vs the S&P over 12m and trades ~17x updated 2027 GAAP EPS ex-cash. Debates framed as spend pace, AI monetization and financing.
 
-**Why 8:** — hard numbers, transparent estimate changes and a full scenario table behind the PT cut.
+**Why 8:** hard numbers, transparent estimate changes and a full scenario table behind the PT cut.
 
 ---
 
@@ -185,7 +185,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Triggered by the settlement announcement; shares were -23.6% over 12m and -35.7% vs the S&P on capex and lawsuit overhangs. Catalysts: Meta Connect on 9/23 and foundational model releases.
 
-**Why 8:** — the only note in the set that sizes an unmodelled AI revenue stream in dollars, alongside a real overhang removal.
+**Why 8:** the only note in the set that sizes an unmodelled AI revenue stream in dollars, alongside a real overhang removal.
 
 ---
 
@@ -199,7 +199,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Around the 2Q print (Jul 29 close $585.61), with Meta Connect (Sep 23/24) framed as the next catalyst.
 
-**Why 8:** — a genuine META-primary note with a quantified EPS bridge and full model.
+**Why 8:** a genuine META-primary note with a quantified EPS bridge and full model.
 
 ---
 
@@ -213,7 +213,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Pre-print, with Meta trading near 16x NTM EPS versus the S&P 500 at about 21x.
 
-**Why 8:** — dense, numerically explicit preview with its own capex bridge.
+**Why 8:** dense, numerically explicit preview with its own capex bridge.
 
 ---
 
@@ -227,7 +227,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Same-day reaction to a press report; META had not commented.
 
-**Why 8:** — primary META optionality work built on its own GW model, though triggered by a headline.
+**Why 8:** primary META optionality work built on its own GW model, though triggered by a headline.
 
 ---
 
@@ -241,7 +241,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written the weekend after RIF reports, ahead of Meta Conversations (3 Jun) and Connect (23-24 Sep).
 
-**Why 8:** — disciplined, fully quantified META estimate work with management-silence caveats.
+**Why 8:** disciplined, fully quantified META estimate work with management-silence caveats.
 
 ---
 
@@ -255,7 +255,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Post-print, written the morning after GOOGL/AMZN reported.
 
-**Why 8:** — dense, dated META read.
+**Why 8:** dense, dated META read.
 
 ---
 
@@ -269,7 +269,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** 1Q26 print; CapEx guidance raised to $125-145B (from $115-135B) and no buyback executed.
 
-**Why 8:** — precise estimate bridge and an explicit, checkable bull case.
+**Why 8:** precise estimate bridge and an explicit, checkable bull case.
 
 ---
 
@@ -283,7 +283,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Pre-print preview, two days before 1Q26 results.
 
-**Why 8:** — real pre-print work with channel data and a full model.
+**Why 8:** real pre-print work with channel data and a full model.
 
 ---
 
@@ -297,7 +297,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Pre-earnings, after a pullback DB calls a buying opportunity; New Mexico and Los Angeles litigation weigh on sentiment.
 
-**Why 8:** — primary ad-channel evidence plus a full model refresh.
+**Why 8:** primary ad-channel evidence plus a full model refresh.
 
 ---
 
@@ -311,7 +311,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Pre-earnings, written into the GOOG/META/AMZN 1Q26 prints, with April branded-ad softness flagged.
 
-**Why 8:** — primary, quantified META work with a fresh valuation build.
+**Why 8:** primary, quantified META work with a fresh valuation build.
 
 ---
 
@@ -325,7 +325,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Model-launch day (Apr 8 close $612.42).
 
-**Why 8:** — META-specific, with a real product read and a clean valuation frame.
+**Why 8:** META-specific, with a real product read and a clean valuation frame.
 
 ---
 
@@ -339,7 +339,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Since 29 Jan, the day after Q4'25 results, META fell 20% versus the S&P's 7% on AI/compute capex ROI concerns; shares trade at ~20x/~17x 2026/27 GAAP EPS ex-cash.
 
-**Why 8:** — a timely, quantified response to what is actually moving the stock.
+**Why 8:** a timely, quantified response to what is actually moving the stock.
 
 ---
 
@@ -353,7 +353,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written on the Q4'25 print; the stock had fallen 11.0% over three months and 13.8% versus the S&P over 12 months beforehand.
 
-**Why 8:** — the guidance-inversion exhibit is a real analytical contribution and the estimate bridge is fully shown.
+**Why 8:** the guidance-inversion exhibit is a real analytical contribution and the estimate bridge is fully shown.
 
 ---
 
@@ -367,7 +367,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** 4Q25 results, framed as a "clearing event" now that 2026 OpEx/CapEx parameters are set.
 
-**Why 8:** — genuine estimate revisions plus a falsifiable impressions/conversions mechanism.
+**Why 8:** genuine estimate revisions plus a falsifiable impressions/conversions mechanism.
 
 ---
 
@@ -381,7 +381,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Pre-earnings, IG past 3B MAU, Sora/Vibes share-of-time worry.
 
-**Why 8:** — dated, falsifiable proprietary panel.
+**Why 8:** dated, falsifiable proprietary panel.
 
 ---
 
@@ -395,7 +395,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** The day after the Muse launch (Sep 8 close $613.48); explicitly a "what matters next" watchlist, since FB Shopping, the Metaverse and MetaAI disappointed.
 
-**Why 7:** — useful product/optionality framing and competitor read-across, but no new META numbers.
+**Why 7:** useful product/optionality framing and competitor read-across, but no new META numbers.
 
 ---
 
@@ -409,7 +409,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written into the 2Q26 print season, after META fell 7% the day after its own result.
 
-**Why 7:** — the best META exhibit set in the batch, but the call itself is a reiteration.
+**Why 7:** the best META exhibit set in the batch, but the call itself is a reiteration.
 
 ---
 
@@ -423,7 +423,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** The day after the 2Q26 print — a dated, testable call carrying a PT cut.
 
-**Why 7:** — the primary post-print note on META with a full revised model, but mostly company-sourced inputs.
+**Why 7:** the primary post-print note on META with a full revised model, but mostly company-sourced inputs.
 
 ---
 
@@ -437,7 +437,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written after 1Q26, post the June-2026 launches ($299 Adventurer/Fury, $399 Starfire) and the EU launch delay. Stock $646.01; 52-week $796.25-$520.26.
 
-**Why 7:** — real primary-source product evidence with quantified optionality, but no estimate changes.
+**Why 7:** real primary-source product evidence with quantified optionality, but no estimate changes.
 
 ---
 
@@ -451,7 +451,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** News-driven note the morning of 1 July 2026, framed by $125-145bn capex guidance and the AI capex ROI debate.
 
-**Why 7:** — a clean, auditable scenario model on a single news trigger.
+**Why 7:** a clean, auditable scenario model on a single news trigger.
 
 ---
 
@@ -465,7 +465,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Subscription launch after a post-Muse Spark usage step-up, against $125-145bn 2026 capex guidance.
 
-**Why 7:** — a useful monetization framework, though near-term revenue is immaterial.
+**Why 7:** a useful monetization framework, though near-term revenue is immaterial.
 
 ---
 
@@ -479,7 +479,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** 29 Apr print; trades ~18x updated 2027 GAAP EPS ex-cash, with Q1 EPS $10.44 flattered by an $8.03bn tax benefit.
 
-**Why 7:** — full earnings review with explicit estimate and multiple changes.
+**Why 7:** full earnings review with explicit estimate and multiple changes.
 
 ---
 
@@ -493,7 +493,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** 20 April 2026, price $688.55 (market cap $1.79tn), nine days before results and after 4/17 Reuters news of a possible 10% May layoff.
 
-**Why 7:** — genuinely META-specific and number-rich, but largely estimate-setting and news recap around one proprietary tracker.
+**Why 7:** genuinely META-specific and number-rich, but largely estimate-setting and news recap around one proprietary tracker.
 
 ---
 
@@ -507,7 +507,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Launch-day note (8 Apr 2026), timed between Anthropic's Mythos no-show and an expected OpenAI response; no print.
 
-**Why 7:** — fresh primary product work and hands-on testing on META, but no estimate or PT change and the thesis is unchanged.
+**Why 7:** fresh primary product work and hands-on testing on META, but no estimate or PT change and the thesis is unchanged.
 
 ---
 
@@ -521,7 +521,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** 4Q25 print and management calls; shares +7% after-hours, though JPM flags pushback. Stock YTD +1.3%, 12m -0.8%, 52-week $796.25-$479.80.
 
-**Why 7:** — sharp reconciliation of the beat against the spend guide, but the bull case itself is company-supplied.
+**Why 7:** sharp reconciliation of the beat against the spend guide, but the bull case itself is company-supplied.
 
 ---
 
@@ -535,7 +535,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** 4Q25 print, 28 Jan 2026 16:00 ET; price $668.73, market cap $1,685,552M, versus an October 2025 high near $770. The prior Catalyst Watch was removed 9 Nov 2025 at $590.32.
 
-**Why 7:** — accurate, fast post-print wrap, but almost entirely company numbers plus Citi's model.
+**Why 7:** accurate, fast post-print wrap, but almost entirely company numbers plus Citi's model.
 
 ---
 
@@ -549,7 +549,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written on the 30 Oct 2025 Q3'25 print, when the stock was near $752 and before the 2026 investment guide de-rated it below $600.
 
-**Why 7:** — the cleanest early statement of the capex-versus-core tension that later dominated the tape, but no proprietary operating data.
+**Why 7:** the cleanest early statement of the capex-versus-core tension that later dominated the tape, but no proprietary operating data.
 
 ---
 
@@ -563,7 +563,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written the evening of the 13 Sep launch, weeks after the litigation settlement; shares -13.7% over 12m, -25.8% vs the S&P. Catalysts: Connect 9/23, model releases.
 
-**Why 6:** — useful product detail, but no model, estimate or PT change.
+**Why 6:** useful product detail, but no model, estimate or PT change.
 
 ---
 
@@ -577,7 +577,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Day after the 26 Aug settlement; next catalyst September Meta Connect.
 
-**Why 6:** — clean event read and damages map, but no proprietary work and no estimate change.
+**Why 6:** clean event read and damages map, but no proprietary work and no estimate change.
 
 ---
 
@@ -609,7 +609,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Quiet patch — no META print; thematic note in the capex/ROIC debate.
 
-**Why 6:** — real META-specific GW/capex analysis, but META is one of four names.
+**Why 6:** real META-specific GW/capex analysis, but META is one of four names.
 
 ---
 
@@ -623,7 +623,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** 1Q26 preview before the 29 Apr print; META at $671 (20 Apr 2026).
 
-**Why 6:** — real META evidence, but one section of a broader preview.
+**Why 6:** real META evidence, but one section of a broader preview.
 
 ---
 
@@ -637,7 +637,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Triggered by a weekend press report on job cuts; no print, no deal.
 
-**Why 6:** — META-specific scenario math, but rumor-driven and thin on new information.
+**Why 6:** META-specific scenario math, but rumor-driven and thin on new information.
 
 ---
 
@@ -651,7 +651,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** A reaction note to Muse Spark 1.2 and the 11-Aug ROIC feedback piece; no META print.
 
-**Why 5:** — the clearest read on how Meta's own Muse pricing pressures GenAI ROIC, but no META P&L work.
+**Why 5:** the clearest read on how Meta's own Muse pricing pressures GenAI ROIC, but no META P&L work.
 
 ---
 
@@ -665,7 +665,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Reactive — published the day the neocloud news hit.
 
-**Why 5:** — two useful META capex datapoints and the ROIC-narrative argument, but META is a supporting character.
+**Why 5:** two useful META capex datapoints and the ROIC-narrative argument, but META is a supporting character.
 
 ---
 
@@ -679,7 +679,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Bloomberg news item; stock near the low end of a $790.00-525.72 52-week range.
 
-**Why 5:** — short, no fresh numbers, thesis and quotes already public.
+**Why 5:** short, no fresh numbers, thesis and quotes already public.
 
 ---
 
@@ -693,7 +693,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written ahead of the 29 April Q1 print; no new catalyst priced in.
 
-**Why 5:** — a short pre-earnings preview with unchanged numbers and a restated bull case.
+**Why 5:** a short pre-earnings preview with unchanged numbers and a restated bull case.
 
 ---
 
@@ -707,7 +707,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written around press reports of the job cuts, ahead of anything testable; no print.
 
-**Why 5:** — sharp org-level datapoints and explicit EPS math, but a short thematic think-piece with an unchanged PT.
+**Why 5:** sharp org-level datapoints and explicit EPS math, but a short thematic think-piece with an unchanged PT.
 
 ---
 
@@ -721,7 +721,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Published ahead of the Q3'25 print; 52-week range $484.66-$790.00 with the stock at $716.92.
 
-**Why 5:** — a useful guidance recap, but it adds little beyond consensus and carries no new valuation work.
+**Why 5:** a useful guidance recap, but it adds little beyond consensus and carries no new valuation work.
 
 ---
 
@@ -735,7 +735,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Meta Connect 2025 keynote; stock +32.5% YTD and +44.6% over 12m, 52-week range $796.25-$479.80 — a momentum print with no numbers moved.
 
-**Why 5:** — competent event recap, but no change to estimates or PT and little incremental analysis.
+**Why 5:** competent event recap, but no change to estimates or PT and little incremental analysis.
 
 ---
 
@@ -749,7 +749,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written into a -7% Internet week as the 2Q26 tape settled — positioning/market context, not a META trigger.
 
-**Why 4:** — META gets its own valuation column and the "cheapest vs own history" framing, but no argument.
+**Why 4:** META gets its own valuation column and the "cheapest vs own history" framing, but no argument.
 
 ---
 
@@ -763,7 +763,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Quiet patch — a calendar tracker, no Meta-specific trigger.
 
-**Why 4:** — skim the three META datapoints (1.1 GW starts, 27% construction share, BTM lead); the ticker is otherwise a comp row.
+**Why 4:** skim the three META datapoints (1.1 GW starts, 27% construction share, BTM lead); the ticker is otherwise a comp row.
 
 ---
 
@@ -777,7 +777,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Quiet patch; no META print, deal or regulatory trigger.
 
-**Why 3:** — META is a bolted-on Top Pick page inside someone else's capex argument.
+**Why 3:** META is a bolted-on Top Pick page inside someone else's capex argument.
 
 ---
 
@@ -791,7 +791,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Quiet patch, the quarterly ownership update after 1Q26 filings.
 
-**Why 3:** — META is a data point in a positioning study, not research on the name.
+**Why 3:** META is a data point in a positioning study, not research on the name.
 
 ---
 
@@ -805,7 +805,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Written around ChatGPT's agentic pivot; META is a bystander.
 
-**Why 3:** — useful Meta AI adoption and incumbent-durability datapoints, no META thesis.
+**Why 3:** useful Meta AI adoption and incumbent-durability datapoints, no META thesis.
 
 ---
 
@@ -819,7 +819,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Quiet patch after the January-February derating (median name -19% vs S&P) — a sentiment call, not a print reaction.
 
-**Why 3:** — META is a row in basket valuation tables; the note is about the sector's AI de-rating.
+**Why 3:** META is a row in basket valuation tables; the note is about the sector's AI de-rating.
 
 ---
 
@@ -863,7 +863,7 @@ The score weights four things: (1) **is there a META thesis at all** — rating 
 
 **Event context:** Pre-print sector preview, a week before META's 2Q26 print (PT cut to $800 on 29 Jul).
 
-**Why 1:** — corrupt file; nothing on META readable.
+**Why 1:** corrupt file; nothing on META readable.
 
 ---
 
@@ -953,7 +953,7 @@ The lens reads `price_targets` with `ORDER BY report_date DESC LIMIT 18`, so wit
 - **2025-10-13** — Citi — *IG/Reels ad-load tracker: 3Q reaches 27.1%, +230bp q/q* (8/10)
 - **2025-09-18** — J.P. Morgan — *Glasses move a step closer to the next form factor of computing* (5/10)
 
-Two further rendering caveats: the Goldman 2Q'26 review (`814512485518222`) is dated **2027-07-30** because the source filename ends `-270730.pdf` (a typo — the zsxq `create_time` is 2026-07-30), so it sorts to the top of the page and its report-date price is null; and the J.P. Morgan 12 Jul note (`584248885824284`) is **summary-only** — it renders, but there is no PDF behind it to open.
+Two further rendering caveats: the Goldman 2Q'26 review (`814512485518222`) is dated **2027-07-30** because the source filename ends `-270730.pdf` (a typo — the zsxq `create_time` is 2026-07-30), so it takes the newest slot in the page's 18-row window and its report-date price is null; and the J.P. Morgan 12 Jul note (`584248885824284`) is **summary-only** — it renders, but there is no PDF behind it to open.
 
 ---
 
@@ -977,7 +977,7 @@ Keyed by **stringified `file_id`**, one object per report with exactly `score`, 
 
 ### 4. What is *not* stored — the price series
 
-Daily OHLC is never persisted. The lens pulls the daily series **live from yfinance** on each page load for the window (earliest `report_date` − 14 days … latest + 14 days). Only the close **on** the report date is frozen into the row (`report_date_price`), which is what makes every `upside_pct` above auditable months later. The chart is therefore only as good as yfinance on the day you open it — and because the Goldman row is stamped 2027-07-30, the chart window currently stretches a year past the data, so that row plots no marker.
+Daily OHLC is never persisted. The lens pulls the daily series **live from yfinance** on each page load for the window (earliest `report_date` − 14 days … latest + 14 days). Only the close **on** the report date is frozen into the row (`report_date_price`), which is what makes every `upside_pct` above auditable months later. The chart is therefore only as good as yfinance on the day you open it — and because the Goldman row is stamped 2027-07-30, the page asks yfinance for a window running out to Aug 2027 (the bars themselves stop at today), and that row plots no marker.
 
 ---
 
