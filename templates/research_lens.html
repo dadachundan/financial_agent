@@ -765,6 +765,8 @@
     .digest-fields[hidden],
     .digest-empty[hidden] { display: none; }
 
+    .lens-panel.has-digest { min-height: 880px; }
+
     .empty-state {
       padding: 48px;
       border: 1px solid var(--line);
@@ -839,7 +841,8 @@
 
     <div>
       {% if reports %}
-      <div class="lens-panel">
+      {% set has_digest = reports | selectattr('digest') | list | length > 0 %}
+      <div class="lens-panel{% if has_digest %} has-digest{% endif %}">
         <div class="panel-top">
           <div class="ticker-block">
             <div class="ticker-mark">{{ (company_name or ticker)[:1] }}</div>
@@ -1539,12 +1542,15 @@
     const box = document.getElementById("cardScore");
     const fields = document.getElementById("cardDigest");
     const empty = document.getElementById("cardDigestEmpty");
+    const source = document.getElementById("cardSource");
     if (!box || !fields) return;
     const digest = report.digest;
     const score = digest ? Number(digest.score) : NaN;
     if (!digest || !Number.isFinite(score)) {
       box.hidden = true;
       fields.hidden = true;
+      // no digest: fall back to the generic catalyst line the card always had
+      if (source) source.hidden = false;
       if (empty) empty.hidden = !anyDigest;
       return;
     }
@@ -1553,6 +1559,8 @@
     document.getElementById("cardScoreValue").textContent = score;
     document.getElementById("cardScoreNote").textContent = scoreNote(score);
     fields.hidden = false;
+    // the digest's "why" restates the catalyst line, so drop the duplicate
+    if (source) source.hidden = true;
     if (empty) empty.hidden = true;
     document.getElementById("cardWhy").textContent = digest.why || "—";
     document.getElementById("cardInsight").textContent = digest.insight || "—";
