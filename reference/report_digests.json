@@ -1,0 +1,131 @@
+{
+  "_comment": "Hand-written per-report digests for the Research Lens. Keyed by zsxq file_id (string). Fields: score (0-10 read-worthiness), why (why the report is bullish/neutral/bearish on the ticker), insight (insight density), data (data support), event (what corporate/news event preceded the report). Written from full reads of each local PDF; see reports/recommend/GEV_Research_Lens_Reading_List_2026-09-15.md for the long-form version.",
+
+  "214514824525141": {
+    "score": 7,
+    "why": "Overweight, TP $822. GEV is a valuation page in a Siemens Energy note; the argument is the gas-turbine supply model — 2025 single-cycle orders ~88GW against ~50GW of supply, but capacity doubles to 75GW by 2028 and 97GW of gas by 2030, and GEV adds only ~4GW of small/mid capacity in 2028-30. Exhibit 3 shows GEV's backlog plus reservations at 62GW versus Siemens Energy's 70GW, so GEV is no longer the clear scale leader.",
+    "insight": "The best negative evidence on GEV in the set, and it comes from a house that is simultaneously Overweight. Five explicit caveats on the supply build: MHI alone is 8.6GW of the 22GW 2028-30 step-up, engine GW is not all data-centre-reachable, and blades/vanes stay tight.",
+    "data": "22 pages, 12 exhibits. GEV itself is valuation-only: 18.2x 2028 EV/EBITA and 26.6x PE versus Siemens Energy's 33% PE discount.",
+    "event": "Published two days before GEV's 4Q25 print (28 Jan 2026) and flags it as a catalyst — a rare pre-print framing."
+  },
+
+  "415554212511288": {
+    "score": 4,
+    "why": "Hold, TP $740, roughly 12% below the then-price of $841.27 — the only Hold among the overseas producers in the valuation comp table (Siemens Energy Buy at +11%). The negative is valuation, not thesis.",
+    "insight": "A few sharp GEV capacity datapoints buried in a China-OEM note: capacity sold out through 2029 with delivery slots stretching into the late 2030s, an 83GW backlog at end-CY2025, and the 20GW to 24GW ramp. GEV is also the bull-case ceiling — Dongfang's aggressive case assumes GEV-like ASPs and margins and still yields only 30% upside.",
+    "data": "18 pages, 29 sourced tables and charts. GEV appears on ~7 pages as one comp row plus one pricing chart (GEV 5.0-5.5 versus Dongfang 2.0-5.0 RMB/watt).",
+    "event": "Post-4Q25, which is the source of the 83GW figure. The trigger is Dongfang's early-2026 deposit for 10 G50 units from a Canadian data-centre customer."
+  },
+
+  "585551114124884": {
+    "score": 5,
+    "why": "Overweight, TP $1,000, with GEV named a top pick 'owing to backlog visibility, increasing pricing in pipeline, and solid cash flow/balance sheet.' The evidence is five bullets: backlog plus SRA of 83GW at YE25 (up from 36GW at YE24), global year-to-date orders +72% y/y, North America orders +160% y/y, gas capacity sold out through YE29, and ramping Electrification margins.",
+    "insight": "A 2025-in-review recap. The 83GW, +72% and +160% figures are the entire GEV payload — no GEV estimates and no model.",
+    "data": "21 pages with ~7 chart exhibits over ~10 content pages and one GEV table row.",
+    "event": "Priced 6 Mar 2026, about five weeks after GEV's 4Q25; flags pending FEOC guidance, Section 232 and AD/CVD tariffs."
+  },
+
+  "585551445584884": {
+    "score": 5,
+    "why": "Buy, TP $936 from $841.30. GEV is the re-rating benchmark for Chinese gas-turbine names: UBS argues Dongfang and Harbin should re-rate toward GEV's multiple despite carrying a 28-36% EPS CAGR against GEV's 16%.",
+    "insight": "The additive piece is Figure 8's SOTP — Power EBIT $5,406m plus Electrification and Wind $2,989m at 20-25x implies 42-45x 2027e PE for the gas-turbine segment, with the discount attributed to 'the drag from GE Vernova's loss-making wind turbine business.' Also 4Q25 orders +79% y/y and the Dongfang/Harbin PE discount narrowing to 43% from a 52% average.",
+    "data": "45 pages, 27 numbered figures. GEV appears in Figures 8, 17, 19, 23, 26 and 29, but its Buy rating is asserted with no GEV estimates.",
+    "event": "Post-4Q25, the source of the +79% order figure, alongside Siemens capacity news and US hyperscaler capex upgraded +59% y/y for 2026e."
+  },
+
+  "585545825518884": {
+    "score": 3,
+    "why": "GEV is not on the Conviction List — the April additions are Citizens Financial and Carlisle, the removals BAC and HSY — and it carries no rating, target or price. It appears twice as a supplier reference: Duke's GEV partnership and 20 secured gas turbines, and NVT's order acceleration against a value chain 'booking DC orders out to 2030.'",
+    "insight": "Nothing new on GEV. Its only use is independent confirmation that utilities and electrical OEMs are still booking GEV-linked orders into the 2030s.",
+    "data": "75 pages, 35 exhibits, none on GEV. GEV appears in two of roughly 23 company sections.",
+    "event": "A routine monthly refresh on 1 April. The macro backdrop is the Iran conflict — Brent forecast at $85/bbl and Strait of Hormuz flows at 6% of normal. GEV's 4Q25 was already out; 1Q26 came later."
+  },
+
+  "415518585855828": {
+    "score": 6,
+    "why": "Hold, TP $740 against a $991.30 close — about 25% below the market, with no estimate change, no GEV earnings model and no re-underwriting. It is a valuation verdict only, and it was priced the day before GEV's 1Q26 print.",
+    "insight": "Oddly constructive on everything else: FOAK BWRX-300 at OPG Darlington targeting 2029 commissioning, TVA's Clinch River filing for 800MW of SMRs with a $400m DOE grant, SMR revenue that 'could pull forward' from a 2032+ base, up to $40bn of Japanese government investment behind GEV-Hitachi SMRs in Tennessee and Alabama, a 65-reactor installed base, and CEO Strazik's 5GW uprate opportunity.",
+    "data": "59 pages, ~35 sourced exhibits. GEV gets a full company page (p.36) plus the cover ratings table, but little on earnings impact.",
+    "event": "Priced at the close of 21 Apr 2026, one day before GEV's 1Q26 — so the Hold predates the quarter it is meant to describe and was never revisited."
+  },
+
+  "415248452524448": {
+    "score": 4,
+    "why": "Buy, with no price target anywhere in the document. The GEV case is two sentences: 'Our estimates went up the most for NVT, GEV and VRT' and 'GEV and VRT are the most direct beneficiaries of our structural growth outlook.'",
+    "insight": "Consensus-level and thematic. The only original work is earnings-season dispersion — AI-exposed industrials +14% organic versus +1% for non-AI, a record 45pp spread — with no GEV backlog, order or margin numbers.",
+    "data": "12 pages with no exhibits or tables; the sole GEV datapoint is the disclosure-table price of $1,062.95 on 1 May 2026.",
+    "event": "Written as Q1 earnings closed — GEV's 1Q26 was 22 Apr 2026. Cites Google saying 2027 capex rises 'significantly.'"
+  },
+
+  "584251128411224": {
+    "score": 7,
+    "why": "Buy with no price target; one of 23 'Top Picks to Play DC Supply Chain Tightness.' The case is that GEV's problem is supply, not demand: 1Q26 orders of $18.3B (+71% organically), total backlog $163B, and Electrification booking $2.4B of data-centre equipment in the quarter alone, more than all of 2025 combined.",
+    "insight": "A proprietary six-constraint model with a 12GW 2025 delivery deficit. The sharpest GEV-specific work is on transformers — lead times beyond 24-36 months against a 13.2GW 2026 ceiling — where GEV's data-centre-relevant revenue CAGR runs 79.6% for 2023-26, and the Prolec JV adds share that 'is not fully reflected in forward estimates.'",
+    "data": "32 pages, 38 exhibits, two of them GEV-relevant (Ex. 27/28).",
+    "event": "Post-1Q26, folding in the Prolec JV consolidation; written before 2Q26."
+  },
+
+  "214524525528511": {
+    "score": 4,
+    "why": "Overweight, PT $1,302, appearing only in a comp table ('GEV US OW 1,049 1,302 24%'). No rating rationale, no target derivation, no GEV earnings. GEV serves as the valuation yardstick — Yingliu trades at 29x FY28E PE, below GEV's 32x.",
+    "insight": "A tight, data-rich supplier note whose GEV value is the demand frame: AI capex of $5.5T through 2030 (raised from $5.1T), data-centre power capacity raised to 138GW from 122GW, and global gas-turbine demand above 100GW a year from 2026 to 2035 against only 64GW of 2026 manufacturing capacity.",
+    "data": "10 pages, 4 exhibits. GEV appears once, in Table 2.",
+    "event": "Between 1Q26 and 2Q26. The triggers were Baker Hughes' 2026-31 renewal, a Siemens Energy management visit, and a rotation out of AI-power names."
+  },
+
+  "412424445241828": {
+    "score": 5,
+    "why": "Outperform, PT $1,206 from a $1,045.17 price. The link to GEV is indirect — FERC Order 2222 and virtual power plants, where GEV's FLEXIQ EMS offers optionality. No GEV financials are used.",
+    "insight": "Strong on the VPP and peaker theme, but the route from VPP growth to GEV earnings is asserted rather than modelled.",
+    "data": "20 pages, no GEV-specific exhibits.",
+    "event": "Between 1Q26 and 2Q26; no GEV-specific trigger."
+  },
+
+  "584281422521424": {
+    "score": 8,
+    "why": "Overweight, PT $1,302, written the day after GEV's own 2Q26 print. About 20GW of new gas power contracts signed; the FY26E exit expectation for gas backlog plus SRA raised to at least 125GW from 110GW; 1H26 gas equipment pricing running more than 20% above 4Q25, with 2H26 at the higher end of the 10-20% uplift range; and a quantified supply/demand bridge — FY26 supply ~64GW against demand of ~115-120GW, tightening only around FY30. GEV also outlined a pathway to 30GW of annual gas output by 2030 from its existing footprint.",
+    "insight": "The highest-density GEV read in the set. One caveat worth flagging: the Q/Q deltas ('gas backlog expanded 44GW to 53GW; SRAs increased 56GW to 63GW') do not reconcile with the 100GW to 116GW total quoted on the same page.",
+    "data": "9 pages, 2 exhibits — GEV backlog plus SRAs, and a 17-name gas-turbine component/OEM comp table.",
+    "event": "Same-week read-across on the 2Q26 print, making this the most time-sensitive document in the set."
+  },
+
+  "584285418514214": {
+    "score": 6,
+    "why": "Overweight with the target raised from $1,302 to $1,330 in the six days since the previous note. The GEV content is about two paragraphs off the 2Q26 print: orders of $24.2B 'well above expectations,' the 20GW gas expansion complete and targeting 24GW by FY28 and 30GW by 2030, and FY26 FCF guidance raised to $11.5-12.5B from $6.5-7.5B.",
+    "insight": "The differentiated value is the three-company triangulation — Bloom Energy data-centre orders more than 2x all of FY25, Innio data-centre book-to-bill of 6.3x with capacity to 5GW by YE26 — evidence that behind-the-meter demand is not rolling over.",
+    "data": "14 pages, 2 exhibits (AIDC power comparison; machinery sector comparison).",
+    "event": "Six days after 2Q26, capturing a target revision in flight; also follows Weichai Group's 21 Jul A-share increase announcement."
+  },
+
+  "584284828815454": {
+    "score": 3,
+    "why": "Buy-rated only as a member of the Reliability basket — 'GEV GE Vernova United States 271.1 $1017.96 92% 69%' — with no GEV rating rationale or price target anywhere in the document. The single fundamental datapoint: GEV expects more than 50% of its 2031 capacity to be contracted by the end of 2026.",
+    "insight": "A strong thematic read on AI power demand — 2030 global data-centre demand +170% versus 2025, raised from +117%; hyperscaler capex plus R&D above $1trn in 2026e — in which GEV sits alongside Siemens Energy, Quanta, Vertiv and MasTec.",
+    "data": "36 pages, 36 exhibits, none GEV-specific; GEV appears twice.",
+    "event": "Written after the 2Q26 earnings call, which it quotes directly, and after a round of hyperscaler capex hikes."
+  },
+
+  "412841521854558": {
+    "score": 6,
+    "why": "Outperform, PT $1,298 from $987.46, backed by a primary procurement survey (n=50, ~40% hyperscalers). GEV wins more than 20% of power spend for 14% of respondents — 22% among hyperscalers — against Schneider at 64%, and leads the SST purchase-intent group.",
+    "insight": "The only forward survey evidence on GEV's electrical share in the set — and it is mildly uncomfortable, since a 14% versus 64% split is not the profile of a share gainer.",
+    "data": "27 pages, ~30 exhibits; GEV's slice is three share bars and two SST charts.",
+    "event": "About a month after 2Q26; no GEV-specific trigger."
+  },
+
+  "214822528121111": {
+    "score": 3,
+    "why": "Outperform, PT $1,298 — but the report contains no GEV thesis. Value capture in modular data-centre construction is attributed to Schneider, Vertiv and Eaton. GEV's only substantive appearance is Exhibit 17, noting that Bloom Energy has outperformed it by almost 150pp year-to-date (GEV +44% versus Bloom +191%), a price-return chart with no view attached.",
+    "insight": "Highly differentiated on modularisation — a ~126GW credibility-adjusted pipeline for 2026-30, $0.9B/GW incremental PV with ~25% accruing to OEMs, a $1.9B/GW power-module TAM — and near-zero on GEV.",
+    "data": "57 pages, 81 exhibits, exactly one of which mentions GEV.",
+    "event": "About two months after 2Q26, in the window where GEV lagged fuel-cell peers; no GEV trigger cited."
+  },
+
+  "184445214585182": {
+    "score": 6,
+    "why": "Overweight, PT $1,000, an Analyst Focus List pick following the 4Q25 order beat. The case is quantitative: about 16.7x FY28E EBITDA and 14.1x FY29E, a premium to peers justified by above-average growth, with an SOTP of 20x FY29E Power EBITDA, 16x FY28E Electrification and 6x FY29E Wind at a discount to Vestas.",
+    "insight": "The SOTP multiple rationale is genuinely differentiated — this is the better of the two JPM 2026-03-09 notes. The remainder restates the grid-bottleneck consensus. Not shown on the lens itself: the ticker/broker/date unique key keeps only one row for 9 Mar 2026.",
+    "data": "61 pages with ~54 sourced chart and table captions; only about 2 GEV-specific pages.",
+    "event": "Written after 4Q25, with the target set 10 Dec 2025. No GEV deal or regulatory event cited."
+  }
+}

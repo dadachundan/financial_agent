@@ -510,7 +510,9 @@
       align-self: center;
       width: 100%;
       max-height: 100%;
-      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
       padding: 22px;
       border: 1px solid rgba(47, 240, 181, .5);
       border-radius: 7px;
@@ -518,6 +520,19 @@
       box-shadow: 0 24px 70px rgba(0, 0, 0, .45), 0 0 26px rgba(47, 240, 181, .08);
       transition: opacity .15s ease, transform .15s ease;
       z-index: 3;
+    }
+
+    /* The head and the foot stay put; only the prose between them scrolls, so
+       the score and the report link are always reachable on a long digest. */
+    .card-head,
+    .card-foot { flex: none; }
+
+    .card-body {
+      flex: 1 1 auto;
+      min-height: 0;
+      overflow-y: auto;
+      margin-right: -6px;
+      padding-right: 6px;
     }
 
     .tooltip-card.is-idle {
@@ -650,6 +665,106 @@
       font-size: 12px;
     }
 
+    .chip-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .chip-head time { margin-bottom: 0; }
+
+    .chip-score {
+      flex: none;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 1px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      border: 1px solid currentColor;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.2;
+      opacity: .92;
+    }
+
+    .chip-score i {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 9px;
+      opacity: .7;
+    }
+
+    .chip-score[data-tier="high"] { color: var(--green); background: var(--green-dim); }
+    .chip-score[data-tier="good"] { color: var(--blue); background: rgba(135, 183, 255, .14); }
+    .chip-score[data-tier="mid"]  { color: var(--amber); background: rgba(248, 197, 91, .14); }
+    .chip-score[data-tier="low"]  { color: var(--muted); background: rgba(255, 255, 255, .05); }
+
+    .card-score {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 14px 0 0;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-left-width: 3px;
+      border-radius: 7px;
+      background: rgba(255, 255, 255, .03);
+    }
+
+    .card-score[data-tier="high"] { border-left-color: var(--green); }
+    .card-score[data-tier="good"] { border-left-color: var(--blue); }
+    .card-score[data-tier="mid"]  { border-left-color: var(--amber); }
+    .card-score[data-tier="low"]  { border-left-color: var(--muted); }
+
+    .card-score strong {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .card-score span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .digest-fields {
+      margin: 12px 0 0;
+      display: grid;
+      gap: 9px;
+    }
+
+    .digest-fields dt {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .digest-fields dd {
+      margin: 0;
+      color: var(--text);
+      font-size: 12px;
+      line-height: 1.45;
+      opacity: .9;
+    }
+
+    .digest-empty {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+      font-style: italic;
+    }
+
+    .card-score[hidden],
+    .digest-fields[hidden],
+    .digest-empty[hidden] { display: none; }
+
     .empty-state {
       padding: 48px;
       border: 1px solid var(--line);
@@ -772,20 +887,37 @@
           </div>
 
           <article class="tooltip-card is-idle" id="reportCard" aria-live="polite">
-            <div class="tooltip-meta">
-              <span id="cardBank">Goldman Sachs</span>
-              <span id="cardDate">Aug 24, 2026</span>
+            <div class="card-head">
+              <div class="tooltip-meta">
+                <span id="cardBank">Goldman Sachs</span>
+                <span id="cardDate">Aug 24, 2026</span>
+              </div>
+              <h3 id="cardTitle">China AI demand and localization trend to drive growth ahead</h3>
+              <div class="pill" id="cardPill">Bullish view</div>
+              <div class="card-score" id="cardScore" data-tier="high" hidden>
+                <strong id="cardScoreValue">8</strong>
+                <span id="cardScoreNote">/10 read score</span>
+              </div>
             </div>
-            <h3 id="cardTitle">China AI demand and localization trend to drive growth ahead</h3>
-            <div class="pill" id="cardPill">Bullish view</div>
-            <p id="cardChange">Target price raised as demand and localization strengthened.</p>
-            <p id="cardSource">Inventory and wafer build supported a stronger next-quarter setup.</p>
-            <div class="metrics">
-              <div class="metric"><span>Rating</span><strong id="cardRating">Buy</strong></div>
-              <div class="metric"><span>Target</span><strong id="cardTarget">RMB 1,841</strong></div>
-              <div class="metric"><span>Price</span><strong id="cardMetricPrice">RMB 1,035</strong></div>
+            <div class="card-body">
+              <p id="cardChange">Target price raised as demand and localization strengthened.</p>
+              <p id="cardSource">Inventory and wafer build supported a stronger next-quarter setup.</p>
+              <dl class="digest-fields" id="cardDigest" hidden>
+                <div><dt>Why this call</dt><dd id="cardWhy"></dd></div>
+                <div><dt>Insight density</dt><dd id="cardInsight"></dd></div>
+                <div><dt>Data support</dt><dd id="cardData"></dd></div>
+                <div><dt>Event context</dt><dd id="cardEvent"></dd></div>
+              </dl>
+              <p class="digest-empty" id="cardDigestEmpty" hidden>No digest written for this report yet.</p>
             </div>
-            <a class="report-link" id="cardLink" href="#" target="_blank" rel="noreferrer">Open zsxq report</a>
+            <div class="card-foot">
+              <div class="metrics">
+                <div class="metric"><span>Rating</span><strong id="cardRating">Buy</strong></div>
+                <div class="metric"><span>Target</span><strong id="cardTarget">RMB 1,841</strong></div>
+                <div class="metric"><span>Price</span><strong id="cardMetricPrice">RMB 1,035</strong></div>
+              </div>
+              <a class="report-link" id="cardLink" href="#" target="_blank" rel="noreferrer">Open zsxq report</a>
+            </div>
           </article>
         </div>
       </div>
@@ -1361,6 +1493,20 @@
     });
   }
 
+  function scoreTier(score) {
+    if (score >= 8) return "high";
+    if (score >= 6) return "good";
+    if (score >= 4) return "mid";
+    return "low";
+  }
+
+  function scoreNote(score) {
+    if (score >= 8) return "/10 read score — primary work on this name. Read it.";
+    if (score >= 6) return "/10 read score — real content on this name, worth the time.";
+    if (score >= 4) return "/10 read score — a few sharp datapoints; skim the relevant section.";
+    return "/10 read score — the name is a table row here, not the subject.";
+  }
+
   function renderChips() {
     if (!timelineStrip) return;
     timelineStrip.innerHTML = "";
@@ -1374,13 +1520,44 @@
       const detail = target !== null
         ? money(target, report.targetCurrency || currencyLabel(report))
         : (report.label || report.rating || "");
-      button.title = `${report.rating}${target !== null ? ` · target ${money(target, report.targetCurrency || currencyLabel(report))}` : ""}`;
-      button.innerHTML = `<time>${reportNumber}. ${report.date}</time><b>${report.bank}</b><span>${detail}</span>`;
+      const score = report.digest ? Number(report.digest.score) : NaN;
+      const badge = Number.isFinite(score)
+        ? `<span class="chip-score" data-tier="${scoreTier(score)}">${score}<i>/10</i></span>`
+        : "";
+      button.title = `${report.rating}${target !== null ? ` · target ${money(target, report.targetCurrency || currencyLabel(report))}` : ""}${Number.isFinite(score) ? ` · read score ${score}/10` : ""}`;
+      button.innerHTML = `<div class="chip-head"><time>${reportNumber}. ${report.date}</time>${badge}</div><b>${report.bank}</b><span>${detail}</span>`;
       button.addEventListener("mouseenter", () => setActive(report.id));
       button.addEventListener("focus", () => setActive(report.id));
       button.addEventListener("click", () => setActive(report.id));
       timelineStrip.appendChild(button);
     });
+  }
+
+  const anyDigest = reports.some(report => report.digest && Number.isFinite(Number(report.digest.score)));
+
+  function renderDigest(report) {
+    const box = document.getElementById("cardScore");
+    const fields = document.getElementById("cardDigest");
+    const empty = document.getElementById("cardDigestEmpty");
+    if (!box || !fields) return;
+    const digest = report.digest;
+    const score = digest ? Number(digest.score) : NaN;
+    if (!digest || !Number.isFinite(score)) {
+      box.hidden = true;
+      fields.hidden = true;
+      if (empty) empty.hidden = !anyDigest;
+      return;
+    }
+    box.hidden = false;
+    box.dataset.tier = scoreTier(score);
+    document.getElementById("cardScoreValue").textContent = score;
+    document.getElementById("cardScoreNote").textContent = scoreNote(score);
+    fields.hidden = false;
+    if (empty) empty.hidden = true;
+    document.getElementById("cardWhy").textContent = digest.why || "—";
+    document.getElementById("cardInsight").textContent = digest.insight || "—";
+    document.getElementById("cardData").textContent = digest.data || "—";
+    document.getElementById("cardEvent").textContent = digest.event || "—";
   }
 
   function setActive(id) {
@@ -1404,6 +1581,7 @@
     document.getElementById("cardRating").textContent = report.rating;
     document.getElementById("cardTarget").textContent = money(report.target, report.targetCurrency || ccy);
     document.getElementById("cardMetricPrice").textContent = money(activePrice, ccy);
+    renderDigest(report);
     document.getElementById("cardLink").href = report.pdfUrl;
     card.classList.remove("is-idle");
     document.querySelectorAll(".report-marker, .report-chip").forEach(el => {

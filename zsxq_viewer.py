@@ -33,6 +33,8 @@ from db_paths import db_path
 SCRIPT_DIR       = Path(__file__).parent
 DEFAULT_DB       = db_path("zsxq.db")
 UPLOADS_DIR      = SCRIPT_DIR / "uploads"
+DIGEST_PATH      = SCRIPT_DIR / "reference" / "report_digests.json"
+_DIGEST_CACHE: dict = {"mtime": None, "data": {}}
 
 try:
     from config import FLOMO_WEBHOOK_URL as _FLOMO_WEBHOOK_URL
@@ -1496,6 +1498,27 @@ _RESEARCH_LENS_POINTS = {
 }
 
 
+def _report_digests() -> dict:
+    """Hand-written per-report digests, keyed by zsxq file_id.
+
+    Kept in a JSON file rather than the databases so the prose stays
+    reviewable and versioned; reloaded whenever the file changes.
+    """
+    try:
+        mtime = DIGEST_PATH.stat().st_mtime
+    except OSError:
+        return {}
+    if _DIGEST_CACHE["mtime"] != mtime:
+        try:
+            payload = _json.loads(DIGEST_PATH.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            payload = {}
+        if not isinstance(payload, dict):
+            payload = {}
+        _DIGEST_CACHE.update({"mtime": mtime, "data": payload})
+    return _DIGEST_CACHE["data"]
+
+
 def _research_lens_reports(ticker: str = "688256") -> tuple[list[dict], str]:
     """Return timeline records for the interactive research-lens chart."""
     ticker = (ticker or "688256").strip().upper()
@@ -1668,6 +1691,10 @@ def _research_lens_reports(ticker: str = "688256") -> tuple[list[dict], str]:
                 "source": source,
                 "pdfUrl": _research_lens_pdf_url(fid, row["name"]),
             })
+
+    digests = _report_digests()
+    for report in reports:
+        report["digest"] = digests.get(str(report["id"]))
 
     reports.sort(key=lambda r: (r["date"], r["id"]))
     return reports[:18], company_name
