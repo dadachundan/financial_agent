@@ -622,11 +622,57 @@
       margin-top: 22px;
     }
 
+    /* One ramp for every read-score surface: the greener the tile, the more
+       the report is worth reading; the lowest tier greys out. */
+    .report-chip[data-tier="high"],
+    .chip-score[data-tier="high"],
+    .card-score[data-tier="high"] {
+      --score-accent: var(--green);
+      --score-line: rgba(47, 240, 181, .62);
+      --score-fill: rgba(47, 240, 181, .17);
+      --score-pill: rgba(47, 240, 181, .20);
+      --score-line-hover: rgba(47, 240, 181, .85);
+      --score-fill-hover: rgba(47, 240, 181, .23);
+    }
+
+    .report-chip[data-tier="good"],
+    .chip-score[data-tier="good"],
+    .card-score[data-tier="good"] {
+      --score-accent: rgba(47, 240, 181, .72);
+      --score-line: rgba(47, 240, 181, .26);
+      --score-fill: rgba(47, 240, 181, .06);
+      --score-pill: rgba(47, 240, 181, .10);
+      --score-line-hover: rgba(47, 240, 181, .50);
+      --score-fill-hover: rgba(47, 240, 181, .12);
+    }
+
+    .report-chip[data-tier="mid"],
+    .chip-score[data-tier="mid"],
+    .card-score[data-tier="mid"] {
+      --score-accent: rgba(238, 245, 242, .42);
+      --score-line: rgba(255, 255, 255, .12);
+      --score-fill: rgba(255, 255, 255, .04);
+      --score-pill: rgba(255, 255, 255, .06);
+      --score-line-hover: rgba(255, 255, 255, .24);
+      --score-fill-hover: rgba(255, 255, 255, .08);
+    }
+
+    .report-chip[data-tier="low"],
+    .chip-score[data-tier="low"],
+    .card-score[data-tier="low"] {
+      --score-accent: rgba(238, 245, 242, .40);
+      --score-line: rgba(255, 255, 255, .05);
+      --score-fill: rgba(255, 255, 255, .012);
+      --score-pill: rgba(255, 255, 255, .03);
+      --score-line-hover: rgba(255, 255, 255, .16);
+      --score-fill-hover: rgba(255, 255, 255, .045);
+    }
+
     .report-chip {
-      border: 1px solid rgba(255, 255, 255, .12);
+      border: 1px solid var(--score-line, rgba(255, 255, 255, .12));
       border-radius: 7px;
       padding: 12px;
-      background: rgba(255, 255, 255, .04);
+      background: var(--score-fill, rgba(255, 255, 255, .04));
       color: var(--text);
       text-align: left;
       cursor: pointer;
@@ -634,22 +680,26 @@
       transition: border-color .16s ease, background .16s ease, transform .16s ease;
     }
 
+    /* hover keeps the tile's own tier colour — it never turns a grey tile green */
     .report-chip:hover,
     .report-chip:focus,
     .report-chip.active {
       outline: 0;
-      border-color: rgba(47, 240, 181, .58);
-      background: rgba(47, 240, 181, .08);
+      border-color: var(--score-line-hover, rgba(255, 255, 255, .26));
+      background: var(--score-fill-hover, rgba(255, 255, 255, .07));
       transform: translateY(-2px);
     }
 
     .report-chip time {
       display: block;
-      color: var(--green);
+      color: var(--score-accent, var(--green));
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 11px;
       margin-bottom: 10px;
     }
+
+    .report-chip[data-tier="low"] { color: rgba(238, 245, 242, .58); }
+    .report-chip[data-tier="low"] span { color: rgba(238, 245, 242, .34); }
 
     .report-chip b {
       display: block;
@@ -697,10 +747,10 @@
       opacity: .7;
     }
 
-    .chip-score[data-tier="high"] { color: var(--green); background: var(--green-dim); }
-    .chip-score[data-tier="good"] { color: var(--blue); background: rgba(135, 183, 255, .14); }
-    .chip-score[data-tier="mid"]  { color: var(--amber); background: rgba(248, 197, 91, .14); }
-    .chip-score[data-tier="low"]  { color: var(--muted); background: rgba(255, 255, 255, .05); }
+    .chip-score[data-tier] {
+      color: var(--score-accent);
+      background: var(--score-pill);
+    }
 
     .card-score {
       display: flex;
@@ -714,10 +764,7 @@
       background: rgba(255, 255, 255, .03);
     }
 
-    .card-score[data-tier="high"] { border-left-color: var(--green); }
-    .card-score[data-tier="good"] { border-left-color: var(--blue); }
-    .card-score[data-tier="mid"]  { border-left-color: var(--amber); }
-    .card-score[data-tier="low"]  { border-left-color: var(--muted); }
+    .card-score[data-tier] { border-left-color: var(--score-accent, var(--line)); }
 
     .card-score strong {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -1527,6 +1574,8 @@
       const badge = Number.isFinite(score)
         ? `<span class="chip-score" data-tier="${scoreTier(score)}">${score}<i>/10</i></span>`
         : "";
+      // the tile wears the same tier as its badge: green = worth reading, grey = skip
+      if (Number.isFinite(score)) button.dataset.tier = scoreTier(score);
       button.title = `${report.rating}${target !== null ? ` · target ${money(target, report.targetCurrency || currencyLabel(report))}` : ""}${Number.isFinite(score) ? ` · read score ${score}/10` : ""}`;
       button.innerHTML = `<div class="chip-head"><time>${reportNumber}. ${report.date}</time>${badge}</div><b>${report.bank}</b><span>${detail}</span>`;
       button.addEventListener("mouseenter", () => setActive(report.id));
