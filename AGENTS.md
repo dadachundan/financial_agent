@@ -1,5 +1,20 @@
 # AGENTS.md — Codebase Guide for AI Agents
 
+## Language
+
+Write English into this repository's files: documentation and README prose,
+code comments, commit messages, and skill metadata (`SKILL.md` bodies and
+frontmatter included). A sentence-shaped value is English even when it sits in
+a metadata field.
+
+Non-English is reserved for content whose language is the artifact itself: the
+zh report companions under `reports/`, file and directory names built from
+exchange-listed company names, quoted source excerpts, and translation
+material. Never add another language just because a neighbouring file carries
+it — ask first.
+
+---
+
 ## Repository Overview
 
 Tech-industry knowledge graph web app + zsxq PDF pipeline.
