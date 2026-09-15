@@ -915,6 +915,9 @@
         align-self: stretch;
         max-height: none;
         overflow: visible;
+        /* a tile tap scrolls the card to the top of the viewport — keep it
+           clear of the edge */
+        scroll-margin-top: 14px;
       }
       .card-body {
         overflow: visible;
@@ -1597,7 +1600,7 @@
       button.setAttribute("aria-label", stacked
         ? `${entries.length} reports on ${shown.date}: ${entries.map(entry => entry.report.bank).join(", ")}`
         : `${shown.bank} ${shown.date} ${shown.label}`);
-      button.addEventListener("mouseenter", () => setActive(shown.id));
+      button.addEventListener("mouseenter", () => { if (!hoverIsMuted()) setActive(shown.id); });
       button.addEventListener("focus", () => setActive(shown.id));
       button.addEventListener("click", () => setActive(shown.id));
       markerLayer.appendChild(button);
@@ -1614,7 +1617,7 @@
       target.style.left = `${targetPos.x}px`;
       target.style.top = `${targetPos.y}px`;
       target.setAttribute("aria-label", `${report.bank} ${report.date} target ${money(report.target, report.targetCurrency || currencyLabel(report))}`);
-      target.addEventListener("mouseenter", () => setActive(report.id));
+      target.addEventListener("mouseenter", () => { if (!hoverIsMuted()) setActive(report.id); });
       target.addEventListener("focus", () => setActive(report.id));
       target.addEventListener("click", () => setActive(report.id));
       markerLayer.appendChild(target);
@@ -1692,9 +1695,12 @@
       if (Number.isFinite(score)) paintScore(button, score);
       button.title = `${report.rating}${target !== null ? ` · target ${money(target, report.targetCurrency || currencyLabel(report))}` : ""}${Number.isFinite(score) ? ` · read score ${score}/10 ${scoreBandLabel(score)}` : ""}`;
       button.innerHTML = `<div class="chip-head"><time>${reportNumber}. ${report.date}</time>${badge}</div><b>${report.bank}</b><span>${detail}</span>`;
-      button.addEventListener("mouseenter", () => setActive(report.id));
+      button.addEventListener("mouseenter", () => { if (!hoverIsMuted()) setActive(report.id); });
       button.addEventListener("focus", () => setActive(report.id));
-      button.addEventListener("click", () => setActive(report.id));
+      button.addEventListener("click", () => {
+        setActive(report.id);
+        revealCard();
+      });
       timelineStrip.appendChild(button);
     });
   }
@@ -1708,8 +1714,18 @@
   const stackedLayout = window.matchMedia("(max-width: 1100px)");
   const calmMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+  /* A tap scrolls the page under a stationary pointer, so on a hybrid device
+     the tile that lands under the cursor would steal the card back through its
+     own mouseenter. Hover stays muted for the length of that scroll. */
+  let hoverMutedUntil = 0;
+
+  function hoverIsMuted() {
+    return performance.now() < hoverMutedUntil;
+  }
+
   function revealCard() {
     if (!stackedLayout.matches || !card) return;
+    hoverMutedUntil = performance.now() + 800;
     card.scrollIntoView({
       behavior: calmMotion.matches ? "auto" : "smooth",
       block: "start",
