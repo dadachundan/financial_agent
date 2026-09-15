@@ -15,9 +15,20 @@
       --text: #f2f7f5;
       --green: #2ff0b5;
       --green-dim: rgba(47, 240, 181, .16);
-      --amber: #f8c55b;
       --red: #ff6f7d;
       --blue: #87b7ff;
+
+      /* Cool-to-warm read-score spectrum: the colder the tile, the less the
+         report is worth your time. Fills/borders use the base hue, the date
+         and badge ink use the lighter tint of the same hue. */
+      --tier-low: #718096;        /* 0-3   cool slate / gray  */
+      --tier-moderate: #319795;   /* 4-6   teal               */
+      --tier-strong: #3182CE;     /* 7-8   deep blue          */
+      --tier-top: #805AD5;        /* 9-10  electric purple    */
+      --tier-low-ink: #A0AEC0;
+      --tier-moderate-ink: #4FD1C5;
+      --tier-strong-ink: #63B3ED;
+      --tier-top-ink: #B794F4;
     }
 
     * { box-sizing: border-box; }
@@ -622,12 +633,12 @@
       margin-top: 22px;
     }
 
-    /* Read score = attention, and attention changes hue, not just depth.
-       --t is the score's position inside its own band (0..1, written on the
-       tile by the renderer) and --hover is the hover or active lift; every
-       colour below is derived from those two, so the ladder runs
-       grey (<=3, skip) -> plain tile (4-5) -> green (6-7, worth the time)
-       -> gold (8-10, read it now, and 10 burns brighter than 8). */
+    /* Read score = attention on a cool-to-warm spectrum: cool slate (0-3, not
+       worth the time) -> teal (4-6, moderate) -> deep blue (7-8, strong) ->
+       electric purple (9-10, top performing). --t is the score's position
+       inside its own band (0..1, written on the tile by the renderer) and
+       --hover is the hover or active lift, so the top of a band outranks its
+       bottom and a 10 burns hotter than a 9. */
     .report-chip {
       --t: 0;
       --hover: 0;
@@ -643,29 +654,32 @@
                   box-shadow .16s ease, transform .16s ease;
     }
 
-    /* the top band leaves green behind: gold, and glowing */
-    .report-chip[data-tier="high"] {
-      --score-line: rgba(248, 197, 91, calc(.68 + var(--t) * .24 + var(--hover) * .08));
-      --score-fill: rgba(248, 197, 91, calc(.16 + var(--t) * .12 + var(--hover) * .05));
-      --score-glow: rgba(248, 197, 91, calc(.30 + var(--t) * .35 + var(--hover) * .15));
+    .report-chip[data-tier="top"] {
+      --score-line: rgba(128, 90, 213, calc(.60 + var(--t) * .26 + var(--hover) * .10));
+      --score-fill: rgba(128, 90, 213, calc(.20 + var(--t) * .12 + var(--hover) * .05));
+      --score-glow: rgba(128, 90, 213, calc(.34 + var(--t) * .34 + var(--hover) * .16));
+      --score-ink: var(--tier-top-ink);
     }
 
-    .report-chip[data-tier="good"] {
-      --score-line: rgba(47, 240, 181, calc(.34 + var(--t) * .14 + var(--hover) * .14));
-      --score-fill: rgba(47, 240, 181, calc(.07 + var(--t) * .04 + var(--hover) * .04));
-      --score-glow: rgba(47, 240, 181, calc(.06 + var(--t) * .06 + var(--hover) * .10));
+    .report-chip[data-tier="strong"] {
+      --score-line: rgba(49, 130, 206, calc(.50 + var(--t) * .18 + var(--hover) * .14));
+      --score-fill: rgba(49, 130, 206, calc(.13 + var(--t) * .06 + var(--hover) * .05));
+      --score-glow: rgba(49, 130, 206, calc(.14 + var(--t) * .14 + var(--hover) * .12));
+      --score-ink: var(--tier-strong-ink);
     }
 
-    .report-chip[data-tier="mid"] {
-      --score-line: rgba(255, 255, 255, calc(.12 + var(--hover) * .12));
-      --score-fill: rgba(255, 255, 255, calc(.04 + var(--hover) * .04));
-      --score-glow: rgba(255, 255, 255, 0);
+    .report-chip[data-tier="moderate"] {
+      --score-line: rgba(49, 151, 149, calc(.38 + var(--t) * .16 + var(--hover) * .14));
+      --score-fill: rgba(49, 151, 149, calc(.08 + var(--t) * .04 + var(--hover) * .04));
+      --score-glow: rgba(49, 151, 149, calc(.06 + var(--t) * .08 + var(--hover) * .10));
+      --score-ink: var(--tier-moderate-ink);
     }
 
     .report-chip[data-tier="low"] {
-      --score-line: rgba(255, 255, 255, calc(.05 + var(--hover) * .11));
-      --score-fill: rgba(255, 255, 255, calc(.012 + var(--hover) * .03));
-      --score-glow: rgba(255, 255, 255, 0);
+      --score-line: rgba(113, 128, 150, calc(.26 + var(--hover) * .16));
+      --score-fill: rgba(113, 128, 150, calc(.05 + var(--hover) * .05));
+      --score-glow: rgba(113, 128, 150, 0);
+      --score-ink: var(--tier-low-ink);
     }
 
     /* a scored tile carries the heavier left bar, like the digest card */
@@ -693,18 +707,18 @@
       margin-bottom: 10px;
     }
 
-    .report-chip[data-tier="high"] { color: #fff9ec; }
-    .report-chip[data-tier="high"] time { color: var(--amber); }
-    .report-chip[data-tier="high"] span { color: rgba(255, 240, 214, .80); }
+    .report-chip[data-tier] time { color: var(--score-ink); }
 
-    .report-chip[data-tier="good"] time { color: rgba(47, 240, 181, .78); }
-    .report-chip[data-tier="good"] span { color: rgba(238, 245, 242, .70); }
+    .report-chip[data-tier="top"] { color: #f5f0ff; }
+    .report-chip[data-tier="top"] span { color: rgba(235, 228, 255, .80); }
 
-    .report-chip[data-tier="mid"] time { color: rgba(238, 245, 242, .60); }
+    .report-chip[data-tier="strong"] { color: #eef5ff; }
+    .report-chip[data-tier="strong"] span { color: rgba(226, 238, 252, .72); }
 
-    .report-chip[data-tier="low"] { color: rgba(238, 245, 242, .55); }
-    .report-chip[data-tier="low"] time { color: rgba(238, 245, 242, .40); }
-    .report-chip[data-tier="low"] span { color: rgba(238, 245, 242, .32); }
+    .report-chip[data-tier="moderate"] span { color: rgba(226, 245, 243, .66); }
+
+    .report-chip[data-tier="low"] { color: rgba(226, 232, 240, .55); }
+    .report-chip[data-tier="low"] span { color: rgba(226, 232, 240, .34); }
 
     .report-chip b {
       display: block;
@@ -752,28 +766,34 @@
       opacity: .7;
     }
 
-    /* the badge shouts loudest at the top: solid gold with dark ink */
-    .chip-score[data-tier="high"] {
-      color: #1d1305;
-      background: var(--amber);
-      border-color: var(--amber);
-      box-shadow: 0 0 14px rgba(248, 197, 91, .45);
+    /* the badge fills in as the band warms up: slate outline -> teal tint ->
+       solid deep blue -> solid purple with a glow */
+    .chip-score[data-tier="top"] {
+      color: #fff;
+      background: var(--tier-top);
+      border-color: var(--tier-top);
+      box-shadow: 0 0 14px rgba(128, 90, 213, .50);
       opacity: 1;
     }
 
-    .chip-score[data-tier="good"] {
-      color: rgba(47, 240, 181, .95);
-      background: rgba(47, 240, 181, .13);
+    .chip-score[data-tier="strong"] {
+      color: #fff;
+      background: var(--tier-strong);
+      border-color: var(--tier-strong);
+      box-shadow: 0 0 12px rgba(49, 130, 206, .40);
+      opacity: 1;
     }
 
-    .chip-score[data-tier="mid"] {
-      color: rgba(238, 245, 242, .66);
-      background: rgba(255, 255, 255, .05);
+    .chip-score[data-tier="moderate"] {
+      color: var(--tier-moderate-ink);
+      background: rgba(49, 151, 149, .16);
+      border-color: rgba(49, 151, 149, .50);
     }
 
     .chip-score[data-tier="low"] {
-      color: rgba(238, 245, 242, .46);
-      background: rgba(255, 255, 255, .03);
+      color: rgba(160, 174, 192, .78);
+      background: rgba(113, 128, 150, .10);
+      border-color: rgba(113, 128, 150, .38);
     }
 
     .card-score {
@@ -789,10 +809,10 @@
       background: rgba(255, 255, 255, .03);
     }
 
-    .card-score[data-tier="high"] { border-left-color: rgba(248, 197, 91, calc(.78 + var(--t) * .22)); }
-    .card-score[data-tier="good"] { border-left-color: rgba(47, 240, 181, calc(.42 + var(--t) * .26)); }
-    .card-score[data-tier="mid"]  { border-left-color: rgba(238, 245, 242, .35); }
-    .card-score[data-tier="low"]  { border-left-color: rgba(238, 245, 242, .20); }
+    .card-score[data-tier="top"]      { border-left-color: rgba(128, 90, 213, calc(.80 + var(--t) * .20)); }
+    .card-score[data-tier="strong"]   { border-left-color: rgba(49, 130, 206, calc(.70 + var(--t) * .22)); }
+    .card-score[data-tier="moderate"] { border-left-color: rgba(49, 151, 149, calc(.55 + var(--t) * .25)); }
+    .card-score[data-tier="low"]      { border-left-color: rgba(113, 128, 150, .45); }
 
     .card-score strong {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -987,7 +1007,7 @@
               </div>
               <h3 id="cardTitle">China AI demand and localization trend to drive growth ahead</h3>
               <div class="pill" id="cardPill">Bullish view</div>
-              <div class="card-score" id="cardScore" data-tier="high" hidden>
+              <div class="card-score" id="cardScore" data-tier="low" hidden>
                 <strong id="cardScoreValue">8</strong>
                 <span id="cardScoreNote">/10 read score</span>
               </div>
@@ -1586,20 +1606,29 @@
     });
   }
 
+  /* Cool-to-warm read-score spectrum: 0-3 cool slate, 4-6 teal, 7-8 deep
+     blue, 9-10 electric purple. */
   function scoreTier(score) {
-    if (score >= 8) return "high";
-    if (score >= 6) return "good";
-    if (score >= 4) return "mid";
+    if (score >= 9) return "top";
+    if (score >= 7) return "strong";
+    if (score >= 4) return "moderate";
     return "low";
   }
 
-  /* Where the score sits inside its own tier, 0..1 — the CSS turns that into
-     border, fill and glow strength, so 10/10 outranks 8/10 without leaving
-     the green, and a 6 sits just above a 5. */
+  function scoreBandLabel(score) {
+    if (score >= 9) return "top performing";
+    if (score >= 7) return "strong";
+    if (score >= 4) return "moderate";
+    return "low";
+  }
+
+  /* Where the score sits inside its own band, 0..1 — the CSS turns that into
+     border, fill and glow strength, so 10/10 outranks 9/10 without leaving
+     the purple, and an 8 sits just above a 7. */
   function scoreBand(score) {
-    if (score >= 8) return [8, 10];
-    if (score >= 6) return [6, 7];
-    if (score >= 4) return [4, 5];
+    if (score >= 9) return [9, 10];
+    if (score >= 7) return [7, 8];
+    if (score >= 4) return [4, 6];
     return [0, 3];
   }
 
@@ -1635,9 +1664,10 @@
       const badge = Number.isFinite(score)
         ? `<span class="chip-score" data-tier="${scoreTier(score)}">${score}<i>/10</i></span>`
         : "";
-      // the tile wears the same tier as its badge: green = worth reading, grey = skip
+      // the tile wears the same tier as its badge: cool slate = skip it,
+      // purple = top of the list
       if (Number.isFinite(score)) paintScore(button, score);
-      button.title = `${report.rating}${target !== null ? ` · target ${money(target, report.targetCurrency || currencyLabel(report))}` : ""}${Number.isFinite(score) ? ` · read score ${score}/10` : ""}`;
+      button.title = `${report.rating}${target !== null ? ` · target ${money(target, report.targetCurrency || currencyLabel(report))}` : ""}${Number.isFinite(score) ? ` · read score ${score}/10 ${scoreBandLabel(score)}` : ""}`;
       button.innerHTML = `<div class="chip-head"><time>${reportNumber}. ${report.date}</time>${badge}</div><b>${report.bank}</b><span>${detail}</span>`;
       button.addEventListener("mouseenter", () => setActive(report.id));
       button.addEventListener("focus", () => setActive(report.id));
