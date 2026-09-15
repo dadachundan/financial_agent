@@ -611,7 +611,13 @@
       var o = Number(b.open), c = Number(b.close), high = Number(b.high), low = Number(b.low);
       if(!isFinite(o) || !isFinite(c) || !isFinite(high) || !isFinite(low)) return;
       var x = xFor(i);
-      var up = c >= o;
+      // Colour by the day's direction -- close against the *previous* close,
+      // the same basis as the header's change and the list's 1D % column --
+      // rather than by the intraday open->close leg, so a day that gaps up and
+      // fades still reads green. The first bar of the series has no previous
+      // close and falls back to its own open.
+      var prevRef = i > 0 ? Number(bars[i - 1].close) : NaN;
+      var up = isFinite(prevRef) ? c >= prevRef : c >= o;
       var color = up ? '#00b894' : '#ff475f';
       ctx.strokeStyle = color;
       ctx.fillStyle = color;
