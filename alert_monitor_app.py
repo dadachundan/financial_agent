@@ -373,8 +373,32 @@ def _safe_float(value: Any) -> float | None:
     return f if f == f else None
 
 
-@lru_cache(maxsize=256)
+# Quote snapshots are cached per _SNAPSHOT_TTL-second bucket: a page load still
+# costs one Yahoo round trip per symbol, but a later visit always sees live
+# prices. An unbounded per-process cache is not an option -- it keeps serving
+# the close it was first filled with, so the 1D % column showed the previous
+# session's change until someone hit Refresh.
+_SNAPSHOT_TTL = 60.0
+_SNAPSHOT_CACHE: dict[tuple[str, int], dict[str, Any]] = {}
+
+
 def _market_snapshot(yf_symbol: str) -> dict[str, Any]:
+    key = (yf_symbol, int(time.time() // _SNAPSHOT_TTL))
+    cached = _SNAPSHOT_CACHE.get(key)
+    if cached is not None:
+        return cached
+    payload = _fetch_market_snapshot(yf_symbol)
+    _SNAPSHOT_CACHE[key] = payload
+    for stale in [k for k in _SNAPSHOT_CACHE if k[1] != key[1]]:
+        _SNAPSHOT_CACHE.pop(stale, None)
+    return payload
+
+
+def _market_snapshot_cache_clear() -> None:
+    _SNAPSHOT_CACHE.clear()
+
+
+def _fetch_market_snapshot(yf_symbol: str) -> dict[str, Any]:
     try:
         import yfinance as yf
 
@@ -456,7 +480,7 @@ def index():
 def api_alerts():
     refresh = request.args.get("refresh") == "1"
     if refresh:
-        _market_snapshot.cache_clear()
+        _market_snapshot_cache_clear()
     rows = alert_db.list_alerts(
         include_obsolete=request.args.get("include_obsolete") == "1")
     return jsonify({"alerts": [_row_payload(row) for row in rows]})
@@ -531,10 +555,12 @@ def api_restore_alert(alert_id: str):
     return jsonify({"ok": True, "id": alert_id, "obsolete_at": ""})
 
 
-# Same-day price history cache: (yf_symbol, period, calendar day) -> payload.
-# Reloading a series on the same day is served from memory; a new day (or
-# ?refresh=1) fetches fresh bars from Yahoo Finance again.
-_HISTORY_CACHE: dict[tuple[str, str, str], dict[str, Any]] = {}
+# Price history cache: (yf_symbol, period, time bucket) -> payload. Reloading a
+# series within the same _SNAPSHOT_TTL window is served from memory; anything
+# older (or ?refresh=1) fetches fresh bars from Yahoo Finance again. Bucketing
+# by time instead of by calendar day keeps the newest bar -- today's partial
+# one -- from being pinned to whatever the first fetch of the day returned.
+_HISTORY_CACHE: dict[tuple[str, str, int], dict[str, Any]] = {}
 
 
 @alert_monitor_bp.route("/api/history/<path:yf_symbol>")
@@ -542,8 +568,7 @@ def api_history(yf_symbol: str):
     period = request.args.get("period", "1y")
     if period not in {"1mo", "3mo", "6mo", "1y", "2y", "5y"}:
         period = "1y"
-    day = time.strftime("%Y-%m-%d")
-    key = (yf_symbol, period, day)
+    key = (yf_symbol, period, int(time.time() // _SNAPSHOT_TTL))
     if request.args.get("refresh") != "1" and key in _HISTORY_CACHE:
         return jsonify(_HISTORY_CACHE[key])
     try:
@@ -566,7 +591,7 @@ def api_history(yf_symbol: str):
                 })
         payload = {"ok": bool(bars), "symbol": yf_symbol, "period": period, "bars": bars}
         if bars:
-            for stale in [k for k in _HISTORY_CACHE if k[:2] == key[:2] and k[2] != day]:
+            for stale in [k for k in _HISTORY_CACHE if k[:2] == key[:2] and k[2] != key[2]]:
                 _HISTORY_CACHE.pop(stale, None)
             _HISTORY_CACHE[key] = payload
         return jsonify(payload)
