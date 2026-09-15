@@ -622,12 +622,12 @@
       margin-top: 22px;
     }
 
-    /* Read score = attention. --t is the score's position inside its own band
-       (0..1, written on the tile by the renderer) and --hover is the hover or
-       active lift; every colour below is derived from those two, so attention
-       climbs with the score instead of snapping between four fixed looks:
-       8-10 glows behind a solid green badge, 6-7 is unmistakably green,
-       4-5 is the plain tile, and 3 or less goes grey and quiet. */
+    /* Read score = attention, and attention changes hue, not just depth.
+       --t is the score's position inside its own band (0..1, written on the
+       tile by the renderer) and --hover is the hover or active lift; every
+       colour below is derived from those two, so the ladder runs
+       grey (<=3, skip) -> plain tile (4-5) -> green (6-7, worth the time)
+       -> gold (8-10, read it now, and 10 burns brighter than 8). */
     .report-chip {
       --t: 0;
       --hover: 0;
@@ -643,11 +643,11 @@
                   box-shadow .16s ease, transform .16s ease;
     }
 
-    /* the top band leans on a glow, not just a lighter green */
+    /* the top band leaves green behind: gold, and glowing */
     .report-chip[data-tier="high"] {
-      --score-line: rgba(47, 240, 181, calc(.70 + var(--t) * .22 + var(--hover) * .10));
-      --score-fill: rgba(47, 240, 181, calc(.20 + var(--t) * .10 + var(--hover) * .05));
-      --score-glow: rgba(47, 240, 181, calc(.34 + var(--t) * .30 + var(--hover) * .15));
+      --score-line: rgba(248, 197, 91, calc(.68 + var(--t) * .24 + var(--hover) * .08));
+      --score-fill: rgba(248, 197, 91, calc(.16 + var(--t) * .12 + var(--hover) * .05));
+      --score-glow: rgba(248, 197, 91, calc(.30 + var(--t) * .35 + var(--hover) * .15));
     }
 
     .report-chip[data-tier="good"] {
@@ -659,13 +659,13 @@
     .report-chip[data-tier="mid"] {
       --score-line: rgba(255, 255, 255, calc(.12 + var(--hover) * .12));
       --score-fill: rgba(255, 255, 255, calc(.04 + var(--hover) * .04));
-      --score-glow: rgba(47, 240, 181, 0);
+      --score-glow: rgba(255, 255, 255, 0);
     }
 
     .report-chip[data-tier="low"] {
       --score-line: rgba(255, 255, 255, calc(.05 + var(--hover) * .11));
       --score-fill: rgba(255, 255, 255, calc(.012 + var(--hover) * .03));
-      --score-glow: rgba(47, 240, 181, 0);
+      --score-glow: rgba(255, 255, 255, 0);
     }
 
     /* a scored tile carries the heavier left bar, like the digest card */
@@ -693,9 +693,9 @@
       margin-bottom: 10px;
     }
 
-    .report-chip[data-tier="high"] { color: #f6fffc; }
-    .report-chip[data-tier="high"] time { color: var(--green); }
-    .report-chip[data-tier="high"] span { color: rgba(238, 245, 242, .80); }
+    .report-chip[data-tier="high"] { color: #fff9ec; }
+    .report-chip[data-tier="high"] time { color: var(--amber); }
+    .report-chip[data-tier="high"] span { color: rgba(255, 240, 214, .80); }
 
     .report-chip[data-tier="good"] time { color: rgba(47, 240, 181, .78); }
     .report-chip[data-tier="good"] span { color: rgba(238, 245, 242, .70); }
@@ -752,12 +752,12 @@
       opacity: .7;
     }
 
-    /* the badge shouts loudest at the top: solid green with dark ink */
+    /* the badge shouts loudest at the top: solid gold with dark ink */
     .chip-score[data-tier="high"] {
-      color: #04140e;
-      background: var(--green);
-      border-color: var(--green);
-      box-shadow: 0 0 14px rgba(47, 240, 181, .45);
+      color: #1d1305;
+      background: var(--amber);
+      border-color: var(--amber);
+      box-shadow: 0 0 14px rgba(248, 197, 91, .45);
       opacity: 1;
     }
 
@@ -789,7 +789,7 @@
       background: rgba(255, 255, 255, .03);
     }
 
-    .card-score[data-tier="high"] { border-left-color: rgba(47, 240, 181, calc(.78 + var(--t) * .22)); }
+    .card-score[data-tier="high"] { border-left-color: rgba(248, 197, 91, calc(.78 + var(--t) * .22)); }
     .card-score[data-tier="good"] { border-left-color: rgba(47, 240, 181, calc(.42 + var(--t) * .26)); }
     .card-score[data-tier="mid"]  { border-left-color: rgba(238, 245, 242, .35); }
     .card-score[data-tier="low"]  { border-left-color: rgba(238, 245, 242, .20); }
@@ -850,15 +850,24 @@
       color: var(--muted);
     }
 
+    /* Narrow / portrait viewports stack the chart above the report card. The
+       grid then flows in the page instead of being pinned inside a fixed panel
+       height, so a tall digest can never be clipped by the panel's overflow and
+       the card's "Open zsxq report" link stays reachable. The chart keeps its
+       own explicit height because its canvas is absolutely positioned. */
     @media (max-width: 1100px) {
-      .lens-panel { min-height: 720px; }
+      .lens-panel,
+      .lens-panel.has-digest { min-height: 0; }
       .visual-grid {
-        inset: 124px 24px 24px 24px;
+        position: static;
+        inset: auto;
+        margin: 26px 24px 24px;
         grid-template-columns: 1fr;
-        grid-template-rows: minmax(360px, 1fr) auto;
+        grid-template-rows: auto auto;
         gap: 18px;
       }
       .chart-stage {
+        height: 420px;
         border-right: 0;
         border-bottom: 1px solid rgba(255, 255, 255, .08);
         padding-right: 0;
@@ -868,6 +877,11 @@
         align-self: stretch;
         max-height: none;
         overflow: visible;
+      }
+      .card-body {
+        overflow: visible;
+        margin-right: 0;
+        padding-right: 0;
       }
       .timeline-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
@@ -879,12 +893,13 @@
       .ticker-form { width: 100%; }
       .panel-top { padding: 24px 20px 0; flex-direction: column; }
       .price-readout { text-align: left; }
-      .lens-panel { min-height: 760px; }
+      .lens-panel,
+      .lens-panel.has-digest { min-height: 0; }
       .visual-grid {
-        inset: 186px 14px 18px 14px;
-        grid-template-rows: 310px auto;
+        margin: 22px 14px 18px;
+        grid-template-rows: auto auto;
       }
-      .chart-stage { padding-bottom: 12px; }
+      .chart-stage { height: 320px; padding-bottom: 12px; }
       .chart-ohlc { top: 52px; left: 22px; max-width: calc(100% - 44px); overflow: hidden; }
       .axis-y { top: 78px; }
       .metrics { grid-template-columns: 1fr; }
