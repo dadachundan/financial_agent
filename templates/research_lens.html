@@ -383,49 +383,81 @@
       pointer-events: none;
     }
 
+    /* A report is a quiet hollow ring at rest so the candles stay readable;
+       only the active one becomes a filled, numbered callout. */
     .report-marker {
+      --stance: var(--green);
+      --stance-soft: rgba(47, 240, 181, .18);
       position: absolute;
-      width: 22px;
-      height: 22px;
-      border: 2px solid rgba(3, 17, 12, .95);
+      display: grid;
+      place-items: center;
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      border: 2px solid var(--stance);
       border-radius: 999px;
-      background: var(--green);
-      box-shadow: 0 0 0 5px rgba(47, 240, 181, .16), 0 0 22px rgba(47, 240, 181, .44);
+      background: rgba(3, 11, 9, .62);
+      color: transparent;
+      font: 800 0/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       transform: translate(-50%, -50%);
       cursor: pointer;
       pointer-events: auto;
-      transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+      appearance: none;
+      transition: width .16s ease, height .16s ease, background .16s ease,
+                  box-shadow .16s ease, color .16s ease;
+    }
+
+    /* Keep a comfortable click target without enlarging the dot itself —
+       small enough that markers of one cluster never swallow each other. */
+    .report-marker::before {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      border-radius: 999px;
     }
 
     .report-marker[data-stance="cautious"] {
-      background: var(--blue);
-      box-shadow: 0 0 0 5px rgba(135, 183, 255, .15), 0 0 22px rgba(135, 183, 255, .34);
+      --stance: var(--blue);
+      --stance-soft: rgba(135, 183, 255, .18);
     }
 
     .report-marker[data-stance="bearish"] {
-      background: var(--red);
-      box-shadow: 0 0 0 5px rgba(255, 111, 125, .15), 0 0 22px rgba(255, 111, 125, .34);
+      --stance: var(--red);
+      --stance-soft: rgba(255, 111, 125, .18);
+    }
+
+    /* Several reports landing on one price point share a single marker that
+       carries their count — that is why the connectors fan out from it. */
+    .report-marker.is-cluster {
+      width: 17px;
+      height: 17px;
+      color: var(--stance);
+      background: rgba(3, 11, 9, .82);
+      font-size: 10px;
     }
 
     .report-marker:hover,
-    .report-marker:focus,
+    .report-marker:focus-visible,
     .report-marker.active {
-      transform: translate(-50%, -50%) scale(1.32);
       outline: 0;
-      box-shadow: 0 0 0 8px rgba(47, 240, 181, .2), 0 0 34px rgba(47, 240, 181, .7);
+      width: 26px;
+      height: 26px;
+      background: var(--stance);
+      color: #03110c;
+      font-size: 11px;
+      box-shadow: 0 0 0 4px var(--stance-soft), 0 0 20px rgba(3, 13, 10, .55);
       z-index: 4;
     }
 
     .target-marker {
       position: absolute;
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
       padding: 0;
-      border: 2px solid var(--blue);
+      border: 1.6px solid rgba(135, 183, 255, .72);
       border-radius: 3px;
-      background: rgba(7, 16, 13, .88);
+      background: rgba(7, 16, 13, .76);
       appearance: none;
-      box-shadow: 0 0 16px rgba(135, 183, 255, .4);
       transform: translate(-50%, -50%) rotate(45deg);
       pointer-events: auto;
       cursor: pointer;
@@ -433,12 +465,12 @@
     }
 
     .target-marker:hover,
-    .target-marker:focus,
+    .target-marker:focus-visible,
     .target-marker.active {
       outline: 0;
       border-color: #c4d8ff;
-      transform: translate(-50%, -50%) rotate(45deg) scale(1.26);
-      box-shadow: 0 0 0 5px rgba(135, 183, 255, .13), 0 0 26px rgba(135, 183, 255, .55);
+      transform: translate(-50%, -50%) rotate(45deg) scale(1.24);
+      box-shadow: 0 0 0 4px rgba(135, 183, 255, .14), 0 0 22px rgba(135, 183, 255, .5);
     }
 
     .target-label {
@@ -454,22 +486,15 @@
       white-space: nowrap;
     }
 
-    .pair-index {
-      position: absolute;
-      display: grid;
-      place-items: center;
-      min-width: 18px;
-      height: 18px;
-      padding: 0 5px;
-      border: 1px solid rgba(255, 255, 255, .18);
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border: 2px solid var(--green);
       border-radius: 999px;
-      color: rgba(238, 245, 242, .9);
-      background: rgba(3, 11, 9, .86);
-      font: 800 10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 6;
     }
+
+    .legend-dot[data-stance="cautious"] { border-color: var(--blue); }
+    .legend-dot[data-stance="bearish"] { border-color: var(--red); }
 
     .selection-box {
       position: absolute;
@@ -731,6 +756,12 @@
               <div class="chart-legend" aria-hidden="true">
                 <span class="legend-item"><span class="legend-swatch"></span>Price</span>
                 <span class="legend-item"><span class="legend-swatch target"></span>Target</span>
+                <span class="legend-item">
+                  <span class="legend-dot" data-stance="bullish"></span>
+                  <span class="legend-dot" data-stance="cautious"></span>
+                  <span class="legend-dot" data-stance="bearish"></span>
+                  Report
+                </span>
               </div>
               <div class="price-source" id="priceSource"></div>
               <div class="selection-box" id="selectionBox"></div>
@@ -799,7 +830,7 @@
   const modeButtons = document.querySelectorAll("[data-mode]");
   const selectionBox = document.getElementById("selectionBox");
   const priceSource = document.getElementById("priceSource");
-  let activeId = reports.length ? reports[reports.length - 1].id : null;
+  let activeId = null;  // set by the first setActive() call so the card always renders
   let interactionMode = "pan";
   let dragState = null;
   let hoveredBar = null;
@@ -1210,8 +1241,8 @@
       ctx.setLineDash([8, 6]);
       ctx.strokeStyle = "#87b7ff";
       ctx.lineWidth = 2;
-      ctx.shadowColor = "rgba(135, 183, 255, .35)";
-      ctx.shadowBlur = 10;
+      ctx.shadowColor = "rgba(135, 183, 255, .22)";
+      ctx.shadowBlur = 6;
       ctx.stroke();
       ctx.setLineDash([]);
       ctx.shadowBlur = 0;
@@ -1230,7 +1261,7 @@
       ctx.setLineDash(active ? [3, 4] : [2, 8]);
       ctx.moveTo(pricePos.x, pricePos.y);
       ctx.lineTo(targetPos.x, targetPos.y);
-      ctx.strokeStyle = active ? "rgba(196, 216, 255, .86)" : "rgba(135, 183, 255, .22)";
+      ctx.strokeStyle = active ? "rgba(196, 216, 255, .86)" : "rgba(135, 183, 255, .15)";
       ctx.lineWidth = active ? 2 : 1;
       ctx.stroke();
       ctx.setLineDash([]);
@@ -1272,57 +1303,60 @@
     if (!markerLayer) return;
     const rect = canvas.getBoundingClientRect();
     markerLayer.innerHTML = "";
+    const anchors = new Map();
     reports.forEach(report => {
       const pos = positioned.get(report.id);
       if (!pos) return;
-      const reportNumber = reports.findIndex(item => item.id === report.id) + 1;
+      const key = `${Math.round(pos.x / 3)}:${Math.round(pos.y / 3)}`;
+      if (!anchors.has(key)) anchors.set(key, []);
+      anchors.get(key).push({ report, pos });
+    });
+
+    anchors.forEach(entries => {
+      const { x, y } = entries[0].pos;
+      const activeEntry = entries.find(entry => entry.report.id === activeId);
+      const shown = (activeEntry || entries[entries.length - 1]).report;
+      const stacked = entries.length > 1;
+      const reportNumber = reports.findIndex(item => item.id === shown.id) + 1;
       const button = document.createElement("button");
       button.type = "button";
-      button.className = `report-marker${report.id === activeId ? " active" : ""}`;
-      button.dataset.id = report.id;
-      button.dataset.stance = report.stance;
-      button.style.left = `${pos.x}px`;
-      button.style.top = `${pos.y}px`;
-      button.setAttribute("aria-label", `${report.bank} ${report.date} ${report.label}`);
-      button.addEventListener("mouseenter", () => setActive(report.id));
-      button.addEventListener("focus", () => setActive(report.id));
-      button.addEventListener("click", () => setActive(report.id));
+      button.className = `report-marker${activeEntry ? " active" : ""}${stacked ? " is-cluster" : ""}`;
+      button.dataset.id = shown.id;
+      button.dataset.stance = shown.stance;
+      button.style.left = `${x}px`;
+      button.style.top = `${y}px`;
+      button.textContent = stacked && !activeEntry ? entries.length : reportNumber;
+      button.setAttribute("aria-label", stacked
+        ? `${entries.length} reports on ${shown.date}: ${entries.map(entry => entry.report.bank).join(", ")}`
+        : `${shown.bank} ${shown.date} ${shown.label}`);
+      button.addEventListener("mouseenter", () => setActive(shown.id));
+      button.addEventListener("focus", () => setActive(shown.id));
+      button.addEventListener("click", () => setActive(shown.id));
       markerLayer.appendChild(button);
+    });
 
+    reports.forEach(report => {
       const targetPos = targetPositioned.get(report.id);
-      if (targetPos) {
-        const target = document.createElement("button");
-        target.type = "button";
-        target.className = "target-marker";
-        if (report.id === activeId) target.classList.add("active");
-        target.dataset.id = report.id;
-        target.style.left = `${targetPos.x}px`;
-        target.style.top = `${targetPos.y}px`;
-        target.setAttribute("aria-label", `${report.bank} ${report.date} target ${money(report.target, report.targetCurrency || currencyLabel(report))}`);
-        target.addEventListener("mouseenter", () => setActive(report.id));
-        target.addEventListener("focus", () => setActive(report.id));
-        target.addEventListener("click", () => setActive(report.id));
-        markerLayer.appendChild(target);
-        if (report.id === activeId) {
-          const label = document.createElement("span");
-          label.className = "target-label";
-          label.textContent = money(report.target, report.targetCurrency || currencyLabel(report));
-          label.style.left = `${Math.min(targetPos.x, rect.width - 112)}px`;
-          label.style.top = `${targetPos.y}px`;
-          markerLayer.appendChild(label);
-          const priceIndex = document.createElement("span");
-          priceIndex.className = "pair-index";
-          priceIndex.textContent = reportNumber;
-          priceIndex.style.left = `${pos.x}px`;
-          priceIndex.style.top = `${pos.y - 24}px`;
-          markerLayer.appendChild(priceIndex);
-          const targetIndex = document.createElement("span");
-          targetIndex.className = "pair-index";
-          targetIndex.textContent = reportNumber;
-          targetIndex.style.left = `${targetPos.x}px`;
-          targetIndex.style.top = `${targetPos.y - 24}px`;
-          markerLayer.appendChild(targetIndex);
-        }
+      if (!targetPos) return;
+      const target = document.createElement("button");
+      target.type = "button";
+      target.className = "target-marker";
+      if (report.id === activeId) target.classList.add("active");
+      target.dataset.id = report.id;
+      target.style.left = `${targetPos.x}px`;
+      target.style.top = `${targetPos.y}px`;
+      target.setAttribute("aria-label", `${report.bank} ${report.date} target ${money(report.target, report.targetCurrency || currencyLabel(report))}`);
+      target.addEventListener("mouseenter", () => setActive(report.id));
+      target.addEventListener("focus", () => setActive(report.id));
+      target.addEventListener("click", () => setActive(report.id));
+      markerLayer.appendChild(target);
+      if (report.id === activeId) {
+        const label = document.createElement("span");
+        label.className = "target-label";
+        label.textContent = money(report.target, report.targetCurrency || currencyLabel(report));
+        label.style.left = `${Math.min(targetPos.x, rect.width - 112)}px`;
+        label.style.top = `${targetPos.y}px`;
+        markerLayer.appendChild(label);
       }
     });
   }
@@ -1350,6 +1384,9 @@
   }
 
   function setActive(id) {
+    /* Hovering re-enters through the freshly laid out markers; without this
+       guard every hover would rebuild the marker layer on each frame. */
+    if (id === activeId) return;
     activeId = id;
     const report = reports.find(item => item.id === id);
     if (!report) return;
@@ -1378,7 +1415,7 @@
   if (reports.length) {
     renderChips();
     drawChart();
-    setActive(activeId);
+    setActive(reports[reports.length - 1].id);
     window.addEventListener("resize", drawChart);
     modeButtons.forEach(button => {
       button.addEventListener("click", () => setInteractionMode(button.dataset.mode));
