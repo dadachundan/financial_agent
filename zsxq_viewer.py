@@ -1080,6 +1080,40 @@ def _research_lens_pdf_url(file_id: int, name: str | None) -> str:
     return url
 
 
+def _attach_report_links(reports: list[dict]) -> None:
+    """Add the two card actions to every research-lens report.
+
+    ``viewerUrl`` is the in-browser annotate viewer (same target as the
+    /zsxq list's *Annotate* button); ``fileUrl`` is the raw PDF served by
+    ``/zsxq/pdf/<file_id>/<name>``, which is what the *Open* button hands to
+    a tablet or a PDF app. ``fileUrl`` stays ``None`` when no local copy is
+    recorded, so the card can hide Open instead of offering a 404.
+    """
+    if not reports:
+        return
+    ids = [int(report["id"]) for report in reports]
+    placeholders = ",".join("?" for _ in ids)
+    conn = get_conn()
+    try:
+        rows = conn.execute(
+            f"SELECT file_id, name, local_path FROM pdf_files WHERE file_id IN ({placeholders})",
+            tuple(ids),
+        ).fetchall()
+    finally:
+        conn.close()
+
+    local = {int(row["file_id"]): row for row in rows}
+    for report in reports:
+        fid = int(report["id"])
+        row = local.get(fid)
+        report["viewerUrl"] = f"/zsxq/pdf-viewer/{fid}"
+        report["fileUrl"] = (
+            _research_lens_pdf_url(fid, row["name"] or report.get("title"))
+            if row is not None and row["local_path"]
+            else None
+        )
+
+
 def _research_lens_yfinance_ticker(ticker: str) -> str:
     raw = (ticker or "").strip().upper()
     mapped = sector_map.to_yfinance(raw)
@@ -1697,7 +1731,9 @@ def _research_lens_reports(ticker: str = "688256") -> tuple[list[dict], str]:
         report["digest"] = digests.get(str(report["id"]))
 
     reports.sort(key=lambda r: (r["date"], r["id"]))
-    return reports[:18], company_name
+    reports = reports[:18]
+    _attach_report_links(reports)
+    return reports, company_name
 
 
 @zsxq_bp.route("/research-lens")

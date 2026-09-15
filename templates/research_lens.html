@@ -616,15 +616,33 @@
       white-space: nowrap;
     }
 
-    .report-link {
-      display: inline-flex;
-      color: var(--green);
-      text-decoration: none;
-      font-weight: 700;
-      margin-top: 6px;
+    /* Two actions per report, mirroring the /zsxq list: Open hands the raw
+       PDF to a tablet or PDF app, Annotate opens the in-browser viewer. */
+    .card-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
     }
 
-    .report-link:hover { text-decoration: underline; }
+    .report-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border: 1px solid currentColor;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+      white-space: nowrap;
+      transition: background .15s, opacity .15s;
+    }
+
+    .report-link.is-open { color: var(--red); }
+    .report-link.is-annotate { color: var(--blue); }
+    .report-link:hover { background: rgba(255, 255, 255, .07); }
+    .report-link[hidden] { display: none; }
 
     .timeline-strip {
       display: grid;
@@ -873,7 +891,7 @@
     /* Narrow / portrait viewports stack the chart above the report card. The
        grid then flows in the page instead of being pinned inside a fixed panel
        height, so a tall digest can never be clipped by the panel's overflow and
-       the card's "Open zsxq report" link stays reachable. The chart keeps its
+       the card's Open / Annotate buttons stay reachable. The chart keeps its
        own explicit height because its canvas is absolutely positioned. */
     @media (max-width: 1100px) {
       .lens-panel,
@@ -1029,7 +1047,12 @@
                 <div class="metric"><span>Target</span><strong id="cardTarget">RMB 1,841</strong></div>
                 <div class="metric"><span>Price</span><strong id="cardMetricPrice">RMB 1,035</strong></div>
               </div>
-              <a class="report-link" id="cardLink" href="#" target="_blank" rel="noreferrer">Open zsxq report</a>
+              <div class="card-actions">
+                <a class="report-link is-open" id="cardOpenLink" href="#" target="_blank"
+                   rel="noreferrer" title="Open the original PDF — right for a tablet or PDF app">📄 Open</a>
+                <a class="report-link is-annotate" id="cardLink" href="#" target="_blank"
+                   rel="noreferrer" title="In-browser viewer with selection-anchored markdown comments">🖍 Annotate</a>
+              </div>
             </div>
           </article>
         </div>
@@ -1678,6 +1701,21 @@
 
   const anyDigest = reports.some(report => report.digest && Number.isFinite(Number(report.digest.score)));
 
+  /* Same threshold as the stacked layout in the stylesheet. Below it the card
+     lives above the tile strip, so tapping a tile would otherwise update a card
+     the reader cannot see; on the wide layout the card already sits beside the
+     chart and the page must not move. */
+  const stackedLayout = window.matchMedia("(max-width: 1100px)");
+  const calmMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  function revealCard() {
+    if (!stackedLayout.matches || !card) return;
+    card.scrollIntoView({
+      behavior: calmMotion.matches ? "auto" : "smooth",
+      block: "start",
+    });
+  }
+
   function renderDigest(report) {
     const box = document.getElementById("cardScore");
     const fields = document.getElementById("cardDigest");
@@ -1730,7 +1768,16 @@
     document.getElementById("cardTarget").textContent = money(report.target, report.targetCurrency || ccy);
     document.getElementById("cardMetricPrice").textContent = money(activePrice, ccy);
     renderDigest(report);
-    document.getElementById("cardLink").href = report.pdfUrl;
+    document.getElementById("cardLink").href = report.viewerUrl || report.pdfUrl;
+    const openLink = document.getElementById("cardOpenLink");
+    // Reports whose PDF was never downloaded locally have no raw file to hand
+    // out, so Open drops out of the card instead of linking to a 404.
+    if (report.fileUrl) {
+      openLink.href = report.fileUrl;
+      openLink.hidden = false;
+    } else {
+      openLink.hidden = true;
+    }
     card.classList.remove("is-idle");
     document.querySelectorAll(".report-marker, .report-chip").forEach(el => {
       el.classList.toggle("active", Number(el.dataset.id) === id);
