@@ -78,8 +78,10 @@
 
 <div class="footer-note" style="margin-top:.5rem;">
   Other views:
-  <a href="/indicators/grid">Live indicator grid (cards)</a> &nbsp;·&nbsp;
-  <a href="/claude-reports/view/market-complacency/market_complacency_2026-06-07.md">Full complacency report</a>
+  <a href="/indicators/grid">Live indicator grid (cards)</a>
+  {% if report_date %}&nbsp;·&nbsp;
+  <a href="/claude-reports/view/market-complacency/market_complacency_{{ report_date }}.md">Full complacency report ({{ report_date }})</a>
+  {% endif %}
 </div>
 
 {% if chart_date %}

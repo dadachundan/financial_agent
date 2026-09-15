@@ -246,6 +246,62 @@ def fetch_fred(series_id: str, start: str) -> pd.Series:
     return df.set_index("date")["value"].sort_index()
 
 
+def as_of_end(date_slug: str) -> str:
+    """Exclusive yfinance `end` for an as-of date — same convention as build().
+
+    Hand-maintained-series fetchers normalise by the S&P 500 level, so they have
+    to respect --date too; a literal end date silently freezes them.
+    """
+    return (pd.Timestamp(date_slug) + pd.Timedelta(days=1)).strftime("%Y-%m-%d")
+
+
+# CBOE publishes full daily history for its own indices. Yahoo intermittently
+# truncates them — as of 2026-09 ^VIX9D and ^VIX3M return a single row, which
+# starves the 10y percentile window and aborts the whole build — so the CBOE
+# CSV is the fallback whenever Yahoo comes back implausibly short.
+_CBOE_INDEX = {"^VIX": "VIX", "^VIX9D": "VIX9D", "^VIX3M": "VIX3M", "^VVIX": "VVIX"}
+_YF_MIN_OBS = 750   # ≈3y of trading days; below this a daily series is truncated
+
+
+def fetch_cboe_index(ticker: str, start: str) -> pd.Series:
+    """CBOE daily-history CSV for a CBOE index ('' if the ticker isn't one)."""
+    code = _CBOE_INDEX.get(ticker)
+    if not code:
+        return pd.Series(dtype=float)
+    url = f"https://cdn.cboe.com/api/global/us_indices/daily_prices/{code}_History.csv"
+    try:
+        df = pd.read_csv(url)
+    except Exception as exc:
+        print(f"  CBOE {code} fetch failed: {exc}", file=sys.stderr)
+        return pd.Series(dtype=float)
+    df.columns = [str(c).strip().upper() for c in df.columns]
+    if "DATE" not in df.columns or len(df.columns) < 2:
+        return pd.Series(dtype=float)
+    # OHLC files carry CLOSE; the VVIX file is DATE,VVIX only.
+    value_col = "CLOSE" if "CLOSE" in df.columns else df.columns[-1]
+    df["DATE"] = pd.to_datetime(df["DATE"], format="%m/%d/%Y", errors="coerce")
+    s = (df.dropna(subset=["DATE"])
+           .set_index("DATE")[value_col]
+           .astype(float)
+           .sort_index())
+    s = s[s.index >= pd.Timestamp(start)]
+    s.name = ticker
+    return s.dropna()
+
+
+def fetch_index_history(ticker: str, start: str, end: str) -> pd.Series:
+    """Yahoo close, falling back to the CBOE CSV when Yahoo is truncated."""
+    s = fetch_yf(ticker, start, end)
+    if len(s) >= _YF_MIN_OBS:
+        return s
+    fb = fetch_cboe_index(ticker, start)
+    if fb.empty:
+        return s
+    print(f"  ! yfinance {ticker}: {len(s)} obs — using CBOE CSV ({len(fb)} obs)",
+          file=sys.stderr)
+    return fb
+
+
 def fetch_yf(ticker: str, start: str, end: str) -> pd.Series:
     try:
         df = yf.download(ticker, start=start, end=end, progress=False,
@@ -338,7 +394,7 @@ def fetch_finra_margin(date_slug: str) -> pd.Series:
         df["margin_debt"] = pd.to_numeric(df["margin_debt"], errors="coerce")
         df = df.dropna().sort_values("date")
         # Normalize by S&P 500 level (proxy for market cap)
-        spx = fetch_yf("^GSPC", start="1996-01-01", end="2026-06-08")
+        spx = fetch_yf("^GSPC", start="1996-01-01", end=as_of_end(date_slug))
         if spx.empty:
             print("  ! S&P 500 fetch failed; using raw margin debt", file=sys.stderr)
             df["margin_pct"] = df["margin_debt"]
@@ -396,7 +452,7 @@ def fetch_ipo_pct(date_slug: str) -> pd.Series:
     df = pd.read_csv(cache)
     # Use Dec 31 of each year as the date
     df["date"] = pd.to_datetime(df["year"].astype(str) + "-12-31")
-    spx = fetch_yf("^GSPC", start="2000-01-01", end="2026-06-08")
+    spx = fetch_yf("^GSPC", start="2000-01-01", end=as_of_end(date_slug))
     if spx.empty:
         return pd.Series(dtype=float)
     spx_yearend = spx.resample("YE").last()
@@ -406,10 +462,15 @@ def fetch_ipo_pct(date_slug: str) -> pd.Series:
                             on="date", direction="nearest")
     # ipo_pct = proceeds ($B) / SPX level — scale-free percentile rank
     merged["ipo_pct"] = merged["proceeds_usd_billion"] / merged["spx"]
-    annual = merged.dropna(subset=["ipo_pct"]).set_index("date")["ipo_pct"]
+    merged = merged.dropna(subset=["ipo_pct"])
+    # Label each figure with the *start* of the year it describes, so the months
+    # of year Y report Y's reading. Dated at the year end instead, the current
+    # year showed last year's number for 11 of 12 months and a refreshed CSV row
+    # only surfaced in December.
+    merged["date"] = pd.to_datetime(merged["year"].astype(str) + "-01-01")
     # Upsample to monthly via forward-fill — the percentile rank logic needs
     # ≥30 obs in the trailing 10y window; annual data alone has only ~10.
-    monthly = annual.resample("MS").ffill()
+    monthly = merged.set_index("date")["ipo_pct"].resample("MS").ffill()
     return monthly
 
 
@@ -426,7 +487,7 @@ def fetch_ma_pct(date_slug: str) -> pd.Series:
     df["date"] = pd.to_datetime(df["year"].astype(str) + "-12-31")
     # US M&A in $T = global volume × US share %
     df["us_ma_trn"] = df["global_volume_usd_trillion"] * df["us_share_pct"] / 100
-    spx = fetch_yf("^GSPC", start="2000-01-01", end="2026-06-08")
+    spx = fetch_yf("^GSPC", start="2000-01-01", end=as_of_end(date_slug))
     if spx.empty:
         return pd.Series(dtype=float)
     spx_yearend = spx.resample("YE").last()
@@ -436,8 +497,10 @@ def fetch_ma_pct(date_slug: str) -> pd.Series:
                             on="date", direction="nearest")
     # ma_pct = US M&A ($T × 1000 → $B) / SPX level — scale-free percentile rank
     merged["ma_pct"] = (merged["us_ma_trn"] * 1000) / merged["spx"]
-    annual = merged.dropna(subset=["ma_pct"]).set_index("date")["ma_pct"]
-    monthly = annual.resample("MS").ffill()
+    merged = merged.dropna(subset=["ma_pct"])
+    # Dated at the start of the year the figure describes — see fetch_ipo_pct.
+    merged["date"] = pd.to_datetime(merged["year"].astype(str) + "-01-01")
+    monthly = merged.set_index("date")["ma_pct"].resample("MS").ffill()
     return monthly
 
 
@@ -714,11 +777,11 @@ def fetch_indicator(ind: dict, date_slug: str, start_25y: str, end: str) -> pd.S
     if src == "fred":
         return fetch_fred(ind["code"], start_25y)
     if src == "yf":
-        return fetch_yf(ind["code"], start_25y, end)
+        return fetch_index_history(ind["code"], start_25y, end)
     if src in ("ratio", "ratio_etf"):
         a, b = ind["code"]
-        sa = fetch_yf(a, start_25y, end)
-        sb = fetch_yf(b, start_25y, end)
+        sa = fetch_index_history(a, start_25y, end)
+        sb = fetch_index_history(b, start_25y, end)
         if sa.empty or sb.empty:
             return pd.Series(dtype=float)
         df = pd.concat([sa.rename("a"), sb.rename("b")], axis=1).dropna()
@@ -1633,7 +1696,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
     if not series["vix_slope"].empty:
         slope_short = series["vix_slope"]   # VIX9D / VIX3M (2011+)
         vix_full = series["vix"]
-        vix3m_full = fetch_yf("^VIX3M", "2005-01-01", pd.Timestamp(as_of).strftime("%Y-%m-%d"))
+        vix3m_full = fetch_index_history("^VIX3M", "2005-01-01", pd.Timestamp(as_of).strftime("%Y-%m-%d"))
         # Compute VIX / VIX3M ratio (2006+) for long history
         slope_long = None
         if not vix_full.empty and not vix3m_full.empty:
@@ -1845,7 +1908,7 @@ def _make_charts(as_of, composite, tier, composite_hist, series, table, prec_df,
     if not series["vix_slope"].empty:
         # Also compute long-history VIX/VIX3M overlay
         try:
-            vix3m_for_slope = fetch_yf("^VIX3M", "2005-01-01", (pd.Timestamp(as_of) + pd.Timedelta(days=1)).strftime("%Y-%m-%d"))
+            vix3m_for_slope = fetch_index_history("^VIX3M", "2005-01-01", (pd.Timestamp(as_of) + pd.Timedelta(days=1)).strftime("%Y-%m-%d"))
         except Exception:
             vix3m_for_slope = pd.Series(dtype=float)
         secondary = None

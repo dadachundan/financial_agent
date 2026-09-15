@@ -114,6 +114,24 @@ def _latest_chart_date() -> str | None:
     return dates[-1] if dates else None
 
 
+def _latest_report_date() -> str | None:
+    """Newest written complacency report, reports/market-complacency/
+    market_complacency_<DATE>.md → '<DATE>'. None if none exists.
+
+    Used for the BMC page's "full report" link, which used to be a literal
+    2026-06-07 path and so kept pointing at a stale file after later runs."""
+    import pathlib, re
+    reports = (pathlib.Path(__file__).resolve().parent.parent
+               / "reports" / "market-complacency")
+    pat = re.compile(r"market_complacency_(\d{4}-\d{2}-\d{2})\.md$")
+    dates = sorted({
+        m.group(1)
+        for p in reports.glob("market_complacency_*.md")
+        if (m := pat.search(p.name))
+    })
+    return dates[-1] if dates else None
+
+
 @indicators_bp.route("/")
 def dashboard():
     """Default view: Bear Market Checklist (BMC) calibration table +
@@ -125,6 +143,7 @@ def dashboard():
         "bmc.html",
         nav=nw2.NAV_HTML,
         chart_date=_latest_chart_date(),
+        report_date=_latest_report_date(),
     )
 
 
@@ -445,6 +464,24 @@ def _bmc_compute_today() -> dict:
             return None, None
         return last, year
 
+    def _annual_row_suffix(row: dict, year: int) -> str:
+        """Label a hand-maintained annual CSV row for the Now cell.
+
+        These rows are not live feeds: 'ann.' marks a partial-year
+        annualisation, 'est.' a forecast, and the row's own `asof` column is
+        appended so the reader can see how old the figure is. Without this the
+        cell renders as a bare 'FY 2026' and passes for a live reading.
+        """
+        src = (row.get("source") or "").lower()
+        if "annualis" in src:
+            kind = " ann."
+        elif "estimate" in src:
+            kind = " est."
+        else:
+            kind = ""
+        asof = (row.get("asof") or "").strip()
+        return f"FY {year}{kind}" + (f" · as of {asof}" if asof else "")
+
     spx_now = _safe(lambda: _yf_latest("^GSPC"))
     us_cap_bn = (spx_now * 7.0) if spx_now else None   # $B; SPX × $7B/pt
 
@@ -456,12 +493,8 @@ def _bmc_compute_today() -> dict:
             proceeds_b = float(ipo_row["proceeds_usd_billion"])
             pct = proceeds_b / us_cap_bn * 100
             flag = "red" if pct >= 0.7 else ("amber" if pct >= 0.4 else None)
-            # Note "ann." if 2026 row is YTD-annualised (any non-final year on
-            # the latest row is by definition annualised — the skill marks it
-            # in the source column).
-            ann = " ann." if "annualised" in (ipo_row.get("source", "").lower()) else ""
             out["ipo_pct"] = {"value": round(pct, 2), "flag": flag,
-                              "suffix": f"FY {ipo_year}{ann}"}
+                              "suffix": _annual_row_suffix(ipo_row, ipo_year)}
         except Exception:
             pass
 
@@ -475,9 +508,8 @@ def _bmc_compute_today() -> dict:
             us_ma_bn = global_t * us_share * 1000   # $T → $B
             pct = us_ma_bn / us_cap_bn * 100
             flag = "red" if pct >= 8.0 else ("amber" if pct >= 5.0 else None)
-            ann = " ann." if "annualised" in (ma_row.get("source", "").lower()) else ""
             out["ma_pct"] = {"value": round(pct, 1), "flag": flag,
-                             "suffix": f"FY {ma_year}{ann}"}
+                             "suffix": _annual_row_suffix(ma_row, ma_year)}
         except Exception:
             pass
 

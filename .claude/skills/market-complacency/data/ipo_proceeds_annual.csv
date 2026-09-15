@@ -1,4 +1,4 @@
-year,proceeds_usd_billion,source
+year,proceeds_usd_billion,source,asof
 2017,35.5,Renaissance Capital
 2018,46.9,Renaissance Capital
 2019,46.3,Renaissance Capital
@@ -8,4 +8,4 @@ year,proceeds_usd_billion,source
 2023,19.5,Renaissance Capital
 2024,29.6,Renaissance Capital
 2025,44.0,Renaissance Capital
-2026,58.0,Renaissance Capital (2026 YTD $25.2B as of Jun 7 annualised)
+2026,206.3,Renaissance Capital (2026 YTD $145.8B as of Sep 15 2026 annualised),Sep 2026

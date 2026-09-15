@@ -1,4 +1,4 @@
-year,global_volume_usd_trillion,us_share_pct,source
+year,global_volume_usd_trillion,us_share_pct,source,asof
 2007,4.6,45,Bain/Refinitiv
 2008,2.4,45,Bain/Refinitiv
 2009,1.8,45,Bain/Refinitiv
@@ -18,4 +18,4 @@ year,global_volume_usd_trillion,us_share_pct,source
 2023,3.2,50,Bain/Refinitiv
 2024,3.3,50,Bain/Refinitiv
 2025,4.7,50,Bain/Refinitiv (final)
-2026,3.4,50,S&P Global Q1 2026 annualised ($861B x 4)
+2026,5.3,50,Bain M&A Midyear Outlook 2026 (full-year 2026 estimate published Jun 29 2026),Jun 2026
