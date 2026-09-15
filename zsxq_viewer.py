@@ -1098,7 +1098,12 @@ def _research_lens_yfinance_ticker(ticker: str) -> str:
 
 
 def _research_lens_price_history(ticker: str, reports: list[dict]) -> dict:
-    """Fetch real daily OHLC bars from yfinance for the report timeline window."""
+    """Fetch real daily OHLC bars from yfinance for the report timeline.
+
+    The window opens two weeks before the first report and always runs through
+    the latest session available -- i.e. today -- so the chart never stops on
+    the last report date while a fresher price path exists.
+    """
     if not reports:
         return {"ticker": _research_lens_yfinance_ticker(ticker), "bars": [], "error": "no reports"}
 
@@ -1118,7 +1123,13 @@ def _research_lens_price_history(ticker: str, reports: list[dict]) -> dict:
         return {"ticker": yf_ticker, "bars": [], "error": "no valid report dates"}
 
     start = min(report_dates) - datetime.timedelta(days=14)
-    end = max(report_dates) + datetime.timedelta(days=14)
+    # Always reach the current session: yfinance's `end` is exclusive, so ask
+    # for tomorrow to keep today's (possibly partial) bar in the series.
+    today = datetime.date.today()
+    end = max(
+        max(report_dates) + datetime.timedelta(days=14),
+        today + datetime.timedelta(days=1),
+    )
     try:
         hist = yf.Ticker(yf_ticker).history(
             start=start.isoformat(),
