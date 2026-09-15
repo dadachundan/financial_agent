@@ -622,84 +622,89 @@
       margin-top: 22px;
     }
 
-    /* One ramp for every read-score surface: the greener the tile, the more
-       the report is worth reading; the lowest tier greys out. */
-    .report-chip[data-tier="high"],
-    .chip-score[data-tier="high"],
-    .card-score[data-tier="high"] {
-      --score-accent: var(--green);
-      --score-line: rgba(47, 240, 181, .62);
-      --score-fill: rgba(47, 240, 181, .17);
-      --score-pill: rgba(47, 240, 181, .20);
-      --score-line-hover: rgba(47, 240, 181, .85);
-      --score-fill-hover: rgba(47, 240, 181, .23);
-    }
-
-    .report-chip[data-tier="good"],
-    .chip-score[data-tier="good"],
-    .card-score[data-tier="good"] {
-      --score-accent: rgba(47, 240, 181, .72);
-      --score-line: rgba(47, 240, 181, .26);
-      --score-fill: rgba(47, 240, 181, .06);
-      --score-pill: rgba(47, 240, 181, .10);
-      --score-line-hover: rgba(47, 240, 181, .50);
-      --score-fill-hover: rgba(47, 240, 181, .12);
-    }
-
-    .report-chip[data-tier="mid"],
-    .chip-score[data-tier="mid"],
-    .card-score[data-tier="mid"] {
-      --score-accent: rgba(238, 245, 242, .42);
-      --score-line: rgba(255, 255, 255, .12);
-      --score-fill: rgba(255, 255, 255, .04);
-      --score-pill: rgba(255, 255, 255, .06);
-      --score-line-hover: rgba(255, 255, 255, .24);
-      --score-fill-hover: rgba(255, 255, 255, .08);
-    }
-
-    .report-chip[data-tier="low"],
-    .chip-score[data-tier="low"],
-    .card-score[data-tier="low"] {
-      --score-accent: rgba(238, 245, 242, .40);
-      --score-line: rgba(255, 255, 255, .05);
-      --score-fill: rgba(255, 255, 255, .012);
-      --score-pill: rgba(255, 255, 255, .03);
-      --score-line-hover: rgba(255, 255, 255, .16);
-      --score-fill-hover: rgba(255, 255, 255, .045);
-    }
-
+    /* Read score = attention. --t is the score's position inside its own band
+       (0..1, written on the tile by the renderer) and --hover is the hover or
+       active lift; every colour below is derived from those two, so attention
+       climbs with the score instead of snapping between four fixed looks:
+       8-10 glows behind a solid green badge, 6-7 is unmistakably green,
+       4-5 is the plain tile, and 3 or less goes grey and quiet. */
     .report-chip {
-      border: 1px solid var(--score-line, rgba(255, 255, 255, .12));
+      --t: 0;
+      --hover: 0;
+      border: 1px solid rgba(255, 255, 255, .12);
       border-radius: 7px;
       padding: 12px;
-      background: var(--score-fill, rgba(255, 255, 255, .04));
+      background: rgba(255, 255, 255, .04);
       color: var(--text);
       text-align: left;
       cursor: pointer;
       min-height: 106px;
-      transition: border-color .16s ease, background .16s ease, transform .16s ease;
+      transition: border-color .16s ease, background .16s ease,
+                  box-shadow .16s ease, transform .16s ease;
     }
 
-    /* hover keeps the tile's own tier colour — it never turns a grey tile green */
+    /* the top band leans on a glow, not just a lighter green */
+    .report-chip[data-tier="high"] {
+      --score-line: rgba(47, 240, 181, calc(.70 + var(--t) * .22 + var(--hover) * .10));
+      --score-fill: rgba(47, 240, 181, calc(.20 + var(--t) * .10 + var(--hover) * .05));
+      --score-glow: rgba(47, 240, 181, calc(.34 + var(--t) * .30 + var(--hover) * .15));
+    }
+
+    .report-chip[data-tier="good"] {
+      --score-line: rgba(47, 240, 181, calc(.34 + var(--t) * .14 + var(--hover) * .14));
+      --score-fill: rgba(47, 240, 181, calc(.07 + var(--t) * .04 + var(--hover) * .04));
+      --score-glow: rgba(47, 240, 181, calc(.06 + var(--t) * .06 + var(--hover) * .10));
+    }
+
+    .report-chip[data-tier="mid"] {
+      --score-line: rgba(255, 255, 255, calc(.12 + var(--hover) * .12));
+      --score-fill: rgba(255, 255, 255, calc(.04 + var(--hover) * .04));
+      --score-glow: rgba(47, 240, 181, 0);
+    }
+
+    .report-chip[data-tier="low"] {
+      --score-line: rgba(255, 255, 255, calc(.05 + var(--hover) * .11));
+      --score-fill: rgba(255, 255, 255, calc(.012 + var(--hover) * .03));
+      --score-glow: rgba(47, 240, 181, 0);
+    }
+
+    /* a scored tile carries the heavier left bar, like the digest card */
+    .report-chip[data-scored] {
+      border-left-width: 3px;
+      border-color: var(--score-line);
+      background: var(--score-fill);
+      box-shadow: 0 0 26px -10px var(--score-glow);
+    }
+
+    /* hover lifts the tile's own colour — a grey tile never turns green */
     .report-chip:hover,
     .report-chip:focus,
     .report-chip.active {
       outline: 0;
-      border-color: var(--score-line-hover, rgba(255, 255, 255, .26));
-      background: var(--score-fill-hover, rgba(255, 255, 255, .07));
+      --hover: 1;
       transform: translateY(-2px);
     }
 
     .report-chip time {
       display: block;
-      color: var(--score-accent, var(--green));
+      color: rgba(238, 245, 242, .60);
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-size: 11px;
       margin-bottom: 10px;
     }
 
-    .report-chip[data-tier="low"] { color: rgba(238, 245, 242, .58); }
-    .report-chip[data-tier="low"] span { color: rgba(238, 245, 242, .34); }
+    .report-chip[data-tier="high"] { color: #f6fffc; }
+    .report-chip[data-tier="high"] time { color: var(--green); }
+    .report-chip[data-tier="high"] span { color: rgba(238, 245, 242, .80); }
+
+    .report-chip[data-tier="good"] time { color: rgba(47, 240, 181, .78); }
+    .report-chip[data-tier="good"] span { color: rgba(238, 245, 242, .70); }
+
+    .report-chip[data-tier="mid"] time { color: rgba(238, 245, 242, .60); }
+
+    .report-chip[data-tier="low"] { color: rgba(238, 245, 242, .55); }
+    .report-chip[data-tier="low"] time { color: rgba(238, 245, 242, .40); }
+    .report-chip[data-tier="low"] span { color: rgba(238, 245, 242, .32); }
 
     .report-chip b {
       display: block;
@@ -747,12 +752,32 @@
       opacity: .7;
     }
 
-    .chip-score[data-tier] {
-      color: var(--score-accent);
-      background: var(--score-pill);
+    /* the badge shouts loudest at the top: solid green with dark ink */
+    .chip-score[data-tier="high"] {
+      color: #04140e;
+      background: var(--green);
+      border-color: var(--green);
+      box-shadow: 0 0 14px rgba(47, 240, 181, .45);
+      opacity: 1;
+    }
+
+    .chip-score[data-tier="good"] {
+      color: rgba(47, 240, 181, .95);
+      background: rgba(47, 240, 181, .13);
+    }
+
+    .chip-score[data-tier="mid"] {
+      color: rgba(238, 245, 242, .66);
+      background: rgba(255, 255, 255, .05);
+    }
+
+    .chip-score[data-tier="low"] {
+      color: rgba(238, 245, 242, .46);
+      background: rgba(255, 255, 255, .03);
     }
 
     .card-score {
+      --t: 0;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -764,7 +789,10 @@
       background: rgba(255, 255, 255, .03);
     }
 
-    .card-score[data-tier] { border-left-color: var(--score-accent, var(--line)); }
+    .card-score[data-tier="high"] { border-left-color: rgba(47, 240, 181, calc(.78 + var(--t) * .22)); }
+    .card-score[data-tier="good"] { border-left-color: rgba(47, 240, 181, calc(.42 + var(--t) * .26)); }
+    .card-score[data-tier="mid"]  { border-left-color: rgba(238, 245, 242, .35); }
+    .card-score[data-tier="low"]  { border-left-color: rgba(238, 245, 242, .20); }
 
     .card-score strong {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -1550,6 +1578,24 @@
     return "low";
   }
 
+  /* Where the score sits inside its own tier, 0..1 — the CSS turns that into
+     border, fill and glow strength, so 10/10 outranks 8/10 without leaving
+     the green, and a 6 sits just above a 5. */
+  function scoreBand(score) {
+    if (score >= 8) return [8, 10];
+    if (score >= 6) return [6, 7];
+    if (score >= 4) return [4, 5];
+    return [0, 3];
+  }
+
+  function paintScore(el, score) {
+    const [lo, hi] = scoreBand(score);
+    const above = Math.min(Math.max(score, lo), hi) - lo;
+    el.dataset.tier = scoreTier(score);
+    el.dataset.scored = "1";
+    el.style.setProperty("--t", (above / (hi - lo)).toFixed(3));
+  }
+
   function scoreNote(score) {
     if (score >= 8) return "/10 read score — primary work on this name. Read it.";
     if (score >= 6) return "/10 read score — real content on this name, worth the time.";
@@ -1575,7 +1621,7 @@
         ? `<span class="chip-score" data-tier="${scoreTier(score)}">${score}<i>/10</i></span>`
         : "";
       // the tile wears the same tier as its badge: green = worth reading, grey = skip
-      if (Number.isFinite(score)) button.dataset.tier = scoreTier(score);
+      if (Number.isFinite(score)) paintScore(button, score);
       button.title = `${report.rating}${target !== null ? ` · target ${money(target, report.targetCurrency || currencyLabel(report))}` : ""}${Number.isFinite(score) ? ` · read score ${score}/10` : ""}`;
       button.innerHTML = `<div class="chip-head"><time>${reportNumber}. ${report.date}</time>${badge}</div><b>${report.bank}</b><span>${detail}</span>`;
       button.addEventListener("mouseenter", () => setActive(report.id));
@@ -1604,7 +1650,7 @@
       return;
     }
     box.hidden = false;
-    box.dataset.tier = scoreTier(score);
+    paintScore(box, score);
     document.getElementById("cardScoreValue").textContent = score;
     document.getElementById("cardScoreNote").textContent = scoreNote(score);
     fields.hidden = false;
