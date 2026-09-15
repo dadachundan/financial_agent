@@ -1,6 +1,9 @@
 ---
 name: research-lens
-description: Given ONE ticker, build its full research lens end-to-end — scan every zsxq PDF about the name, triage the ones carrying a real call, persist their price targets into db/stock_price_target.db, read each of those PDFs in full and write a per-report digest (why Overweight/Underweight, insight density, data support, event context), score each report 0-10 for how much it is worth reading, write the digests into reference/report_digests.json so they light up on the /research-lens page, and hand back a ranked reading-list markdown in reports/recommend/. Trigger on "research lens on TICKER", "what do my reports say about TICKER", "build me a reading list for TICKER", "score the TICKER reports", or a bare ticker after this skill is named. Pair: /zsxq-recommend to triage the feed by theme, /zsxq-analyze for a deep read of one file_id.
+description: Given ONE ticker, build its full research lens end-to-end — scan every zsxq PDF about the name, triage the ones carrying a real call, persist their price targets into db/stock_price_target.db, read each of those PDFs in full and write a per-report digest (why Overweight/Underweight, insight density, data support, event context), score each report 0-10 for how much it is worth reading, write the digests into reference/report_digests.json so they light up on the /research-lens page, and hand back a ranked reading-list markdown in reports/recommend/. Trigger on "research lens on TICKER", "what do my reports say about TICKER", "build me a reading list for TICKER", "score the TICKER reports", or a bare ticker after this skill is named. Pairs with /zsxq-recommend (triage the feed by theme) and /zsxq-analyze (deep read of one file_id).
+short_description: Rank every broker report on one ticker and score each 0-10 for how much it is worth reading.
+short_description_zh: 汇总单个股票的全部券商报告，按值得阅读程度打 0-10 分。
+version: 2026.09.15.1
 ---
 
 # Research Lens — one ticker, every report, ranked
@@ -242,6 +245,35 @@ Surface PT counts and the report-date prices in the final reply, e.g.
   process.
 - **Commit** the skill + script + digests + deliverable
   (Conventional Commit, no `Co-authored-by`), then `git status`.
+
+## Installation — two copies, and why
+
+This skill exists twice:
+
+| Copy | Role |
+|---|---|
+| `.claude/skills/research-lens/` (**canonical**, in the repo) | versioned here; holds the runnable `scripts/lens_scan.py` |
+| `<app_data_dir>/agents/<agent_id>/agent_state/skills/research-lens/` | what PenguinHarness lists — the `/` skill picker and the injected `{{SKILL_METADATA}}` |
+
+**The second must be a real directory, not a symlink.** PenguinHarness's
+`listInstalledSkills` scans with `fs.readdir(..., {withFileTypes:true})`
+and keeps only entries where `entry.isDirectory()` is true — and a
+symlink to a directory reports `false` (it is a link, not a dir). A
+symlinked skill is therefore listed nowhere and silently invisible to
+the picker. After editing the repo copy, re-sync:
+
+```bash
+DST=<app_data_dir>/agents/<agent_id>/agent_state/skills/research-lens
+cp .claude/skills/research-lens/SKILL.md \
+   .claude/skills/research-lens/icon.svg "$DST/"
+cp .claude/skills/research-lens/scripts/lens_scan.py "$DST/scripts/"
+```
+
+`lens_scan.py` resolves the project root from its own location *and* from
+the working directory, so both copies run as long as you are inside the
+repo. **The skill list is injected when a conversation starts** — a newly
+added or renamed skill appears in the picker at once, but the running
+conversation's prompt keeps its old list until you start a new one.
 
 ## Operational notes
 

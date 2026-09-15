@@ -38,17 +38,27 @@ import sqlite3
 import sys
 from pathlib import Path
 
-# Walk up to the project root (the dir containing db_paths.py) and import it,
-# so FINAGENT_DB_DIR redirection reaches this script (CLAUDE.md DB-safety rule).
-_here = Path(__file__).resolve()
+# The skill is installed twice: canonically in the repo at
+# .claude/skills/research-lens/, and as a discoverable copy under the agent
+# state (PenguinHarness only lists real directories, so it cannot be a
+# symlink). Only the repo copy has db_paths.py above it, so resolve the
+# project root from the script's own location first, then from the working
+# directory — which is what makes the installed copy runnable too.
 PROJECT_ROOT = None
-for _anc in _here.parents:
-    if (_anc / "db_paths.py").exists():
-        PROJECT_ROOT = _anc
-        sys.path.insert(0, str(_anc))
+for _start in (Path(__file__).resolve(), Path.cwd().resolve()):
+    # Path.parents excludes the directory itself, and the working directory
+    # is exactly where db_paths.py lives — check the start point too.
+    for _anc in (_start, *_start.parents):
+        if (_anc / "db_paths.py").exists():
+            PROJECT_ROOT = _anc
+            break
+    if PROJECT_ROOT is not None:
         break
 if PROJECT_ROOT is None:
-    sys.exit("could not locate the project root (no db_paths.py in any parent)")
+    sys.exit("could not locate the project root (no db_paths.py above the "
+             "script or the working directory) — run this from inside the "
+             "financial_agent repo")
+sys.path.insert(0, str(PROJECT_ROOT))
 from db_paths import db_path  # noqa: E402
 
 import zsxq_fts  # noqa: E402  (project retrieval layer; read-only FTS5)
