@@ -19,6 +19,9 @@ package-lock.json
 # Rotating consistent backups + salvaged corrupt copies (db_paths.backup_db) — local only
 *.db.bak-*
 *.db.corrupt-*
+# Pre-merge copies written by the research-lens digest merge — the tracked JSON itself
+# is versioned in git, so these are local-only
+*.json.bak-*
 kg_uploads/
 ticker_name_cache.json
 db/pe_cache.json

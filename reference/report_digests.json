@@ -288,11 +288,11 @@
     "event": "Day after the 26 Aug settlement; next catalyst September Meta Connect."
   },
   "585424811815484": {
-    "score": 4,
-    "why": "META appears only as a hyperscaler capex datapoint in the inaugural monthly data-center capacity tracker. In April Meta broke ground on 1.1 GW of new capacity, the most of any hyperscaler (vs Amazon 534 MW); Meta is 27% of hyperscaler capacity under construction (Amazon 32%, Google 23%, Microsoft 14%) and 19% of hyperscaler active capacity (~5 GW); Meta owns the vast majority of the 4.5 GW of hyperscaler behind-the-meter capacity under construction. Offsetting: Meta added -0.5 GW to pipeline this month and holds 10% of hyperscaler pipeline vs Amazon's 45%.",
-    "insight": "Genuinely proprietary — first instalment of an Aterio-sourced monthly build tracker (pipeline 294.9 GW, +14 GW M/M, +214% Y/Y; 58.6 GW under construction; 32.4 GW stranded; 114.9 GW BTM), with an electrical TAM build (PWR $3,981B, VRT $914B, SU.FP $787B, ETN $690B).",
-    "data": "68 exhibits and a dashboard; no META model or earnings exhibits.",
-    "event": "Quiet patch — a calendar tracker, no Meta-specific trigger."
+    "score": 3,
+    "why": "Bernstein's inaugural monthly data-centre capacity tracker; it argues no single-name case, so both names are comp rows. META: broke ground on 1.1 GW in April, the most of any hyperscaler, 27% of hyperscaler capacity under construction (~5 GW active), but added -0.5 GW to pipeline. AVGO: Outperform, PT $525, EPS $6.82/$11.38/$17.73 in the semis ticker table only.",
+    "insight": "Genuinely proprietary on the theme: an Aterio-sourced build tracker (pipeline 294.9 GW, +214% Y/Y; 58.6 GW under construction; 32.4 GW stranded; 114.9 GW behind-the-meter) and an electrical TAM build. No proprietary data on either ticker's own share.",
+    "data": "68 exhibits and a dashboard, plus an electrical TAM table (PWR $3,981B, VRT $914B, SU.FP $787B, ETN $690B per MW x pipeline). No META or AVGO model, target build or management quote.",
+    "event": "A calendar tracker, not an event note: quiet patch for both names, no print, deal or regulatory hook. Shared entry - this PDF is read by both the META and the AVGO lens."
   },
   "585585554848484": {
     "score": 9,
@@ -510,5 +510,579 @@
     "insight": "Consensus-plus — a dated, quantified framing of the AI debate with JPM's own capex/consensus math; the original datapoint is the third-party compute-rental pricing comparison, not proprietary channel work. The Neutral stance is itself informative: it is the \"before\" of JPM's 10 Sep 2026 upgrade to Overweight, $820.",
     "data": "None verifiable — this digest is derived from the zsxq Chinese summary (translated highlights, ~2,500 characters covering the model, monetization, financial and risk sections). The PDF is not in the local library (`local_path` is null, `has_pdf` false), so no exhibits, model or estimates pages could be read; treat every number here as summary-sourced.",
     "event": "Written after the late-June AI-sentiment trough and around Muse Spark 1.1 (plus the Meta Model API preview), ahead of the 29 Jul 2Q26 print — a sentiment-inflection note rather than a print note."
+  },
+  "415288425488488": {
+    "score": 8,
+    "why": "FQ2-26 beat ($22.2B/$2.44); AI semis ~$10.8B, +143% YoY. The reiterated FY27 $100B AI guide is read as conservatism, not share loss: ~10GW ships 2H-weighted, implying a materially higher FY28 run-rate, and Anthropic racks were dropped (lower revenue, lower margin); Google/Meta LTAs stay robust.",
+    "insight": "Restated company and consensus figures with Bernstein variance tables; the fresh calls: FQ3 AI ~$16B undershoots Street only because Anthropic racks left the mix, and non-AI semis are finally recovering.",
+    "data": "19 exhibits: results/guidance variance vs Street, segment GM/OPM, FCF build, inventory and net debt, plus a full FY26-28 income statement, balance sheet and cash flow model; AI revenue $56.0B/$108.7B/$168.5B.",
+    "event": "Written hours after the FQ2-26 print and FQ3 guide; the stock fell ~14% after hours on the AI guidance miss and the decision to reiterate rather than raise FY27 $100B."
+  },
+  "181282245822542": {
+    "score": 9,
+    "why": "TPU share holds ~80%: MediaTek's 3nm entry cannot displace a scaled platform given HBM locked under contract, packaging (CoWoS vs unproven EMIB) and Google's reliability bar. FY27 AI revenue ~$120bn, TPU ~75% of 10GW at $10-12bn/GW (~$80bn); FY28 at least 15GW with TPU fading to ~60%.",
+    "insight": "Proprietary: MS's own XPU-GW-per-customer and AI-revenue/GW models, Taiwan supply-chain checks on CoWoS/EMIB/substrate, MediaTek's 15-20% long-term share target, and an open split with MS's own MediaTek analyst.",
+    "data": "Three build exhibits (customer XPU GW 2026-28, AI revenue vs GW, driver model), bull/base/bear $637/$502/$308 around a 28x CY27e $17.92 EPS PT build, plus options-implied probabilities.",
+    "event": "Not print-driven: a July rebuttal to the year-to-date MediaTek share-loss overhang; also discloses MS advised Broadcom on its June 9, 2026 AI XPV Platform with Apollo and Blackstone."
+  },
+  "184442151414552": {
+    "score": 8,
+    "why": "FQ1-26 $19.31B/$2.05 beat; AI $8.4B, +106% YoY, networking about a third of AI sales. Management set line of sight to ~10GW FY27 shipments (Anthropic ~3GW, OpenAI ~1GW, \"multiple\" Meta, strong Google) and \"significantly in excess\" of $100B AI revenue; GM-dilution and CoT fears were rebutted.",
+    "insight": "First-hand call detail rather than consensus: the customer-level GW split, networking at a third to 40% of AI sales, IR's HBM-passthrough margin nuance, and the CoT/VMware disintermediation defence.",
+    "data": "19 exhibits: results/guidance variance, segment margins, FCF bridge, inventory and leverage, plus an updated FY26/27 model (FY27 revenue $154.7B, EPS $17.73) and the 30x-FY27 $525 build.",
+    "event": "Written the morning after the FQ1-26 print; the stock was down over 20% since the prior earnings on CoT, margin-dilution and software-disruption fears that the call addressed."
+  },
+  "585552414545114": {
+    "score": 9,
+    "why": "Estimates raised hard (FY27 AI to $132.7B from $106.4B; FY27 EPS $21.14) on bottom-up ~6mn TPU units and management's ~10GW at ~$10-15B/GW. Networking ~35% of AI revenue, ~$43B; Anthropic's ~3GW (~$40B) turns less rack-heavy, so margins hold.",
+    "insight": "Genuinely proprietary: TPU units by node (v5p-v9 Pumafish, MediaTek Zebrafish), per-customer AI revenue by quarter, revenue-per-GW reset from $20B+ to $10-15B, plus a MediaTek/AVGO design-win comparison.",
+    "data": "Figure 1 unit model, per-quarter and per-customer AI/networking/compute builds, FQ1/FQ2 variance vs Street, a TPU-vs-GPU spec table, a software/semis SOTP ($144 + $342/share) and full statements.",
+    "event": "Post-print (FQ1-26, 4 Mar close $317.53); the hook is the new FY27 over-$100B AI guide and the changing Anthropic rack structure, i.e. guidance rather than a deal or regulatory trigger."
+  },
+  "184428515258212": {
+    "score": 9,
+    "why": "Bullish, though MS prefers NVDA: Google's MediaTek TPU is \"risk silicon\" with bugs, so TPU share loss is tail risk — CoT maybe ~20% by 2030, binary; the $21bn Anthropic rack orders are over 40% of FY AI revenue but look transitory, so margins normalize.",
+    "insight": "Proprietary: MTK chip returned in April, ~$1bn CY26 MTK revenue; AVGO HBM locked through 2027; MS base case versus their Greater China team's 2.5mn MediaTek TPU units in 2027.",
+    "data": "Eight exhibits (AI-semi relative performance, TPU unit split, MS vs consensus GM, implied CY27 AI P/E, PEG); bull/base/bear $592/$462/$291 at 48x/35x/26x 2027e ModelWare EPS.",
+    "event": "No print — a theme piece answering \"OK, what about Broadcom?\" after their NVDA underperformance note, written into this year's AVGO underperformance and ahead of the 22-26 Apr shareholder meeting."
+  },
+  "812225452244522": {
+    "score": 8,
+    "why": "Bullish on lowest-inference-cost leadership: FY27 AI semis \"significantly in excess of $100bn\" across up to 10GW (GS $130bn vs $86.6bn prior); six custom-silicon engagements ramping (Google TPU v7, Meta, Anthropic 3GW, OpenAI 1GW); components secured through FY28; racks no longer margin-dilutive.",
+    "insight": "Largely company guidance plus GS variance work; the fresh bits are the 40% AI-networking mix (up from ~30%), the Anthropic 3GW and OpenAI 1GW FY27 ramps, and the FY28 supply lock.",
+    "data": "Four exhibits (FQ1 variance, FQ2 guidance, new vs old estimates, PT build); FY26/27/28 AI semis $60bn/$130bn/$170bn; PT $480 = 30x normalized EPS $16.00 (from 38x/$12.00).",
+    "event": "Written the evening of the FQ1-26 print (revenue $19.3bn, AI semis $8.4bn +106% y/y); FQ2 guided to $22.0bn revenue and $10.7bn AI semis — print-driven, no deal or regulatory trigger."
+  },
+  "212851554142411": {
+    "score": 7,
+    "why": "Bullish on the OpenAI 10GW custom accelerator and networking deal deploying 2H26 to end-2029: GS builds ~$10-15bn of revenue and ~$1.00-1.50 of EPS per GW ($9,000 ASP, 900-1,200k units), incremental to the earlier OpenAI disclosure, while flagging OpenAI's funding risk.",
+    "insight": "Proprietary only in the per-GW scenario table, which stress-tests three ASIC-versus-GPU power-efficiency cases; the rest is reaction to the joint release and AMD's rival 6GW OpenAI deal.",
+    "data": "Exhibit 1 per-GW model with explicit inputs (Nvidia $35k/GW, 80/20 compute/networking split, $9,000 ASP, 55% blended GM); PT $380 at 38x normalized EPS $10.00, up from $9.50.",
+    "event": "Published the same day Broadcom and OpenAI announced the 10GW partnership; AMD's offsetting OpenAI deal and the absence of disclosed financing are the framing."
+  },
+  "415514885481218": {
+    "score": 8,
+    "why": "Bullish on the Meta multi-year, multi-generational, multi-GW MTIA agreement through 2029: first gigawatt in 2027 means $12-15bn of Broadcom revenue; five programs (Athena/Iris/Arke at 3nm, Astrid/Apollo at 2nm) ramp over three years; conviction FY27 AI revenue \"significantly exceeds $120B+\".",
+    "insight": "Proprietary beyond the announcement: MTIA program names, process nodes and ramp timing from JPM's prior work, plus Hock Tan stepping off Meta's board into an advisory role.",
+    "data": "Full annual and quarterly model (FY26E revenue $109,978mn, adj. EPS $12.29; FY27E $166,491mn, $19.61); Dec-26 PT of $500 is 24.5x their CY27 EPS of ~$20.45.",
+    "event": "Written one day after the Meta agreement, following the Google/Anthropic deal note a week earlier and on the heels of the March FQ1 print — deal-driven, no new print."
+  },
+  "184418854484452": {
+    "score": 8,
+    "why": "Meta's multi-year MTIA partnership (initial >1GW, supply to 2029) plus Google/Anthropic a week earlier broadens the XPU base; networking rides along. GS FY27/28 EPS are ~14% above Street, PT = 30x normalized EPS $16; FY26E revenue $107.2B, FY27E $180.7B.",
+    "insight": "House model and the ~14%-above-Street FY27/28 EPS call (vs Visible Alpha consensus); no channel or supply-chain data — it is a same-day deal-reaction note.",
+    "data": "Full income statement, balance sheet and cash-flow forecasts FY26-28, the 30x × $16 normalized-EPS build, EPS $10.37/$19.18/$24.39 out-years; deal terms only, no management quotes.",
+    "event": "Published the evening of Broadcom's 14 Apr 2026 Meta MTIA announcement, a week after the Google/Anthropic note; Hock Tan steps off Meta's board into an advisory role."
+  },
+  "184155521585442": {
+    "score": 9,
+    "why": "Management sees FY27 AI \"more than $100B\"; 2028 XPU units exceed GPUs at the five scaled LLM buyers; Meta ramps 2H27, OpenAI's own XPU 2H27 into F28; Singapore advanced packaging starts August, months early; gross margin floor 74%; PT 20x F28 EPS.",
+    "insight": "Pure management channel — unreported specifics (Singapore packaging pulled forward, VMware core-count pricing, HBM pass-through, MediaTek \"low end only\"), not consensus restatement.",
+    "data": "No exhibits or model; valuation stated as 20x F28 EPS (low end of 20-40x), risks quantify Google at 35-40% of sales, full PT history.",
+    "event": "Callback two days after the FQ2-26 print; triggers are the FY27 >$100B AI debate, Tomahawk/Ethernet scale-up and the MediaTek TPU-share question."
+  },
+  "415825112552188": {
+    "score": 6,
+    "why": "Q3 backlog $110B, half AI-linked; Q4 AI revenue guided to $6.2B (+66% y/y) inside ~$17.4B total (+24%); FY26 AI guide assumed >$30B against GS's $45.4B (+128%); VMware mix lifts margin; stock $390.24, 28-30x forward.",
+    "insight": "No proprietary or channel data whatsoever — restates GS, Mizuho, Morgan Stanley, Forbes, CNBC, TipRanks; its only original output is the author's own Q4/FY26 assumption set.",
+    "data": "Dated news timeline with analyst PTs plus an explicit Q4 model ($17.4B revenue, $6.2B AI, 75-77% non-GAAP GM, 60-67% EBITDA margin); no exhibits or SOTP.",
+    "event": "Pre-print preview before Q4 FY25 results, written after the 24/28 Nov 2025 Google-TPU and Gemini 3 rally (+11%, +16%) and the Microsoft custom-silicon reports of 6 Dec."
+  },
+  "212515215481551": {
+    "score": 5,
+    "why": "Expects a beat on Q3 FY25 revenue of $15.8-16.2B (+25%) and AI chips stepping $4.4B→$5.1B q/q (+16%) per guidance; gross margin above 65%; VMware software +25% y/y to $6.6B with Walmart as a flagship VCF win.",
+    "insight": "Zero proprietary data — every datapoint is already public through TipRanks, Forbes and Investopedia; consensus and risks are restated generically.",
+    "data": "An assumption block (revenue band, >65% margin floor, FY25 guidance raise) plus price $298.24 and ~108.85x GAAP P/E; no exhibits, model or management quotes.",
+    "event": "Written 3 Sep 2025, days before the FQ3-25 print, just after Nvidia's late-August report dragged AVGO down ~7%."
+  },
+  "812241252442142": {
+    "score": 9,
+    "why": "Own supply-chain checks lift C27 TPU units to ~7MM from ~6MM, driving F27/C27 revenue to $195B/$212B (from $182B/$195B), F27 AI revenue to $145B (from $133B) and GCP TPU spend to $26B/$61B/$79B for C26/C27/C28 (from $26B/$46B/$61B).",
+    "insight": "Pure proprietary: a TPU unit model by node (v5–v9, AVGO vs MediaTek), own GCP spend estimates, and FY27 EPS $22.56 vs Street $17.69 (+28%) — not restated consensus.",
+    "data": "Figures 1–3 TPU units/new-vs-old/UBS-vs-Street, summary model (Fig 4), TPU-vs-GPU spec tables (Figs 6–7), SOTP and comps (Figs 8–9), plus Anthropic run-rate $30B and 1,000+ >$1MM ARR customers.",
+    "event": "Written days after the AVGO–Google agreement extended to 2031 with rack-level supply assurance, and the Google/Anthropic ~3.5GW TPU expansion — event-driven, not a print."
+  },
+  "415518828288188": {
+    "score": 7,
+    "why": "At Cloud Next '26 Google split TPU v8: single-die v8t for training (MediaTek) and dual-die v8i for latency-sensitive inference (AVGO), with 288GB HBM and 384MB SRAM (~3x gen-over-gen), ~80% better perf/$, and inference pod scale up from 256 to 1,152 TPUs.",
+    "insight": "Fresh proprietary attribution of the v8 chips to suppliers, built on UBS's earlier Zebrafish/Sunfish work; model unchanged, so the value is the read-across to ARM (2x CPU hosts) and Semtech (copper).",
+    "data": "Figure 1 v8-vs-Ironwood spec table (pod size, FP8 EFlops, HBM bandwidth/capacity) from company data; rating/PT history to $475; no new model.",
+    "event": "Written on Google's Cloud Next '26 TPU v8 launch; UBS explicitly says little here is new versus its own estimates."
+  },
+  "812241182212282": {
+    "score": 7,
+    "why": "Meta's multi-year extension covers >1GW initially, multiple MTIA generations for training and inference plus networking, through at least 2029; Hock moves off Meta's board to an advisory role. Bernstein says the FY27 ~$100B AI guide looks light — each ~$10B of AI revenue is ~$1/share EPS.",
+    "insight": "Mostly restatement of the 14 Apr Meta release and AVGO's March guidance; the fresh angles are the board-conflict read and the $10B-AI-revenue-to-$1-EPS sensitivity.",
+    "data": "No model build — FY26/F27E EPS $11.38/$17.73, EBIT $52.4B/$88.7B, FCF $55.1B/$85.3B, verbatim quotes from the Meta announcement, rating/PT history chart.",
+    "event": "Written hours after Meta's 14 Apr 2026 MTIA partnership announcement, with Hock Tan stepping off Meta's board."
+  },
+  "585425518412254": {
+    "score": 9,
+    "why": "Higher TPU volumes lift FY28 AI sales 40% to $180B (Google alone $107.8B), AI mix rising from ~49% of sales now to ~81% by F4Q28, driving FY28 EPS of $25.23 (+34%); PT is just 20x that. Anthropic shifts from racks to chips (chips ~20–25% of rack sales, better GM).",
+    "insight": "Proprietary: Sparse Core moving from logic die to SerDes chiplet in TPU v8i, the Citi AI Summit keynote with Broadcom's Charlie Kawwas, and a customer-by-customer AI revenue build.",
+    "data": "Figs 1–9, full P&L/cash-flow/balance-sheet model, per-customer FY25–F28 AI revenue table, TPU 8t/8i block diagrams, verbatim Kawwas quotes.",
+    "event": "Preview written 12 May 2026 ahead of the 3 June April-quarter print; framed by Google's 2026 capex raise to $180–190B and MediaTek's post-earnings ASIC revision."
+  },
+  "184511848484422": {
+    "score": 8,
+    "why": "January-quarter AI guidance of $8.2bn is >20% above MS, with $21bn of Anthropic orders shipping in 2h26 and $73bn AI backlog shippable in 18 months; numbers rise materially even after assuming mid-40% rack gross margins. Multiple cut 41x→35x still lifts PT.",
+    "insight": "Fresh datapoints: MS's own mid-40% rack-margin assumption, the AI-portion implied multiple at ~2x NVIDIA, and 1h27 sequential math off the backlog; still, MS prefers NVDA.",
+    "data": "Exhibits 1–5 (FQ4 variance, projected income statement/balance sheet/cash flow), bull/base/bear $592/$462/$291 with options-implied probabilities.",
+    "event": "Written overnight on the 11 Dec 2025 FQ4 print and sell-side call, incorporating the second $11bn Anthropic order and the new customer #5 (explicitly not OpenAI)."
+  },
+  "812824512185242": {
+    "score": 9,
+    "why": "FY26e/FY27e ASIC revenue raised 46%/63% to $44.7bn/$72bn, 44%/59% above consensus, on CoWoS allocation of 150k→250k wafers and Google TPU units of 3.1m (from 1.7m); FY26e EPS $11.68 is within 5% of consensus FY27e.",
+    "insight": "Proprietary CoWoS wafer, net-die, unit and ASP build by customer; $14bn ASIC revenue per GW on the OpenAI deal; 40–45% share expectation in 1.6T DSP.",
+    "data": "Exhibits 1–21: FY26e ASIC revenue by customer, consensus-revision tables, quarterly P&L model, networking sensitivity, valuation table.",
+    "event": "Written 24 Nov 2025 after the 13 Oct OpenAI 10GW deal and the fourth-customer (Anthropic) announcement, ahead of the Dec FQ4 print."
+  },
+  "812844488525112": {
+    "score": 8,
+    "why": "FQ425 beat at $18.0B/$1.95 (Street $17.5B/$1.87) with AI semis ~$6.5B, +74% YoY; FQ126 AI guided to $8.2B, +100% YoY and $1.4bn above Street; extra $10B Anthropic plus a fifth customer imply >$50B FY26 AI revenue, against FY26/27 model of $52.7B/$90.0B.",
+    "insight": "Largely analyst-repeated company disclosure; genuinely own is the >$50B FY26 AI inference and the gross-margin dilution framing from AI component pass-throughs.",
+    "data": "Exhibits 1–17 (segment variance, GM/OPM/FCF paths, inventory, net debt) plus income-statement and cash-flow models; PT at ~32x FY27 EPS.",
+    "event": "Published 12 Dec 2025, hours after the 11 Dec FQ4 print and FQ1 guide, explaining the ~5% aftermarket drop despite the beat."
+  },
+  "184511584282412": {
+    "score": 9,
+    "why": "FY26e/FY27e ASIC revenue of $44.7bn/$72bn sits 38%/40% above consensus, taking AI revenue to $55.8bn (+180% y/y) then $88.2bn; FY27e EPS $16.72 (+32% above street), TP just 32x it for 37% upside.",
+    "insight": "Proprietary CoWoS/net-die/unit/ASP build by customer (TPU 3.1m units FY26e, Meta 900k, Anthropic ~$5bn); consensus revision tracker since the Gemini 3 launch.",
+    "data": "Exhibits: FY26e ASIC revenue by customer, quarterly P&L, AI-networking sensitivity, HSBC vs consensus AI revenue, forward-PE and valuation/risk pages.",
+    "event": "Written 8 Dec 2025 as a 4QFY25 preview (print 11 Dec), after the Gemini 3 launch repriced AI ASIC demand."
+  },
+  "212281541224421": {
+    "score": 8,
+    "why": "Backing software out at 12x/19x/12x C27 multiples leaves semis at 17x EV/EBITDA, 20x P/E and 23x EV/FCF — one turn above peers; SOTP of 25x software FCF + 30x semis FCF gives $483/share EV, PT $475.",
+    "insight": "UBS software team's VMware churn work (2026/27 renewals, lapping VCF upsell, AI coding tools) weighed against AI revenue tripling to >$60B in F26.",
+    "data": "Figures 1–10: SOTP tables and sensitivity, peer multiple comps, HOLT, plus unit and estimate preview tables.",
+    "event": "23 Feb 2026, two weeks before the 4 Mar FQ126 print; a response to the software-driven de-rating, with Anthropic rack GM dilution the swing issue."
+  },
+  "585512125541514": {
+    "score": 9,
+    "why": "TPU units above 5m in C2027E (vs ~3.7m in C2026E) drive AI revenue to ~$60B F26E, ~$106B F27E and ~$150B F28E, lifting C2027E EPS past $18; PT held at $475 on ~25x software and ~30x semis EV/FCF.",
+    "insight": "Proprietary unit split by vendor (AVGO 3,670k C26 / 5,180k C27 vs MediaTek 300k / 2,000k), Google ~$30B of TPU revenue, COT dilution quantified at ~8% EPS.",
+    "data": "Figure 9 unit model, Figure 14 COT dilution bridge, TPU-vs-GPU architecture deep dive, expert calls, income statement and balance sheet.",
+    "event": "10 Feb 2026 estimates raise following supply-chain and expert-call work; frames the OpenAI ASIC (late 2026) and Anthropic ASIC (2H27) ramp."
+  },
+  "212841582144421": {
+    "score": 8,
+    "why": "The $73B AI backlog will ship in ~12 rather than 18 months; total backlog $110bn→$162bn in FQ4; AI revenue >$60B in F26 (nearly 3x), AI networking bookings $3bn→~$12bn, XPU GM ~55%, rack GM 45–50%, FY27 EPS $14.15.",
+    "insight": "Management-sourced and proprietary: the rack/XPU/networking gross-margin ladder, ~60% AVGO content per AI rack, Google direct-to-foundry risk dismissed for five years.",
+    "data": "Estimate-revision tables, FY27 and CY26–27 models, PT built on ~33x software and ~32x semis EV/FCF; no new exhibits beyond the model.",
+    "event": "15 Dec 2025, after the 12 Dec in-person CEO/CFO meeting and Friday's post-print selloff, which UBS called a buying opportunity."
+  },
+  "184451881122882": {
+    "score": 7,
+    "why": "Mechanism: XPU rack timing back-loads the upside. GS FY26 AI revenue $54.1bn is 6% above Street; FY26E EPS $11.07 vs Street $10.34; upside to both quarter and guide, more of it in 2H.",
+    "insight": "Mainly consensus framing: the four call items are the FY26 AI guide, XPU customers, margin dilution, software disruption. GS estimates sit 4-6% above Street off checks, not new data.",
+    "data": "Exhibit 1 GS-vs-Street summary by segment for FY1Q26-FY27E; GS forecast table; $450 = 38x normalized EPS of $12.00.",
+    "event": "Pre-print note ahead of the FQ1-26 report, written into \"peak CapEx\" worries and fears that AI disrupts Broadcom's software business; price $333.51, not the $400s."
+  },
+  "184511858188112": {
+    "score": 8,
+    "why": "Mechanism: Google TPU momentum plus scarce custom-silicon supply. AI semis +74% YoY to $6.5bn; 1Q guide $8.2bn vs Street $6.9bn; $73bn backlog over 18 months; Anthropic added an $11bn FY26 order; fifth XPU customer signed.",
+    "insight": "Print data plus GS model revisions; no channel survey, but the management disclosures (backlog, fifth customer, Anthropic order, rack-margin dilution) are fresh specifics.",
+    "data": "Exhibits 1-2 (variance, guidance), new-vs-old estimates by segment, PT table: 38x $12.00 normalized EPS, bull $533 / bear $217.",
+    "event": "Written on the FQ4-25 print, with the stock expected to pull back because management gave no FY26 AI guide-up despite ~100% Q1 growth."
+  },
+  "585128242148154": {
+    "score": 9,
+    "why": "Mechanism: the OpenAI 10GW rack program on top of Google/Meta unit growth. Models ~$49bn C26 AI revenue, Google approaching 3mn units ($21bn), Meta ~0.5mn, OpenAI ~$90bn F26-F29; PT to $415 on ~41x semis EV/FCF.",
+    "insight": "Genuinely proprietary: UBS's own TSMC CoWoS estimate, hyperscaler ASIC die/wafer-cost tables, revenue-per-GW math, Google/Meta unit checks — not restated consensus.",
+    "data": "Figures 1-8: OpenAI opportunity sizing, new-vs-old estimates, quarterly model, hyperscaler ASIC tables, SOTP, comps; C27 EPS ~10% above Street.",
+    "event": "Written the day of the OpenAI-Broadcom 10GW announcement; a pre-print model update with the PT walked higher on the deal."
+  },
+  "184422412422542": {
+    "score": 8,
+    "why": "Mechanism: Broadcom's roadmap is the only credible way to match Nvidia's pace, so customer-owned-tooling fears are overblown. TPU v7 goes to \"many many millions\" in 2026; the $73bn order is \"significantly higher\" now; FY27 EPS $14.86.",
+    "insight": "Primary-source management commentary: Google v8 pulled in 3 months while MediaTek slipped 9, TPU v9 engagement, own substrate fab with 1.9-year payback, interposer-less TPU patents.",
+    "data": "Quarterly income-statement and cash-flow models to FY28, ticker/valuation table; PT = ~32x FY27 pro-forma EPS of $14.86.",
+    "event": "Hosted CES investor meeting with Charlie Kawwas, president of the Semiconductor Solutions Group, amid rising competition and COT concerns."
+  },
+  "812824888284282": {
+    "score": 7,
+    "why": "Expects FY26 AI revenue guidance above the ~100% YoY consensus on Google/OpenAI XPU ramps (XPU revenue +160% YoY) plus Tomahawk 6 networking; $435 is 38x normalized EPS of $11.50, 15.1% upside to $377.96.",
+    "insight": "No channel checks: positioning colour plus GS's own numbers. FY26/27 total revenue sits 3%/21% above Street and AI semis 10%/38% above, but the edge is model, not data.",
+    "data": "Exhibit 1 GS-vs-Street by segment for FY4Q25-FY27E, GS forecast table, new FY28-30 EPS $17.35/$20.00/$22.40, PT build and risks.",
+    "event": "Ahead of the early-December FQ4 print; triggers are FY26 AI guidance, Google/OpenAI contributions, XPU gross-margin dilution, set against strong Gemini 3 and Nvidia datapoints."
+  },
+  "585524212515484": {
+    "score": 9,
+    "why": "Primary research lifts CY27 Google TPU deployment to 6-7M units (prior 5M; 3.5M in CY26), 95%+ powered by Broadcom's 3nm Sunfish ASIC, with multi-billion POs booked for the 2H26 ramp and Zebrafish COT 18 months behind.",
+    "insight": "Genuinely proprietary: revised TPU unit forecast, supplier-share math, chip codenames (Ironwood/Hammer, Sunfish/Hellcat, Zebrafish), first-silicon timing, CoWoS/HBM/substrate constraints, 14 designs shipped in 12 years.",
+    "data": "Valuation build (32x CY26 exit EPS ~$15.00), full FY24-26 income statement, balance sheet, quarterly model and ratios, PT/rating history table.",
+    "event": "Post-December print, pre-January report; AI backlog still growing, Meta 3nm Athena/Iris on track, Google COT noise, tight advanced-substrate and HBM supply."
+  },
+  "415288442528448": {
+    "score": 8,
+    "why": "Tomahawk 6 (3nm, 102.4Tbps, 1.6T optics) is nearly sold out for next year and ramps faster than any prior Broadcom networking product, shipping 6-9 months ahead of Nvidia and 12 months+ ahead of Marvell/Cisco; networking reaches $45bn+, ~28% of AI revenue.",
+    "insight": "Mostly roadmap synthesis with some fresh specifics: T6 sell-out, Condor 3nm 200G SERDES and Davisson CPO, Jericho 4/Tomahawk Ultra ramp, 70% share held. No channel checks.",
+    "data": "Figures 1-2 on the two-year Tomahawk cadence and T4/T5/T6 specs, $500 = 24.5x CY27 EPS ~$20.45, PT/rating history table; no full model in this note.",
+    "event": "Quiet patch, no print; competitive-positioning piece timed with the Extel All-America survey voting window."
+  },
+  "585424481442544": {
+    "score": 7,
+    "why": "Sees upside to both quarter and guidance, with incremental FY27 colour pulling Street AI numbers higher. GS models AI semis $57.3bn FY26 and $132.6bn FY27 (revenue 4%/12% above Street); $500 is 30x normalized EPS of $17.",
+    "insight": "No proprietary data: the edge is the size of GS's above-Street AI estimates and margin framing; the three call items (AI guidance, XPU engagements, margins) are consensus questions.",
+    "data": "Estimate-change table with GS-vs-Street revenue, gross margin, operating income, EPS and AI/Non-AI/software segments for FY2Q26-FY27, GS forecast table, PT history.",
+    "event": "Ahead of the fiscal 1Q (June) print; focus on FY26/27 AI revenue detail, new XPU customer onboarding, competition at key accounts, XPU margin dilution, Tomahawk 6 ramp."
+  },
+  "814512851551822": {
+    "score": 8,
+    "why": "Samsung supplies 75-85% of AVGO's HBM DRAM; the MOU's >$200B of Samsung memory/foundry content (90-95% HBM) implies >$1T cumulative Broadcom AI revenue over 2026-2030, a 60%+ CAGR, plus $40-50B of Samsung-foundry chip sales.",
+    "insight": "Proprietary bridge from a supplier's public MOU to a >$1T AVGO AI-revenue pool; the 75-85% HBM share and $40-50B foundry estimate are JPM's own, not consensus.",
+    "data": "No exhibits or model; valuation is 20-25x (23x) $25.35 of FY27-exit earnings power. Of nine pages, the argument is three paragraphs and the rest disclosure.",
+    "event": "Written 27 Jul 26, two days after Samsung announced the MOU, with AVGO at $381.90 — a news-driven reiteration, not a print."
+  },
+  "184155215151152": {
+    "score": 8,
+    "why": "Apr-Q in line ($22.2B sales, $2.44 EPS); bookings $30B+ against $11B shipped; FY26 AI sales ~$56B and >$100B reiterated for FY27 with FY28 visibility improving; Jul-Q gross margin guided down 300bp to 74.0% as AI ASIC mix rises 30%→38%, yet F28 EPS held at $25.25.",
+    "insight": "Guidance-versus-consensus bridge on sales, AI sales and both margins; customer-level GW schedules (OpenAI 1.3GW in 2027, Meta 3GW, $6B of POs) and locked HBM pricing, with above-consensus F26/F27/F28 EPS.",
+    "data": "Full P&L, balance sheet and cash-flow model to F28; F2Q26 results and F3Q26 guidance-versus-consensus exhibits; segment exhibit; bull/bear page.",
+    "event": "Filed 03 Jun 26 (disseminated 04 Jun) right after the F2Q26 print, stock at $413.21 following a pullback — a dated post-print call."
+  },
+  "214522118552541": {
+    "score": 8,
+    "why": "TPU v9 2nm (4 compute die, 16 HBM stacks, 400Gbps SerDes) still ramps in CY28 with no delay; Broadcom qualifies v8i \"Sunfish\" now while Google's COT \"Zebrafish\" v8t stalls — an 18-month lead; the March GOOG deal locks TPU v8-v11 and rising annual revenue through 2031.",
+    "insight": "Supply-chain primary research: named program specs, design-start timing, COT yield risk on EMIB packaging and an 18-months+ lead claim — a differentiated rebuttal, not restated consensus.",
+    "data": "No model or exhibits; cites prior notes, a PT built on 20-25x (23x) $25.35 FY27-exit earnings power, and the rating history table.",
+    "event": "16 Jun 26, AVGO at $376.71, written into a wave of delay/cancellation headlines from sell-siders and Asia press — a dated, falsifiable call."
+  },
+  "412841581841558": {
+    "score": 7,
+    "why": "FY26 AI revenue on track at $56B+ (up 180%+ Y/Y) and 2x-2.5x in FY27; TPU v8i ramping and v9 2nm set for early CY28; Tomahawk 5/6 demand exceeds supply with TH6 sold out through next year; Alchip/GUC and AMD/MRVL serve COT support and attach chips, not core TPU design.",
+    "insight": "Program-by-program status (Meta's 5 MTIA, OpenAI Jalapeno, Anthropic TPU v7-v9, ByteDance/Alibaba, SoftBank/ARM, Apple, SambaNova) plus a competitor-by-competitor disambiguation; the 18-month-lead and $1T lines repeat June.",
+    "data": "No model or exhibits; cites prior notes, the Samsung note's >$1T cumulative-AI-revenue math, and the 14-of-Google's-designs track record.",
+    "event": "19 Aug 26, AVGO at $362.48 — a quiet-patch rebuttal to competitive-noise headlines (Alchip/GUC awards, CoWoS-cut chatter); no print."
+  },
+  "184155215151812": {
+    "score": 8,
+    "why": "AI semis scaled to $133bn/$193bn in FY27/28 on ~10GW of deployments: six XPU engagements (Google, Meta, Anthropic, OpenAI plus two unnamed with $6bn of POs), Anthropic adding 5GW from FY27, Meta 1GW in 2H27. Components secured through FY27; inventory built $3.0bn→$4.3bn. PT 30x normalized EPS $17.50.",
+    "insight": "Mostly management commentary replayed through GS's variance tables; the fresh item is the customer-by-customer GW map and the call that FY26 AI ($57bn) slipped only on delayed new-customer ramps.",
+    "data": "Exhibits: quarterly variance vs GS/Street, guidance vs consensus, new-vs-old estimates table (FY26-28 AI, revenue, EPS), bull/base/bear P/E PT build, full GS forecast grid.",
+    "event": "FQ2-26 print (3 June): revenue $22.2bn in line, AI $10.8bn +143% Y/Y; the FQ3 AI guide of $16.0bn missed GS $17.4bn and Street $16.4bn even as total revenue guidance beat."
+  },
+  "184121514242442": {
+    "score": 9,
+    "why": "Anthropic's order converted from racks to standard ASICs: contribution cut from ~$21bn/~$23bn (C26/C27) to ~$8bn/~$22bn, but at much higher margin, with revenue per GW now tracking GCP TPU at the bottom of the $10-20bn/GW range. AI networking trimmed to $24bn/$44.6bn; FY27 AI $145bn→$133bn, EPS $21.14.",
+    "insight": "Proprietary: TPU units cut to ~3.7MM C26 / 6.8MM C27; calls AVGO the v8i supplier from the GCP announcement (288GB HBM, 384MB SRAM); Meta XPU $0.8B→$3B→$8B→$13B; OpenAI $5B F27/$16B F28.",
+    "data": "UBS summary model, TPU unit exhibit, UBS-vs-Street table, full P&L/balance sheet/cash flow, and an EV/FCF SOTP: 12x CY27 software FCF $40.7B plus 30x semis FCF $68.0B.",
+    "event": "Pre-print ahead of the April quarter (FQ2-26). Triggers are the Anthropic rack-to-ASIC conversion and GCP's TPU v8i/v8t launch. UBS models FQ2 $22.0B/$2.38 and FQ3 AI revenue $13.6B."
+  },
+  "585412584454154": {
+    "score": 7,
+    "why": "Rack deployments — most of the ~$21bn Anthropic opportunity — slid out of 2H26 into 2027, so JulyQ AI revenue drops from $19.5bn to $16.9bn (56% q/q); MS argues capacity is reallocated, not lost. CY26/CY27 AI $74bn/$133bn; only 10-15% of TPU content realistically at risk to MediaTek.",
+    "insight": "Thin on new data: \"exceptionally strong\" networking checks and a ~$20bn/GW framework MS itself calls bull-case. The one differentiated judgement caps realistic CoT share loss at 10-15% of TPU content.",
+    "data": "MS-vs-consensus quarter table, risk-reward with bull/base/bear PTs ($619/$485/$298) and options-implied probabilities, MS-vs-Street EPS and revenue table, sector inventory, DOI and short-interest exhibits.",
+    "event": "AVGO reports after the close on 3 June; the print is expected to meet elevated expectations rather than beat and raise. Same note carries the week's inventory, DOI and short-interest data."
+  },
+  "415822481542548": {
+    "score": 6,
+    "why": "AI revenue modelled at $6.2bn (+19% q/q) in OctQ and $6.7bn (+9%) in JanQ; the bigger inflection is 2H26, when AVGO ships $10bn of racks to Customer #4, which MS identifies as Anthropic via its Google Cloud deal. ASIC revenue to double in FY26 and FY27; PT 41x MW EPS $10.79.",
+    "insight": "Asia channel checks show the TPU supply chain being revised higher. Sharp caveat: 4/5 of AVGO's ASIC customers have TPU ties, so TPU upside partly substitutes other ASIC programmes. Otherwise the standing thesis.",
+    "data": "MS-vs-consensus table with segment and gross-margin detail, risk-reward with bull/bear PTs ($592/$282), MW EPS and DOI drivers table, sector inventory and short-interest exhibits.",
+    "event": "Pre-print for the 11 December FQ4-25 report; otherwise a quiet patch, with the Anthropic–Google Cloud rack deal the news hook and the 2H26 rack shipment the next catalyst."
+  },
+  "812824852411512": {
+    "score": 6,
+    "why": "TPU ramp and Anthropic are incremental AVGO ASIC demand — BofA models ~100%+ YoY AI sales growth in CY26, calls the 38x CY26 PE a justified premium, and flags the bear case that Google licensing TPUs directly would cut AVGO's ASIC TAM.",
+    "insight": "Fresh angle but no proprietary data: the AVGO view rests on TPU/Anthropic project expectations, while the note's quantified work (AI TAM to $1.2tn by 2030, NVDA EPS power $20+) is NVDA-centric.",
+    "data": "AVGO is a comp in Exhibit 1's TAM/EPS-power model; support comes from the PO basis (37x CY26E, 10x-38x historical range) and the stock table ($377.96, $400 PO).",
+    "event": "Written after Google's Gemini 3 launch, Anthropic's Claude Opus 4.5 release and press reports of Google renting TPUs to Meta in 2026 and on-premise deployments in 2027."
+  },
+  "212842881484811": {
+    "score": 9,
+    "why": "Custom ASIC drives the story: UBS models Custom Compute +181% in CY26 with Google TPUs +72% (5x HBM content per unit) plus a new \"Customer #4\" rack program in 2H26 and OpenAI ramping late CY26, lifting FY27 EPS to $13.56.",
+    "insight": "High: channel checks with hyperscale engineers (TPU 30-40% TCO edge), an NVDA IR call-back, CoWoS data showing higher TPU units, and a customer-level build (Google $26.8B, META, OpenAI, ByteDance).",
+    "data": "Ironwood vs Trillium/GB200 spec table, quarterly segment model, FQ4 and FY26-28 estimates vs Street, and a SOTP (41x EV/FCF semis, 33x software) building the $472 target.",
+    "event": "AVGO FQ4 print on 12/11 AMC; preview keyed to Ironwood TPUv7 volume, \"Customer 4\" rack-scale gross margin detail and OpenAI ramp timing."
+  },
+  "184424284452142": {
+    "score": 8,
+    "why": "GS's cost-per-token curve shows Google/Broadcom TPU v7 at ~70% lower cost than v6, at or below Nvidia GB200 NVL72, with Anthropic's $21bn Broadcom orders shipping mid-2026; AI networking upside looks underappreciated after GS's Asia trip.",
+    "insight": "Proprietary: GS's own accelerator cost model (ASP/TDP assumptions per SKU) plus post-Asia checks; AVGO-specific incremental content is estimate revisions (FY26 AI semis +3.3% to $52.1B) and the consensus gap.",
+    "data": "Exhibit 6 shows the GB200 build-up ($0.27 per mn tokens) with capex, rack ASP, utilization and depreciation laid out; AVGO new-vs-old estimate table runs through FY28.",
+    "event": "Published after AWS re:Invent and ahead of late-January hyperscaler earnings; no AVGO print, with recent stock weakness framed as a buying opportunity."
+  },
+  "585555812552214": {
+    "score": 7,
+    "why": "Broadcom's switching/routing backlog has grown above $15B as Tomahawk 6 (102Tbps) starts ramping, and JPM saw 400G-per-lane PAM4 DSP for 1.6T plus Davison co-packaged optics on Tomahawk 6 at OFC.",
+    "insight": "Meetings-derived datapoints from OFC rather than restated consensus: the >$15B backlog, 400G/lane DSP roadmap, AEC reach (5m, optimizing to 6m) and CPO progress are AVGO-specific.",
+    "data": "No AVGO model or exhibit: support is a qualitative product-by-product bullet plus module-maker industry forecasts (80-90M 800G/1.6T units in 2026, 150-160M in 2027).",
+    "event": "Optical Fiber Communication conference in Los Angeles, where JPM met Broadcom, Marvell and MACOM; the Tomahawk 6 upgrade cycle and 1.6T ramp drive the CY26-CY27 setup."
+  },
+  "214884222148151": {
+    "score": 8,
+    "why": "Bullish: AVGO's 2026E TSMC CoWoS allocation of ~95k wafers could exceed 100k if OpenAI's Strawberry and Apple's Baltra ramp; TPUv7p ships more than 2x MediaTek's v7e units at higher ASPs, widening custom-silicon SAM beyond $60-90B by 2027E on ~70-80% ASIC share.",
+    "insight": "Channel checks rather than consensus: customer-by-customer CoWoS wafer model (AVGO/Google 85k to 95k), ASIC award/SOP roadmap across Google, AWS, Meta, OpenAI and Apple, plus MediaTek v7e yield problems.",
+    "data": "Two supply tables — AVGO CoWoS allocation 2023-27E and AI-accelerator shipments; ASIC partner/SOP exhibit; comp table (22.5x C26E EV/EBITDA, 27.1x P/E).",
+    "event": "Hosted ahead of NVDA/AVGO/CRDO/DELL prints; framed by Trump's Middle East tour deals (HUMAIN, G42) offsetting H20 China headwinds."
+  },
+  "415821588115258": {
+    "score": 8,
+    "why": "Bullish: FY26 AI revenue $55-60bn+ (from ~$20bn FY25: $11-12bn Google, $6bn AI networking, $1.5bn Meta, $1bn ByteDance), FY27 above $100bn, 50%+ CAGR; AVGO captures $25-30bn per GW, including OpenAI's 10GW at ~$25bn/GW; EBIT margin 65.8% to 68.2%.",
+    "insight": "Bottom-up AI revenue bridge by customer plus a proprietary $28-35bn/GW NVDA versus $25-30bn/GW AVGO sizing framework; surrounding capex and rating commentary is consensus-adjacent.",
+    "data": "Comp table (28.4x C26E P/E, $115bn C26E revenue), EBIT-margin and payout tables, DC-capex vs. AI-spend charts, custom ASIC pipeline exhibit.",
+    "event": "16 Dec 2025 outlook; live catalysts are OpenAI's 10GW AVGO engagement and projected 50%+ 2026 hyperscaler capex growth."
+  },
+  "814882142255512": {
+    "score": 7,
+    "why": "Bullish: management reaffirmed FY27/FY28 AI revenue of $115bn/$230bn, at least 100% growth and supply-constrained; the $35bn XPV partnership with Blackstone/Apollo can support over 20GW; a 1GW cluster generates ~$30bn revenue against ~$10bn annual opex.",
+    "insight": "Fresh management-sourced datapoints — XPV financing structure, 20GW capacity, frontier vs. open-weight economics (~75% of industry revenue on similar training spend) — not restated consensus.",
+    "data": "Verbatim Hock Tan takeaways; no model or exhibits; PT basis 30x normalized EPS with four listed downside risks.",
+    "event": "Live conference presentation 8 Sep 2026; the debate is whether $115bn FY27 AI revenue is achievable given land, power and shell bottlenecks."
+  },
+  "415558411588228": {
+    "score": 7,
+    "why": "Bullish: AVGO owns the non-NVDA CPO roadmap — Humbolt to Bailly (TH5, 51.2TB/s) to Davisson (TH6, 102.4TB/s) with 3.5x power savings and 40% lower cost per bit; Meta logged 15mn device hours on Bailly with ~2.5mn-hour MTBF versus under 1mn for pluggables.",
+    "insight": "Proprietary bottoms-up optics/networking model ($73bn optics TAM by CY30), but AVGO-specific evidence is third-party (Meta OCP 2025, Besi bonding) rather than ticker channel work.",
+    "data": "Full CPO/OCS supply-chain profiles, TAM builds with ASP and unit tables, AVGO CPO roadmap exhibit, Meta reliability data; PO based on CY27E EPS.",
+    "event": "Primer published 9 Mar 2026 off OFC 2025/OCP 2025 disclosures; no AVGO print or deal — CPO revenue inflection pushed to CY27/28."
+  },
+  "212452855548581": {
+    "score": 4,
+    "why": "Bernstein decomposes the SOX's 66% YTD / 162% YoY move as ~100% earnings, not multiple (SOX P/FE 28x, -2% YTD). AVGO, with the GPU/ASIC group, has seen muted multiple expansion versus earnings and screens at \"mid-teens P/FE on realistic CY27 EPS\" ($17.73 CY27E).",
+    "insight": "Sector-level work is proprietary (return split into EPS versus multiple; memory EPS +386% with multiples -21%, GPU/ASIC +56%/+35%). AVGO itself contributes a table row, a top-pick tag and one valuation line.",
+    "data": "Exhibits 1-9 on SOX returns, 69% YTD NTM EPS growth and sub-segment drivers, plus a full ticker table: AVGO 2026E/2027E EPS $11.38/$17.73 at 37.8x/24.3x. No AVGO model.",
+    "event": "Written after a blowout semis earnings season and a five-week vertical rally in the index; AVGO's own print is not the trigger — a quiet patch for the name."
+  },
+  "415245581284888": {
+    "score": 6,
+    "why": "BofA's build lifts AVGO accelerator sales power from $16.2bn CY25 to $47.2bn CY26E, $89.5bn CY27E and $135.3bn CY28E — implied share up from 8% to 16% of a $1.2Tn CY30 accelerator TAM. Recent Google/Meta frame contracts underwrite FY27 consensus of $110bn AI sales; PO is 26x CY27E P/E.",
+    "insight": "The TAM build (IT spend, $1.7Tn AI DC, HBM content, optics) is proprietary, but AVGO gets only an accelerator-share row plus the frame-contract point — no AVGO estimate change, model or channel check.",
+    "data": "Exhibit 2 tabulates AI DC TAM by component to CY30E; Exhibit 3 gives vendor accelerator sales power (AVGO row); PO basis is 26x CY27E P/E and $60bn net debt.",
+    "event": "Three weeks before the early-June print, written on cloud capex momentum (CY26 +68% YoY) and the Google/Meta frame contracts — a framing note, not an AVGO catalyst."
+  },
+  "412415482585488": {
+    "score": 7,
+    "why": "Samsung-Broadcom MOU covers ~$200bn of memory (including HBM) plus foundry/advanced packaging through 2030 (2nm and below, 2.3D Cube-E/-R, 2.5D Cube-S) for AI/networking silicon, easing supply constraints behind AVGO's $100bn+ AI guide next year. PT is 25x average FY27/28 pro-forma EPS of $22.17.",
+    "insight": "Fresh read: maps Samsung's Cube-E/-R and Cube-S packaging onto TSMC CoWoS-L/-R/-S, flags that whether AVGO's AI ASIC moves to Samsung wafers is still unclear, and argues TSMC's demand queue protects its earnings.",
+    "data": "Two exhibits comparing Samsung and TSMC advanced-packaging variants; consensus memory revenue exhibit ($0.9Tn/$1.3Tn/$1.3Tn CY26-28); ticker table with AVGO 2026E/2027E EPS $11.60/$18.69.",
+    "event": "Korean government AI Summit in San Francisco, 24 July 2026, where Samsung, SK hynix, NVIDIA and Broadcom signed MOUs, following the 7 July SK hynix-NVIDIA LOI."
+  },
+  "812488522258422": {
+    "score": 9,
+    "why": "Bullish, despite the Q2 revenue \"miss\" ($22.187bn, +47.9% y/y): AI revenue grew only 30% in April but reaccelerates to ~200% y/y in July, Q3 guides to $29.4bn versus Street $28.3bn, and FY27 AI is framed \"well above\" $100bn against MSe $118bn.",
+    "insight": "MS-vs-consensus bridges (FY26 EPS $11.59 versus $11.26; sales $105.746bn versus $104.182bn) plus a MediaTek-share sensitivity that keeps AVGO at ≥80% of the ASIC SAM, and options-implied scenario odds (>$637 ~8.2%, <$308 ~33.6%).",
+    "data": "Full income statement, balance sheet and cash-flow models to FY28, quarter variance exhibits, MS-versus-Street tables, and the bull/bear build (31x $20.55 to $637; 20x $15.40 to $308).",
+    "event": "Q2 print night, 4 Jun 2026; stock closed $479.23 on 3 Jun. Triggers: April-quarter AI growth of just 30%, the \"rack-to-chip transition\", and Google's more precise customer-owned-tooling language."
+  },
+  "585421128481424": {
+    "score": 2,
+    "why": "Not an AVGO call: GS says it \"continues to view Broadcom (Buy - on CL) and Nvidia (Buy) as best positioned to outperform computing peers\", while every number in the note (AMD server CPU TAM, 2027 datacenter GPU upside) belongs to AMD. No AVGO estimates, no AVGO thesis.",
+    "insight": "Nothing AVGO-specific: the proprietary work (CPU share model, inference demand forecast) is AMD's, and Broadcom shows up as a comparison row in relative-P/E exhibits.",
+    "data": "AVGO sits in Exhibit 9 (NVDA/AMD/AVGO NTM P/E) and Exhibit 14 (AMD's relative premium), plus the disclosure line \"Broadcom Inc. (Buy, $417.43)\" — a price, not a target.",
+    "event": "AMD's upgrade day, 5 May 2026, driven by agentic-AI server CPU demand. No AVGO print or AVGO event in window; the $417.43 is simply the prior close."
+  },
+  "585552425544844": {
+    "score": 4,
+    "why": "Bullish, thinly: Broadcom's TH6 switch ships this year, the Broadcom/Corning Bailly CPO whitepaper anchors the platform, and Broadcom is among the customers shifting from GlobalFoundries to TSMC's COUPE. Nothing in the note models AVGO or justifies the $475 target.",
+    "insight": "The proprietary work is an Nvidia-chain teardown (Quantum X800-Q3450 BOM ~$70K; OE 44-45%, ELS 13%, MPO 8%, switch chip 17%); Broadcom itself gets no original channel or cost data.",
+    "data": "CPO BOM build-up, a comparison (CPO OE+ELS ≥10% above 1.6T transceivers) and supplier maps — all Nvidia-chain; AVGO's support is qualitative plus the ticker table ($313.84, target $475).",
+    "event": "March-2026 CPO supply-chain deep dive keyed to TSMC's COUPE ramp and Nvidia's X800 CPO switch; Broadcom's own catalyst is the TH6 shipping this year."
+  },
+  "812215841548482": {
+    "score": 5,
+    "why": "Bullish and specific for a sector note: the switching/routing backlog has grown above $15bn as Tomahawk 6 (102Tbps) ramps, and AI revenue that hit $20bn in FY25 (Google TPU, Meta MTIA) should reach $65bn+ in FY26 and \"well in excess of $120B\" in FY27.",
+    "insight": "Channel checks carry the load — HBM sold out for CY26 with CY27 contracting talks, optical module units 40-45M to 80-90M to 150-160M; the AVGO backlog and AI-revenue datapoints sit inside that sector frame.",
+    "data": "AVGO is one row of the comp table (OW, $398.47, C26E EPS $14.78 = 27.0x; JPM 2Q26E EPS $3.60 versus Street $3.20), plus dividend, JPM-versus-consensus and VMware M&A-history lines.",
+    "event": "1Q26 earnings-season preview of 17 Apr 2026: datacenter capex above 70% y/y in 2026 and Nvidia's $1T+ Blackwell/Rubin orders argue AI capex beats the low-teens 2027 Street view."
+  },
+  "585114112555244": {
+    "score": 9,
+    "why": "Buy on AVGO, PT $415. UBS re-models custom compute, lifting CY27E revs/EPS to $132.6B/$13.56 versus Street's $121.3B/$12.88, while CY26E EPS of $10.11 already matches Street — so upside sits in 2027. Customer #4's $10B rack order is not OpenAI.",
+    "insight": "Proprietary model work: hyperscaler ASIC die costs, wafer pricing and turnkey TAM per program (Figures 4-5), plus UBS-vs-Street bridges. Agentic-AI memory and telemetry channel checks from OCP Summit.",
+    "data": "New-vs-old estimate table, quarterly summary model, SOTP at 41x EV/FCF semis and 33x software, hyperscaler ASIC project exhibits, Buy/PT history.",
+    "event": "Written 20 Oct 2025 after OCP Summit and AVGO's 14 Oct PT raise to $415; UBS pre-positions for a Trump-Xi meeting and a possible China compute reopening."
+  },
+  "181544228852442": {
+    "score": 3,
+    "why": "Outperform, PT $575. Bernstein argues an AI \"pacing slowdown\" need not cut spending since inference demand already exceeds compute supply, and names AVGO a preferred play on a 2026 AI trajectory \"set to markedly accelerate into 2027 and 2028.\" No AVGO argument beyond that.",
+    "insight": "Nothing proprietary on AVGO; the news is Amodei's essay and its weekend amplification by Altman, Musk and Nadella. AVGO EPS and P/E figures are tear-sheet consensus, not new work.",
+    "data": "Ticker table with AVGO EPS $6.82/$11.64/$18.63 and P/E 53.1x/31.1x/19.4x at $361.99; one-line investment implication. No model or exhibit on AVGO.",
+    "event": "Published 14 Sep 2026 reacting to the weekend Amodei safety essay — a sector-sentiment piece, not an AVGO event."
+  },
+  "184124515551182": {
+    "score": 4,
+    "why": "Outperform, PT $525. AVGO is bullish only as a preferred name: Bernstein says AVGO and NVDA screen cheap at \"mid-teens P/FE on realistic CY27E EPS\" and that a strong 2025 AI trajectory accelerates into 2026 on software, cash deployment and margins. The arguments are industry-wide.",
+    "insight": "The proprietary work is industry-level WSTS analysis — Q1 revenues $299B, +79% YoY, memory +238% YoY at 46% of sales, industry ASPs +57% — with no AVGO channel data.",
+    "data": "Eleven WSTS exhibits on revenue, units and ASPs; AVGO tearsheet only — EPS $6.82/$11.38/$17.73, P/E 62.8x/37.6x/24.2x at $428.43.",
+    "event": "Quiet patch for AVGO — an interim industry look after Q1-26 WSTS data, published a month before any AVGO print."
+  },
+  "584115845524114": {
+    "score": 3,
+    "why": "Overweight, no PT in the note. AVGO surfaces twice — in the compute list (NVDA, AVGO, AMD, INTC, MRVL) and the networking list (AVGO, MRVL, ALAB) — as a way to play a semis market JPM now models at $1.73T in 2026 and >$2T in 2027. No company argument.",
+    "insight": "Proprietary WSTS monthly parsing — July sales $142B, -10% M/M but +129% YoY, DRAM ASPs +259% YoY — yet nothing on AVGO itself.",
+    "data": "Thirty-four WSTS figures on sales, units, ASPs and seasonality; AVGO has a coverage-list line only, with no estimates or PT.",
+    "event": "Monthly WSTS data drop (July 2026) plus company commentary over the prior 90 days; no AVGO print or event."
+  },
+  "585411124181524": {
+    "score": 7,
+    "why": "Overweight. Bullish on AVGO's ramp — AI revenue $10.8B in 2Q26 (+143% YoY, 49% of total), 2H doubling to ~$56B FY26 and >$100B FY27, bookings >$30B. But JPM reads the absent numerical 2027 upside, plus MediaTek pulling ASIC guidance forward, as a real TPU share concession.",
+    "insight": "Supplies what the company did not: Asia checks identify the two unnamed customers as ByteDance and SoftBank/ARM (~$6B purchase orders) and confirm 3-5 year LTAs on substrates, HBM and CCL.",
+    "data": "Management quotes on Google, Anthropic, OpenAI (late-2026 production) and Meta (1GW MTIA order); non-AI semis $4.2B, +6% YoY, guided ~$4.5B; Tomahawk 6 and a 200Tb switch tape-out.",
+    "event": "Written the day after Broadcom's Apr-Q (2Q26) print, translating it for the Taiwan, Korea and Japan supply chain."
+  },
+  "812451582582452": {
+    "score": 2,
+    "why": "Overweight, no PT. AVGO is named in JPM's top-pick list (OW AVGO, MRVL, MU, KLAC, AMAT, CDNS, SNPS, ALAB, MKSI) and priced at $417.76 in Companies Discussed. Every page of conference takeaways belongs to another company; AVGO gets no thesis, estimate or datapoint.",
+    "insight": "Conference-derived channel colour is rich — KLAC's \"best visibility in a decade\", MU's 5-year DRAM SCA, SNDK's $42B book — but none of it touches AVGO.",
+    "data": "Per-company write-ups quoting management directly; AVGO appears only in the top-picks line and the price/rating list at $417.76.",
+    "event": "JP Morgan's 54th annual TMC conference, 18-20 May 2026, three weeks after the Q1 prints; AVGO's own quarter is not the subject."
+  },
+  "812488522252442": {
+    "score": 2,
+    "why": "Overweight (since 06/09/2024, no PT in this note). AVGO is bullish only as context: MS values NVDA at ~22x CY27 EPS, \"in-line with the broader market and a discount to compute semis peers (AMD/AVGO/INTC)\". The whole note is Nvidia's Computex keynote, Vera CPU and RTX Spark.",
+    "insight": "Useful NVDA insights — 85% GPU share, a $20B standalone CPU guide, and why ASICs may outgrow GPUs — none of which is AVGO analysis.",
+    "data": "NVDA bull/base/bear of $330/$288/$160 with a full risk-reward build; AVGO's only numbers are the $481.57 price and a 2024-vintage Overweight rating.",
+    "event": "Filed 3 Jun 2026 immediately after NVIDIA's Computex keynote and Taiwan analyst Q&A; a quiet patch for AVGO."
+  },
+  "585552248512424": {
+    "score": 2,
+    "why": "No rating or PT is stated. The deck compiles dated AVGO headlines and TipRanks/Forbes items — Jefferies' Curtis on Alphabet and Broadcom, Mizuho's Jordan Klein on AVGO, a 19 Feb Forbes piece on AVGO questions and a 26 Feb Forbes piece — but the Chinese text is garbled and no stance survives.",
+    "insight": "Pure aggregation, sourced from TipRanks, Forbes and CNBC headlines dated 5-28 Feb 2026. No proprietary data, and no analyst argument is recoverable from the OCR damage.",
+    "data": "A dated headline index and source list (TipRanks, Forbes, CNBC); page 13 also references a VMware/OpenAI link. No model, exhibits or estimates.",
+    "event": "Written 3 Mar 2026, two days before Broadcom's Jan-Q print — a preview/round-up rather than a post-print call."
+  },
+  "585544852854554": {
+    "score": 6,
+    "why": "Bullish on AVGO's ASIC franchise via supply chain: JPM lifts Broadcom CoWoS consumption to 250K wafers in 2026 and 400K in 2027, with TPU shipments of 4.3M/6.9M units (Sunfish/Pumafish), plus Meta MTIA returning to Broadcom. MediaTek's lower-cost TPUv8x/Zebrafish is the competitive watch item.",
+    "insight": "Channel checks, not consensus restatement: revised Broadcom CoWoS wafer allocation, TPU v7/v8ax unit forecasts, MediaTek split for v8x, and TPUv9 Pumafish (Broadcom 3D SoIC) versus Humufish (MediaTek/Intel EMIB).",
+    "data": "CoWoS allocation table by customer 2023-27E, TPU unit build table, advanced back-end supply-chain map naming Broadcom sockets (Ironwood, Sunfish, Pumafish, MTIA Arke/Phoebe, OpenAI Titan, Tomahawk 6).",
+    "event": "Post-1Q26 pre-print packaging update; trigger is the upward CoWoS/SoIC capacity revision and TPU order visibility. No AVGO print or deal of its own."
+  },
+  "415552884525188": {
+    "score": 6,
+    "why": "Bullish: OP with $525 PT (29.6x 2027E EPS $17.73). Calls AVGO's $100B AI revenue guide extremely conservative, sees \"real\" CY27 EPS of $20+ and thus ~15x or less, with software, cash deployment and superb margins/FCF as the 2026 accelerants.",
+    "insight": "Mostly own-model work, no AVGO channel check; the fresh content is the cycle framing ($100B is conservative) and the EPS path (11.38 in 2026E, 17.73 in 2027E) versus peers.",
+    "data": "Full AVGO income statement, balance sheet and cash flow exhibits through 2028E (revenue $102,981M / $154,651M / $196,988M), ticker table with PT, relative performance and Q4 beat/miss table.",
+    "event": "Quarterly cycle check after a Q4 where AVGO beat revenue by 0.3% and guided the next quarter +5.2%; AI trade stalling even as estimates moved up."
+  },
+  "212218144282451": {
+    "score": 4,
+    "why": "Constructive but not AVGO-specific: faster hyperscaler capex (CY26 +63%, CY27 +40%) plus a mix shift toward custom ASICs supports AVGO's $100B+ FY27 AI revenue and its XPU pipeline (Google/Anthropic TPU, Meta MTIA, OpenAI). AVGO is listed among top AI picks.",
+    "insight": "Thin on AVGO: restates Broadcom's own $100B+ FY27 disclosure and adds JPM/650 Group capex forecasts and installed-power data; no AVGO channel check or estimate revision.",
+    "data": "Three capex exhibits (top-4 CSPs, tier-2 CSPs/neoclouds, North America installed capacity); covered-companies list showing AVGO $422.76 / Overweight; no AVGO model or PT.",
+    "event": "Trigger is the IT Hardware team's raised CY26 and initial CY27 capex outlook; quiet patch for AVGO itself between its FQ1 print and the next catalyst."
+  },
+  "212485214424151": {
+    "score": 6,
+    "why": "Bullish on share defence: MS expects AVGO to hold 80%+ of its ASIC customers, consistent with MediaTek's stated 15-20% long-term target; MediaTek buying HBM outside AVGO's contracts costs more, so the 80/20 split feels right near term.",
+    "insight": "Meeting-based and genuinely fresh: supply-chain contacts see a strong TPU ramp and no readiness for majority MediaTek share before 2028, and supply-chain HBM pricing versus AVGO's contract prices is a new angle.",
+    "data": "No AVGO model; valuation line only (28x CY27e ModelWare EPS $17.33), explicit AVGO upside/downside risk list, and MS's own internal team disagreement on MediaTek share.",
+    "event": "Meetings at and adjacent to MS's Taiwan AI summit just before publication; no AVGO print or deal — AVGO's own \"significant majority share\" guidance is the anchor."
+  },
+  "212458845284481": {
+    "score": 3,
+    "why": "Mild relative bullishness: UBS prefers AVGO over GFS as the networking beneficiary with less smartphone baggage, and reads GFS's positive networking tone across to AVGO/MRVL/SMTC — but explicitly calls it \"not really incremental\", so nothing new on AVGO.",
+    "insight": "No AVGO data. The networking read-across is flagged as already known, and GFS's SiGe/CPO and advanced-packaging commentary accrues to the ecosystem rather than being quantified for AVGO.",
+    "data": "AVGO appears in the valuation/risk boilerplate (EV/FCF; M&A and dividend-yield risk) and in the disclosure price table (Buy, $427.36, 5 May 2026).",
+    "event": "GFS 1Q26 results ahead and its Thursday analyst day; the AVGO mention is a relative-preference aside with no AVGO-specific catalyst."
+  },
+  "812224852525182": {
+    "score": 7,
+    "why": "Bullish on AVGO networking/optics: Tomahawk 6 in full production volume, the first Taurus 400G/lane DSP already shipped (2x radix at 1.6T), CPO through reliability testing, 50M lasers a year from internal fabs, and AVGO's view that optical scale-up crosses over below 10pJ/bit in 2028.",
+    "insight": "Booth tour with AVGO IR and an optical-systems VP: fresh production and shipment datapoints, socketed-CPO signal-integrity limits, and AVGO's 10pJ/bit crossover versus the 5pJ/bit industry view.",
+    "data": "No AVGO model; product detail (Davisson TH6-based CPO switch, interoperable NPO, OCI MSA, 6m AECs, PCIe switch) plus the AVGO PT history (Buy, $475 as of 15 Dec 2025).",
+    "event": "OFC 2026 during GTC week, where AVGO announced TH6 volume production and the first 400G/lane DSP shipment — a product-cycle event, not a financial print."
+  },
+  "585548242148184": {
+    "score": 6,
+    "why": "Bullish on AVGO's ASIC franchise via supply chain: JPM lifts Broadcom CoWoS consumption to 250K wafers in 2026 and 400K in 2027, with TPU shipments of 4.3M/6.9M units (Sunfish/Pumafish), plus Meta MTIA returning to Broadcom. MediaTek's lower-cost TPUv8x/Zebrafish is the competitive watch item.",
+    "insight": "Channel checks, not consensus restatement: revised Broadcom CoWoS wafer allocation, TPU v7/v8ax unit forecasts, MediaTek split for v8x, and TPUv9 Pumafish (Broadcom 3D SoIC) versus Humufish (MediaTek/Intel EMIB).",
+    "data": "CoWoS allocation table by customer 2023-27E, TPU unit build table, advanced back-end supply-chain map naming Broadcom sockets (Ironwood, Sunfish, Pumafish, MTIA Arke/Phoebe, OpenAI Titan, Tomahawk 6).",
+    "event": "Earlier-dated twin of the 9 April note (pre-correction text; shipped 08 Apr 10:25pm HKT); same packaging-capacity and TPU order-visibility trigger, no AVGO-specific event."
+  },
+  "184482518211182": {
+    "score": 1,
+    "why": "Bullish by association only. AVGO is named with NVDA and ALAB as the compute/networking exposure MS prefers as trailing-edge capacity tightens and memory costs inflate. No AVGO estimate, target or mechanism of its own appears.",
+    "insight": "Proprietary inventory work: customer, distributor and producer DOIs, auto-OEM lean-out, April price hikes. AVGO contributes nothing — it is a name in the recommendation string.",
+    "data": "Ten-plus DOI exhibits and q/q, y/y inventory-change tables; coverage page shows AVGO Overweight since 06/09/2024 at $396.72, no target.",
+    "event": "Post-4Q reporting inventory update with broadening price hikes; no AVGO print, deal or regulatory trigger in the window."
+  },
+  "584242452855154": {
+    "score": 4,
+    "why": "Constructive: OW with bear/base/bull $308/$502/$637, base upside +39%, MS CY26e EPS $13.68 vs Street $12.89. The core call cuts the other way, though — sublettable GPU compute favours NVIDIA ubiquity because \"ASIC capacity is much harder to sublet\".",
+    "insight": "Genuine industry work (SIA monthly variance, Meta cloud checks, DRAM/NAND vs MS estimates); the AVGO content is exhibit-level MS numbers rather than fresh AVGO-specific research.",
+    "data": "Risk-reward table, MS vs Street EPS/revenue table, 2025-27 revenue and EPS CAGR charts, market-share table; no AVGO model or management quotes.",
+    "event": "May SIA release plus Bloomberg's Meta cloud-unit report that pressured semis; no AVGO catalyst — quiet patch."
+  },
+  "412424414544448": {
+    "score": 1,
+    "why": "Bullish by association only. AVGO is grouped with NVDA and CBRS as the compute/networking exposure MS favours where supply/demand is tightening, versus memory and semicap. No AVGO-specific number or argument is offered.",
+    "insight": "Real channel work on distributor lean-out and producer builds, but restated consensus for the compute group; AVGO itself is a name, not a datapoint.",
+    "data": "Stacked-DOI and inventory-change exhibits; coverage table lists AVGO Overweight (06/09/2024) with price but no target.",
+    "event": "Post-1Q inventory refresh with tightening supply but no restocking; nothing AVGO-specific — quiet patch."
+  },
+  "184484414482182": {
+    "score": 5,
+    "why": "Bullish relative call: buy NVDA or AVGO \"at likely cheaper real valuations with numbers going up instead of down\". QCOM is \"a very late entry to the ASIC / AI space (get in line behind NVDA, AVGO, AMD, MRVL, Cerebras, Arm...)\". $525 = ~30x FY2027 pro-forma EPS $17.73.",
+    "insight": "Largely restated: QCOM model refresh plus the late-entrant ASIC barrier thesis are house views; the AVGO lines are the standard valuation-block reiteration, not new work.",
+    "data": "QCOM exhibits 1-14 and itemized FY26-28 estimate changes; AVGO has one target sentence (30x $17.73) and a risk bullet list.",
+    "event": "QCOM's FQ226 print with a very weak FQ326 guide and a hyperscaler ASIC disclosure ahead of the June analyst day; AVGO's own catalysts are absent."
+  },
+  "814518551225542": {
+    "score": 5,
+    "why": "Bullish: \"the best value in the market comes from the compute names, notably NVDA and AVGO\", with memory merely catching up. AVGO is valued at 28x CY2027e ModelWare EPS $17.92, roughly 26x non-GAAP EPS of $19.59, in-line or below the AI peer group.",
+    "insight": "Strong on memory — data-centre purchasing checks, 3q prices up 25%+, LTA structure, NVIDIA LPDDR5 de-speccing. AVGO adds no new datapoint of its own.",
+    "data": "Memory risk-reward pages, MS-vs-consensus tables, DRAM spot versus Micron EV/S chart; AVGO gets only the valuation-methodology block and risk bullets.",
+    "event": "July selloff in US memory stocks and Micron's price-ceiling comment; AVGO itself is silent — no print, deal or regulatory news."
+  },
+  "585581844515444": {
+    "score": 3,
+    "why": "Constructive but second choice: \"stay OW on NVIDIA, Broadcom and Mediatek, with a preference for NVDA despite rising ASIC enthusiasm\", on NVIDIA's industry-highest cloud ROI as Vera Rubin ramps in 2H26. No AVGO estimate, mechanism or valuation is given.",
+    "insight": "Deck-level supply-chain work (HBM TAM build, total ASIC volume 5.8mn units in 2026e, +15%, ABF undersupply from 2027); AVGO benefits only as an unnamed ASIC supplier.",
+    "data": "HBM/ASIC/ABF model slides and sector pick tables; no AVGO exhibit, estimate line or management quote anywhere.",
+    "event": "2026 outlook framing (strong 1H, demand-destruction risk into 2H26); no AVGO catalyst — quiet patch."
+  },
+  "212451114448851": {
+    "score": 3,
+    "why": "Bullish in the table, cautious in the argument: HSBC limits Marvell to 50% of the 1.6T DSP market because \"competition will intensify with the availability of Broadcom's 800G and 1.6T DSP solutions\". AVGO is the share constraint, not the call — no AVGO estimate, mechanism or valuation is offered.",
+    "insight": "Proprietary on Marvell only: optical DSP share splits, CXL and ASIC content, FY27/28 EPS $4.07/$7.12. The AVGO datapoint is a competitive assumption inside the Marvell model, not AVGO research.",
+    "data": "Marvell segment models and share exhibits; AVGO gets one line in Exhibit 10, companies mentioned (CMP $414.14, TP $450.00, Buy, priced 22 May 2026).",
+    "event": "Marvell pre-print upgrade two days before its results, framed on the AI-networking super-cycle; no AVGO print, deal or regulatory trigger."
+  },
+  "812212581148252": {
+    "score": 4,
+    "why": "Constructive as a benchmark: AVGO returned an average 92% of FCF in CY22–25 versus NVIDIA's 47%, with PEG 0.35x against 0.36x — the cash-return standard NVIDIA is asked to match. AVGO is also a stated risk: \"rising competition from merchant (AMD) and ASIC (AVGO, Google, AWS) chips\".",
+    "insight": "Proprietary ownership and FCF-return series: dividend yield 0.62% with 47% of equity-income funds holding AVGO, second only to Microsoft. The AVGO lines are screen outputs, not AVGO work.",
+    "data": "Peer comp table (33.3x/22.2x CY26/27E PE, EV/FCF 36.3x/23.5x, 58.4% sales and 63.4% EPS CAGR), equity-income ownership table, FCF-return table; no AVGO model.",
+    "event": "NVIDIA earnings preview centred on capital-return policy; AVGO sits in the comparison set with no catalyst of its own."
+  },
+  "412418114448428": {
+    "score": 2,
+    "why": "Bullish by name-drop only. Alphabet's raised FY26 capex of $195–205bn, $15bn higher at the midpoint, with FY27 to \"increase significantly\", is read as positive \"specifically for CLS, AVGO, and NVDA in our coverage\". No sizing, mechanism or valuation for AVGO.",
+    "insight": "Restated sector framing — sell-off versus unchanged estimates, semicap versus semis. AVGO contributes nothing beyond appearing in the capex-spend list.",
+    "data": "None on AVGO: no exhibit, model or management quote. Only the companies-mentioned line (AVGO.O, US$392.47, rating 1, 23 Jul 26) plus the standard disclosure block.",
+    "event": "Post-sell-off sector check around the late-July hyperscaler capex updates; no AVGO event."
+  },
+  "814511485214442": {
+    "score": 4,
+    "why": "Constructive: Overweight with bear/base/bull $308/$502/$637 against $427.76, +17% to base, grouped with NVDA and CBRS as the leading-edge logic preference. The house view is slightly below consensus on AVGO — CY27e EPS $19.59 versus Street $20.64.",
+    "insight": "Real industry work on Quantum, Cerebras and Analog Devices results plus the June SIA print; the AVGO content is exhibit-level MS-versus-Street comparison rather than fresh AVGO research.",
+    "data": "Risk-reward table, MS vs Street screen (revenue $180,289m vs $184,695m), 2025–27e revenue and EPS CAGR charts at 62% and 64%, short interest 1.4% of float; no AVGO model.",
+    "event": "Week-4 earnings wrap and the June SIA release; no AVGO print, deal or regulatory trigger."
+  },
+  "212215882582251": {
+    "score": 3,
+    "why": "Constructive but impersonal: AVGO scores 0.50 in the AI-Exposed Semis theme — regime 0.81, earnings 0.40, valuations 0.36, sentiment 0.31 — with 7.8% one-month earnings revisions and crowding rank 26. The signal is the theme, not the company.",
+    "insight": "Proprietary quantamental REVS framework — machine-read EPS versus consensus, CTA momentum, crowding — applied to a theme basket. There is no AVGO-specific analysis, estimate change or thesis.",
+    "data": "One screen table (market cap $1,764bn, factor scores) and the disclosure line AVGO.O Buy, US$380.78, 14 Apr 2026. No AVGO exhibit, model or quote.",
+    "event": "Strategy-level thematic refresh on AI chips and memory; no AVGO catalyst — quiet patch."
+  },
+  "814885581242252": {
+    "score": 3,
+    "why": "Valuationally supportive by comparison: the MRVL target goes to $224 on a 45x CY27 multiple, but Marvell \"still trades at more than 2x the multiple of AVGO and NVDA\", making AVGO the cheaper ASIC expression. MS stays just below consensus, CY27e EPS $19.59 versus Street $20.68.",
+    "insight": "Genuine Marvell work — Maia and Google TPU attach, a shift to more singles-and-doubles ASIC programmes, the April-quarter model. AVGO receives no research of its own, only the comparative multiple line.",
+    "data": "Exhibit-level only: MS vs Street screen (revenue $180,289m vs $185,581m), 2025–27e revenue and EPS CAGR of 62% and 64%, short interest 1.3% of float at 21 Aug; no AVGO risk-reward or target.",
+    "event": "Marvell pre-earnings preview week with an investor day flagged; nothing AVGO-specific — quiet patch."
+  },
+  "415554221241418": {
+    "score": 3,
+    "why": "Bullish by list entry: Broadcom sits among UBS's most preferred names, analyst Timothy Arcuri, Buy at US$332.77 with a US$475 target, and is named with ASE, Hon Hai, MediaTek, Micron, Samsung and TSMC as the supply-chain exposure to own. No AVGO mechanism is given.",
+    "insight": "Deep handset channel work — China base effect, flat non-China units, memory-shortage downside to handset builds, Apple and Samsung insulation — none of which touches AVGO's AI or infrastructure drivers.",
+    "data": "Handset unit and sell-through exhibits; AVGO gets the most-preferred row plus valuation columns (26E P/E 26.2x, 27E 15.0x, 26E/27E P/BV 15.58/9.28, priced 5 Mar 2026).",
+    "event": "January smartphone sell-through print against a memory shortage; no AVGO event — quiet patch."
   }
 }
