@@ -1336,7 +1336,12 @@
       button.className = `report-chip${report.id === activeId ? " active" : ""}`;
       button.dataset.id = report.id;
       const reportNumber = reports.findIndex(item => item.id === report.id) + 1;
-      button.innerHTML = `<time>${reportNumber}. ${report.date}</time><b>${report.bank}</b><span>${report.label}</span>`;
+      const target = targetValue(report);
+      const detail = target !== null
+        ? money(target, report.targetCurrency || currencyLabel(report))
+        : (report.label || report.rating || "");
+      button.title = `${report.rating}${target !== null ? ` · target ${money(target, report.targetCurrency || currencyLabel(report))}` : ""}`;
+      button.innerHTML = `<time>${reportNumber}. ${report.date}</time><b>${report.bank}</b><span>${detail}</span>`;
       button.addEventListener("mouseenter", () => setActive(report.id));
       button.addEventListener("focus", () => setActive(report.id));
       button.addEventListener("click", () => setActive(report.id));
