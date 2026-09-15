@@ -1096,6 +1096,7 @@
   const chartWrap = document.querySelector(".chart-wrap");
   const markerLayer = document.getElementById("markerLayer");
   const timelineStrip = document.getElementById("timelineStrip");
+  const chipElements = [];  // tiles in chronological order, whatever the strip shows
   const card = document.getElementById("reportCard");
   const zoomButtons = document.querySelectorAll("[data-zoom]");
   const modeButtons = document.querySelectorAll("[data-mode]");
@@ -1676,6 +1677,7 @@
   function renderChips() {
     if (!timelineStrip) return;
     timelineStrip.innerHTML = "";
+    chipElements.length = 0;
     reports.forEach(report => {
       const button = document.createElement("button");
       button.type = "button";
@@ -1701,8 +1703,22 @@
         setActive(report.id);
         revealCard();
       });
+      chipElements.push(button);
       timelineStrip.appendChild(button);
     });
+    orderChips();
+  }
+
+  /* Newest report first on the stacked layout, where the strip is read on its
+     own below the panel; the wide layout keeps the chronological order so the
+     strip still reads along with the chart's left-to-right time axis. The tiles
+     keep their report numbers either way, so a number always points at the same
+     circle on the chart. */
+  function orderChips() {
+    if (!timelineStrip) return;
+    const ordered = stackedLayout.matches ? chipElements.slice().reverse() : chipElements;
+    // appendChild moves an existing node, so the tiles are re-ordered in place
+    ordered.forEach(button => timelineStrip.appendChild(button));
   }
 
   const anyDigest = reports.some(report => report.digest && Number.isFinite(Number(report.digest.score)));
@@ -1731,6 +1747,11 @@
       block: "start",
     });
   }
+
+  // rotating a pad or dragging the window across the breakpoint swaps the
+  // strip's reading order with it
+  if (stackedLayout.addEventListener) stackedLayout.addEventListener("change", orderChips);
+  else stackedLayout.addListener(orderChips);  // older Safari
 
   function renderDigest(report) {
     const box = document.getElementById("cardScore");
