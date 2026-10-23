@@ -37,7 +37,8 @@ from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     clean_zsxq_text, do_download, extract_bank, fetch_all_files,
     fetch_all_search_results, fetch_all_search_topic_files, sanitize_filename,
-    get_session_via_selenium, init_db, upsert_entry, ZsxqAuthError,
+    get_session_via_selenium, init_db, is_chinese_filename, upsert_entry,
+    ZsxqAuthError,
 )
 
 GROUP_ALIASES = {
@@ -86,18 +87,18 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
     if skipped_non_pdf:
         print(f"Skipped {skipped_non_pdf} PPTX/XLSX file(s).")
 
-    # Skip Chinese-translation copies (中文版), CHS_ prefixed, and 三个皮匠报告 files
+    # Skip Chinese-content files (predicted from the filename — see
+    # is_chinese_filename), plus 三个皮匠报告 / 景略咨询 files
     before_cn = len(pdf_entries)
     pdf_entries = [
         e for e in pdf_entries
-        if not e["file"]["name"].startswith("中文版")
-        and not e["file"]["name"].startswith("CHS_")
+        if not is_chinese_filename(e["file"]["name"])
         and "三个皮匠报告" not in e["file"]["name"]
         and "景略咨询" not in e["file"]["name"]
     ]
     skipped_cn = before_cn - len(pdf_entries)
     if skipped_cn:
-        print(f"Skipped {skipped_cn} 中文版/CHS_/三个皮匠报告/景略咨询 file(s).")
+        print(f"Skipped {skipped_cn} Chinese-content (by filename)/三个皮匠报告/景略咨询 file(s).")
 
     # Skip topics with more than 3 files (one-for-one / paid packs),
     # except topics tagged #外资研报 which routinely bundle a day's notes.
@@ -267,14 +268,13 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
     before_cn = len(pdf_entries)
     pdf_entries = [
         e for e in pdf_entries
-        if not e["file"]["name"].startswith("中文版")
-        and not e["file"]["name"].startswith("CHS_")
+        if not is_chinese_filename(e["file"]["name"])
         and "三个皮匠报告" not in e["file"]["name"]
         and "景略咨询" not in e["file"]["name"]
     ]
     skipped_cn = before_cn - len(pdf_entries)
     if skipped_cn:
-        print(f"Skipped {skipped_cn} 中文版/CHS_/三个皮匠报告/景略咨询 file(s).")
+        print(f"Skipped {skipped_cn} Chinese-content (by filename)/三个皮匠报告/景略咨询 file(s).")
 
     topic_file_counts = Counter(
         (e.get("topic") or {}).get("topic_id") for e in entries
