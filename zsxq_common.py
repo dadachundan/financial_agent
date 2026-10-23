@@ -792,3 +792,16 @@ def set_claude_rating(conn: sqlite3.Connection, file_id: int, rating: int | None
     )
     conn.commit()
     return cur.rowcount
+
+
+def delete_entries(conn: sqlite3.Connection, file_ids: list[int]) -> int:
+    """Remove pdf_files rows (and their pdf_cards) for ``file_ids``. This is the
+    sanctioned delete path for the library — callers must go through here rather
+    than raw SQL. The pdf_files_fts_ad trigger keeps the FTS index in sync. Does
+    NOT touch files on disk or the user's inline comments in notes.db; back up
+    the DB before calling. Returns the number of pdf_files rows deleted."""
+    ids = [(int(f),) for f in file_ids]
+    conn.executemany("DELETE FROM pdf_cards WHERE file_id = ?", ids)
+    cur = conn.executemany("DELETE FROM pdf_files WHERE file_id = ?", ids)
+    conn.commit()
+    return cur.rowcount
