@@ -205,7 +205,7 @@ __URLPATCH__
               onchange="applyGroupId(this.value)">
         <option value="">All groups</option>
         {% for g in all_group_ids %}
-        <option value="{{ g }}" {{ 'selected' if g == current_group_id else '' }}>{{ g }}</option>
+        <option value="{{ g }}" {{ 'selected' if g == current_group_id else '' }}>{{ group_labels[g] }}</option>
         {% endfor %}
       </select>
       {% if current_group_id %}
@@ -1008,6 +1008,25 @@ def _get_all_tickers(conn: sqlite3.Connection) -> list[str]:
             if t:
                 seen.add(t)
     return sorted(seen)
+
+
+# Human-readable 知识星球 names for the group filter. Keyed by the numeric
+# group_id stored on pdf_files.group_id. Fetched from the zsxq API
+# (GET /v2/groups/<id> → resp_data.group.name); any id not listed here falls
+# back to showing the raw id in the dropdown.
+GROUP_NAMES: dict[str, str] = {
+    "51111812185184": "Economic 国际投行研报",
+    "28888824254221": "达哥行业报告库 | Semi 投行研报",
+    "51288148188224": "猫哥的研报圈",
+    # 51115212285814 — user is no longer a member; API returns no name.
+}
+
+
+def _group_label(group_id: str) -> str:
+    """Dropdown label for a group: '<name> (<id>)' when the name is known,
+    otherwise the raw id."""
+    name = GROUP_NAMES.get(group_id)
+    return f"{name} ({group_id})" if name else group_id
 
 
 def _get_all_group_ids(conn: sqlite3.Connection) -> list[str]:
@@ -1894,6 +1913,7 @@ def index():
         all_tickers=all_tickers,
         all_tags=all_tags,
         all_group_ids=all_group_ids,
+        group_labels={g: _group_label(g) for g in all_group_ids},
         all_banks=all_banks,
         current_bank=bank,
         current_min_pages=min_pages,

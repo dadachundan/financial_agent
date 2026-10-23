@@ -44,6 +44,7 @@ from zsxq_common import (
 GROUP_ALIASES = {
     "1": "51111812185184",
     "2": "28888824254221",
+    "3": "51288148188224",
 }
 ALL_GROUP_IDS = list(GROUP_ALIASES.values())
 
@@ -397,7 +398,8 @@ def main() -> None:
     parser.add_argument("--group-id",       default=None,
                         help="Full group ID. If omitted, both groups are downloaded.")
     parser.add_argument("--group",          default=None, metavar="N",
-                        help="Group shorthand: 1=51111812185184, 2=28888824254221")
+                        help="Group shorthand: 1=51111812185184, 2=28888824254221, "
+                             "3=51288148188224")
     parser.add_argument("--count",          type=int,   default=10,
                         help="Max files to fetch per group / search (0 = unlimited)")
     parser.add_argument("--from-date",      default=None, metavar="YYYY-MM-DD",
