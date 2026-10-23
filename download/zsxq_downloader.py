@@ -46,6 +46,15 @@ GROUP_ALIASES = {
     "2": "28888824254221",
     "3": "51288148188224",
 }
+
+# Groups that are EXEMPT from the ">3 files per topic" skip rule. Most groups
+# post paid/one-for-one packs as big multi-file topics we want to skip, but
+# 猫哥的研报圈 (51288148188224) legitimately bundles a whole day's broker notes
+# (often 8-9 PDFs) into a single post — so for this group we download every
+# attachment regardless of how many files the topic carries.
+BULK_EXEMPT_GROUPS = {
+    "51288148188224",  # 猫哥的研报圈
+}
 ALL_GROUP_IDS = list(GROUP_ALIASES.values())
 
 
@@ -114,17 +123,20 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
             ((e.get("topic") or {}).get("talk") or {}).get("text") or ""
         )
     }
-    before_bulk = len(pdf_entries)
-    pdf_entries = [
-        e for e in pdf_entries
-        if (tid := (e.get("topic") or {}).get("topic_id")) is None
-        or topic_file_counts[tid] <= 3
-        or tid in exempt_topic_ids
-    ]
-    skipped_bulk = before_bulk - len(pdf_entries)
-    if skipped_bulk:
-        print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments "
-              f"(#外资研报 exempt).")
+    if group_id in BULK_EXEMPT_GROUPS:
+        print("Group is exempt from the >3-attachments skip rule; keeping all files.")
+    else:
+        before_bulk = len(pdf_entries)
+        pdf_entries = [
+            e for e in pdf_entries
+            if (tid := (e.get("topic") or {}).get("topic_id")) is None
+            or topic_file_counts[tid] <= 3
+            or tid in exempt_topic_ids
+        ]
+        skipped_bulk = before_bulk - len(pdf_entries)
+        if skipped_bulk:
+            print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments "
+                  f"(#外资研报 exempt).")
 
     # Apply to_date upper bound
     if to_date:
