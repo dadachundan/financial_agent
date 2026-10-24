@@ -22,8 +22,7 @@ Usage
     python zsxq_downloader.py --from-date 2025-01-01 --to-date 2025-03-31
     python zsxq_downloader.py --from-date 2025-06-01              # since a date, default --count 10
     python zsxq_downloader.py --from-date 2025-06-01 --count 0   # since a date, no limit
-    python zsxq_downloader.py --query qcom                        # search all groups for "qcom"
-    python zsxq_downloader.py --query qcom --count 50            # search, up to 50 results
+    python zsxq_downloader.py --query qcom                        # search all groups for "qcom" (all results, all file types; --count ignored)
 """
 import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
 
@@ -247,13 +246,15 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
 
     # 1) Files search
     print(f"\n[1/2] Files search…")
-    file_entries = fetch_all_search_results(session, query, max_files=args.count)
+    # --query mode ignores --count and the file-type filter: every matching
+    # attachment (PDF, PPTX, XLSX, DOCX, ...) from every result is downloaded.
+    file_entries = fetch_all_search_results(session, query, max_files=0)
 
     # 2) Topics search — pulls all attachments from matching posts
     print(f"\n[2/2] Topics search…")
     topic_entries = fetch_all_search_topic_files(
         session, query,
-        max_topics=args.count or 0,
+        max_topics=0,
     )
 
     # Merge: files-search results take priority (more metadata); add topic-only extras
@@ -267,16 +268,8 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
     entries = list(seen.values())
     print(f"\nCombined: {len(file_entries)} (files) + {added_from_topics} new from topics "
           f"= {len(entries)} unique files.")
-    if args.count and len(entries) > args.count:
-        entries = entries[:args.count]
-        print(f"Capped at {args.count} (--count limit).")
 
-    pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
-
-    skipped_non_pdf = sum(1 for e in entries
-                          if e["file"]["name"].lower().endswith((".pptx", ".xlsx")))
-    if skipped_non_pdf:
-        print(f"Skipped {skipped_non_pdf} PPTX/XLSX file(s).")
+    pdf_entries = list(entries)
 
     before_cn = len(pdf_entries)
     pdf_entries = [
@@ -312,7 +305,7 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
         print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments "
               f"(#外资研报 exempt).")
 
-    print(f"Found {len(pdf_entries)} PDF(s) matching {query!r}.\n")
+    print(f"Found {len(pdf_entries)} file(s) matching {query!r}.\n")
 
     results: list[dict] = []
     now = datetime.now().isoformat()
@@ -413,7 +406,7 @@ def main() -> None:
                         help="Group shorthand: 1=51111812185184, 2=28888824254221, "
                              "3=51288148188224")
     parser.add_argument("--count",          type=int,   default=10,
-                        help="Max files to fetch per group / search (0 = unlimited)")
+                        help="Max files to fetch per group (0 = unlimited). Ignored with --query.")
     parser.add_argument("--from-date",      default=None, metavar="YYYY-MM-DD",
                         help="Only process files published on or after this date")
     parser.add_argument("--to-date",        default=None, metavar="YYYY-MM-DD",
