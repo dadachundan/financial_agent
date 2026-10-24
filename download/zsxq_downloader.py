@@ -22,7 +22,8 @@ Usage
     python zsxq_downloader.py --from-date 2025-01-01 --to-date 2025-03-31
     python zsxq_downloader.py --from-date 2025-06-01              # since a date, default --count 10
     python zsxq_downloader.py --from-date 2025-06-01 --count 0   # since a date, no limit
-    python zsxq_downloader.py --query qcom                        # search all groups for "qcom" (all results, all file types; --count ignored)
+    python zsxq_downloader.py --query qcom                        # search all groups for "qcom" (up to 100 PDFs)
+    python zsxq_downloader.py --query qcom --count 0             # search, every matching PDF
 """
 import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.parent))
 
@@ -68,7 +69,7 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
     """Fetch and download PDFs for a single group. Returns results list."""
     from collections import Counter
 
-    fetch_max = args.count
+    fetch_max = 10 if args.count is None else args.count
     if from_date or to_date:
         date_desc = (
             f"between {from_date} and {to_date}" if (from_date and to_date)
@@ -246,8 +247,9 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
 
     # 1) Files search
     print(f"\n[1/2] Files search…")
-    # --query mode ignores --count and the file-type filter: every matching
-    # attachment (PDF, PPTX, XLSX, DOCX, ...) from every result is downloaded.
+    # Fetch every search hit; --count (default 100) is applied only after the
+    # PDF / Chinese-filename / bulk-topic filters below, so it counts PDFs
+    # that will actually be downloaded rather than raw hits.
     file_entries = fetch_all_search_results(session, query, max_files=0)
 
     # 2) Topics search — pulls all attachments from matching posts
@@ -269,7 +271,10 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
     print(f"\nCombined: {len(file_entries)} (files) + {added_from_topics} new from topics "
           f"= {len(entries)} unique files.")
 
-    pdf_entries = list(entries)
+    pdf_entries = [e for e in entries if e["file"]["name"].lower().endswith(".pdf")]
+    skipped_non_pdf = len(entries) - len(pdf_entries)
+    if skipped_non_pdf:
+        print(f"Skipped {skipped_non_pdf} non-PDF file(s).")
 
     before_cn = len(pdf_entries)
     pdf_entries = [
@@ -305,7 +310,12 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
         print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments "
               f"(#外资研报 exempt).")
 
-    print(f"Found {len(pdf_entries)} file(s) matching {query!r}.\n")
+    cap = 100 if args.count is None else args.count
+    if cap and len(pdf_entries) > cap:
+        print(f"Capped {len(pdf_entries)} PDF(s) at {cap} (--count limit).")
+        pdf_entries = pdf_entries[:cap]
+
+    print(f"Found {len(pdf_entries)} PDF(s) matching {query!r}.\n")
 
     results: list[dict] = []
     now = datetime.now().isoformat()
@@ -405,8 +415,9 @@ def main() -> None:
     parser.add_argument("--group",          default=None, metavar="N",
                         help="Group shorthand: 1=51111812185184, 2=28888824254221, "
                              "3=51288148188224")
-    parser.add_argument("--count",          type=int,   default=10,
-                        help="Max files to fetch per group (0 = unlimited). Ignored with --query.")
+    parser.add_argument("--count",          type=int,   default=None,
+                        help="Max files per group (default 10), or max PDFs to download "
+                             "after filtering with --query (default 100). 0 = unlimited.")
     parser.add_argument("--from-date",      default=None, metavar="YYYY-MM-DD",
                         help="Only process files published on or after this date")
     parser.add_argument("--to-date",        default=None, metavar="YYYY-MM-DD",
