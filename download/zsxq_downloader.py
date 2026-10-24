@@ -16,11 +16,11 @@ classified, hand it to Claude (the agent) in conversation and ask explicitly.
 
 Usage
 -----
-    python zsxq_downloader.py --count 10
+    python zsxq_downloader.py                                     # last 100 files per group
     python zsxq_downloader.py --count 50 --out ~/Downloads/zsxq_reports
     python zsxq_downloader.py --group-id 51111812185184 --delay 1.5
     python zsxq_downloader.py --from-date 2025-01-01 --to-date 2025-03-31
-    python zsxq_downloader.py --from-date 2025-06-01              # since a date, default --count 10
+    python zsxq_downloader.py --from-date 2025-06-01              # since a date, default --count 100
     python zsxq_downloader.py --from-date 2025-06-01 --count 0   # since a date, no limit
     python zsxq_downloader.py --query qcom                        # search all groups for "qcom" (up to 100 PDFs)
     python zsxq_downloader.py --query qcom --count 0             # search, every matching PDF
@@ -69,7 +69,7 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
     """Fetch and download PDFs for a single group. Returns results list."""
     from collections import Counter
 
-    fetch_max = 10 if args.count is None else args.count
+    fetch_max = args.count
     if from_date or to_date:
         date_desc = (
             f"between {from_date} and {to_date}" if (from_date and to_date)
@@ -310,7 +310,7 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
         print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments "
               f"(#外资研报 exempt).")
 
-    cap = 100 if args.count is None else args.count
+    cap = args.count
     if cap and len(pdf_entries) > cap:
         print(f"Capped {len(pdf_entries)} PDF(s) at {cap} (--count limit).")
         pdf_entries = pdf_entries[:cap]
@@ -415,9 +415,9 @@ def main() -> None:
     parser.add_argument("--group",          default=None, metavar="N",
                         help="Group shorthand: 1=51111812185184, 2=28888824254221, "
                              "3=51288148188224")
-    parser.add_argument("--count",          type=int,   default=None,
-                        help="Max files per group (default 10), or max PDFs to download "
-                             "after filtering with --query (default 100). 0 = unlimited.")
+    parser.add_argument("--count",          type=int,   default=100,
+                        help="Max files per group, or max PDFs to download after "
+                             "filtering with --query. 0 = unlimited.")
     parser.add_argument("--from-date",      default=None, metavar="YYYY-MM-DD",
                         help="Only process files published on or after this date")
     parser.add_argument("--to-date",        default=None, metavar="YYYY-MM-DD",
