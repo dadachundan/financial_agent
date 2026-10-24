@@ -2607,24 +2607,203 @@ def _ocr_region(page, rect, scale: float = 2.0, full_width: bool = False) -> str
         crop.save(buf, format="PNG")
         png_bytes = buf.getvalue()
 
-        import Vision
-        ns_data = AppKit.NSData.dataWithBytes_length_(png_bytes, len(png_bytes))
-        import Quartz
-        ci_image = Quartz.CIImage.imageWithData_(ns_data)
-        handler = Vision.VNImageRequestHandler.alloc().initWithCIImage_options_(ci_image, {})
-        request = Vision.VNRecognizeTextRequest.alloc().init()
-        request.setRecognitionLevel_(Vision.VNRequestTextRecognitionLevelAccurate)
-        request.setUsesLanguageCorrection_(True)
-        # Pin languages — without this Vision auto-detects per crop and
-        # sometimes mis-classifies Chinese characters as Cyrillic on small
-        # or stylized snippets (e.g. chart titles, watermarks).
-        request.setRecognitionLanguages_(["zh-Hans", "zh-Hant", "en-US"])
-        handler.performRequests_error_([request], None)
-        results = request.results() or []
-        texts = [r.topCandidates_(1)[0].string() for r in results if r.topCandidates_(1)]
-        return " ".join(texts).strip()
+        return " ".join(_vision_lines(png_bytes)).strip()
     except Exception as e:
         print(f"                   OCR region failed: {e}")
+        return ""
+
+
+def _vision_lines(png_bytes: bytes,
+                  languages=("zh-Hans", "zh-Hant", "en-US"),
+                  keep=None) -> list[str]:
+    """Run macOS Vision OCR on a PNG; return text lines in reading order.
+
+    ``keep(x, y)`` — optional filter on each token's centre (normalised image
+    coords, origin top-left); tokens it rejects are dropped from the line.
+    Tokens are whitespace-separated words, or single CJK characters.
+    """
+    import AppKit, Quartz, Vision, re as _re
+    ns_data = AppKit.NSData.dataWithBytes_length_(png_bytes, len(png_bytes))
+    ci_image = Quartz.CIImage.imageWithData_(ns_data)
+    handler = Vision.VNImageRequestHandler.alloc().initWithCIImage_options_(ci_image, {})
+    request = Vision.VNRecognizeTextRequest.alloc().init()
+    request.setRecognitionLevel_(Vision.VNRequestTextRecognitionLevelAccurate)
+    request.setUsesLanguageCorrection_(True)
+    # Pin languages — without this Vision auto-detects per crop and
+    # sometimes mis-classifies Chinese characters as Cyrillic on small
+    # or stylized snippets (e.g. chart titles, watermarks).
+    request.setRecognitionLanguages_(list(languages))
+    handler.performRequests_error_([request], None)
+    lines = []
+    for r in request.results() or []:
+        cand = r.topCandidates_(1)
+        if not cand:
+            continue
+        cand = cand[0]
+        text = cand.string()
+        if keep is not None:
+            kept = []
+            for m in _re.finditer(r"[\u3000-\u9fff\uff00-\uffef]|[^\s\u3000-\u9fff\uff00-\uffef]+", text):
+                box, _err = cand.boundingBoxForRange_error_((m.start(), m.end() - m.start()), None)
+                if box is None:
+                    continue
+                bb = box.boundingBox()
+                if keep(bb.origin.x + bb.size.width / 2, 1 - bb.origin.y - bb.size.height / 2):
+                    # keep the separator that preceded this token
+                    kept.append(text[m.start() - 1] if m.start() and text[m.start() - 1] == " " and kept else "")
+                    kept.append(m.group())
+            text = "".join(kept).strip()
+            if not text:
+                continue
+        bb = r.boundingBox()   # normalised, origin bottom-left
+        lines.append((1 - bb.origin.y - bb.size.height / 2, bb.size.height, bb.origin.x, text))
+    # Group fragments into rows by vertical centre (a watermark can split
+    # one printed line into several observations), then order each row by x.
+    rows: list[list] = []
+    for ln in sorted(lines):
+        if rows and abs(ln[0] - rows[-1][0][0]) < rows[-1][0][1] * 0.5:
+            rows[-1].append(ln)
+        else:
+            rows.append([ln])
+    return [" ".join(t for *_, t in sorted(row, key=lambda l: l[2])) for row in rows]
+
+
+def _highlight_line_rects(annot) -> list:
+    """Per-line rects of a highlight, restricted to its main text column.
+
+    The annotation's bounding rect is the union of every line, so cropping
+    it pulls in text the user never highlighted: the head of the first line
+    (before the highlight starts), the tail of the last line, and — on
+    sell-side layouts — the analyst-contact sidebar, which Preview's
+    highlighter often snaps into. Instead, use the QuadPoints (one quad per
+    line), cluster them by x-overlap, keep the largest column, and widen the
+    middle lines to the column edges (scanned-PDF quads clip a few pt off
+    line ends). The first line keeps its exact start, the last its exact end.
+    """
+    import fitz
+    v = annot.vertices or []
+    quads = [fitz.Quad(v[i:i + 4]).rect for i in range(0, len(v) - 3, 4)]
+    quads = [q for q in quads if q.width > 1 and q.height > 1] or [fitz.Rect(annot.rect)]
+
+    clusters: list[dict] = []
+    for q in sorted(quads, key=lambda r: r.x0):
+        for c in clusters:
+            if q.x0 < c["x1"] - 2 and q.x1 > c["x0"] + 2:
+                c["x0"], c["x1"] = min(c["x0"], q.x0), max(c["x1"], q.x1)
+                c["rects"].append(q)
+                break
+        else:
+            clusters.append({"x0": q.x0, "x1": q.x1, "rects": [q]})
+    main = max(clusters, key=lambda c: sum(r.width * r.height for r in c["rects"]))
+    rects = sorted(main["rects"], key=lambda r: (r.y0, r.x0))
+
+    # Widen to the column edges, but never into a neighbouring column.
+    right_limit = min([c["x0"] for c in clusters if c["x0"] >= main["x1"]] or [1e9]) - 1
+    col_x0 = main["x0"] - 3
+    col_x1 = min(main["x1"] + 5, right_limit)
+    out = []
+    for i, r in enumerate(rects):
+        x0 = r.x0 + 1 if i == 0 else col_x0
+        x1 = r.x1 + 3 if i == len(rects) - 1 else col_x1
+        out.append(fitz.Rect(x0, r.y0, min(x1, right_limit), r.y1))
+    return out
+
+
+def _join_highlight_lines(lines: list[str]) -> str:
+    """Join wrapped lines into one paragraph: re-join hyphenated breaks,
+    no space between CJK characters, single spaces otherwise."""
+    import re as _re
+    out = ""
+    for ln in (l.strip() for l in lines):
+        if not ln:
+            continue
+        if not out:
+            out = ln
+        elif out.endswith("-") and _re.match(r"[a-z]", ln):
+            out += ln            # near-\nterm → near-term
+        elif _re.search(r"[\u3000-\u9fff\uff00-\uffef]$", out) or _re.match(r"[\u3000-\u9fff\uff00-\uffef]", ln):
+            out += ln
+        else:
+            out += " " + ln
+    # A sliver of the preceding sentence ("., " / "s. ") survives at the
+    # highlight's left edge — drop leading punctuation fragments.
+    out = _re.sub(r"^(?:[^\w(\"“'$\u4e00-\u9fff]+|[a-z]{1,2}[.,;:?!]+)\s*", "", out)
+    return out.strip()
+
+
+def _highlight_text(page, annot) -> str:
+    """Text under a highlight: text layer when the page has one, else OCR."""
+    import fitz, re as _re
+    rects = _highlight_line_rects(annot)
+
+    words = page.get_text("words")
+    if words:
+        picked = []
+        for w in words:
+            cx, cy = (w[0] + w[2]) / 2, (w[1] + w[3]) / 2
+            if any(r.x0 <= cx <= r.x1 and r.y0 <= cy <= r.y1 for r in rects):
+                picked.append(w)
+        if picked:
+            picked.sort(key=lambda w: (w[5], w[6], w[7]))   # block, line, word
+            lines: dict = {}
+            for w in picked:
+                lines.setdefault((w[5], w[6]), []).append(w[4])
+            text = _join_highlight_lines([" ".join(ws) for ws in lines.values()])
+            # Broken font encodings yield U+FFFD / private-use glyphs — OCR then.
+            bad = sum(1 for ch in text if ch == "\ufffd" or "\ue000" <= ch <= "\uf8ff")
+            if text and bad <= len(text) * 0.02:
+                return text
+
+    # Image-only page: OCR the whole column strip (masking the quads would
+    # slice glyph rows in half where line quads overlap), then keep only the
+    # words whose centre lies inside a highlighted line rect.
+    from PIL import Image
+    import io
+    scale = 3.0
+    u = fitz.Rect(rects[0])
+    for r in rects[1:]:
+        u |= r
+    # Include whole neighbouring lines above/below: half-sliced glyph rows at
+    # the crop edge make Vision drop entire lines. _keep() discards them.
+    line_h = max(r.height for r in rects)
+    clip = fitz.Rect(u.x0, u.y0 - line_h, u.x1, u.y1 + line_h) & page.rect
+    # annots=False: render the page without the yellow highlight fill.
+    pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), clip=clip, annots=False)
+    img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples).convert("L")
+    # Fade light-grey diagonal watermarks ("知识星球…") that garble OCR.
+    img = img.point(lambda p: 255 if p > 200 else p)
+    pad = 20
+    canvas = Image.new("L", (img.width + 2 * pad, img.height + 2 * pad), 255)
+    canvas.paste(img, (pad, pad))
+    buf = io.BytesIO()
+    canvas.save(buf, format="PNG")
+    W, H = canvas.size
+
+    def _keep(nx: float, ny: float) -> bool:
+        x = clip.x0 + (nx * W - pad) / scale
+        y = clip.y0 + (ny * H - pad) / scale
+        first, last = rects[0], rects[-1]
+        if not (u.x0 <= x <= u.x1 and first.y0 <= y <= last.y1):
+            return False
+        # Middle lines are kept whole (quads drawn on scans sometimes skip a
+        # line entirely); only the first line's head and last line's tail
+        # lie outside the highlight.
+        if abs(y - (first.y0 + first.y1) / 2) < first.height * 0.4 and x < first.x0:
+            return False
+        if abs(y - (last.y0 + last.y1) / 2) < last.height * 0.4 and x > last.x1:
+            return False
+        return True
+
+    try:
+        png = buf.getvalue()
+        text = _join_highlight_lines(_vision_lines(png, keep=_keep))
+        # The zh-first model glues English words ("UBTechto") and emits
+        # full-width punctuation; re-read passages with no CJK as en-US.
+        if text and not _re.search(r"[\u4e00-\u9fff]", text):
+            text = _join_highlight_lines(_vision_lines(png, ("en-US",), keep=_keep)) or text
+        return text
+    except Exception as e:
+        print(f"                   OCR highlight failed: {e}")
         return ""
 
 
@@ -2753,13 +2932,11 @@ def _extract_annotations_from_pdf(path: Path) -> list[dict]:
                 if ann_type in _HIGHLIGHT_TYPES:
                     text = content
                     if not text:
-                        # Use Vision OCR for highest accuracy (avoids garbled text from
-                        # PDF text layer encoding issues). Use column-aware crop rect
-                        # to avoid capturing adjacent columns.
+                        # Read only the highlighted line strips (QuadPoints),
+                        # main column only — not the annotation's bounding box.
                         _t1 = _t.time()
-                        crop_rect = _highlight_crop_rect(page, annot.rect)
-                        text = _ocr_region(page, crop_rect)
-                        print(f"                   OCR p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
+                        text = _highlight_text(page, annot)
+                        print(f"                   highlight p{page_num+1} in {_t.time()-_t1:.1f}s: {text[:60]!r}")
                     if not text:
                         continue
                     results.append({"page": page_num + 1, "type": "Highlight",

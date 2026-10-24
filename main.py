@@ -17,6 +17,7 @@ Usage
 """
 
 import argparse
+import os
 import sys
 from pathlib import Path
 
@@ -164,6 +165,10 @@ if __name__ == "__main__":
     _PARENT = SCRIPT_DIR.parent.parent.parent  # financial_agent/
 
     def _resolve_db(filename: str, table: str) -> Path:
+        # FINAGENT_DB_DIR (test sandbox) wins — never fall back to real DBs.
+        if os.environ.get("FINAGENT_DB_DIR"):
+            from db_paths import db_path
+            return db_path(filename)
         # DBs now live in db/ subdirectory; fall back to parent project's db/
         local = SCRIPT_DIR / "db" / filename
         if not _db_has_rows(local, table):

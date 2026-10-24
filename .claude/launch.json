@@ -4,70 +4,113 @@
     {
       "name": "finagent",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/main.py", "--port", "8002"],
+      "runtimeArgs": [
+        "/Users/x/projects/financial_agent/main.py",
+        "--port",
+        "8002"
+      ],
       "port": 8002
-    }
-  ,
+    },
     {
       "name": "finagent-test",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/main.py", "--port", "5002"],
+      "runtimeArgs": [
+        "/Users/x/projects/financial_agent/main.py",
+        "--port",
+        "5002"
+      ],
       "port": 5002
-    }
-  ,
+    },
     {
       "name": "zsxq-viewer",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/zsxq_viewer.py", "--db", "/Users/x/projects/financial_agent/db/zsxq.db", "--port", "8080"],
+      "runtimeArgs": [
+        "/Users/x/projects/financial_agent/zsxq_viewer.py",
+        "--db",
+        "/Users/x/projects/financial_agent/db/zsxq.db",
+        "--port",
+        "8080"
+      ],
       "port": 8080
-    }
-  ,
+    },
     {
       "name": "financial-reports",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/fetch_financial_report.py", "--port", "8081"],
+      "runtimeArgs": [
+        "/Users/x/projects/financial_agent/fetch_financial_report.py",
+        "--port",
+        "8081"
+      ],
       "port": 8081
-    }
-  ,
+    },
     {
       "name": "zep-graph",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/zep_app.py"],
+      "runtimeArgs": [
+        "/Users/x/projects/financial_agent/zep_app.py"
+      ],
       "port": 5001
-    }
-  ,
+    },
     {
       "name": "zep-graph-test",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/zep_app.py", "--port", "5002"],
+      "runtimeArgs": [
+        "/Users/x/projects/financial_agent/zep_app.py",
+        "--port",
+        "5002"
+      ],
       "port": 5002
-    }
-  ,
+    },
     {
       "name": "cninfo-reports",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/fetch_cninfo_report.py", "--port", "8082"],
+      "runtimeArgs": [
+        "/Users/x/projects/financial_agent/fetch_cninfo_report.py",
+        "--port",
+        "8082"
+      ],
       "port": 8082
-    }
-  ,
+    },
     {
       "name": "indicators",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/.claude/worktrees/jolly-mccarthy/indicators/app.py", "--port", "8003"],
+      "runtimeArgs": [
+        "/Users/x/projects/financial_agent/.claude/worktrees/jolly-mccarthy/indicators/app.py",
+        "--port",
+        "8003"
+      ],
       "port": 8003
-    }
-  ,
+    },
     {
       "name": "pe-viewer",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/pe/app.py", "--port", "8004"],
+      "runtimeArgs": [
+        "/Users/x/projects/financial_agent/pe/app.py",
+        "--port",
+        "8004"
+      ],
       "port": 8004
-    }
-  ,
+    },
     {
       "name": "vol-dashboard",
       "runtimeExecutable": "/opt/anaconda3/bin/python3",
-      "runtimeArgs": ["/Users/x/projects/financial_agent/vol_app.py", "--port", "5002"],
+      "runtimeArgs": [
+        "/Users/x/projects/financial_agent/vol_app.py",
+        "--port",
+        "5002"
+      ],
+      "port": 5002
+    },
+    {
+      "name": "finagent-sandbox",
+      "runtimeExecutable": "/usr/bin/env",
+      "runtimeArgs": [
+        "FINAGENT_DB_DIR=/tmp/finagent-test",
+        "/opt/anaconda3/bin/python3",
+        "/Users/x/projects/financial_agent/main.py",
+        "--port",
+        "5002"
+      ],
       "port": 5002
     }
   ]
