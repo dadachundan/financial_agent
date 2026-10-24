@@ -310,6 +310,10 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
         print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments "
               f"(#外资研报 exempt).")
 
+    # The search API returns hits in relevance order; sort newest-first so the
+    # --count cap keeps the most recent PDFs.
+    pdf_entries.sort(key=lambda e: e["file"].get("create_time") or "", reverse=True)
+
     cap = args.count
     if cap and len(pdf_entries) > cap:
         print(f"Capped {len(pdf_entries)} PDF(s) at {cap} (--count limit).")
