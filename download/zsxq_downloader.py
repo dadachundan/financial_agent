@@ -30,14 +30,15 @@ import sys, pathlib as _pl; sys.path.insert(0, str(_pl.Path(__file__).parent.par
 import argparse
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from zsxq_common import (
     DEFAULT_CHROME_PROFILE, DEFAULT_DB, DEFAULT_DOWNLOADS,
     clean_zsxq_text, do_download, extract_bank, fetch_all_files,
-    fetch_all_search_results, fetch_all_search_topic_files, sanitize_filename,
-    get_session_via_selenium, init_db, is_chinese_filename, upsert_entry,
+    fetch_all_search_results, fetch_all_search_topic_files, find_english_twins,
+    sanitize_filename, get_session_via_selenium, init_db, is_chinese_filename,
+    query_in_filename, upsert_entry,
     ZsxqAuthError,
 )
 
@@ -62,6 +63,76 @@ def _refresh_session_after_auth_error(chrome_profile: Path, exc: ZsxqAuthError):
     print(f"\nAuthentication failed: {exc}")
     print("Cached cookies look stale; retrying once with fresh Chrome-profile cookies...")
     return get_session_via_selenium(chrome_profile, use_json_cache=False)
+
+
+def _drop_english_twins(pdf_entries: list[dict], conn) -> tuple[list[dict], dict]:
+    """Skip Chinese-titled copies of English broker notes (see find_english_twins).
+
+    Candidates are this batch plus DB rows from the same window. Strong matches
+    (and files an earlier run already flagged skipped=1) are dropped now; weak
+    matches come back as {file_id: twin names} for _drop_weak_twins to confirm
+    by page count after download.
+    """
+    dates = [(e["file"].get("create_time") or "")[:10] for e in pdf_entries]
+    dates = [d for d in dates if d]
+    if not dates:
+        return pdf_entries, {}
+    since = (datetime.fromisoformat(min(dates)) - timedelta(days=4)).date().isoformat()
+    rows = conn.execute(
+        "SELECT file_id, name, create_time, skipped FROM pdf_files WHERE create_time >= ?",
+        (since,),
+    ).fetchall()
+    flagged = {r["file_id"] for r in rows if r["skipped"]}
+    cands = {r["name"]: r["create_time"] for r in rows}
+    for e in pdf_entries:
+        cands.setdefault(e["file"]["name"], e["file"].get("create_time"))
+    cand_list = list(cands.items())
+
+    kept, weak, dropped = [], {}, 0
+    for e in pdf_entries:
+        f = e["file"]
+        if f["file_id"] in flagged:
+            dropped += 1
+            continue
+        twins, strong = find_english_twins(f["name"], f.get("create_time"), cand_list)
+        if twins and strong:
+            dropped += 1
+            continue
+        if twins:
+            weak[f["file_id"]] = twins
+        kept.append(e)
+    if dropped:
+        print(f"Skipped {dropped} Chinese-titled copy(ies) of English broker notes.")
+    return kept, weak
+
+
+def _drop_weak_twins(conn, results: list[dict], weak: dict) -> None:
+    """Delete freshly downloaded weak twins whose page count equals a
+    downloaded English twin's, and flag them skipped=1 so later runs skip them."""
+    for r in results:
+        twins = weak.get(r["file_id"])
+        if not twins or r["status"] != "ok":
+            continue
+        row = conn.execute(
+            "SELECT local_path, page_count FROM pdf_files WHERE file_id = ?",
+            (r["file_id"],),
+        ).fetchone()
+        twin_pages = {
+            p: n for (n, p) in conn.execute(
+                f"SELECT name, page_count FROM pdf_files WHERE local_path IS NOT NULL "
+                f"AND name IN ({','.join('?' * len(twins))})", twins,
+            )
+        }
+        if row and row["page_count"] and row["page_count"] in twin_pages:
+            Path(row["local_path"]).unlink(missing_ok=True)
+            conn.execute(
+                "UPDATE pdf_files SET local_path=NULL, downloaded_at=NULL, skipped=1 "
+                "WHERE file_id = ?", (r["file_id"],),
+            )
+            r["status"] = "skipped"
+            print(f"Removed {r['name'][:60]} — same {row['page_count']}pp as English "
+                  f"original {twin_pages[row['page_count']][:50]}")
+    conn.commit()
 
 
 def _run_group(group_id: str, args, session, conn, out_dir: Path,
@@ -137,6 +208,8 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
         if skipped_bulk:
             print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments "
                   f"(#外资研报 exempt).")
+
+    pdf_entries, weak_twins = _drop_english_twins(pdf_entries, conn)
 
     # Apply to_date upper bound
     if to_date:
@@ -228,6 +301,7 @@ def _run_group(group_id: str, args, session, conn, out_dir: Path,
         if i < len(pdf_entries) and not already_downloaded:
             time.sleep(args.delay)
 
+    _drop_weak_twins(conn, results, weak_twins)
     return results
 
 
@@ -276,6 +350,13 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
     if skipped_non_pdf:
         print(f"Skipped {skipped_non_pdf} non-PDF file(s).")
 
+    before_rel = len(pdf_entries)
+    pdf_entries = [e for e in pdf_entries if query_in_filename(query, e["file"]["name"])]
+    skipped_rel = before_rel - len(pdf_entries)
+    if skipped_rel:
+        print(f"Skipped {skipped_rel} file(s) without {query!r} as a whole word in the "
+              f"filename (e.g. Metals, MetaX).")
+
     before_cn = len(pdf_entries)
     pdf_entries = [
         e for e in pdf_entries
@@ -309,6 +390,8 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
     if skipped_bulk:
         print(f"Skipped {skipped_bulk} file(s) from topics with >3 attachments "
               f"(#外资研报 exempt).")
+
+    pdf_entries, weak_twins = _drop_english_twins(pdf_entries, conn)
 
     # The search API returns hits in relevance order; sort newest-first so the
     # --count cap keeps the most recent PDFs.
@@ -404,6 +487,7 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
         if i < len(pdf_entries) and not already_downloaded:
             time.sleep(args.delay)
 
+    _drop_weak_twins(conn, results, weak_twins)
     return results
 
 

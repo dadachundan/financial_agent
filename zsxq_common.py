@@ -555,6 +555,82 @@ def extract_bank(name: str) -> str | None:
     return None
 
 
+def query_in_filename(query: str, name: str) -> bool:
+    """True if a Latin/digit query appears in the filename as a whole word.
+
+    zsxq search matches substrings, so "meta" also returns "Metals", "MetaX"
+    and "dbMetals". Non-ASCII queries (e.g. 海光) are not filtered — CJK has
+    no word boundaries and English originals use a different name (Hygon).
+    """
+    if not query.isascii():
+        return True
+    pat = r"(?<![A-Za-z0-9])" + re.escape(query.strip()) + r"(?![A-Za-z])"
+    return re.search(pat, name, re.IGNORECASE) is not None
+
+
+# Tokens too generic to tell two notes apart.
+_TWIN_STOPWORDS = {
+    "inc", "ltd", "corp", "co", "the", "and", "platforms", "information",
+    "technology", "holdings", "group", "pdf",
+}
+
+
+def _twin_tokens(name: str) -> set[str]:
+    """Latin words (3+ letters) and numbers in a filename, minus the trailing
+    -YYMMDD stamp, 4-digit years and generic company-name words."""
+    stem = re.sub(r"-\d{6}$", "", re.sub(r"\.pdf$", "", name, flags=re.I))
+    out = set()
+    for t in re.findall(r"[a-z0-9]+", stem.lower()):
+        if t in _TWIN_STOPWORDS or re.fullmatch(r"(19|20)\d\d", t):
+            continue
+        if t.isalpha() and len(t) < 3:
+            continue
+        if t.isdigit() and len(t) < 2:
+            continue
+        out.add(t)
+    return out
+
+
+def find_english_twins(name: str, create_time: str | None,
+                       candidates: list[tuple[str, str | None]],
+                       max_days: int = 3) -> tuple[list[str], bool]:
+    """Find English originals of a Chinese-titled foreign-broker note.
+
+    zsxq often carries the same broker note twice: the English original
+    ("J.P. Morgan-Meta ... $920 PT-261012.pdf") and a Chinese-titled copy
+    ("摩根大通-Meta ...目标价920美元.pdf") — same bank, same page count,
+    posted within a few days. A twin is an English (no-CJK) filename from the
+    same bank within ``max_days`` whose tokens include every Latin/number
+    token of ``name``.
+
+    Returns (matching English names, strong). ``strong`` means the Chinese
+    title shares 2+ distinctive tokens — safe to skip before downloading.
+    A weak match (one shared token, e.g. just "meta") should be confirmed by
+    equal page count after download.
+    """
+    if not _CJK_RE.search(name):
+        return [], False
+    bank = extract_bank(name)
+    tokens = _twin_tokens(name)
+    if not bank or not tokens:
+        return [], False
+    try:
+        day = datetime.fromisoformat((create_time or "")[:10])
+    except ValueError:
+        return [], False
+    twins = []
+    for cand, cand_time in candidates:
+        if _CJK_RE.search(cand) or extract_bank(cand) != bank:
+            continue
+        try:
+            cand_day = datetime.fromisoformat((cand_time or "")[:10])
+        except ValueError:
+            continue
+        if abs((day - cand_day).days) <= max_days and tokens <= _twin_tokens(cand):
+            twins.append(cand)
+    return twins, len(tokens) >= 2
+
+
 def date_subfolder(create_time: str | None) -> str:
     """Return a YYYY_MM_DD folder name from an ISO create_time string."""
     if create_time and len(create_time) >= 10:
