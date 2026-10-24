@@ -123,6 +123,40 @@ PDFs not downloaded, bad `stock_price_target.db` rows found).
 Every number must string-match the PDF it is cited to; derived values (FX
 conversions, % changes) are labelled as such.
 
+**(d) Persist the verified PTs** so `/pt` and the next run's pre-pass start
+from clean data. Use the Tier-2 helper only (never raw SQL), with `--replace`
+because a PDF-verified read beats the summary-only rows `/zsxq-recommend`
+writes:
+
+```bash
+/opt/anaconda3/bin/python3 scripts/persist_pts.py --replace < <scratchpad>/pts.json
+```
+
+One record per (listing, broker, file_id): `ticker` in yfinance form for the
+listing the PT is quoted on (`WRD` for a US$ ADS PT, `0800.HK` for an HK$
+H-share PT), `broker` matching the DB's existing names (`Morgan Stanley`,
+`J.P. Morgan`, `Goldman Sachs`, `Citi`, `UBS`, `HSBC`), native `pt` + `ccy`,
+and a `catalyst` that names the revision ("PT cut 14.70->13.10: lower fleet
+assumptions"). A broker that quotes both listings (HSBC) gets one row per
+listing. To fix an existing mis-tagged row, re-emit it with the same
+(ticker, broker, file_id) under `--replace`; the helper leaves `upside_pct`
+NULL when the PT and price currencies differ. Schema + skip rules:
+`reference/pt_extraction.md`.
+
+**Missing PDFs:** rows with `local_exists: false` are PT history you can't see.
+Name them in the gaps line; if the user wants them, top up with
+`cd /Users/x/projects/financial_agent && /opt/anaconda3/bin/python3 download/zsxq_downloader.py --query "<ticker or name>"`
+and re-run the queue.
+
+**Worked example (WeRide, 2026-10-24):** 19 company PDFs, 12 image-only (OCR
+p.1-3). Result: MS 14.70 → 13.10 (Jul 1, fleet assumptions + 2027-28E EPS
+−10%) → 12.00 (Aug 19, near-term policy/geopolitics + R&D, LT growth raised);
+HSBC 11.40 → 11.60 (2Q beat); GS HK$54.23 → 54.72 (initiation, then
+roll-forward); JPM 17, UBS 12, Citi 15.30 single prints. The point the
+reader needed: every PT stayed at 11.4-21 while the stock fell ~10 → 4.17,
+and the newest note was 6 weeks stale. That "PT vs price + staleness" line is
+the headline, not the table.
+
 ### 4. Read each PDF
 
 For each selected `file_id`, use the existing zsxq analyzer scripts:

@@ -247,7 +247,9 @@ def main() -> int:
             if args.replace and (conflict_fid or conflict_date):
                 replaced += 1
             up = None
-            if payload["price_target"] and payload["report_date_price"]:
+            ccy_mismatch = (payload["target_currency"] and payload["price_currency"]
+                            and payload["target_currency"].upper() != payload["price_currency"].upper())
+            if payload["price_target"] and payload["report_date_price"] and not ccy_mismatch:
                 up = round((payload["price_target"] - payload["report_date_price"])
                            / payload["report_date_price"] * 100, 1)
             emitted_rows.append({

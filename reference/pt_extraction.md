@@ -85,6 +85,11 @@ Always tag the PT with its currency. Detect from:
 3. If neither is determinable, leave `ccy` null and ship the row
    without `pt` (don't guess).
 
+**Dual listings:** tag the row with the listing the PT is quoted on — an
+HK$ PT on WeRide's H-share goes under `0800.HK`, not the US ADS `WRD`.
+If a PT's currency still differs from the ticker's price currency, the
+helper stores `upside_pct` as NULL rather than comparing HK$ to US$.
+
 ## Record schema
 
 ```json

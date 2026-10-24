@@ -129,8 +129,12 @@ def upsert_target(row: dict, replace: bool = False) -> None:
     if "report_url" not in row and "report_file_id" in row:
         row["report_url"] = f"http://xs-macbook-air.local:5001/zsxq/pdf-viewer/{row['report_file_id']}"
 
-    # Compute upside if both sides present
-    if row.get("price_target") and row.get("report_date_price"):
+    # Compute upside if both sides present and in the same currency (an HK$
+    # H-share PT against a US$ ADS price is meaningless)
+    tc, pc = row.get("target_currency"), row.get("price_currency")
+    if tc and pc and tc.upper() != pc.upper():
+        row["upside_pct"] = None
+    elif row.get("price_target") and row.get("report_date_price"):
         try:
             row["upside_pct"] = (row["price_target"] - row["report_date_price"]) / row["report_date_price"] * 100
         except Exception:
