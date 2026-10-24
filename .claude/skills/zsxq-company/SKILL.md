@@ -26,6 +26,29 @@ listed US ticker. Keep the original string as an alternate search term.
 If the user gives only the skill name with no company, ask for the company or
 ticker. Otherwise proceed directly.
 
+### 1b. Download the latest reports first (ALWAYS)
+
+Before searching the local library, pull the newest reports for the company
+from zsxq so the PT timeline reaches as close to today as possible:
+
+```bash
+cd /Users/x/projects/financial_agent && /opt/anaconda3/bin/python3 download/zsxq_downloader.py --query <company> --count 20
+```
+
+- `--query` searches all groups, sorts matches newest-first, then `--count`
+  caps the download — so `--count 20` = the **latest 20** reports.
+- Default is 20. Use a bigger number only when the user asks for more
+  (e.g. "last 50 reports" → `--count 50`; "all of them" → `--count 0`).
+- `<company>` is a whole-word match: use the English name the brokers put in
+  filenames (`WeRide`, `Marvell`). If it returns few hits, run once more with
+  the ticker (`WRD`, `MRVL`) — already-downloaded files are skipped.
+- Use the anaconda interpreter: bare `python3` lacks `browser_cookie3`, which
+  the downloader needs for the zsxq login cookies.
+- Always run from the main project dir so PDFs land in the main library, not
+  a worktree.
+- If the download fails (expired cookies, network), say so in one line and
+  continue with what is already in the library.
+
 ### 2. Build the report queue
 
 Use the helper script from the project root:
@@ -144,9 +167,9 @@ NULL when the PT and price currencies differ. Schema + skip rules:
 `reference/pt_extraction.md`.
 
 **Missing PDFs:** rows with `local_exists: false` are PT history you can't see.
-Name them in the gaps line; if the user wants them, top up with
-`cd /Users/x/projects/financial_agent && /opt/anaconda3/bin/python3 download/zsxq_downloader.py --query "<ticker or name>"`
-and re-run the queue.
+Step 1b only fetches the latest 20; older notes can still be missing. Name
+them in the gaps line; if the user wants them, re-run Step 1b with a larger
+`--count` and rebuild the queue.
 
 **Worked example (WeRide, 2026-10-24):** 19 company PDFs, 12 image-only (OCR
 p.1-3). Result: MS 14.70 → 13.10 (Jul 1, fleet assumptions + 2027-28E EPS
