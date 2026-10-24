@@ -316,13 +316,24 @@ def fetch_search_files_page(
     raise RuntimeError(f"Search API error after {retries} retries")
 
 
+def _print_page_cap_reason(max_pages: int, total: int) -> None:
+    print(f"  Stopped at page {max_pages} ({total} so far): page cap reached "
+          f"(--max-pages {max_pages}); more results exist but deep pages are "
+          f"mostly low-relevance and only --count PDFs get downloaded anyway. "
+          f"Use --max-pages 0 to fetch all.")
+
+
 def fetch_all_search_results(
     session: requests.Session,
     query: str,
     max_files: int = 0,
     delay: float = 0.5,
+    max_pages: int = 0,
 ) -> list[dict]:
-    """Paginate through all search results for *query*; return flat list of entries."""
+    """Paginate through search results for *query*; return flat list of entries.
+
+    max_pages: stop after this many 20-hit pages (0 = all).
+    """
     all_entries: list[dict] = []
     index = 0
     page = 0
@@ -343,6 +354,10 @@ def fetch_all_search_results(
 
         if len(entries) < 20:
             break  # last page
+
+        if max_pages and page >= max_pages:
+            _print_page_cap_reason(max_pages, len(all_entries))
+            break
 
         index = next_index
         time.sleep(delay)
@@ -401,6 +416,7 @@ def fetch_all_search_topic_files(
     query: str,
     max_topics: int = 0,
     delay: float = 0.5,
+    max_pages: int = 0,
 ) -> list[dict]:
     """Search topics for *query* and expand each topic's attachments to file entries.
 
@@ -408,6 +424,7 @@ def fetch_all_search_topic_files(
     two sources can be merged and deduplicated by file_id.
 
     max_topics: stop after this many topic pages-worth of topics (0 = all).
+    max_pages: stop after this many 20-topic pages (0 = all).
     """
     all_entries: list[dict] = []
     index = 0
@@ -439,6 +456,10 @@ def fetch_all_search_topic_files(
             break
 
         if len(topics) < 20:
+            break
+
+        if max_pages and page >= max_pages:
+            _print_page_cap_reason(max_pages, len(all_entries))
             break
 
         index = next_index

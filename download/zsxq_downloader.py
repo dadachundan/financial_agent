@@ -321,16 +321,18 @@ def _run_query(query: str, args, session, conn, out_dir: Path) -> list[dict]:
 
     # 1) Files search
     print(f"\n[1/2] Files search…")
-    # Fetch every search hit; --count (default 100) is applied only after the
-    # PDF / Chinese-filename / bulk-topic filters below, so it counts PDFs
-    # that will actually be downloaded rather than raw hits.
-    file_entries = fetch_all_search_results(session, query, max_files=0)
+    # Fetch up to --max-pages pages of hits; --count (default 100) is applied
+    # only after the PDF / Chinese-filename / bulk-topic filters below, so it
+    # counts PDFs that will actually be downloaded rather than raw hits.
+    file_entries = fetch_all_search_results(session, query, max_files=0,
+                                            max_pages=args.max_pages)
 
     # 2) Topics search — pulls all attachments from matching posts
     print(f"\n[2/2] Topics search…")
     topic_entries = fetch_all_search_topic_files(
         session, query,
         max_topics=0,
+        max_pages=args.max_pages,
     )
 
     # Merge: files-search results take priority (more metadata); add topic-only extras
@@ -506,6 +508,9 @@ def main() -> None:
     parser.add_argument("--count",          type=int,   default=100,
                         help="Max files per group, or max PDFs to download after "
                              "filtering with --query. 0 = unlimited.")
+    parser.add_argument("--max-pages",      type=int,   default=10,
+                        help="With --query: stop each search (files, topics) after "
+                             "this many 20-hit pages. 0 = all pages.")
     parser.add_argument("--from-date",      default=None, metavar="YYYY-MM-DD",
                         help="Only process files published on or after this date")
     parser.add_argument("--to-date",        default=None, metavar="YYYY-MM-DD",
